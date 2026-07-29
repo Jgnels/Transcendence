@@ -1,0 +1,37 @@
+# Private/local game inputs
+local_inputs/*
+!local_inputs/.gitkeep
+
+# Game and mod binaries
+*.pack
+*.save
+*.replay
+*.bin
+*.exe
+*.dll
+
+# Logs and personal paths
+*.log
+crash_report/
+script_logs/
+
+# Secrets
+.env
+*.key
+secrets/
+
+# Build output
+dist/
+build/
+out/
+tmp/
+.cache/
+node_modules/
+__pycache__/
+*.pyc
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
