@@ -5,6 +5,7 @@
 
 ## Established
 
+- Public GitHub repository is required for connected ChatGPT/Codex access; proprietary and personal artifacts remain local-only.
 - Personal-project scope.
 - SFO-first target.
 - Hardest-difficulty, single-player-first experience.

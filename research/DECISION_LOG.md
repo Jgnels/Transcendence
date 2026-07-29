@@ -17,3 +17,9 @@
 **Decision:** Freeze the actual install/mod/settings/save baseline and capability truth before implementing AI behavior.
 
 **Reason:** WH3 exposes uneven scripting authority, and SFO changes broad campaign and battle systems. Building against assumptions would create expensive architectural rework.
+
+## 2026-07-28 — D004: Public code repository with private local inputs
+
+**Decision:** Keep the GitHub code repository public because the connected ChatGPT/Codex integration cannot reliably access the owner's private repositories. Keep all Creative Assembly assets, Workshop packs, saves, replays, personal logs, secrets, and other private artifacts outside Git under ignored local storage.
+
+**Reason:** Public repository visibility is required for the collaboration workflow, but publishing third-party or personal artifacts is unnecessary and unsafe. The repository stores only project-owned code, documentation, lawful fixtures, metadata, and hashes.
