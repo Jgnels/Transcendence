@@ -1,0 +1,35 @@
+ - **Priority-budget overfit:** six records may be too small or too large for real late-game WH3. Mitigation: preserve all critical sources through overflow and keep the bound explicitly uncalibrated.
+ - **Awareness/commitment confusion:** a rival priority visible during crisis could be mistaken for authorization to attack. Mitigation: separate `selected_priorities` from `selected_aggressive_priorities` and make crisis/recovery veto explicit.
+ - **Reserve fetishization:** always valuing reserve could become passive play. Mitigation: reserve is one bounded medium priority, not a hard army assignment; future assignment/outcome calibration must test it.
+ - **Faction-ID bias:** observer-safe faction IDs could accidentally become human/player heuristics later. Mitigation: player/NPC relabel invariance and explicit no-human-identity contract.
+-- **Snapshot thrashing:** v0.2F has no temporal commitment lifecycle; priorities can still oscillate across turns as observations change. Mitigation: next gate must add portfolio-to-army assignment plus commitment/review/cooldown semantics before any application authority.
++- **Snapshot thrashing (historical v0.2F concern):** v0.2F has no temporal commitment lifecycle; priorities can oscillate across turns as observations change. Historical mitigation proposed portfolio-to-army assignment plus commitment/review/cooldown. **Superseded active mitigation:** v0.2F is evaluator-only; native temporal behavior is measured first, and project allocation cannot enter the application path without explicit native-first falsification.
+ - **False containment:** coherent visible-rival classification can be mistaken for durable power or coordination. Mitigation: retain v0.2E limits on economy, diplomacy, recruitment, intent, and longitudinal quality.
+ 
+ ## v0.2E strategic benchmark risks
+diff --git a/runtime_probe/README.md b/runtime_probe/README.md
+index 5b85c38..2f7252e 100644
+--- a/runtime_probe/README.md
++++ b/runtime_probe/README.md
+@@ -233,3 +233,21 @@ The preparer also requests shutdown for read-only watchers from incomplete histo
+ ## v0.1Z-r1 Windows ZIP durability repair
+ 
+ The deterministic public evidence builder performs `fsync` through an `r+b` descriptor. This is a durability-only reopen; archive bytes are not modified. Windows rejects the prior read-only descriptor with `EBADF`, so the writable-descriptor property is now directly regression-tested.
++
++## v0.2R offline native-behavior Replay Lab
++
++`native_behavior_replay.py` verifies and deterministically replays public native-diagnostic capture ZIPs without changing either game-side Lua probe. It validates member hashes/provenance, refuses incomplete or battle-telemetry-ambiguous captures for frozen metric replay, reconstructs per-force longitudinal timelines, reuses the frozen v0.2N/v0.2P evaluators, and emits deterministic JSON/CSV/Markdown outputs.
++
++Use the thin Windows wrapper:
++
++```powershell
++.\runtime_probe\tools\Replay-NativeBehavior.ps1 replay <capture.zip> --output-dir <directory>
++```
++
++For vanilla↔SFO comparison:
++
++```powershell
++.\runtime_probe\tools\Replay-NativeBehavior.ps1 compare --vanilla <vanilla.zip> --sfo <sfo.zip> --output-dir <directory>
++```
++
++Only a capture explicitly identified as the v0.2Q Stage-A SFO replication should use `--sfo-role stage-a`. Replay Lab is research-only: `NO_ORDERS`, application authority `PROHIBITED`, privileged telemetry permanently application-ineligible.
