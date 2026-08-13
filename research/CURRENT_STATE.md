@@ -1,10 +1,11 @@
-## 2026-08-13 v0.2R offline engineering integration candidate — NOT CANONICAL
+## 2026-08-13 v0.2R offline engineering — GITHUB-CANONICAL
 
-- Sealed v0.2Q remains the canonical evidence milestone until GitHub cutover/promotion completes.
-- Offline Behavior Replay Lab now validates capture ZIP inventory/SHA/provenance/completeness, reconstructs per-force timelines, reuses frozen v0.2N–v0.2Q evaluators, produces deterministic JSON/CSV/Markdown, and separates preregistered, causal-review, and `EXPLORATORY` outputs. Raw historical vanilla/SFO capture ZIPs are not present in the canonical source, so no synthetic fixture is being misrepresented as replay of owner evidence.
+- Repository normalization is complete: PR #1 promoted the exact sealed v0.2Q tree, and PR #2 promoted the exact validated v0.2R offline-engineering tree. `main` reached merge commit `fae5ccdf44b98823182558c96d2f4c87218ac54c` / tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` before this documentation-only closeout.
+- v0.2Q remains the authoritative evidence milestone. v0.2R is a canonical engineering layer and does not reinterpret or replace the frozen v0.2Q evidence.
+- Offline Behavior Replay Lab validates capture ZIP inventory/SHA/provenance/completeness, reconstructs per-force timelines, reuses frozen v0.2N–v0.2Q evaluators, produces deterministic JSON/CSV/Markdown, and separates preregistered, causal-review, and `EXPLORATORY` outputs. Raw historical vanilla/SFO capture ZIPs are not present in the canonical source, so no synthetic fixture is being misrepresented as replay of owner evidence.
 - Single-row native CAI Ablation Factory machinery is ready but inactive. Real row selection remains `NOT_EARNED`; no pack is committed/installed; actual experimental builds require one exact row/value, source header/provenance, explicit future evidence/owner authorization, and fail closed on uncertified keys unless separately authorized.
 - Native-first active-document audit corrected stale “current” labels and a superseded allocator-next-step sentence while preserving historical implementation/decision evidence.
-- No Stage-A SFO replication has been consumed in this candidate. Frozen v0.2Q replication policy remains unchanged.
+- No Stage-A SFO replication has been consumed by v0.2R. Frozen v0.2Q replication policy remains unchanged; the next evidence step is exactly one fresh qualified Stage-A SFO replication before any conditional fresh vanilla run or row-ablation decision.
 - Both game-side Lua probes remain byte-for-byte frozen.
 - Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`; privileged telemetry remains permanently `application_eligible=false`.
 
