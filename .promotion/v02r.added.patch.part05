@@ -1,0 +1,332 @@
++            else round(float(sfo_cluster["reversal_candidate_rate"]) - float(vanilla_cluster["reversal_candidate_rate"]), 6)
++        ),
++    }
++    result: dict[str, Any] = {
++        "contract": COMPARISON_CONTRACT,
++        "study_version": STUDY_VERSION,
++        **_authority_fields(),
++        "inputs": {
++            "vanilla_capture_sha256": vanilla["capture_provenance"]["capture_sha256"],
++            "sfo_capture_sha256": sfo["capture_provenance"]["capture_sha256"],
++            "sfo_role": sfo_role,
++        },
++        "preregistered_result": preregistered,
++        "causal_review": {
++            "label": "CAUSAL_REVIEW",
++            "shared_faction_comparison": shared,
++            "composition_review": causal_review,
++        },
++        "exploratory_result": exploratory,
++        "mechanism_nomination_eligibility": {
++            "eligible": False,
++            "native_row_ablation_earned": False,
++            "application_authority_change_earned": False,
++            "reason": (
++                "Stage A can at most request fresh vanilla replication; it never earns row ablation."
++                if sfo_role == "stage-a"
++                else "One vanilla/SFO pair cannot establish profile-level causation or row-level mechanism eligibility."
++            ),
++        },
++        "policy_boundary": {
++            "copy_sfo_priority_increases": "PROHIBITED",
++            "privileged_telemetry_application_input": "PROHIBITED",
++            "project_owned_campaign_orders": "PROHIBITED",
++            "v0_2g_v0_2i_revival": "NOT_EARNED",
++        },
++    }
++    result["comparison_digest"] = digest(result)
++    return result
++
++
++def _timeline_csv_bytes(rows: list[dict[str, Any]]) -> bytes:
++    import io
++
++    stream = io.StringIO(newline="")
++    writer = csv.DictWriter(stream, fieldnames=TIMELINE_FIELDS, lineterminator="\n")
++    writer.writeheader()
++    for row in rows:
++        serialized = dict(row)
++        for key in ("wars", "owned_regions", "battle_sequences", "battle_roles"):
++            serialized[key] = json.dumps(serialized.get(key), sort_keys=True, separators=(",", ":"))
++        writer.writerow(serialized)
++    return stream.getvalue().encode("utf-8")
++
++
++def _capture_summary(normalized: dict[str, Any]) -> dict[str, Any]:
++    frozen = normalized.get("frozen_metric_replay") or {}
++    base = frozen.get("base_v0_2n_behavior_result") or {}
++    strat = frozen.get("temporal_stratification") or {}
++    return {
++        "contract": "NATIVE_CAI_BEHAVIOR_REPLAY_SUMMARY_V1",
++        "study_version": STUDY_VERSION,
++        **_authority_fields(),
++        "profile": normalized["profile"],
++        "capture_sha256": normalized["capture_provenance"]["capture_sha256"],
++        "normalized_digest": normalized["normalized_digest"],
++        "telemetry_completeness": normalized["telemetry_completeness"],
++        "recovery_status": base.get("recovery_status"),
++        "temporal_status": base.get("temporal_status"),
++        "recovery_metrics": None if not base else {
++            key: base["metrics"].get(key)
++            for key in (
++                "recovering_army_turn_count",
++                "recovering_attacker_side_army_turn_count",
++                "recovering_attacker_side_rate",
++            )
++        },
++        "territorial_temporal": strat.get("territorial"),
++        "nonterritorial_temporal": strat.get("nonterritorial"),
++        "mechanism_nomination_eligible": False,
++    }
++
++
++def _capture_markdown(summary: dict[str, Any]) -> str:
++    completeness = summary["telemetry_completeness"]
++    territorial = summary.get("territorial_temporal") or {}
++    lines = [
++        "# Native CAI Behavior Replay Lab",
++        "",
++        f"- Study: `{summary['study_version']}`",
++        f"- Profile: `{summary['profile']}`",
++        f"- Capture SHA-256: `{summary['capture_sha256']}`",
++        f"- Authority: `{summary['authority']}` / application `{summary['application_authority']}`",
++        f"- Application eligible: `{str(summary['application_eligible']).lower()}`",
++        f"- Frozen replay eligible: `{str(completeness['frozen_metric_replay_eligible']).lower()}`",
++        "",
++        "## Preregistered replay",
++        "",
++        f"- Recovery status: `{summary.get('recovery_status')}`",
++        f"- Temporal status: `{summary.get('temporal_status')}`",
++        f"- Territorial eligible windows: `{territorial.get('eligible_windows')}`",
++        f"- Territorial reversal candidates: `{territorial.get('reversal_candidates')}`",
++        f"- Territorial reversal rate: `{territorial.get('reversal_candidate_rate')}`",
++        f"- Territorial repeated reversal forces: `{territorial.get('repeated_reversal_force_count')}`",
++        "",
++        "## Telemetry completeness",
++        "",
++        f"- Complete battles: `{completeness['complete_battle_sequence_count']}`",
++        f"- Incomplete battles: `{completeness['incomplete_battle_sequence_count']}`",
++        f"- Incomplete AI faction turns: `{completeness['incomplete_ai_faction_turn_count']}`",
++        f"- Capability failures: `{completeness['capability_failure_count']}`",
++        f"- Battle interpretation: `{completeness['battle_absence_interpretation']}`",
++        "",
++        "## Boundary",
++        "",
++        "This replay is research-only. It does not earn a native-row ablation, copy SFO priority increases, make privileged telemetry application-eligible, or authorize project-owned campaign orders.",
++        "",
++    ]
++    return "\n".join(lines)
++
++
++def _comparison_markdown(comparison: dict[str, Any]) -> str:
++    p = comparison["preregistered_result"]
++    c = comparison["causal_review"]["shared_faction_comparison"]
++    eligibility = comparison["mechanism_nomination_eligibility"]
++    temporal = (p.get("sfo_v0_2p_decision") or {}).get("temporal", {})
++    stage_a = p.get("stage_a_adjudication") or {}
++    lines = [
++        "# Native CAI Vanilla ↔ SFO Replay Comparison",
++        "",
++        f"- Study: `{comparison['study_version']}`",
++        f"- Authority: `{comparison['authority']}` / application `{comparison['application_authority']}`",
++        f"- SFO role: `{p['sfo_role']}`",
++        "",
++        "## Preregistered result",
++        "",
++        f"- v0.2P temporal branch: `{temporal.get('branch')}`",
++        f"- v0.2P action: `{temporal.get('action')}`",
++        f"- Stage-A branch: `{stage_a.get('branch')}`",
++        f"- Stage-A action: `{stage_a.get('action')}`",
++        "",
++        "## Causal review",
++        "",
++        f"- Shared factions: `{len(c['shared_factions'])}`",
++        f"- Shared-faction vanilla rate: `{c['vanilla']['reversal_candidate_rate']}`",
++        f"- Shared-faction SFO rate: `{c['sfo']['reversal_candidate_rate']}`",
++        "- Shared-faction restriction is post-hoc and cannot erase the preregistered aggregate result.",
++        "",
++        "## Exploratory result",
++        "",
++        f"- Aggregate territorial SFO-minus-vanilla rate delta: `{comparison['exploratory_result']['aggregate_territorial_rate_delta_sfo_minus_vanilla']}`",
++        "- Exploratory diagnostics do not change frozen thresholds or decision branches.",
++        "",
++        "## Mechanism nomination eligibility",
++        "",
++        f"- Eligible: `{str(eligibility['eligible']).lower()}`",
++        f"- Native-row ablation earned: `{str(eligibility['native_row_ablation_earned']).lower()}`",
++        f"- Reason: {eligibility['reason']}",
++        "",
++    ]
++    return "\n".join(lines)
++
++
++def write_replay_outputs(normalized: dict[str, Any], output_dir: Path) -> dict[str, str]:
++    output_dir.mkdir(parents=True, exist_ok=True)
++    summary = _capture_summary(normalized)
++    files = {
++        "normalized.json": _json_bytes(normalized),
++        "summary.json": _json_bytes(summary),
++        "timeline.csv": _timeline_csv_bytes(normalized["timeline"]),
++        "report.md": _capture_markdown(summary).encode("utf-8"),
++    }
++    for name, blob in files.items():
++        (output_dir / name).write_bytes(blob)
++    return {name: _sha256(blob) for name, blob in sorted(files.items())}
++
++
++def write_comparison_outputs(comparison: dict[str, Any], output_dir: Path) -> dict[str, str]:
++    output_dir.mkdir(parents=True, exist_ok=True)
++    files = {
++        "comparison.json": _json_bytes(comparison),
++        "comparison.md": _comparison_markdown(comparison).encode("utf-8"),
++    }
++    for name, blob in files.items():
++        (output_dir / name).write_bytes(blob)
++    return {name: _sha256(blob) for name, blob in sorted(files.items())}
++
++
++def main() -> int:
++    parser = argparse.ArgumentParser(description="Deterministic v0.2R native CAI Behavior Replay Lab")
++    sub = parser.add_subparsers(dest="command", required=True)
++
++    replay = sub.add_parser("replay", help="Normalize and replay one diagnostic capture ZIP")
++    replay.add_argument("capture", type=Path)
++    replay.add_argument("--expected-sha256")
++    replay.add_argument("--output-dir", type=Path, required=True)
++
++    compare = sub.add_parser("compare", help="Compare one vanilla capture with one SFO capture")
++    compare.add_argument("--vanilla", type=Path, required=True)
++    compare.add_argument("--sfo", type=Path, required=True)
++    compare.add_argument("--vanilla-sha256")
++    compare.add_argument("--sfo-sha256")
++    compare.add_argument("--sfo-role", choices=("original", "stage-a"), default="original")
++    compare.add_argument("--output-dir", type=Path, required=True)
++
++    args = parser.parse_args()
++    if args.command == "replay":
++        normalized = replay_capture(args.capture, expected_sha256=args.expected_sha256)
++        output_hashes = write_replay_outputs(normalized, args.output_dir.resolve())
++        out = {
++            "contract": "NATIVE_CAI_BEHAVIOR_REPLAY_CLI_RESULT_V1",
++            "study_version": STUDY_VERSION,
++            **_authority_fields(),
++            "profile": normalized["profile"],
++            "capture_sha256": normalized["capture_provenance"]["capture_sha256"],
++            "normalized_digest": normalized["normalized_digest"],
++            "output_hashes": output_hashes,
++        }
++    else:
++        vanilla = replay_capture(args.vanilla, expected_sha256=args.vanilla_sha256)
++        sfo = replay_capture(args.sfo, expected_sha256=args.sfo_sha256)
++        comparison = compare_replays(vanilla, sfo, sfo_role=args.sfo_role)
++        output_hashes = write_comparison_outputs(comparison, args.output_dir.resolve())
++        out = {
++            "contract": "NATIVE_CAI_BEHAVIOR_REPLAY_COMPARISON_CLI_RESULT_V1",
++            "study_version": STUDY_VERSION,
++            **_authority_fields(),
++            "comparison_digest": comparison["comparison_digest"],
++            "output_hashes": output_hashes,
++        }
++    print(json.dumps(out, indent=2, sort_keys=True))
++    return 0
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())
++diff --git a/synthetic_lab/tests/test_native_cai_ablation_factory.py b/synthetic_lab/tests/test_native_cai_ablation_factory.py
++new file mode 100644
++index 0000000..f230b29
++--- /dev/null
+++++ b/synthetic_lab/tests/test_native_cai_ablation_factory.py
++@@ -0,0 +1,164 @@
++from __future__ import annotations
++
++import hashlib
++import json
++import struct
++import tempfile
++import unittest
++from pathlib import Path
++
++from runtime_probe.tools.build_probe_packs import PACK_MAGIC
++from tools.native_cai_ablation_factory import AblationFactoryError, build_single_row_ablation
++
++
++def _spec(**overrides):
++    value = {
++        "contract": "NATIVE_CAI_SINGLE_ROW_ABLATION_SPEC_V1",
++        "experiment_status": "FACTORY_VALIDATION_NOT_EARNED",
++        "table": "cai_task_management_system_variables_tables",
++        "key_fields": ["key"],
++        "key_schema_certification": "VERIFIED_PINNED_SCHEMA_KEY",
++        "source_header": {
++            "guid": "d97d0a9e-4302-4dd3-a795-b854f9beb065",
++            "version": 0,
++            "mysterious": True,
++            "version_marker_present": False,
++        },
++        "original_row": {"key": "SYNTHETIC_ALLOCATOR_TEST", "value": 2.0},
++        "experimental_row": {"key": "SYNTHETIC_ALLOCATOR_TEST", "value": 3.0},
++        "changed_field": "value",
++        "provenance": {
++            "evidence_label": "HYPOTHESIS",
++            "source_reference": "synthetic factory validation fixture",
++            "source_sha256": "0" * 64,
++            "synthetic_fixture": True,
++        },
++    }
++    value.update(overrides)
++    return value
++
++
++def _pack_entries(pack: bytes):
++    if pack[:4] != PACK_MAGIC:
++        raise AssertionError("not PFH5")
++    pack_type, flags, deps, count, index_size, timestamp = struct.unpack_from("<6I", pack, 4)
++    offset = 28
++    entries = []
++    for _ in range(count):
++        size = struct.unpack_from("<I", pack, offset)[0]
++        compression = pack[offset + 4]
++        offset += 5
++        end = pack.index(b"\x00", offset)
++        path = pack[offset:end].decode("utf-8").replace("\\", "/")
++        entries.append((path, size, compression))
++        offset = end + 1
++    data_offset = 28 + index_size
++    blobs = []
++    for path, size, compression in entries:
++        blobs.append((path, pack[data_offset:data_offset + size], compression))
++        data_offset += size
++    return (pack_type, flags, deps, count, timestamp), blobs
++
++
++class NativeCaiAblationFactoryTests(unittest.TestCase):
++    def setUp(self):
++        self._temp = tempfile.TemporaryDirectory()
++        self.root = Path(self._temp.name)
++
++    def tearDown(self):
++        self._temp.cleanup()
++
++    def test_factory_build_is_byte_deterministic_and_single_entry(self):
++        one = build_single_row_ablation(_spec(), self.root / "one")
++        two = build_single_row_ablation(_spec(), self.root / "two")
++        p1 = (self.root / "one" / "transcendence_native_cai_single_row_ablation.pack").read_bytes()
++        p2 = (self.root / "two" / "transcendence_native_cai_single_row_ablation.pack").read_bytes()
++        self.assertEqual(p1, p2)
++        self.assertEqual(one["pack"]["pack_sha256"], two["pack"]["pack_sha256"])
++        self.assertEqual(one["pack"]["pack_sha256"], hashlib.sha256(p1).hexdigest())
++        header, blobs = _pack_entries(p1)
++        self.assertEqual(header, (3, 0, 0, 1, 0))
++        self.assertEqual(len(blobs), 1)
++        self.assertEqual(blobs[0][0], "db/cai_task_management_system_variables_tables/transcendence_single_row_ablation")
++        self.assertEqual(blobs[0][2], 0)
++
++    def test_db_payload_contains_exactly_one_experimental_row(self):
++        record = build_single_row_ablation(_spec(), self.root)
++        pack = (self.root / "transcendence_native_cai_single_row_ablation.pack").read_bytes()
++        _, blobs = _pack_entries(pack)
++        payload = blobs[0][1]
++        self.assertEqual(payload[:4], b"\xfd\xfe\xfc\xff")
++        self.assertEqual(payload[78], 1)
