@@ -1,0 +1,175 @@
+name: v0.2R offline engineering promotion
+
+on:
+  push:
+    branches:
+      - agent/v0.2r-loader
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout loader branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect sealed v0.2R archive
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .promotion
+          mapfile -t archives < <(find .promotion -maxdepth 1 -type f -name '*.zip' -print | sort)
+          if [ "${#archives[@]}" -eq 0 ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "No .promotion/*.zip archive is present yet; promotion loader is armed and no target branch mutation will occur."
+            exit 0
+          fi
+          if [ "${#archives[@]}" -ne 1 ]; then
+            echo "Expected exactly one .promotion/*.zip archive, found ${#archives[@]}." >&2
+            exit 1
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+          echo "path=${archives[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Verify sealed v0.2R archive
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        env:
+          ARCHIVE: ${{ steps.detect.outputs.path }}
+        run: |
+          set -euo pipefail
+          expected='03bb51f2bc717e586f2c4316a5e79e5f94ddf4ed1494b22696a84a8f4b88ad67'
+          actual="$(sha256sum "$ARCHIVE" | awk '{print $1}')"
+          test "$actual" = "$expected" || {
+            echo "Archive SHA-256 mismatch: expected $expected, got $actual" >&2
+            exit 1
+          }
+          echo "Verified sealed v0.2R archive SHA-256: $actual"
+
+      - name: Extract and verify exact candidate tree
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        env:
+          ARCHIVE: ${{ steps.detect.outputs.path }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/transcendence-v02r
+          mkdir -p /tmp/transcendence-v02r
+          unzip -q "$ARCHIVE" -d /tmp/transcendence-v02r
+          python - <<'PY'
+          from __future__ import annotations
+          import hashlib
+          from pathlib import Path
+
+          root = Path('/tmp/transcendence-v02r')
+          ledger = root / 'SHA256SUMS.txt'
+          if not ledger.is_file():
+              raise SystemExit('SHA256SUMS.txt missing from v0.2R archive')
+          expected: dict[str, str] = {}
+          for line in ledger.read_text(encoding='utf-8').splitlines():
+              if not line.strip():
+                  continue
+              digest, relative = line.split('  ', 1)
+              if relative in expected:
+                  raise SystemExit(f'duplicate manifest path: {relative}')
+              expected[relative] = digest
+          if len(expected) != 600:
+              raise SystemExit(f'expected 600 manifest entries, got {len(expected)}')
+          actual_files = sorted(
+              p.relative_to(root).as_posix()
+              for p in root.rglob('*') if p.is_file()
+          )
+          expected_files = sorted([*expected.keys(), 'SHA256SUMS.txt'])
+          if actual_files != expected_files:
+              missing = sorted(set(expected_files) - set(actual_files))
+              extra = sorted(set(actual_files) - set(expected_files))
+              raise SystemExit(f'archive tree mismatch; missing={missing}; extra={extra}')
+          for relative, digest in sorted(expected.items()):
+              actual = hashlib.sha256((root / relative).read_bytes()).hexdigest()
+              if actual != digest:
+                  raise SystemExit(f'hash mismatch: {relative}')
+          print('PASS v0.2R manifest: 600/600 hashed files; 601 total files')
+          PY
+
+      - name: Verify frozen Lua probe identities
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/transcendence-v02r
+          test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_native_diagnostic_probe.lua | awk '{print $1}')" = '0acb4e186a4f4077801a763dbbf5cacc8ae21a9d47ecc76d54fefe5c023ec203'
+          test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_shadow_probe.lua | awk '{print $1}')" = '4f8c80fb67efe288e4b7b4eeacc0c48578707a0e554f2dd8a454aa669b50ed98'
+          echo 'PASS frozen game-side Lua probe identity checks'
+
+      - name: Run v0.2R canonical validation
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/transcendence-v02r
+          PYTHONPATH=synthetic_lab python tools/validate_repository.py
+
+      - name: Verify base main is canonical v0.2Q
+        if: steps.detect.outputs.ready == 'true'
+        id: base
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main agent/v0.2r-offline-engineering --force
+          base_sha="$(git rev-parse origin/main)"
+          base_tree="$(git show -s --format=%T "$base_sha")"
+          expected_tree='e665e7808aff3d4797ac40793ad145ff19a9aa0b'
+          test "$base_tree" = "$expected_tree" || {
+            echo "Fail closed: main tree is not sealed v0.2Q. Expected $expected_tree, got $base_tree at $base_sha" >&2
+            exit 1
+          }
+          echo "sha=$base_sha" >> "$GITHUB_OUTPUT"
+          echo "Canonical main base: $base_sha ($base_tree)"
+
+      - name: Create exact v0.2R commit and advance engineering branch
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+          TARGET_BRANCH: agent/v0.2r-offline-engineering
+        run: |
+          set -euo pipefail
+          repo="$GITHUB_WORKSPACE"
+          work=/tmp/transcendence-v02r
+          export GIT_INDEX_FILE=/tmp/transcendence-v02r.index
+          rm -f "$GIT_INDEX_FILE"
+          git --git-dir="$repo/.git" read-tree --empty
+          git --git-dir="$repo/.git" --work-tree="$work" add -A
+          tree="$(git --git-dir="$repo/.git" write-tree)"
+          expected_tree='3f4b8a721eec479a023561e5324fb4e8f48e8193'
+          test "$tree" = "$expected_tree" || {
+            echo "Fail closed: reconstructed v0.2R tree mismatch. Expected $expected_tree, got $tree" >&2
+            exit 1
+          }
+          export GIT_AUTHOR_NAME='github-actions[bot]'
+          export GIT_AUTHOR_EMAIL='41898282+github-actions[bot]@users.noreply.github.com'
+          export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+          export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+          commit="$(printf '%s\n' 'feat: add v0.2R offline engineering candidate' | git --git-dir="$repo/.git" commit-tree "$tree" -p "$BASE_SHA")"
+          current="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | awk '{print $1}')"
+          if [ -n "$current" ]; then
+            current_tree="$(git show -s --format=%T "$current")"
+            test "$current_tree" = 'e665e7808aff3d4797ac40793ad145ff19a9aa0b' || {
+              echo "Fail closed: $TARGET_BRANCH is no longer at canonical v0.2Q content ($current / $current_tree)." >&2
+              exit 1
+            }
+          fi
+          git push origin "$commit:refs/heads/$TARGET_BRANCH"
+          echo "v0.2R tree: $tree"
+          echo "v0.2R commit: $commit"
+
+      - name: Preserve loader for audit
+        if: always()
+        shell: bash
+        run: echo 'v0.2R loader branch is transport-only and is not canonical or application-authoritative.'
