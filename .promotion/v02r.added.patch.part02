@@ -1,0 +1,256 @@
++        members["transcendence_native_diagnostic_log.txt"] += b"#tampered\n"
++        with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
++            for name, blob in members.items():
++                archive.writestr(name, blob)
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++
++class NativeBehaviorReplayLabTests(unittest.TestCase):
++    def test_manifest_hash_mismatch_fails_closed(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, tamper_payload=True)
++            with self.assertRaisesRegex(NativeBehaviorReplayError, "manifest (SHA-256|size) mismatch"):
++                replay_capture(path)
++
++    def test_external_capture_sha_binding_fails_closed(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path)
++            with self.assertRaisesRegex(NativeBehaviorReplayError, "capture SHA-256 mismatch"):
++                replay_capture(path, expected_sha256="0" * 64)
++
++    def test_duplicate_zip_member_fails_closed(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, duplicate_zip_member=True)
++            with self.assertRaisesRegex(NativeBehaviorReplayError, "duplicate ZIP members"):
++                replay_capture(path)
++
++    def test_unknown_future_event_fails_closed(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(unknown_event=True))
++            with self.assertRaisesRegex(NativeBehaviorReplayError, "unknown future diagnostic event"):
++                replay_capture(path)
++
++    def test_missing_battle_telemetry_never_becomes_no_battle_claim(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(battle_declared=False))
++            out = replay_capture(path)
++            self.assertFalse(out["telemetry_completeness"]["frozen_metric_replay_eligible"])
++            self.assertIn("DO_NOT_INFER_NO_BATTLE", out["telemetry_completeness"]["battle_absence_interpretation"])
++            self.assertIsNone(out["frozen_metric_replay"])
++
++    def test_partial_turn_is_preserved_as_incomplete_not_silently_dropped(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(partial_turn=2))
++            out = replay_capture(path)
++            self.assertEqual(out["telemetry_completeness"]["incomplete_ai_faction_turn_count"], 1)
++            self.assertFalse(out["telemetry_completeness"]["frozen_metric_replay_eligible"])
++
++    def test_incomplete_battle_sequence_blocks_frozen_metrics(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(incomplete_battle=True))
++            out = replay_capture(path)
++            self.assertEqual(out["telemetry_completeness"]["incomplete_battle_sequence_count"], 1)
++            self.assertIn("INCOMPLETE_BATTLE_SEQUENCE", out["telemetry_completeness"]["battle_absence_interpretation"])
++            self.assertIsNone(out["frozen_metric_replay"])
++
++    def test_duplicate_force_record_is_rejected(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(duplicate_force=True))
++            with self.assertRaisesRegex(NativeBehaviorReplayError, "duplicate force_cqi"):
++                replay_capture(path)
++
++    def test_destroyed_recreated_cqi_identity_change_is_flagged(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(general_by_turn=(100, 200, 200)))
++            out = replay_capture(path)
++            flags = out["exploratory_diagnostics"]["force_cqi_identity_discontinuities"]
++            self.assertEqual(len(flags), 1)
++            self.assertEqual(flags[0]["classification"], "FORCE_CQI_CONSECUTIVE_IDENTITY_CHANGE")
++
++    def test_stationary_army_is_represented_without_directional_window(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(positions=(0.0, 0.0, 0.0)))
++            out = replay_capture(path)
++            self.assertEqual(out["exploratory_diagnostics"]["movement_distance_distribution"]["stationary_force_turn_count"], 3)
++            self.assertEqual(
++                out["frozen_metric_replay"]["base_v0_2n_behavior_result"]["metrics"]["eligible_battle_free_stable_context_directional_windows"],
++                0,
++            )
++
++    def test_roaming_faction_is_nonterritorial(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(territorial=False))
++            out = replay_capture(path)
++            self.assertTrue(all(not row["territorial"] for row in out["timeline"]))
++            strat = out["frozen_metric_replay"]["temporal_stratification"]
++            self.assertGreaterEqual(strat["nonterritorial"]["eligible_windows"], 1)
++            self.assertEqual(strat["territorial"]["eligible_windows"], 0)
++
++    def test_overlapping_reversal_windows_do_not_become_repeated_signal(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(positions=(0.0, 10.0, 0.0, 10.0)))
++            out = replay_capture(path)
++            base = out["frozen_metric_replay"]["base_v0_2n_behavior_result"]
++            self.assertEqual(base["metrics"]["heading_reversal_candidate_count"], 2)
++            self.assertEqual(base["metrics"]["repeated_reversal_force_count"], 0)
++
++    def test_one_faction_candidate_concentration_is_reported(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(positions=(0.0, 10.0, 0.0, 10.0, 0.0)))
++            out = replay_capture(path)
++            concentration = out["frozen_metric_replay"]["territorial_cluster_diagnostics"]["candidate_concentration"]
++            self.assertEqual(concentration["candidate_bearing_faction_count"], 1)
++            self.assertEqual(concentration["max_faction_candidate_share"], 1.0)
++
++    def test_insufficient_denominator_is_preserved(self):
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(positions=(0.0, 10.0, 0.0, 10.0)))
++            out = replay_capture(path)
++            territorial = out["frozen_metric_replay"]["temporal_stratification"]["territorial"]
++            self.assertFalse(territorial["exposure_sufficient_for_primary_interpretation"])
++
++    def test_disappearing_faction_does_not_create_synthetic_future_rows(self):
++        # A three-turn capture can legitimately contain only the observed faction-turn rows.
++        with tempfile.TemporaryDirectory() as temp:
++            path = Path(temp) / "capture.zip"
++            make_capture(path, log_blob=build_log(positions=(0.0, 10.0)))
++            out = replay_capture(path)
++            observed_turns = {row["turn"] for row in out["timeline"]}
++            self.assertEqual(observed_turns, {1, 2})
++
++    def test_replay_output_is_byte_deterministic(self):
++        with tempfile.TemporaryDirectory() as temp:
++            root = Path(temp)
++            path = root / "capture.zip"
++            make_capture(path)
++            out = replay_capture(path)
++            first, second = root / "a", root / "b"
++            h1 = write_replay_outputs(out, first)
++            h2 = write_replay_outputs(out, second)
++            self.assertEqual(h1, h2)
++            for name in h1:
++                self.assertEqual((first / name).read_bytes(), (second / name).read_bytes())
++
++    def test_vanilla_sfo_comparison_separates_preregistered_causal_and_exploratory(self):
++        with tempfile.TemporaryDirectory() as temp:
++            root = Path(temp)
++            vanilla_path, sfo_path = root / "vanilla.zip", root / "sfo.zip"
++            make_capture(vanilla_path, contract=VANILLA_CONTRACT, log_blob=build_log(positions=(0, 10, 0, 10, 0)))
++            make_capture(sfo_path, contract=SFO_CONTRACT, log_blob=build_log(positions=(0, 10, 0, 10, 0)))
++            vanilla = replay_capture(vanilla_path)
++            sfo = replay_capture(sfo_path)
++            comparison = compare_replays(vanilla, sfo, sfo_role="original")
++            self.assertEqual(comparison["preregistered_result"]["label"], "PREREGISTERED_RESULT")
++            self.assertEqual(comparison["causal_review"]["label"], "CAUSAL_REVIEW")
++            self.assertEqual(comparison["exploratory_result"]["label"], "EXPLORATORY")
++            self.assertFalse(comparison["mechanism_nomination_eligibility"]["eligible"])
++            self.assertIsNone(comparison["preregistered_result"]["stage_a_adjudication"])
++
++    def test_stage_a_role_applies_frozen_policy_but_never_earns_ablation(self):
++        with tempfile.TemporaryDirectory() as temp:
++            root = Path(temp)
++            vanilla_path, sfo_path = root / "vanilla.zip", root / "sfo.zip"
++            positions = tuple(0.0 if turn % 2 else 10.0 for turn in range(1, 24))
++            make_capture(vanilla_path, contract=VANILLA_CONTRACT, log_blob=build_log(positions=positions))
++            make_capture(sfo_path, contract=SFO_CONTRACT, log_blob=build_log(positions=positions))
++            comparison = compare_replays(replay_capture(vanilla_path), replay_capture(sfo_path), sfo_role="stage-a")
++            stage = comparison["preregistered_result"]["stage_a_adjudication"]
++            self.assertIsNotNone(stage)
++            self.assertFalse(stage["native_row_ablation_earned"])
++            self.assertFalse(comparison["mechanism_nomination_eligibility"]["native_row_ablation_earned"])
++
++    def test_frozen_v02q_reference_numbers_and_policy_digest_are_unchanged(self):
++        vanilla = json.loads((REPO_ROOT / "research/runtime_evidence/NATIVE_BEHAVIOR_STUDY_VANILLA_REFERENCE_v0.2O_2026-08-03.json").read_text(encoding="utf-8"))
++        sfo = json.loads((REPO_ROOT / "research/runtime_evidence/NATIVE_SFO_BEHAVIOR_BENCHMARK_OWNER_RESULT_v0.2Q_2026-08-04.json").read_text(encoding="utf-8"))
++        policy = json.loads((REPO_ROOT / "research/native_cai/NATIVE_SFO_REPLICATION_DECISION_POLICY_v0.2Q_2026-08-04.json").read_text(encoding="utf-8"))
++        self.assertEqual(vanilla["recovery"]["recovering_army_turn_count"], 38)
++        self.assertEqual(vanilla["recovery"]["recovering_attacker_side_army_turn_count"], 6)
++        self.assertEqual(vanilla["recovery"]["recovering_attacker_side_rate"], 0.157895)
++        self.assertEqual(vanilla["temporal_stratification"]["territorial"]["eligible_windows"], 48)
++        self.assertEqual(vanilla["temporal_stratification"]["territorial"]["reversal_candidates"], 13)
++        self.assertEqual(vanilla["temporal_stratification"]["territorial"]["reversal_candidate_rate"], 0.270833)
++        comparison = sfo["comparison_to_hash_frozen_vanilla_reference"]
++        self.assertEqual(comparison["recovery_attacker_side_rate_sfo"], 0.142857)
++        self.assertEqual(comparison["territorial_eligible_windows_sfo"], 39)
++        self.assertEqual(sfo["territorial_cluster_diagnostics"]["reversal_candidates"], 18)
++        self.assertEqual(comparison["territorial_reversal_candidate_rate_sfo"], 0.461538)
++        self.assertEqual(policy["policy_digest"], "3171982731ca16a635723f5d5a788c6ce5fb397590f82a60cabb221e26ac0120")
++
++    def test_game_side_lua_probes_remain_byte_identical_to_sealed_v02q(self):
++        diagnostic = REPO_ROOT / "runtime_probe/source/script/campaign/mod/transcendence_native_diagnostic_probe.lua"
++        shadow = REPO_ROOT / "runtime_probe/source/script/campaign/mod/transcendence_shadow_probe.lua"
++        self.assertEqual(hashlib.sha256(diagnostic.read_bytes()).hexdigest(), "0acb4e186a4f4077801a763dbbf5cacc8ae21a9d47ecc76d54fefe5c023ec203")
++        self.assertEqual(hashlib.sha256(shadow.read_bytes()).hexdigest(), "4f8c80fb67efe288e4b7b4eeacc0c48578707a0e554f2dd8a454aa669b50ed98")
++
++    def test_comparison_output_is_byte_deterministic(self):
++        with tempfile.TemporaryDirectory() as temp:
++            root = Path(temp)
++            vanilla_path, sfo_path = root / "vanilla.zip", root / "sfo.zip"
++            make_capture(vanilla_path, contract=VANILLA_CONTRACT)
++            make_capture(sfo_path, contract=SFO_CONTRACT)
++            comparison = compare_replays(replay_capture(vanilla_path), replay_capture(sfo_path))
++            a, b = root / "a", root / "b"
++            self.assertEqual(write_comparison_outputs(comparison, a), write_comparison_outputs(comparison, b))
++            self.assertEqual((a / "comparison.json").read_bytes(), (b / "comparison.json").read_bytes())
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/runtime_probe/tools/Replay-NativeBehavior.ps1 b/runtime_probe/tools/Replay-NativeBehavior.ps1
+new file mode 100644
+index 0000000..8a32ae5
+--- /dev/null
++++ b/runtime_probe/tools/Replay-NativeBehavior.ps1
+@@ -0,0 +1,5 @@
++$ErrorActionPreference = "Stop"
++$here = Split-Path -Parent $MyInvocation.MyCommand.Path
++$python = Get-Command python.exe -ErrorAction SilentlyContinue
++if (-not $python) { $python = Get-Command py.exe -ErrorAction Stop }
++& $python.Source (Join-Path $here "native_behavior_replay.py") @args
+diff --git a/runtime_probe/tools/native_behavior_replay.py b/runtime_probe/tools/native_behavior_replay.py
+new file mode 100644
+index 0000000..dc407e7
+--- /dev/null
++++ b/runtime_probe/tools/native_behavior_replay.py
+@@ -0,0 +1,924 @@
++from __future__ import annotations
++
++import argparse
++import csv
++import hashlib
++import json
++import math
++import statistics
++import sys
++import tempfile
++import zipfile
++from collections import Counter, defaultdict
++from pathlib import Path, PurePosixPath
++from typing import Any
++
++REPO_ROOT = Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(REPO_ROOT / "runtime_probe" / "tools"))
++sys.path.insert(0, str(REPO_ROOT / "synthetic_lab"))
++
++from run_native_diagnostic_telemetry import parse_diagnostic_trace, parse_line
++from transcendence_lab.canonical import digest
++from transcendence_lab.native_diagnostic_benchmark import (
++    analyze_sfo_benchmark,
++    stratify_temporal_trace,
++    temporal_cluster_diagnostics,
++)
++from transcendence_lab.native_diagnostic_study import analyze_native_diagnostic_behavior_study
