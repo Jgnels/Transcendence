@@ -1,0 +1,94 @@
+name: v0.2R canonicalization closeout
+
+on:
+  push:
+    branches:
+      - agent/v0.2r-canonicalization-closeout-loader
+    paths:
+      - '.closeout/**'
+      - '.github/workflows/v02r-canonicalization-closeout.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  closeout:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout loader branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect closeout patch
+        id: detect
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f .closeout/v02r-canonicalization-closeout.patch ]; then
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo 'Closeout loader armed; patch not present yet.'
+            exit 0
+          fi
+          echo 'ready=true' >> "$GITHUB_OUTPUT"
+
+      - name: Verify patch identity
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected='f1d656f40984fae30dc88e86737b667e46a540436ad84635d71f51ef27cc40d7'
+          actual="$(sha256sum .closeout/v02r-canonicalization-closeout.patch | awk '{print $1}')"
+          test "$actual" = "$expected" || { echo "Patch SHA mismatch: $actual" >&2; exit 1; }
+          echo "PASS closeout patch SHA-256: $actual"
+
+      - name: Reconstruct from exact canonical v0.2R main
+        if: steps.detect.outputs.ready == 'true'
+        id: base
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main --force
+          base_sha="$(git rev-parse origin/main)"
+          base_tree="$(git show -s --format=%T "$base_sha")"
+          test "$base_sha" = 'af389b86861e5a30ac4f32e820d4230342870402' || { echo "main moved: $base_sha" >&2; exit 1; }
+          test "$base_tree" = '3f4b8a721eec479a023561e5324fb4e8f48e8193' || { echo "main tree drift: $base_tree" >&2; exit 1; }
+          git worktree add --detach /tmp/v02r-closeout "$base_sha"
+          cd /tmp/v02r-closeout
+          git apply --check "$GITHUB_WORKSPACE/.closeout/v02r-canonicalization-closeout.patch"
+          git apply "$GITHUB_WORKSPACE/.closeout/v02r-canonicalization-closeout.patch"
+          git diff --check
+          echo "sha=$base_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Validate closeout candidate
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/v02r-closeout
+          test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_native_diagnostic_probe.lua | awk '{print $1}')" = '0acb4e186a4f4077801a763dbbf5cacc8ae21a9d47ecc76d54fefe5c023ec203'
+          test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_shadow_probe.lua | awk '{print $1}')" = '4f8c80fb67efe288e4b7b4eeacc0c48578707a0e554f2dd8a454aa669b50ed98'
+          PYTHONPATH=synthetic_lab python tools/validate_repository.py
+          test -z "$(find . -type f -name '*.pack' -print -quit)" || { echo 'Closeout contains .pack bytes' >&2; exit 1; }
+
+      - name: Verify exact tree and advance closeout branch
+        if: steps.detect.outputs.ready == 'true'
+        shell: bash
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+          TARGET_BRANCH: agent/v0.2r-canonicalization-closeout
+        run: |
+          set -euo pipefail
+          cd /tmp/v02r-closeout
+          git add README.md research/CURRENT_STATE.md gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md SHA256SUMS.txt
+          tree="$(git write-tree)"
+          expected_tree='bc41cf6bb959cb11e4c0405557b9ee017e694030'
+          test "$tree" = "$expected_tree" || { echo "Closeout tree mismatch: $tree" >&2; exit 1; }
+          export GIT_AUTHOR_NAME='github-actions[bot]'
+          export GIT_AUTHOR_EMAIL='41898282+github-actions[bot]@users.noreply.github.com'
+          export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+          export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+          commit="$(printf '%s\n' 'docs: close v0.2R canonicalization status' | git commit-tree "$tree" -p "$BASE_SHA")"
+          git push origin "$commit:refs/heads/$TARGET_BRANCH"
+          echo "PASS closeout tree: $tree"
+          echo "closeout commit: $commit"
