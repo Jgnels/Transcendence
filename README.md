@@ -1,6 +1,6 @@
-## v0.2R offline engineering integration candidate — NOT YET CANONICAL
+## v0.2R offline engineering — GITHUB-CANONICAL
 
-v0.2R prepares three isolated offline capabilities on top of the sealed v0.2Q evidence: a deterministic Native Behavior Replay Lab, a fail-closed single-row native CAI Ablation Factory, and an active-document native-first architecture audit. No fresh Stage-A SFO replication has been consumed; no native row experiment is earned; no real ablation pack is committed or installed. The game-side Lua probes remain frozen. This integration candidate must not supersede sealed v0.2Q until the GitHub canonical cutover and v0.2R promotion checks complete. Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
+v0.2R is now promoted to GitHub `main` on top of the exact sealed v0.2Q evidence. It adds three isolated offline capabilities: a deterministic Native Behavior Replay Lab, a fail-closed single-row native CAI Ablation Factory, and an active-document native-first architecture audit. GitHub canonicalization completed through PR #1 (sealed v0.2Q cutover) and PR #2 (exact validated v0.2R tree); canonical `main` is merge commit `fae5ccdf44b98823182558c96d2f4c87218ac54c` with tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` before this documentation-only closeout. No fresh Stage-A SFO replication has been consumed; no native row experiment is earned; no real ablation pack is committed or installed. The game-side Lua probes remain frozen. v0.2Q remains the authoritative evidence milestone and its fresh Stage-A SFO replication remains the next evidence-gathering step. Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
 
 ## Current continuation — v0.2Q
 

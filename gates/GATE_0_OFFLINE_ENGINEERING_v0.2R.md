@@ -1,6 +1,6 @@
 # Gate 0 — v0.2R Offline Engineering Integration
 
-**Status:** OFFLINE PROMOTION VALIDATION PASS; GITHUB CANONICAL BASE CUTOVER STILL REQUIRED  
+**Status:** CLOSED PASS — PROMOTED TO GITHUB `main`
 **Authority:** `NO_ORDERS`  
 **Application authority:** `PROHIBITED`
 
@@ -50,15 +50,18 @@ Current experiment status: `NOT_EARNED`. Application status: `APPLICATION_INELIG
 - v0.2G/v0.2I remain outside the application path.
 - No campaign or battle order authority is granted.
 
-## Gate close requirements
+## Gate close results
 
-Before promotion, require:
+All promotion requirements were satisfied before canonicalization:
 
-1. SyntheticLab PASS.
-2. Runtime Probe PASS.
-3. repository validator / manifest PASS.
-4. forbidden-artifact scan PASS.
-5. both frozen game-side Lua hashes unchanged.
-6. exact changed-file inventory recorded.
-7. no real ablation `.pack` in the repository.
-8. GitHub work based on the exact v0.2Q canonical cutover, not stale historical `main`.
+1. SyntheticLab: **203/203 PASS**.
+2. Runtime Probe: **219/219 PASS**.
+3. Combined direct tests: **422/422 PASS**.
+4. repository validator / manifest: **PASS — 600 hashed files**.
+5. forbidden-artifact scan: **PASS**; zero tracked `.pack` artifacts.
+6. both frozen game-side Lua hashes unchanged.
+7. exact v0.2R promotion inventory recorded: 18 changed files relative to canonical v0.2Q `main`.
+8. v0.2R was built on exact sealed v0.2Q tree `e665e7808aff3d4797ac40793ad145ff19a9aa0b`, not stale historical `main`.
+9. exact validated v0.2R tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` was promoted through PR #2; `main` reached merge commit `fae5ccdf44b98823182558c96d2f4c87218ac54c` before this documentation-only closeout.
+
+This gate is closed. The active evidence gate remains `GATE_0_NATIVE_SFO_REPLICATION_v0.2Q.md`; no promotion result grants row-ablation or gameplay-order authority.
