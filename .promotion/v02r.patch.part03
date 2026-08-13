@@ -1,0 +1,117 @@
+ - Architecture unchanged: native WH3 CAI remains planner/executor; privileged telemetry is development-only and `application_eligible=false`; `NO_ORDERS / PROHIBITED`; v0.2I remains paused.
+ 
+-## 2026-08-02 v0.2M privileged research telemetry qualification — CURRENT
++## 2026-08-02 v0.2M privileged research telemetry qualification — HISTORICAL CHECKPOINT
+ 
+ - Owner v0.2L vanilla capture validated exact profile/probe identity and 14 consecutive Reikland snapshots but produced **0 eligible churn windows**.
+ - Frozen reprocess: 187 four-frame actor windows = 149 visibility-censored + 38 non-directional/stationary; no window reached the A→B→A endpoint. The run is a limiting instrumentation result, not evidence for or against native hysteresis.
+@@ -35,7 +55,7 @@
+ - Frozen qualification thresholds: >=20 paired AI faction-turns, >=50 matched force start/end pairs, >=10 moved force-turn pairs, and >=5 consecutive non-zero trajectory pairs.
+ - The owner qualification run is vanilla-only, six Reikland turn starts, and does not require passive play because no behavioral verdict is made from it.
+ 
+-## 2026-08-02 v0.2L native directional-churn preregistration — CURRENT
++## 2026-08-02 v0.2L native directional-churn preregistration — HISTORICAL CHECKPOINT
+ 
+ - The next native-first falsification target is frozen before new owner data: `REPEATED_STABLE_CONTEXT_REGION_OSCILLATION_CLUSTER`.
+ - A four-frame candidate requires one continuously player-visible foreign force, three consecutive movement intervals, unique visible-region proxies in an `A -> B -> A` pattern, >=120-degree heading reversal at both transitions, and exact stability of all observed non-target anchors.
+@@ -48,7 +68,7 @@
+ - Owner wrappers are intentionally minimal PowerShell 5.1 launchers over the tested Python implementation. Steam install autodiscovery is supported, with explicit `-GameRoot` fallback.
+ - Standalone owner-kit builds are deterministic and contain no raw pack/private machine material; extracted fake VANILLA and SFO kits both completed preparation → 12-turn synthetic capture → verification → five-file public export.
+ 
+-## 2026-08-02 v0.2K native behavior acquisition boundary — CURRENT
++## 2026-08-02 v0.2K native behavior acquisition boundary — HISTORICAL CHECKPOINT
+ 
+ - v0.2K converts the existing shadow probe's `WH3_PLAYER_FILTERED_LISTS` foreign observations into a separate partial native-behavior trace instead of pretending they are a complete AI-faction snapshot.
+ - Historical owner turns 4–7 were reprocessed without the private raw log: 7 foreign factions, 37 comparable visible-force intervals, 36 position-stable intervals, 1 movement interval, 1 ambiguous movement, 0 directional proxies, 0 direction-change candidates, 6 visibility gains, and 6 visibility losses.
+@@ -84,14 +104,14 @@
+ - No owner WH3 run is requested. Next work is read-only observation acquisition design with explicit visibility/completeness semantics.
+ 
+ 
+-## v0.2I-r3 campaign feasibility embedded-request handoff
++## Historical v0.2I-r3 campaign feasibility embedded-request handoff (paused)
+ 
+ - Owner runtime: `FEASIBILITY_POLL_TICK=true`, parser progressed, sidecar state `WAITING_FOR_QUERY_RESULTS`, but `FEASIBILITY_REQUEST_SEEN=false`, `FEASIBILITY_QUERY_RESULT=false`, and no rejection.
+ - The exact engine/OS reason for relative `io.open(..., "r")` invisibility remains `UNVERIFIED`; the observed runtime-file inbound handoff is treated as unavailable for this gate rather than repeatedly retried.
+ - r3 adds a two-phase evidence path: freeze the prior saved plan/request; stop only its stale sidecar; generate a session-local read-only PFH5 with the exact request embedded; preflight-bind that generated hash; launch the same unchanged save; independently reconstruct the new snapshot and require exact saved-plan equality before accepting any query evidence.
+ - Generated packs remain local/private evidence tooling and are restored after collection. Policy authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
+ 
+-## v0.2I-r2 campaign feasibility parser-contract hotfix
++## Historical v0.2I-r2 campaign feasibility parser-contract hotfix (paused)
+ 
+ - The second owner-runtime attempt observed `FEASIBILITY_POLL_TICK`, proving the v0.2I-r1 immediate + 250 ms real/UI polling path executes in the exact WH3 + SFO environment.
+ - The sidecar then entered `WAITING_RETRY_AFTER_PARSE_OR_PIPELINE_ERROR` before `FEASIBILITY_REQUEST_SEEN`, query results, or rejection.
+@@ -100,9 +120,9 @@
+ - The game-side feasibility probe remains byte-identical to r1; authority remains `NO_ORDERS`, application `PROHIBITED`.
+ - Live observation remains open; no battle, turn advance, movement, save, or attack is required for the next retry.
+ 
+-# Current State
++# Historical state record
+ 
+-## v0.2I-r1 campaign feasibility real-timer hotfix
++## Historical v0.2I-r1 campaign feasibility real-timer hotfix (paused)
+ 
+ - The first owner-runtime v0.2I observation reached the exact SFO + probe preflight, first-tick snapshot, v0.2E→v0.2H plan derivation, and atomic five-query request for turn 6 / `force:928`, but emitted no query results, explicit rejection, or packet end. This is preserved as a `LIMITING_RESULT`, not a query-capability failure.
+ - Primary WH3 campaign-manager documentation distinguishes model-synchronized `repeat_callback` from UI-update-synchronized `repeat_real_callback`. The v0.2I workload intentionally leaves the campaign map idle, so the original model-time poll was an unsuitable transport timer.
+@@ -110,7 +130,7 @@
+ - The sidecar plan/request logic, 16-query cap, hard-coded read-query whitelist, exact turn/plan/assignment bindings, independent collector reconstruction, and no-order/no-save boundary are unchanged.
+ - The live observation gate remains open; the smallest next owner task after hotfix installation is one rerun of the same read-only SFO campaign-map observation. No battle, replay, turn advance, army movement, or save is required.
+ 
+-## v0.2I campaign strategic feasibility live-observation preparation
++## Historical v0.2I campaign strategic feasibility live-observation preparation (paused)
+ 
+ - v0.2I prepares the first owner-runtime campaign feasibility observation without granting campaign action authority.
+ - A dedicated deterministic `campaign_feasibility` PFH5 pack captures one observer-safe campaign snapshot on first tick, so the owner does not need to advance a turn or issue an order merely to create current-state evidence.
+diff --git a/research/KNOWN_RISKS.md b/research/KNOWN_RISKS.md
+index 4a5255e..3c0527f 100644
+--- a/research/KNOWN_RISKS.md
++++ b/research/KNOWN_RISKS.md
+@@ -66,11 +66,15 @@
+ 7. **Patch 8.1 exposure hallucination:** official existence of turn-dependent prioritisation does not prove a public DB/script control surface.
+ 8. **Reviewer-staleness risk:** initial Grok/Kimi/Claude conclusions contain claims later retracted; future work must consult correction passes.
+ 
+-## v0.2I-r3 embedded-handoff risks
++## Historical architecture risk sections
++
++The v0.2I/v0.2H/v0.2G/v0.2F sections below preserve risks from superseded implementation paths. They are historical evidence, not a current work queue. Active architecture remains native-first; v0.2G/v0.2I are not application controllers and v0.2I transport is paused.
++
++## Historical v0.2I-r3 embedded-handoff risks (paused)
+ 
+ The runtime-created request-file path is no longer trusted for owner evidence. The embedded retry requires the same unchanged save/turn to reproduce the frozen plan; if it does not, adjudication fails closed even if read queries happened. Generated packs are session-local and must be bound by exact SHA-256 in the environment attestation, then replaced by the pre-retry probe after collection. The exact WH3 `io.open` read limitation is not generalized beyond this owner environment.
+ 
+-## v0.2I-r2 live feasibility transport risks
++## Historical v0.2I-r2 live feasibility transport risks (paused)
+ 
+ - **Event-vocabulary drift:** mitigated by extracting all static feasibility-probe emit names and requiring parser allowlisting in regression tests. Dynamic event construction remains prohibited by convention for this probe.
+ - **Future parser/session drift:** `campaign_feasibility` is now explicitly accepted as a snapshot-bearing read-only probe kind.
+@@ -79,13 +83,13 @@ The runtime-created request-file path is no longer trusted for owner evidence. T
+ 
+ # Known Risks
+ 
+-## v0.2I-r1 live feasibility transport risks
++## Historical v0.2I-r1 live feasibility transport risks (paused)
+ 
+ - **Idle-model timer starvation — corrected offline, owner confirmation pending.** v0.2I used a campaign-model timer for an asynchronous request while instructing the owner to leave the map idle. r1 switches to a UI real timer and immediate poll.
+ - **Relative request-file readability — still unverified.** The append log proves relative game-root writes work, but the first limiting run had no request-seen marker. r1 adds `FEASIBILITY_REQUEST_SEEN` so a second failure can distinguish file transport from query execution.
+ - **Exact query semantics — still unverified.** No live query result was observed in the limiting run; no route, legality, order, acknowledgement, execution or outcome claim is promoted.
+ 
+-## v0.2I live campaign-feasibility preparation risks
++## Historical v0.2I live campaign-feasibility preparation risks (paused)
+ 
+ - **No current assignment:** the loaded campaign may legitimately yield no v0.2G force assignment. The probe then performs no feasibility query; this is a limiting observation, not a reason to invent a target.
+ - **Snapshot/request staleness:** campaign state can progress between first-tick capture and request execution. The request is turn-bound and stale-turn packets are rejected, but finer within-turn state drift remains observable only indirectly.
+@@ -106,7 +110,7 @@ The runtime-created request-file path is no longer trusted for owner evidence. T
+ - **Authority creep by helper API:** campaign-manager wrappers may enable movement or otherwise mutate state even when used for convenience. Mitigation: read-only probe must use query interfaces only; mutation-surface inventory is prohibited.
+ - **SFO semantic drift:** documented vanilla/core query shapes may behave differently under SFO or future WH3 builds. Mitigation: runtime evidence is profile/build-bound and unknown hashes revoke certification.
+ 
+-## v0.2G campaign force-allocation risks
++## Historical v0.2G campaign force-allocation risks (evaluator only)
+ 
+ - **Geometry/path conflation:** straight-line distance and movement can rank actors while being wrong about actual WH3 routes, stances, zones of control, interception, or access. Mitigation: route status is explicitly reference-only and the next gate must fail closed on unsupported feasibility claims.
+ - **One-army observed calibration:** frozen Reikland turns 4–7 cannot validate multi-army allocation, reserve size, overflow behavior, or temporal persistence. Mitigation: label those mechanisms synthetic/control evidence until a distinct longitudinal campaign gate exists.
+@@ -115,13 +119,13 @@ The runtime-created request-file path is no longer trusted for owner evidence. T
+ - **Temporal constants may over-hold or churn:** 2-turn minimum, 4-turn review, and 0.15 score margin are synthetic engineering values. Mitigation: keep them disclosed and centrally testable; do not call them observed WH3 timing.
+ - **Retirement outcome leakage:** disappearance of a priority could be caused by observation loss or third-party/native-AI action rather than project success. Mitigation: retirement always carries `NO_CAUSAL_CREDIT`.
+ - **Portfolio-to-allocation identity drift:** stale/forged upstream evidence could redirect actors. Mitigation: exact v0.2E/v0.2F recomputation is mandatory before allocation.
+-## v0.2F strategic/theater portfolio risks
++## Historical v0.2F strategic/theater portfolio risks (evaluator only)
+ 
