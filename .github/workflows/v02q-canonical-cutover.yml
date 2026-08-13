@@ -1,0 +1,155 @@
+name: v0.2Q canonical cutover
+
+on:
+  push:
+    branches:
+      - agent/v0.2q-cutover-loader
+
+permissions:
+  contents: write
+
+concurrency:
+  group: transcendence-v02q-canonical-cutover
+  cancel-in-progress: false
+
+jobs:
+  cutover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout loader branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect sealed archive
+        id: archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .cutover
+          mapfile -t archives < <(find .cutover -maxdepth 1 -type f -name '*.zip' -print | sort)
+          if [ "${#archives[@]}" -eq 0 ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "No .cutover/*.zip archive is present yet; loader is armed and no repository mutation will occur."
+            exit 0
+          fi
+          if [ "${#archives[@]}" -ne 1 ]; then
+            echo "Expected exactly one .cutover/*.zip archive, found ${#archives[@]}." >&2
+            exit 1
+          fi
+          echo "ready=true" >> "$GITHUB_OUTPUT"
+          echo "path=${archives[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Verify sealed v0.2Q archive
+        if: steps.archive.outputs.ready == 'true'
+        shell: bash
+        env:
+          ARCHIVE: ${{ steps.archive.outputs.path }}
+        run: |
+          set -euo pipefail
+          expected='653d2d4cd231f91d3acae91d3ae117907cde9bc3a93ddf3642565304cb557f6c'
+          actual="$(sha256sum "$ARCHIVE" | awk '{print $1}')"
+          test "$actual" = "$expected" || {
+            echo "Archive SHA-256 mismatch: expected $expected, got $actual" >&2
+            exit 1
+          }
+          echo "Verified sealed archive SHA-256: $actual"
+
+      - name: Extract and verify exact canonical tree
+        if: steps.archive.outputs.ready == 'true'
+        shell: bash
+        env:
+          ARCHIVE: ${{ steps.archive.outputs.path }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/transcendence-v02q
+          mkdir -p /tmp/transcendence-v02q
+          unzip -q "$ARCHIVE" -d /tmp/transcendence-v02q
+          python - <<'PY'
+          from __future__ import annotations
+          import hashlib
+          from pathlib import Path
+
+          root = Path('/tmp/transcendence-v02q')
+          ledger = root / 'SHA256SUMS.txt'
+          if not ledger.is_file():
+              raise SystemExit('SHA256SUMS.txt missing from sealed archive')
+          expected: dict[str, str] = {}
+          for line in ledger.read_text(encoding='utf-8').splitlines():
+              if not line.strip():
+                  continue
+              digest, relative = line.split('  ', 1)
+              if relative in expected:
+                  raise SystemExit(f'duplicate manifest path: {relative}')
+              expected[relative] = digest
+          if len(expected) != 588:
+              raise SystemExit(f'expected 588 manifest entries, got {len(expected)}')
+          actual_files = sorted(
+              p.relative_to(root).as_posix()
+              for p in root.rglob('*') if p.is_file()
+          )
+          expected_files = sorted([*expected.keys(), 'SHA256SUMS.txt'])
+          if actual_files != expected_files:
+              missing = sorted(set(expected_files) - set(actual_files))
+              extra = sorted(set(actual_files) - set(expected_files))
+              raise SystemExit(f'archive tree mismatch; missing={missing}; extra={extra}')
+          for relative, digest in sorted(expected.items()):
+              data = (root / relative).read_bytes()
+              actual = hashlib.sha256(data).hexdigest()
+              if actual != digest:
+                  raise SystemExit(f'hash mismatch: {relative}')
+          print('PASS sealed manifest: 588/588 hashed files; 589 total files')
+          PY
+
+      - name: Verify frozen Lua probe identities
+        if: steps.archive.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/transcendence-v02q
+          test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_native_diagnostic_probe.lua | awk '{print $1}')" = '0acb4e186a4f4077801a763dbbf5cacc8ae21a9d47ecc76d54fefe5c023ec203'
+          test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_shadow_probe.lua | awk '{print $1}')" = '4f8c80fb67efe288e4b7b4eeacc0c48578707a0e554f2dd8a454aa669b50ed98'
+          echo 'PASS frozen game-side Lua probe identity checks'
+
+      - name: Run canonical validation
+        if: steps.archive.outputs.ready == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/transcendence-v02q
+          PYTHONPATH=synthetic_lab python tools/validate_repository.py
+
+      - name: Create exact canonical commit and advance cutover branch
+        if: steps.archive.outputs.ready == 'true'
+        shell: bash
+        env:
+          BASE_SHA: 16c4fa0d5290822a9fcba150b4dffcc8152f1b52
+          TARGET_BRANCH: agent/v0.2q-canonical-cutover
+        run: |
+          set -euo pipefail
+          repo="$GITHUB_WORKSPACE"
+          work=/tmp/transcendence-v02q
+          export GIT_INDEX_FILE=/tmp/transcendence-v02q.index
+          rm -f "$GIT_INDEX_FILE"
+          git --git-dir="$repo/.git" read-tree --empty
+          git --git-dir="$repo/.git" --work-tree="$work" add -A
+          tree="$(git --git-dir="$repo/.git" write-tree)"
+          export GIT_AUTHOR_NAME='github-actions[bot]'
+          export GIT_AUTHOR_EMAIL='41898282+github-actions[bot]@users.noreply.github.com'
+          export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+          export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+          commit="$(printf '%s\n' 'chore: import sealed v0.2Q canonical tree' | git --git-dir="$repo/.git" commit-tree "$tree" -p "$BASE_SHA")"
+          current="$(git ls-remote origin "refs/heads/$TARGET_BRANCH" | awk '{print $1}')"
+          test "$current" = "$BASE_SHA" || {
+            echo "Fail closed: $TARGET_BRANCH moved from expected base $BASE_SHA to $current" >&2
+            exit 1
+          }
+          git push origin "$commit:refs/heads/$TARGET_BRANCH"
+          echo "Canonical tree: $tree"
+          echo "Canonical commit: $commit"
+
+      - name: Preserve loader for audit
+        if: steps.archive.outputs.ready == 'true'
+        shell: bash
+        run: |
+          echo 'Cutover loader branch intentionally retained until PR verification. It contains transport-only artifacts and is not canonical.'
