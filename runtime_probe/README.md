@@ -233,3 +233,21 @@ The preparer also requests shutdown for read-only watchers from incomplete histo
 ## v0.1Z-r1 Windows ZIP durability repair
 
 The deterministic public evidence builder performs `fsync` through an `r+b` descriptor. This is a durability-only reopen; archive bytes are not modified. Windows rejects the prior read-only descriptor with `EBADF`, so the writable-descriptor property is now directly regression-tested.
+
+## v0.2R offline native-behavior Replay Lab
+
+`native_behavior_replay.py` verifies and deterministically replays public native-diagnostic capture ZIPs without changing either game-side Lua probe. It validates member hashes/provenance, refuses incomplete or battle-telemetry-ambiguous captures for frozen metric replay, reconstructs per-force longitudinal timelines, reuses the frozen v0.2N/v0.2P evaluators, and emits deterministic JSON/CSV/Markdown outputs.
+
+Use the thin Windows wrapper:
+
+```powershell
+.\runtime_probe\tools\Replay-NativeBehavior.ps1 replay <capture.zip> --output-dir <directory>
+```
+
+For vanilla↔SFO comparison:
+
+```powershell
+.\runtime_probe\tools\Replay-NativeBehavior.ps1 compare --vanilla <vanilla.zip> --sfo <sfo.zip> --output-dir <directory>
+```
+
+Only a capture explicitly identified as the v0.2Q Stage-A SFO replication should use `--sfo-role stage-a`. Replay Lab is research-only: `NO_ORDERS`, application authority `PROHIBITED`, privileged telemetry permanently application-ineligible.

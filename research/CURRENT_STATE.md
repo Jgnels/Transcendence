@@ -1,4 +1,24 @@
-## 2026-08-04 v0.2P offline mechanistic precommitment — CURRENT
+## 2026-08-13 v0.2R offline engineering integration candidate — NOT CANONICAL
+
+- Sealed v0.2Q remains the canonical evidence milestone until GitHub cutover/promotion completes.
+- Offline Behavior Replay Lab now validates capture ZIP inventory/SHA/provenance/completeness, reconstructs per-force timelines, reuses frozen v0.2N–v0.2Q evaluators, produces deterministic JSON/CSV/Markdown, and separates preregistered, causal-review, and `EXPLORATORY` outputs. Raw historical vanilla/SFO capture ZIPs are not present in the canonical source, so no synthetic fixture is being misrepresented as replay of owner evidence.
+- Single-row native CAI Ablation Factory machinery is ready but inactive. Real row selection remains `NOT_EARNED`; no pack is committed/installed; actual experimental builds require one exact row/value, source header/provenance, explicit future evidence/owner authorization, and fail closed on uncertified keys unless separately authorized.
+- Native-first active-document audit corrected stale “current” labels and a superseded allocator-next-step sentence while preserving historical implementation/decision evidence.
+- No Stage-A SFO replication has been consumed in this candidate. Frozen v0.2Q replication policy remains unchanged.
+- Both game-side Lua probes remain byte-for-byte frozen.
+- Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`; privileged telemetry remains permanently `application_eligible=false`.
+
+## 2026-08-04 v0.2Q SFO benchmark adjudication / staged replication — AUTHORITATIVE CURRENT
+
+- Fresh SFO behavior evidence has been consumed and reproducibly adjudicated under the frozen v0.2P rules: recovery 56/8 = 14.2857%; territorial temporal 39/18 = 46.1538%; zero repeated territorial forces.
+- Frozen branch: `HIGHER_THAN_VANILLA_CLUSTER_ENVELOPE` for the aggregate territorial cohort; this is a descriptive worsening nomination, not row causality.
+- Post-result shared-faction review reverses direction (SFO 1/9 = 11.1111%; vanilla 4/19 = 21.0526%) and exposes serious campaign-composition uncertainty.
+- `NO_NATIVE_ROW_ABLATION_EARNED`; captured SFO has zero decoded allocator-variable overrides, so allocator release/return attribution remains ineligible.
+- Stage A is one fresh SFO replication. Fresh vanilla is conditional on independently replicated SFO elevation. No Stage-A outcome alone earns an ablation.
+- Native WH3 CAI remains planner/executor. Privileged telemetry remains development-only and permanently `application_eligible=false`; authority remains `NO_ORDERS`; application authority remains `PROHIBITED`; v0.2G/v0.2I remain out of the application path.
+- Older sections below are retained as historical checkpoints even where their original body text says “next” or describes then-current implementation. They do not override this block.
+
+## 2026-08-04 v0.2P offline mechanistic precommitment — HISTORICAL CHECKPOINT
 
 - No fresh SFO owner behavior data has been consumed. v0.2P is frozen before that cohort.
 - Hash-frozen vanilla territorial reference remains 48 eligible windows / 13 single reversal candidates / 0 repeated territorial forces. Faction-cluster leave-one-out candidate-rate range is **0.222222–0.317073**; descriptive sensitivity only, not a CI/p-value.
@@ -9,7 +29,7 @@
 - Minimal generic/default task-priority candidates are pre-ranked but remain `DORMANT_REPLICATION_ONLY_NOT_EARNED`; wholesale SFO copying is prohibited.
 - Game-side diagnostic Lua is unchanged from v0.2O/v0.2N. Next unavoidable owner step remains the matched SFO cohort.
 
-## 2026-08-03 v0.2N fresh native diagnostic behavior study — CURRENT
+## 2026-08-03 v0.2N fresh native diagnostic behavior study — HISTORICAL CHECKPOINT
 
 - The v0.2M-r1 owner vanilla diagnostic capture is complete and profile-bound: Reikland turn starts 1–7, exact probe SHA-256 `347605a1c00efc2478cc3f43bd699db6ec8f4af96b7a3cd3cc189861ad1a5d37`, zero capability failures, zero incomplete normal AI faction turns.
 - Frozen qualification metrics: **1,588 paired AI faction-turns, 292 distinct AI factions, 2,353 matched force-turn pairs, 967 moved pairs, 426 multi-turn trajectory pairs**. v0.2M telemetry qualification therefore **PASS**.
@@ -24,7 +44,7 @@
 - v0.2N offline direct regression before sealing: **179/179 SyntheticLab + 191/191 Runtime Probe = 370/370 PASS**; standalone extracted owner-kit fake workflow also PASS.
 - Architecture unchanged: native WH3 CAI remains planner/executor; privileged telemetry is development-only and `application_eligible=false`; `NO_ORDERS / PROHIBITED`; v0.2I remains paused.
 
-## 2026-08-02 v0.2M privileged research telemetry qualification — CURRENT
+## 2026-08-02 v0.2M privileged research telemetry qualification — HISTORICAL CHECKPOINT
 
 - Owner v0.2L vanilla capture validated exact profile/probe identity and 14 consecutive Reikland snapshots but produced **0 eligible churn windows**.
 - Frozen reprocess: 187 four-frame actor windows = 149 visibility-censored + 38 non-directional/stationary; no window reached the A→B→A endpoint. The run is a limiting instrumentation result, not evidence for or against native hysteresis.
@@ -35,7 +55,7 @@
 - Frozen qualification thresholds: >=20 paired AI faction-turns, >=50 matched force start/end pairs, >=10 moved force-turn pairs, and >=5 consecutive non-zero trajectory pairs.
 - The owner qualification run is vanilla-only, six Reikland turn starts, and does not require passive play because no behavioral verdict is made from it.
 
-## 2026-08-02 v0.2L native directional-churn preregistration — CURRENT
+## 2026-08-02 v0.2L native directional-churn preregistration — HISTORICAL CHECKPOINT
 
 - The next native-first falsification target is frozen before new owner data: `REPEATED_STABLE_CONTEXT_REGION_OSCILLATION_CLUSTER`.
 - A four-frame candidate requires one continuously player-visible foreign force, three consecutive movement intervals, unique visible-region proxies in an `A -> B -> A` pattern, >=120-degree heading reversal at both transitions, and exact stability of all observed non-target anchors.
@@ -48,7 +68,7 @@
 - Owner wrappers are intentionally minimal PowerShell 5.1 launchers over the tested Python implementation. Steam install autodiscovery is supported, with explicit `-GameRoot` fallback.
 - Standalone owner-kit builds are deterministic and contain no raw pack/private machine material; extracted fake VANILLA and SFO kits both completed preparation → 12-turn synthetic capture → verification → five-file public export.
 
-## 2026-08-02 v0.2K native behavior acquisition boundary — CURRENT
+## 2026-08-02 v0.2K native behavior acquisition boundary — HISTORICAL CHECKPOINT
 
 - v0.2K converts the existing shadow probe's `WH3_PLAYER_FILTERED_LISTS` foreign observations into a separate partial native-behavior trace instead of pretending they are a complete AI-faction snapshot.
 - Historical owner turns 4–7 were reprocessed without the private raw log: 7 foreign factions, 37 comparable visible-force intervals, 36 position-stable intervals, 1 movement interval, 1 ambiguous movement, 0 directional proxies, 0 direction-change candidates, 6 visibility gains, and 6 visibility losses.
@@ -84,14 +104,14 @@
 - No owner WH3 run is requested. Next work is read-only observation acquisition design with explicit visibility/completeness semantics.
 
 
-## v0.2I-r3 campaign feasibility embedded-request handoff
+## Historical v0.2I-r3 campaign feasibility embedded-request handoff (paused)
 
 - Owner runtime: `FEASIBILITY_POLL_TICK=true`, parser progressed, sidecar state `WAITING_FOR_QUERY_RESULTS`, but `FEASIBILITY_REQUEST_SEEN=false`, `FEASIBILITY_QUERY_RESULT=false`, and no rejection.
 - The exact engine/OS reason for relative `io.open(..., "r")` invisibility remains `UNVERIFIED`; the observed runtime-file inbound handoff is treated as unavailable for this gate rather than repeatedly retried.
 - r3 adds a two-phase evidence path: freeze the prior saved plan/request; stop only its stale sidecar; generate a session-local read-only PFH5 with the exact request embedded; preflight-bind that generated hash; launch the same unchanged save; independently reconstruct the new snapshot and require exact saved-plan equality before accepting any query evidence.
 - Generated packs remain local/private evidence tooling and are restored after collection. Policy authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
 
-## v0.2I-r2 campaign feasibility parser-contract hotfix
+## Historical v0.2I-r2 campaign feasibility parser-contract hotfix (paused)
 
 - The second owner-runtime attempt observed `FEASIBILITY_POLL_TICK`, proving the v0.2I-r1 immediate + 250 ms real/UI polling path executes in the exact WH3 + SFO environment.
 - The sidecar then entered `WAITING_RETRY_AFTER_PARSE_OR_PIPELINE_ERROR` before `FEASIBILITY_REQUEST_SEEN`, query results, or rejection.
@@ -100,9 +120,9 @@
 - The game-side feasibility probe remains byte-identical to r1; authority remains `NO_ORDERS`, application `PROHIBITED`.
 - Live observation remains open; no battle, turn advance, movement, save, or attack is required for the next retry.
 
-# Current State
+# Historical state record
 
-## v0.2I-r1 campaign feasibility real-timer hotfix
+## Historical v0.2I-r1 campaign feasibility real-timer hotfix (paused)
 
 - The first owner-runtime v0.2I observation reached the exact SFO + probe preflight, first-tick snapshot, v0.2E→v0.2H plan derivation, and atomic five-query request for turn 6 / `force:928`, but emitted no query results, explicit rejection, or packet end. This is preserved as a `LIMITING_RESULT`, not a query-capability failure.
 - Primary WH3 campaign-manager documentation distinguishes model-synchronized `repeat_callback` from UI-update-synchronized `repeat_real_callback`. The v0.2I workload intentionally leaves the campaign map idle, so the original model-time poll was an unsuitable transport timer.
@@ -110,7 +130,7 @@
 - The sidecar plan/request logic, 16-query cap, hard-coded read-query whitelist, exact turn/plan/assignment bindings, independent collector reconstruction, and no-order/no-save boundary are unchanged.
 - The live observation gate remains open; the smallest next owner task after hotfix installation is one rerun of the same read-only SFO campaign-map observation. No battle, replay, turn advance, army movement, or save is required.
 
-## v0.2I campaign strategic feasibility live-observation preparation
+## Historical v0.2I campaign strategic feasibility live-observation preparation (paused)
 
 - v0.2I prepares the first owner-runtime campaign feasibility observation without granting campaign action authority.
 - A dedicated deterministic `campaign_feasibility` PFH5 pack captures one observer-safe campaign snapshot on first tick, so the owner does not need to advance a turn or issue an order merely to create current-state evidence.

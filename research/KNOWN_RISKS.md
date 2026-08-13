@@ -66,11 +66,15 @@
 7. **Patch 8.1 exposure hallucination:** official existence of turn-dependent prioritisation does not prove a public DB/script control surface.
 8. **Reviewer-staleness risk:** initial Grok/Kimi/Claude conclusions contain claims later retracted; future work must consult correction passes.
 
-## v0.2I-r3 embedded-handoff risks
+## Historical architecture risk sections
+
+The v0.2I/v0.2H/v0.2G/v0.2F sections below preserve risks from superseded implementation paths. They are historical evidence, not a current work queue. Active architecture remains native-first; v0.2G/v0.2I are not application controllers and v0.2I transport is paused.
+
+## Historical v0.2I-r3 embedded-handoff risks (paused)
 
 The runtime-created request-file path is no longer trusted for owner evidence. The embedded retry requires the same unchanged save/turn to reproduce the frozen plan; if it does not, adjudication fails closed even if read queries happened. Generated packs are session-local and must be bound by exact SHA-256 in the environment attestation, then replaced by the pre-retry probe after collection. The exact WH3 `io.open` read limitation is not generalized beyond this owner environment.
 
-## v0.2I-r2 live feasibility transport risks
+## Historical v0.2I-r2 live feasibility transport risks (paused)
 
 - **Event-vocabulary drift:** mitigated by extracting all static feasibility-probe emit names and requiring parser allowlisting in regression tests. Dynamic event construction remains prohibited by convention for this probe.
 - **Future parser/session drift:** `campaign_feasibility` is now explicitly accepted as a snapshot-bearing probe kind.
@@ -79,13 +83,13 @@ The runtime-created request-file path is no longer trusted for owner evidence. T
 
 # Known Risks
 
-## v0.2I-r1 live feasibility transport risks
+## Historical v0.2I-r1 live feasibility transport risks (paused)
 
 - **Idle-model timer starvation — corrected offline, owner confirmation pending.** v0.2I used a campaign-model timer for an asynchronous request while instructing the owner to leave the map idle. r1 switches to a UI real timer and immediate poll.
 - **Relative request-file readability — still unverified.** The append log proves relative game-root writes work, but the first limiting run had no request-seen marker. r1 adds `FEASIBILITY_REQUEST_SEEN` so a second failure can distinguish file transport from query execution.
 - **Exact query semantics — still unverified.** No live query result was observed in the limiting run; no route, legality, order, acknowledgement, execution or outcome claim is promoted.
 
-## v0.2I live campaign-feasibility preparation risks
+## Historical v0.2I live campaign-feasibility preparation risks (paused)
 
 - **No current assignment:** the loaded campaign may legitimately yield no v0.2G force assignment. The probe then performs no feasibility query; this is a limiting observation, not a reason to invent a target.
 - **Snapshot/request staleness:** campaign state can progress between first-tick capture and request execution. The request is turn-bound and stale-turn packets are rejected, but finer within-turn state drift remains observable only indirectly.
@@ -106,7 +110,7 @@ The runtime-created request-file path is no longer trusted for owner evidence. T
 - **Authority creep by helper API:** campaign-manager wrappers may enable movement or otherwise mutate state even when used for convenience. Mitigation: read-only probe must use query interfaces only; mutation-surface inventory is prohibited.
 - **SFO semantic drift:** documented vanilla/core query shapes may behave differently under SFO or future WH3 builds. Mitigation: runtime evidence is profile/build-bound and unknown hashes revoke certification.
 
-## v0.2G campaign force-allocation risks
+## Historical v0.2G campaign force-allocation risks (evaluator only)
 
 - **Geometry/path conflation:** straight-line distance and movement can rank actors while being wrong about actual WH3 routes, stances, zones of control, interception, or access. Mitigation: route status is explicitly reference-only and the next gate must fail closed on unsupported feasibility claims.
 - **One-army observed calibration:** frozen Reikland turns 4–7 cannot validate multi-army allocation, reserve size, overflow behavior, or temporal persistence. Mitigation: label those mechanisms synthetic/control evidence until a distinct longitudinal campaign gate exists.
@@ -115,13 +119,13 @@ The runtime-created request-file path is no longer trusted for owner evidence. T
 - **Temporal constants may over-hold or churn:** 2-turn minimum, 4-turn review, and 0.15 score margin are synthetic engineering values. Mitigation: keep them disclosed and centrally testable; do not call them observed WH3 timing.
 - **Retirement outcome leakage:** disappearance of a priority could be caused by observation loss or third-party/native-AI action rather than project success. Mitigation: retirement always carries `NO_CAUSAL_CREDIT`.
 - **Portfolio-to-allocation identity drift:** stale/forged upstream evidence could redirect actors. Mitigation: exact v0.2E/v0.2F recomputation is mandatory before allocation.
-## v0.2F strategic/theater portfolio risks
+## Historical v0.2F strategic/theater portfolio risks (evaluator only)
 
 - **Priority-budget overfit:** six records may be too small or too large for real late-game WH3. Mitigation: preserve all critical sources through overflow and keep the bound explicitly uncalibrated.
 - **Awareness/commitment confusion:** a rival priority visible during crisis could be mistaken for authorization to attack. Mitigation: separate `selected_priorities` from `selected_aggressive_priorities` and make crisis/recovery veto explicit.
 - **Reserve fetishization:** always valuing reserve could become passive play. Mitigation: reserve is one bounded medium priority, not a hard army assignment; future assignment/outcome calibration must test it.
 - **Faction-ID bias:** observer-safe faction IDs could accidentally become human/player heuristics later. Mitigation: player/NPC relabel invariance and explicit no-human-identity contract.
-- **Snapshot thrashing:** v0.2F has no temporal commitment lifecycle; priorities can still oscillate across turns as observations change. Mitigation: next gate must add portfolio-to-army assignment plus commitment/review/cooldown semantics before any application authority.
+- **Snapshot thrashing (historical v0.2F concern):** v0.2F has no temporal commitment lifecycle; priorities can oscillate across turns as observations change. Historical mitigation proposed portfolio-to-army assignment plus commitment/review/cooldown. **Superseded active mitigation:** v0.2F is evaluator-only; native temporal behavior is measured first, and project allocation cannot enter the application path without explicit native-first falsification.
 - **False containment:** coherent visible-rival classification can be mistaken for durable power or coordination. Mitigation: retain v0.2E limits on economy, diplomacy, recruitment, intent, and longitudinal quality.
 
 ## v0.2E strategic benchmark risks

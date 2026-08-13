@@ -1,12 +1,18 @@
+## v0.2R offline engineering integration candidate — NOT YET CANONICAL
+
+v0.2R prepares three isolated offline capabilities on top of the sealed v0.2Q evidence: a deterministic Native Behavior Replay Lab, a fail-closed single-row native CAI Ablation Factory, and an active-document native-first architecture audit. No fresh Stage-A SFO replication has been consumed; no native row experiment is earned; no real ablation pack is committed or installed. The game-side Lua probes remain frozen. This integration candidate must not supersede sealed v0.2Q until the GitHub canonical cutover and v0.2R promotion checks complete. Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
+
 ## Current continuation — v0.2Q
 
 The first fresh SFO benchmark is complete and reproducible. Its frozen v0.2P territorial branch is descriptive worsening: 39 eligible territorial windows, 18 reversal candidates, 46.1538%, zero repeated territorial forces, above the frozen vanilla 22.2222–31.7073% cluster-sensitivity envelope. Recovery remains negative at 14.2857%. Causal review blocks row attribution because eligible faction composition differs strongly across campaigns and the six-faction shared subset reverses direction. No row ablation is earned. v0.2Q stages one fresh SFO replication first; another vanilla campaign is conditional on replicated SFO elevation. See `research/NATIVE_SFO_BENCHMARK_ADJUDICATION_v0.2Q.md`, `research/NATIVE_SFO_REPLICATION_PREREGISTRATION_v0.2Q.md`, and `gates/GATE_0_NATIVE_SFO_REPLICATION_v0.2Q.md`. Application remains native-first and `NO_ORDERS / PROHIBITED`.
 
-## Current continuation — v0.2P
+**Active-document note:** v0.2Q is the only current continuation in this README. Older milestone/implementation sections below are retained as historical evidence; they do not reactivate v0.2G/v0.2I or expand application authority.
+
+## Historical continuation — v0.2P
 
 The active gate is the pre-SFO mechanistic precommitment. v0.2P preserves the v0.2O matched SFO campaign protocol but strengthens offline interpretation before any SFO behavior trace: faction-cluster diagnostics, a frozen vanilla leave-one-faction-out envelope (0.222222–0.317073), direction-aware post-SFO branching, and row-footprint-constrained mechanism nominations. No game-side Lua changed; application remains native-first and `NO_ORDERS / PROHIBITED`. See `research/NATIVE_SFO_MECHANISTIC_PRECOMMITMENT_v0.2P.md`.
 
-## Current milestone: v0.2O Matched SFO Native-CAI Behavior Benchmark
+## Historical milestone: v0.2O Matched SFO Native-CAI Behavior Benchmark
 
 The fresh owner vanilla v0.2N cohort is complete and independently reproducible. Recovery had sufficient exposure but did not cross its frozen 20% attacker-side re-entry threshold (38 damaged army-turns, 6 attacker-side reentries, 15.7895%). The formal temporal endpoint fired (106 eligible battle-free stable-context windows, 18 reversal candidates, one repeated force), but the sole repeated force was the non-territorial Rogue Pirate faction `wh2_dlc11_cst_rogue_grey_point_scuttlers`. Owner telemetry is consistent with a fixed sea-patrol explanation, so **no ordinary native-CAI row ablation is authorized from v0.2N alone**.
 
@@ -14,7 +20,7 @@ v0.2O prospectively freezes territorial (stable non-empty owned-region set) as t
 
 Authority remains `NO_ORDERS`; privileged telemetry remains `application_eligible=false`; application authority remains `PROHIBITED`; native WH3 CAI remains the default planner/executor. See `research/NATIVE_BEHAVIOR_STUDY_CAUSAL_REVIEW_v0.2O.md`, `research/NATIVE_SFO_MATCHED_BEHAVIOR_BENCHMARK_PREREGISTRATION_v0.2O.md`, and `gates/GATE_0_NATIVE_SFO_MATCHED_BEHAVIOR_BENCHMARK_v0.2O.md`.
 
-## Current milestone: v0.2N Fresh Native CAI Behavior Study Preregistration
+## Historical milestone: v0.2N Fresh Native CAI Behavior Study Preregistration
 
 The successful v0.2M-r1 owner vanilla capture **qualified the privileged read-only diagnostic channel**: 1,588 paired AI faction-turns, 2,353 matched army-turn pairs, 967 moved army-turns, 426 trajectory pairs, zero capability failures and zero incomplete normal AI faction turns. The r1 `rebels` pseudo-faction skip also survived six complete AI cycles.
 
@@ -24,11 +30,11 @@ Fresh owner protocol: vanilla + diagnostic probe only, new Karl Franz IE Legenda
 
 See `research/NATIVE_DIAGNOSTIC_BEHAVIOR_STUDY_PREREGISTRATION_v0.2N.md` and `gates/GATE_0_NATIVE_DIAGNOSTIC_BEHAVIOR_STUDY_v0.2N.md`.
 
-## Current milestone: v0.2M Native CAI Diagnostic Telemetry Qualification
+## Historical milestone: v0.2M Native CAI Diagnostic Telemetry Qualification
 
 The first preregistered player-visible churn run produced zero eligible windows because visibility censoring/stationarity eliminated all 187 candidates. Rather than weaken the endpoint or waste an SFO repetition, v0.2M prepares a separate **research-only omniscient diagnostic plane**. It observes complete AI faction turns without issuing orders and can never be an application input. The next live step is a six-turn vanilla telemetry-density qualification, not an AI-quality verdict.
 
-## Current offline gate — v0.2K player-visible native behavior acquisition
+## Historical offline gate — v0.2K player-visible native behavior acquisition
 
 The native-first reconciliation now has a visibility-safe acquisition layer. `runtime_probe/tools/run_native_visible_behavior.py` converts existing shadow logs into `NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1` without reading hidden foreign force lists or importing the old strategic assignment pipeline. `runtime_probe/tools/reprocess_native_visible_behavior_evidence.py` reprocesses the preserved owner turns 4–7 into `research/runtime_evidence/PLAYER_VISIBLE_NATIVE_BEHAVIOR_REPROCESS_v0.2K.json`. Across seven visible foreign factions it contains 37 comparable force intervals: 36 position-stable, one movement interval, and that movement is directionally ambiguous. These are observation statistics, not an AI-quality verdict. Full-faction coverage, recovery, reserves, exclusivity, memory, hysteresis, and native task identity remain unavailable under the normal player-visible boundary. No owner WH3 run is required for this gate; authority remains `NO_ORDERS`, application `PROHIBITED`. **v0.2K certification: 159/159 SyntheticLab + 164/164 Runtime Probe = 323/323 PASS.**
 
@@ -36,7 +42,7 @@ The native-first reconciliation now has a visibility-safe acquisition layer. `ru
 
 The owner-validated code baseline remains `v0.2I-r3`, but the **working application architecture changed after a multi-model native-CAI/prior-art review**. Native WH3 CAI is now the default strategic planner/executor; Transcendence is evaluator/tuner first, with narrowly bounded correction only after measured native failure. Assignment-derived `v0.2I` is paused. See `research/NATIVE_CAI_RECONCILIATION_DECISION_2026-08-02.md` and the active `gates/GATE_0_NATIVE_CAI_RECONCILIATION.md`.
 
-## Current offline gate — v0.2J native behavior detector
+## Historical offline gate — v0.2J native behavior detector
 
 The row-level native-CAI reconciliation is now followed by a **trajectory-only failure detector**, not another strategic controller. v0.2J measures threatened-front coverage/response latency, observed recovering-army offensive engagements, a healthy unengaged home-zone buffer proxy, stationary-position proxies, and directional retarget/reversal proxies. It explicitly refuses to infer native assignment exclusivity, persistent task memory, or hysteresis from movement alone. The adversarial matrix passes 9/9 cases; direct regression is 155 SyntheticLab + 160 Runtime Probe = 315 tests. Authority remains `NO_ORDERS`; application remains `PROHIBITED`. No owner WH3 run is requested until a separate read-only observation acquisition contract is complete.
 
@@ -48,17 +54,17 @@ python -m transcendence_lab.cli native-behavior-matrix `
   synthetic_lab\scenarios\native_cai_behavior_adversarial_matrix_v0.2J.json
 ```
 
-## Current implementation — v0.2I-r3
+## Historical implementation — v0.2I-r3 (paused)
 
 A repeated owner-runtime run now proves three distinct boundaries: the real/UI poll executes, the shared parser accepts the diagnostic vocabulary, and the sidecar reaches `WAITING_FOR_QUERY_RESULTS`; however WH3 still does not observe the runtime-created request file (`request_seen=False`). v0.2I-r3 therefore stops depending on inbound runtime file reads and adds a fail-closed **prelaunch embedded-request retry**. It consumes the exact prior saved plan/request, builds a session-local PFH5 probe with that bounded request embedded, binds the generated pack hash in the SFO preflight, and later accepts results only if the new live snapshot independently reproduces the same plan. No order or save mutation is introduced.
 
-## Current implementation — v0.2I-r2
+## Historical implementation — v0.2I-r2 (paused)
 
 The second owner-runtime feasibility attempt proved the r1 real/UI timer fires, then failed closed locally because the shared parser did not allow the two r1 diagnostic events. v0.2I-r2 fixes that parser-contract drift, adds an emitter→parser regression, binds the parser hash into the live-preparation artifact, and leaves the exact game-side probe unchanged. The live gate remains open and still requires only one read-only SFO campaign-map observation with no turn advance or order.
 
 # Transcendence — WH3 Personal AI & Gameplay Project
 
-## Current implementation — v0.2I-r1
+## Historical implementation — v0.2I-r1 (paused)
 
 The first owner-runtime v0.2I feasibility attempt successfully reached exact SFO + probe preflight, first-tick snapshot, current strategic assignment, v0.2H plan generation, and a five-query request, but returned no query result/rejection/packet-end while the map was intentionally idle. That run is preserved as a limiting transport result.
 
@@ -66,7 +72,7 @@ The r1 hotfix changes only the asynchronous request scheduler: one immediate rea
 
 Regression target: **150 SyntheticLab + 152 Runtime Probe = 302 direct tests**. Authority remains `NO_ORDERS`; application remains `PROHIBITED`. After installation, the next gate is one repeat of the same bounded read-only SFO campaign-map observation; no battle, replay, turn advance, movement, attack, or save is required.
 
-## Previous implementation — v0.2I
+## Historical implementation — v0.2I (paused)
 
 v0.2I closes the **offline preparation** for the first live campaign strategic-feasibility observation. A dedicated campaign-only probe captures one observer-safe snapshot on first tick, a local sidecar runs the canonical v0.2E→v0.2H pipeline to choose at most one current assignment, and the game executes only the resulting hard-coded read-query whitelist. No current assignment means no request.
 
@@ -83,7 +89,7 @@ Prepare/collect after installing the canonical release:
 .\runtime_probe\tools\collect_campaign_feasibility_observation.ps1
 ```
 
-## Current implementation — v0.2H
+## Historical implementation — v0.2H (research/capability infrastructure)
 
 v0.2H closes the first campaign strategic feasibility/action-authority gate **offline**. It converts v0.2G shadow assignments into bounded query plans over documented WH3 model-hierarchy interfaces while keeping every owner-runtime result unobserved and every mutation surface prohibited.
 
@@ -109,7 +115,7 @@ python -m transcendence_lab.cli strategic-feasibility-matrix `
 
 The next distinct gate is a batched read-only live query observation on a suitable current campaign state. Historical turn 7 does not need to be recreated.
 
-## Current implementation — v0.2G
+## Historical implementation — v0.2G (evaluator only)
 
 v0.2G adds deterministic theater-to-army shadow allocation and a multi-turn commitment lifecycle above v0.2F. Force-requiring strategic priorities can be mapped to unique planner-eligible controlled armies while preserving recovery, reserve capacity, critical-overflow sources, aggression vetoes, and explicit shortages. Consecutive observations retain valid commitments and prevent geometry-driven reassignment until disclosed review conditions are met.
 

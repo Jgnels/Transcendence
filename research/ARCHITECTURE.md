@@ -45,17 +45,19 @@ Default application architecture:
 
 See `research/NATIVE_CAI_RECONCILIATION_DECISION_2026-08-02.md` and `gates/GATE_0_NATIVE_CAI_RECONCILIATION.md`.
 
-## v0.2I-r2 live feasibility parser contract
+**Historical-boundary rule:** any later section that describes v0.2F/v0.2G/v0.2H/v0.2I as a controller, allocator, “current chain,” or next application step is implementation history only. It cannot be used as active application authority without a newer explicit evidence-backed decision that falsifies the native-first path.
+
+## Historical v0.2I-r2 live feasibility parser contract (paused)
 
 The live feasibility transport now treats the append-log event vocabulary as an explicit interface between the game-side probe and local sidecar. Every statically emitted `TRANS_PROBE` event in the dedicated feasibility Lua must be present in the shared parser allowlist. The generic session validator must also understand `campaign_feasibility` as a snapshot-bearing read-only probe kind. This prevents observability instrumentation itself from breaking the control pipeline. The r1 game-side real/UI timer remains unchanged.
 
 # Architecture
 
-## v0.2I-r1 live feasibility transport correction
+## Historical v0.2I-r1 live feasibility transport correction (paused)
 
 The campaign-feasibility bridge is asynchronous: the game emits a first-tick observer snapshot, an external sidecar derives one exact v0.2H plan, then the game reads the generated request. Because the owner workload deliberately leaves the campaign model idle, transport polling is now scheduled by `repeat_real_callback` (UI updates) rather than `repeat_callback` (campaign-model time). One immediate poll minimizes races, and one-shot poll/request-seen markers make transport progress observable. This is lifecycle plumbing only; it does not change strategic policy, query semantics, or order authority.
 
-## v0.2I live campaign-feasibility observation boundary
+## Historical v0.2I live campaign-feasibility observation boundary (paused)
 
 The current campaign evidence path is:
 
@@ -67,9 +69,9 @@ The first-tick snapshot avoids requiring a turn advance, movement, battle, or sa
 
 The collector independently reconstructs the selected plan from the raw observer snapshot before accepting query results. `QUERY_TRUE`, `QUERY_FALSE`, and unavailable/error observations remain point-in-time query evidence only. Authority remains `NO_ORDERS`; application remains `PROHIBITED`; route geometry, zones of control, interception, action legality, acknowledgement, execution, and outcome remain outside this layer.
 
-## v0.2H campaign feasibility/action-authority boundary
+## Historical v0.2H campaign feasibility/action-authority boundary
 
-The current campaign reasoning chain is:
+The historical campaign reasoning chain was:
 
 `observer-safe campaign snapshot → v0.2E challenge envelope → v0.2F theater portfolio → v0.2G exclusive army assignment/commitment → v0.2H read-only feasibility query plan → later live query observation → only then a separately authorized application sandbox`
 
@@ -77,9 +79,9 @@ v0.2H is deliberately a **query-contract layer**, not a route planner or control
 
 Documentation-derived model-hierarchy queries are kept structurally separate from episodic/campaign-manager mutation surfaces. An observed true reachability boolean would still establish neither route geometry nor command legality, acknowledgement, execution, or success. Every application surface remains outside the architecture at this gate.
 
-## v0.2G campaign force-allocation and temporal-commitment layer
+## Historical v0.2G campaign force-allocation and temporal-commitment layer (evaluator only)
 
-The current campaign reasoning chain is:
+The historical campaign reasoning chain was:
 
 `observer-safe campaign snapshot → v0.2E challenge envelope → v0.2F strategic/theater portfolio → v0.2G exclusive army assignment → v0.2G temporal commitment lifecycle → later campaign feasibility/action-authority envelope`
 
