@@ -1,0 +1,3718 @@
+{
+  "architecture_allocation": {
+    "assignment": [
+      "reserve suitability",
+      "screening candidates",
+      "safe pursuit candidates"
+    ],
+    "constraints": [
+      "visibility",
+      "authority",
+      "privacy",
+      "legality",
+      "counterfactual uncertainty"
+    ],
+    "deferred": {
+      "behavior_trees": "defer until battle execution primitives and acknowledgement exist",
+      "htn_or_search": "defer until a calibrated transition model can compare multi-step alternatives",
+      "learning": "defer until heterogeneous battle cohorts and deterministic baselines exist"
+    },
+    "state_machines": [
+      "local stability",
+      "visible enemy collapse",
+      "pursuit termination"
+    ],
+    "utility": [
+      "asset value",
+      "danger",
+      "recoverability",
+      "marginal engagement value",
+      "visible target threat"
+    ]
+  },
+  "authority": "NO_ORDERS",
+  "command_budget_analysis": {
+    "advisory_priority_transition_count": 28,
+    "advisory_transition_to_owner_command_ratio": 0.070529,
+    "candidate_opportunity_count": 44,
+    "comparison_status": "REFERENCE_ONLY_NOT_CAUSAL",
+    "continued_advisory_priority_count": 11,
+    "efficiency_interpretation": "Measures selectivity and high-severity coverage only; it does not prove fewer commands would win or reduce casualties.",
+    "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+    "maximum_selected_in_one_slice": 6,
+    "minimum_critical_opportunity_coverage": 1.0,
+    "observed_owner_command_event_reference": 397,
+    "selected_opportunity_count": 25
+  },
+  "evaluations": [
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 0,
+        "continued_selected_opportunity_count": 0,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 0,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 0,
+        "selected_opportunity_count": 0,
+        "suppressed_opportunity_count": 0
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 6,
+      "local_preservation_priorities": [],
+      "local_stability_state": "STABLE",
+      "outcome_state": "CONTESTED",
+      "posture": "DEPLOYMENT_AND_INFORMATION",
+      "result_digest": "c4e319a7ca005c19d16240e59f241aa51da0c7df4f90296d5556412e62358052",
+      "schema_version": 3,
+      "selected_decision_opportunities": [],
+      "slice_id": "deployment_complete",
+      "source_tactical_state_digest": "c23bb98f19aac71ca54e60c30bd71fade7dfe36d908b76634575c471b31465da",
+      "tactical_phase_state": "ACTIVE_CONTEST",
+      "time_ms": 128800,
+      "visible_enemy_collapse_state": "CONTESTED",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 3.324234,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.324234,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1037",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1019",
+          "target_score": 2.1025,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1020",
+          "target_score": 2.1025,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 2.1025,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 0,
+        "continued_selected_opportunity_count": 0,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 0,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 0,
+        "selected_opportunity_count": 0,
+        "suppressed_opportunity_count": 0
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 2,
+      "local_preservation_priorities": [],
+      "local_stability_state": "STABLE",
+      "outcome_state": "CONTESTED",
+      "posture": "RANGED_CONTACT",
+      "result_digest": "5498c5ba3ecffa56805ddcc7d8ce0f76df9b3fee80838955b72f82ca2f6aef30",
+      "schema_version": 3,
+      "selected_decision_opportunities": [],
+      "slice_id": "first_contact",
+      "source_tactical_state_digest": "19ecc272221f06ecf4a24a9fbd1699ceb1393bc0ac0ec4507be125f2ee153762",
+      "tactical_phase_state": "ACTIVE_CONTEST",
+      "time_ms": 141100,
+      "visible_enemy_collapse_state": "CONTESTED",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "commander",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1018",
+          "target_score": 3.942188,
+          "unit_type": "wh_main_emp_cha_general_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 3.324234,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.324234,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.324234,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1037",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1019",
+          "target_score": 2.1025,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 1,
+        "continued_selected_opportunity_count": 0,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 1,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 0,
+        "selected_opportunity_count": 1,
+        "suppressed_opportunity_count": 0
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 4,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.326997,
+          "hitpoints_fraction": 0.779023,
+          "model_fraction": 0.966667,
+          "preservation_score": 0.587393,
+          "priority_type": "DISENGAGE_OR_PRESERVE_CAVALRY",
+          "reasons": [
+            "cavalry attrition, fatigue, or isolation threshold",
+            "deteriorating since previous milestone",
+            "melee contact"
+          ],
+          "role": "cavalry",
+          "stable_unit_id": "1:u1014",
+          "unit_type": "wh_main_emp_cav_reiksguard",
+          "withdrawal_recoverability_proxy": 0.465891
+        }
+      ],
+      "local_stability_state": "STABLE",
+      "outcome_state": "CONTESTED",
+      "posture": "COMBINED_ENGAGEMENT",
+      "result_digest": "3ea8fa26e243a470af38ed648fa1458562b6e6d859e587d65597924bfb31498d",
+      "schema_version": 3,
+      "selected_decision_opportunities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "LOW",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "4 enemy units are intentionally hidden from detailed evaluation.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.8201,
+            "collapse_risk_score": 0.307491,
+            "danger_score": 0.326997,
+            "marginal_engagement_value_proxy": 0.518756,
+            "support_balance": -3,
+            "trend": {
+              "danger_delta": 0.326997,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.220977,
+              "model_fraction_delta": -0.033333,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.465891
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_tired",
+            "hitpoints_fraction": 0.779023,
+            "in_melee": true,
+            "model_fraction": 0.966667,
+            "role": "cavalry",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "local_melee_commitment:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_key": "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "MEDIUM",
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.541122
+        }
+      ],
+      "slice_id": "local_melee_commitment",
+      "source_tactical_state_digest": "38c0d969596068ab8c080fdac5c9454b87266150cd97e7ff0995ed0b018ba3ae",
+      "tactical_phase_state": "ACTIVE_CONTEST",
+      "time_ms": 291100,
+      "visible_enemy_collapse_state": "PRESSURED",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "commander",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1018",
+          "target_score": 3.942188,
+          "unit_type": "wh_main_emp_cha_general_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 3.324234,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.323959,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 3.321868,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.319593,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "cavalry",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1029",
+          "target_score": 2.869912,
+          "unit_type": "wh_main_emp_cav_empire_knights"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1031",
+          "target_score": 2.1025,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 9,
+        "continued_selected_opportunity_count": 1,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 5,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 0,
+        "selected_opportunity_count": 6,
+        "suppressed_opportunity_count": 3
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.765276,
+          "hitpoints_fraction": 0.073052,
+          "model_fraction": 0.159091,
+          "preservation_score": 1.685956,
+          "priority_type": "EXTRACT_OR_SCREEN_ARTILLERY",
+          "reasons": [
+            "artillery combat power at risk",
+            "deteriorating since previous milestone",
+            "missile pressure",
+            "routing"
+          ],
+          "role": "artillery",
+          "stable_unit_id": "1:u1015",
+          "unit_type": "wh_main_emp_art_mortar",
+          "withdrawal_recoverability_proxy": 0.068604
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.447792,
+          "hitpoints_fraction": 0.322994,
+          "model_fraction": 1.0,
+          "preservation_score": 0.886002,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "melee contact",
+            "role-specific character preservation threshold",
+            "wavering"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0",
+          "withdrawal_recoverability_proxy": 0.459139
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.466391,
+          "hitpoints_fraction": 0.51954,
+          "model_fraction": 0.833333,
+          "preservation_score": 0.880586,
+          "priority_type": "DISENGAGE_OR_PRESERVE_CAVALRY",
+          "reasons": [
+            "cavalry attrition, fatigue, or isolation threshold",
+            "deteriorating since previous milestone",
+            "melee contact",
+            "missile pressure"
+          ],
+          "role": "cavalry",
+          "stable_unit_id": "1:u1014",
+          "unit_type": "wh_main_emp_cav_reiksguard",
+          "withdrawal_recoverability_proxy": 0.321851
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.26956,
+          "hitpoints_fraction": 0.563768,
+          "model_fraction": 0.855556,
+          "preservation_score": 0.475165,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1013",
+          "unit_type": "wh_main_emp_inf_handgunners",
+          "withdrawal_recoverability_proxy": 0.560367
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.257488,
+          "hitpoints_fraction": 0.544283,
+          "model_fraction": 0.888889,
+          "preservation_score": 0.441966,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1009",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.580193
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.240792,
+          "hitpoints_fraction": 0.839453,
+          "model_fraction": 0.988889,
+          "preservation_score": 0.410359,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "melee contact",
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1011",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.586324
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.22358,
+          "hitpoints_fraction": 0.6781,
+          "model_fraction": 0.833333,
+          "preservation_score": 0.391824,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1012",
+          "unit_type": "wh_main_emp_inf_handgunners",
+          "withdrawal_recoverability_proxy": 0.577391
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.173348,
+          "hitpoints_fraction": 0.969082,
+          "model_fraction": 1.0,
+          "preservation_score": 0.29499,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.575435
+        }
+      ],
+      "local_stability_state": "LOCAL_CRISIS",
+      "outcome_state": "CONTESTED",
+      "posture": "CRISIS_STABILIZATION",
+      "result_digest": "389140bb5725fd0bb5f082b60c1fc322c63f0ed7bdd59aa5d140614f16ba98ac",
+      "schema_version": 3,
+      "selected_decision_opportunities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.956564,
+            "collapse_risk_score": 0.856442,
+            "danger_score": 0.765276,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": 6,
+            "trend": {
+              "danger_delta": 0.765276,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.926948,
+              "model_fraction_delta": -0.840909,
+              "new_routing": true,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.068604
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_fresh",
+            "hitpoints_fraction": 0.073052,
+            "in_melee": false,
+            "model_fraction": 0.159091,
+            "role": "artillery",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": true,
+            "wavering": false
+          },
+          "opportunity_id": "local_crisis:ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015",
+          "opportunity_key": "ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015",
+          "opportunity_type": "ARTILLERY_EVACUATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EVACUATE_ARTILLERY",
+              "description": "Withdraw along the safest observed support direction.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce immediate fire support and is not pathfinding-certified."
+            },
+            {
+              "alternative_id": "ASSIGN_TEMPORARY_SCREEN",
+              "description": "Screen the artillery while it disengages or resumes fire.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Commits another unit and may transfer risk rather than remove it."
+            },
+            {
+              "alternative_id": "HOLD_FIRE_POSITION",
+              "description": "Remain only if visible pressure is low and marginal fire value exceeds preservation risk.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Risks irreversible model loss if pressure is underestimated."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1015"
+          ],
+          "tactical_diagnosis": "Artillery preservation value is high and continued exposure risks losing a low-mobility productive asset.",
+          "utility_score": 0.924962
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 1.0,
+            "collapse_risk_score": 0.422441,
+            "danger_score": 0.447792,
+            "marginal_engagement_value_proxy": 0.132182,
+            "support_balance": 5,
+            "trend": {
+              "danger_delta": 0.447792,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.677006,
+              "model_fraction_delta": 0.0,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.459139
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_tired",
+            "hitpoints_fraction": 0.322994,
+            "in_melee": true,
+            "model_fraction": 1.0,
+            "role": "commander",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": true
+          },
+          "opportunity_id": "local_crisis:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+          "opportunity_key": "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.71884
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.8201,
+            "collapse_risk_score": 0.468801,
+            "danger_score": 0.466391,
+            "marginal_engagement_value_proxy": 0.255706,
+            "support_balance": -3,
+            "trend": {
+              "danger_delta": 0.139394,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.259483,
+              "model_fraction_delta": -0.133334,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.321851
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_very_tired",
+            "hitpoints_fraction": 0.51954,
+            "in_melee": true,
+            "model_fraction": 0.833333,
+            "role": "cavalry",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": true,
+            "wavering": false
+          },
+          "opportunity_id": "local_crisis:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_key": "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.647149
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "local_integrity_score": 0.756817,
+            "local_pressure_score": 0.233113,
+            "local_routing_fraction": 0.058824,
+            "visible_enemy_integrity_score": 0.6787,
+            "visible_enemy_routing_fraction": 0.15
+          },
+          "expires_when": [
+            "battle posture changes",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "hidden_enemy_unit_count": 0,
+            "local_stability_state": "LOCAL_CRISIS",
+            "outcome_state": "CONTESTED",
+            "tactical_phase_state": "ACTIVE_CONTEST",
+            "visible_enemy_collapse_state": "PRESSURED"
+          },
+          "opportunity_id": "local_crisis:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+          "opportunity_key": "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+          "opportunity_type": "LOCAL_ROUT_CONTAINMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "STABILIZE_ADJACENT_COHERENT_UNITS",
+              "description": "Reduce pressure on adjacent coherent units and restore a supported line.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May slow offensive momentum."
+            },
+            {
+              "alternative_id": "ALLOW_ROUTING_UNIT_TO_CLEAR",
+              "description": "Avoid feeding fresh units into the same collapsing contact while the routing unit clears.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes local space and may expose a gap temporarily."
+            }
+          ],
+          "scope": "BATTLE",
+          "severity": "MEDIUM",
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1015"
+          ],
+          "tactical_diagnosis": "Local morale failure is present; continued unsupported exposure may propagate a rout cascade.",
+          "utility_score": 0.540588
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.847988,
+            "collapse_risk_score": 0.242021,
+            "danger_score": 0.26956,
+            "marginal_engagement_value_proxy": 0.431191,
+            "support_balance": 6,
+            "trend": {
+              "danger_delta": 0.26956,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.436232,
+              "model_fraction_delta": -0.144444,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.560367
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_active",
+            "hitpoints_fraction": 0.563768,
+            "in_melee": false,
+            "model_fraction": 0.855556,
+            "role": "ranged",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": true,
+            "wavering": false
+          },
+          "opportunity_id": "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1013",
+          "opportunity_key": "RANGED_REPOSITION_WINDOW:UNIT:1:u1013",
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "MEDIUM",
+          "subject_unit_ids": [
+            "1:u1013"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.482684
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.812644,
+            "collapse_risk_score": 0.228884,
+            "danger_score": 0.257488,
+            "marginal_engagement_value_proxy": 0.453521,
+            "support_balance": 4,
+            "trend": {
+              "danger_delta": 0.257488,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.455717,
+              "model_fraction_delta": -0.111111,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.580193
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_fresh",
+            "hitpoints_fraction": 0.544283,
+            "in_melee": false,
+            "model_fraction": 0.888889,
+            "role": "ranged",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": true,
+            "wavering": false
+          },
+          "opportunity_id": "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+          "opportunity_key": "RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "MEDIUM",
+          "subject_unit_ids": [
+            "1:u1009"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.463594
+        }
+      ],
+      "slice_id": "local_crisis",
+      "source_tactical_state_digest": "67bd81a8721b76393f588ae67262e5a81bfcbcb5659dc58b402f917085a1404e",
+      "tactical_phase_state": "ACTIVE_CONTEST",
+      "time_ms": 402100,
+      "visible_enemy_collapse_state": "PRESSURED",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.313923,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.298795,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "commander",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1018",
+          "target_score": 3.035237,
+          "unit_type": "wh_main_emp_cha_general_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 2.618983,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1033",
+          "target_score": 2.545202,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "cavalry",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1029",
+          "target_score": 2.524269,
+          "unit_type": "wh_main_emp_cav_empire_knights"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1032",
+          "target_score": 2.45067,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 2.325048,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 12,
+        "continued_selected_opportunity_count": 3,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 3,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 3,
+        "selected_opportunity_count": 6,
+        "suppressed_opportunity_count": 6
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.991591,
+          "hitpoints_fraction": 0.068182,
+          "model_fraction": 0.136364,
+          "preservation_score": 2.231128,
+          "priority_type": "EXTRACT_OR_SCREEN_ARTILLERY",
+          "reasons": [
+            "artillery combat power at risk",
+            "deteriorating since previous milestone",
+            "routing",
+            "shattered"
+          ],
+          "role": "artillery",
+          "stable_unit_id": "1:u1015",
+          "unit_type": "wh_main_emp_art_mortar",
+          "withdrawal_recoverability_proxy": 0.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.796879,
+          "hitpoints_fraction": 0.118966,
+          "model_fraction": 0.3,
+          "preservation_score": 1.667959,
+          "priority_type": "DISENGAGE_OR_PRESERVE_CAVALRY",
+          "reasons": [
+            "cavalry attrition, fatigue, or isolation threshold",
+            "deteriorating since previous milestone",
+            "melee contact",
+            "routing"
+          ],
+          "role": "cavalry",
+          "stable_unit_id": "1:u1014",
+          "unit_type": "wh_main_emp_cav_reiksguard",
+          "withdrawal_recoverability_proxy": 0.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.582227,
+          "hitpoints_fraction": 0.34525,
+          "model_fraction": 0.588889,
+          "preservation_score": 1.108668,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "missile pressure",
+            "ranged asset exposed",
+            "routing"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.227367
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.560535,
+          "hitpoints_fraction": 0.112215,
+          "model_fraction": 0.291667,
+          "preservation_score": 0.919439,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "frontline collapse risk",
+            "melee contact"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers",
+          "withdrawal_recoverability_proxy": 0.271865
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.549696,
+          "hitpoints_fraction": 0.271498,
+          "model_fraction": 0.35,
+          "preservation_score": 0.883183,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "frontline collapse risk",
+            "missile pressure"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.30487
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.519446,
+          "hitpoints_fraction": 0.340942,
+          "model_fraction": 0.425,
+          "preservation_score": 0.824712,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "frontline collapse risk",
+            "melee contact"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1004",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.33437
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.356931,
+          "hitpoints_fraction": 0.159515,
+          "model_fraction": 1.0,
+          "preservation_score": 0.717574,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "role-specific character preservation threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0",
+          "withdrawal_recoverability_proxy": 0.413713
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.349289,
+          "hitpoints_fraction": 0.169298,
+          "model_fraction": 1.0,
+          "preservation_score": 0.686999,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "melee contact",
+            "role-specific character preservation threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0",
+          "withdrawal_recoverability_proxy": 0.467474
+        }
+      ],
+      "local_stability_state": "LOCAL_CRISIS",
+      "outcome_state": "VISIBLE_ENEMY_BREAKING",
+      "posture": "CRISIS_STABILIZATION",
+      "result_digest": "ed853eb547a0e1890c92c6e7e6b3c8710bce8a6eae1a4793a432f953d5083e7e",
+      "schema_version": 3,
+      "selected_decision_opportunities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.956564,
+            "collapse_risk_score": 1.0,
+            "danger_score": 0.991591,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": 0,
+            "trend": {
+              "danger_delta": 0.226315,
+              "danger_persistent": true,
+              "hitpoints_delta": -0.00487,
+              "model_fraction_delta": -0.022727,
+              "new_routing": false,
+              "new_shattered": true,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.0
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_active",
+            "hitpoints_fraction": 0.068182,
+            "in_melee": false,
+            "model_fraction": 0.136364,
+            "role": "artillery",
+            "routing": true,
+            "shattered": true,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_break:ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015",
+          "opportunity_key": "ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015",
+          "opportunity_type": "ARTILLERY_EVACUATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EVACUATE_ARTILLERY",
+              "description": "Withdraw along the safest observed support direction.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce immediate fire support and is not pathfinding-certified."
+            },
+            {
+              "alternative_id": "ASSIGN_TEMPORARY_SCREEN",
+              "description": "Screen the artillery while it disengages or resumes fire.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Commits another unit and may transfer risk rather than remove it."
+            },
+            {
+              "alternative_id": "HOLD_FIRE_POSITION",
+              "description": "Remain only if visible pressure is low and marginal fire value exceeds preservation risk.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Risks irreversible model loss if pressure is underestimated."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1015"
+          ],
+          "tactical_diagnosis": "Artillery preservation value is high and continued exposure risks losing a low-mobility productive asset.",
+          "utility_score": 1.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.8201,
+            "collapse_risk_score": 0.916411,
+            "danger_score": 0.796879,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": -1,
+            "trend": {
+              "danger_delta": 0.330488,
+              "danger_persistent": true,
+              "hitpoints_delta": -0.400574,
+              "model_fraction_delta": -0.533333,
+              "new_routing": true,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.0
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.118966,
+            "in_melee": true,
+            "model_fraction": 0.3,
+            "role": "cavalry",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_break:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_key": "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.908883
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.778911,
+            "collapse_risk_score": 0.60999,
+            "danger_score": 0.582227,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": 5,
+            "trend": {
+              "danger_delta": 0.408879,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.623832,
+              "model_fraction_delta": -0.411111,
+              "new_routing": true,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.227367
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_tired",
+            "hitpoints_fraction": 0.34525,
+            "in_melee": false,
+            "model_fraction": 0.588889,
+            "role": "ranged",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": true,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_break:RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+          "opportunity_key": "RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1010"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.703657
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 1.0,
+            "collapse_risk_score": 0.344021,
+            "danger_score": 0.356931,
+            "marginal_engagement_value_proxy": 0.118399,
+            "support_balance": 0,
+            "trend": {
+              "danger_delta": -0.090861,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.163479,
+              "model_fraction_delta": 0.0,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.413713
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.159515,
+            "in_melee": false,
+            "model_fraction": 1.0,
+            "role": "commander",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_break:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+          "opportunity_key": "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.664291
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.994,
+            "collapse_risk_score": 0.328205,
+            "danger_score": 0.349289,
+            "marginal_engagement_value_proxy": 0.17736,
+            "support_balance": -1,
+            "trend": {
+              "danger_delta": 0.123789,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.514035,
+              "model_fraction_delta": 0.0,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.467474
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_winded",
+            "hitpoints_fraction": 0.169298,
+            "in_melee": true,
+            "model_fraction": 1.0,
+            "role": "commander",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_break:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002",
+          "opportunity_key": "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002",
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1002"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.652392
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.555,
+            "collapse_risk_score": 0.57604,
+            "danger_score": 0.560535,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": -3,
+            "trend": {
+              "danger_delta": 0.26494,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.57694,
+              "model_fraction_delta": -0.541666,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.271865
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_very_tired",
+            "hitpoints_fraction": 0.112215,
+            "in_melee": true,
+            "model_fraction": 0.291667,
+            "role": "frontline",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_break:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+          "opportunity_key": "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+          "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "RELIEVE_WITH_COHERENT_SUPPORT",
+              "description": "Rotate or reinforce with the nearest coherent support element.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May expose the supporting unit and requires formation space."
+            },
+            {
+              "alternative_id": "FALL_BACK_TO_SHORTER_LINE",
+              "description": "Withdraw toward a shorter supported line rather than preserve every current contact.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes ground and may disrupt adjacent units."
+            },
+            {
+              "alternative_id": "HOLD_FOR_BOUNDED_DELAY",
+              "description": "Continue holding only when the delay protects higher-value assets or enables decisive pressure elsewhere.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Accepts attrition and must not become an automatic sacrifice rule."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1003"
+          ],
+          "tactical_diagnosis": "A frontline element is at risk of local morale or formation failure while active opposition remains.",
+          "utility_score": 0.633563
+        }
+      ],
+      "slice_id": "enemy_break",
+      "source_tactical_state_digest": "7670926ed7bff1d23677962975287f28e56cd421c60d466b9194a02f8818df7b",
+      "tactical_phase_state": "ACTIVE_CONTEST",
+      "time_ms": 531100,
+      "visible_enemy_collapse_state": "BREAKING",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.301905,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 2.304538,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 2.056851,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1033",
+          "target_score": 1.975842,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1020",
+          "target_score": 1.730853,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 1.504231,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 1.396591,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 1.111951,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 13,
+        "continued_selected_opportunity_count": 4,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 2,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 2,
+        "selected_opportunity_count": 6,
+        "suppressed_opportunity_count": 7
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.941759,
+          "hitpoints_fraction": 0.066324,
+          "model_fraction": 0.183333,
+          "preservation_score": 1.684101,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "frontline collapse risk",
+            "melee contact",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers",
+          "withdrawal_recoverability_proxy": 0.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.629711,
+          "hitpoints_fraction": 0.130702,
+          "model_fraction": 1.0,
+          "preservation_score": 1.377838,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "role-specific character preservation threshold",
+            "routing"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0",
+          "withdrawal_recoverability_proxy": 0.150526
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.57844,
+          "hitpoints_fraction": 0.321417,
+          "model_fraction": 0.544444,
+          "preservation_score": 1.087555,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "missile pressure",
+            "ranged asset exposed",
+            "routing"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.265966
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.527578,
+          "hitpoints_fraction": 0.116379,
+          "model_fraction": 0.3,
+          "preservation_score": 1.017253,
+          "priority_type": "DISENGAGE_OR_PRESERVE_CAVALRY",
+          "reasons": [
+            "cavalry attrition, fatigue, or isolation threshold"
+          ],
+          "role": "cavalry",
+          "stable_unit_id": "1:u1014",
+          "unit_type": "wh_main_emp_cav_reiksguard",
+          "withdrawal_recoverability_proxy": 0.258948
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.623134,
+          "hitpoints_fraction": 0.28901,
+          "model_fraction": 0.358333,
+          "preservation_score": 1.011129,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "melee contact"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1004",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.269355
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.551939,
+          "hitpoints_fraction": 0.157018,
+          "model_fraction": 0.366667,
+          "preservation_score": 0.926521,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "frontline collapse risk",
+            "missile pressure"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1008",
+          "unit_type": "wh2_dlc13_emp_inf_greatswords_ror_0",
+          "withdrawal_recoverability_proxy": 0.33893
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.543772,
+          "hitpoints_fraction": 0.256401,
+          "model_fraction": 0.35,
+          "preservation_score": 0.867134,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "missile pressure"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.327152
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.373937,
+          "hitpoints_fraction": 0.452496,
+          "model_fraction": 0.722222,
+          "preservation_score": 0.664711,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1011",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.438005
+        }
+      ],
+      "local_stability_state": "LOCAL_CRISIS",
+      "outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+      "posture": "TERMINATE_WITH_PRESERVATION",
+      "result_digest": "d38aca33b50db2be45b9696d1aca06c26bcd4f81dc1e02b5f2b57613443a4571",
+      "schema_version": 3,
+      "selected_decision_opportunities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.555,
+            "collapse_risk_score": 1.0,
+            "danger_score": 0.941759,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": 0,
+            "trend": {
+              "danger_delta": 0.381224,
+              "danger_persistent": true,
+              "hitpoints_delta": -0.045891,
+              "model_fraction_delta": -0.108334,
+              "new_routing": true,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.0
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.066324,
+            "in_melee": true,
+            "model_fraction": 0.183333,
+            "role": "frontline",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_rout_majority:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+          "opportunity_key": "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+          "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "RELIEVE_WITH_COHERENT_SUPPORT",
+              "description": "Rotate or reinforce with the nearest coherent support element.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May expose the supporting unit and requires formation space."
+            },
+            {
+              "alternative_id": "FALL_BACK_TO_SHORTER_LINE",
+              "description": "Withdraw toward a shorter supported line rather than preserve every current contact.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes ground and may disrupt adjacent units."
+            },
+            {
+              "alternative_id": "HOLD_FOR_BOUNDED_DELAY",
+              "description": "Continue holding only when the delay protects higher-value assets or enables decisive pressure elsewhere.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Accepts attrition and must not become an automatic sacrifice rule."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1003"
+          ],
+          "tactical_diagnosis": "A frontline element is at risk of local morale or formation failure while active opposition remains.",
+          "utility_score": 0.911894
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.994,
+            "collapse_risk_score": 0.681513,
+            "danger_score": 0.629711,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": -1,
+            "trend": {
+              "danger_delta": 0.280422,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.038596,
+              "model_fraction_delta": 0.0,
+              "new_routing": true,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.150526
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_winded",
+            "hitpoints_fraction": 0.130702,
+            "in_melee": false,
+            "model_fraction": 1.0,
+            "role": "commander",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_rout_majority:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002",
+          "opportunity_key": "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002",
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1002"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.872777
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "local_integrity_score": 0.537056,
+            "local_pressure_score": 0.256892,
+            "local_routing_fraction": 0.1875,
+            "visible_enemy_integrity_score": 0.395399,
+            "visible_enemy_routing_fraction": 0.5
+          },
+          "expires_when": [
+            "battle posture changes",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "hidden_enemy_unit_count": 0,
+            "local_stability_state": "LOCAL_CRISIS",
+            "outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+            "tactical_phase_state": "RECOVERY_REQUIRED",
+            "visible_enemy_collapse_state": "ROUT_CASCADE"
+          },
+          "opportunity_id": "enemy_rout_majority:PURSUIT_TERMINATION_WINDOW:BATTLE",
+          "opportunity_key": "PURSUIT_TERMINATION_WINDOW:BATTLE",
+          "opportunity_type": "PURSUIT_TERMINATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "TERMINATE_GENERAL_PURSUIT",
+              "description": "Stop endangered or exhausted units and reform the force.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Allows some routed models to escape; no campaign-capture effect is modeled."
+            },
+            {
+              "alternative_id": "ALLOW_ONLY_SAFE_SPECIALIST_PURSUIT",
+              "description": "Permit only healthy suitable units to pursue with strict distance and fatigue limits.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Still risks hidden threats or pathing failures."
+            },
+            {
+              "alternative_id": "CEASE_LOW_VALUE_RANGED_FIRE",
+              "description": "Preserve ammunition when remaining visible targets are shattered or strategically irrelevant.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce final casualties inflicted."
+            }
+          ],
+          "scope": "BATTLE",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1008",
+            "1:u1010",
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Visible enemy resistance has entered a rout cascade; marginal cleanup value is lower than preservation and reformation value for endangered units.",
+          "utility_score": 0.780827
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.778911,
+            "collapse_risk_score": 0.595975,
+            "danger_score": 0.57844,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": 2,
+            "trend": {
+              "danger_delta": -0.003787,
+              "danger_persistent": true,
+              "hitpoints_delta": -0.023833,
+              "model_fraction_delta": -0.044445,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "STABLE"
+            },
+            "withdrawal_recoverability_proxy": 0.265966
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_tired",
+            "hitpoints_fraction": 0.321417,
+            "in_melee": false,
+            "model_fraction": 0.544444,
+            "role": "ranged",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": true,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_rout_majority:RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+          "opportunity_key": "RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1010"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.696615
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.8201,
+            "collapse_risk_score": 0.545237,
+            "danger_score": 0.527578,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": -1,
+            "trend": {
+              "danger_delta": -0.269301,
+              "danger_persistent": true,
+              "hitpoints_delta": -0.002587,
+              "model_fraction_delta": 0.0,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "IMPROVING"
+            },
+            "withdrawal_recoverability_proxy": 0.258948
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.116379,
+            "in_melee": false,
+            "model_fraction": 0.3,
+            "role": "cavalry",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "enemy_rout_majority:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_key": "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.694681
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "local_integrity_score": 0.537056,
+            "local_pressure_score": 0.256892,
+            "local_routing_fraction": 0.1875,
+            "visible_enemy_integrity_score": 0.395399,
+            "visible_enemy_routing_fraction": 0.5
+          },
+          "expires_when": [
+            "battle posture changes",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "hidden_enemy_unit_count": 0,
+            "local_stability_state": "LOCAL_CRISIS",
+            "outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+            "tactical_phase_state": "RECOVERY_REQUIRED",
+            "visible_enemy_collapse_state": "ROUT_CASCADE"
+          },
+          "opportunity_id": "enemy_rout_majority:REFORM_AND_PRESERVE_WINDOW:BATTLE",
+          "opportunity_key": "REFORM_AND_PRESERVE_WINDOW:BATTLE",
+          "opportunity_type": "REFORM_AND_PRESERVE_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REFORM_AROUND_COHERENT_CORE",
+              "description": "Gather surviving coherent units around a defensible friendly core.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Reduces chase pressure and may leave distant units unsupported during reformation."
+            },
+            {
+              "alternative_id": "EXTRACT_ENDANGERED_ASSETS",
+              "description": "Prioritize characters and productive ranged or artillery assets for safe separation.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May sacrifice remaining pursuit opportunities."
+            }
+          ],
+          "scope": "BATTLE",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1008",
+            "1:u1010",
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "The visible outcome is no longer improved primarily by broad engagement; formation recovery and survivor preservation now dominate.",
+          "utility_score": 0.68
+        }
+      ],
+      "slice_id": "enemy_rout_majority",
+      "source_tactical_state_digest": "33835ad0a75c8f4288cc7b6f5218b298f17beb31a5285c189cf9562b1ee3bd8c",
+      "tactical_phase_state": "RECOVERY_REQUIRED",
+      "time_ms": 555100,
+      "visible_enemy_collapse_state": "ROUT_CASCADE",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.156807,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 1.855192,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1020",
+          "target_score": 1.70106,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 1.609472,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 1.388495,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1033",
+          "target_score": 1.282071,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 1.065359,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1035",
+          "target_score": 0.814252,
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 9,
+        "continued_selected_opportunity_count": 3,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 3,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 3,
+        "selected_opportunity_count": 6,
+        "suppressed_opportunity_count": 3
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.819902,
+          "hitpoints_fraction": 0.12814,
+          "model_fraction": 0.275,
+          "preservation_score": 1.452046,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "frontline collapse risk",
+            "missile pressure",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.770079,
+          "hitpoints_fraction": 0.046005,
+          "model_fraction": 0.125,
+          "preservation_score": 1.377094,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers",
+          "withdrawal_recoverability_proxy": 0.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.588155,
+          "hitpoints_fraction": 0.133172,
+          "model_fraction": 0.322222,
+          "preservation_score": 1.069164,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "ranged asset exposed",
+            "wavering"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1009",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.355527
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.466931,
+          "hitpoints_fraction": 0.159515,
+          "model_fraction": 1.0,
+          "preservation_score": 1.005723,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "role-specific character preservation threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0",
+          "withdrawal_recoverability_proxy": 0.208713
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.584134,
+          "hitpoints_fraction": 0.183454,
+          "model_fraction": 0.233333,
+          "preservation_score": 0.901967,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "deteriorating since previous milestone",
+            "frontline collapse risk",
+            "wavering"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1004",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.415355
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.332671,
+          "hitpoints_fraction": 0.267472,
+          "model_fraction": 0.477778,
+          "preservation_score": 0.572511,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.521589
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.264711,
+          "hitpoints_fraction": 0.130702,
+          "model_fraction": 1.0,
+          "preservation_score": 0.501794,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "role-specific character preservation threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0",
+          "withdrawal_recoverability_proxy": 0.569526
+        }
+      ],
+      "local_stability_state": "LOCAL_CRISIS",
+      "outcome_state": "VISIBLE_ENEMY_DEFEAT_EFFECTIVELY_IRREVERSIBLE",
+      "posture": "TERMINATE_WITH_PRESERVATION",
+      "result_digest": "3a03b06232241347c98f51bbd57e7500ce58471c676b9bfba09ec0b5afddead8",
+      "schema_version": 3,
+      "selected_decision_opportunities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "local_integrity_score": 0.520389,
+            "local_pressure_score": 0.222706,
+            "local_routing_fraction": 0.153846,
+            "visible_enemy_integrity_score": 0.285035,
+            "visible_enemy_routing_fraction": 1.0
+          },
+          "expires_when": [
+            "battle posture changes",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "hidden_enemy_unit_count": 0,
+            "local_stability_state": "LOCAL_CRISIS",
+            "outcome_state": "VISIBLE_ENEMY_DEFEAT_EFFECTIVELY_IRREVERSIBLE",
+            "tactical_phase_state": "RECOVERY_REQUIRED",
+            "visible_enemy_collapse_state": "TERMINAL_COUNTDOWN"
+          },
+          "opportunity_id": "victory_countdown:PURSUIT_TERMINATION_WINDOW:BATTLE",
+          "opportunity_key": "PURSUIT_TERMINATION_WINDOW:BATTLE",
+          "opportunity_type": "PURSUIT_TERMINATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "TERMINATE_GENERAL_PURSUIT",
+              "description": "Stop endangered or exhausted units and reform the force.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Allows some routed models to escape; no campaign-capture effect is modeled."
+            },
+            {
+              "alternative_id": "ALLOW_ONLY_SAFE_SPECIALIST_PURSUIT",
+              "description": "Permit only healthy suitable units to pursue with strict distance and fatigue limits.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Still risks hidden threats or pathing failures."
+            },
+            {
+              "alternative_id": "CEASE_LOW_VALUE_RANGED_FIRE",
+              "description": "Preserve ammunition when remaining visible targets are shattered or strategically irrelevant.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce final casualties inflicted."
+            }
+          ],
+          "scope": "BATTLE",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1012",
+            "1:u1016",
+            "1:u1017"
+          ],
+          "tactical_diagnosis": "Visible enemy resistance has entered a rout cascade; marginal cleanup value is lower than preservation and reformation value for endangered units.",
+          "utility_score": 0.886725
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.54,
+            "collapse_risk_score": 0.942888,
+            "danger_score": 0.819902,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": -1,
+            "trend": {
+              "danger_delta": 0.27613,
+              "danger_persistent": true,
+              "hitpoints_delta": -0.128261,
+              "model_fraction_delta": -0.075,
+              "new_routing": true,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.0
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.12814,
+            "in_melee": false,
+            "model_fraction": 0.275,
+            "role": "frontline",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": true,
+            "wavering": false
+          },
+          "opportunity_id": "victory_countdown:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005",
+          "opportunity_key": "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005",
+          "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "RELIEVE_WITH_COHERENT_SUPPORT",
+              "description": "Rotate or reinforce with the nearest coherent support element.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May expose the supporting unit and requires formation space."
+            },
+            {
+              "alternative_id": "FALL_BACK_TO_SHORTER_LINE",
+              "description": "Withdraw toward a shorter supported line rather than preserve every current contact.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes ground and may disrupt adjacent units."
+            },
+            {
+              "alternative_id": "HOLD_FOR_BOUNDED_DELAY",
+              "description": "Continue holding only when the delay protects higher-value assets or enables decisive pressure elsewhere.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Accepts attrition and must not become an automatic sacrifice rule."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1005"
+          ],
+          "tactical_diagnosis": "A frontline element is at risk of local morale or formation failure while active opposition remains.",
+          "utility_score": 0.839073
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.555,
+            "collapse_risk_score": 0.885591,
+            "danger_score": 0.770079,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": 0,
+            "trend": {
+              "danger_delta": -0.17168,
+              "danger_persistent": true,
+              "hitpoints_delta": -0.020319,
+              "model_fraction_delta": -0.058333,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "IMPROVING"
+            },
+            "withdrawal_recoverability_proxy": 0.0
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.046005,
+            "in_melee": false,
+            "model_fraction": 0.125,
+            "role": "frontline",
+            "routing": true,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "victory_countdown:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+          "opportunity_key": "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+          "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "RELIEVE_WITH_COHERENT_SUPPORT",
+              "description": "Rotate or reinforce with the nearest coherent support element.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May expose the supporting unit and requires formation space."
+            },
+            {
+              "alternative_id": "FALL_BACK_TO_SHORTER_LINE",
+              "description": "Withdraw toward a shorter supported line rather than preserve every current contact.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes ground and may disrupt adjacent units."
+            },
+            {
+              "alternative_id": "HOLD_FOR_BOUNDED_DELAY",
+              "description": "Continue holding only when the delay protects higher-value assets or enables decisive pressure elsewhere.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Accepts attrition and must not become an automatic sacrifice rule."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "CRITICAL",
+          "subject_unit_ids": [
+            "1:u1003"
+          ],
+          "tactical_diagnosis": "A frontline element is at risk of local morale or formation failure while active opposition remains.",
+          "utility_score": 0.808894
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 1.0,
+            "collapse_risk_score": 0.493116,
+            "danger_score": 0.466931,
+            "marginal_engagement_value_proxy": 0.030399,
+            "support_balance": -4,
+            "trend": {
+              "danger_delta": 0.17,
+              "danger_persistent": false,
+              "hitpoints_delta": 0.0,
+              "model_fraction_delta": 0.0,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.208713
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.159515,
+            "in_melee": false,
+            "model_fraction": 1.0,
+            "role": "commander",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": false
+          },
+          "opportunity_id": "victory_countdown:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+          "opportunity_key": "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.758278
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "asset_value_score": 0.772511,
+            "collapse_risk_score": 0.582281,
+            "danger_score": 0.588155,
+            "marginal_engagement_value_proxy": 0.0,
+            "support_balance": 0,
+            "trend": {
+              "danger_delta": 0.292401,
+              "danger_persistent": false,
+              "hitpoints_delta": -0.266506,
+              "model_fraction_delta": -0.411111,
+              "new_routing": false,
+              "new_shattered": false,
+              "status": "DETERIORATING"
+            },
+            "withdrawal_recoverability_proxy": 0.355527
+          },
+          "expires_when": [
+            "the observed danger condition clears",
+            "the unit leaves the observed hierarchy",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "fatigue": "threshold_very_tired",
+            "hitpoints_fraction": 0.133172,
+            "in_melee": false,
+            "model_fraction": 0.322222,
+            "role": "ranged",
+            "routing": false,
+            "shattered": false,
+            "under_missile_attack": false,
+            "wavering": true
+          },
+          "opportunity_id": "victory_countdown:RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+          "opportunity_key": "RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "scope": "UNIT",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1009"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.690816
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "observed state plus deterministic disclosed derivation",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "The proposed alternatives are unobserved counterfactuals.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "derived_metrics": {
+            "local_integrity_score": 0.520389,
+            "local_pressure_score": 0.222706,
+            "local_routing_fraction": 0.153846,
+            "visible_enemy_integrity_score": 0.285035,
+            "visible_enemy_routing_fraction": 1.0
+          },
+          "expires_when": [
+            "battle posture changes",
+            "a newer tactical-state sample supersedes this window"
+          ],
+          "observed_state": {
+            "hidden_enemy_unit_count": 0,
+            "local_stability_state": "LOCAL_CRISIS",
+            "outcome_state": "VISIBLE_ENEMY_DEFEAT_EFFECTIVELY_IRREVERSIBLE",
+            "tactical_phase_state": "RECOVERY_REQUIRED",
+            "visible_enemy_collapse_state": "TERMINAL_COUNTDOWN"
+          },
+          "opportunity_id": "victory_countdown:REFORM_AND_PRESERVE_WINDOW:BATTLE",
+          "opportunity_key": "REFORM_AND_PRESERVE_WINDOW:BATTLE",
+          "opportunity_type": "REFORM_AND_PRESERVE_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REFORM_AROUND_COHERENT_CORE",
+              "description": "Gather surviving coherent units around a defensible friendly core.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Reduces chase pressure and may leave distant units unsupported during reformation."
+            },
+            {
+              "alternative_id": "EXTRACT_ENDANGERED_ASSETS",
+              "description": "Prioritize characters and productive ranged or artillery assets for safe separation.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May sacrifice remaining pursuit opportunities."
+            }
+          ],
+          "scope": "BATTLE",
+          "severity": "HIGH",
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1012",
+            "1:u1016",
+            "1:u1017"
+          ],
+          "tactical_diagnosis": "The visible outcome is no longer improved primarily by broad engagement; formation recovery and survivor preservation now dominate.",
+          "utility_score": 0.68
+        }
+      ],
+      "slice_id": "victory_countdown",
+      "source_tactical_state_digest": "eeb9ee782ec94f067ab2d0f519564a9f428e45e7165aeb824b8bf262fd0f5752",
+      "tactical_phase_state": "RECOVERY_REQUIRED",
+      "time_ms": 730700,
+      "visible_enemy_collapse_state": "TERMINAL_COUNTDOWN",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 1.731851,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 0.921584,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 0.790192,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1025",
+          "target_score": 0.676742,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1024",
+          "target_score": 0.511221,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1037",
+          "target_score": 0.383671,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1027",
+          "target_score": 0.377812,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1022",
+          "target_score": 0.203709,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "candidate_opportunity_count": 0,
+        "continued_selected_opportunity_count": 0,
+        "critical_opportunity_coverage": 1.0,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "maximum_advisory_changes_this_cycle": 6,
+        "new_selected_opportunity_count": 0,
+        "reason": "bounded advisory workload; persistent priorities do not count as new commands at every sample",
+        "retired_selected_opportunity_count": 6,
+        "selected_opportunity_count": 0,
+        "suppressed_opportunity_count": 0
+      },
+      "constraints": [
+        "No game command is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Every proposed alternative is unexecuted and counterfactual-uncertain.",
+        "Straight-line distance and withdrawal recoverability are not pathfinding proof."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.819902,
+          "hitpoints_fraction": 0.12814,
+          "model_fraction": 0.275,
+          "preservation_score": 1.452046,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "missile pressure",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.770079,
+          "hitpoints_fraction": 0.046005,
+          "model_fraction": 0.125,
+          "preservation_score": 1.377094,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers",
+          "withdrawal_recoverability_proxy": 0.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.588155,
+          "hitpoints_fraction": 0.133172,
+          "model_fraction": 0.322222,
+          "preservation_score": 1.054568,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed",
+            "wavering"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1009",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.395527
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.559134,
+          "hitpoints_fraction": 0.183454,
+          "model_fraction": 0.233333,
+          "preservation_score": 0.849829,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "wavering"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1004",
+          "unit_type": "wh_main_emp_inf_swordsmen",
+          "withdrawal_recoverability_proxy": 0.460355
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.396931,
+          "hitpoints_fraction": 0.159515,
+          "model_fraction": 1.0,
+          "preservation_score": 0.816051,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "role-specific character preservation threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0",
+          "withdrawal_recoverability_proxy": 0.348713
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.332671,
+          "hitpoints_fraction": 0.267472,
+          "model_fraction": 0.477778,
+          "preservation_score": 0.564227,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0",
+          "withdrawal_recoverability_proxy": 0.561589
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "danger_score": 0.264711,
+          "hitpoints_fraction": 0.130702,
+          "model_fraction": 1.0,
+          "preservation_score": 0.494404,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "role-specific character preservation threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0",
+          "withdrawal_recoverability_proxy": 0.609526
+        }
+      ],
+      "local_stability_state": "TERMINAL",
+      "outcome_state": "OBSERVED_TERMINAL_RESULT",
+      "posture": "TERMINATE_WITH_PRESERVATION",
+      "result_digest": "4faf2b3c7ef7a93363a1a5730596a57e69d9d0da6a8765f550fbc2d6273179ad",
+      "schema_version": 3,
+      "selected_decision_opportunities": [],
+      "slice_id": "battle_complete",
+      "source_tactical_state_digest": "39902798be55a3efb1373937178b926a647c656ce2bddc9bf5de27f397839fba",
+      "tactical_phase_state": "TERMINAL",
+      "time_ms": 739600,
+      "visible_enemy_collapse_state": "TERMINAL",
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1026",
+          "target_score": 1.622011,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1021",
+          "target_score": 0.877853,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1028",
+          "target_score": 0.762937,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1025",
+          "target_score": 0.676742,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1024",
+          "target_score": 0.511221,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1037",
+          "target_score": 0.383671,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1027",
+          "target_score": 0.377812,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1022",
+          "target_score": 0.203709,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    }
+  ],
+  "evidence_status": "HYPOTHESIS",
+  "fidelity_label": "DETERMINISTIC_OFFLINE_ADVISER_OVER_OBSERVED_TRACE",
+  "input_validation_contract": "BATTLE_TRACE_TACTICAL_INPUT_V2",
+  "loss_prevention_diagnoses": [
+    {
+      "confidence": "MEDIUM",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+        "time_ms": 291100,
+        "warning_lead_time_ms": 309000,
+        "withdrawal_recoverability_proxy": 0.465891
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.733333,
+        "last_observed_hitpoints_fraction": 0.089798852801323,
+        "terminal_state_complete": false
+      },
+      "preventability_assessment": "PLAUSIBLY_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "cavalry",
+      "stable_unit_id": "1:u1014",
+      "unit_type": "wh_main_emp_cav_reiksguard"
+    },
+    {
+      "confidence": "MEDIUM",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+        "time_ms": 402100,
+        "warning_lead_time_ms": 337500,
+        "withdrawal_recoverability_proxy": 0.459139
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.0,
+        "last_observed_hitpoints_fraction": 0.15951491892338,
+        "terminal_state_complete": true
+      },
+      "preventability_assessment": "PLAUSIBLY_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "commander",
+      "stable_unit_id": "1:u1001",
+      "unit_type": "wh_main_emp_cha_karl_franz_0"
+    },
+    {
+      "confidence": "MEDIUM",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+        "time_ms": 531100,
+        "warning_lead_time_ms": 208500,
+        "withdrawal_recoverability_proxy": 0.467474
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.0,
+        "last_observed_hitpoints_fraction": 0.13070175051689,
+        "terminal_state_complete": true
+      },
+      "preventability_assessment": "PLAUSIBLY_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "commander",
+      "stable_unit_id": "1:u1002",
+      "unit_type": "wh_main_emp_cha_wizard_fire_0"
+    },
+    {
+      "confidence": "MEDIUM",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "RANGED_REPOSITION_WINDOW",
+        "time_ms": 402100,
+        "warning_lead_time_ms": 337500,
+        "withdrawal_recoverability_proxy": 0.580193
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.677778,
+        "last_observed_hitpoints_fraction": 0.13317230343819,
+        "terminal_state_complete": true
+      },
+      "preventability_assessment": "PLAUSIBLY_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "ranged",
+      "stable_unit_id": "1:u1009",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "confidence": "LOW",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "ARTILLERY_EVACUATION_WINDOW",
+        "time_ms": 402100,
+        "warning_lead_time_ms": 129000,
+        "withdrawal_recoverability_proxy": 0.068604
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.863636,
+        "last_observed_hitpoints_fraction": 0.068181820213795,
+        "terminal_state_complete": false
+      },
+      "preventability_assessment": "INSUFFICIENT_EVIDENCE_OF_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "artillery",
+      "stable_unit_id": "1:u1015",
+      "unit_type": "wh_main_emp_art_mortar"
+    },
+    {
+      "confidence": "LOW",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+        "time_ms": 531100,
+        "warning_lead_time_ms": 208500,
+        "withdrawal_recoverability_proxy": 0.271865
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.875,
+        "last_observed_hitpoints_fraction": 0.046004567295313,
+        "terminal_state_complete": true
+      },
+      "preventability_assessment": "INSUFFICIENT_EVIDENCE_OF_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "frontline",
+      "stable_unit_id": "1:u1003",
+      "unit_type": "wh_main_emp_inf_halberdiers"
+    },
+    {
+      "confidence": "LOW",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": null,
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.766667,
+        "last_observed_hitpoints_fraction": 0.18345411121845,
+        "terminal_state_complete": true
+      },
+      "preventability_assessment": "INSUFFICIENT_EVIDENCE_OF_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "frontline",
+      "stable_unit_id": "1:u1004",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "confidence": "LOW",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+        "time_ms": 730700,
+        "warning_lead_time_ms": 8900,
+        "withdrawal_recoverability_proxy": 0.0
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.725,
+        "last_observed_hitpoints_fraction": 0.12814009189606,
+        "terminal_state_complete": true
+      },
+      "preventability_assessment": "INSUFFICIENT_EVIDENCE_OF_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "frontline",
+      "stable_unit_id": "1:u1005",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "confidence": "LOW",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": null,
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.933333,
+        "last_observed_hitpoints_fraction": 0.014473684132099,
+        "terminal_state_complete": false
+      },
+      "preventability_assessment": "INSUFFICIENT_EVIDENCE_OF_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "frontline",
+      "stable_unit_id": "1:u1008",
+      "unit_type": "wh2_dlc13_emp_inf_greatswords_ror_0"
+    },
+    {
+      "confidence": "LOW",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": {
+        "opportunity_type": "RANGED_REPOSITION_WINDOW",
+        "time_ms": 531100,
+        "warning_lead_time_ms": 208500,
+        "withdrawal_recoverability_proxy": 0.227367
+      },
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.522222,
+        "last_observed_hitpoints_fraction": 0.26747182011604,
+        "terminal_state_complete": true
+      },
+      "preventability_assessment": "INSUFFICIENT_EVIDENCE_OF_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "ranged",
+      "stable_unit_id": "1:u1010",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "confidence": "LOW",
+      "counterfactual_status": "UNVERIFIED",
+      "first_selected_warning": null,
+      "observed_severe_degradation": {
+        "casualty_lower_bound_ratio": 0.655556,
+        "last_observed_hitpoints_fraction": 0.16811594367027,
+        "terminal_state_complete": false
+      },
+      "preventability_assessment": "INSUFFICIENT_EVIDENCE_OF_PREVENTABLE_SEVERITY",
+      "required_future_evidence": [
+        "accepted and executed intervention telemetry",
+        "terrain/pathfinding feasibility",
+        "matched battle cohorts or a calibrated tactical surrogate"
+      ],
+      "role": "ranged",
+      "stable_unit_id": "1:u1011",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    }
+  ],
+  "quality_measurement_contract": {
+    "independent_of_victory": [
+      "high-value asset preservation",
+      "time spent in avoidable high danger",
+      "frontline and morale stability",
+      "reserve commitment timing",
+      "ammunition and ranged-output preservation",
+      "pursuit termination discipline",
+      "high-severity opportunity coverage",
+      "advisory priority churn"
+    ],
+    "not_yet_measurable": [
+      "causal casualty reduction from a proposed alternative",
+      "accepted-command latency",
+      "pathfinding success",
+      "ordinary live battle generalization",
+      "SFO generalization"
+    ]
+  },
+  "result_digest": "e8b7d65c605956a759cc80972df5adb12c70aed9aa9d76374fd2daf521c0426a",
+  "schema_version": 3,
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "tactical_state_contract": "TACTICAL_STATE_TRAJECTORY_V2",
+  "tactical_state_trajectory_digest": "1170fb399d9d90e597bc7d83cbb67034e6597782d0c2911f9929a61d355fc3f0",
+  "tier": "4R-SHADOW",
+  "trace_corpus_id": "battle4_eilhart_trace_slices_v1",
+  "warnings": [
+    "This evaluator has not controlled or influenced WH3.",
+    "The owner trace is not a gold policy label.",
+    "Scores are designed for falsification and regression, not tactical-quality claims.",
+    "Plausibly preventable severity is not proof that an alternative would improve the battle."
+  ]
+}

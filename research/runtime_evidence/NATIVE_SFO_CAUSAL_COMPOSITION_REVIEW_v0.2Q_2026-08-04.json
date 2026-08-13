@@ -1,0 +1,104 @@
+{
+  "adjudication": {
+    "causal_attribution_status": "BLOCKED_BY_CAMPAIGN_COMPOSITION_INSTABILITY",
+    "copy_sfo_priority_increases": "PROHIBITED",
+    "formal_v0_2p_action": "DESCRIPTIVE_WORSENING_NOMINATION; REPLICATION_AND_CAUSAL_REVIEW_REQUIRED",
+    "formal_v0_2p_branch": "HIGHER_THAN_VANILLA_CLUSTER_ENVELOPE",
+    "native_row_ablation_earned": false,
+    "next_gate": "FRESH_SFO_REPLICATION_FIRST; FRESH_VANILLA_REPLICATION_ONLY_IF_ELEVATED_SFO_AGGREGATE_REPLICATES",
+    "reason": "The aggregate SFO rate is elevated and robust to deleting any single SFO faction, but only a small subset of eligible factions overlaps across campaigns and the shared-faction comparison reverses direction. The one-vs-one campaign comparison therefore cannot identify a profile-level causal effect or a row-level mechanism."
+  },
+  "aggregate_robustness": {
+    "all_single_faction_deletions_remain_above_vanilla_envelope": true,
+    "max_faction_candidate_share": 0.277778,
+    "sfo_leave_one_faction_out_max": 0.486486,
+    "sfo_leave_one_faction_out_min": 0.382353,
+    "sfo_territorial_rate": 0.461538,
+    "sfo_without_top_candidate_faction": {
+      "excluded_faction": "wh2_main_hef_nagarythe",
+      "remaining_eligible_windows": 34,
+      "remaining_reversal_candidates": 13,
+      "reversal_candidate_rate": 0.382353
+    },
+    "top_candidate_faction": "wh2_main_hef_nagarythe",
+    "top_candidate_faction_count": 5,
+    "vanilla_territorial_rate": 0.270833
+  },
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "campaign_composition_review": {
+    "aggregate_direction": "SFO_HIGHER",
+    "direction_reversal_under_shared_faction_restriction": true,
+    "faction_jaccard_overlap": 0.12766,
+    "sfo_eligible_faction_count": 27,
+    "shared_eligible_faction_count": 6,
+    "shared_faction_direction": "SFO_LOWER",
+    "shared_faction_sfo": {
+      "eligible_windows": 9,
+      "reversal_candidate_rate": 0.111111,
+      "reversal_candidates": 1
+    },
+    "shared_faction_vanilla": {
+      "eligible_windows": 19,
+      "reversal_candidate_rate": 0.210526,
+      "reversal_candidates": 4
+    },
+    "shared_factions": [
+      "wh2_main_emp_new_world_colonies",
+      "wh3_cp1_cth_tiger_warriors",
+      "wh3_main_cth_celestial_loyalists",
+      "wh3_main_cth_the_northern_provinces",
+      "wh_main_chs_chaos",
+      "wh_main_emp_averland"
+    ],
+    "union_eligible_faction_count": 47,
+    "vanilla_eligible_faction_count": 26
+  },
+  "candidate_geometry_review": {
+    "note": "Geometry classes are descriptive only and do not identify native task identity or causation.",
+    "sfo_candidate_shape_counts": {
+      "ABA_REGION": 12,
+      "OTHER": 1,
+      "SAME_REGION": 3,
+      "THREE_REGIONS": 2
+    },
+    "vanilla_candidate_shape_counts": {
+      "ABA_REGION": 9,
+      "OTHER": 1,
+      "SAME_REGION": 2,
+      "THREE_REGIONS": 1
+    }
+  },
+  "contract": "NATIVE_CAI_SFO_CAUSAL_COMPOSITION_REVIEW_V1",
+  "frozen_v0_2p_decision_preserved": {
+    "decision_table_digest": "6493a5df13c4703bf9e16febf825c6ad0764c7127fae308e1b0856a3e355de74",
+    "recovery": {
+      "action": "NO_RECOVERY_INTERVENTION_EARNED",
+      "branch": "SFO_RECOVERY_NO_PREREGISTERED_SIGNAL",
+      "mechanistic_nomination": "NONE",
+      "rate": 0.142857
+    },
+    "temporal": {
+      "action": "DESCRIPTIVE_WORSENING_NOMINATION; REPLICATION_AND_CAUSAL_REVIEW_REQUIRED",
+      "branch": "HIGHER_THAN_VANILLA_CLUSTER_ENVELOPE",
+      "mechanistic_nomination": "DO_NOT_COPY_SFO_PRIORITY_INCREASES",
+      "rate": 0.461538
+    }
+  },
+  "interpretation_limits": [
+    "The v0.2P descriptive worsening branch remains valid and is not rewritten by this causal review.",
+    "Shared-faction restriction is post-result causal review, not a confirmatory endpoint.",
+    "Different campaigns expose different faction/force compositions; one campaign per profile cannot separate profile effect from composition effect.",
+    "No p-value over overlapping trajectory windows is authorized.",
+    "No SFO row or project-owned controller is application-authorized by this review."
+  ],
+  "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+  "review_digest": "41db109436049596ffdaac0283085acb11f6731bd6c47b7b1f01c8f4bbd00e45",
+  "source": {
+    "sfo_decision_table_digest": "6493a5df13c4703bf9e16febf825c6ad0764c7127fae308e1b0856a3e355de74",
+    "sfo_result_digest": "af4056f3ce2d184dea29444edb5b049655c4d767b056ea448b97d45b5a65dbbb",
+    "vanilla_cluster_reference_digest": "155d4bed4f99a29ac2edae7e72d0d6e1481650724d229ca8af8936127763ae15"
+  },
+  "study_version": "v0.2Q"
+}

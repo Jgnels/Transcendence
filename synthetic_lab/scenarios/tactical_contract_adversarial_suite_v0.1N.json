@@ -1,0 +1,332 @@
+{
+  "authority": "NO_ORDERS",
+  "base_trace_corpus_id": "battle4_eilhart_trace_slices_v1",
+  "base_trace_result_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "invalid_input_cases": [
+    {
+      "case_id": "string-local-alliance",
+      "expected_error": "local_alliance must be boolean",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "local_alliance"
+        ],
+        "type": "set",
+        "value": "false"
+      },
+      "pre_v0_1n_result": "ACCEPTED_AND_COERCED_TRUTHY"
+    },
+    {
+      "case_id": "string-routing-flag",
+      "expected_error": "routing must be boolean",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "routing"
+        ],
+        "type": "set",
+        "value": "false"
+      },
+      "pre_v0_1n_result": "ACCEPTED_AND_COERCED_TRUTHY"
+    },
+    {
+      "case_id": "hitpoints-above-one",
+      "expected_error": "hitpoints_fraction outside [0,1]",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "hitpoints_fraction"
+        ],
+        "type": "set",
+        "value": 2.0
+      },
+      "pre_v0_1n_result": "ACCEPTED_AND_CLAMPED"
+    },
+    {
+      "case_id": "negative-initial-models",
+      "expected_error": "initial_men must be positive",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "initial_men"
+        ],
+        "type": "set",
+        "value": -5
+      },
+      "pre_v0_1n_result": "ACCEPTED"
+    },
+    {
+      "case_id": "models-alive-exceed-initial",
+      "expected_error": "men_alive outside [0, initial_men]",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "men_alive"
+        ],
+        "type": "set",
+        "value": 9999
+      },
+      "pre_v0_1n_result": "ACCEPTED_AND_CLAMPED"
+    },
+    {
+      "case_id": "inconsistent-model-fraction",
+      "expected_error": "men_fraction inconsistent with model counts",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "men_fraction"
+        ],
+        "type": "set",
+        "value": 0.1
+      },
+      "pre_v0_1n_result": "ACCEPTED"
+    },
+    {
+      "case_id": "negative-ammunition",
+      "expected_error": "ammo outside [0, starting_ammo]",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "ammo"
+        ],
+        "type": "set",
+        "value": -1
+      },
+      "pre_v0_1n_result": "ACCEPTED"
+    },
+    {
+      "case_id": "ammunition-exceeds-starting",
+      "expected_error": "ammo outside [0, starting_ammo]",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          2,
+          "ammo"
+        ],
+        "type": "set",
+        "value": 9999
+      },
+      "pre_v0_1n_result": "ACCEPTED_AND_CLAMPED"
+    },
+    {
+      "case_id": "string-coordinate",
+      "expected_error": "position_x must be a finite number",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "position_x"
+        ],
+        "type": "set",
+        "value": "oops"
+      },
+      "pre_v0_1n_result": "ACCEPTED_AND_DEFAULTED_TO_ZERO"
+    },
+    {
+      "case_id": "nonfinite-coordinate",
+      "expected_error": "position_x must be a finite number",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "position_x"
+        ],
+        "special": "NAN",
+        "type": "set_special"
+      },
+      "pre_v0_1n_result": "NOT_EXPLICITLY_GUARDED"
+    },
+    {
+      "case_id": "unknown-role",
+      "expected_error": "has unsupported role",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "role"
+        ],
+        "type": "set",
+        "value": "dragon"
+      },
+      "pre_v0_1n_result": "ACCEPTED_WITH_UNKNOWN_POLICY"
+    },
+    {
+      "case_id": "slice-after-duration",
+      "expected_error": "slice time exceeds declared battle duration",
+      "mutation": {
+        "offset": 100000,
+        "path": [
+          "slices",
+          7,
+          "time_ms"
+        ],
+        "source_path": [
+          "duration_ms"
+        ],
+        "type": "set_relative"
+      },
+      "pre_v0_1n_result": "ACCEPTED"
+    },
+    {
+      "case_id": "boolean-hidden-count",
+      "expected_error": "invalid hidden-enemy count",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "hidden_enemy_units"
+        ],
+        "type": "set",
+        "value": true
+      },
+      "pre_v0_1n_result": "ACCEPTED_AS_INTEGER"
+    },
+    {
+      "case_id": "missing-position-field",
+      "expected_error": "unit missing required fields",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "position_x"
+        ],
+        "type": "delete"
+      },
+      "pre_v0_1n_result": "ACCEPTED_AND_DEFAULTED_TO_ZERO"
+    },
+    {
+      "case_id": "local-visibility-mismatch",
+      "expected_error": "visibility_source must be LOCAL_ALLIANCE",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "visibility_source"
+        ],
+        "type": "set",
+        "value": "VISIBLE_TO_LOCAL_ALLIANCE"
+      },
+      "pre_v0_1n_result": "ACCEPTED"
+    },
+    {
+      "case_id": "foreign-visibility-mismatch",
+      "expected_error": "visibility_source must be VISIBLE_TO_LOCAL_ALLIANCE",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          15,
+          "visibility_source"
+        ],
+        "type": "set",
+        "value": "LOCAL_ALLIANCE"
+      },
+      "pre_v0_1n_result": "REJECTED_BY_OLDER_GUARD"
+    },
+    {
+      "case_id": "duplicate-unit-identity",
+      "expected_error": "duplicate unit identity",
+      "mutation": {
+        "index": 0,
+        "path": [
+          "slices",
+          0,
+          "units"
+        ],
+        "type": "append_duplicate"
+      },
+      "pre_v0_1n_result": "REJECTED_BY_OLDER_GUARD"
+    },
+    {
+      "case_id": "invalid-target-sentinel",
+      "expected_error": "target distance requires target identity",
+      "mutation": {
+        "path": [
+          "slices",
+          0,
+          "units",
+          0,
+          "current_target_distance"
+        ],
+        "type": "set",
+        "value": 10.0
+      },
+      "pre_v0_1n_result": "ACCEPTED"
+    }
+  ],
+  "metamorphic_cases": [
+    {
+      "case_id": "unit-order-permutation",
+      "expectation": "EVALUATIONS_IDENTICAL",
+      "type": "REVERSE_UNIT_ORDER"
+    },
+    {
+      "case_id": "global-coordinate-translation",
+      "expectation": "DECISION_SIGNATURE_IDENTICAL",
+      "type": "TRANSLATE_XZ",
+      "x_offset": 10000.0,
+      "z_offset": -7000.0
+    },
+    {
+      "case_id": "worsened-commander-monotonicity",
+      "expectation": "DANGER_NONDECREASING_RECOVERABILITY_NONINCREASING",
+      "slice_id": "local_crisis",
+      "type": "WORSEN_LOCAL_COMMANDER"
+    },
+    {
+      "case_id": "simultaneous-local-and-enemy-collapse",
+      "expectation": "LOCAL_COLLAPSE_NOT_MASKED_BY_RECOVERY_PHASE",
+      "slice_id": "enemy_rout_majority",
+      "type": "SIMULTANEOUS_COLLAPSE"
+    },
+    {
+      "case_id": "hidden-enemy-terminal-guard",
+      "expectation": "NO_EFFECTIVELY_IRREVERSIBLE_OUTCOME",
+      "hidden_enemy_units": 3,
+      "slice_id": "victory_countdown",
+      "type": "ADD_HIDDEN_ENEMIES"
+    },
+    {
+      "case_id": "stable-opportunity-lifecycle",
+      "expectation": "CONTINUED_PRIORITIES_NOT_RECOUNTED_AS_NEW",
+      "type": "BASELINE_LIFECYCLE"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "suite_id": "tactical-contract-adversarial-v0.1N"
+}

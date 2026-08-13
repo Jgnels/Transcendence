@@ -1,0 +1,147 @@
+KIMI A — SELF-AUDIT REPORT
+1. CURRENT-WH3 MCTS CLAIM
+Verdict: CURRENT_WH3_ARCHITECTURE_COMPATIBLE_WITH_MCTS_BUT_UNVERIFIED
+Evidence:
+The GameDeveloper article on Rome II/Attila explicitly describes MCTS adoption and iterative pruning for those titles. 
+The WH3 Beta 2 blog (April 2025) describes task allocation, priority grading, and resource coordination in detail, but never uses the term MCTS or Monte Carlo Tree Search. 
+No primary source from 2021–2026 explicitly establishes MCTS as the live WH3 8.1.x algorithm.
+Action: Retract “WH3 uses MCTS” from the current atlas. Replace with “native task allocation system of unverified internal algorithm; MCTS proven only in Rome II/Attila heritage.”
+2. NATIVE STRATEGIC PIPELINE — EDGE CLASSIFICATION
+Table
+Edge	Classification	Basis
+threat detection	PROVEN_CURRENT_WH3	Beta 2 blog: threat evaluation based on diplomatic activity, region count, proximity, attitude. 
+task generation	PROVEN_CURRENT_WH3	Beta 2 blog references tasks of “defend regions neighboring threat” and “attack threat” varieties. 
+task priority	PROVEN_CURRENT_WH3	Beta 2 blog: priority modified by distance before resource assignment. 
+distance/time modification	PROVEN_CURRENT_WH3	Beta 2 blog gives exact current/new values for turn-distance floors. 
+task batching/aggregation	UNVERIFIED	No WH3 source uses the word “batching” or “aggregation.” CA describes filtering and multiple generators, not batching.
+strength evaluation	PROVEN_CURRENT_WH3	Beta 2 blog: strength evaluation considers units, experience, bonuses, stances. 
+army/resource selection	PROVEN_PARTIAL	Beta 2 blog: “finding a force with a good strength ratio against the target is critical.” Proves ratio comparison; does not prove full selection algorithm. 
+recruit-if-no-force	PROVEN_CURRENT_WH3	Recruitment blog: “selecting a list of units to recruit into a specific force, with the goal of acquiring the necessary strength to perform a task.” 
+execution	PROVEN_PARTIAL	Outcomes observable (armies move, attack); exact execution bridge opaque.
+3. EXACT NUMERICAL CLAIMS
+Table
+Value	Exact Source	Patch/Beta	Context	Still-Current-in-8.1?
+legacy threat multiplier 50%–200%	Beta 2 blog, April 2025	Beta 2	“There exists a multiplier that changes the threat player actions generate from 50% to 200%”	HISTORICAL_SETTING_UNVERIFIED_CURRENT — no 8.1 reconfirmation
+revised threat multiplier 90%–120%	Beta 2 blog, April 2025	Beta 2	“changing the threat player actions generate to be between 90% and 120%”	HISTORICAL_SETTING_UNVERIFIED_CURRENT
+player strength multiplier 100%–120%	Beta 2 blog, April 2025	Beta 2	“new multiplier that changes the player's strength from 100% always to between 100% and 120%”	HISTORICAL_SETTING_UNVERIFIED_CURRENT
+distance floor 20% at >4 turns (recruiting)	Beta 2 blog, April 2025	Beta 2	“Current values are: Minimum of 20% priority at above 4 turns away when recruiting”	HISTORICAL_SETTING_UNVERIFIED_CURRENT — 8.1 introduced further dynamic modulation
+distance floor 10% at >5 turns (non-recruiting)	Beta 2 blog, April 2025	Beta 2	“Minimum of 10% priority at above 5 turns away when not recruiting”	HISTORICAL_SETTING_UNVERIFIED_CURRENT
+expansion to 15% at >6/7 turns (15+ regions)	Beta 2 blog, April 2025	Beta 2	“New values when AI faction has more than 15 regions”	HISTORICAL_SETTING_UNVERIFIED_CURRENT
+expansion to 20% at >7/8 turns (30+ regions)	Beta 2 blog, April 2025	Beta 2	“New values when AI faction has more than 30 regions”	HISTORICAL_SETTING_UNVERIFIED_CURRENT
+aggression margin 20% → 10%	Beta 2 blog, April 2025	Beta 2	“Average enemy strength and threat modifiers for strategic calculations reduced from 20% to 10%”	HISTORICAL_SETTING_UNVERIFIED_CURRENT
+Critical finding: Every numerical claim in my first answer traces to a single source — the Beta 2 dev blog (April 2025). None are reconfirmed in 8.1 patch notes. 8.1 explicitly states it added a new dynamic mechanism, which may have superseded these exact floors.
+4. PATCH CHRONOLOGY FACT-CHECK
+Table
+Patch	Claim	Primary Source	Status
+5.2	CAI unit classification fix; battle AI high-ground/ambush improvements	Patch notes (first search pass)	VERIFIED
+6.1	Query-system agent/army fix	6.1 update blog: “Query system changes...have been universally good and will go live with Update 6.1” 	VERIFIED
+6.2	Aggression/faction-potential iteration live	No explicit 6.2 patch notes found in this pass. Beta 2 ran April 2025; 6.2 released June 2025. Logical but unverified.	NARROWED to “Beta 2 changes (April 2025); presumed live in 6.2 but not explicitly confirmed”
+6.3.2	Recruitment/resource fix (unit caps, pooled resources)	Recruitment blog + 6.3.2 hotfix notes 	VERIFIED
+7.0	Pooled-resource budgeting; cai_personalities_pooled_resource_to_allocations_junctions; cai_decision_policies	7.0.0 patch notes 	VERIFIED
+7.2	Ally reinforcement logic (war coordination)	Could not re-verify in this pass. Cited in first answer but source not recoverable.	RETRACTED
+8.1	Turn-dependent task prioritization	8.1 release notes 	VERIFIED
+5. PATCH 8.1 EXPOSURE
+Table
+Question	Answer
+Official proof mechanism exists?	YES — 8.1 notes explicitly describe it.
+Proof it is database exposed?	NO — no table name given.
+Proof it is script exposed?	NO — no Lua function or variable documented.
+Proof modders can alter it?	NO — no modding guidance provided.
+Exact table/column/variable?	NONE FOUND.
+Previous capability classification: INFLUENCE (table-driven; exact table unverified) — overstated.
+Corrected classification: NATIVE_EXISTENCE_PROVEN / MODDER_CONTROL_UNVERIFIED
+6. TABLE-NAME AUDIT
+Table
+Table Name	Status	Evidence
+cai_personalities	VERIFIED_CURRENT_RPFM_SCHEMA	TWCenter known-tables thread; RPFM usage context 
+cai_personality_empire_rivalry_components_tables	VERIFIED_PACK_USAGE	TWCenter thread explicitly names it 
+cai_personalities_pooled_resource_to_allocations_junctions	VERIFIED_CURRENT_RPFM_SCHEMA	CA 7.0 patch notes explicitly name it 
+cai_decision_policies	VERIFIED_CURRENT_RPFM_SCHEMA	CA 7.0 patch notes explicitly name it 
+cai_variables	VERIFIED_PACK_USAGE	TWCenter thread 
+cai_influence_map	INFERRED_NAME	No verified table name found in any schema or pack source.
+cai_task_generator	INFERRED_NAME	No verified table name found.
+cai_query_system	INFERRED_NAME	No verified table name found.
+cai_threat_map	INFERRED_NAME	No verified table name found.
+cai_strength_map	INFERRED_NAME	No verified table name found.
+cai_faction_potential	INFERRED_NAME	No verified table name found.
+7. TASK BATCHING CLAIM
+Previous claim: Conflated task filtering, contradictory-action filtering, generator grouping, and task batching into one native capability.
+Audit result: Only task filtering is explicitly documented. The Rome II article mentions “filtering to stop it trying to do anything too stupid” and “filtering actions that could impact long-term strategies.”  No WH3 source uses the term “batching” or “aggregation.”
+Action: Split the concepts:
+Task filtering → PROVEN_CURRENT_WH3 (historical architecture, consistent with WH3 behavior)
+Task batching/aggregation → UNVERIFIED
+8. NATIVE FORCE ALLOCATION CLAIM
+Proven for current WH3:
+Target strength evaluation before force selection. 
+Existing owned armies evaluated for strength ratio against target. 
+Distance (turns) considered. 
+Stance considered (tunneling, forced march). 
+Recruitment considered if no suitable force exists. 
+Not proven:
+Exclusivity (one army per task)
+Temporal commitment (army locked to task)
+Anti-thrashing (rapid reassignment prevention)
+Reserve protection (core garrison preservation)
+Recovery protection (wounded army resting)
+Conclusion: WH3 demonstrably possesses more information than a pure geometric allocator (it evaluates strength ratios, stances, and recruitment time), but the full assignment semantics are opaque.
+9. RECRUITMENT ARCHITECTURE
+All claims below are PROVEN_CURRENT_WH3 from the October 2025 recruitment blog (Radoslav Borisov):
+Table
+Claim	Source
+Shopping lists	
+Cheapest unit belief	
+Strongest unit belief	
+Cost-efficient unit belief	
+Turns to recruitment location	
+Unit-cap awareness	
+Pooled-resource awareness	
+Note: These are explicitly described as current WH3 AI beliefs and failure modes, not historical.
+10. BATTLE AI
+Table
+Claim	Status	Evidence
+Native BAI planning	PROVEN_CURRENT_WH3	Patch notes repeatedly mention BAI fixes (5.2, 7.2, 8.0).
+High-level AI planner interfaces	PROVEN_CURRENT_WH3	Battle script docs show AIObjectivePlanner with defend_position, attack_unit, capture_settlement. 
+What campaign/battle Lua can influence	PROVEN_PARTIAL	Battle: unit controllers, AI planners (scripted battles). Campaign: teleport, force war, custom battlefield records. 
+Siege AI hints	PROVEN_PARTIAL	RPFM source audit mentions pack-level hooks for siege-AI map hints. Proves ingestion capability; does not prove modder authoring pipeline.
+Normal campaign battles scripted high-level orders	UNVERIFIED	AIObjectivePlanner exists for scripted/historical battles. Real-time control during normal campaign battles is not documented. add_custom_battlefield modifies the next battle but is not real-time BAI control.
+11. CORRECTED CORE ATLAS
+Defended Facts
+Table
+#	Fact	Current WH3 Evidence	Source/Date	Confidence	Modder Capability
+1	Native CAI maintains global strategic threat scores and individual per-faction threat scores based on diplomatic activity, region count, proximity, and attitude.	Beta 2 blog describes both scores and their inputs.	CA Beta 2 blog, April 2025	HIGH_CURRENT_PRIMARY	OBSERVE (via diplomacy/script interfaces)
+2	Native CAI performs strength evaluations considering units, experience, bonuses, and stances before task assignment.	Beta 2 blog explicitly describes this evaluation.	CA Beta 2 blog, April 2025	HIGH_CURRENT_PRIMARY	OBSERVE
+3	Native CAI modifies task priority by turn-distance before resource assignment, with distinct floors for recruiting vs non-recruiting tasks.	Beta 2 blog gives exact current/new values.	CA Beta 2 blog, April 2025	HIGH_CURRENT_PRIMARY	UNVERIFIED
+4	Native CAI turn-distance calculation considers movement extents and stances (tunneling, forced march) for existing assets; recruitment region distance + recruit time for fresh armies.	Beta 2 blog explicitly states both calculations.	CA Beta 2 blog, April 2025	HIGH_CURRENT_PRIMARY	UNVERIFIED
+5	Patch 8.1 introduced a turn-dependent priority modulation mechanism that de-prioritizes defensive tasks in late-game contexts.	8.1 release notes explicitly describe the mechanism.	CA Patch 8.1 notes, July 2026	HIGH_CURRENT_PRIMARY	UNVERIFIED
+6	Native CAI uses personality-driven parameters configurable via cai_personalities tables.	TWCenter known-tables thread; consistent RPFM usage.	TWCenter, 2015+; RPFM schemas	HIGH_CURRENT_SCHEMA	INFLUENCE
+7	Native CAI uses cai_personalities_pooled_resource_to_allocations_junctions for custom income allocation and budget policy overrides.	CA 7.0 patch notes explicitly name this table and its function.	CA 7.0.0 notes, Dec 2025	HIGH_CURRENT_PRIMARY	INFLUENCE
+8	Native CAI uses cai_decision_policies table with action_category_budget column for fine-grain budget pool control.	CA 7.0 patch notes explicitly name this table and column.	CA 7.0.0 notes, Dec 2025	HIGH_CURRENT_PRIMARY	INFLUENCE
+9	Native CAI constructs recruitment “shopping lists” to acquire necessary strength for tasks, maintaining beliefs about cheapest, strongest, and most cost-efficient recruitable units.	Recruitment blog describes the shopping list step and the four belief types.	CA recruitment blog, Oct 2025	HIGH_CURRENT_PRIMARY	OBSERVE
+10	Prior to 6.3.2, native CAI did not properly consider unit caps when building recruitment lists; this was fixed in 6.3.2.	Recruitment blog explicitly states the cap failure and the 6.3.2 fix.	CA recruitment blog, Oct 2025	HIGH_CURRENT_PRIMARY	OBSERVE
+11	Post-7.0, native CAI navigates pooled-resource costs without explicit modder setup; pre-7.0 awareness was faulty.	7.0 notes + recruitment blog describe the fix and remaining edge cases.	CA 7.0.0 notes + recruitment blog	HIGH_CURRENT_PRIMARY	OBSERVE
+12	Native CAI possesses two distinct threat-detection mechanisms: a query system and an influence map.	Beta 1/6.1 blogs explicitly name both systems.	CA Beta 1 blog, Feb 2025	HIGH_CURRENT_PRIMARY	OBSERVE
+13	Patch 6.1 fixed a query-system bug where agents were incorrectly treated as armies for defensive task triggering.	6.1 update blog explicitly confirms this fix.	CA 6.1 update blog, March 2025	HIGH_CURRENT_PRIMARY	UNVERIFIED
+14	Native CAI assigns faction potential values per faction that affect autoresolve weight, AI-AI shrouded interactions, and difficulty scaling.	Beta 1 and Beta 2 blogs describe the system and its five tweak categories.	CA Beta 1/2 blogs, 2025	HIGH_CURRENT_PRIMARY	INFLUENCE
+15	Beta 2 (spring 2025) removed or greatly deprioritized “attack human forces/settlements” tasks.	Beta 2 blog explicitly states removal/deprioritization.	CA Beta 2 blog, April 2025	HIGH_CURRENT_PRIMARY	UNVERIFIED
+16	Battle script API supports AIObjectivePlanner for high-level objectives (defend position, attack unit, capture settlement) in scripted battles.	Battle script documentation lists the planner and its methods.	CA battle script docs	HIGH_CURRENT_SCHEMA	CONTROL (scripted battles only)
+17	Campaign script API supports teleportation, forced war declaration, movement enable/disable, and custom battlefield injection.	Episodic scripting docs list these cm: functions.	CA episodic scripting docs	HIGH_CURRENT_SCHEMA	CONTROL
+Retracted or Downgraded Claims
+Table
+Original Claim	Action	Reason
+“WH3 uses MCTS”	RETRACTED	No WH3-specific primary source confirms MCTS. Architecture compatible with MCTS (Rome II/Attila heritage) but unverified.
+cai_influence_map, cai_task_generator, cai_query_system, cai_threat_map, cai_strength_map, cai_faction_potential as exact table names	RETRACTED	All inferred from CA prose terminology; none verified in RPFM schemas or pack files.
+“Task batching/aggregation” as a native capability	RETRACTED	Only task filtering is documented; “batching” never mentioned.
+8.1 turn-dependent priority is “table-driven”	RETRACTED	Mechanism proven; table/script exposure unverified.
+7.2 ally reinforcement / war-coordination positioning	RETRACTED	Could not re-verify in this pass; source not recoverable.
+Three-phase turn processing (pre-movement, task allocation, post-movement) as WH3-specific	DOWNGRADED to historical-only	Explicit wording comes from Rome II article; WH3 sources describe similar behavior but do not name the three phases.
+All exact numerical values (50–200%, 90–120%, 100–120%, distance floors) as current 8.1 settings	DOWNGRADED to Beta 2 historical	All trace to single Beta 2 blog (April 2025). 8.1 may have superseded them with further dynamic modulation.
+“Battle AI siege hint ingestion” as modder-influenceable	DOWNGRADED	RPFM source proves pack-level hooks exist; modder authoring pipeline unverified.
+12. ONE FINAL QUESTION
+Three Most Sophisticated Current-WH3 Campaign AI Capabilities (Definitely Proven)
+Dual-scale threat/strength evaluation with personality- and difficulty-modulated multipliers. The CAI maintains separate threat and strength scales, applies asymmetric multipliers to player factions (historically 50–200%, revised toward 90–120%), and uses these scores to drive diplomacy, task generation, and deal evaluation. 
+Turn-distance-scaled task priority with stance-aware pathing and dynamic horizon expansion. The CAI measures task distance in turns, accounts for movement extents and stances (tunneling, forced march), adjusts priority floors based on faction size (15+/30+ region thresholds), and in 8.1 further modulates by campaign turn count.  
+Pooled-resource-aware recruitment budgeting with unit-cap validation. The CAI constructs recruitment shopping lists using beliefs about cheapest, strongest, and cost-efficient units; post-6.3.2 it respects unit caps; post-7.0 it budgets pooled resources (Blessed Spawnings, Oathgold, etc.) through dedicated personality allocation junctions and decision-policy budget columns.  
+Three Things Outsiders Commonly Assume WH3 CAI Does That I Cannot Prove
+MCTS-based task allocation. Many assume the Rome II/Attila MCTS architecture survives intact in WH3. No WH3 dev blog, patch note, or technical article confirms MCTS is the current algorithm. The task allocation system is real and complex; its algorithmic core is unverified.
+Database-table-configurable turn-dependent priority modulation. The 8.1 mechanism is proven to exist, but CA provided no table name, schema entry, or script interface. Outsiders often assume every new CAI feature is automatically exposed in cai_* tables. This one is not proven to be.
+Real-time scripted BAI control in normal campaign battles. The battle script API (AIObjectivePlanner, unit controllers) is robust for scripted battles (historical, quest). Outsiders commonly extrapolate this to mean modders can seize real-time control of BAI during normal campaign battles. Normal campaign battle scripting is limited to pre-battle setup (add_custom_battlefield) and post-battle effects; real-time BAI override during standard campaign fights is unverified.  

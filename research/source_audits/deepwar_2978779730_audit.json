@@ -1,0 +1,170 @@
+{
+  "classification_counts": {
+    "DIFFICULTY_OR_POTENTIAL": 1,
+    "DIRECT_NATIVE_CAI": 14
+  },
+  "evidence_status": "OBSERVED",
+  "limitations": [
+    "Table membership and file hashes are observed directly from the pack index.",
+    "Row semantics are not decoded without pinned WH3 schemas and remain unverified."
+  ],
+  "non_db_entries": [
+    {
+      "compression_flag": 0,
+      "path": "dependencies_manager_v2.rpfm_reserved",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size": 2
+    },
+    {
+      "compression_flag": 0,
+      "path": "notes.rpfm_reserved",
+      "sha256": "8374dce04d556d527e04355c6cf8addf816321deb21e7f9cab7397d190955d25",
+      "size": 42
+    },
+    {
+      "compression_flag": 0,
+      "path": "settings.rpfm_reserved",
+      "sha256": "c141d32af171fb1fee56691369ccca419b282fffe83bbbd1fcf34c39a55eba06",
+      "size": 287
+    }
+  ],
+  "pack_metadata": {
+    "dependency_count": 0,
+    "file_count": 18,
+    "flags": 0,
+    "format": "PFH5",
+    "index_size": 1049,
+    "pack_type": 3,
+    "timestamp_raw": 1785154863
+  },
+  "schema_version": 1,
+  "source_id": "deepwar_2978779730",
+  "source_kind": "PFH5_PACK",
+  "source_sha256": "f02bd8b5a70f899a8b4827af41da3231c71a7f595c06442177ec70f3fd407d50",
+  "source_size": 266882,
+  "table_count": 15,
+  "table_families": [
+    "cai_agent_embed_profiles_tables",
+    "cai_construction_system_templates_junctions_tables",
+    "cai_domains_tables",
+    "cai_gds_task_generators_tables",
+    "cai_personalities_budget_allocations_tables",
+    "cai_personalities_income_allocations_tables",
+    "cai_personalities_tables",
+    "cai_personality_strategic_components_tables",
+    "cai_task_management_system_task_generator_groups_generators_junctions_tables",
+    "cai_task_management_system_task_generator_variable_group_junctions_tables",
+    "cai_task_management_system_task_generator_variables_tables",
+    "cai_task_management_system_variable_group_junctions_tables",
+    "cai_task_management_system_variables_tables",
+    "cai_variables_tables",
+    "campaign_difficulty_handicap_effects_tables"
+  ],
+  "tables": [
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "a39f740d29acff8f5601564c0d3113a868800f62509bcbb454711f959248c456",
+      "size": 120,
+      "table": "cai_agent_embed_profiles_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "4dd4b7401388ba26b547d9ac6c744dfc547571e3e07bc75ca1d211867453fe2f",
+      "size": 2404,
+      "table": "cai_construction_system_templates_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "ca3911aa788d5979b3c98d4ad335dd8b95353cb4977a7740c57e6f3733ce0942",
+      "size": 365,
+      "table": "cai_domains_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "4b9343f302fe02e56b0ff9bf8bd8ac222222a548d907852606e232a780e1dfea",
+      "size": 548,
+      "table": "cai_gds_task_generators_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "5ec0a05ba6669ba5d5847e85e304ea9d7579c804dcb892a2b9a74d202f0aa2b4",
+      "size": 4544,
+      "table": "cai_personalities_budget_allocations_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "a4c2992b7cba2e62f5065a833379ddc12b4389dff365a97d34a7c521989490fd",
+      "size": 361,
+      "table": "cai_personalities_income_allocations_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "5bbec9ec77ed485997d0f063beabddb59bffe0e53bee1f7e4c42123c7fdbba89",
+      "size": 175439,
+      "table": "cai_personalities_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "25f37fce146241e20039ad055b08dabee923b9d33c9a404fbe719758b70161e6",
+      "size": 13901,
+      "table": "cai_personality_strategic_components_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "f39a202965442fd3f24f28471d746d9c7715a711dccf827d28ef1d3a2bd87e08",
+      "size": 56453,
+      "table": "cai_task_management_system_task_generator_groups_generators_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "8274b121a19059f309e4099e671b545ecc2a3ba114153a49caed99654c7cf34d",
+      "size": 684,
+      "table": "cai_task_management_system_task_generator_variable_group_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "9bfb09fc73053b6fb87829e91c070a86bdff296148aee7c2b09c5f25d03dfe19",
+      "size": 262,
+      "table": "cai_task_management_system_task_generator_variables_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "41052e67b5fbbfca6cba4cd0dbb4a71df8885e1084d42b8051c17b6c6f6b3da0",
+      "size": 487,
+      "table": "cai_task_management_system_variable_group_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "b2a6e8f7c42aa6989ca50e552419b7cda3d69692788ee7891a2419ef7a184b9e",
+      "size": 958,
+      "table": "cai_task_management_system_variables_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "DeepWar_AI",
+      "sha256": "8512682d91c927bee5e0cef80cc4732f1ece7d563dbd396f399b05da28b2007c",
+      "size": 8420,
+      "table": "cai_variables_tables"
+    },
+    {
+      "classification": "DIFFICULTY_OR_POTENTIAL",
+      "internal_file": "DeepWar_AI",
+      "sha256": "6a74ba0203db409a37bc311d83849cbd011744a80b4b1a8e32020736281ba339",
+      "size": 528,
+      "table": "campaign_difficulty_handicap_effects_tables"
+    }
+  ]
+}

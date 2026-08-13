@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "pack_name": "transcendence_shadow_probe.pack",
+  "pack_type": 3,
+  "deterministic_timestamp": 0,
+  "probe_kind": "shadow",
+  "save_mutation": false,
+  "gameplay_mutation": false,
+  "entries": [
+    {
+      "source": "runtime_probe/source/script/campaign/mod/transcendence_shadow_probe.lua",
+      "internal_path": "script/campaign/mod/transcendence_shadow_probe.lua"
+    },
+    {
+      "source": "runtime_probe/source/script/battle/mod/transcendence_battle_probe.lua",
+      "internal_path": "script/battle/mod/transcendence_battle_probe.lua"
+    }
+  ]
+}

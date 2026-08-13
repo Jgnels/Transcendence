@@ -1,0 +1,239 @@
+{
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Synthetic query evidence is contract-only and is not live WH3 point evidence.",
+    "A ready packet is not an order and has no application authority.",
+    "No route, formation, collision, acknowledgement, execution, arrival, or outcome is proved."
+  ],
+  "metamorphic_checks": [
+    {
+      "check_id": "guarded_reverse_units",
+      "operation": "REVERSE_UNIT_ORDER",
+      "scenario_id": "true_point_supports_shadow_review_only"
+    },
+    {
+      "check_id": "guarded_translate_positions",
+      "operation": "TRANSLATE_ALL_POSITIONS",
+      "scenario_id": "frontline_support_ready_in_synthetic_fixture"
+    },
+    {
+      "check_id": "guarded_reverse_query_records",
+      "operation": "REVERSE_QUERY_RESULT_ORDER",
+      "scenario_id": "mixed_cavalry_retains_only_supported_packet"
+    }
+  ],
+  "result_digest": "27ca70dc2ef0cd21b25ed1a7e7e61794b13ccec7cc89392489da03bf06ca50cc",
+  "scenarios": [
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [
+          "READY_POINT_SUPPORTED_SHADOW_ONLY"
+        ],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 0,
+        "required_readiness_classes": []
+      },
+      "scenario_id": "balanced_no_guarded_packet",
+      "source_feasibility_scenario_id": "balanced_has_no_candidate_geometry"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 1,
+        "minimum_ready": 0,
+        "required_readiness_classes": [
+          "DEFERRED_POINT_UNOBSERVED"
+        ]
+      },
+      "scenario_id": "unobserved_commander_defers",
+      "source_feasibility_scenario_id": "commander_candidate_points_are_query_ready"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 1,
+        "required_readiness_classes": [
+          "READY_POINT_SUPPORTED_SHADOW_ONLY"
+        ]
+      },
+      "scenario_id": "true_point_supports_shadow_review_only",
+      "source_feasibility_scenario_id": "synthetic_true_supports_point_only"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 1,
+        "minimum_deferred": 0,
+        "minimum_ready": 0,
+        "required_readiness_classes": [
+          "BLOCKED_POINT_QUERY_FALSE"
+        ]
+      },
+      "scenario_id": "false_artillery_points_block_exact_candidates",
+      "source_feasibility_scenario_id": "synthetic_false_vetoes_artillery_points"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 1,
+        "minimum_ready": 0,
+        "required_readiness_classes": [
+          "DEFERRED_QUERY_UNAVAILABLE"
+        ]
+      },
+      "scenario_id": "unavailable_query_defers",
+      "source_feasibility_scenario_id": "unavailable_query_preserves_uncertainty"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 1,
+        "required_readiness_classes": [
+          "READY_POINT_SUPPORTED_SHADOW_ONLY"
+        ]
+      },
+      "scenario_id": "mixed_cavalry_retains_only_supported_packet",
+      "source_feasibility_scenario_id": "mixed_cavalry_results_choose_supported_point"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 1,
+        "required_readiness_classes": [
+          "READY_POINT_SUPPORTED_SHADOW_ONLY"
+        ]
+      },
+      "scenario_id": "frontline_support_ready_in_synthetic_fixture",
+      "source_feasibility_scenario_id": "frontline_relief_uses_local_subject_geometry"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 1,
+        "required_readiness_classes": [
+          "READY_POINT_SUPPORTED_SHADOW_ONLY"
+        ]
+      },
+      "scenario_id": "visible_pursuit_ready_in_synthetic_fixture",
+      "source_feasibility_scenario_id": "selective_pursuit_requires_visible_routing_enemy"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 1,
+        "minimum_ready": 0,
+        "required_readiness_classes": [
+          "DEFERRED_POINT_UNOBSERVED"
+        ]
+      },
+      "scenario_id": "hidden_enemy_case_remains_unobserved",
+      "source_feasibility_scenario_id": "hidden_enemy_uncertainty_does_not_block_local_geometry"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [
+          "READY_POINT_SUPPORTED_SHADOW_ONLY"
+        ],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 0,
+        "required_readiness_classes": []
+      },
+      "scenario_id": "terminal_has_no_packet",
+      "source_feasibility_scenario_id": "terminal_observation_has_no_active_candidate"
+    },
+    {
+      "expectations": {
+        "expect_error": true,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 0,
+        "required_readiness_classes": []
+      },
+      "scenario_id": "forged_candidate_fails_closed",
+      "source_feasibility_scenario_id": "forged_candidate_evidence_fails_closed"
+    },
+    {
+      "expectations": {
+        "expect_error": true,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 0,
+        "required_readiness_classes": []
+      },
+      "scenario_id": "stale_state_fails_closed",
+      "source_feasibility_scenario_id": "stale_state_evidence_fails_closed"
+    },
+    {
+      "expectations": {
+        "expect_error": true,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 0,
+        "minimum_ready": 0,
+        "required_readiness_classes": []
+      },
+      "scenario_id": "authority_alteration_fails_closed",
+      "source_feasibility_scenario_id": "altered_authority_evidence_fails_closed"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 1,
+        "minimum_ready": 0,
+        "required_readiness_classes": [
+          "DEFERRED_POINT_UNOBSERVED"
+        ]
+      },
+      "scenario_id": "role_threshold_case_defers_without_evidence",
+      "source_feasibility_scenario_id": "role_threshold_geometry_remains_bounded"
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_readiness_classes": [],
+        "minimum_blocked": 0,
+        "minimum_deferred": 1,
+        "minimum_ready": 0,
+        "required_readiness_classes": [
+          "DEFERRED_POINT_UNOBSERVED"
+        ]
+      },
+      "scenario_id": "rout_cascade_egress_defers_without_evidence",
+      "source_feasibility_scenario_id": "rout_cascade_preservation_generates_only_local_egress"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_baseline_suite_digest": "0055bd7cea848202ead9f8b87082f5ce1cb69d77d0e633a3ffc70346648224cd",
+  "source_feasibility_suite_digest": "2b51d2c2ca71d9c303dc45112b4cb1c7292df1551bf0598607b2a330ccd2fbab",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_contract": "TACTICAL_GUARDED_ACTION_MATRIX_V1",
+  "suite_id": "v0.1V_guarded_action_matrix"
+}

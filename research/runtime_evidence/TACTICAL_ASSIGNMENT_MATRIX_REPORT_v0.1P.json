@@ -1,0 +1,2198 @@
+{
+  "authority": "NO_ORDERS",
+  "counterfactual_status": "UNVERIFIED",
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "gate_measurements": {
+    "all_metamorphic_checks_passed": true,
+    "all_outputs_no_orders": true,
+    "all_scenarios_passed": true,
+    "double_booked_actor_count": 0,
+    "metamorphic_check_pass_count": 3,
+    "scenario_contract_pass_count": 12,
+    "total_assignment_count": 12,
+    "total_objective_count": 26,
+    "total_resource_conflict_unfilled_count": 2,
+    "total_unassignable_objective_count": 12
+  },
+  "interpretation_limits": [
+    "Straight-line geometry does not establish terrain-aware pathfinding or formation feasibility.",
+    "Assignments are advisory proposals and do not issue, accept, acknowledge, or execute WH3 orders.",
+    "Synthetic contract passes do not prove better battle outcomes, casualty reduction, or player enjoyment.",
+    "One unit-action slot per slice is an offline exclusivity model, not a live command scheduler.",
+    "Unfilled objectives are evidence of current model limits or observed infeasibility, not planner success."
+  ],
+  "metamorphic_check_count": 3,
+  "metamorphic_results": [
+    {
+      "authority": "NO_ORDERS",
+      "baseline_semantic_digest": "f06fcf7b2eb8e1a1a48feed4b8144978554134c93dd2ca7b90a67d9f9a02bcab",
+      "check_id": "unit_order_independence",
+      "comparison_mode": "EXACT_ASSIGNMENT_OUTPUT",
+      "operation": "REVERSE_UNIT_ORDER",
+      "passed": true,
+      "result_digest": "568095fd454b0f3c7fad42e97e6d2173800fcc90bc85d52c3afc59edc2fc01db",
+      "scenario_id": "critical_overflow_resolves_single_actor_conflict",
+      "transformed_semantic_digest": "f06fcf7b2eb8e1a1a48feed4b8144978554134c93dd2ca7b90a67d9f9a02bcab"
+    },
+    {
+      "authority": "NO_ORDERS",
+      "baseline_semantic_digest": "f06fcf7b2eb8e1a1a48feed4b8144978554134c93dd2ca7b90a67d9f9a02bcab",
+      "check_id": "portfolio_order_independence",
+      "comparison_mode": "SEMANTIC_ASSIGNMENT_SIGNATURE",
+      "operation": "REVERSE_PORTFOLIO_PRIORITY_ORDER",
+      "passed": true,
+      "result_digest": "1021a208bb0d779324695865e5df937f1221b2cbd90975f5e30735b260b7b1b5",
+      "scenario_id": "critical_overflow_resolves_single_actor_conflict",
+      "transformed_semantic_digest": "f06fcf7b2eb8e1a1a48feed4b8144978554134c93dd2ca7b90a67d9f9a02bcab"
+    },
+    {
+      "authority": "NO_ORDERS",
+      "baseline_semantic_digest": "cad976dd30e2726beaf3f49697bd702fe125652273a5109154830b1b8e718401",
+      "check_id": "coordinate_translation_invariance",
+      "comparison_mode": "SEMANTIC_ASSIGNMENT_SIGNATURE",
+      "operation": "TRANSLATE_ALL_POSITIONS",
+      "passed": true,
+      "result_digest": "80aa608fef5f07b797252c4aea172c85d0231836f579cd06a150a8efd1c33303",
+      "scenario_id": "reserve_relief_assignment",
+      "transformed_semantic_digest": "cad976dd30e2726beaf3f49697bd702fe125652273a5109154830b1b8e718401"
+    }
+  ],
+  "output_contract": "TACTICAL_ASSIGNMENT_MATRIX_REPORT_V1",
+  "result_digest": "ed6433f24d10fe0bf9ee51c4715bb64a9b8f734ee1deb7d118e9fe27ffbc0ac5",
+  "scenario_count": 12,
+  "scenario_results": [
+    {
+      "assignment": {
+        "assignable_objective_count": 0,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 0,
+        "assignments": [],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 0,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 0,
+        "objectives": [],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "61f56a023d70e937de20d693f0b2442e5588683618d0770cd251fd8b84e45836",
+        "schema_version": 1,
+        "slice_id": "first_contact",
+        "source_opportunity_count": 0,
+        "source_portfolio_digest": "54c0af153fc0b10f74a285c5dc96abb550e7c5dadd56aa4bfbaeb693aadf1830",
+        "source_tactical_state_digest": "f49e46acd225780c7d1ce7db045c9030be23a89b0e1f3933b0a84b2f93fd4b83",
+        "time_ms": 141100,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "8c9933d67f427d32e8836b762b8492c99a0de1738d4e4bddc13c015c139e3348",
+      "scenario_id": "balanced_contact_no_assignment",
+      "source_baseline_scenario_id": "balanced_contact_no_spurious_action",
+      "source_portfolio_digest": "54c0af153fc0b10f74a285c5dc96abb550e7c5dadd56aa4bfbaeb693aadf1830",
+      "source_slice_id": "first_contact",
+      "source_tactical_state_digest": "f49e46acd225780c7d1ce7db045c9030be23a89b0e1f3933b0a84b2f93fd4b83"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 2,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 2,
+        "assignments": [
+          {
+            "actor_role": "frontline",
+            "actor_unit_id": "1:u1004",
+            "assignment_score": 0.956006,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+            "objective_type": "CONTAIN_LOCAL_ROUT",
+            "objective_utility": 0.52,
+            "result_digest": "d7d5db7ba209deaa1b990d8e3ef94979b8c9fa02340247ace0c30394dc968bd3",
+            "severity": "MEDIUM",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 19.65,
+            "subject_unit_ids": [
+              "1:u1001"
+            ]
+          },
+          {
+            "actor_role": "commander",
+            "actor_unit_id": "1:u1001",
+            "assignment_score": 0.58578,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1001",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 0.654194,
+            "result_digest": "4e63cf4bb239ff44484b4669ed20a25b3978af007265f9c10e55d70ecfd7598a",
+            "severity": "HIGH",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.0,
+            "subject_unit_ids": [
+              "1:u1001"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 0,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 2,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1001"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1001",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "commander",
+                "actor_unit_id": "1:u1001",
+                "assignment_score": 0.58578,
+                "danger_score": 0.3605,
+                "fatigue_severity": 0.55,
+                "straight_line_distance_m": 0.0,
+                "withdrawal_recoverability_proxy": 0.539
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 132.321,
+              "z": 34.543
+            },
+            "objective_id": "SELF:1:u1001",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 0.654194,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "963fbccb3521639b0dba3bc95defa4ce37b478bfec3bf772a3700cbb4430a487",
+            "severity": "HIGH",
+            "source_opportunity_ids": [
+              "first_contact:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+            ],
+            "source_opportunity_keys": [
+              "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+            ],
+            "source_opportunity_types": [
+              "COMMANDER_EXTRACTION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1001"
+            ],
+            "unfilled_reason": null
+          },
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": "1:u1004",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "frontline",
+                "actor_unit_id": "1:u1004",
+                "assignment_score": 0.956006,
+                "danger_score": 0.04675,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 19.65,
+                "withdrawal_recoverability_proxy": 0.7295
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 132.321,
+              "z": 34.543
+            },
+            "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+            "objective_type": "CONTAIN_LOCAL_ROUT",
+            "objective_utility": 0.52,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "PROTECTED_SUBJECT": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "9fc6b3a989d9fc795d706dee84799b88aeee84f3395cb202cd5d7cdca3f4650c",
+            "severity": "MEDIUM",
+            "source_opportunity_ids": [
+              "first_contact:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "LOCAL_ROUT_CONTAINMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1001"
+            ],
+            "unfilled_reason": null
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "71cde86a2c74efe58abba323c6b6468d2e7dd9330d1cc0a0f18a998bfd805779",
+        "schema_version": 1,
+        "slice_id": "first_contact",
+        "source_opportunity_count": 2,
+        "source_portfolio_digest": "f8e2f613fd73ada20868c1dba22a4b6c65156427ac99be628d105a2b498a80a1",
+        "source_tactical_state_digest": "0ae12ea29ad6cde8ea9dffce55ff5fe850e510c3125dac466610e0d786885d93",
+        "time_ms": 141100,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "b767e2705c60a20108b64c6300003ffb48d0dc87ff1a13f2b01d535d0ccab948",
+      "scenario_id": "commander_self_extraction_and_support",
+      "source_baseline_scenario_id": "commander_extraction_under_pressure",
+      "source_portfolio_digest": "f8e2f613fd73ada20868c1dba22a4b6c65156427ac99be628d105a2b498a80a1",
+      "source_slice_id": "first_contact",
+      "source_tactical_state_digest": "0ae12ea29ad6cde8ea9dffce55ff5fe850e510c3125dac466610e0d786885d93"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 1,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 1,
+        "assignments": [
+          {
+            "actor_role": "artillery",
+            "actor_unit_id": "1:u1015",
+            "assignment_score": 0.683051,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1015",
+            "objective_type": "EVACUATE_ARTILLERY",
+            "objective_utility": 0.452468,
+            "result_digest": "1a371c9f725473981759e6fd1f567df8998903f739b455b5ee5fe9ec7b49d3e5",
+            "severity": "MEDIUM",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.0,
+            "subject_unit_ids": [
+              "1:u1015"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 0,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 1,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1015"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1015",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "artillery",
+                "actor_unit_id": "1:u1015",
+                "assignment_score": 0.683051,
+                "danger_score": 0.1356,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 0.0,
+                "withdrawal_recoverability_proxy": 0.7046
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 172.566,
+              "z": 30.52
+            },
+            "objective_id": "SELF:1:u1015",
+            "objective_type": "EVACUATE_ARTILLERY",
+            "objective_utility": 0.452468,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "a4a323655bc5924b0263250ff137ecd04c8cc39718e2b96ddcbb8464ffb4e17f",
+            "severity": "MEDIUM",
+            "source_opportunity_ids": [
+              "first_contact:ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+            ],
+            "source_opportunity_keys": [
+              "ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+            ],
+            "source_opportunity_types": [
+              "ARTILLERY_EVACUATION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1015"
+            ],
+            "unfilled_reason": null
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "8061b1c45097f5397229785c7d7b2b1c9c4da1f35d66ff4c4552203bfa56d792",
+        "schema_version": 1,
+        "slice_id": "first_contact",
+        "source_opportunity_count": 1,
+        "source_portfolio_digest": "efb100e5cd62b9334a7b76310f7c8b5550ea538e5321fa7f4901715d476e04e7",
+        "source_tactical_state_digest": "04dbad4acbee4daf7015cd14863c3bcc6b1f5def03ad49b4aba2882979fd09bf",
+        "time_ms": 141100,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "db80dd8f4407b238d03a59fd824cf6738254bef90ef8c42fb9b0653eb417e46d",
+      "scenario_id": "artillery_self_evacuation",
+      "source_baseline_scenario_id": "artillery_breach",
+      "source_portfolio_digest": "efb100e5cd62b9334a7b76310f7c8b5550ea538e5321fa7f4901715d476e04e7",
+      "source_slice_id": "first_contact",
+      "source_tactical_state_digest": "04dbad4acbee4daf7015cd14863c3bcc6b1f5def03ad49b4aba2882979fd09bf"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 1,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 1,
+        "assignments": [
+          {
+            "actor_role": "ranged",
+            "actor_unit_id": "1:u1009",
+            "assignment_score": 0.895391,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1009",
+            "objective_type": "REPOSITION_RANGED",
+            "objective_utility": 0.329251,
+            "result_digest": "ea3263b9d0706195854526c66343d7b995351c597effc09e0685efea0a6c09c7",
+            "severity": "LOW",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.0,
+            "subject_unit_ids": [
+              "1:u1009"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 0,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 1,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1009"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1009",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "ranged",
+                "actor_unit_id": "1:u1009",
+                "assignment_score": 0.895391,
+                "danger_score": 0.06,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 0.0,
+                "withdrawal_recoverability_proxy": 0.755
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 155.173,
+              "z": 1.216
+            },
+            "objective_id": "SELF:1:u1009",
+            "objective_type": "REPOSITION_RANGED",
+            "objective_utility": 0.329251,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "d1aab4e2c6529cf1530f2740d65dc8a6639bc333a99d8a1a8a52e6fe51bbd6f9",
+            "severity": "LOW",
+            "source_opportunity_ids": [
+              "local_melee_commitment:RANGED_REPOSITION_WINDOW:UNIT:1:u1009"
+            ],
+            "source_opportunity_keys": [
+              "RANGED_REPOSITION_WINDOW:UNIT:1:u1009"
+            ],
+            "source_opportunity_types": [
+              "RANGED_REPOSITION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1009"
+            ],
+            "unfilled_reason": null
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "883ae6ea534b26e4c68caf7451c474343858c00ef740c77ab40302d426209585",
+        "schema_version": 1,
+        "slice_id": "local_melee_commitment",
+        "source_opportunity_count": 1,
+        "source_portfolio_digest": "09fccab1ed12a8e5b064c843a16a106c68e890555d57744111672f5560720415",
+        "source_tactical_state_digest": "bf0062a68fcba93a50aa8071c7e07ff721f637fd9a167d5d16e8e07f70b1eec8",
+        "time_ms": 291100,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "6cb693bdc3f346cbfabfa14af3600316a97fbae9b3fd1bbf58eba4fcb47993df",
+      "scenario_id": "ranged_self_reposition",
+      "source_baseline_scenario_id": "ranged_rear_flank",
+      "source_portfolio_digest": "09fccab1ed12a8e5b064c843a16a106c68e890555d57744111672f5560720415",
+      "source_slice_id": "local_melee_commitment",
+      "source_tactical_state_digest": "bf0062a68fcba93a50aa8071c7e07ff721f637fd9a167d5d16e8e07f70b1eec8"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 1,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 1,
+        "assignments": [
+          {
+            "actor_role": "cavalry",
+            "actor_unit_id": "1:u1014",
+            "assignment_score": 0.466278,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1014",
+            "objective_type": "DISENGAGE_CAVALRY",
+            "objective_utility": 0.519317,
+            "result_digest": "5cfebc07373b23e6fae4a521eb56c1f3aaa03347a118d877f5a5fdcb24c3297f",
+            "severity": "MEDIUM",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.0,
+            "subject_unit_ids": [
+              "1:u1014"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 0,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 1,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1014"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1014",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "cavalry",
+                "actor_unit_id": "1:u1014",
+                "assignment_score": 0.466278,
+                "danger_score": 0.301997,
+                "fatigue_severity": 1.0,
+                "straight_line_distance_m": 0.0,
+                "withdrawal_recoverability_proxy": 0.524891
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": -164.743,
+              "z": 79.127
+            },
+            "objective_id": "SELF:1:u1014",
+            "objective_type": "DISENGAGE_CAVALRY",
+            "objective_utility": 0.519317,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "01b4fd5ce49ccaf47898ae44c27f2f7f4ab3d8d6e2a795cc4b4f7414b72d7b0e",
+            "severity": "MEDIUM",
+            "source_opportunity_ids": [
+              "local_melee_commitment:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+            ],
+            "source_opportunity_keys": [
+              "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+            ],
+            "source_opportunity_types": [
+              "CAVALRY_DISENGAGEMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1014"
+            ],
+            "unfilled_reason": null
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "4c2d47811f1a69bdb030c4a762681fdbd076c629333c4492ae14b584f17fe1f5",
+        "schema_version": 1,
+        "slice_id": "local_melee_commitment",
+        "source_opportunity_count": 1,
+        "source_portfolio_digest": "dc44f1e263b5d41aa332ef9146fabab05f6c87c601536eb1496cacb69f2edd24",
+        "source_tactical_state_digest": "bf2b3ce8e000c00cabadf0995112a649de7103906d22ff818aab0def70b9b65a",
+        "time_ms": 291100,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "d503c04e95f454b90f99a6389eb865239c1953347fe60f108d53352b7c68d488",
+      "scenario_id": "cavalry_self_disengagement",
+      "source_baseline_scenario_id": "cavalry_overextension",
+      "source_portfolio_digest": "dc44f1e263b5d41aa332ef9146fabab05f6c87c601536eb1496cacb69f2edd24",
+      "source_slice_id": "local_melee_commitment",
+      "source_tactical_state_digest": "bf2b3ce8e000c00cabadf0995112a649de7103906d22ff818aab0def70b9b65a"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 1,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 1,
+        "assignments": [
+          {
+            "actor_role": "frontline",
+            "actor_unit_id": "1:u1008",
+            "assignment_score": 1.0,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "RELIEVE:1:u1003",
+            "objective_type": "RELIEVE_FRONTLINE",
+            "objective_utility": 0.805817,
+            "result_digest": "8d166c1b25a90d6acf40441438a2c48ea21a89c83b13333ab86993b4d164394e",
+            "severity": "CRITICAL",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 45.0,
+            "subject_unit_ids": [
+              "1:u1003"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 1,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 1,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 1,
+        "objectives": [
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": "1:u1008",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "frontline",
+                "actor_unit_id": "1:u1008",
+                "assignment_score": 1.0,
+                "danger_score": 0.095,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 45.0,
+                "withdrawal_recoverability_proxy": 0.685
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 118.356,
+              "z": -56.902
+            },
+            "objective_id": "RELIEVE:1:u1003",
+            "objective_type": "RELIEVE_FRONTLINE",
+            "objective_utility": 0.805817,
+            "preferred_actor_pool_ids": [
+              "1:u1008"
+            ],
+            "rejected_actor_counts": {
+              "ROUTING": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "4c5ae94692df74c4e6f9ca3f7d7051dc8865ffabb412272b4058fceba5a5f3f4",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+              "local_crisis:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "local_crisis:RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "FRONTLINE_RELIEF_WINDOW",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "RESERVE_COMMITMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1003"
+            ],
+            "unfilled_reason": null
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "ea454d1550ae224cb5fece4189eb365658068c96de622c73bc393b6880de42b0",
+        "schema_version": 1,
+        "slice_id": "local_crisis",
+        "source_opportunity_count": 3,
+        "source_portfolio_digest": "ea164f8d94feb529739556af491f03ff194341a14320d1138abe1a7d3a0a0d10",
+        "source_tactical_state_digest": "4fa47f0986b717860abc2577ea3a1e99fec46a485e7b065ea933f440929a9fcd",
+        "time_ms": 402100,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "b712ae622f8a36201cf06b6190d881b9450b99734ce528313c7ff3135a9d9da8",
+      "scenario_id": "reserve_relief_assignment",
+      "source_baseline_scenario_id": "frontline_crisis_with_reserve",
+      "source_portfolio_digest": "ea164f8d94feb529739556af491f03ff194341a14320d1138abe1a7d3a0a0d10",
+      "source_slice_id": "local_crisis",
+      "source_tactical_state_digest": "4fa47f0986b717860abc2577ea3a1e99fec46a485e7b065ea933f440929a9fcd"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 1,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 1,
+        "assignments": [
+          {
+            "actor_role": "cavalry",
+            "actor_unit_id": "1:u1014",
+            "assignment_score": 0.944369,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELECTIVE_PURSUIT:BATTLE",
+            "objective_type": "SELECTIVE_PURSUIT",
+            "objective_utility": 0.62,
+            "result_digest": "c321ed4d1c6d1ff798636b1a146c8d983e5acbe7e07288ac37be7b24adc9850d",
+            "severity": "HIGH",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 234.094,
+            "subject_unit_ids": []
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 0,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 1,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1013",
+              "1:u1014"
+            ],
+            "actor_pool_mode": "SOURCE_SUBJECT_POOL",
+            "assigned_actor_unit_id": "1:u1014",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 2,
+            "candidate_actors": [
+              {
+                "actor_role": "cavalry",
+                "actor_unit_id": "1:u1014",
+                "assignment_score": 0.944369,
+                "danger_score": 0.0,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 234.094,
+                "withdrawal_recoverability_proxy": 0.82
+              },
+              {
+                "actor_role": "ranged",
+                "actor_unit_id": "1:u1013",
+                "assignment_score": 0.910268,
+                "danger_score": 0.0,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 201.459,
+                "withdrawal_recoverability_proxy": 0.82
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 73.62,
+              "z": -68.727
+            },
+            "objective_id": "SELECTIVE_PURSUIT:BATTLE",
+            "objective_type": "SELECTIVE_PURSUIT",
+            "objective_utility": 0.62,
+            "preferred_actor_pool_ids": [
+              "1:u1013",
+              "1:u1014"
+            ],
+            "rejected_actor_counts": {},
+            "required_actor_count": 1,
+            "result_digest": "b08116d3797753312da13e2d51199f6b1dd5623a3dc1b2f96c41ddbcd953ec98",
+            "severity": "HIGH",
+            "source_opportunity_ids": [
+              "enemy_break:SELECTIVE_PURSUIT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "SELECTIVE_PURSUIT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "SELECTIVE_PURSUIT_WINDOW"
+            ],
+            "subject_unit_ids": [],
+            "unfilled_reason": null
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "fb3e313b04e081188e2367ef5aff6e8d51f579571acee1419dc7207ebf59f04e",
+        "schema_version": 1,
+        "slice_id": "enemy_break",
+        "source_opportunity_count": 1,
+        "source_portfolio_digest": "951f77ad837fa4e191d4b4dde34a378d6d327a420374f06ef2bd01bc208dfd38",
+        "source_tactical_state_digest": "d9d7a0dd023bd8afc6fac9bc193d9635ff52401fb8e041d0dc6f384405c7be56",
+        "time_ms": 531100,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "44f8a26617d6350f48cb3f9db7d168ecf75d030bdb3276109bb37d59200aa6a5",
+      "scenario_id": "selective_pursuit_assignment",
+      "source_baseline_scenario_id": "clean_enemy_break",
+      "source_portfolio_digest": "951f77ad837fa4e191d4b4dde34a378d6d327a420374f06ef2bd01bc208dfd38",
+      "source_slice_id": "enemy_break",
+      "source_tactical_state_digest": "d9d7a0dd023bd8afc6fac9bc193d9635ff52401fb8e041d0dc6f384405c7be56"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 2,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 2,
+        "assignments": [
+          {
+            "actor_role": "commander",
+            "actor_unit_id": "1:u1001",
+            "assignment_score": 0.519806,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1001",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 0.791013,
+            "result_digest": "50e6ca7a71b3ee6910cbf470ac75bb76df8aa41163161e1db45664e5bac069b0",
+            "severity": "CRITICAL",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.001,
+            "subject_unit_ids": [
+              "1:u1001"
+            ]
+          },
+          {
+            "actor_role": "cavalry",
+            "actor_unit_id": "1:u1014",
+            "assignment_score": 0.454298,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1014",
+            "objective_type": "DISENGAGE_CAVALRY",
+            "objective_utility": 0.791013,
+            "result_digest": "58269faa28629e75c68a12a75e25382f4b4444824f6f44349f0e12150e93b5eb",
+            "severity": "CRITICAL",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.0,
+            "subject_unit_ids": [
+              "1:u1014"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 2,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 0.666667,
+        "critical_objective_count": 3,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 4,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1001"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1001",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "commander",
+                "actor_unit_id": "1:u1001",
+                "assignment_score": 0.519806,
+                "danger_score": 0.361931,
+                "fatigue_severity": 1.0,
+                "straight_line_distance_m": 0.001,
+                "withdrawal_recoverability_proxy": 0.378713
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 33.854,
+              "z": 37.535
+            },
+            "objective_id": "SELF:1:u1001",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 0.791013,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "8126da4aaba3c36039e843e76f02c642965a527de4d2bc20fac1a1f109f59588",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+              "enemy_rout_majority:PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "enemy_rout_majority:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+              "PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "COMMANDER_EXTRACTION_WINDOW",
+              "PURSUIT_TERMINATION_WINDOW",
+              "REFORM_AND_PRESERVE_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1001"
+            ],
+            "unfilled_reason": null
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1010"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 233.394,
+              "z": -28.806
+            },
+            "objective_id": "SELF:1:u1010",
+            "objective_type": "REPOSITION_RANGED",
+            "objective_utility": 0.791013,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 2,
+              "ROUTING": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "aa51901456ff7af15b4eca418201f2c138b90bef351b25852da163e0eaebc4f6",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "enemy_rout_majority:RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+              "enemy_rout_majority:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+              "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "PURSUIT_TERMINATION_WINDOW",
+              "RANGED_REPOSITION_WINDOW",
+              "REFORM_AND_PRESERVE_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1010"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1014"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1014",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "cavalry",
+                "actor_unit_id": "1:u1014",
+                "assignment_score": 0.454298,
+                "danger_score": 0.492578,
+                "fatigue_severity": 1.0,
+                "straight_line_distance_m": 0.0,
+                "withdrawal_recoverability_proxy": 0.328948
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 92.187,
+              "z": -414.984
+            },
+            "objective_id": "SELF:1:u1014",
+            "objective_type": "DISENGAGE_CAVALRY",
+            "objective_utility": 0.791013,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "c8b148dbbe51c051153da62dd422064ada4201fdd5a34b3100473ee8026af852",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+              "enemy_rout_majority:PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "enemy_rout_majority:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014",
+              "PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "CAVALRY_DISENGAGEMENT_WINDOW",
+              "PURSUIT_TERMINATION_WINDOW",
+              "REFORM_AND_PRESERVE_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1014"
+            ],
+            "unfilled_reason": null
+          },
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 233.394,
+              "z": -28.806
+            },
+            "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+            "objective_type": "CONTAIN_LOCAL_ROUT",
+            "objective_utility": 0.636667,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "PROTECTED_SUBJECT": 2,
+              "ROUTING": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "951001d5399c8c3602995e8b304142755e481f0a42c2527d8905ea7a8f5aac87",
+            "severity": "HIGH",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "LOCAL_ROUT_CONTAINMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1010"
+            ],
+            "unfilled_reason": "NO_LEGAL_CANDIDATE"
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "3d7cb696401b84510c6bdcc75f145244f7ead23cb9c16218943900eeec03fbc3",
+        "schema_version": 1,
+        "slice_id": "enemy_rout_majority",
+        "source_opportunity_count": 6,
+        "source_portfolio_digest": "37a7204aa86a795c905ea2a3dd7a734a79819980f0783ed5166d72bd46825655",
+        "source_tactical_state_digest": "1d5217e4801985fab705fb7fa356de5e333978feaa615646e64678cea531016e",
+        "time_ms": 555100,
+        "unassignable_objective_count": 2,
+        "uncontrollable_subject_objective_count": 1,
+        "unfilled_objective_count": 2
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "99e502b4f5f974a6eeee6687eb2d7285754b3976c1f6d95c2c4b148747841ab9",
+      "scenario_id": "uncontrollable_subjects_remain_unfilled",
+      "source_baseline_scenario_id": "rout_cascade_preservation",
+      "source_portfolio_digest": "37a7204aa86a795c905ea2a3dd7a734a79819980f0783ed5166d72bd46825655",
+      "source_slice_id": "enemy_rout_majority",
+      "source_tactical_state_digest": "1d5217e4801985fab705fb7fa356de5e333978feaa615646e64678cea531016e"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 0,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 0,
+        "assignments": [],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 0.0,
+        "critical_objective_count": 4,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 4,
+        "objectives": [
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 152.362,
+              "z": -49.702
+            },
+            "objective_id": "RELIEVE:1:u1003",
+            "objective_type": "RELIEVE_FRONTLINE",
+            "objective_utility": 0.93985,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "ROUTING": 2
+            },
+            "required_actor_count": 1,
+            "result_digest": "68a27deb688fa30f367a97aa2fed5067f02e5185ae54092f7b207d1f572b54a1",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+              "enemy_rout_majority:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "FRONTLINE_RELIEF_WINDOW",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1003"
+            ],
+            "unfilled_reason": "NO_LEGAL_CANDIDATE"
+          },
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 109.735,
+              "z": -26.995
+            },
+            "objective_id": "RELIEVE:1:u1004",
+            "objective_type": "RELIEVE_FRONTLINE",
+            "objective_utility": 0.93499,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "ROUTING": 2
+            },
+            "required_actor_count": 1,
+            "result_digest": "5493d508d8dbd2ea805affbe8ec9b88ff9712827fa01a4c820f1faba30a7118d",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+              "enemy_rout_majority:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "FRONTLINE_RELIEF_WINDOW",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1004"
+            ],
+            "unfilled_reason": "NO_LEGAL_CANDIDATE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1003"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 152.362,
+              "z": -49.702
+            },
+            "objective_id": "SELF:1:u1003",
+            "objective_type": "TERMINATE_PURSUIT",
+            "objective_utility": 0.836422,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "ROUTING": 2
+            },
+            "required_actor_count": 1,
+            "result_digest": "587987068a3304679398c1f736d5b993085978a64f56c0ede811e597d0c76730",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "enemy_rout_majority:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "PURSUIT_TERMINATION_WINDOW",
+              "REFORM_AND_PRESERVE_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1003"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1004"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 109.735,
+              "z": -26.995
+            },
+            "objective_id": "SELF:1:u1004",
+            "objective_type": "TERMINATE_PURSUIT",
+            "objective_utility": 0.836422,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "ROUTING": 2
+            },
+            "required_actor_count": 1,
+            "result_digest": "e3c3c04f289cfc9d3a8189fc81527418327678ac8a3084602eef196a84ada4fb",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "enemy_rout_majority:PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "enemy_rout_majority:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "PURSUIT_TERMINATION_WINDOW",
+              "REFORM_AND_PRESERVE_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1004"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "3c2d6bc04dbcae482f9aa2c28f192aff60bd342e29bd1ca2a1b19047d39652b2",
+        "schema_version": 1,
+        "slice_id": "enemy_rout_majority",
+        "source_opportunity_count": 5,
+        "source_portfolio_digest": "0e49fb4783b4d9ac1b8684a434f900200874afdf51b1d95bfacf52ce22f37b89",
+        "source_tactical_state_digest": "9fec36906635d0e9ea5842fc19964ad1fb22b610943035d836f2b0662a08d1f9",
+        "time_ms": 555100,
+        "unassignable_objective_count": 4,
+        "uncontrollable_subject_objective_count": 2,
+        "unfilled_objective_count": 4
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "efa94c10ffe51a81944001ba8ca218c656d5c95d0c27ef8753d47e4dcb3a7681",
+      "scenario_id": "simultaneous_collapse_discloses_infeasibility",
+      "source_baseline_scenario_id": "simultaneous_local_and_enemy_collapse",
+      "source_portfolio_digest": "0e49fb4783b4d9ac1b8684a434f900200874afdf51b1d95bfacf52ce22f37b89",
+      "source_slice_id": "enemy_rout_majority",
+      "source_tactical_state_digest": "9fec36906635d0e9ea5842fc19964ad1fb22b610943035d836f2b0662a08d1f9"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 3,
+        "assignable_objective_coverage": 0.333333,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 1,
+        "assignments": [
+          {
+            "actor_role": "frontline",
+            "actor_unit_id": "1:u1008",
+            "assignment_score": 1.0,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+            "objective_type": "CONTAIN_LOCAL_ROUT",
+            "objective_utility": 0.956924,
+            "result_digest": "4897e961f89d2c49e09ab65fa93dd25991ce871b464af102dd60d51ad854125d",
+            "severity": "CRITICAL",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 131.62,
+            "subject_unit_ids": [
+              "1:u1001",
+              "1:u1002",
+              "1:u1009",
+              "1:u1010",
+              "1:u1014",
+              "1:u1015"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 3,
+        "critical_assignable_objective_coverage": 0.333333,
+        "critical_objective_assignment_coverage": 0.111111,
+        "critical_objective_count": 9,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 9,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1001"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 118.582,
+              "z": 37.519
+            },
+            "objective_id": "SELF:1:u1001",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 1.0,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "1ad261b1d294ffce36dd107e6f90eb69ff867fa86ec4ce969d233d8fa5ff6dd8",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+            ],
+            "source_opportunity_keys": [
+              "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+            ],
+            "source_opportunity_types": [
+              "COMMANDER_EXTRACTION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1001"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1002"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 134.636,
+              "z": 65.453
+            },
+            "objective_id": "SELF:1:u1002",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 1.0,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "26f128fd01c8cd0083d8b681ad67d63a4239b09c8fecbdb369058211a217bcbf",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002"
+            ],
+            "source_opportunity_keys": [
+              "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002"
+            ],
+            "source_opportunity_types": [
+              "COMMANDER_EXTRACTION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1002"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1014"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": -34.245,
+              "z": -95.014
+            },
+            "objective_id": "SELF:1:u1014",
+            "objective_type": "DISENGAGE_CAVALRY",
+            "objective_utility": 1.0,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "2b60761ca8b46521dad74b08b68383b71c217566dfc285e1297304c7f99cebca",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+            ],
+            "source_opportunity_keys": [
+              "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+            ],
+            "source_opportunity_types": [
+              "CAVALRY_DISENGAGEMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1014"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1015"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 172.664,
+              "z": 32.967
+            },
+            "objective_id": "SELF:1:u1015",
+            "objective_type": "EVACUATE_ARTILLERY",
+            "objective_utility": 1.0,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "c464cec1a4f3093a88b6702783213405c2c5ab89a1a59d88e3daf468b743f62a",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+            ],
+            "source_opportunity_keys": [
+              "ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+            ],
+            "source_opportunity_types": [
+              "ARTILLERY_EVACUATION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1015"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1009"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 152.988,
+              "z": 2.177
+            },
+            "objective_id": "SELF:1:u1009",
+            "objective_type": "REPOSITION_RANGED",
+            "objective_utility": 0.963867,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "2125c8f86c7200c0a3c55c4e1b9d486831308f3056ab0203d3f59309c4c49760",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1009"
+            ],
+            "source_opportunity_keys": [
+              "RANGED_REPOSITION_WINDOW:UNIT:1:u1009"
+            ],
+            "source_opportunity_types": [
+              "RANGED_REPOSITION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1009"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          },
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": "1:u1008",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "frontline",
+                "actor_unit_id": "1:u1008",
+                "assignment_score": 1.0,
+                "danger_score": 0.025,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 131.62,
+                "withdrawal_recoverability_proxy": 0.825
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 116.558,
+              "z": 14.712
+            },
+            "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+            "objective_type": "CONTAIN_LOCAL_ROUT",
+            "objective_utility": 0.956924,
+            "preferred_actor_pool_ids": [
+              "1:u1008"
+            ],
+            "rejected_actor_counts": {
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "600b9b0cd7612fb736ca8a9fd807859f2c5e442a79668e0d2482293c87dc2be7",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "local_crisis:RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "RESERVE_COMMITMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1001",
+              "1:u1002",
+              "1:u1009",
+              "1:u1010",
+              "1:u1014",
+              "1:u1015"
+            ],
+            "unfilled_reason": null
+          },
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "frontline",
+                "actor_unit_id": "1:u1008",
+                "assignment_score": 1.0,
+                "danger_score": 0.025,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 203.168,
+                "withdrawal_recoverability_proxy": 0.825
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 118.356,
+              "z": -56.902
+            },
+            "objective_id": "RELIEVE:1:u1003",
+            "objective_type": "RELIEVE_FRONTLINE",
+            "objective_utility": 0.956924,
+            "preferred_actor_pool_ids": [
+              "1:u1008"
+            ],
+            "rejected_actor_counts": {
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "da3bb1d16f96820b57e8932a5ae139f28e3a742cb96ac7c280092afb137c57ca",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+              "local_crisis:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "local_crisis:RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "FRONTLINE_RELIEF_WINDOW",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "RESERVE_COMMITMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1003"
+            ],
+            "unfilled_reason": "RESOURCE_CONFLICT_WITH_HIGHER_VALUE_OBJECTIVE"
+          },
+          {
+            "actor_pool_ids": [],
+            "actor_pool_mode": "ELIGIBLE_LOCAL_SUPPORT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "frontline",
+                "actor_unit_id": "1:u1008",
+                "assignment_score": 1.0,
+                "danger_score": 0.025,
+                "fatigue_severity": 0.0,
+                "straight_line_distance_m": 175.999,
+                "withdrawal_recoverability_proxy": 0.825
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 107.494,
+              "z": -29.207
+            },
+            "objective_id": "RELIEVE:1:u1004",
+            "objective_type": "RELIEVE_FRONTLINE",
+            "objective_utility": 0.956924,
+            "preferred_actor_pool_ids": [
+              "1:u1008"
+            ],
+            "rejected_actor_counts": {
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "d2fcf125765d2bc16a80f68a6465b96c527b324fbe50635d2ce84809fed1a6a4",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+              "local_crisis:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "local_crisis:RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE",
+              "RESERVE_COMMITMENT_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "FRONTLINE_RELIEF_WINDOW",
+              "LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "RESERVE_COMMITMENT_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1004"
+            ],
+            "unfilled_reason": "RESOURCE_CONFLICT_WITH_HIGHER_VALUE_OBJECTIVE"
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1010"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": null,
+            "assignment_status": "UNFILLED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 0,
+            "candidate_actors": [],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 154.724,
+              "z": 45.169
+            },
+            "objective_id": "SELF:1:u1010",
+            "objective_type": "REPOSITION_RANGED",
+            "objective_utility": 0.929647,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1,
+              "ROUTING": 8
+            },
+            "required_actor_count": 1,
+            "result_digest": "89b601f493b27d352c8d2b041a015aaf2f5550b657d208ed2f73710e82c980e2",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+            ],
+            "source_opportunity_keys": [
+              "RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+            ],
+            "source_opportunity_types": [
+              "RANGED_REPOSITION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1010"
+            ],
+            "unfilled_reason": "SUBJECT_NOT_CONTROLLABLE"
+          }
+        ],
+        "resource_conflict_unfilled_count": 2,
+        "result_digest": "fc6acdafb8fd194e9c7c8a13aedab3e6f04e6aef76e33cc428a46c2b7f1749df",
+        "schema_version": 1,
+        "slice_id": "local_crisis",
+        "source_opportunity_count": 10,
+        "source_portfolio_digest": "86e757ee36a4f2272996c80510eac0058331a778c913ca00f809783ca786da0f",
+        "source_tactical_state_digest": "4c6f5057687199c819c9f94d8f7c6b8d766f744d5eba7076438b80a6f662bf98",
+        "time_ms": 402100,
+        "unassignable_objective_count": 6,
+        "uncontrollable_subject_objective_count": 6,
+        "unfilled_objective_count": 8
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "2efe8b9bceebd089729a3baf6ce34bd3da3e0f1ddcfc050f7b7c4c626353bdc8",
+      "scenario_id": "critical_overflow_resolves_single_actor_conflict",
+      "source_baseline_scenario_id": "critical_group_overflow_disclosed",
+      "source_portfolio_digest": "86e757ee36a4f2272996c80510eac0058331a778c913ca00f809783ca786da0f",
+      "source_slice_id": "local_crisis",
+      "source_tactical_state_digest": "4c6f5057687199c819c9f94d8f7c6b8d766f744d5eba7076438b80a6f662bf98"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 2,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 2,
+        "assignments": [
+          {
+            "actor_role": "commander",
+            "actor_unit_id": "1:u1001",
+            "assignment_score": 0.478606,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1001",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 0.880946,
+            "result_digest": "56ac5fe1f5b98774b721c830c2873e21e4807100ac4f90d82517bc1d2840e448",
+            "severity": "CRITICAL",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.0,
+            "subject_unit_ids": [
+              "1:u1001"
+            ]
+          },
+          {
+            "actor_role": "ranged",
+            "actor_unit_id": "1:u1010",
+            "assignment_score": 0.700553,
+            "authority": "ADVISORY_ONLY",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_id": "SELF:1:u1010",
+            "objective_type": "REPOSITION_RANGED",
+            "objective_utility": 0.499422,
+            "result_digest": "6614cde83723fc9473be5005d318e3cb3d61a9df2549b74e97754fff86be8f73",
+            "severity": "MEDIUM",
+            "status": "PROPOSED_NOT_EXECUTED",
+            "straight_line_distance_m": 0.001,
+            "subject_unit_ids": [
+              "1:u1010"
+            ]
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 1,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 1,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 2,
+        "objectives": [
+          {
+            "actor_pool_ids": [
+              "1:u1001"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1001",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "commander",
+                "actor_unit_id": "1:u1001",
+                "assignment_score": 0.478606,
+                "danger_score": 0.361931,
+                "fatigue_severity": 1.0,
+                "straight_line_distance_m": 0.0,
+                "withdrawal_recoverability_proxy": 0.418713
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": -147.709,
+              "z": -303.983
+            },
+            "objective_id": "SELF:1:u1001",
+            "objective_type": "EXTRACT_COMMANDER",
+            "objective_utility": 0.880946,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "139d9fb4b5019715017ac3407363ad73f79ab709ae0fbf0f1cf8dfd28c918ede",
+            "severity": "CRITICAL",
+            "source_opportunity_ids": [
+              "victory_countdown:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+              "victory_countdown:PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "victory_countdown:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_keys": [
+              "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+              "PURSUIT_TERMINATION_WINDOW:BATTLE",
+              "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+            ],
+            "source_opportunity_types": [
+              "COMMANDER_EXTRACTION_WINDOW",
+              "PURSUIT_TERMINATION_WINDOW",
+              "REFORM_AND_PRESERVE_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1001"
+            ],
+            "unfilled_reason": null
+          },
+          {
+            "actor_pool_ids": [
+              "1:u1010"
+            ],
+            "actor_pool_mode": "EXACT_SUBJECT",
+            "assigned_actor_unit_id": "1:u1010",
+            "assignment_status": "ASSIGNED",
+            "authority": "ADVISORY_ONLY",
+            "candidate_actor_count": 1,
+            "candidate_actors": [
+              {
+                "actor_role": "ranged",
+                "actor_unit_id": "1:u1010",
+                "assignment_score": 0.700553,
+                "danger_score": 0.322671,
+                "fatigue_severity": 0.1,
+                "straight_line_distance_m": 0.001,
+                "withdrawal_recoverability_proxy": 0.546589
+              }
+            ],
+            "counterfactual_status": "UNVERIFIED",
+            "exclusive_resource": "UNIT_ACTION_SLOT",
+            "objective_anchor": {
+              "x": 421.266,
+              "z": 16.655
+            },
+            "objective_id": "SELF:1:u1010",
+            "objective_type": "REPOSITION_RANGED",
+            "objective_utility": 0.499422,
+            "preferred_actor_pool_ids": [],
+            "rejected_actor_counts": {
+              "NOT_EXACT_SUBJECT": 1
+            },
+            "required_actor_count": 1,
+            "result_digest": "b693bdfc0b444431d2390d51e43d14c43d1540939297abc2cb8e9cfe246b0e42",
+            "severity": "MEDIUM",
+            "source_opportunity_ids": [
+              "victory_countdown:RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+            ],
+            "source_opportunity_keys": [
+              "RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+            ],
+            "source_opportunity_types": [
+              "RANGED_REPOSITION_WINDOW"
+            ],
+            "subject_unit_ids": [
+              "1:u1010"
+            ],
+            "unfilled_reason": null
+          }
+        ],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "ca49189bbda51029b607526fc6f1bf54c60caea3a1d5be884a7b56432619a67e",
+        "schema_version": 1,
+        "slice_id": "victory_countdown",
+        "source_opportunity_count": 4,
+        "source_portfolio_digest": "f656b0b66d4060e647a633c34d5f8c9c54aeb314b368c0d55ad4cba19f6110ce",
+        "source_tactical_state_digest": "4d63b61c137cf7236e90c5c592f64273baad99f67eb29c016ff700eaad38e81a",
+        "time_ms": 730700,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "248e47ca71254528c81b487e7cf08ef6e0a2487c7d06a54779fc62f6961a276d",
+      "scenario_id": "hidden_enemy_uncertainty_blocks_pursuit",
+      "source_baseline_scenario_id": "hidden_enemy_blocks_terminal_certainty",
+      "source_portfolio_digest": "f656b0b66d4060e647a633c34d5f8c9c54aeb314b368c0d55ad4cba19f6110ce",
+      "source_slice_id": "victory_countdown",
+      "source_tactical_state_digest": "4d63b61c137cf7236e90c5c592f64273baad99f67eb29c016ff700eaad38e81a"
+    },
+    {
+      "assignment": {
+        "assignable_objective_count": 0,
+        "assignable_objective_coverage": 1.0,
+        "assignment_contract": "TACTICAL_OBJECTIVE_ASSIGNMENT_V1",
+        "assignment_count": 0,
+        "assignments": [],
+        "authority": "NO_ORDERS",
+        "constraints": [
+          "Each local unit has at most one advisory unit-action slot per slice.",
+          "Routing, shattered, leaving, or rampaging units are not treated as controllable responders.",
+          "Units that are themselves protected subjects cannot be reassigned as support responders.",
+          "Role-incompatible responders are rejected before optimization.",
+          "Straight-line distance is a ranking proxy, not terrain-aware route feasibility.",
+          "Unfilled objectives remain explicit; the solver does not fabricate a feasible actor.",
+          "Assignments are proposals only and do not establish issue, acceptance, acknowledgement, execution, or outcome."
+        ],
+        "counterfactual_status": "UNVERIFIED",
+        "critical_assignable_objective_count": 0,
+        "critical_assignable_objective_coverage": 1.0,
+        "critical_objective_assignment_coverage": 1.0,
+        "critical_objective_count": 0,
+        "double_booked_actor_count": 0,
+        "evidence_status": "CONTROL_OFFLINE",
+        "objective_count": 0,
+        "objectives": [],
+        "resource_conflict_unfilled_count": 0,
+        "result_digest": "bac2a1a34ba07d8cbe90f58aef66b7236b1df3cb2dd77f9dedf609747348b745",
+        "schema_version": 1,
+        "slice_id": "battle_complete",
+        "source_opportunity_count": 0,
+        "source_portfolio_digest": "0aeeaa5f369705334955819040a9bb3ba9c09b801176bd859eb3a86c3a064998",
+        "source_tactical_state_digest": "780acaafd34118bf102de7d197ab3586d99094e6c67172bf604d427e28d4b9ea",
+        "time_ms": 739600,
+        "unassignable_objective_count": 0,
+        "uncontrollable_subject_objective_count": 0,
+        "unfilled_objective_count": 0
+      },
+      "authority": "NO_ORDERS",
+      "contract": {
+        "assignment_mismatches": [],
+        "forbidden_objective_types_present": [],
+        "missing_required_objective_types": [],
+        "passed": true,
+        "scalar_mismatches": [],
+        "unfilled_reason_mismatches": []
+      },
+      "result_digest": "403ceee267d91470297f8a2e0f4d324576ccdaccda910187400a0ecc4e83ca94",
+      "scenario_id": "terminal_state_has_no_assignment",
+      "source_baseline_scenario_id": "terminal_no_action",
+      "source_portfolio_digest": "0aeeaa5f369705334955819040a9bb3ba9c09b801176bd859eb3a86c3a064998",
+      "source_slice_id": "battle_complete",
+      "source_tactical_state_digest": "780acaafd34118bf102de7d197ab3586d99094e6c67172bf604d427e28d4b9ea"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_assignment_suite_digest": "8a29d77eefdc9c56c64ddf38627e4821e82d268e1f3e5abf5b6207af0d8dd024",
+  "source_baseline_suite_digest": "0055bd7cea848202ead9f8b87082f5ce1cb69d77d0e633a3ffc70346648224cd",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_id": "v0.1P_tactical_objective_assignment_matrix"
+}

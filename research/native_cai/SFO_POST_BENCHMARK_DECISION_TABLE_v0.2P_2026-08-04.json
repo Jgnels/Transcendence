@@ -1,0 +1,76 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "contract": "NATIVE_CAI_SFO_POST_BENCHMARK_DECISION_TABLE_V1",
+  "decision_table_digest": "6493a5df13c4703bf9e16febf825c6ad0764c7127fae308e1b0856a3e355de74",
+  "frozen_before_fresh_sfo_owner_data": true,
+  "global_rules": [
+    "No single SFO-vs-vanilla cohort comparison is a randomized causal estimate.",
+    "No p-value is authorized from overlapping army windows treated as independent samples.",
+    "Any mechanistic nomination requires replication before a row ablation.",
+    "Any row ablation must be minimal, native-first, separately preregistered, and application-ineligible until its own gate passes.",
+    "No branch revives v0.2G/v0.2I or authorizes project-owned orders."
+  ],
+  "recovery_branches": [
+    {
+      "action": "EXTEND_ONLY",
+      "branch": "INSUFFICIENT_RECOVERY_EXPOSURE",
+      "condition": "recovering_army_turn_count < 10",
+      "mechanistic_nomination": "NONE"
+    },
+    {
+      "action": "POSSIBLE_WORSENING_RELATIVE_TO_VANILLA_NEGATIVE_COHORT; REPLICATE_AND_CAUSAL_REVIEW",
+      "branch": "SFO_RECOVERY_POSITIVE_SIGNAL",
+      "condition": "recovering_army_turn_count >= 10 AND recovering_attacker_side_army_turn_count >= 2 AND recovering_attacker_side_rate >= 0.20",
+      "mechanistic_nomination": "SFO_TASK_PRIORITIES_MAY_BE_RELEVANT_INDIRECTLY; SFO_ALLOCATOR_RELEASE_RETURN_ROWS_ARE_NOT_A_DIRECT_EXPLANATION_BECAUSE_NONE_WERE_OVERRIDDEN"
+    },
+    {
+      "action": "NO_RECOVERY_INTERVENTION_EARNED",
+      "branch": "SFO_RECOVERY_NO_PREREGISTERED_SIGNAL",
+      "condition": "recovering_army_turn_count >= 10 AND preregistered positive recovery condition is false",
+      "mechanistic_nomination": "NONE"
+    }
+  ],
+  "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+  "study_version": "v0.2P",
+  "temporal_branches": [
+    {
+      "action": "EXTEND_OR_REDESIGN_ACQUISITION_ONLY",
+      "branch": "INSUFFICIENT_EXPOSURE",
+      "condition": "territorial_eligible_windows < 20",
+      "mechanistic_nomination": "NONE"
+    },
+    {
+      "action": "POSSIBLE_SFO_WORSENING_OR_SPECIAL_POLICY; CAUSAL_REVIEW_AND_REPLICATION",
+      "branch": "REPEATED_TERRITORIAL_SIGNAL",
+      "condition": "territorial_eligible_windows >= 20 AND repeated_reversal_force_count > 0",
+      "mechanistic_nomination": "DO_NOT_COPY_SFO_PRIORITY_INCREASES; THEY ARE DIRECTIONALLY_SUSPECT_UNTIL_CAUSAL_REVIEW"
+    },
+    {
+      "action": "DESCRIPTIVE_IMPROVEMENT_NOMINATION; REPLICATE_MATCHED_PROFILE_BEFORE_ROW_ABLATION",
+      "branch": "LOWER_THAN_VANILLA_CLUSTER_ENVELOPE",
+      "condition": "territorial_eligible_windows >= 20 AND repeated_reversal_force_count == 0 AND reversal_candidate_rate < 0.222222",
+      "mechanistic_nomination": "SFO_TASK_PRIORITY_INCREASES_REPLICATION_ELIGIBLE; NO_CAUSAL_ROW_CLAIM"
+    },
+    {
+      "action": "NO_TEMPORAL_MECHANISTIC_NOMINATION",
+      "branch": "WITHIN_VANILLA_CLUSTER_ENVELOPE",
+      "condition": "territorial_eligible_windows >= 20 AND repeated_reversal_force_count == 0 AND 0.222222 <= reversal_candidate_rate <= 0.317073",
+      "mechanistic_nomination": "NONE"
+    },
+    {
+      "action": "DESCRIPTIVE_WORSENING_NOMINATION; REPLICATE_AND_CAUSAL_REVIEW",
+      "branch": "HIGHER_THAN_VANILLA_CLUSTER_ENVELOPE",
+      "condition": "territorial_eligible_windows >= 20 AND repeated_reversal_force_count == 0 AND reversal_candidate_rate > 0.317073",
+      "mechanistic_nomination": "DO_NOT_COPY_SFO_PRIORITY_INCREASES"
+    }
+  ],
+  "vanilla_reference": {
+    "note": "Leave-one-faction-out range is a descriptive cluster-sensitivity envelope, not a confidence interval or p-value.",
+    "territorial_candidate_rate": 0.270833,
+    "territorial_leave_one_faction_out_max": 0.317073,
+    "territorial_leave_one_faction_out_min": 0.222222,
+    "territorial_repeated_force_count": 0
+  }
+}

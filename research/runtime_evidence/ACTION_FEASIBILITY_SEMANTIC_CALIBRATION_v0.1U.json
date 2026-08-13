@@ -1,0 +1,196 @@
+{
+  "actor_window_count": 106,
+  "authority": "NO_ORDERS",
+  "calibration_contract": "OBSERVED_COMMAND_POINT_SEMANTIC_CALIBRATION_V1",
+  "capability_promotions": [
+    "Explicit Move callback points were queryable in this battle and produced QUERY_TRUE for 191/191 qualified samples.",
+    "All 16 explicit Move actor-windows showed ordered-position matching in the first sample.",
+    "Visible Attack Unit targets matched current-target state in 48/49 actor-windows."
+  ],
+  "command_modalities": {
+    "EXPLICIT_POINT_MOVE": {
+      "actor_count": 16,
+      "actors_with_current_target_match": 0,
+      "actors_with_movement": 12,
+      "actors_with_ordered_position_match": 16,
+      "point_query_evidence_qualified": true,
+      "point_semantics": "EXPLICIT_CALLBACK_POINT",
+      "qualified_reachability_counts": {
+        "NOT_APPLICABLE": 0,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 191,
+        "UNAVAILABLE": 0
+      },
+      "raw_reachability_counts": {
+        "NOT_APPLICABLE": 0,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 191,
+        "UNAVAILABLE": 0
+      },
+      "sample_count": 191,
+      "window_count": 16
+    },
+    "OPAQUE_FORMATION_ORIENTATION": {
+      "actor_count": 7,
+      "actors_with_current_target_match": 0,
+      "actors_with_movement": 5,
+      "actors_with_ordered_position_match": 0,
+      "point_query_evidence_qualified": false,
+      "point_semantics": "ZERO_VECTOR_SENTINEL_NOT_A_POINT",
+      "qualified_reachability_counts": {
+        "NOT_APPLICABLE": 153,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 0,
+        "UNAVAILABLE": 0
+      },
+      "raw_reachability_counts": {
+        "NOT_APPLICABLE": 0,
+        "QUERY_FALSE": 38,
+        "QUERY_TRUE": 115,
+        "UNAVAILABLE": 0
+      },
+      "sample_count": 153,
+      "window_count": 6
+    },
+    "OPAQUE_SELECTION_DOUBLE_CLICK": {
+      "actor_count": 28,
+      "actors_with_current_target_match": 0,
+      "actors_with_movement": 18,
+      "actors_with_ordered_position_match": 0,
+      "point_query_evidence_qualified": false,
+      "point_semantics": "ZERO_VECTOR_SENTINEL_NOT_A_POINT",
+      "qualified_reachability_counts": {
+        "NOT_APPLICABLE": 493,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 0,
+        "UNAVAILABLE": 0
+      },
+      "raw_reachability_counts": {
+        "NOT_APPLICABLE": 0,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 493,
+        "UNAVAILABLE": 0
+      },
+      "sample_count": 493,
+      "window_count": 24
+    },
+    "OPAQUE_SPECIAL_ABILITY": {
+      "actor_count": 6,
+      "actors_with_current_target_match": 0,
+      "actors_with_movement": 0,
+      "actors_with_ordered_position_match": 0,
+      "point_query_evidence_qualified": false,
+      "point_semantics": "ZERO_VECTOR_SENTINEL_NOT_A_POINT",
+      "qualified_reachability_counts": {
+        "NOT_APPLICABLE": 6,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 0,
+        "UNAVAILABLE": 0
+      },
+      "raw_reachability_counts": {
+        "NOT_APPLICABLE": 0,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 6,
+        "UNAVAILABLE": 0
+      },
+      "sample_count": 6,
+      "window_count": 6
+    },
+    "VISIBLE_UNIT_TARGET_ATTACK": {
+      "actor_count": 49,
+      "actors_with_current_target_match": 48,
+      "actors_with_movement": 30,
+      "actors_with_ordered_position_match": 0,
+      "point_query_evidence_qualified": false,
+      "point_semantics": "ZERO_VECTOR_SENTINEL_NOT_A_POINT",
+      "qualified_reachability_counts": {
+        "NOT_APPLICABLE": 444,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 0,
+        "UNAVAILABLE": 0
+      },
+      "raw_reachability_counts": {
+        "NOT_APPLICABLE": 0,
+        "QUERY_FALSE": 0,
+        "QUERY_TRUE": 444,
+        "UNAVAILABLE": 0
+      },
+      "sample_count": 444,
+      "window_count": 37
+    }
+  },
+  "defect_adjudication": {
+    "affected_actor_count": 2,
+    "affected_window_ids": [
+      "w5"
+    ],
+    "classification": "LIMITING_RESULT_CORRECTED_AT_EVIDENCE_LAYER",
+    "defect_id": "NONPOINT_ZERO_VECTOR_REACHABILITY_MISCLASSIFICATION",
+    "discarded_nonpoint_query_false_count": 38,
+    "discarded_nonpoint_query_true_count": 1058,
+    "explanation": "The legacy probe queried callback positions for every command. Non-point or opaque callbacks exposed a zero-vector sentinel, so those raw query results cannot support exact-point feasibility claims.",
+    "qualified_false_sample_count": 0,
+    "raw_false_sample_count": 38
+  },
+  "direct_acknowledgement_count": 0,
+  "explicit_point_observation": {
+    "actor_count": 16,
+    "actors_with_any_movement": 12,
+    "actors_with_initial_ordered_position_match": 16,
+    "query_false": 0,
+    "query_true": 191,
+    "sample_count": 191,
+    "unavailable": 0,
+    "valid_false_point_result_status": "UNVERIFIED_NONE_OBSERVED",
+    "window_count": 16
+  },
+  "installed_pack_sha256": "3acf60520b60f87f8c18e13532512324cb7a539626996ce19897fad94cf2d25d",
+  "interpretation_limits": [
+    "Command origin remains unresolved.",
+    "Qualified reachability applies only to explicit nonzero Move callback points in this capture.",
+    "The observation is scoped to one ordinary vanilla single-player battle.",
+    "No route completion, formation, collision, command legality, issue, acknowledgement, execution, or tactical outcome is established."
+  ],
+  "privacy_boundary": {
+    "personal_paths_in_repository": false,
+    "raw_log_in_repository": false,
+    "user_identity_in_repository": false
+  },
+  "project_issue_attempt_count": 0,
+  "qualified_explicit_point_reachability_counts": {
+    "NOT_APPLICABLE": 1096,
+    "QUERY_FALSE": 0,
+    "QUERY_TRUE": 191,
+    "UNAVAILABLE": 0
+  },
+  "raw_probe_reachability_counts": {
+    "NOT_APPLICABLE": 0,
+    "QUERY_FALSE": 38,
+    "QUERY_TRUE": 1249,
+    "UNAVAILABLE": 0
+  },
+  "rejected_or_unverified_claims": [
+    "The 38 raw QUERY_FALSE samples are not valid false results for explicit command points.",
+    "A valid QUERY_FALSE result on an explicit nonzero command point remains unobserved.",
+    "Ordered-position or current-target matching is not acknowledgement, execution causality, arrival, or outcome.",
+    "Aggregate player-command calibration is not evidence for any Transcendence-generated Battle 4 candidate point."
+  ],
+  "result_digest": "c1eda3165c7898eaafa81a73529ca7a51c92b1b27c8eedf35def03bfc9935d0c",
+  "sample_count": 1287,
+  "schema_version": 1,
+  "scope": "ONE_ORDINARY_VANILLA_SINGLE_PLAYER_BATTLE",
+  "source_manifest_sha256": "37a6669f48d3b1eeb6a7ba1b5dcda0041f7d4cbd6ceaec1d25ef03bcedbe2afb",
+  "source_public_capture_sha256": "a1c03ec12a4c2b70945311fc57b54f978fcca892a37b12d46a5daa6f22ebf579",
+  "source_raw_log_sha256": "b4f8c4ca9c285018772d50a4eda92f34572f742dd97967bca8229b0a6b3ce951",
+  "source_reexport_zip_sha256": "83b7c3d851605f290c6a50045be920cdddc7224c8f9e7e63deefba5323e2ff7d",
+  "source_windows_sha256": "e56e2e32fc5037bf104ea7da05184c7e591bec2394920b482174f808de7fa18f",
+  "status": "OBSERVED_COMMAND_POINT_SEMANTICS_CALIBRATED",
+  "visible_unit_target_observation": {
+    "actor_count": 49,
+    "actors_with_any_current_target_match": 48,
+    "actors_with_any_movement": 30,
+    "actors_with_initial_current_target_match": 48,
+    "window_count": 37
+  },
+  "window_count": 89
+}

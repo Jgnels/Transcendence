@@ -1,0 +1,95 @@
+{
+  "application_authority": "PROHIBITED",
+  "base_canonical_ledger_sha256": "37b947dbfab97b0e63a64f2cf85a637bfb67eda28fb5dcd9ff8f3d33c3c804ce",
+  "base_release": "v0.2I",
+  "contract": "CAMPAIGN_STRATEGIC_FEASIBILITY_LIVE_PREPARATION_V1_R1_REAL_TIMER_HOTFIX",
+  "evidence_status": "CONTROL_OFFLINE_HOTFIX_AFTER_OWNER_RUNTIME_LIMITING_RESULT",
+  "live_gate": {
+    "army_order_required": false,
+    "battle_required": false,
+    "no_assignment_behavior": "VALID_LIMITING_OBSERVATION_NO_QUERY_REQUEST",
+    "required_environment": "SFO_PLUS_DEDICATED_READ_ONLY_FEASIBILITY_PROBE_ONLY",
+    "save_required": false,
+    "status": "OPEN_OWNER_RUNTIME_OBSERVATION_REQUIRED",
+    "turn_advance_required": false
+  },
+  "offline_validation": {
+    "direct_tests_passed": 302,
+    "fixture_plan_digest": "8e2ce2872be8caa36e4c0a87f82f5a22bc8ce0afafec11d87abbdcaeebc3e6ae",
+    "fixture_plan_generation_100_run": {
+      "environment": "BUILD_CONTAINER_REFERENCE_ONLY",
+      "max_seconds": 0.007058,
+      "mean_seconds": 0.005381,
+      "min_seconds": 0.005171,
+      "query_count": 13,
+      "request_size_bytes": 3656,
+      "unique_result_digests": 1
+    },
+    "fixture_query_count": 13,
+    "fixture_sidecar_integration": "CAPTURE_COMPLETE",
+    "pack_build_aggregate_digest": "8fb13258e035e407a7885188a6a690468ef5860c55620e11d456b2d64b05df04",
+    "pack_rebuilds_identical": true,
+    "runtime_probe_tests_passed": 152,
+    "synthetic_lab_tests_passed": 150
+  },
+  "owner_runtime_limiting_result": {
+    "artifact": "research/runtime_evidence/CAMPAIGN_FEASIBILITY_LIVE_OBSERVATION_LIMITING_RESULT_v0.2I-r1.json",
+    "artifact_sha256": "aedda44ce6d65b75a025a4dac073c51c8cc7c5af988326aef8a0b8225b495da5",
+    "plan_digest": "1c498493b05ca4a8e69215938f3604332874b7f9b5bacab582534b5c0c3d5d37",
+    "query_count": 5,
+    "status": "EXECUTOR_READY_REQUEST_PRESENT_NO_RESULTS_OR_REJECTION"
+  },
+  "policy_authority": "NO_ORDERS",
+  "probe": {
+    "gameplay_mutation": false,
+    "lua_source_sha256": "f6b3373fb82a6a50655fd7f8d7f3aefa0d8d5170f649c19582c2c7da8b9c82ed",
+    "manifest_sha256": "390776be78bd92ecb07de7cf56cd6d77988042a7ffc3cd4aec8f0623e7fa98ee",
+    "pack_name": "transcendence_campaign_feasibility_probe.pack",
+    "pack_sha256": "86843cb3bbed02ddb99f90fe084b45ca784fc0e5e70d03dfea99cab613b2236d",
+    "pack_size_bytes": 42573,
+    "probe_kind": "campaign_feasibility",
+    "save_mutation": false
+  },
+  "prohibited_promotions": [
+    "ROUTE_GEOMETRY",
+    "ZONE_OF_CONTROL_CLEARANCE",
+    "INTERCEPTION_SAFETY",
+    "ACTION_LEGALITY",
+    "ORDER_ISSUE",
+    "ACKNOWLEDGEMENT",
+    "EXECUTION",
+    "CAUSAL_OUTCOME"
+  ],
+  "query_whitelist": [
+    "MODEL_HAS_CHARACTER_CQI",
+    "MODEL_CHARACTER_FROM_CQI",
+    "MODEL_HAS_FORCE_CQI",
+    "MODEL_FORCE_FROM_CQI",
+    "FORCE_ACTIVE_STANCE",
+    "POSITION_REACHABLE_THIS_TURN",
+    "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+    "POSITION_EVER_REACHABLE",
+    "REGION_SETTLEMENT_INTERFACE",
+    "SETTLEMENT_REACHABLE_THIS_TURN",
+    "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE",
+    "SETTLEMENT_EVER_REACHABLE",
+    "GARRISON_UNDER_SIEGE"
+  ],
+  "release": "v0.2I-r1",
+  "result_digest": "24c1563c53fbc25f53db4eba298700a6ec7392ff05faf59152c2ef5871e8f93e",
+  "schema_version": 1,
+  "transport": {
+    "append_log": "transcendence_runtime_log.txt",
+    "artifact_builder_sha256": "a0ae8949226f38c0ca2b16fbc89bf03bf1e8a1243bac8c0c833b3e603765b376",
+    "collector_script_sha256": "495ad5160a2aac404de9057e51937e25907dced5f7f355e62209b9797d17fce1",
+    "maximum_query_count": 16,
+    "poll_diagnostic_event": "FEASIBILITY_POLL_TICK",
+    "poll_timer": "REAL_UI_TIMER_250MS_WITH_IMMEDIATE_POLL",
+    "prepare_script_sha256": "c3c8e995d94dd2b6576c91182ddc79146d4c77995970463539fec10a52604123",
+    "request_file": "transcendence_campaign_feasibility_request.txt",
+    "request_seen_event": "FEASIBILITY_REQUEST_SEEN",
+    "request_writer": "LOCAL_PYTHON_SIDECAR_ATOMIC_REPLACE",
+    "sidecar_sha256": "248bc924249a27d16dfda63f42bd6729483efb9c0590345b97275ff01a51c1c7",
+    "snapshot_trigger": "FIRST_TICK_AFTER_WORLD_CREATED"
+  }
+}

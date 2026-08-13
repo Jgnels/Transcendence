@@ -1,0 +1,234 @@
+{
+  "aggregate_metrics": {
+    "candidate_rate_per_eligible_window": null,
+    "eligible_stable_context_region_windows": 0,
+    "oscillation_candidate_count": 0,
+    "repeated_oscillation_cluster_count": 0
+  },
+  "application_authority": "PROHIBITED",
+  "contract": "PLAYER_VISIBLE_NATIVE_DIRECTIONAL_CHURN_REPROCESS_v0.2L",
+  "evidence_label": "SUPPORTED_DERIVED_OWNER_EVIDENCE_LIMITING_RESULT",
+  "faction_analyses": [
+    {
+      "analysis_result_digest": "151667edc487ae131f02f98b294ce5b85b3d63e8b6111da9fdb61adaa726ed91",
+      "availability": {
+        "hidden_context_stability": "UNAVAILABLE",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+        "native_task_identity": "UNAVAILABLE",
+        "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+      },
+      "metrics": {
+        "aba_without_heading_reversal": 0,
+        "actor_four_frame_windows": 4,
+        "candidate_rate_per_eligible_window": null,
+        "eligible_non_aba_pattern": 0,
+        "eligible_stable_context_region_windows": 0,
+        "excluded_non_directional_interval": 2,
+        "excluded_non_region_anchor": 0,
+        "excluded_nonconsecutive_turns": 0,
+        "excluded_observed_context_change": 0,
+        "excluded_visibility_censoring": 2,
+        "oscillation_candidate_count": 0,
+        "repeated_oscillation_cluster_count": 0
+      },
+      "observed_ai_faction": "wh2_dlc11_vmp_the_barrow_legion",
+      "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+    },
+    {
+      "analysis_result_digest": "13e8e96b9b53cf58bf74184ff5a7e552451f44850b099769ec2ccfa3111da2a5",
+      "availability": {
+        "hidden_context_stability": "UNAVAILABLE",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+        "native_task_identity": "UNAVAILABLE",
+        "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+      },
+      "metrics": {
+        "aba_without_heading_reversal": 0,
+        "actor_four_frame_windows": 2,
+        "candidate_rate_per_eligible_window": null,
+        "eligible_non_aba_pattern": 0,
+        "eligible_stable_context_region_windows": 0,
+        "excluded_non_directional_interval": 1,
+        "excluded_non_region_anchor": 0,
+        "excluded_nonconsecutive_turns": 0,
+        "excluded_observed_context_change": 0,
+        "excluded_visibility_censoring": 1,
+        "oscillation_candidate_count": 0,
+        "repeated_oscillation_cluster_count": 0
+      },
+      "observed_ai_faction": "wh3_dlc20_chs_festus",
+      "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+    },
+    {
+      "analysis_result_digest": "54d858703506fecff52c424763248709227d2e5d1fbac8abe38af26221398163",
+      "availability": {
+        "hidden_context_stability": "UNAVAILABLE",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+        "native_task_identity": "UNAVAILABLE",
+        "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+      },
+      "metrics": {
+        "aba_without_heading_reversal": 0,
+        "actor_four_frame_windows": 4,
+        "candidate_rate_per_eligible_window": null,
+        "eligible_non_aba_pattern": 0,
+        "eligible_stable_context_region_windows": 0,
+        "excluded_non_directional_interval": 2,
+        "excluded_non_region_anchor": 0,
+        "excluded_nonconsecutive_turns": 0,
+        "excluded_observed_context_change": 0,
+        "excluded_visibility_censoring": 2,
+        "oscillation_candidate_count": 0,
+        "repeated_oscillation_cluster_count": 0
+      },
+      "observed_ai_faction": "wh_main_dwf_karak_ziflin",
+      "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+    },
+    {
+      "analysis_result_digest": "5c7c0e9b8a1fc4a885a67e215dfed1d72b46e318959d38f1a079fa30fa63ebb0",
+      "availability": {
+        "hidden_context_stability": "UNAVAILABLE",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+        "native_task_identity": "UNAVAILABLE",
+        "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+      },
+      "metrics": {
+        "aba_without_heading_reversal": 0,
+        "actor_four_frame_windows": 3,
+        "candidate_rate_per_eligible_window": null,
+        "eligible_non_aba_pattern": 0,
+        "eligible_stable_context_region_windows": 0,
+        "excluded_non_directional_interval": 2,
+        "excluded_non_region_anchor": 0,
+        "excluded_nonconsecutive_turns": 0,
+        "excluded_observed_context_change": 0,
+        "excluded_visibility_censoring": 1,
+        "oscillation_candidate_count": 0,
+        "repeated_oscillation_cluster_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_marienburg",
+      "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+    },
+    {
+      "analysis_result_digest": "4ffeac51b02f1cf255155c22c861123d600da52109254bc7d6761cd7c1954a2a",
+      "availability": {
+        "hidden_context_stability": "UNAVAILABLE",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+        "native_task_identity": "UNAVAILABLE",
+        "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+      },
+      "metrics": {
+        "aba_without_heading_reversal": 0,
+        "actor_four_frame_windows": 2,
+        "candidate_rate_per_eligible_window": null,
+        "eligible_non_aba_pattern": 0,
+        "eligible_stable_context_region_windows": 0,
+        "excluded_non_directional_interval": 1,
+        "excluded_non_region_anchor": 0,
+        "excluded_nonconsecutive_turns": 0,
+        "excluded_observed_context_change": 0,
+        "excluded_visibility_censoring": 1,
+        "oscillation_candidate_count": 0,
+        "repeated_oscillation_cluster_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_middenland",
+      "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+    },
+    {
+      "analysis_result_digest": "60b47f19defa950d0aa5d1db46a0b289ad8d723e916efb63c2433d3f4916a3a9",
+      "availability": {
+        "hidden_context_stability": "UNAVAILABLE",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+        "native_task_identity": "UNAVAILABLE",
+        "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+      },
+      "metrics": {
+        "aba_without_heading_reversal": 0,
+        "actor_four_frame_windows": 3,
+        "candidate_rate_per_eligible_window": null,
+        "eligible_non_aba_pattern": 0,
+        "eligible_stable_context_region_windows": 0,
+        "excluded_non_directional_interval": 2,
+        "excluded_non_region_anchor": 0,
+        "excluded_nonconsecutive_turns": 0,
+        "excluded_observed_context_change": 0,
+        "excluded_visibility_censoring": 1,
+        "oscillation_candidate_count": 0,
+        "repeated_oscillation_cluster_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_talabecland",
+      "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+    },
+    {
+      "analysis_result_digest": "0170fb39daee74f7ed9d0a5b39468cf2660227c999d2236d0107b25a9c7e4d0d",
+      "availability": {
+        "hidden_context_stability": "UNAVAILABLE",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+        "native_task_identity": "UNAVAILABLE",
+        "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+      },
+      "metrics": {
+        "aba_without_heading_reversal": 0,
+        "actor_four_frame_windows": 1,
+        "candidate_rate_per_eligible_window": null,
+        "eligible_non_aba_pattern": 0,
+        "eligible_stable_context_region_windows": 0,
+        "excluded_non_directional_interval": 1,
+        "excluded_non_region_anchor": 0,
+        "excluded_nonconsecutive_turns": 0,
+        "excluded_observed_context_change": 0,
+        "excluded_visibility_censoring": 0,
+        "oscillation_candidate_count": 0,
+        "repeated_oscillation_cluster_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_wissenland",
+      "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+    }
+  ],
+  "interpretation": {
+    "not_supported": [
+      "Zero eligible windows is not evidence that native CAI has good hysteresis; it is insufficient primary-endpoint exposure.",
+      "A four-frame source cannot contain the two non-overlapping A->B->A episodes required for the repeated primary signal unless longer evidence exists elsewhere.",
+      "No project-owned strategic planner or application authority is earned by this limiting result."
+    ],
+    "supported": [
+      "The preserved four-turn owner-safe cohort can be re-evaluated under the v0.2L preregistration without reconstructing a private raw log."
+    ]
+  },
+  "next_gate": "A future owner session must collect a longer visibility-safe cohort only after the run protocol is frozen; do not infer native hysteresis from this historical cohort.",
+  "policy_authority": "NO_ORDERS",
+  "result_digest": "197f9bcf4dc6ac7d77d860d8d53ab219da992de4fdab5a3076a890218bd4f741",
+  "schema_version": 1,
+  "scope": {
+    "foreign_ai_factions_visible_in_all_four_preserved_frames": [
+      "wh2_dlc11_vmp_the_barrow_legion",
+      "wh3_dlc20_chs_festus",
+      "wh_main_dwf_karak_ziflin",
+      "wh_main_emp_marienburg",
+      "wh_main_emp_middenland",
+      "wh_main_emp_talabecland",
+      "wh_main_emp_wissenland"
+    ],
+    "raw_owner_log_committed": false,
+    "turns": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "source": {
+    "foreign_entity_source_required": "WH3_PLAYER_FILTERED_LISTS",
+    "path": "research/runtime_evidence/CAMPAIGN_TURNS_4_7_REPROCESS_v0.1J.json",
+    "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+    "sha256": "8189081fb1b4ad57fb09592f5c9594480b42cf3f575d76eed94014cec7dc37a5",
+    "source_result_digest": "953e35299dd0ef9e06de9d5347df01cabbd79cce68727e8b7a12175a058bc03b"
+  }
+}

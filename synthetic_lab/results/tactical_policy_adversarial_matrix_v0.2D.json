@@ -1,0 +1,435 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "contract": "TACTICAL_POLICY_ADVERSARIAL_REPORT_V1",
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "This matrix tests deterministic policy contracts, not WH3 command quality.",
+    "No synthetic fixture promotes hidden information, acknowledgement, execution, causality, or tactical superiority.",
+    "Ratio-scale invariance is an engineering property of the policy evaluator, not a faction-general empirical threshold."
+  ],
+  "metamorphic_check_count": 3,
+  "metamorphic_checks": [
+    {
+      "base_digest": "9a9649f77e5c8fd6397792e12b16ed08b2298c0b35eb9fbdf07214b8a360bceb",
+      "check_id": "asset_order_invariance",
+      "operation": "REVERSE_ASSET_ORDER",
+      "passed": true,
+      "scenario_id": "simultaneous_terminal_and_local_crisis_preserves_first",
+      "transformed_digest": "9a9649f77e5c8fd6397792e12b16ed08b2298c0b35eb9fbdf07214b8a360bceb"
+    },
+    {
+      "base_digest": "a67e72b5720be3177cb2dd5e515c5209f813c026d03ce51c765025470235c500",
+      "check_id": "ratio_scale_invariance",
+      "operation": "SCALE_MODEL_COUNTS_X10",
+      "passed": true,
+      "scenario_id": "elite_cavalry_half_loss_triggers_preservation",
+      "transformed_digest": "a67e72b5720be3177cb2dd5e515c5209f813c026d03ce51c765025470235c500"
+    },
+    {
+      "base_digest": "737bc6b7871d9e6158b4a7427ae0761c54b02fd5ad5f5da7e1a5161ad72047d2",
+      "check_id": "policy_rule_order_invariance",
+      "operation": "REVERSE_POLICY_RULE_ORDER",
+      "passed": true,
+      "scenario_id": "target_concentration_without_selection_is_hypothesis_only",
+      "transformed_digest": "1519516bba099dc769c9cc097f5b16f02c486625a1ec8436faaebaa7956baf9b"
+    }
+  ],
+  "metamorphic_pass_count": 3,
+  "passed_case_count": 17,
+  "result_digest": "5ab0a7e9668b130811d1c10f6a0fe866e2933e8cc7370361a1b9d323bf1391f6",
+  "scenario_count": 17,
+  "scenarios": [
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+      "result_digest": "41e329aff376b95fe91c4ea116f6fff043f682e83cda3cfa397a6b32a22f6143",
+      "review_ids": [],
+      "scenario_id": "nonterminal_replay_exhaustion_abstains_outcome",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_NEW_HIGH_COMMITMENT_AFTER_TERMINAL_EVIDENCE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "TERMINAL_DISCIPLINE_FIRST",
+      "result_digest": "b306da03c3de5cf8692268a2e838528a068e1e0bfb0fca3ed0825c0a0c5dce3b",
+      "review_ids": [],
+      "scenario_id": "terminal_state_blocks_new_commitment",
+      "terminal_outcome_label": "OBSERVED_TERMINAL_BOUNDARY"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+      "result_digest": "73ab72c0f69c7e23a3a3051b5067480adb9a9a650c5b8ab9e28355ecd6ac430d",
+      "review_ids": [
+        "FORCE_COMPLETENESS_REVIEW"
+      ],
+      "scenario_id": "incomplete_force_defers_whole_force_assumption",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+      "result_digest": "a67e72b5720be3177cb2dd5e515c5209f813c026d03ce51c765025470235c500",
+      "review_ids": [
+        "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+      ],
+      "scenario_id": "elite_cavalry_half_loss_triggers_preservation",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+      "result_digest": "661e87137566205334bab476ead89478decdabefa2caef448da9f27154f84c03",
+      "review_ids": [],
+      "scenario_id": "large_elite_below_half_loss_does_not_trigger",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+      "result_digest": "56d0f4fc4f4a6695bf1268f6ed8881db76e3ac5f3bf1e0eb4f0a734012e78d3f",
+      "review_ids": [
+        "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+      ],
+      "scenario_id": "small_elite_above_half_loss_triggers_ratio_guard",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+      "result_digest": "4f508342687f2f7f7aa77a68b98d996f9fcfa645845a8b0c64598decbf65f838",
+      "review_ids": [
+        "COMMANDER_PRESERVATION_REVIEW"
+      ],
+      "scenario_id": "commander_routing_triggers_preservation",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+      "result_digest": "4e27f2d5a1e54acd705911e6e66977d39a174f3d69e422f6246fabf737a8658c",
+      "review_ids": [
+        "COMMANDER_PRESERVATION_REVIEW"
+      ],
+      "scenario_id": "commander_low_hitpoints_triggers_preservation",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_NEW_HIGH_COMMITMENT_AFTER_TERMINAL_EVIDENCE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "PRESERVATION_FIRST_EVEN_WITH_TERMINAL_EVIDENCE",
+      "result_digest": "9a9649f77e5c8fd6397792e12b16ed08b2298c0b35eb9fbdf07214b8a360bceb",
+      "review_ids": [
+        "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+      ],
+      "scenario_id": "simultaneous_terminal_and_local_crisis_preserves_first",
+      "terminal_outcome_label": "OBSERVED_TERMINAL_BOUNDARY"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+      "result_digest": "11ba4adb572a37906bf048763ad10b3e1f2b70677442629688b10be938a2d6c1",
+      "review_ids": [
+        "RESERVE_STATE_REVIEW"
+      ],
+      "scenario_id": "reserve_committed_late_is_not_absent",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE",
+        "RESERVE_STATE_UNKNOWN_DO_NOT_INFER_ABSENCE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+      "result_digest": "b6f4539ea09f6fa69bd82292fb52d188bd67e3ac2968f316961eda4b562d3d24",
+      "review_ids": [],
+      "scenario_id": "reserve_unknown_abstains_from_absence_inference",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+      "result_digest": "737bc6b7871d9e6158b4a7427ae0761c54b02fd5ad5f5da7e1a5161ad72047d2",
+      "review_ids": [
+        "TARGET_CONCENTRATION_UTILITY_REVIEW"
+      ],
+      "scenario_id": "target_concentration_without_selection_is_hypothesis_only",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+      "result_digest": "d91c930bb9544dc4e49f00a83201ee1f6d125d45d55668d87c0ef9a5f1d4bf1b",
+      "review_ids": [
+        "TARGET_CONCENTRATION_UTILITY_REVIEW"
+      ],
+      "scenario_id": "target_concentration_with_selection_is_observation_review",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [
+        "STALE_OBSERVATION_NO_TACTICAL_COMMITMENT_REVIEW"
+      ],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": null,
+      "passed": true,
+      "priority_ordering": "ABSTAIN_STALE_OBSERVATION",
+      "result_digest": "3d87ffe23019e953cee3db72dfb8ce291eaaf619e56454cf5774d98f336a7ce6",
+      "review_ids": [],
+      "scenario_id": "stale_observation_abstains",
+      "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+    },
+    {
+      "abstentions": [],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": "private or hidden field is prohibited at root.hidden_enemy_state",
+      "passed": true,
+      "priority_ordering": null,
+      "result_digest": null,
+      "review_ids": [],
+      "scenario_id": "hidden_enemy_field_fails_closed",
+      "terminal_outcome_label": null
+    },
+    {
+      "abstentions": [],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": "snapshot authority must remain NO_ORDERS",
+      "passed": true,
+      "priority_ordering": null,
+      "result_digest": null,
+      "review_ids": [],
+      "scenario_id": "authority_promotion_fails_closed",
+      "terminal_outcome_label": null
+    },
+    {
+      "abstentions": [],
+      "checks": {
+        "authority_boundary": true,
+        "error_expectation": true,
+        "forbidden_reviews": true,
+        "priority_ordering": true,
+        "required_abstentions": true,
+        "required_reviews": true,
+        "review_status": true,
+        "terminal_label": true
+      },
+      "error": "policy dense provenance changed",
+      "passed": true,
+      "priority_ordering": null,
+      "result_digest": null,
+      "review_ids": [],
+      "scenario_id": "foreign_policy_provenance_fails_closed",
+      "terminal_outcome_label": null
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260801,
+  "source_policy_digest": "4fe0d769dee3649bd2f4f9ce2db364ae6dbd75e045f618091096ff3a67de3fee",
+  "suite_id": "tactical_policy_adversarial_matrix_v0.2D"
+}

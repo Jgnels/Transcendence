@@ -1,0 +1,1770 @@
+{
+  "aggregate_timeline": {},
+  "battle_identity": "Battle of Eilhart \u2014 Reikland vs Empire Secessionists",
+  "claims_not_supported": [
+    "The owner trace is optimal tactical policy.",
+    "The sparse source establishes exact engagement, routing, reserve, fatigue, or flank timing.",
+    "Command events prove acceptance, execution, pathfinding success, or causal effectiveness.",
+    "Visible-enemy totals are complete before all enemy units become visible.",
+    "One vanilla replay establishes general tactical-AI quality or SFO compatibility."
+  ],
+  "command_profile": {
+    "command_counts": {
+      "Attack Unit": 150,
+      "Double Click": 86,
+      "Move": 127,
+      "Move Orientation Width": 19,
+      "Special Ability": 15
+    },
+    "command_event_count": 397,
+    "mean_command_interval_ms": 1766.919,
+    "median_command_interval_ms": 300.0,
+    "p90_command_interval_ms": 5000.0,
+    "selection_attributed_command_count": 0,
+    "selection_attribution_ratio": 0.0,
+    "special_ability_counts": {
+      "wh_main_item_abilities_potion_of_foolhardiness": 1,
+      "wh_main_spell_fire_fireball": 7,
+      "wh_main_spell_fire_fireball_upgraded": 4,
+      "wh_main_weapon_abilities_the_reikland_runefang": 3
+    },
+    "special_ability_timeline": [
+      {
+        "ability": "wh_main_spell_fire_fireball",
+        "time_ms": 244200
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball",
+        "time_ms": 273000
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball",
+        "time_ms": 318300
+      },
+      {
+        "ability": "wh_main_weapon_abilities_the_reikland_runefang",
+        "time_ms": 330500
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball_upgraded",
+        "time_ms": 350900
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball",
+        "time_ms": 354800
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball_upgraded",
+        "time_ms": 387800
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball_upgraded",
+        "time_ms": 433000
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball_upgraded",
+        "time_ms": 488000
+      },
+      {
+        "ability": "wh_main_weapon_abilities_the_reikland_runefang",
+        "time_ms": 511800
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball",
+        "time_ms": 606100
+      },
+      {
+        "ability": "wh_main_item_abilities_potion_of_foolhardiness",
+        "time_ms": 637500
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball",
+        "time_ms": 670700
+      },
+      {
+        "ability": "wh_main_spell_fire_fireball",
+        "time_ms": 706700
+      },
+      {
+        "ability": "wh_main_weapon_abilities_the_reikland_runefang",
+        "time_ms": 723000
+      }
+    ],
+    "sub_500ms_interval_count": 216,
+    "targeted_command_count": 150,
+    "targets": [
+      {
+        "command_count": 19,
+        "stable_unit_id": "2:u1020",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_spearmen_1"
+      },
+      {
+        "command_count": 15,
+        "stable_unit_id": "2:u1018",
+        "unit_class": "unknown",
+        "unit_type": "unknown"
+      },
+      {
+        "command_count": 12,
+        "stable_unit_id": "2:u1025",
+        "unit_class": "inf_mis",
+        "unit_type": "wh2_dlc13_emp_inf_archers_0"
+      },
+      {
+        "command_count": 11,
+        "stable_unit_id": "2:u1028",
+        "unit_class": "inf_mis",
+        "unit_type": "wh_main_emp_inf_handgunners"
+      },
+      {
+        "command_count": 10,
+        "stable_unit_id": "2:u1033",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_spearmen_0"
+      },
+      {
+        "command_count": 9,
+        "stable_unit_id": "2:u1024",
+        "unit_class": "inf_mis",
+        "unit_type": "wh2_dlc13_emp_inf_archers_0"
+      },
+      {
+        "command_count": 9,
+        "stable_unit_id": "2:u1023",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_greatswords"
+      },
+      {
+        "command_count": 8,
+        "stable_unit_id": "2:u1030",
+        "unit_class": "unknown",
+        "unit_type": "unknown"
+      },
+      {
+        "command_count": 7,
+        "stable_unit_id": "2:u1026",
+        "unit_class": "inf_mis",
+        "unit_type": "wh2_dlc13_emp_inf_archers_0"
+      },
+      {
+        "command_count": 7,
+        "stable_unit_id": "2:u1029",
+        "unit_class": "unknown",
+        "unit_type": "unknown"
+      },
+      {
+        "command_count": 7,
+        "stable_unit_id": "2:u1019",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_spearmen_1"
+      },
+      {
+        "command_count": 7,
+        "stable_unit_id": "2:u1032",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_spearmen_0"
+      },
+      {
+        "command_count": 6,
+        "stable_unit_id": "2:u1037",
+        "unit_class": "inf_mis",
+        "unit_type": "wh_main_emp_inf_crossbowmen"
+      },
+      {
+        "command_count": 5,
+        "stable_unit_id": "2:u1035",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_swordsmen"
+      },
+      {
+        "command_count": 4,
+        "stable_unit_id": "2:u1031",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_spearmen_0"
+      },
+      {
+        "command_count": 4,
+        "stable_unit_id": "2:u1034",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_swordsmen"
+      },
+      {
+        "command_count": 3,
+        "stable_unit_id": "2:u1022",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_spearmen_0"
+      },
+      {
+        "command_count": 3,
+        "stable_unit_id": "2:u1021",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_spearmen_0"
+      },
+      {
+        "command_count": 2,
+        "stable_unit_id": "2:u1027",
+        "unit_class": "inf_mis",
+        "unit_type": "wh_main_emp_inf_handgunners"
+      },
+      {
+        "command_count": 2,
+        "stable_unit_id": "2:u1036",
+        "unit_class": "inf_mel",
+        "unit_type": "wh_main_emp_inf_swordsmen"
+      }
+    ],
+    "thirty_second_buckets": [
+      {
+        "counts": {
+          "Move": 1,
+          "Move Orientation Width": 5
+        },
+        "end_ms": 60000,
+        "start_ms": 30000,
+        "total": 6
+      },
+      {
+        "counts": {
+          "Move": 4,
+          "Move Orientation Width": 2
+        },
+        "end_ms": 90000,
+        "start_ms": 60000,
+        "total": 6
+      },
+      {
+        "counts": {
+          "Move": 5,
+          "Move Orientation Width": 4
+        },
+        "end_ms": 120000,
+        "start_ms": 90000,
+        "total": 9
+      },
+      {
+        "counts": {
+          "Attack Unit": 1,
+          "Move": 2
+        },
+        "end_ms": 150000,
+        "start_ms": 120000,
+        "total": 3
+      },
+      {
+        "counts": {
+          "Attack Unit": 3,
+          "Double Click": 1,
+          "Move": 3,
+          "Move Orientation Width": 1
+        },
+        "end_ms": 180000,
+        "start_ms": 150000,
+        "total": 8
+      },
+      {
+        "counts": {
+          "Attack Unit": 2,
+          "Move": 4
+        },
+        "end_ms": 210000,
+        "start_ms": 180000,
+        "total": 6
+      },
+      {
+        "counts": {
+          "Attack Unit": 2,
+          "Double Click": 3,
+          "Move": 12
+        },
+        "end_ms": 240000,
+        "start_ms": 210000,
+        "total": 17
+      },
+      {
+        "counts": {
+          "Attack Unit": 3,
+          "Double Click": 3,
+          "Move": 12,
+          "Special Ability": 1
+        },
+        "end_ms": 270000,
+        "start_ms": 240000,
+        "total": 19
+      },
+      {
+        "counts": {
+          "Attack Unit": 2,
+          "Double Click": 2,
+          "Move": 17,
+          "Special Ability": 1
+        },
+        "end_ms": 300000,
+        "start_ms": 270000,
+        "total": 22
+      },
+      {
+        "counts": {
+          "Attack Unit": 7,
+          "Double Click": 5,
+          "Move": 1,
+          "Special Ability": 1
+        },
+        "end_ms": 330000,
+        "start_ms": 300000,
+        "total": 14
+      },
+      {
+        "counts": {
+          "Attack Unit": 3,
+          "Double Click": 6,
+          "Move": 4,
+          "Special Ability": 3
+        },
+        "end_ms": 360000,
+        "start_ms": 330000,
+        "total": 16
+      },
+      {
+        "counts": {
+          "Attack Unit": 11,
+          "Double Click": 3,
+          "Move": 1,
+          "Move Orientation Width": 2,
+          "Special Ability": 1
+        },
+        "end_ms": 390000,
+        "start_ms": 360000,
+        "total": 18
+      },
+      {
+        "counts": {
+          "Attack Unit": 12,
+          "Double Click": 1,
+          "Move": 7
+        },
+        "end_ms": 420000,
+        "start_ms": 390000,
+        "total": 20
+      },
+      {
+        "counts": {
+          "Attack Unit": 5,
+          "Double Click": 4,
+          "Move": 1,
+          "Move Orientation Width": 4,
+          "Special Ability": 1
+        },
+        "end_ms": 450000,
+        "start_ms": 420000,
+        "total": 15
+      },
+      {
+        "counts": {
+          "Attack Unit": 16,
+          "Double Click": 6,
+          "Move": 2
+        },
+        "end_ms": 480000,
+        "start_ms": 450000,
+        "total": 24
+      },
+      {
+        "counts": {
+          "Attack Unit": 9,
+          "Double Click": 7,
+          "Special Ability": 1
+        },
+        "end_ms": 510000,
+        "start_ms": 480000,
+        "total": 17
+      },
+      {
+        "counts": {
+          "Attack Unit": 15,
+          "Double Click": 7,
+          "Special Ability": 1
+        },
+        "end_ms": 540000,
+        "start_ms": 510000,
+        "total": 23
+      },
+      {
+        "counts": {
+          "Attack Unit": 13,
+          "Double Click": 5
+        },
+        "end_ms": 570000,
+        "start_ms": 540000,
+        "total": 18
+      },
+      {
+        "counts": {
+          "Attack Unit": 8,
+          "Double Click": 6,
+          "Move": 5
+        },
+        "end_ms": 600000,
+        "start_ms": 570000,
+        "total": 19
+      },
+      {
+        "counts": {
+          "Attack Unit": 9,
+          "Double Click": 8,
+          "Move": 15,
+          "Move Orientation Width": 1,
+          "Special Ability": 1
+        },
+        "end_ms": 630000,
+        "start_ms": 600000,
+        "total": 34
+      },
+      {
+        "counts": {
+          "Attack Unit": 10,
+          "Double Click": 7,
+          "Move": 12,
+          "Special Ability": 1
+        },
+        "end_ms": 660000,
+        "start_ms": 630000,
+        "total": 30
+      },
+      {
+        "counts": {
+          "Attack Unit": 10,
+          "Double Click": 6,
+          "Move": 8,
+          "Special Ability": 1
+        },
+        "end_ms": 690000,
+        "start_ms": 660000,
+        "total": 25
+      },
+      {
+        "counts": {
+          "Attack Unit": 6,
+          "Double Click": 4,
+          "Move": 10,
+          "Special Ability": 1
+        },
+        "end_ms": 720000,
+        "start_ms": 690000,
+        "total": 21
+      },
+      {
+        "counts": {
+          "Attack Unit": 3,
+          "Double Click": 2,
+          "Move": 1,
+          "Special Ability": 1
+        },
+        "end_ms": 739600,
+        "start_ms": 720000,
+        "total": 7
+      }
+    ],
+    "top_target_share": 0.126667
+  },
+  "dense_replay_design": {
+    "aggregate_interval_ms": 1000,
+    "authority": {
+      "ammo_modified": false,
+      "battle_speed_modified": false,
+      "damage_or_healing": false,
+      "orders_emitted": false,
+      "randomness_used": false,
+      "save_values_written": false,
+      "unitcontrollers_created": false,
+      "visibility_modified": false
+    },
+    "detail_interval_ms": 3000,
+    "dual_callbacks": [
+      "model-time repeat_callback",
+      "real-time repeat_real_callback"
+    ],
+    "heartbeat_real_ticks": 10,
+    "new_observations": [
+      "army identity and faction/subculture keys",
+      "stable unit identity with hierarchy-change records",
+      "deployment/controllability/valid-target state",
+      "officer, current, ordered, and threat-source positions",
+      "target identity, distance, and range relationship",
+      "fatigue, movement, melee, missile pressure, morale, routing, and flank state",
+      "one-second alliance aggregate battle curve",
+      "three-second unit trajectories and state durations",
+      "selection-attributed command stream",
+      "bounded inferred command attribution when direct selection is unavailable"
+    ],
+    "probe_kind": "battle_replay",
+    "real_tick_interval_ms": 500,
+    "schema_version": 2,
+    "selection_callback": "per-unit register_unit_selection_callback(unit, callback)",
+    "stable_identity": "alliance_index + unique_ui_id"
+  },
+  "deployment_movements": [
+    {
+      "deployed_ordered_width": 1.3999999761581,
+      "displacement_m": 41.334,
+      "initial_ordered_width": 1.3999999761581,
+      "role": "commander",
+      "stable_unit_id": "1:u1001",
+      "unit_type": "wh_main_emp_cha_karl_franz_0"
+    },
+    {
+      "deployed_ordered_width": 1.2000000476837,
+      "displacement_m": 40.716,
+      "initial_ordered_width": 1.2000000476837,
+      "role": "commander",
+      "stable_unit_id": "1:u1002",
+      "unit_type": "wh_main_emp_cha_wizard_fire_0"
+    },
+    {
+      "deployed_ordered_width": 32.380001068115,
+      "displacement_m": 9.268,
+      "initial_ordered_width": 29.420000076294,
+      "role": "frontline",
+      "stable_unit_id": "1:u1003",
+      "unit_type": "wh_main_emp_inf_halberdiers"
+    },
+    {
+      "deployed_ordered_width": 30.89999961853,
+      "displacement_m": 11.313,
+      "initial_ordered_width": 27.939998626709,
+      "role": "frontline",
+      "stable_unit_id": "1:u1004",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "deployed_ordered_width": 17.579999923706,
+      "displacement_m": 10.808,
+      "initial_ordered_width": 29.420000076294,
+      "role": "frontline",
+      "stable_unit_id": "1:u1005",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "deployed_ordered_width": 17.579999923706,
+      "displacement_m": 8.97,
+      "initial_ordered_width": 29.420000076294,
+      "role": "frontline",
+      "stable_unit_id": "1:u1006",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "deployed_ordered_width": 16.10000038147,
+      "displacement_m": 9.094,
+      "initial_ordered_width": 27.939998626709,
+      "role": "frontline",
+      "stable_unit_id": "1:u1007",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "deployed_ordered_width": 18.360000610352,
+      "displacement_m": 16.4,
+      "initial_ordered_width": 33.659999847412,
+      "role": "frontline",
+      "stable_unit_id": "1:u1008",
+      "unit_type": "wh2_dlc13_emp_inf_greatswords_ror_0"
+    },
+    {
+      "deployed_ordered_width": 41.200000762939,
+      "displacement_m": 67.208,
+      "initial_ordered_width": 41.200000762939,
+      "role": "ranged",
+      "stable_unit_id": "1:u1009",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "deployed_ordered_width": 41.200000762939,
+      "displacement_m": 42.268,
+      "initial_ordered_width": 41.200000762939,
+      "role": "ranged",
+      "stable_unit_id": "1:u1010",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "deployed_ordered_width": 41.200000762939,
+      "displacement_m": 110.566,
+      "initial_ordered_width": 41.200000762939,
+      "role": "ranged",
+      "stable_unit_id": "1:u1011",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "deployed_ordered_width": 15.199999809265,
+      "displacement_m": 34.49,
+      "initial_ordered_width": 41.799999237061,
+      "role": "ranged",
+      "stable_unit_id": "1:u1012",
+      "unit_type": "wh_main_emp_inf_handgunners"
+    },
+    {
+      "deployed_ordered_width": 12.39999961853,
+      "displacement_m": 72.377,
+      "initial_ordered_width": 41.799999237061,
+      "role": "ranged",
+      "stable_unit_id": "1:u1013",
+      "unit_type": "wh_main_emp_inf_handgunners"
+    },
+    {
+      "deployed_ordered_width": 40.400001525879,
+      "displacement_m": 120.902,
+      "initial_ordered_width": 40.400001525879,
+      "role": "cavalry",
+      "stable_unit_id": "1:u1014",
+      "unit_type": "wh_main_emp_cav_reiksguard"
+    },
+    {
+      "deployed_ordered_width": 20.10000038147,
+      "displacement_m": 28.195,
+      "initial_ordered_width": 20.10000038147,
+      "role": "artillery",
+      "stable_unit_id": "1:u1015",
+      "unit_type": "wh_main_emp_art_mortar"
+    }
+  ],
+  "evidence_status": "OBSERVED_SPARSE_SOURCE_WITH_RECONCILED_DERIVATIONS",
+  "identity_reconciliation": {
+    "canonical_unit_count": 34,
+    "identity_alias_count": 16,
+    "identity_conflicts": [],
+    "raw_unit_static_count": 50
+  },
+  "inferred_command_attribution": {
+    "high_confidence_count": 0,
+    "inferred_command_count": 0,
+    "records": [],
+    "status": "WITHHELD_SPARSE_SAMPLING",
+    "window_ms": 4500
+  },
+  "local_unit_outcomes": [
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": 0,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 1,
+      "is_commander": true,
+      "kills_observed_max": 74,
+      "last_observed_flags": {
+        "fatigue": "threshold_exhausted",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.15951491892338,
+      "last_observed_men": 1,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": -165.87155151367,
+        "y": 143.63676452637,
+        "z": -317.56039428711
+      },
+      "last_strategic_value_proxy": 207.36940002441,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 1,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:1:1001"
+      ],
+      "role": "commander",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1001",
+      "starting_ammo": 0,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "com",
+      "unit_type": "wh_main_emp_cha_karl_franz_0"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": 0,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 1,
+      "is_commander": false,
+      "kills_observed_max": 86,
+      "last_observed_flags": {
+        "fatigue": "threshold_tired",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.13070175051689,
+      "last_observed_men": 1,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 224.61186218262,
+        "y": 123.84265136719,
+        "z": -172.61058044434
+      },
+      "last_strategic_value_proxy": 70.578948974609,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 1,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:2:1002"
+      ],
+      "role": "commander",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.8,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1002",
+      "starting_ammo": 0,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "com",
+      "unit_type": "wh_main_emp_cha_wizard_fire_0"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": 105,
+      "casualties_observed_lower_bound": 105,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 120,
+      "is_commander": false,
+      "kills_observed_max": 65,
+      "last_observed_flags": {
+        "fatigue": "threshold_exhausted",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": true,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.046004567295313,
+      "last_observed_men": 15,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 307.98202514648,
+        "y": 142.69639587402,
+        "z": 252.47764587402
+      },
+      "last_strategic_value_proxy": 25.30251121521,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 15,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:3:1003"
+      ],
+      "role": "frontline",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.4
+      },
+      "stable_unit_id": "1:u1003",
+      "starting_ammo": 0,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mel",
+      "unit_type": "wh_main_emp_inf_halberdiers"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": 92,
+      "casualties_observed_lower_bound": 92,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 0.92500001192093,
+      "initial_men": 120,
+      "is_commander": false,
+      "kills_observed_max": 81,
+      "last_observed_flags": {
+        "fatigue": "threshold_very_tired",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": true
+      },
+      "last_observed_hitpoints_fraction": 0.18345411121845,
+      "last_observed_men": 28,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 18.269174575806,
+        "y": 135.72399902344,
+        "z": -200.49020385742
+      },
+      "last_strategic_value_proxy": 73.381645202637,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 28,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:4:1004"
+      ],
+      "role": "frontline",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1004",
+      "starting_ammo": 0,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mel",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": 87,
+      "casualties_observed_lower_bound": 87,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 120,
+      "is_commander": false,
+      "kills_observed_max": 45,
+      "last_observed_flags": {
+        "fatigue": "threshold_exhausted",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": true,
+        "shattered": false,
+        "under_missile_attack": true,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.12814009189606,
+      "last_observed_men": 33,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": -74.023422241211,
+        "y": 179.62901306152,
+        "z": -40.153034210205
+      },
+      "last_strategic_value_proxy": 51.256034851074,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 33,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:5:1005"
+      ],
+      "role": "frontline",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.4,
+        "routing_sample_ratio": 0.4
+      },
+      "stable_unit_id": "1:u1005",
+      "starting_ammo": 0,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mel",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": 35,
+      "casualties_observed_lower_bound": 35,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 120,
+      "is_commander": false,
+      "kills_observed_max": 22,
+      "last_observed_flags": {
+        "fatigue": "threshold_very_tired",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.63212561607361,
+      "last_observed_men": 85,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 387.88491821289,
+        "y": 137.30267333984,
+        "z": 210.11706542969
+      },
+      "last_strategic_value_proxy": 252.85025024414,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 85,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:6:1006"
+      ],
+      "role": "frontline",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1006",
+      "starting_ammo": 0,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mel",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": 26,
+      "casualties_observed_lower_bound": 26,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 0.92500001192093,
+      "initial_men": 120,
+      "is_commander": false,
+      "kills_observed_max": 60,
+      "last_observed_flags": {
+        "fatigue": "threshold_very_tired",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.56787437200546,
+      "last_observed_men": 94,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": -381.68643188477,
+        "y": 136.03337097168,
+        "z": 285.34375
+      },
+      "last_strategic_value_proxy": 227.14974975586,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 94,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:7:1007"
+      ],
+      "role": "frontline",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1007",
+      "starting_ammo": 0,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mel",
+      "unit_type": "wh_main_emp_inf_swordsmen"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": null,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 120,
+      "is_commander": false,
+      "kills_observed_max": 0,
+      "last_observed_flags": {
+        "fatigue": "threshold_fresh",
+        "idle": true,
+        "in_melee": false,
+        "moving": false,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 1.0,
+      "last_observed_men": 120,
+      "last_observed_time_ms": 128800,
+      "last_position": {
+        "x": 137.76055908203,
+        "y": 156.68803405762,
+        "z": 147.04721069336
+      },
+      "last_strategic_value_proxy": 1176.0,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 120,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:8:1008"
+      ],
+      "role": "frontline",
+      "sample_count": 3,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 1.0,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1008",
+      "starting_ammo": 0,
+      "terminal_state_observed": false,
+      "time_series_metrics": null,
+      "unit_class": "inf_mel",
+      "unit_type": "wh2_dlc13_emp_inf_greatswords_ror_0"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 1406,
+      "casualties_exact_if_terminal": 61,
+      "casualties_observed_lower_bound": 61,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 1,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 90,
+      "is_commander": false,
+      "kills_observed_max": 94,
+      "last_observed_flags": {
+        "fatigue": "threshold_very_tired",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": true
+      },
+      "last_observed_hitpoints_fraction": 0.13317230343819,
+      "last_observed_men": 29,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 412.08160400391,
+        "y": 136.66458129883,
+        "z": -53.042400360107
+      },
+      "last_strategic_value_proxy": 26.518491744995,
+      "local_alliance": true,
+      "minimum_observed_ammo": 394,
+      "minimum_observed_men": 29,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:8:1009",
+        "1:1:9:1009"
+      ],
+      "role": "ranged",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1009",
+      "starting_ammo": 1800,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mis",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 1263,
+      "casualties_exact_if_terminal": 47,
+      "casualties_observed_lower_bound": 47,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 1,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 90,
+      "is_commander": false,
+      "kills_observed_max": 61,
+      "last_observed_flags": {
+        "fatigue": "threshold_active",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.26747182011604,
+      "last_observed_men": 43,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 415.38876342773,
+        "y": 138.70979309082,
+        "z": -1.6557886600494
+      },
+      "last_strategic_value_proxy": 70.717788696289,
+      "local_alliance": true,
+      "minimum_observed_ammo": 537,
+      "minimum_observed_men": 43,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:10:1010",
+        "1:1:9:1010"
+      ],
+      "role": "ranged",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.8,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1010",
+      "starting_ammo": 1800,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mis",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": null,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 90,
+      "is_commander": false,
+      "kills_observed_max": 0,
+      "last_observed_flags": {
+        "fatigue": "threshold_fresh",
+        "idle": true,
+        "in_melee": false,
+        "moving": false,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 1.0,
+      "last_observed_men": 90,
+      "last_observed_time_ms": 128800,
+      "last_position": {
+        "x": 155.32034301758,
+        "y": 156.68075561523,
+        "z": 89.33024597168
+      },
+      "last_strategic_value_proxy": 350.0,
+      "local_alliance": true,
+      "minimum_observed_ammo": 1800,
+      "minimum_observed_men": 90,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:11:1011"
+      ],
+      "role": "ranged",
+      "sample_count": 3,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 1.0,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1011",
+      "starting_ammo": 1800,
+      "terminal_state_observed": false,
+      "time_series_metrics": null,
+      "unit_class": "inf_mis",
+      "unit_type": "wh2_dlc13_emp_inf_archers_0"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 1309,
+      "casualties_exact_if_terminal": 23,
+      "casualties_observed_lower_bound": 23,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 1,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 90,
+      "is_commander": false,
+      "kills_observed_max": 141,
+      "last_observed_flags": {
+        "fatigue": "threshold_exhausted",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.5727858543396,
+      "last_observed_men": 67,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 173.62872314453,
+        "y": 135.00680541992,
+        "z": -108.15336608887
+      },
+      "last_strategic_value_proxy": 306.36801147461,
+      "local_alliance": true,
+      "minimum_observed_ammo": 671,
+      "minimum_observed_men": 67,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:10:1012",
+        "1:1:12:1012"
+      ],
+      "role": "ranged",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1012",
+      "starting_ammo": 1980,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mis",
+      "unit_type": "wh_main_emp_inf_handgunners"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 959,
+      "casualties_exact_if_terminal": 13,
+      "casualties_observed_lower_bound": 13,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 1,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 90,
+      "is_commander": false,
+      "kills_observed_max": 98,
+      "last_observed_flags": {
+        "fatigue": "threshold_tired",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.5637680888176,
+      "last_observed_men": 77,
+      "last_observed_time_ms": 739600,
+      "last_position": {
+        "x": 97.274948120117,
+        "y": 137.26895141602,
+        "z": -164.18347167969
+      },
+      "last_strategic_value_proxy": 359.88821411133,
+      "local_alliance": true,
+      "minimum_observed_ammo": 1021,
+      "minimum_observed_men": 77,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:11:1013",
+        "1:1:13:1013"
+      ],
+      "role": "ranged",
+      "sample_count": 5,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.6,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1013",
+      "starting_ammo": 1980,
+      "terminal_state_observed": true,
+      "time_series_metrics": null,
+      "unit_class": "inf_mis",
+      "unit_type": "wh_main_emp_inf_handgunners"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": null,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 60,
+      "is_commander": false,
+      "kills_observed_max": 0,
+      "last_observed_flags": {
+        "fatigue": "threshold_fresh",
+        "idle": true,
+        "in_melee": false,
+        "moving": false,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 1.0,
+      "last_observed_men": 60,
+      "last_observed_time_ms": 128800,
+      "last_position": {
+        "x": 137.71925354004,
+        "y": 118.21862792969,
+        "z": -246.81770324707
+      },
+      "last_strategic_value_proxy": 1201.0,
+      "local_alliance": true,
+      "minimum_observed_ammo": 0,
+      "minimum_observed_men": 60,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:14:1014"
+      ],
+      "role": "cavalry",
+      "sample_count": 3,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 1.0,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1014",
+      "starting_ammo": 0,
+      "terminal_state_observed": false,
+      "time_series_metrics": null,
+      "unit_class": "cav_shk",
+      "unit_type": "wh_main_emp_cav_reiksguard"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_exact_if_terminal": null,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 100,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 1.0,
+      "initial_men": 44,
+      "is_commander": false,
+      "kills_observed_max": 0,
+      "last_observed_flags": {
+        "fatigue": "threshold_fresh",
+        "idle": true,
+        "in_melee": false,
+        "moving": false,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 1.0,
+      "last_observed_men": 44,
+      "last_observed_time_ms": 128800,
+      "last_position": {
+        "x": 172.56591796875,
+        "y": 157.72499084473,
+        "z": 30.519950866699
+      },
+      "last_strategic_value_proxy": 702.0,
+      "local_alliance": true,
+      "minimum_observed_ammo": 88,
+      "minimum_observed_men": 44,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:15:1015"
+      ],
+      "role": "artillery",
+      "sample_count": 3,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 1.0,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1015",
+      "starting_ammo": 88,
+      "terminal_state_observed": false,
+      "time_series_metrics": null,
+      "unit_class": "art_fld",
+      "unit_type": "wh_main_emp_art_mortar"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 15,
+      "casualties_exact_if_terminal": null,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 730700,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 0.79891020059586,
+      "initial_men": 1,
+      "is_commander": false,
+      "kills_observed_max": 212,
+      "last_observed_flags": {
+        "fatigue": "threshold_exhausted",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.79891020059586,
+      "last_observed_men": 1,
+      "last_observed_time_ms": 730700,
+      "last_position": {
+        "x": 276.64541625977,
+        "y": 136.65798950195,
+        "z": -41.753211975098
+      },
+      "last_strategic_value_proxy": 869.02740478516,
+      "local_alliance": true,
+      "minimum_observed_ammo": 20,
+      "minimum_observed_men": 1,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:12:1016"
+      ],
+      "role": "commander",
+      "sample_count": 1,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.0,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1016",
+      "starting_ammo": 35,
+      "terminal_state_observed": false,
+      "time_series_metrics": null,
+      "unit_class": "com",
+      "unit_type": "wh3_dlc25_emp_cha_master_engineer"
+    },
+    {
+      "alliance_index": 1,
+      "ammo_spent_observed_lower_bound": 14,
+      "casualties_exact_if_terminal": null,
+      "casualties_observed_lower_bound": 0,
+      "distance_travelled_observed_m": null,
+      "first_engagement_time_ms": null,
+      "first_observed_time_ms": 730700,
+      "first_routing_time_ms": null,
+      "identity_alias_count": 0,
+      "initial_hitpoints_fraction": 0.8090295791626,
+      "initial_men": 1,
+      "is_commander": false,
+      "kills_observed_max": 102,
+      "last_observed_flags": {
+        "fatigue": "threshold_exhausted",
+        "idle": false,
+        "in_melee": false,
+        "moving": true,
+        "rampaging": false,
+        "routing": false,
+        "shattered": false,
+        "under_missile_attack": false,
+        "wavering": false
+      },
+      "last_observed_hitpoints_fraction": 0.8090295791626,
+      "last_observed_men": 1,
+      "last_observed_time_ms": 730700,
+      "last_position": {
+        "x": 275.17343139648,
+        "y": 136.61929321289,
+        "z": -42.585067749023
+      },
+      "last_strategic_value_proxy": 883.17468261719,
+      "local_alliance": true,
+      "minimum_observed_ammo": 21,
+      "minimum_observed_men": 1,
+      "ordered_path_change_observed_m": null,
+      "raw_unit_ids": [
+        "1:1:13:1017"
+      ],
+      "role": "commander",
+      "sample_count": 1,
+      "sparse_sample_ratios_untrusted": {
+        "flank_threat_sample_ratio": 0.0,
+        "idle_sample_ratio": 0.0,
+        "melee_sample_ratio": 0.0,
+        "missile_pressure_sample_ratio": 0.0,
+        "routing_sample_ratio": 0.0
+      },
+      "stable_unit_id": "1:u1017",
+      "starting_ammo": 35,
+      "terminal_state_observed": false,
+      "time_series_metrics": null,
+      "unit_class": "com",
+      "unit_type": "wh3_dlc25_emp_cha_master_engineer"
+    }
+  ],
+  "outcome_anchors": {
+    "exact_total_casualties_available": false,
+    "local_casualties_observed_lower_bound": 489,
+    "local_kills_observed_max_sum": 1141,
+    "local_terminal_coverage_ratio": 0.647059,
+    "visible_enemy_casualties_observed_lower_bound": 1096,
+    "visible_enemy_terminal_coverage_ratio": 0.882353
+  },
+  "result_digest": "ff77f7792b005bb4b2e7ad242618e4fe578fec3c24555c951ee062bda67f4bff",
+  "sampling_assessment": {
+    "coverage_ratio": 0.020243,
+    "declared_detail_interval_ms": 3000,
+    "expected_detail_samples": 247,
+    "maximum_sample_gap_ms": 601900,
+    "observed_detail_samples": 5,
+    "observed_interval_samples": 0,
+    "quality": "SPARSE_PHASE_ONLY",
+    "samples": [
+      {
+        "reason": "INITIAL",
+        "sample_index": 1,
+        "scheduler_source": "unknown",
+        "time_ms": 100
+      },
+      {
+        "reason": "PHASE_Deployment",
+        "sample_index": 2,
+        "scheduler_source": "unknown",
+        "time_ms": 700
+      },
+      {
+        "reason": "PHASE_Deployed",
+        "sample_index": 3,
+        "scheduler_source": "unknown",
+        "time_ms": 128800
+      },
+      {
+        "reason": "PHASE_VictoryCountdown",
+        "sample_index": 4,
+        "scheduler_source": "unknown",
+        "time_ms": 730700
+      },
+      {
+        "reason": "PHASE_Complete",
+        "sample_index": 5,
+        "scheduler_source": "unknown",
+        "time_ms": 739600
+      }
+    ],
+    "time_series_metrics_valid": false,
+    "unique_sample_times": [
+      100,
+      700,
+      128800,
+      730700,
+      739600
+    ]
+  },
+  "schema_version": 1,
+  "source": {
+    "capture_verification_digest": "fcfec312c281dc92f53d49a5698332479bba5f2d19059dd071dcfd6638292607",
+    "raw_log_sha256": "61191615c008a48791397486fa7e841c383656fb313660ee48d44af3cece8860",
+    "reconciled_report_digest": "1f151473c0530a43f768ea2c3c01ae2df1faa397d79de5e1d6a001daef8352cb",
+    "replay_sha256": "76b8807f5cc2d223d454028f54fc18b791a254c3ce543aa587ad4286658e302b",
+    "tier4r_corpus_digest": "24af79128738bc648504094784eaced4d872ca05bf680c0e5f16061eac47da8d",
+    "tier4r_regression_digest": "0d93daf622e65e1bdf498c9a8526c2d34a79c93bbd29099a0d2c31c6ce149e02"
+  },
+  "tier4r": {
+    "calibration_anchors": {
+      "canonical_unit_count": 34,
+      "command_event_count": 397,
+      "duration_ms": 739600,
+      "local_casualties_observed_lower_bound": 489,
+      "local_kills_observed_max_sum": 1141,
+      "visible_enemy_casualties_observed_lower_bound": 1096
+    },
+    "checks": {
+      "casualty_claim_matches_terminal_coverage": true,
+      "command_attribution_is_explicit": true,
+      "commander_survival_stress_case_present": true,
+      "enemy_rout_stress_case_present": true,
+      "frontline_collapse_stress_case_present": true,
+      "ranged_output_stress_case_present": true,
+      "sampling_claims_match_coverage": true,
+      "stable_identity_contract_holds": true,
+      "unknown_terminal_state_stress_case_present": true,
+      "visibility_filter_observed_hidden_enemy_units": true
+    },
+    "corpus_id": "battle4_eilhart_observed_v1",
+    "evidence_status": "OBSERVED",
+    "fidelity_label": "OBSERVED_TRACE_REGRESSION_NOT_SIMULATION",
+    "policy_constraints": [
+      "Never interpret absent terminal units as undamaged or idle.",
+      "Never compute timing metrics when sampling coverage is invalid.",
+      "Never attribute commands to units without selection or explicitly labeled bounded inference evidence.",
+      "Never include hidden enemy unit identity or state.",
+      "Never treat the owner trace as an optimal policy label."
+    ],
+    "result_digest": "0d93daf622e65e1bdf498c9a8526c2d34a79c93bbd29099a0d2c31c6ce149e02",
+    "schema_version": 1,
+    "source_corpus_digest": "24af79128738bc648504094784eaced4d872ca05bf680c0e5f16061eac47da8d",
+    "stress_cases": {
+      "collapsed_frontline": [
+        "1:u1003",
+        "1:u1004",
+        "1:u1005"
+      ],
+      "endangered_commanders": [
+        "1:u1001"
+      ],
+      "high_output_ranged_or_specialists": [
+        "1:u1009",
+        "1:u1012",
+        "1:u1013"
+      ],
+      "routed_enemy_terminal": [
+        "2:u1019",
+        "2:u1020",
+        "2:u1021",
+        "2:u1022",
+        "2:u1023",
+        "2:u1024",
+        "2:u1025",
+        "2:u1026",
+        "2:u1027",
+        "2:u1028",
+        "2:u1032",
+        "2:u1033",
+        "2:u1034",
+        "2:u1036",
+        "2:u1037"
+      ],
+      "units_without_terminal_state": [
+        "1:u1008",
+        "1:u1011",
+        "1:u1014",
+        "1:u1015",
+        "1:u1016",
+        "1:u1017",
+        "2:u1031",
+        "2:u1035"
+      ]
+    },
+    "tier": "4R",
+    "warnings": [
+      "The owner command stream is optimal tactical policy.",
+      "Sparse phase samples establish exact engagement, routing, reserve, fatigue, or flank timing.",
+      "Units absent from the terminal sample survived without losses.",
+      "Visible-enemy totals equal complete enemy-army totals before all units are revealed.",
+      "Observed command events prove command acceptance or causal effectiveness.",
+      "One replay establishes general tactical-AI quality or SFO compatibility."
+    ]
+  }
+}

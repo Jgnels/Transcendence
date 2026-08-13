@@ -1,0 +1,1489 @@
+{
+  "cases": [
+    {
+      "case_id": "low_pressure_consolidates_instead_of_inventing_target",
+      "expected": {
+        "aggressive_commitment_allowed": true,
+        "forbidden_selected_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "TRACK_SINGLE_VISIBLE_RIVAL"
+        ],
+        "required_selected_types": [
+          "PRESERVE_STRATEGIC_RESERVE",
+          "CONSOLIDATE_LOW_PRESSURE_POSITION"
+        ],
+        "strategic_posture": "CONSOLIDATE_AND_RESERVE"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 2,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 4,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "home",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.5,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_low_pressure",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": []
+      }
+    },
+    {
+      "case_id": "coherent_visible_rival_creates_one_containment_priority",
+      "expected": {
+        "aggressive_commitment_allowed": true,
+        "required_selected_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "strategic_posture": "COHERENT_RIVAL_CONTAINMENT"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 1,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 2,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 120,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 30,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 32,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "home",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.5,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "pfront",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 30,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_coherent_rival",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "fragmented_pressure_is_aggregated_not_one_aggression_per_war",
+      "expected": {
+        "aggressive_commitment_allowed": true,
+        "forbidden_selected_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL"
+        ],
+        "required_selected_types": [
+          "MANAGE_FRAGMENTED_VISIBLE_PRESSURE",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "strategic_posture": "FRAGMENTED_PRESSURE_MANAGEMENT"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 1,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 2,
+            "y": 0
+          },
+          {
+            "faction": "enemy_a",
+            "id": "enemy_a_a",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 30,
+            "y": 0
+          },
+          {
+            "faction": "enemy_b",
+            "id": "enemy_b_a",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 34,
+            "y": 0
+          },
+          {
+            "faction": "enemy_c",
+            "id": "enemy_c_a",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 38,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "home",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.5,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "enemy_a_r",
+            "owner": "enemy_a",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 30,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "enemy_b_r",
+            "owner": "enemy_b",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 34,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "enemy_c_r",
+            "owner": "enemy_c",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 38,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_fragmented",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "enemy_a"
+          ],
+          [
+            "rival_bloc",
+            "enemy_b"
+          ],
+          [
+            "rival_bloc",
+            "enemy_c"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "exposed_front_vetoes_new_aggression",
+      "expected": {
+        "aggressive_commitment_allowed": false,
+        "required_selected_types": [
+          "STABILIZE_EXPOSED_FRONT"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 40,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 6,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "front",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.2,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "pregion",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 20,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_exposed",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "sieged_covered_front_preserves_relief_coverage",
+      "expected": {
+        "aggressive_commitment_allowed": false,
+        "required_selected_types": [
+          "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 1,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 3,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 5,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "front",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": true,
+            "value": 1.2,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "pregion",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 20,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_sieged_covered",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "recovery_capacity_is_protected_while_covered_front_holds",
+      "expected": {
+        "aggressive_commitment_allowed": true,
+        "required_selected_types": [
+          "PROTECT_RECOVERING_FIELD_FORCE",
+          "MAINTAIN_THREATENED_FRONT_COVERAGE",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "strategic_posture": "RECOVERY_AND_DEFENSE"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 1,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.45,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 2,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 3,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 7,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "front",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.2,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "pregion",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 20,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_recovery_defense",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "all_recovering_force_vetoes_new_aggression",
+      "expected": {
+        "aggressive_commitment_allowed": false,
+        "required_selected_types": [
+          "PROTECT_RECOVERING_FIELD_FORCE",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "strategic_posture": "RECOVERY_AND_CONSOLIDATION"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.4,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.5,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 2,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "home",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_all_recovering",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": []
+      }
+    },
+    {
+      "case_id": "critical_front_overflow_preserves_all_sources",
+      "expected": {
+        "aggressive_commitment_allowed": false,
+        "maximum_selected_priority_count": 6,
+        "minimum_critical_source_coverage": 1.0,
+        "required_selected_types": [
+          "CRITICAL_STRATEGIC_OVERFLOW"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "player_empire",
+            "id": "e0",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 5,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 35,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 65,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 95,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e4",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 125,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e5",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 155,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e6",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 185,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "front_0",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front_1",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.1,
+            "x": 30,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front_2",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.2,
+            "x": 60,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front_3",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.3,
+            "x": 90,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front_4",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.4,
+            "x": 120,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front_5",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.5,
+            "x": 150,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front_6",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.6,
+            "x": 180,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "enemy_home",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 250,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_critical_overflow",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "visible_nonwar_assets_do_not_become_hostile_priorities",
+      "expected": {
+        "aggressive_commitment_allowed": true,
+        "forbidden_selected_types": [
+          "TRACK_SINGLE_VISIBLE_RIVAL",
+          "CONTAIN_COHERENT_VISIBLE_RIVAL"
+        ],
+        "required_selected_types": [
+          "CONSOLIDATE_LOW_PRESSURE_POSITION"
+        ],
+        "strategic_posture": "CONSOLIDATE_AND_RESERVE"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "neutral_faction",
+            "id": "neutral",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 999,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 4,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "home",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "neutral_r",
+            "owner": "neutral_faction",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 5,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_nonwar_ignored",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": []
+      }
+    },
+    {
+      "case_id": "single_partial_rival_is_tracked_without_coherent_claim",
+      "expected": {
+        "aggressive_commitment_allowed": true,
+        "forbidden_selected_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL"
+        ],
+        "required_selected_types": [
+          "TRACK_SINGLE_VISIBLE_RIVAL",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "strategic_posture": "VISIBLE_RIVAL_WATCH"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 2,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 30,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "home",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_single_rival",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "coherent_rival_awareness_does_not_override_front_crisis_veto",
+      "expected": {
+        "aggressive_commitment_allowed": false,
+        "required_selected_types": [
+          "STABILIZE_EXPOSED_FRONT",
+          "CONTAIN_COHERENT_VISIBLE_RIVAL"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 40,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 42,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 44,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 120,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 5,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 8,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "front",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.2,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "pfront",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 20,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_coherent_crisis",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "noncritical_portfolio_is_bounded_at_six_records",
+      "expected": {
+        "aggressive_commitment_allowed": true,
+        "maximum_selected_priority_count": 6,
+        "minimum_critical_source_coverage": 1.0,
+        "required_selected_types": [
+          "MAINTAIN_THREATENED_FRONT_COVERAGE"
+        ]
+      },
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r0",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 20,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 40,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 60,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r4",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 80,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r5",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 100,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r6",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 120,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r7",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 140,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p0",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 7,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 27,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 47,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p3",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 67,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p4",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 87,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p5",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 107,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p6",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 127,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p7",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 50,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 147,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "front0",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front1",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 20,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front2",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 40,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front3",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 60,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front4",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 80,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front5",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 100,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front6",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 120,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "front7",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 140,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "p_home",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 200,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02f_many_covered",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    }
+  ],
+  "metamorphic_base": {
+    "armies": [
+      {
+        "faction": "rival_bloc",
+        "id": "r1",
+        "movement": 5,
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 0,
+        "y": 0
+      },
+      {
+        "faction": "rival_bloc",
+        "id": "r2",
+        "movement": 5,
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 1,
+        "y": 0
+      },
+      {
+        "faction": "rival_bloc",
+        "id": "r3",
+        "movement": 5,
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 2,
+        "y": 0
+      },
+      {
+        "faction": "player_empire",
+        "id": "p1",
+        "movement": 5,
+        "replenishment": 0.9,
+        "strength": 120,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 30,
+        "y": 0
+      },
+      {
+        "faction": "player_empire",
+        "id": "p2",
+        "movement": 5,
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 32,
+        "y": 0
+      }
+    ],
+    "controlled_faction": "rival_bloc",
+    "regions": [
+      {
+        "garrison_strength": 50,
+        "id": "home",
+        "owner": "rival_bloc",
+        "threat": 0.0,
+        "under_siege": false,
+        "value": 1.5,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "garrison_strength": 50,
+        "id": "pfront",
+        "owner": "player_empire",
+        "threat": 0.0,
+        "under_siege": false,
+        "value": 1.0,
+        "x": 30,
+        "y": 0
+      }
+    ],
+    "scenario_id": "v02f_coherent_rival",
+    "schema_version": 1,
+    "turn": 100,
+    "wars": [
+      [
+        "rival_bloc",
+        "player_empire"
+      ]
+    ]
+  },
+  "schema_version": 1,
+  "suite_id": "campaign_strategic_theater_portfolio_adversarial_matrix_v0.2F"
+}

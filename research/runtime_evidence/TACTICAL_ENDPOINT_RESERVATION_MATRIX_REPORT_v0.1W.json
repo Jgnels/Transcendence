@@ -1,0 +1,325 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Endpoint separation does not model route crossing, unit footprint, terrain, or collision simulation.",
+    "Synthetic endpoints are fixtures and do not establish live feasibility.",
+    "Reservations are shadow records and are not WH3 orders."
+  ],
+  "metamorphic_check_count": 3,
+  "metamorphic_checks": [
+    {
+      "base_digest": "4f0282de04eb4fc935fef3976cca57551f9f60621e99660f4e9986574127a803",
+      "check_id": "reservation_reverse_packet_order",
+      "operation": "REVERSE_PACKET_ORDER",
+      "passed": true,
+      "transformed_digest": "bf6cce84e5826380a59ea5996e5d8476e91ba5281d55f98d4caff965a200234e"
+    },
+    {
+      "base_digest": "7b7c8963cb85b0f1b1eb9c1e7cb95a248fc6fcc18d014593adc85163bce90c4a",
+      "check_id": "reservation_translate_endpoints",
+      "operation": "TRANSLATE_ALL_ENDPOINTS",
+      "passed": true,
+      "transformed_digest": "699899aa9efd307ae514f2d3c2cc6c9f9c3484fddedb2b8eddef299791378b20"
+    },
+    {
+      "base_digest": "4f0282de04eb4fc935fef3976cca57551f9f60621e99660f4e9986574127a803",
+      "check_id": "reservation_reverse_candidate_order",
+      "operation": "REVERSE_CANDIDATE_ORDER",
+      "passed": true,
+      "transformed_digest": "ec6c48ce5e65b965b2e5791cc54252a4e3f62ad42f71b298c0d682ed6d493dc9"
+    }
+  ],
+  "metamorphic_pass_count": 3,
+  "minimum_endpoint_separation_m": 12.0,
+  "report_contract": "TACTICAL_ENDPOINT_RESERVATION_MATRIX_REPORT_V1",
+  "result_digest": "7f8a5610c259f7f77a67939e9d45d71846e8963ebc541bb2513b416bedc0ef67",
+  "scenario_count": 14,
+  "scenario_pass_count": 14,
+  "scenarios": [
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 0,
+      "result_digest": "ccb626b1dedee90175b7f6a7bda4e77a572613b0961f166a9dc191ff689e7e9d",
+      "scenario_id": "empty_packet_set",
+      "search_node_count": 1,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 1,
+      "result_digest": "4bfdbb9b6b3b46badc795c8f3b9ca4aa7ceab57d8dbd4b6d41a353250b2db6cb",
+      "scenario_id": "single_ready_endpoint",
+      "search_node_count": 3,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 2,
+      "result_digest": "ea44ff9f8c7fe7a5ec2c7fe34e8e59a34d25a816c6737bd650d36ffaf20e5693",
+      "scenario_id": "two_separated_endpoints",
+      "search_node_count": 5,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 1,
+      "result_digest": "63b48b04a1e70fa8dbb122bb818ebd902cf350057e98a7a283094f89e0093688",
+      "scenario_id": "critical_wins_exact_collision",
+      "search_node_count": 4,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 1
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 2,
+      "result_digest": "4f0282de04eb4fc935fef3976cca57551f9f60621e99660f4e9986574127a803",
+      "scenario_id": "alternative_endpoint_avoids_collision",
+      "search_node_count": 5,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 2,
+      "result_digest": "7b7c8963cb85b0f1b1eb9c1e7cb95a248fc6fcc18d014593adc85163bce90c4a",
+      "scenario_id": "three_way_chain_uses_nonconflicting_pair",
+      "search_node_count": 6,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 1
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 1,
+      "result_digest": "4a13329b5c027a3c605e2bbc49aed14bdbd054155eb4f676d2c0104028056ca8",
+      "scenario_id": "identical_priority_tie_is_stable",
+      "search_node_count": 6,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 1
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 1,
+      "result_digest": "e403a1ab07cbdf36f17a589068dc7a96f24509e26968a05fb8a76cabe1f188ec",
+      "scenario_id": "deferred_packet_is_not_reserved",
+      "search_node_count": 3,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 1,
+      "result_digest": "88fc069ef79ee7dc01f0d219bed0ac977d92fbe958497bbd0561440fe43c3389",
+      "scenario_id": "critical_preempts_two_lower_candidates",
+      "search_node_count": 5,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 2
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 20,
+      "result_digest": "066dd241716827b096a35c8e94715f2f1018a6979d561412fd2576d77497cf27",
+      "scenario_id": "packet_limit_fallback_is_explicit",
+      "search_node_count": 20,
+      "solver_mode": "DETERMINISTIC_GREEDY_PACKET_LIMIT_FALLBACK",
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": null,
+      "passed": true,
+      "reservation_count": 1,
+      "result_digest": "72ab3426d387536a4dac2611c56874a487b751166e6b68abdc3281e979357fdb",
+      "scenario_id": "all_candidates_collide_one_survives",
+      "search_node_count": 13,
+      "solver_mode": "EXACT_BRANCH_AND_BOUND",
+      "unreserved_count": 2
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": "guarded packet set must prohibit order authority",
+      "passed": true,
+      "reservation_count": 0,
+      "result_digest": null,
+      "scenario_id": "altered_authority_fails_closed",
+      "search_node_count": 0,
+      "solver_mode": null,
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": "duplicate or invalid plan identity",
+      "passed": true,
+      "reservation_count": 0,
+      "result_digest": null,
+      "scenario_id": "duplicate_plan_identity_fails_closed",
+      "search_node_count": 0,
+      "solver_mode": null,
+      "unreserved_count": 0
+    },
+    {
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "no_execution_claim": true,
+        "reservation_count": true,
+        "reserved_objectives": true,
+        "separation_contract": true,
+        "solver_mode": true,
+        "unreserved_count": true
+      },
+      "error": "reservation endpoint must be finite",
+      "passed": true,
+      "reservation_count": 0,
+      "result_digest": null,
+      "scenario_id": "nonfinite_endpoint_fails_closed",
+      "search_node_count": 0,
+      "solver_mode": null,
+      "unreserved_count": 0
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "suite_id": "v0.1W_endpoint_reservation_matrix"
+}

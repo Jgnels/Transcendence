@@ -1,0 +1,69 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "contract": "NATIVE_CAI_SFO_REPLICATION_POLICY_V1",
+  "fixed_inputs": {
+    "minimum_territorial_eligible_windows_per_campaign": 20,
+    "original_sfo_rate": 0.461538,
+    "original_vanilla_rate": 0.270833,
+    "vanilla_cluster_envelope_max": 0.317073,
+    "vanilla_cluster_envelope_min": 0.222222
+  },
+  "global_rules": [
+    "Fresh SFO replication is staged before another vanilla run to minimize owner burden.",
+    "No result from Stage A alone earns a native-row ablation.",
+    "No wholesale SFO row copying is permitted.",
+    "No privileged diagnostic telemetry may become an application-time input.",
+    "No branch revives v0.2G/v0.2I or project-owned campaign orders."
+  ],
+  "policy_digest": "3171982731ca16a635723f5d5a788c6ce5fb397590f82a60cabb221e26ac0120",
+  "purpose": "STAGED_PROFILE_REPLICATION_AFTER_COMPOSITION_UNSTABLE_ONE_VANILLA_VS_ONE_SFO_COMPARISON",
+  "recovery": {
+    "original_sfo_rate": 0.142857,
+    "original_vanilla_rate": 0.157895,
+    "rule": "Continue recording recovery telemetry opportunistically, but do not request extra owner runs solely for recovery unless a future cohort crosses the existing preregistered positive threshold.",
+    "status": "DEPRIORITIZED_NO_SIGNAL_IN_BOTH_EXISTING_CAMPAIGNS"
+  },
+  "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+  "stage_a_fresh_sfo_replication": {
+    "branches": [
+      {
+        "action": "EXTEND_OR_REPEAT_SFO_ONLY; NO_ABLATION",
+        "branch": "SFO_REPLICATION_INSUFFICIENT_EXPOSURE",
+        "condition": "territorial_eligible_windows < 20"
+      },
+      {
+        "action": "CAUSAL_REVIEW_SPECIAL_POLICY_FIRST; DO_NOT_COPY_SFO_PRIORITY_INCREASES",
+        "branch": "SFO_REPLICATION_REPEATED_TERRITORIAL_SIGNAL",
+        "condition": "territorial_eligible_windows >= 20 AND repeated_reversal_force_count > 0"
+      },
+      {
+        "action": "PROCEED_TO_FRESH_VANILLA_REPLICATION; NO_ROW_ABLATION_YET",
+        "branch": "SFO_ELEVATION_REPLICATED",
+        "condition": "territorial_eligible_windows >= 20 AND repeated_reversal_force_count == 0 AND reversal_candidate_rate > 0.317073"
+      },
+      {
+        "action": "STOP_PROFILE_WORSENING_NOMINATION; NO_ROW_ABLATION",
+        "branch": "SFO_ELEVATION_NOT_REPLICATED",
+        "condition": "territorial_eligible_windows >= 20 AND repeated_reversal_force_count == 0 AND reversal_candidate_rate <= 0.317073"
+      }
+    ],
+    "run_first": true,
+    "same_profile_requirement": "Exact SFO hash + exact diagnostic probe hash + no extra mods + same campaign/difficulty protocol."
+  },
+  "stage_b_fresh_vanilla_replication": {
+    "composition_guard": {
+      "if_insufficient_or_direction_conflicts": "BLOCK_MECHANISTIC_NOMINATION_AS_COMPOSITION_UNRESOLVED",
+      "minimum_pooled_shared_eligible_windows_each_profile": 20,
+      "required_direction": "pooled_shared_faction_SFO_rate > pooled_shared_faction_VANILLA_rate",
+      "shared_faction_definition": "Faction contributes at least one eligible territorial window in at least one campaign of each profile."
+    },
+    "if_profile_separation_and_composition_guard_pass": "PROFILE_LEVEL_WORSENING_REPLICATED; EARN_MECHANISM_SELECTION_REVIEW_ONLY, NOT APPLICATION OR SFO-ROW COPYING",
+    "otherwise": "NO_NATIVE_ROW_ABLATION_EARNED",
+    "profile_separation_rule": "min(SFO_run1_rate, SFO_run2_rate) > max(VANILLA_run1_rate, VANILLA_run2_rate)",
+    "run_only_if": "Stage A branch SFO_ELEVATION_REPLICATED",
+    "same_profile_requirement": "Exact vanilla diagnostic profile, no gameplay mods, same campaign/difficulty protocol."
+  },
+  "study_version": "v0.2Q"
+}

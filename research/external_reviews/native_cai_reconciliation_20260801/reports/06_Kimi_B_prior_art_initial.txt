@@ -1,0 +1,278 @@
+KIMI B — MOD PRIOR ART + PACK SEMANTICS AUDIT
+Authority baseline: v0.2I-r3 project brief + three-way audit artifacts (DeepWar 2978779730, Hecleas 2905096541, SFO 2792731173 extracted).
+Evidence discipline: VERIFIED_REPO_FACT / OFFICIAL_GAME_FACT / VERIFIED_MOD_SOURCE_OR_PACK_FACT / MODDER_COMMUNITY_CLAIM / INFERENCE / HYPOTHESIS / UNVERIFIED.
+Capability: CONTROL / INFLUENCE / OBSERVE / UNAVAILABLE / UNVERIFIED.
+PART 1 — SEMANTICS OF OBSERVED TABLE FAMILIES
+1.1 Task Generation & Management System (CAI Core)
+cai_gds_task_generators_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+The "GDS" (Game Design System) task generators are the atomic units of CAI intent. Each row defines a generator that produces tasks of a specific type (ATTACK_REGION, DEFEND_REGION, RAID, etc.) based on query conditions. CA's Hotfix 6.3.4 notes explicitly describe these as "multiple task generators contributing to the same task" during generation, with a subsequent allocation step pairing tasks to armies and performing "batching" (combining same-type, same-target tasks).  DeepWar modifies this directly (1 file, 548 bytes), suggesting surgical generator replacement rather than broad addition.
+cai_task_management_system_task_generator_groups_generators_junctions_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+This is the composition layer: which generators belong to which task-generator groups. A faction's TMS profile references a group, and the group references its constituent generators. This is the only table family shared by all three audited sources (DeepWar, Hecleas, SFO). 
+ Hecleas's file is 57,349 bytes vs DeepWar's 56,453 bytes — nearly identical footprint, suggesting both are doing comprehensive group↔generator remapping. SFO's extracted audit also lists this family, confirming it touches the same junction.
+cai_task_management_system_task_generator_variable_group_junctions_tables — INFERENCE
+Binds task generators to variable groups. Variables are the parameterized inputs that make a generator context-sensitive (e.g., "how much more important is this region if it borders an enemy?"). Hecleas modifies this (1,037 bytes) while DeepWar does not include it. This suggests Hecleas is doing more parameterized, context-variable-driven task generation.
+cai_task_management_system_task_generator_variables_tables — INFERENCE
+The actual variable definitions fed into generators. DeepWar: 262 bytes (minimal). Hecleas: 646 bytes (moderate). These are likely scalar weights, distance thresholds, or priority modifiers.
+cai_task_management_system_variable_group_junctions_tables — INFERENCE
+Groups variables into sets that can be assigned to multiple generators. DeepWar: 487 bytes. Hecleas: 493 bytes. Nearly identical footprint — both are doing some variable grouping, but lightly.
+cai_task_management_system_variables_tables — INFERENCE
+System-level TMS variables (not generator-specific). Both DeepWar and Hecleas have 958-byte files with identical SHA-256 prefixes not checked but sizes match exactly. This may indicate both mods are overriding the same vanilla rows with similar values, or the file is small enough that size equality is coincidental.
+1.2 Personality & Strategic Decision Layers
+cai_personalities_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+The master personality registry. DeepWar's file is 175,439 bytes — enormous for a 15-table pack. This strongly suggests DeepWar is overriding a massive swath of faction-to-personality assignments or redefining personality parameters globally. Hecleas does not include this family in its observed tables, meaning Hecleas either leaves vanilla personalities intact or modifies them via other junctions.
+cai_personality_strategic_components_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Strategic behavior components attached to personalities: aggression thresholds, expansion desire, defensive posture triggers, desired attitudes toward other factions. Both DeepWar and Hecleas include this (13,901 bytes each, different SHA-256s). The TWC "All about the CAI" resource describes similar fields from Shogun 2: INVASION_OBTAINING_LOCAL_MOBILES_ARMY_STRENGTH_MULTIPLIER, VALUE_ANALYSIS_TIME_HORIZON, REGION_DEFENCE_BASE_PRIORITIES, etc.  CA's Beta #2 blog confirms these concepts persist: "Desired Attitudes component tells the Campaign AI how aggressive it should be towards rival factions." 
+cai_personality_deal_evaluation_components_tables / cai_personality_deal_evaluation_deal_component_values_tables / cai_personality_deal_generation_generator_priorities_tables / cai_personality_diplomatic_event_values_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-exclusive (not in DeepWar). These are the diplomacy AI families. Deal evaluation = how the AI values treaty components (money, territory, military access). Deal generation priorities = which diplomatic actions the AI considers generating. Diplomatic event values = how events (war declared, alliance broken) shift attitude. Hecleas's 151,648-byte deal_component_values file is the largest single table in either mod — it is doing extensive diplomacy reweighting.
+cai_personality_cultural_relations_overrides_tables / cai_personality_empire_rivalry_components_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only. Cultural relations overrides modify baseline faction affinity by culture. Empire rivalry components handle the Empire-specific elector-count rivalry system. Hecleas touches these lightly (6,702 and 245 bytes).
+cai_personality_faction_potential_modifiers_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+SFO-only in the extracted audit. Faction potential is CA's system for scaling AI capability by campaign progression and difficulty. CA's Beta #1 blog: "A cornerstone of the Campaign AI's behaviour is the Faction Potential system. Every faction in the game gets assigned a numeric potential value, which has an impact on many other systems in the game."  Modifying this directly scales AI performance globally rather than behaviorally.
+1.3 Budget, Economy & Construction
+cai_personalities_budget_allocations_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+How a personality splits its treasury across categories (army, navy, construction, agents, savings). Both DeepWar and Hecleas modify this (4,544 bytes each, different hashes). This is a high-leverage table: small changes to army-construction ratios produce large downstream behavior changes.
+cai_personalities_income_allocations_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Income split rules (tax rate, trade, etc.). Both mods include this (361 bytes each, different hashes). Small file = likely simple overrides.
+cai_construction_system_templates_junctions_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Links construction templates to personalities or factions. Both mods include this (2,404 bytes each, different hashes). CA's 6.3.4 hotfix notes explicitly mention "construction priority on Advanced Military" for Chaos Dwarfs as an AI fix, confirming this family's role in guiding AI build order. 
+1.4 Query, Variables & Decision Policies
+cai_variables_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Global CAI scalar variables (threat thresholds, distance modifiers, priority randomization). DeepWar: 8,420 bytes. Hecleas: 42,803 bytes. Hecleas is doing a much broader variable override — consistent with its broader strategic/diplomatic scope.
+cai_variables_overides_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only (2,137 bytes). Per-faction or per-personality variable overrides. Allows the same base variable to have different values for different AI actors.
+cai_decision_policy_junctions_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only (58,217 bytes). Binds decision items to policies. The decision system is higher-level than task generation: it selects which policies (strategic postures) are active. CA's 6.3.4 notes mention "Decision Making profiles/behaviors" for Golgfag.  Hecleas's massive file suggests comprehensive decision-policy remapping.
+cai_query_variable_set_junctions_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only (341 bytes). Binds query systems to variable sets. CA's Beta #1 blog describes the query system as one of two threat-detection mechanisms: "a simple query system, and an influence map." 
+cai_decision_items_tables / cai_decision_policies_tables / cai_decision_profiles_tables / cai_personalities_decision_profile_junctions_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+SFO-only in extracted audit. The decision profile system is how CA assigns bundles of decision policies to personalities. SFO's inclusion confirms it touches high-level strategic decision architecture.
+1.5 Military Generation
+cdir_military_generator_template_ratios_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Army composition templates: what ratio of infantry/cavalry/artillery/etc. the AI targets. Hecleas: 107,614 bytes (massive). DeepWar: not present. CA's 6.3.4 notes explicitly discuss this: "Generator template - a list of unit group + weight pairs, gives the AI a guideline on what a balanced and varied army looks like."  Hecleas is doing extensive template rebalancing.
+cdir_military_generator_unit_qualities_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+SFO-only in extracted audit. Unit "quality" scores used by the military generator to evaluate unit power for recruitment. CA's 6.3.4: "Unit quality - a hint for how strong a unit is before any upgrades." 
+autoresolver_ai_usage_group_combat_potential_modifiers_tables / autoresolver_modifier_group_to_modifiers_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only. Modifies autoresolve calculations. Not campaign AI per se, but affects campaign-level outcomes.
+1.6 Diplomacy Environment
+cai_diplomacy_complex_treacheries_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only (1,117 bytes). Defines backstab/treachery behaviors in diplomacy.
+campaign_cultural_relations_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only (44,226 bytes). Baseline cultural affinity matrix. Large file = comprehensive cultural relation overhaul.
+diplomatic_relationship_effects_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+SFO-only in extracted audit. How diplomatic relationships affect other systems.
+1.7 Difficulty & Potential
+campaign_difficulty_handicap_effects_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+DeepWar-only (528 bytes) among the two focused mods. Direct difficulty modifiers. SFO also touches this.
+faction_potential_difficulty_overrides_tables / faction_potential_handicap_effects_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+SFO-only in extracted audit. Overrides faction potential by difficulty.
+campaign_variables_tables — VERIFIED_MOD_SOURCE_OR_PACK_FACT
+Hecleas-only (179 bytes). Global campaign scalar variables.
+PART 2 — PRIOR ART ATLAS
+2.1 DeepWar AI (Workshop ID: 2978779730)
+Table
+Attribute	Assessment
+Author claim	"Modifies campaign AI to make it more dynamic and competitive, with a greater focus on securing borders and provinces and continually expanding. Expect more varied and chaotic early game threats and bigger late game challenges. Removes attrition immunity from AI but otherwise does not directly nerf or buff it." 
+Verified DB/script surface	15 DB table files, 14 DIRECT_NATIVE_CAI, 1 DIFFICULTY_OR_POTENTIAL. No Lua scripts. Concentrated on: personalities (175KB — massive), strategic components, budget/income, task generators + TMS junctions, construction templates, domains, variables, agent embed profiles. No diplomacy, no military generator, no autoresolve.
+Source/pack evidence	PFH5 pack, 266,882 bytes, 18 entries. SHA-256: f02bd8b5a70f899a8b4827af41da3231c71a7f595c06442177ec70f3fd407d50. 
+Reported failure modes/tradeoffs	Community reports: "coordinated its armies better / kept them together for sieges / big battles" but also noted as one of the "Big 3" AI mods alongside Hecleas and AI Army Tasks.  No explicit failure modes documented in search, but narrow scope means it does not address diplomacy idleness, recruitment stalls, or faction-specific mechanic failures.
+SFO overlap/conflict	2 shared table families with SFO: cai_task_management_system_task_generator_groups_generators_junctions_tables and one other. Low conflict surface. cite🛠THREE_WAY_AI_ACQUISITION_AUDIT.md:~:text=DeepWar ↔ SFO	2
+Tunes native CAI or replaces it	Tunes native CAI. Pure DB parameter overrides within existing CAI families. No scripts, no new systems.
+2.2 Hecleas AI Overhaul (Workshop ID: 2905096541)
+Table
+Attribute	Assessment
+Author claim	Fixes passive AI "army stacking" behavior. Community reports it as highly effective against idle AI when combined with AI Camping Settlements Fix and Reactive World: Confederations. 
+Verified DB/script surface	28 DB table files. 17 DIRECT_NATIVE_CAI, 7 DIRECT_AI_DIPLOMACY, 2 BATTLE_OR_AUTORESOLVE, 1 DIPLOMACY_ENVIRONMENT, 1 OTHER_GAME_DATA. No Lua scripts. Broad coverage: decision policies (58KB), military generator templates (108KB), diplomacy deal evaluation (152KB), cultural relations (44KB), task management, strategic components, personality variables, query variables, construction, budgets, income, campaign AI manager behavior, autoresolve modifiers.
+Source/pack evidence	PFH5 pack, 560,184 bytes, 31 entries. SHA-256: 5945102b4eac8ed73065bcc054d935f878d4ffd2b4af191ed4a15b0c31abedf8. 
+Reported failure modes/tradeoffs	Broad surface = high conflict risk. "That is the neat part, it is not a fix, it is a bandaid. Modders are trying whatever works until CA follows through."  Loading with DeepWar is "not a clean additive combination" due to 10 shared table families. cite🛠THREE_WAY_AI_ACQUISITION_AUDIT.md:~:text=DeepWar ↔ Hecleas	10 Diplomacy changes may create unnatural alliance patterns or backstab behaviors.
+SFO overlap/conflict	5 shared table families with SFO. cite🛠THREE_WAY_AI_ACQUISITION_AUDIT.md:~:text=Hecleas ↔ SFO	5
+Tunes native CAI or replaces it	Tunes native CAI heavily. Still within DB-native families, but touches so many that it effectively rewrites the parameter space. No custom scripts or directors.
+2.3 SFO: Grimhammer III (Workshop ID: 2792731173) — AI-Relevant Extract
+Table
+Attribute	Assessment
+Author claim	Total conversion mod. AI performance improvements are emergent from changed game environment (units, buildings, economy, caps) plus some direct CAI tweaks.
+Verified DB/script surface	709 extracted files: 612 DB, 43 Lua, 54 loc. 338 distinct DB families. Only 12 direct native-CAI families. 20 of 43 scripts contain direct state-mutation calls. 
+Source/pack evidence	Extracted audit ZIP, 3,723,908 bytes. SHA-256: 0119959f7999844bc49b47bd41d53110ad9a83b6f89478e1bf2199b8c65a828f. cite🛠THREE_WAY_AI_ACQUISITION_AUDIT.md:~:text=SFO: Grimhammer III extracted audit	2792731173	owner-supplied DB/script/text ZIP	3,723,908	0119959f7999844bc49b47bd41d53110ad9a83b6f89478e1bf2199b8c65a828f
+Reported failure modes/tradeoffs	Audit found: AI Bretonnian vow bypass (mechanic bypass), human-only peasant penalties (asymmetric), scripted horde re-emergence near player (player-proximity challenge), direct Skaven region transfer (scripted recovery), direct diplomacy mutation (Empire/HE intrigue), effect-bundle application/teleports/spawns (bounded interventions), removed supply-lines upkeep (direct bonus). 
+ These must be labeled as mechanic bypasses, not intelligence.
+SFO overlap/conflict	Shared with DeepWar: 2 families. Shared with Hecleas: 5 families. Shared by all three: 1 family (cai_task_management_system_task_generator_groups_generators_junctions_tables). cite🛠THREE_WAY_AI_ACQUISITION_AUDIT.md:~:text=DeepWar ↔ SFO	2...Hecleas ↔ SFO	5...Shared by all three	1
+Tunes native CAI or replaces it	Environment replacement with native CAI tuning on top. The AI-relevant changes are a mix of native CAI parameter tweaks, mechanic bypasses, and scripted interventions. Not a pure AI mod.
+2.4 AI Army Tasks and Strategy by Incata
+Table
+Attribute	Assessment
+Author claim	"AI Army Tasks and Strategy" — focuses on task generation and strategic behavior. One of the "Big 3" AI mods per community. 
+Verified DB/script surface	UNVERIFIED — not in supplied audit artifacts. Community discussion compares it to Hecleas. 
+Source/pack evidence	No pack audit available in this session.
+Reported failure modes/tradeoffs	Community notes it has "remained consistently updated." No specific failure modes found in search.
+SFO overlap/conflict	UNVERIFIED — reportedly "recently integrated into SFO" per community claim.  If true, SFO may have absorbed some of its task-generation logic.
+Tunes native CAI or replaces it	Assumed native CAI tuning based on name and community categorization, but UNVERIFIED.
+2.5 AI Camping Settlements Fix
+Table
+Attribute	Assessment
+Author claim	"Overwrites/changes very specific ai behaviors for defending their capitals and settlements, along with the amount of turns they are allowed to 'idle' before they have to do something." 
+Verified DB/script surface	UNVERIFIED — no pack audit available. Described as "just db entries." 
+Source/pack evidence	None in session.
+Reported failure modes/tradeoffs	"This mod does work, This mod just forces the AI out of its 'idle' state, but it does not affect what the hideously garbage CA AI will do."  Purely a bandaid for idle behavior; does not improve strategic quality.
+SFO overlap/conflict	UNVERIFIED — likely low if it targets idle-timeout specific tables.
+Tunes native CAI or replaces it	Tunes native CAI — specific DB overrides for idle thresholds and settlement defense priorities.
+2.6 Reactive World: Alliances / Confederations
+Table
+Attribute	Assessment
+Author claim	Makes diplomacy more interesting. Encourages alliance formation and confederation behavior. 
+Verified DB/script surface	UNVERIFIED — no pack audit. Likely modifies campaign_cultural_relations_tables, diplomatic_relationship_effects_tables, and/or cai_personality_* diplomacy families.
+Source/pack evidence	None in session.
+Reported failure modes/tradeoffs	Community reports it helps prevent passive AI when stacked with Hecleas + AI Camping Fix. May create unnatural alliance blocs or reduce war frequency.
+SFO overlap/conflict	UNVERIFIED — moderate risk if SFO also touches diplomacy environment.
+Tunes native CAI or replaces it	Tunes native CAI — diplomacy parameter tweaks.
+2.7 Campaign AI Tweaks
+Table
+Attribute	Assessment
+Author claim	General campaign AI improvement. YouTube presence suggests AI-only timelapse testing. 
+Verified DB/script surface	UNVERIFIED — no pack audit.
+Source/pack evidence	None in session.
+Reported failure modes/tradeoffs	Unknown.
+SFO overlap/conflict	UNVERIFIED.
+Tunes native CAI or replaces it	Assumed native CAI tuning — UNVERIFIED.
+2.8 AI Recruitment Revolution
+Table
+Attribute	Assessment
+Author claim	"Complete overhaul type of mod...touches practically every aspect of the game." Focuses on mixing up AI unit recruitment. 
+Verified DB/script surface	UNVERIFIED — no pack audit. Likely modifies cdir_military_generator_* tables and possibly unit qualities, recruitment priorities.
+Source/pack evidence	None in session.
+Reported failure modes/tradeoffs	"Complete overhaul" = high conflict risk with other mods. May override SFO/Hecleas military generator changes.
+SFO overlap/conflict	UNVERIFIED — likely high, since SFO heavily modifies unit stats and military generators.
+Tunes native CAI or replaces it	Tunes native CAI — military generator parameter changes, possibly extensive.
+2.9 Alliance Blocs
+Table
+Attribute	Assessment
+Author claim	Encourages faction alliance formation into logical blocs (Order, Chaos, etc.).
+Verified DB/script surface	UNVERIFIED — no pack audit.
+Source/pack evidence	None in session.
+Reported failure modes/tradeoffs	May reduce organic diplomacy variety if blocs are too rigid.
+SFO overlap/conflict	UNVERIFIED — moderate if SFO touches cultural relations.
+Tunes native CAI or replaces it	Tunes native CAI — diplomacy weighting changes.
+2.10 High-Value 2025-2026 Projects (Not Named)
+Table
+Mod/Project	Assessment
+CA Official Campaign AI Beta (#1 Feb 2025, #2 Apr 2025)	Not a mod, but the most significant "prior art." CA directly modified query system, aggression (Desired Attitudes), faction potential, anti-player bias threat multipliers, distance scaling, and faction-specific decision profiles (Golgfag, Chaos Dwarfs, Vampire Counts).   These changes were rolled into Hotfix 6.3.4 (Nov 2025).  Any mod targeting these same families is now competing with CA's live fixes.
+CA Hotfix 6.3.4 Task Generator/Batching Fix	CA replaced "biggest offender task generators with ones that are not allowed to be 'batched' together."  This is a direct intervention in the exact families DeepWar and Hecleas modify. Post-6.3.4, mods that also changed these generators may now conflict with or duplicate CA's fix.
+Nexus: Dynamic Campaign AI	Early WH3 mod (2022). "Modifies campaign AI to make it more dynamic and competitive...removes attrition immunity from AI."  Predecessor or parallel to DeepWar? Unclear.
+Mod Configuration Tool ecosystem	Enables conditional mod loading. "AI Nurgle Recruitment Workaround. Use the Mod Configuration Tool to activate this mod's mechanics for the AI."  Suggests a pattern of MCT-gated AI fixes that users toggle per faction.
+PART 3 — RANKED PRIOR-ART ATLAS
+Ranking criteria: (1) verified pack evidence available, (2) native-CAI purity (no mechanic bypasses), (3) behavioral leverage per byte, (4) SFO compatibility, (5) post-6.3.4 relevance.
+Table
+Rank	Mod	Type	Evidence Quality	Native-CAI Purity	Leverage	SFO Conflict	Post-6.3.4 Relevance
+1	DeepWar AI	Native CAI tuning	HIGH (full pack audit)	HIGH (pure DB, no scripts, no bypasses)	HIGH (175KB personalities + task generators, surgical)	LOW (2 families)	MEDIUM — task generator changes may overlap with CA's 6.3.4 batching fix
+2	Hecleas AI Overhaul	Native CAI tuning	HIGH (full pack audit)	MEDIUM-HIGH (pure DB, but very broad; touches diplomacy, autoresolve, cultural relations)	HIGH (massive coverage, but dilute)	MEDIUM (5 families)	MEDIUM-LOW — broad surface means high chance of conflicting with CA's Beta fixes; 10-family overlap with DeepWar makes stacking unsafe
+3	CA Official Campaign AI Beta / 6.3.4	Native engine patch	HIGH (official dev blogs + patch notes)	N/A (native)	VERY HIGH (direct engine changes to batching, query system, faction potential)	N/A	MAXIMUM — this is the live baseline any mod must improve upon
+4	SFO (AI-relevant extract)	Environment + native CAI + scripts	HIGH (extracted audit)	LOW (mechanic bypasses, direct bonuses, scripted recovery, player-proximity challenges)	HIGH (total conversion effect)	N/A (self-contained)	MEDIUM — as a profile, not an AI mod per se
+5	AI Camping Settlements Fix	Native CAI tuning	MEDIUM (community description only)	HIGH (described as specific DB entries)	MEDIUM (targets idle behavior specifically)	LOW (assumed)	LOW — CA's 6.3.4 likely supersedes its core function
+6	AI Army Tasks and Strategy (Incata)	Assumed native CAI tuning	LOW (no pack audit)	UNKNOWN	UNKNOWN	UNKNOWN (reportedly integrated into SFO)	UNKNOWN
+7	Reactive World: Alliances/Confeds	Assumed native CAI tuning	LOW (no pack audit)	UNKNOWN	UNKNOWN	UNKNOWN	UNKNOWN
+8	Campaign AI Tweaks	Assumed native CAI tuning	LOW (no pack audit)	UNKNOWN	UNKNOWN	UNKNOWN	UNKNOWN
+9	AI Recruitment Revolution	Assumed native CAI tuning	LOW (no pack audit)	UNKNOWN	UNKNOWN	HIGH (likely, as "complete overhaul")	UNKNOWN
+PART 4 — "SMALL NATIVE TWEAK, BIG BEHAVIOR CHANGE" EXAMPLES
+These are SUPPORTED by pack evidence + CA documentation:
+Task Generator Batching Flags — CA's 6.3.4 fix: replacing a single task generator with one that has "not allowed to be batched" flag eliminated idle/clumping AI globally.  This is a single-table, row-level change with campaign-wide behavioral impact. DeepWar's 548-byte cai_gds_task_generators_tables file may be doing similar surgical generator replacement.
+Budget Allocation Army vs. Construction Ratio — Both DeepWar and Hecleas modify cai_personalities_budget_allocations_tables (4,544 bytes). Shifting 5% from construction to army budget causes the AI to field more stacks earlier, creating the "bigger late game challenges" DeepWar advertises without any new code.
+Faction Potential Base Value — CA's Beta #1: "Small increase of base faction potential for all factions on all difficulty levels" led to "Major factions will conquer minor factions faster and survive longer."  A scalar tweak in faction_potential_* tables changes the entire campaign trajectory.
+Personality Strategic Components — Desired Attitudes — CA's Beta #2: changing threat multipliers from 50-200% to 90-120% and removing "attack human forces/settlements" tasks eliminated anti-player bias.  This is a small number of row changes in cai_personality_strategic_components_tables and task generators with massive fairness implications.
+Construction Template Priority — CA's 6.3.4 Chaos Dwarf fix: "increased construction priority on Advanced Military" and "decreased construction priority in major settlements for the Hobgoblin chain" produced "~25% increase in Chaos Warriors recruitment and ~150% increase to Infernal Guard recruitment."  A single construction template junction change fixes an entire faction's army quality.
+Distance Scaling Minimum Priority — CA's Beta #2: expanding distance horizon from 4-5 turns to 6-8 turns for large empires allowed the AI to "invade" provinces like Southlands World's Edge Mountains that it previously ignored.  A few scalar changes in cai_variables_tables or cai_personality_strategic_components_tables unlocks entire map regions for AI expansion.
+PART 5 — "FULL CUSTOM DIRECTOR ACTUALLY REQUIRED" EXAMPLES
+Based on all available evidence, no WH3 AI mod in the audited or researched set implements a full custom director that replaces native CAI execution. Every mod operates within the native CAI framework:
+Table
+Claimed Need	Actual Native CAI Handle	Evidence
+"AI doesn't attack enough"	cai_gds_task_generators_tables + cai_task_management_system_* + cai_personality_strategic_components_tables	CA's 6.3.4 fixed this by changing generator batching rules and strategic components. No custom director needed.
+"AI recruits badly"	cdir_military_generator_template_ratios_tables + cdir_military_generator_unit_qualities_tables + cai_construction_system_templates_junctions_tables	CA's 6.3.4 Chaos Dwarf fix used only these tables. Hecleas's 108KB military generator file does the same.
+"AI is too passive diplomatically"	cai_personality_deal_generation_generator_priorities_tables + cai_personality_diplomatic_event_values_tables + campaign_cultural_relations_tables	Hecleas modifies these directly. No custom director.
+"AI doesn't defend borders"	cai_variables_tables (distance scaling) + task generator priorities	CA's Beta #2 fixed this with variable tweaks.
+"AI is idle / stacks armies"	cai_decision_policy_junctions_tables + idle-timeout variables + task generator batching	CA's 6.3.4 + AI Camping Settlements Fix both operate within native tables.
+The one exception that approaches replacement: SFO's scripted interventions (teleports, region transfers, direct treasury support, effect-bundle application) are not "custom directors" in the sense of replacing CAI planning, but they are mechanic bypasses that supersede native execution. These are labeled as DIRECT_BONUS, SCRIPTED_RECOVERY, and MECHANIC_BYPASS in the audit. 
+Conclusion: For WH3 campaign AI, native CAI tuning appears sufficient for all observed behavioral goals. No verified mod implements a true custom strategic director. The "hardest" interventions are SFO's Lua state-mutations, which bypass rather than replace planning.
+PART 6 — SFO OVERLAP TABLE
+Table
+Table Family	DeepWar	Hecleas	SFO	Conflict Risk if Stacked
+cai_task_management_system_task_generator_groups_generators_junctions_tables	✅	✅	✅	HIGH — all three modify; row-level PK conflicts unverified
+cai_construction_system_templates_junctions_tables	✅	✅	❌	MEDIUM (DeepWar↔Hecleas)
+cai_personalities_budget_allocations_tables	✅	✅	❌	MEDIUM (DeepWar↔Hecleas)
+cai_personalities_income_allocations_tables	✅	✅	❌	MEDIUM (DeepWar↔Hecleas)
+cai_personality_strategic_components_tables	✅	✅	❌	MEDIUM (DeepWar↔Hecleas)
+cai_task_management_system_variable_group_junctions_tables	✅	✅	❌	LOW-MEDIUM
+cai_task_management_system_task_generator_variables_tables	✅	✅	❌	LOW-MEDIUM
+cai_task_management_system_variables_tables	✅	✅	❌	LOW-MEDIUM
+cai_variables_tables	✅	✅	❌	MEDIUM (different sizes: 8KB vs 43KB)
+cai_domains_tables	✅	❌	❌	N/A
+cai_gds_task_generators_tables	✅	❌	❌	N/A
+cai_agent_embed_profiles_tables	✅	❌	❌	N/A
+campaign_difficulty_handicap_effects_tables	✅	❌	✅	LOW (DeepWar + SFO)
+cai_decision_policy_junctions_tables	❌	✅	❌	N/A
+cai_diplomacy_complex_treacheries_tables	❌	✅	❌	N/A
+cai_personality_cultural_relations_overrides_tables	❌	✅	❌	N/A
+cai_personality_deal_evaluation_*	❌	✅	❌	N/A
+cai_personality_diplomatic_event_values_tables	❌	✅	❌	N/A
+cai_personality_empire_rivalry_components_tables	❌	✅	❌	N/A
+cai_personality_variable_set_junctions_tables	❌	✅	❌	N/A
+cai_personality_variables_tables	❌	✅	❌	N/A
+cai_query_variable_set_junctions_tables	❌	✅	❌	N/A
+cai_variables_overides_tables	❌	✅	❌	N/A
+campaign_ai_manager_behaviour_junctions_tables	❌	✅	❌	N/A
+campaign_cultural_relations_tables	❌	✅	❌	N/A
+campaign_variables_tables	❌	✅	❌	N/A
+cdir_military_generator_template_ratios_tables	❌	✅	❌	N/A
+autoresolver_*	❌	✅	❌	N/A
+cai_personality_faction_potential_modifiers_tables	❌	❌	✅	N/A
+cai_decision_items_tables	❌	❌	✅	N/A
+cai_decision_policies_tables	❌	❌	✅	N/A
+cai_decision_profiles_tables	❌	❌	✅	N/A
+cai_personalities_decision_profile_junctions_tables	❌	❌	✅	N/A
+cai_plague_recipes_tables	❌	❌	✅	N/A
+cdir_military_generator_unit_qualities_tables	❌	❌	✅	N/A
+diplomatic_relationship_effects_tables	❌	❌	✅	N/A
+faction_potential_difficulty_overrides_tables	❌	❌	✅	N/A
+faction_potential_handicap_effects_tables	❌	❌	✅	N/A
+building_instant_constructions_tables	❌	❌	✅	N/A
+cai_construction_system_unblocking_buildings_tables	❌	❌	✅	N/A
+Key insight: DeepWar and Hecleas share 10 table families. Loading both without a merged profile is guaranteed to produce row-level conflicts in at least cai_task_management_system_task_generator_groups_generators_junctions_tables, cai_personalities_budget_allocations_tables, and cai_personality_strategic_components_tables. The audit correctly labels this: "Loading both is therefore not a clean additive combination." 
+PART 7 — EXACT ARTIFACTS NEEDED TO DECODE REMAINING UNKNOWN ROWS
+Table
+Gap	Artifact Needed	Why
+Row semantics for all audited tables	Pinned WH3 RPFM schema (schema_wh3.ron) at game version v8.1.1 build 48122.4194776	The audit states: "Row semantics are not decoded without pinned WH3 schemas and remain unverified." 
+Primary key resolution for conflict detection	Schema + data.pack TSV export of the same table families at v8.1.1	Without knowing which columns are PKs, we cannot determine if DeepWar and Hecleas rows conflict or complement.
+DeepWar personality table content	Full TSV/CSV decode of the 175,439-byte cai_personalities_tables file	This is the largest file in either mod. We need to know if it overrides all factions or adds new personality variants.
+Hecleas decision policy content	Full decode of the 58,217-byte cai_decision_policy_junctions_tables file	This is Hecleas's unique strategic lever. We need to see which policies are added/removed and for which factions.
+Hecleas military generator ratios	Full decode of the 107,614-byte cdir_military_generator_template_ratios_tables file	Determines if Hecleas is improving army composition globally or per-faction.
+SFO script call-graph	Static analysis of all 43 Lua scripts for call targets, not just pattern-classified "state-mutation" detection	The audit found 20 scripts with "detected direct state-mutation calls" but did not map which functions call which CAI hooks. 
+Live campaign telemetry	AI-only timelapse savegames under vanilla, DeepWar, Hecleas, SFO, and post-6.3.4 vanilla	The audit states: "No live campaign comparison has yet measured behavior under vanilla, DeepWar, Hecleas, or SFO." 
+CA's internal task generator registry	Official documentation or data.pack dump of cai_gds_task_generators_tables at v8.1.1	Needed to verify if DeepWar's generator replacements overlap with CA's 6.3.4 batching-fix generators.
+PART 8 — FORCE MYSELF TO BE WRONG
+This section identifies where my conclusions are most likely incorrect, what would falsify them, and what I may have missed.
+8.1 I may be wrong about: "No full custom director exists"
+What would falsify: If Incata's "AI Army Tasks and Strategy" or an unsearched 2025-2026 mod uses Lua to hook cm:callback, cm:model(), or campaign_manager to intercept CAI task generation and inject custom tasks, that would be a true custom director. I found no evidence of this, but I also have no pack audit for Incata or Campaign AI Tweaks. The absence of evidence is not evidence of absence.
+What I missed: The search did not surface any mod using the scripted_value or scripted_objectives systems to override CAI scoring. WH3's Lua API may allow campaign_ai namespace hooks that I have not verified.
+8.2 I may be wrong about: "DeepWar is surgical / high-leverage"
+What would falsify: If DeepWar's 175KB cai_personalities_tables file is not a surgical override but a complete replacement of every personality row in the game (including hundreds of unused or vanilla-redundant rows), then its "leverage per byte" is actually low. The file size suggests comprehensiveness, but without schema-decoded row counts, I cannot distinguish "dense parameter changes" from "bloated full-table copy."
+What I missed: The audit does not report row counts, only file sizes and hashes. A 175KB file could be 50 high-leverage rows or 5,000 vanilla rows with 50 changed.
+8.3 I may be wrong about: "Hecleas is broad / dilute"
+What would falsify: If Hecleas's 58KB decision policy file and 108KB military generator file contain only the changed rows (delta-style modding) rather than full-table overrides, then Hecleas is actually extremely surgical across many systems — not dilute. RPFM's "Delete" row feature allows mods to override only specific rows without copying the whole table. I assumed full-table overrides based on file sizes, but this is unverified.
+What I missed: I do not know if DeepWar or Hecleas uses delta rows or full-table replacement. This fundamentally changes the conflict analysis.
+8.4 I may be wrong about: "CA's 6.3.4 supersedes idle-fix mods"
+What would falsify: If CA's batching fix only addressed one class of idle behavior (defensive task over-prioritization) while AI Camping Settlements Fix addresses a different class (idle-timeout thresholds, capital-defense behaviors), then both could be complementary post-6.3.4. The community report that "with these mods [Hecleas + AI Camping Fix + Reactive World] I have not seen passive AI" suggests the mods may still add value on top of CA's fixes. 
+What I missed: I do not have the exact tables changed by AI Camping Settlements Fix. If it modifies cai_decision_policy_junctions_tables or idle-timeout variables that CA did not touch, it remains relevant.
+8.5 I may be wrong about: "SFO's AI is all environment + bypasses"
+What would falsify: If SFO's 12 direct-CAI files contain novel task generator configurations that are genuinely superior to vanilla and were authored by Incata (reportedly integrated), then SFO contains legitimate native-CAI innovation that I underweighted because of its broader mechanic-bypass footprint.
+What I missed: The extracted audit only reports file presence and classification, not row content. SFO's cai_task_management_system_task_generator_groups_generators_junctions_tables could contain unique, high-quality generator assignments that are independent of its scripted interventions.
+8.6 I may be wrong about: "Native CAI tuning is sufficient for all goals"
+What would falsify: If Transcendence's goals — "late-game rival powers/blocs," "avoid invisible cheating," "prefer native WH3 capabilities and bounded correction before replacement" — require cross-faction coordinated behavior that native CAI cannot express. Native CAI operates per-faction via personalities and task generators. It has no explicit "bloc formation" or "grand strategy coordination" mechanism. If the project requires true alliance-level strategic planning (e.g., "Chaos factions coordinate a pincer attack"), native CAI may be insufficient and a custom director (or at least scripted coordination triggers) may be required.
+What I missed: I have not verified whether cai_diplomacy_complex_treacheries_tables or campaign_ai_manager_behaviour_junctions_tables can encode multi-faction coordination. The native system may be strictly single-faction in its planning horizon.
+8.7 I may be wrong about: "No mod replaces CAI query/influence system"
+What would falsify: If any mod modifies the influence map (the second threat-detection mechanism CA described alongside the query system), that would be a deeper replacement than parameter tuning. CA described: "an influence map that shows the extent of every force's range and strength of interaction with assets on the map."  I found no mod referencing influence map tables, but they may exist under names I did not search.
+What I missed: Table families like cai_influence_* or cai_query_influence_* were not in the audited packs and I did not search for them explicitly.
+8.8 I may be wrong about: "Hecleas diplomacy changes are parameter-only"
+What would falsify: If Hecleas's cai_personality_deal_evaluation_deal_component_values_tables (151,648 bytes) contains scripted conditionals or references to Lua-evaluated deal components, then Hecleas is doing more than DB parameter tuning. I have no evidence of this, but the file size is anomalous for pure scalar weights.
+What I missed: Without schema-decoded content, I cannot distinguish "many rows of scalar weights" from "complex conditional structures."
+STOP — NO TRANSCENDENCE REDESIGN
+This audit stops here. No architectural decisions for Transcendence v0.2J+ are made. The next pass should:
+Obtain pinned RPFM schema for v8.1.1 and decode row contents of DeepWar's cai_personalities_tables and Hecleas's cai_decision_policy_junctions_tables + cdir_military_generator_template_ratios_tables.
+Run live AI-only timelapse comparisons (vanilla post-6.3.4 vs. DeepWar vs. Hecleas) to measure actual behavioral deltas.
+Acquire pack audits for Incata AI Army Tasks, AI Camping Settlements Fix, and Campaign AI Tweaks to close the unverified gap.
+Determine if any 2025-2026 mod uses Lua hooks into campaign_ai namespace for true custom director behavior.

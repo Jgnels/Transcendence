@@ -1,0 +1,62 @@
+{
+  "authority": {
+    "battle_speed_modified": false,
+    "orders_emitted": false,
+    "save_values_written": false,
+    "unitcontrollers_created": false,
+    "visibility_modified": false
+  },
+  "capture": {
+    "battle_complete_observed": true,
+    "canonical_unit_count": 34,
+    "command_event_count": 397,
+    "duration_ms": 739600,
+    "identity_alias_count": 0,
+    "local_canonical_units": 17,
+    "local_casualty_lower_bound": 489,
+    "local_kill_max_sum": 1141,
+    "visible_enemy_canonical_units": 17,
+    "visible_enemy_casualty_lower_bound": 1096
+  },
+  "evidence_label": "LIMITING_RESULT",
+  "interpretation": {
+    "command_stream": "OBSERVED",
+    "continuous_tactical_timeline": "INVALIDATED_BY_SPARSE_SAMPLING",
+    "deployment_state": "OBSERVED_AT_PHASE_BOUNDARIES",
+    "selection_attribution": "UNVERIFIED_BECAUSE_SETUP_ABORTED_BEFORE_CALLBACK_REGISTRATION",
+    "stable_identity": "OBSERVED",
+    "terminal_outcome": "OBSERVED_LOWER_BOUNDS"
+  },
+  "offline_reprocessing": {
+    "original_parse_error": "UNIT_HIERARCHY before UNIT_STATIC for 1:u1001",
+    "parser_correction": "Schema-2 UNIT_HIERARCHY may precede the first UNIT_STATIC for the same stable identity, but unresolved hierarchy identities remain fatal.",
+    "reprocessed_battle_session_count": 1,
+    "reprocessed_completed_battle_count": 1,
+    "reprocessed_verification_status": "PARTIAL",
+    "verification_result_digest": "fc94c58a79d1cb4a78e809b4783f81246f764b0f56cef0f8c1d77800e6a42908"
+  },
+  "result_digest": "0db7470162d625283495bcf7d8088eb0cfb995dfaf5edc441cdc0db5a1fd4700",
+  "sampler_failure": {
+    "aggregate_event_count": 0,
+    "coverage_ratio": 0.020243,
+    "expected_detail_samples": 247,
+    "maximum_sample_gap_ms": 601900,
+    "model_tick_count": 0,
+    "observed_detail_samples": 5,
+    "observed_interval_samples": 0,
+    "real_tick_count": 0,
+    "root_cause": "The initial aggregate used math.max with trans_battle_safe as the final Lua argument. trans_battle_safe returns value plus availability; Lua expanded both returns into math.max, passing a boolean where a number was required. Setup aborted after incrementing aggregate_samples but before callback registration and SAMPLER_START.",
+    "root_cause_classification": "SOURCE_CONFIRMED_SETUP_ABORT",
+    "sampler_heartbeat_count": 0,
+    "sampler_start_observed": false
+  },
+  "schema_version": 1,
+  "target": {
+    "battle": "Battle of Eilhart \u2014 Reikland vs Empire Secessionists",
+    "captured_log_sha256": "35fe20fdfecd37d4abab4652cb9cef08eedc3e96bbcc1eb5fad9ed51ec438c00",
+    "captured_log_size_bytes": 282078,
+    "pack_sha256": "185baaa832beb458797e47766a3ad121530cdcf811097e8eb90d787df50c8443",
+    "replay_sha256": "76b8807f5cc2d223d454028f54fc18b791a254c3ce543aa587ad4286658e302b"
+  },
+  "version": "0.1K-r1"
+}

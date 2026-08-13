@@ -1,0 +1,1344 @@
+{
+  "cases": [
+    {
+      "case_id": "covered_front_with_healthy_buffer_proxy",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "critical_front_coverage_rate": 1.0,
+          "right_censored_front_count": 0
+        },
+        "metric_min": {
+          "turns_with_healthy_unengaged_home_zone_buffer_proxy": 2
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 1,
+                  "y": 0
+                },
+                {
+                  "faction": "ai",
+                  "id": "a2",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 20,
+                  "y": 20
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 4,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 12,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "rear",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 20
+                }
+              ],
+              "scenario_id": "covered_1",
+              "schema_version": 1,
+              "turn": 10,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 10
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 1,
+                  "y": 0
+                },
+                {
+                  "faction": "ai",
+                  "id": "a2",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 20,
+                  "y": 20
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 4,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 12,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "rear",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 20
+                }
+              ],
+              "scenario_id": "covered_2",
+              "schema_version": 1,
+              "turn": 11,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 11
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "covered_front"
+      }
+    },
+    {
+      "case_id": "recovering_offensive_engagement_is_measured",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "offensive_engagement_count": 1,
+          "recovering_army_offensive_engagement_count": 1,
+          "recovering_army_offensive_engagement_rate": 1.0
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [
+              {
+                "actor_id": "a1",
+                "actor_replenishment_at_engagement": 0.4,
+                "engagement_role": "OFFENSIVE",
+                "event_type": "ARMY_ENGAGEMENT",
+                "target_faction": "enemy",
+                "target_id": null
+              }
+            ],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.4,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 5,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 9,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 15,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "recover_attack",
+              "schema_version": 1,
+              "turn": 20,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 20
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "recover_attack"
+      }
+    },
+    {
+      "case_id": "recovering_defensive_engagement_is_not_offensive_misuse",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "offensive_engagement_count": 0,
+          "recovering_army_offensive_engagement_count": 0,
+          "recovering_army_offensive_engagement_rate": null
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [
+              {
+                "actor_id": "a1",
+                "actor_replenishment_at_engagement": 0.4,
+                "engagement_role": "DEFENSIVE",
+                "event_type": "ARMY_ENGAGEMENT",
+                "target_faction": "enemy",
+                "target_id": null
+              }
+            ],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.4,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 1,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": true,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 15,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "recover_defend",
+              "schema_version": 1,
+              "turn": 21,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 21
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "recover_defend"
+      }
+    },
+    {
+      "case_id": "persistent_targets_directional_reversal_is_flagged",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "context_explained_retarget_proxy_count": 0,
+          "unexplained_directional_reversal_proxy_count": 1
+        },
+        "metric_min": {
+          "directional_target_proxy_transition_count": 2
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "east",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "west",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": -20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "churn1",
+              "schema_version": 1,
+              "turn": 30,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 30
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "east",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "west",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": -20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "churn2",
+              "schema_version": 1,
+              "turn": 31,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 31
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 10
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "east",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "west",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": -20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "churn3",
+              "schema_version": 1,
+              "turn": 32,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 32
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "churn"
+      }
+    },
+    {
+      "case_id": "new_local_crisis_explains_directional_retarget",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "context_explained_retarget_proxy_count": 1,
+          "unexplained_directional_reversal_proxy_count": 0
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "east",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "crisis1",
+              "schema_version": 1,
+              "turn": 40,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 40
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "east",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "crisis2",
+              "schema_version": 1,
+              "turn": 41,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 41
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e_crisis",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 2,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": true,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "east",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "crisis3",
+              "schema_version": 1,
+              "turn": 42,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 42
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "crisis_retarget"
+      }
+    },
+    {
+      "case_id": "stationary_army_is_position_idle_proxy_only",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "position_idle_transition_count_proxy": 1,
+          "position_idle_transition_rate_proxy": 1.0,
+          "unexplained_directional_reversal_proxy_count": 0
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "idle1",
+              "schema_version": 1,
+              "turn": 50,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 50
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 0,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 20,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "idle2",
+              "schema_version": 1,
+              "turn": 51,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 51
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "idle"
+      }
+    },
+    {
+      "case_id": "persistent_uncovered_front_is_right_censored",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "critical_front_coverage_rate": 0.0,
+          "right_censored_front_count": 1
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 20,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 30,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "uncov1",
+              "schema_version": 1,
+              "turn": 60,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 60
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 20,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 30,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "uncov2",
+              "schema_version": 1,
+              "turn": 61,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 61
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "uncov"
+      }
+    },
+    {
+      "case_id": "front_response_latency_is_observed_not_assumed",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "mean_observed_front_response_latency_turns": 1.0,
+          "observed_front_response_count": 1,
+          "right_censored_front_count": 0
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 15,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 30,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "lat1",
+              "schema_version": 1,
+              "turn": 70,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 70
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 8,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 30,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "lat2",
+              "schema_version": 1,
+              "turn": 71,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 71
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "latency"
+      }
+    },
+    {
+      "case_id": "threat_ending_before_coverage_is_not_right_censored",
+      "expected": {
+        "assignment_exclusivity_unavailable": true,
+        "metric_equals": {
+          "observed_front_response_count": 0,
+          "right_censored_front_count": 0
+        }
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_BEHAVIOR_TRACE_V1",
+        "controlled_faction": "ai",
+        "observations": [
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 20,
+                  "y": 0
+                },
+                {
+                  "faction": "enemy",
+                  "id": "e1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 3,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 30,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "threat_end_80",
+              "schema_version": 1,
+              "turn": 80,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 80
+          },
+          {
+            "events": [],
+            "scenario": {
+              "armies": [
+                {
+                  "faction": "ai",
+                  "id": "a1",
+                  "movement": 5,
+                  "replenishment": 0.9,
+                  "strength": 100,
+                  "visible_to": [
+                    "ai"
+                  ],
+                  "x": 20,
+                  "y": 0
+                }
+              ],
+              "controlled_faction": "ai",
+              "regions": [
+                {
+                  "garrison_strength": 50,
+                  "id": "home",
+                  "owner": "ai",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "garrison_strength": 50,
+                  "id": "enemy_home",
+                  "owner": "enemy",
+                  "threat": 0.0,
+                  "under_siege": false,
+                  "value": 1.0,
+                  "x": 30,
+                  "y": 0
+                }
+              ],
+              "scenario_id": "threat_end_81",
+              "schema_version": 1,
+              "turn": 81,
+              "wars": [
+                [
+                  "ai",
+                  "enemy"
+                ]
+              ]
+            },
+            "turn": 81
+          }
+        ],
+        "profile_id": "synthetic_native_behavior_v1",
+        "trace_id": "threat_ends"
+      }
+    }
+  ],
+  "schema_version": 1,
+  "suite_id": "native_cai_behavior_observation_adversarial_v1"
+}

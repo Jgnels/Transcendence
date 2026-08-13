@@ -1,0 +1,56 @@
+{
+  "authority": "NO_ORDERS",
+  "schema_version": 1,
+  "sessions": [
+    {
+      "bound_window_count": 89,
+      "capability_failures": [],
+      "close_reason_counts": {
+        "CONTROL_LOST": 0,
+        "ROUTED": 1,
+        "SHATTERED": 0,
+        "SUBSEQUENT_COMMAND": 45,
+        "TERMINAL": 0,
+        "UNBOUND_SELECTION": 0,
+        "WINDOW_TIMEOUT": 43
+      },
+      "command_event_count": 89,
+      "complete": true,
+      "direct_acknowledgement_count": 0,
+      "event_counts": {
+        "ACTION_SAMPLE": 1287,
+        "ACTION_WINDOW_CLOSE": 89,
+        "ACTION_WINDOW_OPEN": 89,
+        "BATTLE_COMPLETE": 1,
+        "BATTLE_START": 1,
+        "COMMAND_OBSERVED": 89,
+        "PACK_LOADED": 1,
+        "RUNTIME_BEGIN": 1,
+        "SELECTION": 130,
+        "UNIT_STATIC": 13
+      },
+      "project_issue_attempt_count": 0,
+      "reachability_counts": {
+        "NOT_APPLICABLE": 0,
+        "QUERY_FALSE": 38,
+        "QUERY_TRUE": 1249,
+        "UNAVAILABLE": 0
+      },
+      "sample_count": 1287,
+      "schema": 1,
+      "selection_event_count": 130,
+      "source": "action_authority_runtime_log.txt",
+      "state_match_counts": {
+        "control_lost_observed": 1,
+        "current_target_match": 443,
+        "leaving_battle_observed": 0,
+        "movement_observed": 739,
+        "ordered_position_match": 189,
+        "routing_observed": 1,
+        "shattered_observed": 0
+      },
+      "unbound_window_count": 0,
+      "window_count": 89
+    }
+  ]
+}

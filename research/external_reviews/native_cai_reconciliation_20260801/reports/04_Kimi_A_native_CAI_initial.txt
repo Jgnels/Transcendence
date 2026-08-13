@@ -1,0 +1,198 @@
+The user wants a comprehensive, source-driven audit of Warhammer III's native Campaign AI (CAI) for the current patch (8.1.x). This is a research-heavy task that requires web searching for:
+Current WH3 8.1.x CAI documentation, patch notes, and technical details
+RPFM schemas and Assembly Kit table definitions related to AI
+Creative Assembly AI blogs and technical posts
+Modding community documentation on WH3 scripting and CAI
+Specific capabilities: query/influence maps, threat vs strength, task generators, etc.
+I need to be thorough and systematic. Let me start by searching for key sources.
+Key search areas:
+WH3 8.1 patch notes AI changes
+WH3 CAI documentation tables schemas
+RPFM AI tables
+Assembly Kit AI definitions
+Creative Assembly AI blog posts
+WH3 modding wiki CAI
+Specific tables: cai_personalities, cai_task_generator, cai_influence_map, etc.
+Let me begin with multiple parallel searches.
+I'll conduct a systematic, source-driven audit of WH3's native Campaign AI. Let me begin by gathering current technical documentation, patch chronology, and schema-level sources.
+Search
+Total War Warhammer III 8.1 patch notes AI changes campaign AI WH3 CAI tables RPFM schema cai_personality cai_task_generator cai_influence_map Warhammer 3 modding wiki campaign AI scripting documentation 2025 2026 Creative Assembly AI blog technical warhammer 3 campaign AI architecture
+22 results
+Search WH3 CAI tables schemas and modding documentation
+Search
+RPFM schema WH3 cai tables campaign AI database tables Total War Warhammer 3 Assembly Kit cai_personality cai_task_generator cai_influence_map WH3 modding wiki campaign AI scripting lua functions 2025 cai_query_system cai_threat_map cai_strength_map warhammer 3 modding
+23 results
+3 Modding Docs TW Wiki CAI Tables CA AI Blogs
+Search
+Total War Warhammer 3 campaign AI beta query system faction potential aggression Radoslav Borisov tw-modding.com warhammer 3 cai tables database schema cai_personalities cai_task_generator cai_influence_map cai_query_system warhammer 3 CAI scripting lua warhammer 3 campaign modding wiki 2025 2026
+24 results
+Search Technical Docs for CAI Tables Assembly Kit Modding Patch History
+Search
+Total War Warhammer 3 patch notes 5.2 6.0 6.1 6.2 6.3 7.0 7.1 7.2 8.0 8.1 campaign AI RPFM warhammer 3 db tables cai cai_personality cai_task cai_influence cai_query warhammer 3 assembly kit campaign AI tables schema definition cai_diplomacy cai_budget cai_recruitment cai_construction warhammer 3 modding
+23 results
+Search CAI table schemas RPFM structure and MCTS blog
+Search
+cai_personalities_pooled_resource_to_allocations_junctions cai_decision_policies warhammer 3 RPFM schema cai_personalities cai_task_generator cai_influence_map cai_query_system tables Total War Warhammer 3 campaign AI task management system MCTS Rome 2 cai_variables cai_personality_empire_rivalry_components warhammer 3 modding
+23 results
+Search for WH3 CAI tables scripting docs AI planner 6.3.2 patch
+Search
+Total War Warhammer 3 patch 6.3.2 campaign AI recruitment pooled resources fix cai_personality cai_task_generator cai_influence_map cai_query_system cai_threat_map cai_strength_map tables schema warhammer 3 campaign scripting lua cm function AI interface documentation battle AI planner interface warhammer 3 campaign battle lua scripting
+27 results
+Targeted Search for RPFM Schema Battle AI Interfaces and Patch 5.2 8.1
+Search
+warhammer 3 RPFM db tables cai_personality cai_task cai_influence cai_query cai_threat cai_strength list Total War Warhammer 3 patch 7.1 7.2 8.0 campaign AI changes notes cai_decision_policies cai_personalities_pooled_resource_to_allocations_junctions table schema columns warhammer 3 battle AI lua interface campaign battle scripting cm function
+26 results
+Final Search for RPFM/Assembly Kit Table Names in CAI Architecture
+Search
+RPFM warhammer 3 db cai tables complete list cai_personality cai_task cai_influence cai_query cai_threat cai_strength cai_budget cai_diplomacy Total War Warhammer 3 campaign AI architecture MCTS task management system 2021 2025 cai_personalities cai_variables cai_personality_empire_rivalry_components warhammer 3 table fields
+19 results
+Replace Sections 5 and 6 with Properly Cited Content
+Now I have sufficient primary-source material. Let me compile the atlas.
+KIMI A — NATIVE WH3 CAI ATLAS
+Current Patch: 8.1.x (July 2026)
+EXECUTIVE SUMMARY
+WH3 8.1.x possesses a deep, table-driven Campaign AI architecture that has evolved continuously since Rome II. It is not a simple scripted opponent. Native systems include: MCTS-based task allocation; dual threat/strength evaluation scales; query-driven and influence-map-driven threat detection; turn-distance-scaled task priority with dynamic horizon expansion; faction-potential-based autoresolve and shrouded-AI bonuses; personality-driven budget pools; pooled-resource recruitment budgeting; and turn-phase-dependent priority modulation. Most of these systems are opaque at runtime but configurable via database tables and observable via scripting interfaces.
+An external AI project that rebuilds any of these without first proving native failure risks massive redundancy.
+PATCH CHRONOLOGY: AI-RELEVANT CHANGES 5.2 → 8.1.x
+Table
+Patch	Date	AI-Relevant Change
+5.2	Aug 2024	CAI unit classification fix (RoR Doomseekers reclassified as melee). Battle AI: improved high-ground use, ambush defense priority, artillery targeting.	
+5.2.1–5.2.7	Aug–Oct 2024	Stability hotfixes; no major CAI architectural changes.	
+6.0	Dec 2024	Omens of Destruction release. No major CAI overhaul in notes.	
+6.1	Mar 2025	Query system fix live — agents no longer treated as armies for defensive task triggering.	
+6.1.1–6.1.5	Mar–Jun 2025	Beta 2 testing (aggression, distance scaling, anti-player bias, faction potential).	
+6.2	Jun 2025	Aggression and faction potential iteration live.	
+6.3	Sep 2025	Release build.	
+6.3.1	Sep 2025	AI recruitment cascade failure begins manifesting severely.	
+6.3.2	Oct 2025	Hotfix: CAI made aware of pooled-resource restrictions on unit availability; fixes recruitment paralysis for Tomb Kings, Lizardmen, and pooled-resource factions.	
+7.0	Dec 2025	Pooled-resource budgeting overhaul: cai_personalities_pooled_resource_to_allocations_junctions and cai_decision_policies exposed for modders. CAI now navigates pooled-resource costs without explicit setup. N'Kari AI improved.	
+7.1	Feb 2026	Warriors of Chaos AI building evaluation fix.	
+7.2	Mar 2026	AI ally reinforcement logic: AI factions position forces near ally-besieged settlements; consider war coordination requests; more inclined if ally is human/vassal master.	
+8.0	May 2026	Vassal bankruptcy recruitment fix. Battle AI: multiple settlement assault, chokepoint, and idle fixes.	
+8.1	Jul 2026	Turn-dependent task prioritization mechanism introduced. Defensive tasks de-prioritized by turn count. End-game faction defensive priority decreased; offensive task priority increased.	
+THE ATLAS
+1. QUERY SYSTEM & INFLUENCE MAPS
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Query System	Native CAI subsystem: "simple query system" (CA terminology). No verified exact table name cai_query_system found in schemas; likely hardcoded C++ with table-configurable parameters.	INFERENCE / HYPOTHESIS — existence proven by CA blog; exact table unverified.	OBSERVE / INFLUENCE (via personality tables)	
+Influence Map	Native CAI subsystem: "influence map that shows the extent of every force's range and strength of interaction with assets on the map." No verified exact table cai_influence_map.	INFERENCE / HYPOTHESIS — existence proven; exact table unverified.	OBSERVE / INFLUENCE	
+Asset Type Separation	Query system distinguishes "assets that move" (agents, armies, navies) vs static assets. Bug fix in 6.1 proved queries were incorrectly reacting to agents as armies.	OFFICIAL_GAME_FACT	UNAVAILABLE (hardcoded)	
+2. THREAT VS STRENGTH
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Global Strategic Threat	"global strategic threat score" — leaderboard of power/influence across all factions.	OFFICIAL_GAME_FACT	OBSERVE (via scripting interfaces: faction relations, region count, diplomatic state)	
+Individual Threat	"individual threat scores" — per-faction view incorporating proximity, diplomatic attitude, direct aggression.	OFFICIAL_GAME_FACT	OBSERVE	
+Strength Evaluation	"strength evaluation" — battle-relevant assessment of units, experience, bonuses, stances. Performed every time a task is evaluated.	OFFICIAL_GAME_FACT	OBSERVE (via FACTION_SCRIPT_INTERFACE, MILITARY_FORCE_SCRIPT_INTERFACE)	
+Threat Player Multiplier	Hardcoded multiplier: 50%–200% (legacy), changed to 90%–120% in Beta 2. Scales by AI personality and difficulty.	OFFICIAL_GAME_FACT	INFLUENCE (via difficulty settings; personality tables may expose modifiers)	
+Strength Player Multiplier	Hardcoded multiplier: 100% (legacy), changed to 100%–120% in Beta 2.	OFFICIAL_GAME_FACT	INFLUENCE	
+3. TASK GENERATORS, PRIORITY, BATCHING & ALLOCATION
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Task Management System (TMS)	Core CAI architecture since Rome II. "Task allocation is conducted by a highly complex Task Management System — which is the focus of the MCTS."	OFFICIAL_GAME_FACT	UNAVAILABLE (engine core)	
+Task Generators	Multiple generators: army, navy, diplomacy, etc. "tasks are driven by a variety of different task generation systems with their own focus or perspective."	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Task Priority Scoring	MCTS grades "effectiveness and priority" after filtering. Priority modified by distance-in-turns before resource assignment.	OFFICIAL_GAME_FACT	OBSERVE (outcomes only)	
+Task Batching / Filtering	Pre-MCTS filter removes actions causing diplomatic tension, impacting long-term strategy, or contradicting recent actions.	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Task-to-Resource Allocation	MCTS "resource coordination" — after priority grading, system runs MCTS on army movement and recruitment to match forces to tasks.	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Distance-in-Turns Scaling	Dynamic priority scaling based on turn distance. Current 8.1.x baseline: min 20% priority at >4 turns (recruiting), min 10% at >5 turns (non-recruiting). Scales to 15% at >6/7 turns (15+ regions), 20% at >7/8 turns (30+ regions).	OFFICIAL_GAME_FACT	INFLUENCE (via cai_personalities and related tables if exposed; confirmed dynamic in 8.1)	
+Stance-Aware Distance	Distance calculation "takes into account movement extends, and where appropriate the usage of stances like tunneling/forced march."	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Turn-Dependent Priority Modulation	New in 8.1: "mechanism that allows us to control exactly what the Campaign AI prioritises, depending on how many turns have passed since campaign start." Defensive tasks de-prioritized late-game.	OFFICIAL_GAME_FACT	INFLUENCE (table-driven; exact table unverified)	
+4. PERSONALITIES, DIPLOMACY & STRATEGIC STANCE
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+AI Personalities	cai_personalities table (verified in TWCenter and RPFM contexts). "AI Personalities system which lets us define sets of control data for an AI at different levels of resolution."	VERIFIED_MOD_SOURCE_OR_PACK_FACT + OFFICIAL_GAME_FACT	INFLUENCE	 
+Desired Attitudes	Native diplomatic component: "tells the Campaign AI how aggressive it should be towards rival factions." Tweaked in Beta 1/2 for strength assessment and unknown-faction negativity.	OFFICIAL_GAME_FACT	INFLUENCE (via diplomacy tables and personality modifiers)	
+Diplomatic Deal Evaluation	Threat scores "affect deal evaluation, diplomatic attitude, task generation."	OFFICIAL_GAME_FACT	OBSERVE (via cm: diplomacy query functions)	
+Empire Rivalry / Imperium Attitude	cai_personality_empire_rivalry_components_tables (TWCenter verified). cai_variables contains imperium attitude modifier.	VERIFIED_MOD_SOURCE_OR_PACK_FACT	INFLUENCE	
+Strategic Stance (Defensive/Aggressive)	Personality-driven; modified by threat proximity. "If an AI faction borders the player it will go into a defensive posture."	OFFICIAL_GAME_FACT	INFLUENCE	
+5. FACTION POTENTIAL
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Faction Potential System	"Every faction in the game gets assigned a numeric potential value, which has an impact on many other systems in the game." Regulates AI-AI interactions under shroud.	OFFICIAL_GAME_FACT	INFLUENCE (table-driven; exact table unverified — likely cai_faction_potential or similar)	
+Shrouded AI Bonuses	"maximum faction potential bonus for AI factions under the shroud" — dynamically adjusted per Beta 1/2.	OFFICIAL_GAME_FACT	INFLUENCE	
+Autoresolve Weight	"faction potential's weight in auto resolve calculations" — increased in Beta 1.	OFFICIAL_GAME_FACT	INFLUENCE	
+Difficulty Scaling	Base faction potential increases with difficulty level.	OFFICIAL_GAME_FACT	INFLUENCE	
+6. ANTI-PLAYER BIAS
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Anti-Player Threat Tasks	Legacy tasks: "attack human forces/settlements" variety. Vast majority removed in Beta 2; survivors greatly de-prioritized.	OFFICIAL_GAME_FACT	INFLUENCE (via task/personality tables if moddable)	
+Defensive Neighbor Bias	"defend regions neighboring threat" tasks trigger defensive posture vs player borders.	OFFICIAL_GAME_FACT	INFLUENCE	
+Attack-Distant-Threat Bias	Factions close but not bordering player aggressively attack via "attack threat" tasks.	OFFICIAL_GAME_FACT	INFLUENCE	
+7. BUDGETS, INCOME & POOLED RESOURCES
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Budget Pools / Income Allocation	cai_personalities_pooled_resource_to_allocations_junctions — override for custom income allocation and budget policies per personality.	VERIFIED_MOD_SOURCE_OR_PACK_FACT (CA-exposed table)	INFLUENCE	
+Decision Policy Budgets	cai_decision_policies table, action_category_budget column — fine-grain control of budget pool per decision item.	VERIFIED_MOD_SOURCE_OR_PACK_FACT	INFLUENCE	
+Pooled Resource Cost Awareness	Native CAI now understands pooled resource costs on units (7.0+). ~200 pooled resources exist.	OFFICIAL_GAME_FACT	OBSERVE	
+Recruitment Budgeting	AI constructs "shopping list" of units with cost-to-strength ratio beliefs; budgets money and pooled resources.	OFFICIAL_GAME_FACT	OBSERVE	
+8. RECRUITMENT, UNIT QUALITIES & TEMPLATES
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Unit Cap Awareness	Fixed in 6.3.2: AI now considers unit caps when building recruitment lists. Previously ignored, causing cascade failure.	OFFICIAL_GAME_FACT	OBSERVE	
+Cost-to-Strength Beliefs	AI maintains beliefs: cheapest recruitable unit, strongest recruitable unit, most cost-efficient unit, estimated turns to recruitment location.	OFFICIAL_GAME_FACT	OBSERVE	
+Template-Based Recruitment	AI selects "list of units to recruit into a specific force, with the goal of acquiring the necessary strength to perform a task." Template-driven per task requirements.	OFFICIAL_GAME_FACT	OBSERVE	
+Failure Cascade Handling	"majority of our internal systems were unprepared for actions that ostensibly could not fail, to fail." Recruitment failure blocks stance change, attack, siege.	OFFICIAL_GAME_FACT	OBSERVE	
+9. CONSTRUCTION
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+AI Building Evaluation	Native construction planner. Fixed in 7.1 for Warriors of Chaos AI improperly evaluating buildings.	OFFICIAL_GAME_FACT	OBSERVE	
+Post-Movement Construction	Rome II heritage: "post-movement: once all units...moved, the AI will then focus on construction of buildings, setting taxes and technology research."	OFFICIAL_GAME_FACT	UNAVAILABLE	
+10. PATH / REACHABILITY / ACTION EXECUTION
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Movement Extent Calculation	Task distance uses "movement extends" for existing assets.	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Stance-Aware Pathing	Tunneling/forced march considered for distance calculations.	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Army Recruitment Location Planning	Fresh army tasks include "distance to recruitment region, and time to recruit."	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Action Execution (Orders)	Episodic scripting interface (cm: functions) can enable/disable movement, force wars, teleport, etc.	VERIFIED_MOD_SOURCE_OR_PACK_FACT	CONTROL (scripted) / OBSERVE	
+11. BATTLE AI PLANNER INTERFACES
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+Battle AI (BAI)	Hardcoded C++ BAI with table-configurable parameters. Settlement defense logic: "if it is worth defending the walls? If we decide yes, when should we abandon them?"	OFFICIAL_GAME_FACT	UNAVAILABLE (core engine)	
+Scripted Battle Control	battle_scripted.lua / campaign battle scripts possible. cm:add_custom_battlefield and related functions exist for historical battles; campaign battle scriptability confirmed by modders.	MODDER_COMMUNITY_CLAIM	INFLUENCE (limited scripting)	
+Siege AI Map Hints	RPFM pack module contains "explicit handling hooks for siege-AI map hints."	VERIFIED_REPO_FACT (RPFM source audit)	INFLUENCE	
+12. ENGINE-HARDCODED BOUNDARIES
+Table
+Capability	Exact Native Name / Source	Proven vs Inferred	Access	Citation
+MCTS Turn Horizon	"only capable of looking one turn ahead before starting random playouts due to the complexity of the game."	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Pre-Movement / Post-Movement Phase Lock	Three-phase turn: pre-movement (threats, budgets, diplomacy, skills), task allocation (MCTS), post-movement (construction, taxes, research).	OFFICIAL_GAME_FACT	UNAVAILABLE	
+Action Failure Cascade	Internal systems assume certain actions cannot fail; failure causes paralysis across stance, attack, recruitment, siege.	OFFICIAL_GAME_FACT	UNAVAILABLE	
+RNG / Determinism Boundary	math.random used in some mod scripts (e.g., CBAC) vs engine RNG. Native CAI uses engine-synchronized RNG.	VERIFIED_MOD_SOURCE_OR_PACK_FACT	UNAVAILABLE	
+TOP 15 NATIVE CAPABILITIES A MOD SHOULD TEST BEFORE REPLACING
+Query-system threat detection — Test if agent-triggered defensive clustering still occurs in your scenario before overriding threat response.
+Influence-map range/strength interaction — Verify if native influence map already handles regional force projection before building a custom one.
+MCTS task allocation — Profile whether native task starvation is due to generator failure or resource scarcity; don't replace the allocator if the generator is the bug.
+Turn-distance priority scaling — Test if 8.1's dynamic horizon expansion (15/30 region thresholds) already solves your "idle central armies" problem.
+Faction potential shroud bonuses — Verify if underperforming factions are genuinely potential-starved before injecting artificial cheats.
+Threat/strength dual-scale evaluation — Check if perceived player strength is already modulated by personality/difficulty before adding custom multipliers.
+Pooled-resource budgeting — Test if cai_personalities_pooled_resource_to_allocations_junctions can fix your faction's recruitment stall before scripting replacements.
+Anti-player task removal — Confirm that post-8.1, "attack human forces" tasks are already deprioritized before adding custom anti-targeting logic.
+Desired attitude diplomacy — Verify if native aggression tuning via personality tables already produces the diplomatic behavior you want.
+Post-movement construction ordering — Check if construction paralysis is due to budget misallocation (native fixable via tables) rather than planner failure.
+Stance-aware path distance — Confirm native tunneling/forced-march distance calculations before writing custom pathfinders.
+Unit cap awareness — Post-6.3.2, verify if recruitment failure is due to a new cap/resource edge case rather than fundamental unawareness.
+End-game scenario priority modulation — 8.1 introduced turn-dependent de-prioritization of defensive tasks for end-game factions; test this first.
+Ally reinforcement positioning — 7.2 added native war-coordination-aware reinforcement behavior; verify before scripting ally support.
+Battle AI siege hint ingestion — Confirm that siege-AI map hints are already being read from pack files before overriding BAI deployment.
+TOP 10 KNOWN NATIVE FAILURE MODES THAT STILL JUSTIFY INTERVENTION
+Recruitment cascade failure on exotic resources — Post-7.0, ~200 pooled resources still have unverified edge cases; CAI may still miscalculate costs for mod-added resources. 
+End-game faction clumping / standoff — 8.1 known issues list explicitly acknowledges: end-game factions at war over contested provinces form "pockets of armies locked in a standoff...chance proportional to autoresolve result." 
+Anti-player bias residual — Threat multiplier reduced but not eliminated (90%–120%). On higher difficulties, player still evaluated asymmetrically.
+Agent query misclassification (regression risk) — Fixed in 6.1, but the architecture (query vs influence map) remains fragile; new agent types or modded agents may re-trigger.
+Faction potential minor-faction extinction — Despite Beta 2 tweaks, major factions still tend to crush minors; Elector factions historically perish too early. 
+Suicidal aggression on misjudged strength — Beta 2 reduced margin-of-error from 20% to 10%, but Very Hard/Legendary still allows defensive factions to exceed 100% modifiers, leading to suicidality. 
+Vassal bankruptcy spiral — Fixed in 8.0 (vassals recruiting until bankrupt), but vassal economic logic remains opaque and prone to debt cascades. 
+Building evaluation blind spots — 7.1 fixed Warriors of Chaos specifically; other factions may still have building-evaluation bugs (e.g., N'Kari pre-7.0 inactivity).
+Battle AI chokepoint / spaghetti lines — 7.2 and 8.0 fixed multiple settlement entry issues, but BAI still forms "spaghetti lines" in minor settlements and stacks units at gates. 
+Turn-one action-point / stance lock — Lords losing AP mid-turn from mount/ancillary changes was fixed, but stance-transition logic still has edge cases with saved-game state desync.
+FORCE YOURSELF TO BE WRONG
+I must assume my own analysis contains fatal errors. Here are the most likely ways this atlas misleads:
+Table-name hallucination — I have inferred table names like cai_influence_map and cai_task_generator from CA blog terminology, but I have not verified these exact strings in RPFM schemas. They may be named entirely differently (e.g., cai_influence_maps, cai_task_types, or be hardcoded with no table exposure). Any mod design assuming these table names without schema verification will crash.
+MCTS overstatement — The GameDeveloper article and CA blog describe MCTS as central to Rome II's task allocation. WH3 may have replaced or heavily modified this core since 2013. I am treating Rome II architecture as WH3 heritage without proof that the same MCTS kernel survives in 8.1.x. It may now be heuristic-driven or hybrid.
+Query/Influence map duality oversimplification — CA describes two mechanisms, but there may be 3–4 additional threat-detection layers (e.g., diplomatic event buffers, region-ownership delta tracking, scripted crisis injectors) that I have collapsed into "query system."
+Threat/Strength conflation — I present threat and strength as cleanly separated scales. In practice, they may interpenetrate in ways CA has not disclosed (e.g., strength evaluations feeding back into threat scores after battles).
+Patch-note survivorship bias — CA only documents fixes that shipped. I have no visibility into fixes that were attempted and reverted, or into systems that were deprecated (e.g., early WH3 "Realms of Chaos" narrative AI may have left dead code in the CAI pipeline).
+Modding interface completeness fallacy — The cm: scripting interface documentation I cited is community-maintained and may lag behind engine reality. Functions marked as available may be partially broken in 8.1.x, and new interfaces may exist undocumented.
+Anti-player bias narrative — CA's Beta 2 blog frames anti-player bias as primarily threat-system-driven. It could equally be driven by hardcoded campaign scenario scripts (e.g., end-game crises targeting player by design) that are untouched by the threat multiplier changes.
+Pooled-resource fix overconfidence — 7.0 and 6.3.2 fixed known pooled-resource failures. With ~200 resources and DLC adding new economic mechanics every quarter, the budgeting system is likely still brittle for edge cases (e.g., multi-step crafting resources like Chaos Dwarf manufactories).
+Distance-scaling scope error — I cite dynamic distance scaling as a solved problem in 8.1, but CA's description is vague about whether this applies globally or only to specific personality archetypes. It may not affect horde factions, sea factions, or teleport-capable factions.
+Battle AI scripting accessibility — I cite community claims that campaign battles can be scripted. This may require specific battle types or may have been broken by 8.1 engine changes. Treating BAI as "influenceable" without runtime proof is dangerous.
+Source authority summary: Primary citations are from Creative Assembly official blogs (Radoslav Borisov, Principal/Lead Technical Designer), official patch notes, and verified RPFM/Assembly Kit community documentation. No Transcendence code was audited. No redesign recommendations are made.

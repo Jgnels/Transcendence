@@ -1,0 +1,83 @@
+{
+  "authority": "NO_ORDERS",
+  "bounded_hypotheses": [
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "hypothesis_id": "formation_support_failure"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "HYPOTHESIS",
+      "hypothesis_id": "reserve_absence"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "hypothesis_id": "piecemeal_commitment"
+    },
+    {
+      "confidence": "LOW",
+      "evidence_label": "HYPOTHESIS",
+      "hypothesis_id": "firing_lane_degradation"
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "hypothesis_id": "failed_reset"
+    }
+  ],
+  "capture_requirements": {
+    "exact_replay_hash_required": true,
+    "exact_sfo_hash_required": true,
+    "raw_log_private": true,
+    "read_only_battle_observer_required": true,
+    "replay_binary_exported": false,
+    "schema2_battle_complete_required": true,
+    "stable_unit_identity_required": true,
+    "video_exported": false
+  },
+  "claims_withheld_until_capture": [
+    "exact casualty and kill totals",
+    "health, morale, fatigue, ammunition, and routing trajectories",
+    "exact command timing and targets",
+    "unit-stable defeat phase boundaries",
+    "whether any alternative would have changed the outcome",
+    "command acknowledgement, execution causality, tactical optimality, or superiority"
+  ],
+  "contract": "SFO_CHAOS_DEFEAT_DENSE_CAPTURE_READINESS_V1",
+  "exact_replay": {
+    "battle_type": "LAND_BATTLE",
+    "display_title": "An Ogre's Folly",
+    "enemy_display": "Warhost of the Apocalypse",
+    "local_faction": "Reikland",
+    "sha256": "28d780d02f2af07fe16fe4a24a27cd37f41bdb870d485f11949d5ed63f838cb5",
+    "size_bytes": 86067
+  },
+  "result_digest": "8ffd0b9d0b7f4b2599db7ea6b870af279dfd07eb1405dede4ad53a8b9fc28d8f",
+  "schema_version": 1,
+  "source_visual_preparation_digest": "33147a76c6499694b9ae1623dd8698deb5c83a8eb77b9435a8451a64a12d54ab",
+  "status": "READY_FOR_EXACT_READ_ONLY_DENSE_CAPTURE",
+  "telemetry_required": [
+    "stable unit identity and full local/enemy hierarchy",
+    "health, model-count, fatigue, morale, and ammunition trajectories",
+    "first engagement, wavering, routing, rally, and shatter timestamps",
+    "exact command events, command targets, and inferred unit attribution",
+    "role-specific casualties, kills, travel, and threat exposure",
+    "battle completion marker, victorious alliance, and exact outcome evidence"
+  ],
+  "visual_outcome": {
+    "evidence_label": "OWNER_ATTESTED",
+    "grade": "UNVERIFIED",
+    "result_screen_observed": false,
+    "status": "OWNER_ATTESTED_DEFEAT_VISUALLY_CONSISTENT"
+  },
+  "visual_phase_sequence": [
+    "deployment",
+    "early_local_overload",
+    "unsupported_engagement",
+    "fragmentation",
+    "cascading_failure",
+    "terminal_defeat"
+  ]
+}

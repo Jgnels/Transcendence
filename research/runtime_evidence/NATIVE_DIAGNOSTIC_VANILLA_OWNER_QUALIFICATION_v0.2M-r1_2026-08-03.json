@@ -1,0 +1,187 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "contract": "NATIVE_CAI_OWNER_DIAGNOSTIC_QUALIFICATION_AND_EXPLORATORY_REPORT_V1",
+  "date": "2026-08-03",
+  "decision": "QUALIFY_DIAGNOSTIC_CHANNEL_AND_REQUIRE_FRESH_V0.2N_CONFIRMATORY_COHORT_WITH_DECLARED_BATTLE_TELEMETRY",
+  "post_hoc_exploratory_only": {
+    "battle_channel_absent": "v0.2M-r1 did not declare or record pending-battle participants; therefore no old reversal may be certified battle-free.",
+    "damaged_movement_exposure": {
+      "30": {
+        "matched_army_turns": 5,
+        "moved_army_turns": 4,
+        "start_health_below_pct": 30
+      },
+      "40": {
+        "matched_army_turns": 5,
+        "moved_army_turns": 4,
+        "start_health_below_pct": 40
+      },
+      "50": {
+        "matched_army_turns": 5,
+        "moved_army_turns": 4,
+        "start_health_below_pct": 50
+      },
+      "60": {
+        "matched_army_turns": 6,
+        "moved_army_turns": 4,
+        "start_health_below_pct": 60
+      },
+      "70": {
+        "matched_army_turns": 10,
+        "moved_army_turns": 4,
+        "start_health_below_pct": 70
+      },
+      "80": {
+        "matched_army_turns": 19,
+        "moved_army_turns": 8,
+        "start_health_below_pct": 80
+      }
+    },
+    "selected_examples": [
+      {
+        "at_peace": true,
+        "cosine": -0.924223,
+        "faction": "wh_main_emp_averland",
+        "force_cqi": "233",
+        "force_strength": [
+          2502988.0,
+          2502988.0,
+          2502988.0
+        ],
+        "health_pct": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "regions": [
+          "wh3_main_combi_region_wurtbad",
+          "wh3_main_combi_region_niedling",
+          "wh3_main_combi_region_wurtbad"
+        ],
+        "stance": [
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH",
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH",
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH"
+        ],
+        "turns": [
+          4,
+          5,
+          6
+        ],
+        "unit_count": [
+          20,
+          20,
+          20
+        ]
+      },
+      {
+        "at_peace": false,
+        "cosine": -1.0,
+        "faction": "wh3_main_grn_tusked_sunz",
+        "force_cqi": "302",
+        "force_strength": [
+          1695326.0,
+          1667392.0,
+          1695326.0
+        ],
+        "health_pct": [
+          100.0,
+          98.139999389648,
+          100.0
+        ],
+        "regions": [
+          "wh3_main_combi_region_the_challenge_stone",
+          "wh3_main_combi_region_icespewer",
+          "wh3_main_combi_region_the_challenge_stone"
+        ],
+        "stance": [
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH",
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH",
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH"
+        ],
+        "turns": [
+          4,
+          5,
+          6
+        ],
+        "unit_count": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "at_peace": false,
+        "cosine": -0.930312,
+        "faction": "wh_main_grn_necksnappers",
+        "force_cqi": "274",
+        "force_strength": [
+          2679614.0,
+          2679614.0,
+          2679614.0
+        ],
+        "health_pct": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "regions": [
+          "wh3_main_combi_region_crooked_fang_fort",
+          "wh3_main_combi_region_valayas_sorrow",
+          "wh3_main_combi_region_crooked_fang_fort"
+        ],
+        "stance": [
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH",
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH",
+          "MILITARY_FORCE_ACTIVE_STANCE_TYPE_MARCH"
+        ],
+        "turns": [
+          4,
+          5,
+          6
+        ],
+        "unit_count": [
+          20,
+          20,
+          20
+        ]
+      }
+    ],
+    "strict_context_reversal_candidate_count_without_battle_exclusion": 7,
+    "warning": "These scans were defined after inspecting the v0.2M-r1 cohort. They motivate v0.2N but cannot confirm its endpoints."
+  },
+  "qualification": {
+    "capability_failure_count": 0,
+    "descriptive_heading_reversal_candidates": 116,
+    "distinct_ai_faction_count": 292,
+    "human_turn_starts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "incomplete_ai_faction_turn_count": 0,
+    "matched_force_turn_pairs": 2353,
+    "moved_force_turn_pairs": 967,
+    "paired_ai_faction_turns": 1588,
+    "rebels_skip_event_count": 12,
+    "status": "QUALIFIED_FOR_FUTURE_PREREGISTERED_DIAGNOSTIC_STUDY",
+    "trajectory_exposure_pairs": 426
+  },
+  "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+  "source_bundle": {
+    "active_pack_entries": [
+      "transcendence_native_diagnostic_probe.pack"
+    ],
+    "filename": "Transcendence_NativeDiagnostic_VANILLA_20260803T060701Z.zip",
+    "game_exe_sha256": "b7315fa718fd84e2e018e2c4df06600e9df0076156b474f148d9d558c939aa55",
+    "probe_sha256": "347605a1c00efc2478cc3f43bd699db6ec8f4af96b7a3cd3cc189861ad1a5d37",
+    "sha256": "99c7ad0b1d08441307e65815801e29c0ee38d4067fb8aa864b88fcc6c98a0c02",
+    "zip_integrity": "PASS"
+  }
+}

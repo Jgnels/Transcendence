@@ -1,0 +1,32 @@
+{
+  "battle_complete_marker_observed": true,
+  "captured_at_utc": "2026-07-30T03:59:22.259556+00:00",
+  "captured_log_name": "battle4_dense_trans_battle_log.txt",
+  "captured_log_sha256": "ad9a233b667c61f934aaba056c139867f1446afb1cc3a0e5ebfd4a0579a5d64d",
+  "captured_log_size_bytes": 11832720,
+  "expected_pack_sha256": "6e3f8e7bbc7d66754a7fa764c802e2b5599d13e83820e0785cb85d738040f66d",
+  "installed_pack_name": "transcendence_battle_replay_probe.pack",
+  "installed_pack_sha256": "6e3f8e7bbc7d66754a7fa764c802e2b5599d13e83820e0785cb85d738040f66d",
+  "pack_marker_observed": true,
+  "parse_error": null,
+  "previous_runtime_log": {
+    "private_archive_name": "transcendence_runtime_log.txt.before_battle4_dense.20260730T034732Z.txt",
+    "sha256": "35fe20fdfecd37d4abab4652cb9cef08eedc3e96bbcc1eb5fad9ed51ec438c00",
+    "size_bytes": 282078
+  },
+  "privacy": {
+    "absolute_paths_exported": false,
+    "replay_binary_exported": false,
+    "unrelated_game_files_exported": false
+  },
+  "runtime_log_cleared_before_replay": true,
+  "schema_version": 1,
+  "staged_pack_sha256": "6e3f8e7bbc7d66754a7fa764c802e2b5599d13e83820e0785cb85d738040f66d",
+  "target": {
+    "battle_identity": "Battle of Eilhart \u2014 Reikland vs Empire Secessionists",
+    "replay_name": "Auto-save.replay",
+    "replay_sha256": "76b8807f5cc2d223d454028f54fc18b791a254c3ce543aa587ad4286658e302b"
+  },
+  "timed_out": false,
+  "wh3_process_observed": true
+}

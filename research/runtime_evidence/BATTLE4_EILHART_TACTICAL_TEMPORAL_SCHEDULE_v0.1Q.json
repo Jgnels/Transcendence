@@ -1,0 +1,3317 @@
+{
+  "authority": "NO_ORDERS",
+  "counterfactual_status": "UNVERIFIED",
+  "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+  "interpretation_limits": [
+    "The scheduler reconciles advisory proposals; it does not issue WH3 orders.",
+    "Commitment, review, and cooldown windows are project-owned bounded control contracts, not measured movement times.",
+    "Objective disappearance is resolution by observation only and receives no causal credit.",
+    "Observation gaps beyond the continuity horizon erase lifecycle certainty rather than fabricating completion.",
+    "The transition envelope predicts no coordinates, path, casualties, success probability, or formation feasibility."
+  ],
+  "result_digest": "eeea9726dc33557110def72771dba8adc26b43934a46345edb7e631202f8af0e",
+  "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_TRAJECTORY_V1",
+  "schedule_slice_count": 8,
+  "schedule_slices": [
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 0,
+      "active_plans": [],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "INITIAL_OBSERVATION",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": null,
+      "raw_assignment_count": 0,
+      "result_digest": "da3188af8fb9d57ddd45664bc88a74b23108ebfa0d14a34b83526b9bf974624e",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 0,
+      "slice_id": "deployment_complete",
+      "source_assignment_digest": "cce79d8d0ea4c3836cd9c16917a8e856341a079e7d30d6e3564194796fa4e5ee",
+      "source_tactical_state_digest": "c23bb98f19aac71ca54e60c30bd71fade7dfe36d908b76634575c471b31465da",
+      "time_ms": 128800
+    },
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 0,
+      "active_plans": [],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "WITHIN_BOUNDED_HORIZON",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": 12300,
+      "raw_assignment_count": 0,
+      "result_digest": "7c3214e8a2581703089daaed62bd16a8436a76e9c463be325e223e750c504bba",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 1,
+      "slice_id": "first_contact",
+      "source_assignment_digest": "a8bc5fc3d8b93789f7896c543a960ccdb740b7214873ead33917c9444e1b3a1b",
+      "source_tactical_state_digest": "19ecc272221f06ecf4a24a9fbd1699ceb1393bc0ac0ec4507be125f2ee153762",
+      "time_ms": 141100
+    },
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 1,
+      "active_plans": [
+        {
+          "actor_role": "cavalry",
+          "actor_unit_id": "1:u1014",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 291100,
+          "maximum_commitment_ms": 18000,
+          "maximum_commitment_remaining_ms": 18000,
+          "maximum_commitment_until_ms": 309100,
+          "minimum_commitment_ms": 3000,
+          "minimum_commitment_remaining_ms": 3000,
+          "minimum_commitment_until_ms": 294100,
+          "next_review_time_ms": 298100,
+          "objective_id": "SELF:1:u1014",
+          "objective_type": "DISENGAGE_CAVALRY",
+          "objective_utility": 0.541122,
+          "observed_age_ms": 0,
+          "plan_instance_id": "c6f2255c1f8f31b784dd740e6d01205903fb86759de11f8bb34c7a28c80c5733",
+          "plan_key": "1:u1014|SELF:1:u1014",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "51453e541fcd4b9a3753b6ff587ce762fc7d408feb92eb02ec8d3eb0a87f88ff",
+          "review_due": false,
+          "review_interval_ms": 7000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "84f3ab9642803a18eeae0f86aab214e8ec2d0049444a3426d34776ee22213c39",
+          "start_time_ms": 291100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "cavalry danger should not increase",
+              "cavalry isolation should not worsen"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        }
+      ],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "CONTINUITY_RESET_OBSERVATION_GAP",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [
+        {
+          "actor_unit_id": "1:u1014",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "84ad2d862be0101b221175861d05ee72076667799defdfcdb33930f0a3f85454",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1014",
+          "plan_instance_id": "c6f2255c1f8f31b784dd740e6d01205903fb86759de11f8bb34c7a28c80c5733",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_melee_commitment",
+          "time_ms": 291100
+        }
+      ],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": 150000,
+      "raw_assignment_count": 1,
+      "result_digest": "c494858847875d21a53fbedbcd75b78eff3da52a92b7852ed9e6c110ecba4904",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 2,
+      "slice_id": "local_melee_commitment",
+      "source_assignment_digest": "028182e366612d89dd1d7db48bea88b04b486b3b1fd90a967db7da79a7adf57c",
+      "source_tactical_state_digest": "38c0d969596068ab8c080fdac5c9454b87266150cd97e7ff0995ed0b018ba3ae",
+      "time_ms": 291100
+    },
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 8,
+      "active_plans": [
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1001",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 422100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 406100,
+          "next_review_time_ms": 410100,
+          "objective_id": "SELF:1:u1001",
+          "objective_type": "EXTRACT_COMMANDER",
+          "objective_utility": 0.71884,
+          "observed_age_ms": 0,
+          "plan_instance_id": "e97d511bfaaf1add11569657ea3cd7bb38c6b2b8768a00f334cffdde0e0612a8",
+          "plan_key": "1:u1001|SELF:1:u1001",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "292125cd0b4bd37c4570294993c1becdb0bcc6b46980173b17ab3a8a03712a27",
+          "review_due": false,
+          "review_interval_ms": 8000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "f2485b33d431a8f2a8c2346fa11fea65192a00cf14a9fbcda32c2f7b404c3fdd",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "commander danger should not increase",
+              "commander withdrawal recoverability should not decrease"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1007",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 18000,
+          "maximum_commitment_remaining_ms": 18000,
+          "maximum_commitment_until_ms": 420100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 406100,
+          "next_review_time_ms": 410100,
+          "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+          "objective_type": "CONTAIN_LOCAL_ROUT",
+          "objective_utility": 0.540588,
+          "observed_age_ms": 0,
+          "plan_instance_id": "05ac598a86cfb9d1c1e74103c1fff92970e5405369558b012b39483ca1e9c0bf",
+          "plan_key": "1:u1007|CONTAIN_LOCAL_ROUT:BATTLE",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "2698013f28f13f77001691a878193b8e75ff4483ce9c87771f6b20b09dda2991",
+          "review_due": false,
+          "review_interval_ms": 8000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "8c19219fecbb2f7434d0360ce275057fe23f51d0c0cc26793781bad4e02608c9",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1015"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "local routing fraction should not increase",
+              "local stability should not deteriorate"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1009",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 424100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 406100,
+          "next_review_time_ms": 411100,
+          "objective_id": "SELF:1:u1009",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.463594,
+          "observed_age_ms": 0,
+          "plan_instance_id": "0ada0fbac93b77d0b7186b52e8a6ef074d04844f39947dccf78b73384f0c7ae2",
+          "plan_key": "1:u1009|SELF:1:u1009",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "8fde4a6842a6911a9ac1a761f2e4519ad06af39ec3dd08e5279e03ab0cc516cb",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "fb2100658b37d0c4b01c6a6b917f85d726db36d805d37da6fabd73b0c0eba344",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1009"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1010",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 424100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 406100,
+          "next_review_time_ms": 411100,
+          "objective_id": "SELF:1:u1010",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.405092,
+          "observed_age_ms": 0,
+          "plan_instance_id": "a742f315567fcdf389f55a660f50494fc7c47594639a3a3021cdda83e2da074f",
+          "plan_key": "1:u1010|SELF:1:u1010",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "d909b13163048fbb70c5789f311f8305600591a6e36fd2612936ae170d83da3d",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "1dc6bcc0492119b113218dc988bdde1d1c8e18e96136424997cd6e82de576c84",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1010"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1011",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 424100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 406100,
+          "next_review_time_ms": 411100,
+          "objective_id": "SELF:1:u1011",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.449972,
+          "observed_age_ms": 0,
+          "plan_instance_id": "80d972ff171a3e818088e8d81cbdfb289388e16f566253cc12ba2cbc281f8cc7",
+          "plan_key": "1:u1011|SELF:1:u1011",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "02ec7a2233312dc6651b6b099bd6f314902eb169b2e5eaaa7b48fd79149fb365",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "95e2c551d0f0ff3b5cf630d3b67abd9e4ebce0662f3efa56e7b6dbe76001e562",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1011"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1012",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 424100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 406100,
+          "next_review_time_ms": 411100,
+          "objective_id": "SELF:1:u1012",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.4519,
+          "observed_age_ms": 0,
+          "plan_instance_id": "98f691568568e4e0fc0eccb20e69cdb73d3f0d8a386a3df5ad63d251e40b506b",
+          "plan_key": "1:u1012|SELF:1:u1012",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "f23f62c56f8493eaf158817e4e4c7e81aa996a9b707148eff92c56d30b86ade8",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "9e42e62119d96cda6760141f887ad1ee250e0a86e4cf81923338d75f6afb642d",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1012"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1013",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 424100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 406100,
+          "next_review_time_ms": 411100,
+          "objective_id": "SELF:1:u1013",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.482684,
+          "observed_age_ms": 0,
+          "plan_instance_id": "5da3f8e55e1d02f5271b303b54eaba3f4414d719fb3bfe140ded05d7bce4b2ae",
+          "plan_key": "1:u1013|SELF:1:u1013",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "322401ec88a9229d4a927b48fb39ecd9a43c6c6152af4634ff1e789213e0c8e6",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "6c27f1d941402fe2584b0efdc1bb74f22e81afde4021e3b25761c44394164c0a",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1013"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "cavalry",
+          "actor_unit_id": "1:u1014",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 402100,
+          "maximum_commitment_ms": 18000,
+          "maximum_commitment_remaining_ms": 18000,
+          "maximum_commitment_until_ms": 420100,
+          "minimum_commitment_ms": 3000,
+          "minimum_commitment_remaining_ms": 3000,
+          "minimum_commitment_until_ms": 405100,
+          "next_review_time_ms": 409100,
+          "objective_id": "SELF:1:u1014",
+          "objective_type": "DISENGAGE_CAVALRY",
+          "objective_utility": 0.647149,
+          "observed_age_ms": 0,
+          "plan_instance_id": "7af046dbd5463d5e41c1e91a7c9f9453918fe757de0e901cad79d9ca1fd0c460",
+          "plan_key": "1:u1014|SELF:1:u1014",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "07f0021eb2aebc171017ab4907621c255563b0da52799f941f6839eabf718a5e",
+          "review_due": false,
+          "review_interval_ms": 7000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "3b01ada2f85165846d02933f11a1d5143020f6fa39a5527b0bf49e19a8156c8a",
+          "start_time_ms": 402100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "cavalry danger should not increase",
+              "cavalry isolation should not worsen"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        }
+      ],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "CONTINUITY_RESET_OBSERVATION_GAP",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [
+        {
+          "actor_unit_id": "1:u1014",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 111000
+          },
+          "event_id": "726c41dfaa21c78615bce1cc805e9374430b8149ce3f71a3409fed4d7be56322",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1014",
+          "plan_instance_id": "c6f2255c1f8f31b784dd740e6d01205903fb86759de11f8bb34c7a28c80c5733",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "d16d75f84d09cc44ee892d9756ce4894d80d233f5d4e0abfbe4f2c1c6b4baa4e",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "e97d511bfaaf1add11569657ea3cd7bb38c6b2b8768a00f334cffdde0e0612a8",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1014",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "13388c85faec930895006a9b759cf6ea22709d7e194cbc8e445cd99ba5e6f0f5",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1014",
+          "plan_instance_id": "7af046dbd5463d5e41c1e91a7c9f9453918fe757de0e901cad79d9ca1fd0c460",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "40c8c685d1d4cbd907a5317268dc22d163a7af642a08d9af37bd9068adbe9c0a",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+          "plan_instance_id": "05ac598a86cfb9d1c1e74103c1fff92970e5405369558b012b39483ca1e9c0bf",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1013",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "08eb7c4b4cbe41a368f1d9a5c8d68f972bed0d4fd4eca2e34586308d8bb0b510",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1013",
+          "plan_instance_id": "5da3f8e55e1d02f5271b303b54eaba3f4414d719fb3bfe140ded05d7bce4b2ae",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1009",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "b34d55ffad71288ec9f46a0adbc18cdd3a6185386d958b7a31ac1e482810f33c",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1009",
+          "plan_instance_id": "0ada0fbac93b77d0b7186b52e8a6ef074d04844f39947dccf78b73384f0c7ae2",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1012",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "586322a2518b075322cfa73c577ec3ca2bb9b456c4cfadce97b12878236955bb",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1012",
+          "plan_instance_id": "98f691568568e4e0fc0eccb20e69cdb73d3f0d8a386a3df5ad63d251e40b506b",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1011",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "df0b47e92cb89fe48146cf5ea6a45cb76a86922840bf04b20928b0839bc7a259",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1011",
+          "plan_instance_id": "80d972ff171a3e818088e8d81cbdfb289388e16f566253cc12ba2cbc281f8cc7",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        },
+        {
+          "actor_unit_id": "1:u1010",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "4719279e3e8cebaeb23406617cf2b11b26ef813e1884c747959a69e2d3873779",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1010",
+          "plan_instance_id": "a742f315567fcdf389f55a660f50494fc7c47594639a3a3021cdda83e2da074f",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "local_crisis",
+          "time_ms": 402100
+        }
+      ],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": 111000,
+      "raw_assignment_count": 8,
+      "result_digest": "411b53aa599afc680219a6a150f632c131a4acbaec70cea9a9a47234469750f8",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 3,
+      "slice_id": "local_crisis",
+      "source_assignment_digest": "767aaad137437ea6c197aeacfe41e0ae0841d6cd68d64136a891d74465a06209",
+      "source_tactical_state_digest": "67bd81a8721b76393f588ae67262e5a81bfcbcb5659dc58b402f917085a1404e",
+      "time_ms": 402100
+    },
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 6,
+      "active_plans": [
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1001",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 531100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 551100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 535100,
+          "next_review_time_ms": 539100,
+          "objective_id": "SELF:1:u1001",
+          "objective_type": "EXTRACT_COMMANDER",
+          "objective_utility": 0.664291,
+          "observed_age_ms": 0,
+          "plan_instance_id": "8e477eaa2465694053b267044a473d9cf2630ffedbab01d18f92e6a03fa80b79",
+          "plan_key": "1:u1001|SELF:1:u1001",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "8e099858a4bd8de55f8cf372611b1deafd1168ae3b381a5e6c430ad6b01f3028",
+          "review_due": false,
+          "review_interval_ms": 8000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "c497f01643e5c9d5321614ed90c2d624212e58d8678e87a63290648b20076ab9",
+          "start_time_ms": 531100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "commander danger should not increase",
+              "commander withdrawal recoverability should not decrease"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1002",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 531100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 551100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 535100,
+          "next_review_time_ms": 539100,
+          "objective_id": "SELF:1:u1002",
+          "objective_type": "EXTRACT_COMMANDER",
+          "objective_utility": 0.652392,
+          "observed_age_ms": 0,
+          "plan_instance_id": "ca8aa5bf63300a22fd6119558249133fb0af1b978a6dca74fca3866b84aa25ff",
+          "plan_key": "1:u1002|SELF:1:u1002",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "16e02ce551b0703ff7f41ffc4282547768f2791032527603803f243e00816706",
+          "review_due": false,
+          "review_interval_ms": 8000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "9fb9d31e9c26bda97ede5f464c92c97ed766a47636b2ab976caf19a5cd5bcf1d",
+          "start_time_ms": 531100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1002"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "commander danger should not increase",
+              "commander withdrawal recoverability should not decrease"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1006",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 531100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 551100,
+          "minimum_commitment_ms": 5000,
+          "minimum_commitment_remaining_ms": 5000,
+          "minimum_commitment_until_ms": 536100,
+          "next_review_time_ms": 540100,
+          "objective_id": "RELIEVE:1:u1003",
+          "objective_type": "RELIEVE_FRONTLINE",
+          "objective_utility": 0.633563,
+          "observed_age_ms": 0,
+          "plan_instance_id": "96dee49169449dd483619a264abe2059aa9cff90919c6635a69b6d017d8aee39",
+          "plan_key": "1:u1006|RELIEVE:1:u1003",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "0245e379a0ba752101f3a887cef4f997f458d7ef5de0124b4a4f1a8a690bb373",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "4f67e45dfb54f0a20724ce2dcef72989df3bb3e414847d5774b4569244a11cf1",
+          "start_time_ms": 531100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1003"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "protected frontline danger should not increase",
+              "local support balance should not worsen"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1007",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 531100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 551100,
+          "minimum_commitment_ms": 5000,
+          "minimum_commitment_remaining_ms": 5000,
+          "minimum_commitment_until_ms": 536100,
+          "next_review_time_ms": 540100,
+          "objective_id": "RELIEVE:1:u1005",
+          "objective_type": "RELIEVE_FRONTLINE",
+          "objective_utility": 0.618526,
+          "observed_age_ms": 0,
+          "plan_instance_id": "1e51ac8469c8038c704b55113fdbaa8c4e11dce0d2a4a0959bedd3cf07219225",
+          "plan_key": "1:u1007|RELIEVE:1:u1005",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "ef52f4d76b990996853ec5911480fc5e3f49990cd2e0b4df32f0dae2d03b4e14",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "5d002d95279b755ed186832606a0f4bab7f0e04bc440f69f91bd36f22d7f3dc6",
+          "start_time_ms": 531100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1005"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "protected frontline danger should not increase",
+              "local support balance should not worsen"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1011",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 531100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 553100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 535100,
+          "next_review_time_ms": 540100,
+          "objective_id": "SELF:1:u1011",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.412824,
+          "observed_age_ms": 0,
+          "plan_instance_id": "2aa218ec64b97a8fb98ce3606b9a035dfd5a677a48bd1167c0ac4e388bfd84b0",
+          "plan_key": "1:u1011|SELF:1:u1011",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "5c8b010640e696b10539cbd1c765f7fbc4b8053644cd9df3e6d21f6258ccb5bf",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "9189b2157ab3cfd1e188c00b214fbd077f6523370a076282cfe9634048f9819e",
+          "start_time_ms": 531100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1011"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1013",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 5000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 531100,
+          "maximum_commitment_ms": 16000,
+          "maximum_commitment_remaining_ms": 16000,
+          "maximum_commitment_until_ms": 547100,
+          "minimum_commitment_ms": 3000,
+          "minimum_commitment_remaining_ms": 3000,
+          "minimum_commitment_until_ms": 534100,
+          "next_review_time_ms": 538100,
+          "objective_id": "SELECTIVE_PURSUIT:BATTLE",
+          "objective_type": "SELECTIVE_PURSUIT",
+          "objective_utility": 0.62,
+          "observed_age_ms": 0,
+          "plan_instance_id": "5a6e3d1adafa9863b1f8504fac7f341733929688eae7006fbc48e96cd06155d7",
+          "plan_key": "1:u1013|SELECTIVE_PURSUIT:BATTLE",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "6458234eda82aa1fd370ab3068d531d382ee4a65c1728b4d2db585af6fef6ed3",
+          "review_due": false,
+          "review_interval_ms": 7000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "493fafb31c88ab09da1e797384b2f311d1de562c3b29475a7985dce40a4caacb",
+          "start_time_ms": 531100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [],
+          "transition_envelope": {
+            "desired_transition": [
+              "visible coherent enemy combat power may decrease",
+              "pursuer preservation constraints must remain satisfied"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        }
+      ],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "CONTINUITY_RESET_OBSERVATION_GAP",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "f04737a0b074b6e85d4a0cb779def43e69a709d4b1de73c8cf7aedbefb2335ba",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "e97d511bfaaf1add11569657ea3cd7bb38c6b2b8768a00f334cffdde0e0612a8",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "b6d4a2d3f28fe23e14182be3d76f3ce1c5c34da65cff6fd7cf9263c82a1ceef5",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "CONTAIN_LOCAL_ROUT:BATTLE",
+          "plan_instance_id": "05ac598a86cfb9d1c1e74103c1fff92970e5405369558b012b39483ca1e9c0bf",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1009",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "660b860864b846f81d086dad2c1ec3eff223144c3dd5b9bd75cf7f9d8d8ed4cc",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1009",
+          "plan_instance_id": "0ada0fbac93b77d0b7186b52e8a6ef074d04844f39947dccf78b73384f0c7ae2",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1010",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "cb4c386e53250e53565f9f67a2d145e0c3482d00329ec42a4b411119bf8137d6",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1010",
+          "plan_instance_id": "a742f315567fcdf389f55a660f50494fc7c47594639a3a3021cdda83e2da074f",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1011",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "e58ebf06846f6e157ac2d70e8e63bd6f2d7140de21db4548cf1b457d41e71a84",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1011",
+          "plan_instance_id": "80d972ff171a3e818088e8d81cbdfb289388e16f566253cc12ba2cbc281f8cc7",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1012",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "cf3c3957733b51cc3dcc627f445e5b9113a35167007ab83096df17d9d5763136",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1012",
+          "plan_instance_id": "98f691568568e4e0fc0eccb20e69cdb73d3f0d8a386a3df5ad63d251e40b506b",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1013",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "854dc82f832fe318fdd5bc0740dfc3d86d78ee566fd89275022648eb2a244818",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1013",
+          "plan_instance_id": "5da3f8e55e1d02f5271b303b54eaba3f4414d719fb3bfe140ded05d7bce4b2ae",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1014",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 129000
+          },
+          "event_id": "63439f064d738c43b6e1024acce61db8ebc4839f86fb0591b6e8582d3f4f2787",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1014",
+          "plan_instance_id": "7af046dbd5463d5e41c1e91a7c9f9453918fe757de0e901cad79d9ca1fd0c460",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "a2572035cf6760dee88c9d60906f7cf7be249daa4f250f0338d4842a6e2f322a",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "8e477eaa2465694053b267044a473d9cf2630ffedbab01d18f92e6a03fa80b79",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1002",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "d7470cd9048606e8ca473c08921616c9cefa4c10990c3e4c5c052f895d9f38db",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1002",
+          "plan_instance_id": "ca8aa5bf63300a22fd6119558249133fb0af1b978a6dca74fca3866b84aa25ff",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1006",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "a8e66cb39f97a78c4055e852dbe32f8876960d6d3b500bb68e2f441b0caf8d45",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "RELIEVE:1:u1003",
+          "plan_instance_id": "96dee49169449dd483619a264abe2059aa9cff90919c6635a69b6d017d8aee39",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1013",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "b6cb4ebce646c12af9ceb2aa55908cb252af79988c298ed24d11aa087de123f3",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELECTIVE_PURSUIT:BATTLE",
+          "plan_instance_id": "5a6e3d1adafa9863b1f8504fac7f341733929688eae7006fbc48e96cd06155d7",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "23c590741c7fa40ec29d9671e3e3797af61d20c50fc759d08b8e8786a9bf4637",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "RELIEVE:1:u1005",
+          "plan_instance_id": "1e51ac8469c8038c704b55113fdbaa8c4e11dce0d2a4a0959bedd3cf07219225",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        },
+        {
+          "actor_unit_id": "1:u1011",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "1cc1dd2200b4e21a59236c2061fd4ba503718f584fbdb4f2b3206cb5fcd7d324",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1011",
+          "plan_instance_id": "2aa218ec64b97a8fb98ce3606b9a035dfd5a677a48bd1167c0ac4e388bfd84b0",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_break",
+          "time_ms": 531100
+        }
+      ],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": 129000,
+      "raw_assignment_count": 6,
+      "result_digest": "ebe87ef7dbfb4f1d33be58c1da626cba0f67810867d5c008d1e7c35bc2baa1eb",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 4,
+      "slice_id": "enemy_break",
+      "source_assignment_digest": "5b0a84e561fee5a76abf9a5e5882547a13cd3b2345e89f7e7ca448ca043308c8",
+      "source_tactical_state_digest": "7670926ed7bff1d23677962975287f28e56cd421c60d466b9194a02f8818df7b",
+      "time_ms": 531100
+    },
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 9,
+      "active_plans": [
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1001",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 575100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 559100,
+          "next_review_time_ms": 563100,
+          "objective_id": "SELF:1:u1001",
+          "objective_type": "EXTRACT_COMMANDER",
+          "objective_utility": 0.780827,
+          "observed_age_ms": 0,
+          "plan_instance_id": "c8a4f9457b0d5ad2ea0b98936037a32da47cf4c82ceb868b5b4d8e52154c61cc",
+          "plan_key": "1:u1001|SELF:1:u1001",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "cc43186c0548a3e7184544cfce1a675adb3399fd3a423c324064310987b4193b",
+          "review_due": false,
+          "review_interval_ms": 8000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "400f7afeeb3af23cfaca2a079e5d41d072da314c36b97443fef346eb7cd3f604",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "commander danger should not increase",
+              "commander withdrawal recoverability should not decrease"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1004",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 567100,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 557100,
+          "next_review_time_ms": 560100,
+          "objective_id": "SELF:1:u1004",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.780827,
+          "observed_age_ms": 0,
+          "plan_instance_id": "d7be99c6fae49cc10b3a6e09d104c0129157afa593af18cfefb7b315c6ea84b4",
+          "plan_key": "1:u1004|SELF:1:u1004",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "c0d14430b37fe01c6c240b91167b51c750b5875c9819686b5be7c919efa17da2",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "68f1c2e1278272a588cbe7b0a1dc9e38ec913107c696a688ab8962a3fd5b5300",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1004"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1005",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 567100,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 557100,
+          "next_review_time_ms": 560100,
+          "objective_id": "SELF:1:u1005",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.780827,
+          "observed_age_ms": 0,
+          "plan_instance_id": "385ce8ddc52e263f28e2a92532efefa7dc678df7e7cfd892a17bc304ebaa2d66",
+          "plan_key": "1:u1005|SELF:1:u1005",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "df8e8068a2d4041b7391c23a2a677c61eef43953ad99b9d61cc517ad3a073fe3",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "4ca9e23934de45f015d702759929fbed46f64eb926f02c4c55307104209a15fd",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1005"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1006",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 575100,
+          "minimum_commitment_ms": 5000,
+          "minimum_commitment_remaining_ms": 5000,
+          "minimum_commitment_until_ms": 560100,
+          "next_review_time_ms": 564100,
+          "objective_id": "RELIEVE:1:u1003",
+          "objective_type": "RELIEVE_FRONTLINE",
+          "objective_utility": 0.911894,
+          "observed_age_ms": 0,
+          "plan_instance_id": "9ead8110c8da4d838f22cd9230f7c0e51880c9ef28eec6a7a92ebe10e0bc423a",
+          "plan_key": "1:u1006|RELIEVE:1:u1003",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "9f9a32b11204e791222c537053c7aabb3e2dc0d74d89da812dc450a2abcb99e6",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "904e95b09bb8c8f281f1e3e8be95c5ef9d2ef0b9ae817380dea4b4bc7ed82484",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1003"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "protected frontline danger should not increase",
+              "local support balance should not worsen"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1007",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 575100,
+          "minimum_commitment_ms": 5000,
+          "minimum_commitment_remaining_ms": 5000,
+          "minimum_commitment_until_ms": 560100,
+          "next_review_time_ms": 564100,
+          "objective_id": "RELIEVE:1:u1004",
+          "objective_type": "RELIEVE_FRONTLINE",
+          "objective_utility": 0.670633,
+          "observed_age_ms": 0,
+          "plan_instance_id": "cb0042b91f5a60f03809c4a0022b3f8c62b739acd3c288ced08a13340f7236b5",
+          "plan_key": "1:u1007|RELIEVE:1:u1004",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "3f00c8b717a9451947c3ac86ada010c08b185a03372bb02d885590f918b2775b",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "HIGH",
+          "source_assignment_digest": "5209b46407911d2321abaa431e95b6373899b06a53bbbc749353352305e2fc74",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1004"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "protected frontline danger should not increase",
+              "local support balance should not worsen"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1008",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 567100,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 557100,
+          "next_review_time_ms": 560100,
+          "objective_id": "SELF:1:u1008",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.780827,
+          "observed_age_ms": 0,
+          "plan_instance_id": "d5a7682df9f479f02c06796ded18e6b73171e40c9352456c2130dd7aaab4fff9",
+          "plan_key": "1:u1008|SELF:1:u1008",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "bd4c6c2efbaa63527826788bf79f7172ec06e4fcb2a61acb8f5d3c8fc0d81d48",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "778429d02271d939e8d82980b3009f5644f5f3dde82ce4fe98780e7d31d45641",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1008"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1009",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 577100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 559100,
+          "next_review_time_ms": 564100,
+          "objective_id": "SELF:1:u1009",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.476206,
+          "observed_age_ms": 0,
+          "plan_instance_id": "eb599ef641a9b9e558b669a0219d7c2bc0f3d884e16dd5df76c418deca55ffa8",
+          "plan_key": "1:u1009|SELF:1:u1009",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "51342eaf481e9fb0e858cd6904689ee018b06eec693d009eab05cfb3caacef8e",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "0d0a5946d4c652397b23a95a097a90b24e291b12b218ddf0c58b0c8e04e36427",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1009"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1011",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 577100,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 559100,
+          "next_review_time_ms": 564100,
+          "objective_id": "SELF:1:u1011",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.54451,
+          "observed_age_ms": 0,
+          "plan_instance_id": "90a4820bdd919357638a8be351cbb8305806d835d0530a187e10ae87a656743f",
+          "plan_key": "1:u1011|SELF:1:u1011",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "0ad8381d1edc47e5b169a9097d84270b1c56468cbef64567f7d5ac901f4e51c7",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "feb46d287feecf94b5e7f86f067dad02b578cbec5b59e0fa4ca03ebac00aefdb",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1011"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "cavalry",
+          "actor_unit_id": "1:u1014",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 555100,
+          "maximum_commitment_ms": 18000,
+          "maximum_commitment_remaining_ms": 18000,
+          "maximum_commitment_until_ms": 573100,
+          "minimum_commitment_ms": 3000,
+          "minimum_commitment_remaining_ms": 3000,
+          "minimum_commitment_until_ms": 558100,
+          "next_review_time_ms": 562100,
+          "objective_id": "SELF:1:u1014",
+          "objective_type": "DISENGAGE_CAVALRY",
+          "objective_utility": 0.780827,
+          "observed_age_ms": 0,
+          "plan_instance_id": "3bf73375e0ae610debdeef4648fadcdde2eded63988eb64aa4f00660a879aa7e",
+          "plan_key": "1:u1014|SELF:1:u1014",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "024eb687d85ff4dd7e619cb2cdd89e01d4b46b86df74d1c1e637f4212e146def",
+          "review_due": false,
+          "review_interval_ms": 7000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "5e1f5e5ea572eaf0d50573d6dda4726179a181c07bc4a48c7951aba2747edbbd",
+          "start_time_ms": 555100,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "cavalry danger should not increase",
+              "cavalry isolation should not worsen"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        }
+      ],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "WITHIN_BOUNDED_HORIZON",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "observed_age_ms": 24000
+          },
+          "event_id": "ae7458f671ccda4d93a44f00459960e17eae599c6a85513f788bbc2cd7bb803c",
+          "event_type": "PLAN_REVIEW_REQUIRED_MAX_COMMITMENT",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "8e477eaa2465694053b267044a473d9cf2630ffedbab01d18f92e6a03fa80b79",
+          "reason": "The bounded maximum advisory commitment elapsed; persistence requires a fresh canonical plan instance.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1002",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "precondition_failure": "ACTOR_ROUTING"
+          },
+          "event_id": "f51c20dbdf39eebce299eb3c41b541addf78c99cab03a35f09636b237670dc45",
+          "event_type": "PLAN_CANCELLED_PRECONDITION_FAILED",
+          "objective_id": "SELF:1:u1002",
+          "plan_instance_id": "ca8aa5bf63300a22fd6119558249133fb0af1b978a6dca74fca3866b84aa25ff",
+          "reason": "The observed actor no longer satisfies the bounded control-state preconditions.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1006",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "observed_age_ms": 24000
+          },
+          "event_id": "f3aa1a85beba6433e7b4d509a0ae45c52932cfff3382ab0b783f1eeff647b3a1",
+          "event_type": "PLAN_REVIEW_REQUIRED_MAX_COMMITMENT",
+          "objective_id": "RELIEVE:1:u1003",
+          "plan_instance_id": "96dee49169449dd483619a264abe2059aa9cff90919c6635a69b6d017d8aee39",
+          "reason": "The bounded maximum advisory commitment elapsed; persistence requires a fresh canonical plan instance.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "observed_age_ms": 24000
+          },
+          "event_id": "a42802d05d09a2432e4b35abc7c8933f2dcebd656c6ed6f38f08491d7e4438a7",
+          "event_type": "PLAN_REVIEW_REQUIRED_MAX_COMMITMENT",
+          "objective_id": "RELIEVE:1:u1005",
+          "plan_instance_id": "1e51ac8469c8038c704b55113fdbaa8c4e11dce0d2a4a0959bedd3cf07219225",
+          "reason": "The bounded maximum advisory commitment elapsed; persistence requires a fresh canonical plan instance.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1011",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "observed_age_ms": 24000
+          },
+          "event_id": "fa20e7d2f8a0afa0bf895b3284c599f45b11992678678686a936e82a194f16fb",
+          "event_type": "PLAN_REVIEW_REQUIRED_MAX_COMMITMENT",
+          "objective_id": "SELF:1:u1011",
+          "plan_instance_id": "2aa218ec64b97a8fb98ce3606b9a035dfd5a677a48bd1167c0ac4e388bfd84b0",
+          "reason": "The bounded maximum advisory commitment elapsed; persistence requires a fresh canonical plan instance.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1013",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "6d894633e88e568898ecd77cf7f5efb36b8d982ce51d7758997ca088b58b73b0",
+          "event_type": "PLAN_RESOLVED_BY_OBSERVATION_NOT_ATTRIBUTED",
+          "objective_id": "SELECTIVE_PURSUIT:BATTLE",
+          "plan_instance_id": "5a6e3d1adafa9863b1f8504fac7f341733929688eae7006fbc48e96cd06155d7",
+          "reason": "The objective is absent from the later canonical observation; no causal credit is assigned to the advisory plan.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1006",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "368bfa9c93d62de64231b8e3d533410eb104869eee89c18c6cbc82ca93da27f9",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "RELIEVE:1:u1003",
+          "plan_instance_id": "9ead8110c8da4d838f22cd9230f7c0e51880c9ef28eec6a7a92ebe10e0bc423a",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "1ff7e6ebf54b0772a6ce4358bbd88ff34a8154b8f0b4d6b1d8cc9b6169196686",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "c8a4f9457b0d5ad2ea0b98936037a32da47cf4c82ceb868b5b4d8e52154c61cc",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1004",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "5b32632532230ea05116b1dc821aabf35d5bf6c34c307ce295c96406de96a3e8",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1004",
+          "plan_instance_id": "d7be99c6fae49cc10b3a6e09d104c0129157afa593af18cfefb7b315c6ea84b4",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1005",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "6e1187503efffba00b47f7da8cbd67c09163e5d7921de7413af0a04ebe61b959",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1005",
+          "plan_instance_id": "385ce8ddc52e263f28e2a92532efefa7dc678df7e7cfd892a17bc304ebaa2d66",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1008",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "d604942caef5025591fa70795ce54f7a4891ec31f3d6e7adf6825376579cf1ba",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1008",
+          "plan_instance_id": "d5a7682df9f479f02c06796ded18e6b73171e40c9352456c2130dd7aaab4fff9",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1014",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "2edc8e1378df7324ac6eb0359dcec72958a3e69dec7e7f47aac60c1513e90b3f",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1014",
+          "plan_instance_id": "3bf73375e0ae610debdeef4648fadcdde2eded63988eb64aa4f00660a879aa7e",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "27a6c700bd5fbe63ef5a416a8a66ed0d7b51ce89fd75527df8fa08151d990950",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "RELIEVE:1:u1004",
+          "plan_instance_id": "cb0042b91f5a60f03809c4a0022b3f8c62b739acd3c288ced08a13340f7236b5",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1011",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "4153049f7c8ce2bc77d0c38d153f911e332e4c7fef2500117f8179cd9dd7b96e",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1011",
+          "plan_instance_id": "90a4820bdd919357638a8be351cbb8305806d835d0530a187e10ae87a656743f",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        },
+        {
+          "actor_unit_id": "1:u1009",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "8deaec985dd6b1c28b46f92da2011e1c2dae08f89f6b273901651a5f6286abda",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1009",
+          "plan_instance_id": "eb599ef641a9b9e558b669a0219d7c2bc0f3d884e16dd5df76c418deca55ffa8",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "enemy_rout_majority",
+          "time_ms": 555100
+        }
+      ],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": 24000,
+      "raw_assignment_count": 9,
+      "result_digest": "ac8e07e8f9bcafc9df3c1bc879c3e9c435035ecce4b9c0a7a814ab70427cd899",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 5,
+      "slice_id": "enemy_rout_majority",
+      "source_assignment_digest": "2aff10eb317c5e240e88bb7e85169b152d3e071b442fd5272073932b3e199cfa",
+      "source_tactical_state_digest": "33835ad0a75c8f4288cc7b6f5218b298f17beb31a5285c189cf9562b1ee3bd8c",
+      "time_ms": 555100
+    },
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 10,
+      "active_plans": [
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1001",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 750700,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 734700,
+          "next_review_time_ms": 738700,
+          "objective_id": "SELF:1:u1001",
+          "objective_type": "EXTRACT_COMMANDER",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "56be64fda5a71445fa30d251095562411ab90a301982935ab7a24987e0a4aaff",
+          "plan_key": "1:u1001|SELF:1:u1001",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "3c1d7622550b0002358f3f9bc4324a1d4c48babecd23722970f237c9711e9ca7",
+          "review_due": false,
+          "review_interval_ms": 8000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "d0465e617f418840db51a359821cedc371f3c2fc7d991efe86fa0faa5c0476a8",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "commander danger should not increase",
+              "commander withdrawal recoverability should not decrease"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1002",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 6000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 20000,
+          "maximum_commitment_remaining_ms": 20000,
+          "maximum_commitment_until_ms": 750700,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 734700,
+          "next_review_time_ms": 738700,
+          "objective_id": "SELF:1:u1002",
+          "objective_type": "EXTRACT_COMMANDER",
+          "objective_utility": 0.588158,
+          "observed_age_ms": 0,
+          "plan_instance_id": "23ae6a1f10e6106eddfc0ff228a594cfa2593d2391015497df7d2a99a95ec04e",
+          "plan_key": "1:u1002|SELF:1:u1002",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "bb75382caa97d241e31af65fbedd545895a8ed120fd2df48abd55b4267616a31",
+          "review_due": false,
+          "review_interval_ms": 8000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "a2f7d97b30915535182304cfa3461ff92ce401c8c60278725461373869daae4e",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1002"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "commander danger should not increase",
+              "commander withdrawal recoverability should not decrease"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1004",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 742700,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 732700,
+          "next_review_time_ms": 735700,
+          "objective_id": "SELF:1:u1004",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "0a2a3dbb5c5f4c870c4a6ca942c5a1e8302d55d097e8d8309b5a03c976564d06",
+          "plan_key": "1:u1004|SELF:1:u1004",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "983fd1a583659c7705731a369de96fbdc67d423e5ae70f69eb1dc7b4d8249693",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "c1e31704bc2d4252071f9fa90ef0a30038188b17b90d1d3ac15be7611ee292fc",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1004"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1006",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 742700,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 732700,
+          "next_review_time_ms": 735700,
+          "objective_id": "SELF:1:u1006",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "1011abf4a931460faf390724b7e4fbfa6edd3dc7b9a911317cc56c014dbd898f",
+          "plan_key": "1:u1006|SELF:1:u1006",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "29ad37b8c24a7e9bc447a3408681df800f34b0a6fe44c5afd7e8c495a2db8e54",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "4c5e6e0b2eef0fc1fa21edbdfad70c671d57a3196a66aa0c54d20485cd437103",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1006"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "frontline",
+          "actor_unit_id": "1:u1007",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 742700,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 732700,
+          "next_review_time_ms": 735700,
+          "objective_id": "SELF:1:u1007",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "1be42363691fe6df2c4b3c2b84d4aca2c9ac54efd4290befe59d92aca8bab6a1",
+          "plan_key": "1:u1007|SELF:1:u1007",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "784882456383370f7ba2a2a198407c05bcfe7639d776c8be94fb67cff7cc6e57",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "84782e3d1eef5419d31c4b5775ec77679b14e73466ed98c4e8c3f73f00d772ab",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1007"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1009",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 752700,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 734700,
+          "next_review_time_ms": 739700,
+          "objective_id": "SELF:1:u1009",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "a105df94944c86b11499dd0b706153e3e0ef34dd212bb0ec99702921efcb792f",
+          "plan_key": "1:u1009|SELF:1:u1009",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "6dda048b3b35325ee036db5f124f027d474f96833b2f7324855bd8268b01b7e1",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "de2cfad13532ca0c83486fc5cc79bad5491943f9cc364b0b803255117be5e897",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1009"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1010",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 7000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 22000,
+          "maximum_commitment_remaining_ms": 22000,
+          "maximum_commitment_until_ms": 752700,
+          "minimum_commitment_ms": 4000,
+          "minimum_commitment_remaining_ms": 4000,
+          "minimum_commitment_until_ms": 734700,
+          "next_review_time_ms": 739700,
+          "objective_id": "SELF:1:u1010",
+          "objective_type": "REPOSITION_RANGED",
+          "objective_utility": 0.508273,
+          "observed_age_ms": 0,
+          "plan_instance_id": "fe34cc9693d7b9ba4e20adebaf53c695bf90961237560d46d934479edc13eaa8",
+          "plan_key": "1:u1010|SELF:1:u1010",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "30d5c45f9d4c2956a284eedc5eb676971e246326c88c5b2a49756b21c1664557",
+          "review_due": false,
+          "review_interval_ms": 9000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "MEDIUM",
+          "source_assignment_digest": "cd6b1972cf221841b35e6408d497b8c420c7fbe22c8c783bbdfb32b663939611",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1010"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "ranged visible pressure should not increase",
+              "ranged firing potential should remain available"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "ranged",
+          "actor_unit_id": "1:u1012",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 742700,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 732700,
+          "next_review_time_ms": 735700,
+          "objective_id": "SELF:1:u1012",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "e5275566019f10ae784b0882c6f5f9464b2efc577fbe2310cbb79740e05abb73",
+          "plan_key": "1:u1012|SELF:1:u1012",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "9d818d749254aad559b7b23174cd598bcf25e6bc359209f64415650a07f5accf",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "ae404ab55424f20240341b582d891afe29836a80ef2a6a046c1b7b6da52e0ed6",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1012"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1016",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 742700,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 732700,
+          "next_review_time_ms": 735700,
+          "objective_id": "SELF:1:u1016",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "3cda2b49e6ea60181487988e12aaf119eb264efe707bf72a2ae0cc31e2ed445f",
+          "plan_key": "1:u1016|SELF:1:u1016",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "696d7a7a2392a2ab8b0afe4a08576e4de2b3244a4e203a2cda6941c0a7c88dc5",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "c458ebf30f83af25f2e1b1e400d7dfdc19f206740deb8b0e86b0d2c1f03e9f08",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1016"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        },
+        {
+          "actor_role": "commander",
+          "actor_unit_id": "1:u1017",
+          "authority": "NO_ORDERS",
+          "cancellation_conditions": [
+            "terminal battle observation",
+            "actor control-state precondition failure",
+            "objective retirement by later observation",
+            "higher-priority supersession",
+            "continuity gap beyond the bounded horizon",
+            "maximum commitment requires explicit replan"
+          ],
+          "cooldown_ms": 4000,
+          "counterfactual_status": "UNVERIFIED",
+          "last_observed_time_ms": 730700,
+          "maximum_commitment_ms": 12000,
+          "maximum_commitment_remaining_ms": 12000,
+          "maximum_commitment_until_ms": 742700,
+          "minimum_commitment_ms": 2000,
+          "minimum_commitment_remaining_ms": 2000,
+          "minimum_commitment_until_ms": 732700,
+          "next_review_time_ms": 735700,
+          "objective_id": "SELF:1:u1017",
+          "objective_type": "TERMINATE_PURSUIT",
+          "objective_utility": 0.886725,
+          "observed_age_ms": 0,
+          "plan_instance_id": "9a0f97dd6c0ffccd7d34cb2db719ccd89f828b6658dac976ab2335c500ff2a75",
+          "plan_key": "1:u1017|SELF:1:u1017",
+          "preconditions": [
+            "actor remains observed on the local alliance",
+            "actor remains non-routing, non-shattered, non-leaving, and non-rampaging",
+            "objective remains present in a canonical state-derived assignment",
+            "actor remains a legal objective candidate unless a higher-priority objective supersedes it"
+          ],
+          "result_digest": "ace48b4616bd2faf6e6a1357090949576dcd04dcc4e5db33c27784e1e0435af2",
+          "review_due": false,
+          "review_interval_ms": 5000,
+          "runtime_feasibility": "UNVERIFIED",
+          "severity": "CRITICAL",
+          "source_assignment_digest": "038eb76b7339631aa6d0713a6360d931d701637fbf5a4655cf79917898361251",
+          "start_time_ms": 730700,
+          "status": "ABSTRACT_SCHEDULED_NOT_ISSUED",
+          "subject_unit_ids": [
+            "1:u1017"
+          ],
+          "transition_envelope": {
+            "desired_transition": [
+              "pursuer isolation should not increase",
+              "cohesion should recover or remain stable"
+            ],
+            "formation_feasibility_available": false,
+            "model": "DIRECTIONAL_OBSERVATION_ONLY",
+            "predicted_casualties": null,
+            "predicted_position": null,
+            "predicted_success_probability": null,
+            "terrain_pathfinding_available": false
+          }
+        }
+      ],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "CONTINUITY_RESET_OBSERVATION_GAP",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "07fedab930d0694047cfa0af383efa4696240cc3385f39ecefb690d6889ff387",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "c8a4f9457b0d5ad2ea0b98936037a32da47cf4c82ceb868b5b4d8e52154c61cc",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1004",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "5417e3dafd4685d83cb2a2e3e6dd2f11665378940cba7b8b23783c8e3c0be74a",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1004",
+          "plan_instance_id": "d7be99c6fae49cc10b3a6e09d104c0129157afa593af18cfefb7b315c6ea84b4",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1005",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "fc2e9e82a6e2c6a429e3d3dfbc17fab30dbe9c16c62e955b8971981bc394ca5f",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1005",
+          "plan_instance_id": "385ce8ddc52e263f28e2a92532efefa7dc678df7e7cfd892a17bc304ebaa2d66",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1006",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "925939172dcf6185b7e66acb64f23219b705940238ca28d54b51270ea7036c4a",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "RELIEVE:1:u1003",
+          "plan_instance_id": "9ead8110c8da4d838f22cd9230f7c0e51880c9ef28eec6a7a92ebe10e0bc423a",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "8f9d4103d1b05c2fecc56f9b50f0ea8ba36cb83ccbabcbdfec606d4daa952197",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "RELIEVE:1:u1004",
+          "plan_instance_id": "cb0042b91f5a60f03809c4a0022b3f8c62b739acd3c288ced08a13340f7236b5",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1008",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "6e4afd2ee5a2ee8a7dec51073d1cc14d601409b705b9960b78261f262f660024",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1008",
+          "plan_instance_id": "d5a7682df9f479f02c06796ded18e6b73171e40c9352456c2130dd7aaab4fff9",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1009",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "fbe7ac1af1a117a48ebd4819de2ec1db512feb33f07bb20ee3dfd36130d1362d",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1009",
+          "plan_instance_id": "eb599ef641a9b9e558b669a0219d7c2bc0f3d884e16dd5df76c418deca55ffa8",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1011",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "15f008029f3677e4a9579c03be59c92b336cffb2a6b3a99dae5fddc725ceb610",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1011",
+          "plan_instance_id": "90a4820bdd919357638a8be351cbb8305806d835d0530a187e10ae87a656743f",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1014",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {
+            "continuity_horizon_ms": 30000,
+            "observation_gap_ms": 175600
+          },
+          "event_id": "fe8ddc8ce70d3a69041205789d779d301e50a1af058f10d89933327818a142c8",
+          "event_type": "CONTINUITY_RESET_OBSERVATION_GAP",
+          "objective_id": "SELF:1:u1014",
+          "plan_instance_id": "3bf73375e0ae610debdeef4648fadcdde2eded63988eb64aa4f00660a879aa7e",
+          "reason": "The observation gap exceeds the bounded continuity horizon; continuation, completion, and cancellation are unknown.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "9c0c8b0caafb6d100a37c46d78b01822fddd2beb66803101692f90756babf660",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "56be64fda5a71445fa30d251095562411ab90a301982935ab7a24987e0a4aaff",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1004",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "d473015481d2c4105cc6eb44679d0b5a87a7eedd685b030d9619eff7b1353a31",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1004",
+          "plan_instance_id": "0a2a3dbb5c5f4c870c4a6ca942c5a1e8302d55d097e8d8309b5a03c976564d06",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1006",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "813719a9c0bfad00942e14bbba7a0de50c883ec577f3de650d1adf7127a281c0",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1006",
+          "plan_instance_id": "1011abf4a931460faf390724b7e4fbfa6edd3dc7b9a911317cc56c014dbd898f",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "1ed1e795822f0e434f8804f47c7de41fd8091a8b28625c1fcd653d15529e6e41",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1007",
+          "plan_instance_id": "1be42363691fe6df2c4b3c2b84d4aca2c9ac54efd4290befe59d92aca8bab6a1",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1009",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "124113ddedcdde85c62c53e2c13d6982191093fbb2a9cf804d651d565bdaf4e4",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1009",
+          "plan_instance_id": "a105df94944c86b11499dd0b706153e3e0ef34dd212bb0ec99702921efcb792f",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1012",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "ddea2c4dc9bfc940b6757a571a962c7c55172c916d050d9a8d465a0cccef1aa1",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1012",
+          "plan_instance_id": "e5275566019f10ae784b0882c6f5f9464b2efc577fbe2310cbb79740e05abb73",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1016",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "7acc67dd0271b2409f418bac202a34299fc0424de1073f21b52d66554a5b16dd",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1016",
+          "plan_instance_id": "3cda2b49e6ea60181487988e12aaf119eb264efe707bf72a2ae0cc31e2ed445f",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1017",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "92aea589e31a1c59b3f2992cb904eddd2a8e5afe160c817db20e4dc0278164d5",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1017",
+          "plan_instance_id": "9a0f97dd6c0ffccd7d34cb2db719ccd89f828b6658dac976ab2335c500ff2a75",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1002",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "b654ce540bdfbccbe52acde1c7165d0be4d6a91557004a02bc1043e53bb3fcbf",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1002",
+          "plan_instance_id": "23ae6a1f10e6106eddfc0ff228a594cfa2593d2391015497df7d2a99a95ec04e",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        },
+        {
+          "actor_unit_id": "1:u1010",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "449acce376126e8ba8e8d1148e07e76c1af9fa60e728d7de256e947a36fc6adb",
+          "event_type": "PLAN_STARTED",
+          "objective_id": "SELF:1:u1010",
+          "plan_instance_id": "fe34cc9693d7b9ba4e20adebaf53c695bf90961237560d46d934479edc13eaa8",
+          "reason": "A canonical per-slice assignment becomes a bounded abstract advisory commitment; no order is issued.",
+          "slice_id": "victory_countdown",
+          "time_ms": 730700
+        }
+      ],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": 175600,
+      "raw_assignment_count": 10,
+      "result_digest": "5da4fe54d340001929431af68793070908a89c7961c8f91a5709799552936fa9",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 6,
+      "slice_id": "victory_countdown",
+      "source_assignment_digest": "4dabbc28b0608f79d1dd9bdd1bf36a3372ff7994e8878b29bfc60a617a9d4a7b",
+      "source_tactical_state_digest": "eeb9ee782ec94f067ab2d0f519564a9f428e45e7165aeb824b8bf262fd0f5752",
+      "time_ms": 730700
+    },
+    {
+      "abstract_transition_model": {
+        "causal_credit": false,
+        "formation_prediction": false,
+        "numeric_state_prediction": false,
+        "path_prediction": false,
+        "state_machine": [
+          "START",
+          "CONTINUE",
+          "RETAIN",
+          "REVIEW",
+          "SUPERSEDE",
+          "RESOLVE_BY_OBSERVATION",
+          "CANCEL",
+          "COOLDOWN",
+          "CONTINUITY_UNKNOWN"
+        ]
+      },
+      "active_plan_count": 0,
+      "active_plans": [],
+      "authority": "NO_ORDERS",
+      "blocked_assignment_count": 0,
+      "blocked_assignments": [],
+      "continuity_class": "TERMINAL_OBSERVATION",
+      "continuity_horizon_ms": 30000,
+      "counterfactual_status": "UNVERIFIED",
+      "double_booked_active_actor_count": 0,
+      "events": [
+        {
+          "actor_unit_id": "1:u1001",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "ef7ba09eba7824efd167aaf5d0244d8d8104ab1658cebba3941723c8b88eabfe",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1001",
+          "plan_instance_id": "56be64fda5a71445fa30d251095562411ab90a301982935ab7a24987e0a4aaff",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1002",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "5d4a62b9d0abb65e21670dfc23123ac572974ad4443731a277a636376543a74d",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1002",
+          "plan_instance_id": "23ae6a1f10e6106eddfc0ff228a594cfa2593d2391015497df7d2a99a95ec04e",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1004",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "83f19916220637a17c4b0e0cd128059d26d367f1da5ffe356656ac0d40e751d4",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1004",
+          "plan_instance_id": "0a2a3dbb5c5f4c870c4a6ca942c5a1e8302d55d097e8d8309b5a03c976564d06",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1006",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "53a391322f5796221ff0e905d6dcc7a38b82439e843a95e13fbf20da31719c43",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1006",
+          "plan_instance_id": "1011abf4a931460faf390724b7e4fbfa6edd3dc7b9a911317cc56c014dbd898f",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1007",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "b75364cfc5ae4dae07444c2d43915d3f73c8df124a78fabc6d0155832810fb7c",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1007",
+          "plan_instance_id": "1be42363691fe6df2c4b3c2b84d4aca2c9ac54efd4290befe59d92aca8bab6a1",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1009",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "0ed8687184b639e6520ec93de208e8220b37fe2cbadccd21668acdeeb1ec3f76",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1009",
+          "plan_instance_id": "a105df94944c86b11499dd0b706153e3e0ef34dd212bb0ec99702921efcb792f",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1010",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "a45c1ff49f19092eb928870805b187afabb555afdf46203d3b347229004e6569",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1010",
+          "plan_instance_id": "fe34cc9693d7b9ba4e20adebaf53c695bf90961237560d46d934479edc13eaa8",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1012",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "025887dd29a00a1141337031f07b1e2062dd5de82060c2c5d591e276894876b9",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1012",
+          "plan_instance_id": "e5275566019f10ae784b0882c6f5f9464b2efc577fbe2310cbb79740e05abb73",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1016",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "5a2dfae6a18e78a618fbbf6db11262c7581a6960f2f9419be479f284b560c624",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1016",
+          "plan_instance_id": "3cda2b49e6ea60181487988e12aaf119eb264efe707bf72a2ae0cc31e2ed445f",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        },
+        {
+          "actor_unit_id": "1:u1017",
+          "authority": "ADVISORY_ONLY",
+          "causal_attribution": "NOT_ESTABLISHED",
+          "details": {},
+          "event_id": "23d42cd9bc52adf65451bbdec84084b0e77e7596414924e768ee2ff2a8cb4355",
+          "event_type": "PLAN_CANCELLED_TERMINAL",
+          "objective_id": "SELF:1:u1017",
+          "plan_instance_id": "9a0f97dd6c0ffccd7d34cb2db719ccd89f828b6658dac976ab2335c500ff2a75",
+          "reason": "A terminal battle observation ends all abstract advisory commitments.",
+          "slice_id": "battle_complete",
+          "time_ms": 739600
+        }
+      ],
+      "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+      "observation_gap_ms": 8900,
+      "raw_assignment_count": 0,
+      "result_digest": "2156c71b385759783e88e8d284fc569501f236a70b4217f959b6c244418ba903",
+      "schedule_contract": "TACTICAL_TEMPORAL_SCHEDULE_V1",
+      "schema_version": 1,
+      "sequence_index": 7,
+      "slice_id": "battle_complete",
+      "source_assignment_digest": "55998c70efc2206e2ecebbb01e4b6f682af9328f57694574d576b4b4d99790cc",
+      "source_tactical_state_digest": "39902798be55a3efb1373937178b926a647c656ce2bddc9bf5de27f397839fba",
+      "time_ms": 739600
+    }
+  ],
+  "schema_version": 1,
+  "source_assignment_digests": [
+    "cce79d8d0ea4c3836cd9c16917a8e856341a079e7d30d6e3564194796fa4e5ee",
+    "a8bc5fc3d8b93789f7896c543a960ccdb740b7214873ead33917c9444e1b3a1b",
+    "028182e366612d89dd1d7db48bea88b04b486b3b1fd90a967db7da79a7adf57c",
+    "767aaad137437ea6c197aeacfe41e0ae0841d6cd68d64136a891d74465a06209",
+    "5b0a84e561fee5a76abf9a5e5882547a13cd3b2345e89f7e7ca448ca043308c8",
+    "2aff10eb317c5e240e88bb7e85169b152d3e071b442fd5272073932b3e199cfa",
+    "4dabbc28b0608f79d1dd9bdd1bf36a3372ff7994e8878b29bfc60a617a9d4a7b",
+    "55998c70efc2206e2ecebbb01e4b6f682af9328f57694574d576b4b4d99790cc"
+  ],
+  "source_assignment_trajectory_digest": "b3103d2e03acbb948e7ae3064d3d40aeff1843bc8164e3c999e14865f1c46b3d",
+  "source_id": "BATTLE4_EILHART_VISIBILITY_SAFE_TRACE",
+  "source_state_digests": [
+    "c23bb98f19aac71ca54e60c30bd71fade7dfe36d908b76634575c471b31465da",
+    "19ecc272221f06ecf4a24a9fbd1699ceb1393bc0ac0ec4507be125f2ee153762",
+    "38c0d969596068ab8c080fdac5c9454b87266150cd97e7ff0995ed0b018ba3ae",
+    "67bd81a8721b76393f588ae67262e5a81bfcbcb5659dc58b402f917085a1404e",
+    "7670926ed7bff1d23677962975287f28e56cd421c60d466b9194a02f8818df7b",
+    "33835ad0a75c8f4288cc7b6f5218b298f17beb31a5285c189cf9562b1ee3bd8c",
+    "eeb9ee782ec94f067ab2d0f519564a9f428e45e7165aeb824b8bf262fd0f5752",
+    "39902798be55a3efb1373937178b926a647c656ce2bddc9bf5de27f397839fba"
+  ],
+  "source_tactical_state_trajectory_digest": "1170fb399d9d90e597bc7d83cbb67034e6597782d0c2911f9929a61d355fc3f0",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "summary": {
+    "continuity_reset_count": 18,
+    "cooldown_block_count": 0,
+    "critical_cooldown_override_count": 0,
+    "double_booked_active_actor_count": 0,
+    "event_counts": {
+      "CONTINUITY_RESET_OBSERVATION_GAP": 18,
+      "PLAN_CANCELLED_PRECONDITION_FAILED": 1,
+      "PLAN_CANCELLED_TERMINAL": 10,
+      "PLAN_RESOLVED_BY_OBSERVATION_NOT_ATTRIBUTED": 1,
+      "PLAN_REVIEW_REQUIRED_MAX_COMMITMENT": 4,
+      "PLAN_STARTED": 34
+    },
+    "maximum_active_plans_in_one_slice": 10,
+    "plan_continue_count": 0,
+    "plan_maximum_commitment_review_count": 4,
+    "plan_precondition_cancellation_count": 1,
+    "plan_reassignment_count": 0,
+    "plan_resolution_count": 1,
+    "plan_retained_count": 0,
+    "plan_start_count": 34,
+    "plan_supersession_count": 0,
+    "plan_terminal_cancellation_count": 10,
+    "raw_assignment_count": 34
+  }
+}

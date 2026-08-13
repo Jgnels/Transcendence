@@ -1,0 +1,90 @@
+{
+  "checks": {
+    "exact_pack_verified": true,
+    "independent_collections_verified": true,
+    "isolated_persistence_sessions": true,
+    "loader_entrypoint_clean": true,
+    "no_capability_failures": true,
+    "one_state_per_phase": true,
+    "reload_state_valid": true,
+    "same_campaign_and_faction": true,
+    "saved_value_chain_valid": true,
+    "write_state_valid": true
+  },
+  "evidence_label": "REPLICATED",
+  "expected_pack_sha256": "71bf96e4fca54d16e323f5eef9766a6098c6ea4b9416b33aa012317d5f682bd2",
+  "result_digest": "e824800620a019a760772e8b219b89d9dd4eca5185ba9b56623481393da82d0c",
+  "runs": [
+    {
+      "capability_failures": [],
+      "evidence_manifest": {
+        "collected_at_utc": "2026-07-29T21:17:37.6623151Z",
+        "collection_id": "121e0e060c8317acd34a596be949bc1238fe5b2c9111ae18341e1bc3934ea429",
+        "manifest_name": "write_evidence_manifest.json",
+        "manifest_schema_version": 3,
+        "manifest_sha256": "423b4da078a1bcae54cbad62301c84ee901c1e2c9d7e2a05cb77d03e9a05695b"
+      },
+      "exactly_one_state": true,
+      "expected_phase": "WRITE",
+      "isolated_persistence_session": true,
+      "loader_entrypoint": "SUCCESS",
+      "log_name": "write_lua_mod_log.txt",
+      "log_sha256": "9625cec56ff01c33422f340dbb66eda1c2de2067e793c107f677e173b779eb69",
+      "log_size_bytes": 2644,
+      "pack_identity_source": "EVIDENCE_MANIFEST",
+      "persistence_pack_sha256": "71bf96e4fca54d16e323f5eef9766a6098c6ea4b9416b33aa012317d5f682bd2",
+      "phase_index": 1,
+      "state": {
+        "campaign": "wh3_main_combi",
+        "current": 1,
+        "is_multiplayer": false,
+        "is_new_game": true,
+        "key_version": 1,
+        "local_faction": "wh_main_emp_empire",
+        "phase": "WRITE",
+        "previous": 0,
+        "previous_found": false,
+        "turn": 1
+      }
+    },
+    {
+      "capability_failures": [],
+      "evidence_manifest": {
+        "collected_at_utc": "2026-07-29T21:19:15.8722503Z",
+        "collection_id": "02790ab32bf5c086e2b199d4f7f2c1a22e6de67f8db880e25b01ffb53b75b602",
+        "manifest_name": "reload_evidence_manifest.json",
+        "manifest_schema_version": 3,
+        "manifest_sha256": "01ca50da36e137853dd29ac960ceeb545e4aa1fd19658ae708c8421fc567807c"
+      },
+      "exactly_one_state": true,
+      "expected_phase": "RELOAD",
+      "isolated_persistence_session": true,
+      "loader_entrypoint": "SUCCESS",
+      "log_name": "reload_lua_mod_log.txt",
+      "log_sha256": "97e0be11a777dd43c2cfa65f69406422a0a7a3ba4a7ff71b3aced723c1782a46",
+      "log_size_bytes": 2645,
+      "pack_identity_source": "EVIDENCE_MANIFEST",
+      "persistence_pack_sha256": "71bf96e4fca54d16e323f5eef9766a6098c6ea4b9416b33aa012317d5f682bd2",
+      "phase_index": 2,
+      "state": {
+        "campaign": "wh3_main_combi",
+        "current": 2,
+        "is_multiplayer": false,
+        "is_new_game": false,
+        "key_version": 1,
+        "local_faction": "wh_main_emp_empire",
+        "phase": "RELOAD",
+        "previous": 1,
+        "previous_found": true,
+        "turn": 1
+      }
+    }
+  ],
+  "schema_version": 1,
+  "semantic_digest": "b996cc93f07275bc8d36fa428baa5e055ee03ba19bebc113175beedf048198bb",
+  "status": "REPLICATED",
+  "warnings": [
+    "This proves only one project-owned saved integer survived a save/reload cycle in the tested disposable campaign.",
+    "It does not prove campaign objective control, order authority, migration safety for future schemas, or compatibility with valued saves."
+  ]
+}

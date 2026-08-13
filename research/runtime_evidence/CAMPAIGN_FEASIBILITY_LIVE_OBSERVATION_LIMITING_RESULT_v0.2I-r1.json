@@ -1,0 +1,65 @@
+{
+  "adjudication": {
+    "application_authority": "PROHIBITED",
+    "live_query_execution": "UNVERIFIED_LIMITING_RESULT",
+    "orders_emitted": false,
+    "plan_generation": "OBSERVED_SUCCESS",
+    "policy_authority": "NO_ORDERS",
+    "request_generation": "OBSERVED_SUCCESS",
+    "save_values_written": false
+  },
+  "environment": {
+    "active_mod_count": 2,
+    "launcher_profile_digest": "f0039d6b1c09f27c7c0db50fef93e0e21700d089775a408cef2bcd3dd6041c39",
+    "probe_pack_sha256": "ccc5b6d5d73386d0814e2f89e02720abdf26772ed4af739bf4c4bea72ee4deea",
+    "profile_id": "SFO_ONLY_PLUS_READ_ONLY_PROBE",
+    "sfo_pack_sha256": "ae20a0a08037aa3ebcbe7461d2589fc28dc15a5fe5d9ca4c0a9d0ff0a26da603",
+    "wh3_executable_sha256": "b7315fa718fd84e2e018e2c4df06600e9df0076156b474f148d9d558c939aa55"
+  },
+  "evidence_label": "LIMITING_RESULT",
+  "evidence_status": "OWNER_RUNTIME_LIMITING_RESULT",
+  "observed_runtime": {
+    "feasibility_executor_ready": 1,
+    "feasibility_packet_end": 0,
+    "feasibility_query_result": 0,
+    "feasibility_request_rejected": 0,
+    "first_tick": 1,
+    "pack_loaded": 1,
+    "request_written_before_runtime_log_last_write": true,
+    "runtime_begin": 1,
+    "sidecar_state": "WAITING_FOR_QUERY_RESULTS",
+    "snapshot_begin": 1,
+    "snapshot_end": 1
+  },
+  "release": "v0.2I-r1",
+  "remediation_contract": {
+    "army_order_required": false,
+    "immediate_poll": true,
+    "one_time_poll_tick_event": "FEASIBILITY_POLL_TICK",
+    "one_time_request_seen_event": "FEASIBILITY_REQUEST_SEEN",
+    "remove_real_callback_after_terminal_packet_or_rejection": true,
+    "timer": "REAL_UI_TIMER_250MS",
+    "turn_advance_required": false
+  },
+  "result_digest": "f931ce7b541d6ec6a45e77583d143a118f9a19479639a65cf5e6d4d65ec1798c",
+  "root_cause_assessment": {
+    "classification": "SUPPORTED_ROOT_CAUSE_HYPOTHESIS",
+    "finding": "The v0.2I executor used campaign-manager repeat_callback, which is synchronized to campaign model time, while the owner workload intentionally leaves the campaign map idle. The official campaign-manager documentation distinguishes this from repeat_real_callback, which is synchronized to UI updates. The owner run reached EXECUTOR_READY and produced the request but emitted no query result or rejection.",
+    "not_proven": [
+      "The limiting run did not contain a poll heartbeat, so it cannot directly prove that the model-time callback never fired.",
+      "The run alone does not prove or disprove request-file readability after the request appeared."
+    ]
+  },
+  "schema_version": 1,
+  "session": {
+    "actor_id": "force:928",
+    "plan_digest": "1c498493b05ca4a8e69215938f3604332874b7f9b5bacab582534b5c0c3d5d37",
+    "query_count": 5,
+    "request_line_count": 6,
+    "request_sha256": "782ef566a6c1d2aaaec64f5352370aa5e55c14a350ece484d1ff0107ef47ede1",
+    "scenario_id": "shadow:wh_main_emp_empire:turn:6",
+    "session_id": "campaign_feasibility_20260801T204234Z",
+    "turn": 6
+  },
+  "source_release": "v0.2I"
+}

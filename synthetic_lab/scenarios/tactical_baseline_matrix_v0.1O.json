@@ -1,0 +1,1479 @@
+{
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Synthetic fixture alignment is not proof of tactical quality or battle outcomes.",
+    "No fixture establishes pathfinding feasibility, command acceptance, or causal casualty reduction.",
+    "Battle 4 supplies public-safe schema anchors but the mutations are project-owned CONTROL_SYNTHETIC cases, not observed battles.",
+    "Policy comparison measures contract behavior and disagreement only; it is not a learned or calibrated ranking."
+  ],
+  "policies": [
+    "ROLE_AWARE_PORTFOLIO_V1",
+    "LEGACY_ROLE_AWARE_V2",
+    "UNIFORM_DANGER_045",
+    "PRESERVATION_ONLY_035",
+    "PRESSURE_ONLY",
+    "PASSIVE_HOLD"
+  ],
+  "result_digest": "0055bd7cea848202ead9f8b87082f5ce1cb69d77d0e633a3ffc70346648224cd",
+  "scenarios": [
+    {
+      "base_slice_id": "first_contact",
+      "description": "Healthy supported units at first contact should not create preservation or pursuit advisories.",
+      "expectations": {
+        "forbidden_intents": [
+          "EXTRACT_COMMANDER",
+          "EVACUATE_ARTILLERY",
+          "REPOSITION_RANGED",
+          "TERMINATE_PURSUIT",
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [],
+        "required_local_stability_state": "STABLE",
+        "required_subjects_by_intent": {},
+        "required_tactical_phase_state": "ACTIVE_CONTEST",
+        "required_visible_enemy_collapse_state": "CONTESTED"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1002",
+            "1:u1003",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "2:u1019",
+            "2:u1020",
+            "2:u1022",
+            "2:u1023",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        }
+      ],
+      "scenario_id": "balanced_contact_no_spurious_action"
+    },
+    {
+      "base_slice_id": "first_contact",
+      "description": "A damaged wavering commander under nearby visible pressure should open an extraction window.",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT",
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER"
+        ],
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        }
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1002",
+            "1:u1003",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "1:u1015",
+            "2:u1019",
+            "2:u1020",
+            "2:u1021",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_tired",
+            "hitpoints_fraction": 0.35,
+            "idle": false,
+            "wavering": true
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1001"
+        },
+        {
+          "offset_x": 12,
+          "offset_y": 0,
+          "offset_z": 0,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1001",
+          "unit_id": "2:u1018"
+        }
+      ],
+      "scenario_id": "commander_extraction_under_pressure"
+    },
+    {
+      "base_slice_id": "first_contact",
+      "description": "Identical moderate hitpoint loss should trigger the commander threshold without treating frontline infantry as the same asset class.",
+      "expectations": {
+        "forbidden_intents": [
+          "RELIEVE_FRONTLINE"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER"
+        ],
+        "required_local_stability_state": "PRESSURED",
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        }
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1002",
+            "1:u1003",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "1:u1015",
+            "2:u1019",
+            "2:u1020",
+            "2:u1021",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "hitpoints_fraction": 0.42
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1001"
+        },
+        {
+          "fields": {
+            "hitpoints_fraction": 0.42
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1004"
+        }
+      ],
+      "scenario_id": "role_threshold_asymmetry"
+    },
+    {
+      "base_slice_id": "first_contact",
+      "description": "Artillery in melee with a visible nearby threat should create an evacuation advisory.",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EVACUATE_ARTILLERY"
+        ],
+        "required_subjects_by_intent": {
+          "EVACUATE_ARTILLERY": [
+            "1:u1015"
+          ]
+        }
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "2:u1018",
+            "2:u1019",
+            "2:u1020",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "hitpoints_fraction": 0.72,
+            "idle": false,
+            "in_melee": true
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1015"
+        },
+        {
+          "offset_x": 6,
+          "offset_y": 0,
+          "offset_z": 3,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1015",
+          "unit_id": "2:u1021"
+        }
+      ],
+      "scenario_id": "artillery_breach"
+    },
+    {
+      "base_slice_id": "local_melee_commitment",
+      "description": "A ranged unit with a rear-flank threat and nearby visible opponent should reposition.",
+      "equivalence_group": "ranged_flank_scale",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "REPOSITION_RANGED"
+        ],
+        "required_subjects_by_intent": {
+          "REPOSITION_RANGED": [
+            "1:u1009"
+          ]
+        }
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "1:u1015",
+            "1:u1016",
+            "1:u1017",
+            "2:u1018",
+            "2:u1019",
+            "2:u1021",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1030",
+            "2:u1031",
+            "2:u1032",
+            "2:u1034",
+            "2:u1036"
+          ]
+        },
+        {
+          "fields": {
+            "idle": false,
+            "rear_flank_threatened": true
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1009"
+        },
+        {
+          "offset_x": 10,
+          "offset_y": 0,
+          "offset_z": 4,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1009",
+          "unit_id": "2:u1029"
+        }
+      ],
+      "scenario_id": "ranged_rear_flank"
+    },
+    {
+      "base_slice_id": "local_melee_commitment",
+      "description": "The same ranged-flank facts at half model scale should preserve the semantic advisory.",
+      "equivalence_group": "ranged_flank_scale",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "REPOSITION_RANGED"
+        ],
+        "required_subjects_by_intent": {
+          "REPOSITION_RANGED": [
+            "1:u1009"
+          ]
+        }
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "1:u1015",
+            "1:u1016",
+            "1:u1017",
+            "2:u1018",
+            "2:u1019",
+            "2:u1021",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1030",
+            "2:u1031",
+            "2:u1032",
+            "2:u1034",
+            "2:u1036"
+          ]
+        },
+        {
+          "fields": {
+            "idle": false,
+            "initial_men": 45,
+            "men_alive": 45,
+            "men_fraction": 1.0,
+            "rear_flank_threatened": true
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1009"
+        },
+        {
+          "offset_x": 10,
+          "offset_y": 0,
+          "offset_z": 4,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1009",
+          "unit_id": "2:u1029"
+        }
+      ],
+      "scenario_id": "ranged_rear_flank_half_scale"
+    },
+    {
+      "base_slice_id": "local_melee_commitment",
+      "description": "Exhausted cavalry isolated near a visible opponent should disengage and reform.",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "DISENGAGE_CAVALRY"
+        ],
+        "required_subjects_by_intent": {
+          "DISENGAGE_CAVALRY": [
+            "1:u1014"
+          ]
+        }
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1015",
+            "1:u1016",
+            "1:u1017",
+            "2:u1018",
+            "2:u1019",
+            "2:u1021",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1030",
+            "2:u1031",
+            "2:u1032",
+            "2:u1034",
+            "2:u1036"
+          ]
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "idle": false,
+            "in_melee": true
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1014"
+        },
+        {
+          "offset_x": 8,
+          "offset_y": 0,
+          "offset_z": 0,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1014",
+          "unit_id": "2:u1029"
+        },
+        {
+          "offset_x": 250,
+          "offset_y": 0,
+          "offset_z": 250,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1014",
+          "unit_id": "1:u1001"
+        }
+      ],
+      "scenario_id": "cavalry_overextension"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "description": "A routing frontline with a fresh coherent reserve should create containment, relief, and reserve-commitment advisories.",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "RELIEVE_FRONTLINE",
+          "CONTAIN_LOCAL_ROUT",
+          "COMMIT_RESERVE"
+        ],
+        "required_local_stability_state": "LOCAL_CRISIS",
+        "required_subjects_by_intent": {
+          "COMMIT_RESERVE": [
+            "1:u1008"
+          ],
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1003"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003"
+          ]
+        },
+        "required_tactical_phase_state": "ACTIVE_CONTEST"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "1:u1015",
+            "1:u1016",
+            "1:u1017",
+            "2:u1018",
+            "2:u1019",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1029",
+            "2:u1030",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_very_tired",
+            "hitpoints_fraction": 0.22,
+            "in_melee": false,
+            "men_alive": 30,
+            "men_fraction": 0.25,
+            "routing": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1003"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_fresh",
+            "hitpoints_fraction": 1.0,
+            "idle": true,
+            "in_melee": false,
+            "men_alive": 120,
+            "men_fraction": 1.0,
+            "moving": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1008"
+        },
+        {
+          "offset_x": 45,
+          "offset_y": 0,
+          "offset_z": 0,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1003",
+          "unit_id": "1:u1008"
+        },
+        {
+          "offset_x": 15,
+          "offset_y": 0,
+          "offset_z": 0,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1003",
+          "unit_id": "2:u1020"
+        },
+        {
+          "offset_x": 25,
+          "offset_y": 0,
+          "offset_z": 10,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1003",
+          "unit_id": "2:u1021"
+        }
+      ],
+      "scenario_id": "frontline_crisis_with_reserve"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "description": "The same local crisis without a fresh idle reserve must not manufacture reserve availability.",
+      "expectations": {
+        "forbidden_intents": [
+          "COMMIT_RESERVE",
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "RELIEVE_FRONTLINE",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_subjects_by_intent": {
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1003"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003"
+          ]
+        }
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "1:u1015",
+            "1:u1016",
+            "1:u1017",
+            "2:u1018",
+            "2:u1019",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1029",
+            "2:u1030",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_very_tired",
+            "hitpoints_fraction": 0.22,
+            "in_melee": false,
+            "men_alive": 30,
+            "men_fraction": 0.25,
+            "routing": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1003"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_tired",
+            "hitpoints_fraction": 0.7,
+            "idle": false,
+            "in_melee": true,
+            "men_alive": 90,
+            "men_fraction": 0.75,
+            "moving": true
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1008"
+        },
+        {
+          "offset_x": 45,
+          "offset_y": 0,
+          "offset_z": 0,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1003",
+          "unit_id": "1:u1008"
+        },
+        {
+          "offset_x": 15,
+          "offset_y": 0,
+          "offset_z": 0,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1003",
+          "unit_id": "2:u1020"
+        },
+        {
+          "offset_x": 25,
+          "offset_y": 0,
+          "offset_z": 10,
+          "operation": "MOVE_UNIT_RELATIVE",
+          "reference_unit_id": "1:u1003",
+          "unit_id": "2:u1021"
+        }
+      ],
+      "scenario_id": "frontline_crisis_without_reserve"
+    },
+    {
+      "base_slice_id": "enemy_break",
+      "description": "A breaking visible enemy with healthy low-risk exploiters should create selective pursuit rather than general pursuit.",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "required_local_stability_state": "STABLE",
+        "required_subjects_by_intent": {
+          "SELECTIVE_PURSUIT": [
+            "1:u1013",
+            "1:u1014"
+          ]
+        },
+        "required_visible_enemy_collapse_state": "BREAKING"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1015",
+            "1:u1016",
+            "1:u1017",
+            "2:u1019",
+            "2:u1021",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1027",
+            "2:u1028",
+            "2:u1029",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_fresh",
+            "hitpoints_fraction": 1.0,
+            "idle": false,
+            "in_melee": false,
+            "men_alive": 90,
+            "men_fraction": 1.0
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1013"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_fresh",
+            "hitpoints_fraction": 1.0,
+            "idle": false,
+            "in_melee": false,
+            "men_alive": 60,
+            "men_fraction": 1.0,
+            "routing": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1014"
+        }
+      ],
+      "scenario_id": "clean_enemy_break"
+    },
+    {
+      "base_slice_id": "enemy_rout_majority",
+      "description": "When visible enemy resistance collapses while valuable local assets are endangered, general pursuit should terminate.",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "TERMINATE_PURSUIT",
+          "REFORM_AND_PRESERVE",
+          "EXTRACT_COMMANDER"
+        ],
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        },
+        "required_tactical_phase_state": "RECOVERY_REQUIRED",
+        "required_visible_enemy_collapse_state": "ROUT_CASCADE"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1009",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1016",
+            "1:u1017",
+            "2:u1019",
+            "2:u1020",
+            "2:u1021",
+            "2:u1024",
+            "2:u1027",
+            "2:u1028",
+            "2:u1029",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        }
+      ],
+      "scenario_id": "rout_cascade_preservation"
+    },
+    {
+      "base_slice_id": "victory_countdown",
+      "description": "Hidden enemy scope must prevent terminal certainty even when every visible enemy is routing.",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "required_outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        },
+        "required_visible_enemy_collapse_state": "ROUT_CASCADE"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1012",
+            "1:u1013",
+            "1:u1016",
+            "1:u1017",
+            "2:u1019",
+            "2:u1020",
+            "2:u1022",
+            "2:u1024",
+            "2:u1025",
+            "2:u1027",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "operation": "SET_HIDDEN_ENEMY_UNITS",
+          "value": 4
+        }
+      ],
+      "scenario_id": "hidden_enemy_blocks_terminal_certainty"
+    },
+    {
+      "base_slice_id": "enemy_rout_majority",
+      "description": "Enemy rout must not conceal an irreversible local collapse.",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "TERMINATE_PURSUIT",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_local_stability_state": "IRREVERSIBLE_COLLAPSE",
+        "required_subjects_by_intent": {
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1003",
+            "1:u1004"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003",
+            "1:u1004"
+          ]
+        },
+        "required_tactical_phase_state": "RECOVERY_REQUIRED",
+        "required_visible_enemy_collapse_state": "ROUT_CASCADE"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1014",
+            "1:u1016",
+            "1:u1017",
+            "2:u1019",
+            "2:u1020",
+            "2:u1021",
+            "2:u1024",
+            "2:u1027",
+            "2:u1028",
+            "2:u1029",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "hitpoints_fraction": 0.05,
+            "men_alive": 6,
+            "men_fraction": 0.05,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1003"
+        },
+        {
+          "fields": {
+            "hitpoints_fraction": 0.08,
+            "men_alive": 8,
+            "men_fraction": 0.06666666666666667,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1004"
+        }
+      ],
+      "scenario_id": "simultaneous_local_and_enemy_collapse"
+    },
+    {
+      "base_slice_id": "battle_complete",
+      "description": "A completed battle must emit no actionable advisory under any policy.",
+      "expectations": {
+        "forbidden_intents": [
+          "EXTRACT_COMMANDER",
+          "RELIEVE_FRONTLINE",
+          "TERMINATE_PURSUIT",
+          "SELECTIVE_PURSUIT",
+          "PRESS_VISIBLE_THREAT"
+        ],
+        "maximum_selected_intents": 0,
+        "require_no_action": true,
+        "required_intents": [],
+        "required_local_stability_state": "TERMINAL",
+        "required_outcome_state": "OBSERVED_TERMINAL_RESULT",
+        "required_subjects_by_intent": {},
+        "required_tactical_phase_state": "TERMINAL",
+        "required_visible_enemy_collapse_state": "TERMINAL"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1002",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1010",
+            "1:u1012",
+            "1:u1013",
+            "2:u1019",
+            "2:u1020",
+            "2:u1022",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1036",
+            "2:u1037"
+          ]
+        }
+      ],
+      "scenario_id": "terminal_no_action"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "description": "Eight simultaneous critical unit failures must be represented through bounded role batching rather than silently suppressing whole concern classes.",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT",
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER",
+          "EVACUATE_ARTILLERY",
+          "REPOSITION_RANGED",
+          "DISENGAGE_CAVALRY",
+          "RELIEVE_FRONTLINE",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_local_stability_state": "RECOVERABLE_COLLAPSE",
+        "required_subjects_by_intent": {
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1009",
+            "1:u1010",
+            "1:u1014",
+            "1:u1015"
+          ],
+          "DISENGAGE_CAVALRY": [
+            "1:u1014"
+          ],
+          "EVACUATE_ARTILLERY": [
+            "1:u1015"
+          ],
+          "EXTRACT_COMMANDER": [
+            "1:u1001",
+            "1:u1002"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003",
+            "1:u1004"
+          ],
+          "REPOSITION_RANGED": [
+            "1:u1009",
+            "1:u1010"
+          ]
+        },
+        "required_tactical_phase_state": "LOCAL_COLLAPSE_RESPONSE",
+        "required_visible_enemy_collapse_state": "PRESSURED"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1008",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1016",
+            "1:u1017",
+            "2:u1018",
+            "2:u1019",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1029",
+            "2:u1030",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1001"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1002"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1003"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1004"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1009"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1010"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1014"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1015"
+        }
+      ],
+      "scenario_id": "critical_saturation_batching"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "description": "Seven distinct critical concern groups must preserve complete source awareness through an explicit overflow record rather than silent suppression.",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT",
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER",
+          "EVACUATE_ARTILLERY",
+          "REPOSITION_RANGED",
+          "DISENGAGE_CAVALRY",
+          "COMMIT_RESERVE",
+          "REVIEW_CRITICAL_OVERFLOW"
+        ],
+        "required_local_stability_state": "RECOVERABLE_COLLAPSE",
+        "required_subjects_by_intent": {
+          "COMMIT_RESERVE": [
+            "1:u1008"
+          ],
+          "DISENGAGE_CAVALRY": [
+            "1:u1014"
+          ],
+          "EVACUATE_ARTILLERY": [
+            "1:u1015"
+          ],
+          "EXTRACT_COMMANDER": [
+            "1:u1001",
+            "1:u1002"
+          ],
+          "REPOSITION_RANGED": [
+            "1:u1009",
+            "1:u1010"
+          ]
+        },
+        "required_tactical_phase_state": "LOCAL_COLLAPSE_RESPONSE",
+        "required_visible_enemy_collapse_state": "PRESSURED"
+      },
+      "mutations": [
+        {
+          "operation": "REMOVE_UNITS",
+          "unit_ids": [
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013",
+            "1:u1016",
+            "1:u1017",
+            "2:u1018",
+            "2:u1019",
+            "2:u1022",
+            "2:u1023",
+            "2:u1024",
+            "2:u1025",
+            "2:u1026",
+            "2:u1027",
+            "2:u1028",
+            "2:u1029",
+            "2:u1030",
+            "2:u1031",
+            "2:u1032",
+            "2:u1033",
+            "2:u1034",
+            "2:u1035",
+            "2:u1036",
+            "2:u1037"
+          ]
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1001"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1002"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1003"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1004"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1009"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1010"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1014"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_exhausted",
+            "hitpoints_fraction": 0.05,
+            "idle": false,
+            "in_melee": false,
+            "routing": true,
+            "shattered": true,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1015"
+        },
+        {
+          "fields": {
+            "fatigue": "threshold_fresh",
+            "hitpoints_fraction": 1.0,
+            "idle": true,
+            "in_melee": false,
+            "men_alive": 120,
+            "men_fraction": 1.0,
+            "moving": false,
+            "routing": false,
+            "shattered": false,
+            "wavering": false
+          },
+          "operation": "SET_UNIT_FIELDS",
+          "unit_id": "1:u1008"
+        }
+      ],
+      "scenario_id": "critical_group_overflow_disclosed"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_contract": "TACTICAL_BASELINE_MATRIX_V1",
+  "suite_id": "v0.1O-heterogeneous-tactical-baseline-matrix"
+}

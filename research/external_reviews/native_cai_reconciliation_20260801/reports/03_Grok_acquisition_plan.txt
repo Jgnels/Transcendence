@@ -1,0 +1,398 @@
+1. Exact vanilla WH3 8.1.x CAI schema acquisition plan
+
+RPFM schema repository: https://github.com/Frodo45127/rpfm-schemas
+Primary file: schema_wh3.ron
+Also ship with RPFM itself (over-the-air update). Local RPFM install path typically contains the active schema set.
+Pin target: The commit or release that explicitly states “Updated wh3 schemas for patch 8.1” (visible in repo history as of early August 2026). Record the exact git commit hash of schema_wh3.ron used for all subsequent work. Do not use an older schema.
+Exact first CAI tables to inspect (from project’s prior audits + common CAI surface):
+cai_gds_task_generators_tables
+cai_task_management_system_task_generator_groups_generators_junctions_tables
+cai_task_management_system_task_generator_variable_group_junctions_tables
+cai_task_management_system_task_generator_variables_tables
+cai_task_management_system_variable_group_junctions_tables
+cai_task_management_system_variables_tables
+cai_variables_tables
+cai_variables_overides_tables
+cai_personalities_tables
+cai_personality_strategic_components_tables
+cai_personality_variables_tables
+cai_personality_variable_set_junctions_tables
+cai_personalities_budget_allocations_tables
+cai_personalities_income_allocations_tables
+cai_personality_faction_potential_modifiers_tables
+campaign_ai_manager_behaviour_junctions_tables
+cdir_military_generator_template_ratios_tables
+cdir_military_generator_unit_qualities_tables
+Any cai_decision_* and cai_query_* families present in the 8.1 schema.
+Key columns / relationships to decode first:
+Primary keys of generator / personality / variable tables; foreign-key junctions linking generators → variable groups → variables; personality → strategic component / budget / income / potential modifier links; any column whose name or description contains “priority”, “weight”, “phase”, “turn”, “distance”, “strength”, “threat”, “aggression”, “defensive”, “end_game”.
+Tables most likely relevant to Patch 8.1 turn-dependent prioritization:
+Any new or extended table/column containing turn-count, campaign-progress, or phase modifiers; priority override tables; end-game task generators; variables that reference “turns_since_start” or equivalent.
+UNVERIFIED whether the mechanism is a new DB table, an extension of an existing variable, or engine-internal. Schema diff of schema_wh3.ron pre- vs post-8.1 is the first artifact that can settle exposure.
+Mark every column whose semantic meaning is not self-evident from name + schema metadata as UNVERIFIED until behaviorally tested.
+
+2. Exact mod acquisition list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ModWorkshop nameWorkshop IDSource available?Pack extraction required?Appears maintained for 8.1.x?Useful native CAI subsystemSFOSFO: Grimhammer III2792731173No (Workshop pack only)Yes (local Steam Workshop download)Yes (core environment)Environment deltas + limited CAI tables + scriptsDeepWarDeepWar AI2978779730NoYesPartially (pages show removal/incompatibility warnings as of early Aug 2026; verify current status)Personality, budgets, task generators, aggression, variablesHecleasHecleas AI Overhaul2905096541NoYesYes (active companion Grand Strategy pack exists)Broader strategic components, decision policies, diplomacy, budgetsIncataAI Army Tasks and Strategy2935815665NoYesYesTask prioritization, force coordination, defensive perimeter behaviorCampaign AI TweaksCampaign AI Tweaks (Sleepy)3485519396NoYesYes (“Updated for 8.1”)Faction potential, idle/clump reduction, occupation preferenceAI Camping Settlements FixSearch required; exact current title/ID UNVERIFIED——Yes if foundUNVERIFIEDIdle/clump symptomsReactive World: AlliancesSearch required; exact current title/ID UNVERIFIED——Yes if foundUNVERIFIEDDiplomacy / bloc formationReactive World: ConfederationsSearch required; exact current title/ID UNVERIFIED——Yes if foundUNVERIFIEDConfederation pressureBest current recruitment AIBetter AI Army Builder3617312541NoYesYes (Dec 2025+)Military generator ratios / unit quality / army compositionAdditional essentialSleepy’s Campaign AI Improvement Pack (collection)3566011208NoYes (subscribe collection)YesAggregated narrow CAI surfaces
+All packs must be obtained by the owner via Steam Workshop subscription and local extraction. Do not redistribute CA or Workshop binary content.
+3. Exact row-diff methodology
+
+Extract vanilla 8.1.x data.pack (or the relevant CAI sub-packs) with the pinned 8.1 schema → export every listed CAI table family as TSV/CSV with full key + value columns.
+Extract each mod pack in isolation with the same schema → same TSV export.
+For each table:
+Compute set difference on primary-key tuples → added / removed rows.
+For shared keys: column-wise value diff → changed cells.
+Flag any key that appears in multiple mods → load-order collision risk.
+
+Classify every changed row:
+Strategic-reasoning (task generators, variables, priorities, personalities, strategic components).
+Difficulty / potential / budget / income / upkeep (treat as confounding).
+Economy / recruitment quality / unit stats (treat as environment, not pure planning).
+
+Produce a three-column matrix per table: Vanilla value | Mod value | Classification (strategic / confounding / environment).
+Any change that increases military budget, faction potential, or aggression multipliers without altering task-generator logic is labelled “potential/budget/bonus effect” and excluded from “intelligence” claims.
+
+4. Priority CAI table map (first 20 by expected architectural information gain)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RankTable / familyProbable controlEvidence confidenceWhy it matters to TranscendenceDecode priority1cai_task_management_system_task_generator_groups_generators_junctions_tablesWhich generators are active in which groupsHigh (edited by all major AI mods)Core task-generation surface closest to portfolioImmediate2cai_gds_task_generators_tablesGenerator definitions / base prioritiesHighDirect task sourceImmediate3cai_task_management_system_task_generator_variables_tablesVariable bindings that modulate generatorsHighPriority / condition logicImmediate4cai_variables_tables + cai_variables_overides_tablesGlobal CAI variablesHighDistance, threat, phase, strength scalarsImmediate5cai_personalities_tablesPersonality definitionsHighAggression / defensive biasImmediate6cai_personality_strategic_components_tablesStrategic component weights per personalityHighFront vs expansion vs recovery emphasisImmediate7cai_personalities_budget_allocations_tablesMilitary / building / agent spend sharesHighForce availability confounderHigh8cai_personalities_income_allocations_tablesIncome destinationHighSameHigh9cai_personality_faction_potential_modifiers_tablesPotential scalingMedium-HighDifficulty confounderHigh10cai_task_management_system_variable_group_junctions_tablesVariable group membershipHighCompletes generator → variable graphHigh11cai_personality_variable_set_junctions_tablesPersonality → variable setHighPersonality-specific modulationHigh12campaign_ai_manager_behaviour_junctions_tablesManager-level behaviour linksMediumHigh-level policyMedium13cdir_military_generator_template_ratios_tablesArmy composition ratiosHighForce qualityMedium14cdir_military_generator_unit_qualities_tablesUnit quality preferencesHighSameMedium15cai_decision_* familiesDecision policiesMedium (presence confirmed in audits)Higher-level choice logicMedium16cai_query_variable_set_junctions_tablesQuery → variable linksMediumThreat / strength query modulationMedium17cai_personality_variables_tablesPer-personality variablesHighFine aggression / threat responseMedium18Any new 8.1 priority / turn / phase tablesTurn-dependent prioritizationUNVERIFIEDDirectly tests Patch 8.1 surfaceImmediate if present19cai_task_management_system_task_generator_variable_group_junctions_tablesGenerator → variable groupHighCompletes the graphHigh20Remaining cai_* and cdir_* families present in schemaResidual surfacesLow–MediumCompletenessAfter top 15
+5. Patch 8.1 investigation
+
+Exact official wording (totalwar.com / CA community Patch 8.1 notes):
+“There are certain Campaign AI tasks that lead to its armies clustering and idling e.g. focusing on defending key regions therefore, we’ve added a new mechanism that allows us to control exactly what the Campaign AI prioritises, depending on how many turns have passed since campaign start. Using this new mechanism we’ve de-prioritised tasks e.g. defending key regions in the late game… Utilising the mechanism above defensive tasks for end game factions have had their priority decreased… The priority of tasks that target enemy forces is increased slightly.”
+Schema additions correlated with 8.1: UNVERIFIED. Perform git log / diff on schema_wh3.ron around the 8.1 update commit.
+Current mod interaction: Campaign AI Tweaks (3485519396) explicitly claims “Updated for 8.1”. DeepWar / Hecleas post-8.1 status must be re-checked; pre-8.1 packs cannot target a new surface.
+Exposure: UNVERIFIED (DB table vs variable vs engine-internal).
+Settling artifact: (a) schema_wh3.ron pre/post 8.1 diff showing new tables/columns, or (b) a mod that successfully changes late-game defensive-task priority via a DB row, or (c) RPFM view of the live data.pack after 8.1 showing a previously absent priority/turn table.
+
+6. Native-vs-Transcendence ablation dataset (smallest viable)
+Minimum set:
+
+3 mid-game saves (turns 40–70) and 3 late-game saves (turns 100+) on Legendary, Karl Franz / Reikland, both vanilla and SFO.
+One controlled “high pressure” start and one “low pressure” start.
+
+Capture from WH3 (observer or manual):
+
+All player-visible armies (CQI, strength, stance, region, recovery/replenishment state, movement remaining).
+All visible enemy armies and settlements of coherent rivals.
+War / peace / alliance matrix for the local theatre.
+Turn number, treasury, and basic income.
+Which armies are idle / clustered around settlements for ≥3 consecutive turns.
+Any army that is damaged (<60 % strength) yet given a non-recovery task.
+
+Computable offline:
+
+Critical-front coverage (does every high-threat border have at least one assigned force).
+Recovering-army misuse rate.
+Reserve overcommitment (no healthy unassigned army when multiple fronts exist).
+Assignment churn (same army re-tasked without material score change within 4 turns).
+Coherent-rival persistence (same rival remains the top threat across turns).
+Late-game idling/clumping count.
+Anti-player bias proxy (fraction of tasks targeting the human vs equal-strength AI).
+Expansion effectiveness (settlements gained / armies lost).
+
+7. Stop conditions
+
+NATIVE_CAI_PRIMARY: After row-level diffs + 6 controlled ablations (vanilla / SFO × tuned personalities / budgets / task generators), the evaluator metrics show: critical-front coverage ≥90 %, recovering-army misuse ≤10 %, thrashing rate ≤ project’s own 4-turn baseline, late-game clumping ≤50 % of untuned baseline, and no systematic anti-player bias above the tuned difficulty setting.
+HYBRID: Metrics improve under native + DB tuning but residual systematic failures remain on recovery protection or exclusive commitment that cannot be closed by further table edits.
+PROJECT_PLANNER_REQUIRED: Tuned native fails the same metrics on ≥2 of the 6 ablation cells and the failure modes match the exact gaps (recovery gate, critical overflow, anti-thrashing hysteresis) that the project layers were designed to address.
+
+8. Deliverable checklist (executable by another researcher)
+
+Clone https://github.com/Frodo45127/rpfm-schemas; pin the post-8.1 schema_wh3.ron commit hash.
+Install / update RPFM; confirm it loads the pinned schema.
+Subscribe locally to:
+2792731173 (SFO)
+2978779730 (DeepWar) – verify current availability
+2905096541 (Hecleas)
+2935815665 (AI Army Tasks and Strategy)
+3485519396 (Campaign AI Tweaks)
+3617312541 (Better AI Army Builder)
+3566011208 (Sleepy collection)
+Search and subscribe any current “AI Camping”, “Reactive World Alliances”, “Reactive World Confederations” if still published.
+
+Extract vanilla 8.1.x data.pack CAI tables with pinned schema → TSV.
+Extract each mod pack in isolation → TSV.
+Produce row-diff reports for the 20 priority tables (added / removed / changed / collisions).
+Classify every changed cell as strategic / confounding / environment.
+Diff schema_wh3.ron pre- vs post-8.1 for new priority/turn/phase columns or tables.
+Record exact Workshop file hashes and last-update timestamps.
+On owner machine, create the 6-save ablation set (vanilla + SFO, mid + late).
+Capture the observation fields listed in section 6 for each save under untuned and tuned native.
+Compute the eight offline metrics.
+Apply the stop-condition thresholds in section 7 and record the resulting architecture recommendation (NATIVE_CAI_PRIMARY / HYBRID / PROJECT_PLANNER_REQUIRED).
+All binary packs and CA assets remain local to the owner; only hashes, TSV diffs, metric tables, and schema commit hashes enter any shared evidence package.

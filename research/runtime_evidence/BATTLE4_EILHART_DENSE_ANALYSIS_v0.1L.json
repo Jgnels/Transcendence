@@ -1,0 +1,493 @@
+{
+  "battle_identity": "Battle of Eilhart \u2014 Reikland vs Empire Secessionists",
+  "capture": {
+    "aggregate_samples": 1477,
+    "canonical_units": 37,
+    "coverage_ratio": 1.008097,
+    "detail_samples": 249,
+    "duration_ms": 739600,
+    "event_count": 10643,
+    "expected_detail_samples": 247,
+    "heartbeats": 120,
+    "identity_aliases": 0,
+    "local_units": 17,
+    "maximum_sample_gap_ms": 3400,
+    "visible_enemy_units": 20
+  },
+  "control_load": {
+    "command_event_count": 397,
+    "direct_selection_attribution_ratio": 0.0,
+    "high_confidence_inferred_count": 121,
+    "high_confidence_share_all_commands": 0.304786,
+    "inferred_command_count": 302,
+    "inferred_share": 0.760705,
+    "median_command_interval_ms": 300.0,
+    "sub_500ms_interval_count": 216
+  },
+  "evidence_status": "OBSERVED_DENSE_SELECTION_LIMITING_RESULT",
+  "local_role_outcomes": {
+    "artillery": {
+      "ammo_spent_observed_lower_bound": 37,
+      "casualties_observed_lower_bound": 38,
+      "casualty_lower_bound_ratio": 0.863636,
+      "distance_travelled_observed_m": 433.673,
+      "initial_models": 44,
+      "kills_observed_max_sum": 58,
+      "kills_per_100_ammo_observed": 156.756757,
+      "unit_count": 1
+    },
+    "cavalry": {
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_observed_lower_bound": 44,
+      "casualty_lower_bound_ratio": 0.733333,
+      "distance_travelled_observed_m": 2260.764,
+      "initial_models": 60,
+      "kills_observed_max_sum": 69,
+      "kills_per_100_ammo_observed": null,
+      "unit_count": 1
+    },
+    "commander": {
+      "ammo_spent_observed_lower_bound": 29,
+      "casualties_observed_lower_bound": 0,
+      "casualty_lower_bound_ratio": 0.0,
+      "distance_travelled_observed_m": 3004.185,
+      "initial_models": 4,
+      "kills_observed_max_sum": 474,
+      "kills_per_100_ammo_observed": 1634.482759,
+      "unit_count": 4
+    },
+    "frontline": {
+      "ammo_spent_observed_lower_bound": 0,
+      "casualties_observed_lower_bound": 457,
+      "casualty_lower_bound_ratio": 0.634722,
+      "distance_travelled_observed_m": 3937.244,
+      "initial_models": 720,
+      "kills_observed_max_sum": 296,
+      "kills_per_100_ammo_observed": null,
+      "unit_count": 6
+    },
+    "ranged": {
+      "ammo_spent_observed_lower_bound": 6150,
+      "casualties_observed_lower_bound": 203,
+      "casualty_lower_bound_ratio": 0.451111,
+      "distance_travelled_observed_m": 2794.269,
+      "initial_models": 450,
+      "kills_observed_max_sum": 482,
+      "kills_per_100_ammo_observed": 7.837398,
+      "unit_count": 5
+    }
+  },
+  "outcome_lower_bounds": {
+    "exact_total_casualties_available": false,
+    "local_casualties_observed_lower_bound": 742,
+    "local_kills_observed_max_sum": 1379,
+    "local_terminal_coverage_ratio": 0.647059,
+    "visible_enemy_casualties_observed_lower_bound": 1388,
+    "visible_enemy_terminal_coverage_ratio": 0.75
+  },
+  "remaining_limits": [
+    "No direct selected-unit callback events were observed during replay playback.",
+    "302 command assignments are bounded state-change inferences, not acknowledgements.",
+    "Exact total casualties remain unavailable because terminal coverage is incomplete.",
+    "Enemy state is intentionally incomplete before visibility.",
+    "This one vanilla replay does not establish SFO or cross-faction tactical quality."
+  ],
+  "result_digest": "f37db53c05b152ac5c92bd93df87c1013940fe76c178d24f97501e1fc5f76874",
+  "schema_version": 1,
+  "source": {
+    "dense_corpus_result_digest": "442e187638c4d2b3457910efdbb50d13f16fd27a8391e7ac9bd2d6aaed47c33d",
+    "raw_log_sha256": "ad9a233b667c61f934aaba056c139867f1446afb1cc3a0e5ebfd4a0579a5d64d",
+    "replay_sha256": "76b8807f5cc2d223d454028f54fc18b791a254c3ce543aa587ad4286658e302b",
+    "tactical_benchmarks_result_digest": "b3364537be82cd96ef760db7c9e767fdd96a159f8ca87722a554779b87a8ca13",
+    "trace_slices_result_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+    "verification_result_digest": "a8f9e724d0c86cbff82af0a48842eb4e257356186a895b67f2660e6ddaba59d8"
+  },
+  "stress_cases": {
+    "artillery_overrun": [
+      "1:u1015"
+    ],
+    "cavalry_overextension": [
+      "1:u1014"
+    ],
+    "collapsed_frontline": [
+      "1:u1003",
+      "1:u1004",
+      "1:u1005",
+      "1:u1008"
+    ],
+    "endangered_characters": [
+      "1:u1001",
+      "1:u1002"
+    ],
+    "endangered_ranged": [
+      "1:u1009",
+      "1:u1010",
+      "1:u1011"
+    ],
+    "routed_or_shattered_visible_enemy": [
+      "2:u1018",
+      "2:u1019",
+      "2:u1020",
+      "2:u1021",
+      "2:u1022",
+      "2:u1023",
+      "2:u1024",
+      "2:u1025",
+      "2:u1026",
+      "2:u1027",
+      "2:u1028",
+      "2:u1029",
+      "2:u1030",
+      "2:u1031",
+      "2:u1032",
+      "2:u1033",
+      "2:u1034",
+      "2:u1035",
+      "2:u1036",
+      "2:u1037"
+    ]
+  },
+  "synthetic_lab": {
+    "contracts": {
+      "dense_interval_coverage": true,
+      "hidden_information_boundary_preserved": true,
+      "maximum_sample_gap_bounded": true,
+      "owner_trace_not_gold_policy": true,
+      "selection_limitation_explicit": true,
+      "stable_identity_without_aliases": true
+    },
+    "dense_corpus_id": "battle4_eilhart_observed_dense_v2",
+    "episode_count": 6,
+    "episodes": [
+      {
+        "episode_id": "deployment_and_reserve_design",
+        "evaluation_axes": [
+          "formation depth and firing lanes",
+          "cavalry reserve placement",
+          "artillery protection",
+          "hidden-enemy uncertainty"
+        ],
+        "source_slice_id": "deployment_complete"
+      },
+      {
+        "episode_id": "ranged_contact_and_target_priority",
+        "evaluation_axes": [
+          "legal visible target priority",
+          "ranged exposure",
+          "ammunition discipline",
+          "reserve patience"
+        ],
+        "source_slice_id": "first_contact"
+      },
+      {
+        "episode_id": "melee_commitment_control",
+        "evaluation_axes": [
+          "frontline commitment",
+          "ranged line-of-fire preservation",
+          "commander exposure",
+          "flank response"
+        ],
+        "source_slice_id": "local_melee_commitment"
+      },
+      {
+        "episode_id": "local_crisis_triage",
+        "evaluation_axes": [
+          "routing containment",
+          "commander survival",
+          "frontline relief",
+          "artillery and ranged evacuation"
+        ],
+        "source_slice_id": "local_crisis"
+      },
+      {
+        "episode_id": "enemy_break_exploitation",
+        "evaluation_axes": [
+          "selective pursuit",
+          "fresh-unit preservation",
+          "high-value target isolation",
+          "avoidance of pyrrhic cleanup losses"
+        ],
+        "source_slice_id": "enemy_break"
+      },
+      {
+        "episode_id": "rout_cascade_termination",
+        "evaluation_axes": [
+          "pursuit stopping rule",
+          "ranged cease-fire discipline",
+          "reforming scattered units",
+          "survivor preservation"
+        ],
+        "source_slice_id": "enemy_rout_majority"
+      }
+    ],
+    "shadow_evaluator_authority": "NO_ORDERS",
+    "shadow_evaluator_result_digest": "1d5892cf47c900e1bbe1eeae09466a28500abd3a735e1f332776f42f82606742",
+    "trace_slices_corpus_id": "battle4_eilhart_trace_slices_v1"
+  },
+  "tactical_milestones": [
+    {
+      "hidden_enemy_units": 6,
+      "slice_id": "deployment_complete",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 9540,
+          "flank_threatened": 0,
+          "in_melee": 0,
+          "kills": 0,
+          "men_alive": 1530,
+          "moving": 0,
+          "observed_units": 14,
+          "routing": 0,
+          "shattered": 0,
+          "under_missile_attack": 0,
+          "wavering": 0
+        },
+        "local": {
+          "ammo": 9448,
+          "flank_threatened": 0,
+          "in_melee": 0,
+          "kills": 0,
+          "men_alive": 1258,
+          "moving": 0,
+          "observed_units": 15,
+          "routing": 0,
+          "shattered": 0,
+          "under_missile_attack": 0,
+          "wavering": 0
+        }
+      },
+      "time_ms": 128800
+    },
+    {
+      "hidden_enemy_units": 2,
+      "slice_id": "first_contact",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 11340,
+          "flank_threatened": 0,
+          "in_melee": 0,
+          "kills": 0,
+          "men_alive": 1861,
+          "moving": 18,
+          "observed_units": 18,
+          "routing": 0,
+          "shattered": 0,
+          "under_missile_attack": 1,
+          "wavering": 0
+        },
+        "local": {
+          "ammo": 9444,
+          "flank_threatened": 0,
+          "in_melee": 0,
+          "kills": 0,
+          "men_alive": 1258,
+          "moving": 1,
+          "observed_units": 15,
+          "routing": 0,
+          "shattered": 0,
+          "under_missile_attack": 0,
+          "wavering": 0
+        }
+      },
+      "time_ms": 141100
+    },
+    {
+      "hidden_enemy_units": 4,
+      "slice_id": "local_melee_commitment",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 9043,
+          "flank_threatened": 0,
+          "in_melee": 0,
+          "kills": 3,
+          "men_alive": 1437,
+          "moving": 14,
+          "observed_units": 16,
+          "routing": 1,
+          "shattered": 0,
+          "under_missile_attack": 7,
+          "wavering": 0
+        },
+        "local": {
+          "ammo": 8873,
+          "flank_threatened": 2,
+          "in_melee": 1,
+          "kills": 78,
+          "men_alive": 1256,
+          "moving": 4,
+          "observed_units": 17,
+          "routing": 0,
+          "shattered": 0,
+          "under_missile_attack": 0,
+          "wavering": 0
+        }
+      },
+      "time_ms": 291100
+    },
+    {
+      "hidden_enemy_units": 0,
+      "slice_id": "local_crisis",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 9538,
+          "flank_threatened": 6,
+          "in_melee": 12,
+          "kills": 184,
+          "men_alive": 1501,
+          "moving": 6,
+          "observed_units": 20,
+          "routing": 3,
+          "shattered": 0,
+          "under_missile_attack": 4,
+          "wavering": 0
+        },
+        "local": {
+          "ammo": 6520,
+          "flank_threatened": 5,
+          "in_melee": 10,
+          "kills": 464,
+          "men_alive": 1070,
+          "moving": 4,
+          "observed_units": 17,
+          "routing": 1,
+          "shattered": 0,
+          "under_missile_attack": 9,
+          "wavering": 1
+        }
+      },
+      "time_ms": 402100
+    },
+    {
+      "hidden_enemy_units": 0,
+      "slice_id": "enemy_break",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 7706,
+          "flank_threatened": 5,
+          "in_melee": 8,
+          "kills": 495,
+          "men_alive": 993,
+          "moving": 10,
+          "observed_units": 19,
+          "routing": 7,
+          "shattered": 1,
+          "under_missile_attack": 10,
+          "wavering": 0
+        },
+        "local": {
+          "ammo": 4713,
+          "flank_threatened": 1,
+          "in_melee": 4,
+          "kills": 955,
+          "men_alive": 740,
+          "moving": 9,
+          "observed_units": 17,
+          "routing": 3,
+          "shattered": 1,
+          "under_missile_attack": 4,
+          "wavering": 0
+        }
+      },
+      "time_ms": 531100
+    },
+    {
+      "hidden_enemy_units": 0,
+      "slice_id": "enemy_rout_majority",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 7326,
+          "flank_threatened": 4,
+          "in_melee": 4,
+          "kills": 510,
+          "men_alive": 901,
+          "moving": 13,
+          "observed_units": 18,
+          "routing": 9,
+          "shattered": 2,
+          "under_missile_attack": 9,
+          "wavering": 1
+        },
+        "local": {
+          "ammo": 4174,
+          "flank_threatened": 3,
+          "in_melee": 2,
+          "kills": 989,
+          "men_alive": 684,
+          "moving": 7,
+          "observed_units": 16,
+          "routing": 3,
+          "shattered": 0,
+          "under_missile_attack": 6,
+          "wavering": 0
+        }
+      },
+      "time_ms": 555100
+    },
+    {
+      "hidden_enemy_units": 0,
+      "slice_id": "victory_countdown",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 6823,
+          "flank_threatened": 4,
+          "in_melee": 0,
+          "kills": 511,
+          "men_alive": 524,
+          "moving": 13,
+          "observed_units": 15,
+          "routing": 15,
+          "shattered": 12,
+          "under_missile_attack": 1,
+          "wavering": 0
+        },
+        "local": {
+          "ammo": 2664,
+          "flank_threatened": 0,
+          "in_melee": 0,
+          "kills": 1141,
+          "men_alive": 475,
+          "moving": 10,
+          "observed_units": 13,
+          "routing": 2,
+          "shattered": 0,
+          "under_missile_attack": 1,
+          "wavering": 2
+        }
+      },
+      "time_ms": 730700
+    },
+    {
+      "hidden_enemy_units": 0,
+      "slice_id": "battle_complete",
+      "summary": {
+        "enemy_visible": {
+          "ammo": 6823,
+          "flank_threatened": 4,
+          "in_melee": 0,
+          "kills": 511,
+          "men_alive": 524,
+          "moving": 15,
+          "observed_units": 15,
+          "routing": 15,
+          "shattered": 15,
+          "under_missile_attack": 0,
+          "wavering": 0
+        },
+        "local": {
+          "ammo": 2623,
+          "flank_threatened": 0,
+          "in_melee": 0,
+          "kills": 827,
+          "men_alive": 473,
+          "moving": 11,
+          "observed_units": 11,
+          "routing": 2,
+          "shattered": 0,
+          "under_missile_attack": 1,
+          "wavering": 2
+        }
+      },
+      "time_ms": 739600
+    }
+  ]
+}

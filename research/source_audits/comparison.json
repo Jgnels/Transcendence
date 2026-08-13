@@ -1,0 +1,179 @@
+{
+  "evidence_status": "SUPPORTED",
+  "limitations": [
+    "Shared table families indicate conflict potential, not row-level conflict proof."
+  ],
+  "pairwise": [
+    {
+      "left": "deepwar_2978779730",
+      "overlap_count": 10,
+      "overlapping_table_families": [
+        "cai_construction_system_templates_junctions_tables",
+        "cai_personalities_budget_allocations_tables",
+        "cai_personalities_income_allocations_tables",
+        "cai_personality_strategic_components_tables",
+        "cai_task_management_system_task_generator_groups_generators_junctions_tables",
+        "cai_task_management_system_task_generator_variable_group_junctions_tables",
+        "cai_task_management_system_task_generator_variables_tables",
+        "cai_task_management_system_variable_group_junctions_tables",
+        "cai_task_management_system_variables_tables",
+        "cai_variables_tables"
+      ],
+      "right": "hecleas_2905096541"
+    },
+    {
+      "left": "deepwar_2978779730",
+      "overlap_count": 2,
+      "overlapping_table_families": [
+        "cai_task_management_system_task_generator_groups_generators_junctions_tables",
+        "campaign_difficulty_handicap_effects_tables"
+      ],
+      "right": "sfo_2792731173"
+    },
+    {
+      "left": "hecleas_2905096541",
+      "overlap_count": 5,
+      "overlapping_table_families": [
+        "autoresolver_modifier_group_to_modifiers_tables",
+        "cai_decision_policy_junctions_tables",
+        "cai_task_management_system_task_generator_groups_generators_junctions_tables",
+        "campaign_cultural_relations_tables",
+        "campaign_variables_tables"
+      ],
+      "right": "sfo_2792731173"
+    }
+  ],
+  "potential_conflicts": [
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "hecleas_2905096541",
+        "sfo_2792731173"
+      ],
+      "table_family": "autoresolver_modifier_group_to_modifiers_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_construction_system_templates_junctions_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "hecleas_2905096541",
+        "sfo_2792731173"
+      ],
+      "table_family": "cai_decision_policy_junctions_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_personalities_budget_allocations_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_personalities_income_allocations_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_personality_strategic_components_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541",
+        "sfo_2792731173"
+      ],
+      "table_family": "cai_task_management_system_task_generator_groups_generators_junctions_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_task_management_system_task_generator_variable_group_junctions_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_task_management_system_task_generator_variables_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_task_management_system_variable_group_junctions_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_task_management_system_variables_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "hecleas_2905096541"
+      ],
+      "table_family": "cai_variables_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "hecleas_2905096541",
+        "sfo_2792731173"
+      ],
+      "table_family": "campaign_cultural_relations_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "deepwar_2978779730",
+        "sfo_2792731173"
+      ],
+      "table_family": "campaign_difficulty_handicap_effects_tables"
+    },
+    {
+      "risk": "LOAD_ORDER_OR_ROW_CONFLICT_UNVERIFIED",
+      "sources": [
+        "hecleas_2905096541",
+        "sfo_2792731173"
+      ],
+      "table_family": "campaign_variables_tables"
+    }
+  ],
+  "schema_version": 1,
+  "shared_by_all": [
+    "cai_task_management_system_task_generator_groups_generators_junctions_tables"
+  ],
+  "shared_by_all_count": 1,
+  "source_ids": [
+    "deepwar_2978779730",
+    "hecleas_2905096541",
+    "sfo_2792731173"
+  ]
+}

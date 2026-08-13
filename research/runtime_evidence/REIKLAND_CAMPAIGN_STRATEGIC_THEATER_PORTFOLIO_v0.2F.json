@@ -1,0 +1,596 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "contract": "CAMPAIGN_STRATEGIC_THEATER_CROSS_EVIDENCE_PORTFOLIO_V1",
+  "evidence_status": "CONTROL_OFFLINE_OVER_V0_2E_BENCHMARK",
+  "observed_source_report_digest": "953e35299dd0ef9e06de9d5347df01cabbd79cce68727e8b7a12175a058bc03b",
+  "observed_turns": [
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "candidate_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "pressure_class": "LOW_VISIBLE_PRESSURE"
+          },
+          "portfolio_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+          "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+          "rationale": [
+            "no observer-safe hostile army or hostile region asset is present",
+            "low pressure does not justify manufacturing an offensive target"
+          ],
+          "result_digest": "51a8a5abcae139a622b582066da68f26c130f156d318aac6d449ce16004784db",
+          "scope": "THEATER",
+          "severity": "LOW",
+          "target_id": null,
+          "target_kind": null,
+          "utility": 100.0
+        }
+      ],
+      "challenge_result_digest": "d8cbd88630ad3f17cf1ee1cf7a5a2f4c1d0a746b42b8b1be9edbdab71fe49adf",
+      "contract": "CAMPAIGN_STRATEGIC_THEATER_PRIORITY_PORTFOLIO_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "critical_overflow": null,
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_STRATEGIC_BENCHMARK",
+      "guardrails": [
+        "Front crises and total-force recovery can veto new aggressive commitment.",
+        "War count does not create one priority per enemy faction.",
+        "Visible faction identity may name a rival target but human/player identity has no scoring privilege.",
+        "A coherent visible rival candidate is not proof of coordination, diplomacy, economy, or durable power.",
+        "Portfolio records are priorities only; army assignment, route feasibility, command construction, acknowledgement, execution, and outcome remain separate gates."
+      ],
+      "metrics": {
+        "candidate_priority_count": 1,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_priority_count": 0,
+        "selected_critical_count": 0,
+        "selected_high_count": 0,
+        "selected_priority_count": 1,
+        "unselected_noncritical_count": 0
+      },
+      "portfolio_constraints": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "coordination_claim_from_colocation": "PROHIBITED",
+        "force_assignment_status": "NOT_PERFORMED",
+        "human_or_player_identity_consumed": false,
+        "maximum_aggressive_priorities": 1,
+        "maximum_selected_priorities": 6,
+        "route_or_action_status": "NOT_EVALUATED",
+        "war_count_rewarded": false
+      },
+      "result_digest": "d46b05571e6fe097d3daf4187f8a87e7e75bd6a42d0a64751fdb18266fd801c5",
+      "scenario_digest": "920d5130a03cba9c3ae96cc6ed0a939e7e1fa19131c8c21fa3ad9f450c742b63",
+      "scenario_id": "shadow:wh_main_emp_empire:turn:4",
+      "schema_version": 1,
+      "selected_aggressive_priorities": [],
+      "selected_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "pressure_class": "LOW_VISIBLE_PRESSURE"
+          },
+          "portfolio_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+          "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+          "rationale": [
+            "no observer-safe hostile army or hostile region asset is present",
+            "low pressure does not justify manufacturing an offensive target"
+          ],
+          "result_digest": "51a8a5abcae139a622b582066da68f26c130f156d318aac6d449ce16004784db",
+          "scope": "THEATER",
+          "severity": "LOW",
+          "target_id": null,
+          "target_kind": null,
+          "utility": 100.0
+        }
+      ],
+      "strategic_posture": "CONSOLIDATE_AND_RESERVE",
+      "turn": 4
+    },
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "candidate_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "pressure_class": "LOW_VISIBLE_PRESSURE"
+          },
+          "portfolio_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+          "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+          "rationale": [
+            "no observer-safe hostile army or hostile region asset is present",
+            "low pressure does not justify manufacturing an offensive target"
+          ],
+          "result_digest": "51a8a5abcae139a622b582066da68f26c130f156d318aac6d449ce16004784db",
+          "scope": "THEATER",
+          "severity": "LOW",
+          "target_id": null,
+          "target_kind": null,
+          "utility": 100.0
+        }
+      ],
+      "challenge_result_digest": "e46c42fc53e81a02dcc62abb701d14fb7979d4e41614a1946f645479951e168f",
+      "contract": "CAMPAIGN_STRATEGIC_THEATER_PRIORITY_PORTFOLIO_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "critical_overflow": null,
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_STRATEGIC_BENCHMARK",
+      "guardrails": [
+        "Front crises and total-force recovery can veto new aggressive commitment.",
+        "War count does not create one priority per enemy faction.",
+        "Visible faction identity may name a rival target but human/player identity has no scoring privilege.",
+        "A coherent visible rival candidate is not proof of coordination, diplomacy, economy, or durable power.",
+        "Portfolio records are priorities only; army assignment, route feasibility, command construction, acknowledgement, execution, and outcome remain separate gates."
+      ],
+      "metrics": {
+        "candidate_priority_count": 1,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_priority_count": 0,
+        "selected_critical_count": 0,
+        "selected_high_count": 0,
+        "selected_priority_count": 1,
+        "unselected_noncritical_count": 0
+      },
+      "portfolio_constraints": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "coordination_claim_from_colocation": "PROHIBITED",
+        "force_assignment_status": "NOT_PERFORMED",
+        "human_or_player_identity_consumed": false,
+        "maximum_aggressive_priorities": 1,
+        "maximum_selected_priorities": 6,
+        "route_or_action_status": "NOT_EVALUATED",
+        "war_count_rewarded": false
+      },
+      "result_digest": "e1df8731e7c608f38a2b83153811642db5e5f691ba20fca4a331ad51c51e0c54",
+      "scenario_digest": "6a42c51d5075e8433da318bd2a71aa7f742eab23fda362069c8c96ef15990bfe",
+      "scenario_id": "shadow:wh_main_emp_empire:turn:5",
+      "schema_version": 1,
+      "selected_aggressive_priorities": [],
+      "selected_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "pressure_class": "LOW_VISIBLE_PRESSURE"
+          },
+          "portfolio_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+          "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+          "rationale": [
+            "no observer-safe hostile army or hostile region asset is present",
+            "low pressure does not justify manufacturing an offensive target"
+          ],
+          "result_digest": "51a8a5abcae139a622b582066da68f26c130f156d318aac6d449ce16004784db",
+          "scope": "THEATER",
+          "severity": "LOW",
+          "target_id": null,
+          "target_kind": null,
+          "utility": 100.0
+        }
+      ],
+      "strategic_posture": "CONSOLIDATE_AND_RESERVE",
+      "turn": 5
+    },
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "candidate_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "pressure_class": "LOW_VISIBLE_PRESSURE"
+          },
+          "portfolio_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+          "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+          "rationale": [
+            "no observer-safe hostile army or hostile region asset is present",
+            "low pressure does not justify manufacturing an offensive target"
+          ],
+          "result_digest": "51a8a5abcae139a622b582066da68f26c130f156d318aac6d449ce16004784db",
+          "scope": "THEATER",
+          "severity": "LOW",
+          "target_id": null,
+          "target_kind": null,
+          "utility": 100.0
+        }
+      ],
+      "challenge_result_digest": "f4ef8549ef8f4c534c9d79077280783cbe9e1dac5b049dfb114559284b5a4761",
+      "contract": "CAMPAIGN_STRATEGIC_THEATER_PRIORITY_PORTFOLIO_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "critical_overflow": null,
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_STRATEGIC_BENCHMARK",
+      "guardrails": [
+        "Front crises and total-force recovery can veto new aggressive commitment.",
+        "War count does not create one priority per enemy faction.",
+        "Visible faction identity may name a rival target but human/player identity has no scoring privilege.",
+        "A coherent visible rival candidate is not proof of coordination, diplomacy, economy, or durable power.",
+        "Portfolio records are priorities only; army assignment, route feasibility, command construction, acknowledgement, execution, and outcome remain separate gates."
+      ],
+      "metrics": {
+        "candidate_priority_count": 1,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_priority_count": 0,
+        "selected_critical_count": 0,
+        "selected_high_count": 0,
+        "selected_priority_count": 1,
+        "unselected_noncritical_count": 0
+      },
+      "portfolio_constraints": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "coordination_claim_from_colocation": "PROHIBITED",
+        "force_assignment_status": "NOT_PERFORMED",
+        "human_or_player_identity_consumed": false,
+        "maximum_aggressive_priorities": 1,
+        "maximum_selected_priorities": 6,
+        "route_or_action_status": "NOT_EVALUATED",
+        "war_count_rewarded": false
+      },
+      "result_digest": "10e4af3f19b0721450aa5f9664715f173465dbc0386efe38178a0283b871d67f",
+      "scenario_digest": "6155fbf99624cb8e2b19ccc51f525fcd6cca8dfb9d8fa81f0d55ef0d53fe32d1",
+      "scenario_id": "shadow:wh_main_emp_empire:turn:6",
+      "schema_version": 1,
+      "selected_aggressive_priorities": [],
+      "selected_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "pressure_class": "LOW_VISIBLE_PRESSURE"
+          },
+          "portfolio_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+          "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+          "rationale": [
+            "no observer-safe hostile army or hostile region asset is present",
+            "low pressure does not justify manufacturing an offensive target"
+          ],
+          "result_digest": "51a8a5abcae139a622b582066da68f26c130f156d318aac6d449ce16004784db",
+          "scope": "THEATER",
+          "severity": "LOW",
+          "target_id": null,
+          "target_kind": null,
+          "utility": 100.0
+        }
+      ],
+      "strategic_posture": "CONSOLIDATE_AND_RESERVE",
+      "turn": 6
+    },
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "candidate_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "observed_region_count": 1,
+            "visible_army_count": 2,
+            "visible_army_strength_share": 1.0
+          },
+          "portfolio_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+          "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "rationale": [
+            "same visible hostile faction has multiple armies, observed territory, and benchmark share support",
+            "containment is a theater priority, not an order or proof of hostile coordination"
+          ],
+          "result_digest": "2c992ab18caf806479a4c193ef8017a36b45ba5546ed136915bd677bb42f2dc8",
+          "scope": "RIVAL",
+          "severity": "HIGH",
+          "target_id": "wh_main_emp_marienburg",
+          "target_kind": "FACTION",
+          "utility": 531.0
+        }
+      ],
+      "challenge_result_digest": "13ec4c085a19860838d0b413b07bfc3003b93d2764fb30cdf2ed18de74da4e69",
+      "contract": "CAMPAIGN_STRATEGIC_THEATER_PRIORITY_PORTFOLIO_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "critical_overflow": null,
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_STRATEGIC_BENCHMARK",
+      "guardrails": [
+        "Front crises and total-force recovery can veto new aggressive commitment.",
+        "War count does not create one priority per enemy faction.",
+        "Visible faction identity may name a rival target but human/player identity has no scoring privilege.",
+        "A coherent visible rival candidate is not proof of coordination, diplomacy, economy, or durable power.",
+        "Portfolio records are priorities only; army assignment, route feasibility, command construction, acknowledgement, execution, and outcome remain separate gates."
+      ],
+      "metrics": {
+        "candidate_priority_count": 1,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_priority_count": 1,
+        "selected_critical_count": 0,
+        "selected_high_count": 1,
+        "selected_priority_count": 1,
+        "unselected_noncritical_count": 0
+      },
+      "portfolio_constraints": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "coordination_claim_from_colocation": "PROHIBITED",
+        "force_assignment_status": "NOT_PERFORMED",
+        "human_or_player_identity_consumed": false,
+        "maximum_aggressive_priorities": 1,
+        "maximum_selected_priorities": 6,
+        "route_or_action_status": "NOT_EVALUATED",
+        "war_count_rewarded": false
+      },
+      "result_digest": "3a337cd5aefe4076f84161d7d9a961db68ce4c4a6e8421a090acb40adf2483c3",
+      "scenario_digest": "59be34504dd5e05c680bb047d4c434d36d4f9aa9677ed9ddfafd1e61b31786e2",
+      "scenario_id": "shadow:wh_main_emp_empire:turn:7",
+      "schema_version": 1,
+      "selected_aggressive_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "observed_region_count": 1,
+            "visible_army_count": 2,
+            "visible_army_strength_share": 1.0
+          },
+          "portfolio_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+          "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "rationale": [
+            "same visible hostile faction has multiple armies, observed territory, and benchmark share support",
+            "containment is a theater priority, not an order or proof of hostile coordination"
+          ],
+          "result_digest": "2c992ab18caf806479a4c193ef8017a36b45ba5546ed136915bd677bb42f2dc8",
+          "scope": "RIVAL",
+          "severity": "HIGH",
+          "target_id": "wh_main_emp_marienburg",
+          "target_kind": "FACTION",
+          "utility": 531.0
+        }
+      ],
+      "selected_priorities": [
+        {
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "evidence": {
+            "observed_region_count": 1,
+            "visible_army_count": 2,
+            "visible_army_strength_share": 1.0
+          },
+          "portfolio_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+          "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "rationale": [
+            "same visible hostile faction has multiple armies, observed territory, and benchmark share support",
+            "containment is a theater priority, not an order or proof of hostile coordination"
+          ],
+          "result_digest": "2c992ab18caf806479a4c193ef8017a36b45ba5546ed136915bd677bb42f2dc8",
+          "scope": "RIVAL",
+          "severity": "HIGH",
+          "target_id": "wh_main_emp_marienburg",
+          "target_kind": "FACTION",
+          "utility": 531.0
+        }
+      ],
+      "strategic_posture": "COHERENT_RIVAL_CONTAINMENT",
+      "turn": 7
+    }
+  ],
+  "portfolio_design_limits": [
+    "The six-record priority budget and one-aggressive-priority cap are project-owned engineering constraints, not empirical WH3 optima.",
+    "The portfolio does not assign armies, prove routes, issue commands, or predict outcomes.",
+    "Observed calibration remains early Reikland turns 4-7; the late-game case remains synthetic.",
+    "Economy, recruitment, diplomacy, replenishment history, native CAI intent, and SFO strategic behavior remain outside this gate."
+  ],
+  "result_digest": "13bd4e418a4056e570a656c6821ee002412c8e3d90f32d61ba2cf333538c5c22",
+  "schema_version": 1,
+  "source_challenge_result_digest": "4cbc5cb253b5cc16966807e889e4c05354a284100cd8f237b90b493281bc9423",
+  "synthetic_late_game_reference": {
+    "application_authority": "PROHIBITED",
+    "authority": "NO_ORDERS",
+    "candidate_priorities": [
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "front_state": "SIEGED_COVERED",
+          "region_value": 1.0
+        },
+        "portfolio_id": "e2b61f914c343a4abf884487ca8dd2e62a2adae1abd991c25730093b7e59499f",
+        "priority_type": "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+        "rationale": [
+          "observed controlled region is under siege",
+          "visible controlled coverage exists and should not be silently abandoned"
+        ],
+        "result_digest": "58b8860251447be5d845b791b4f8605cbdba01d31a13eba8072a9c8bf1267f00",
+        "scope": "FRONT",
+        "severity": "CRITICAL",
+        "target_id": "rival_front",
+        "target_kind": "REGION",
+        "utility": 851.0
+      },
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "all_controlled_armies_recovering": false,
+          "recovering_army_count": 1,
+          "recovery_strength_fraction": 0.237736
+        },
+        "portfolio_id": "7bd5c129466d6a31167954ec6c6ee03e459b2c94abff57a9e06696ed6b535c31",
+        "priority_type": "PROTECT_RECOVERING_FIELD_FORCE",
+        "rationale": [
+          "one or more controlled field armies are below the frozen recovery threshold",
+          "recovery is protected as strategic capacity rather than treated as free offensive strength"
+        ],
+        "result_digest": "1c4f60bbe778bd5453691d964ffac899403fe8d12ca44dbd7277bc0e5b2f0be9",
+        "scope": "RECOVERY",
+        "severity": "HIGH",
+        "target_id": null,
+        "target_kind": null,
+        "utility": 483.7736
+      },
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "observed_hostile_region_count": 2,
+          "visible_hostile_army_count": 1
+        },
+        "portfolio_id": "8e3b5927d9a44c5b07c1f3dd7b16beac995a04dc5633e7459edbc0e72ed3c8ac",
+        "priority_type": "TRACK_SINGLE_VISIBLE_RIVAL",
+        "rationale": [
+          "visible hostile assets exist but do not satisfy the coherent-rival benchmark",
+          "retain pressure awareness without inventing a durable-rival claim"
+        ],
+        "result_digest": "f22021d2670e6d7ee99a5b001566b26eed3063ee782cb39746e7c58a6b8fd8b6",
+        "scope": "RIVAL_SET",
+        "severity": "MEDIUM",
+        "target_id": null,
+        "target_kind": null,
+        "utility": 280.0
+      },
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "controlled_army_count": 3
+        },
+        "portfolio_id": "103b6900925195ab7a45a72fd2cef3f0e3bb791e532136f060e2eb5d2e0d2257",
+        "priority_type": "PRESERVE_STRATEGIC_RESERVE",
+        "rationale": [
+          "multiple controlled field armies exist",
+          "reserve preservation limits total commitment and reduces strategic brittleness"
+        ],
+        "result_digest": "467f81d673c0e7530e241470b07456530ab307ad0559b37cb1a2ace8b052e4f6",
+        "scope": "RESERVE",
+        "severity": "MEDIUM",
+        "target_id": null,
+        "target_kind": null,
+        "utility": 275.0
+      }
+    ],
+    "challenge_result_digest": "9d71f7fea00518c501d9404ff545d68ecc9b7f9e3ffca74b53955c34be7cc10d",
+    "contract": "CAMPAIGN_STRATEGIC_THEATER_PRIORITY_PORTFOLIO_V1",
+    "controlled_faction": "rival_bloc",
+    "critical_overflow": null,
+    "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_STRATEGIC_BENCHMARK",
+    "guardrails": [
+      "Front crises and total-force recovery can veto new aggressive commitment.",
+      "War count does not create one priority per enemy faction.",
+      "Visible faction identity may name a rival target but human/player identity has no scoring privilege.",
+      "A coherent visible rival candidate is not proof of coordination, diplomacy, economy, or durable power.",
+      "Portfolio records are priorities only; army assignment, route feasibility, command construction, acknowledgement, execution, and outcome remain separate gates."
+    ],
+    "metrics": {
+      "candidate_priority_count": 4,
+      "critical_source_count": 1,
+      "critical_source_coverage": 1.0,
+      "selected_aggressive_priority_count": 0,
+      "selected_critical_count": 1,
+      "selected_high_count": 1,
+      "selected_priority_count": 4,
+      "unselected_noncritical_count": 0
+    },
+    "portfolio_constraints": {
+      "aggressive_commitment_allowed": false,
+      "all_controlled_armies_recovering": false,
+      "coordination_claim_from_colocation": "PROHIBITED",
+      "force_assignment_status": "NOT_PERFORMED",
+      "human_or_player_identity_consumed": false,
+      "maximum_aggressive_priorities": 1,
+      "maximum_selected_priorities": 6,
+      "route_or_action_status": "NOT_EVALUATED",
+      "war_count_rewarded": false
+    },
+    "result_digest": "71b701885f706353cef21713daf0c48e0c56232050e869119a6a2a38e552c1d2",
+    "scenario_digest": "ea40b0a48039b9f4e3d8196542580ce57ecd5e335bcbec450d9735fdb4433298",
+    "scenario_id": "tier2_late_game_pressure_v1",
+    "schema_version": 1,
+    "selected_aggressive_priorities": [],
+    "selected_priorities": [
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "front_state": "SIEGED_COVERED",
+          "region_value": 1.0
+        },
+        "portfolio_id": "e2b61f914c343a4abf884487ca8dd2e62a2adae1abd991c25730093b7e59499f",
+        "priority_type": "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+        "rationale": [
+          "observed controlled region is under siege",
+          "visible controlled coverage exists and should not be silently abandoned"
+        ],
+        "result_digest": "58b8860251447be5d845b791b4f8605cbdba01d31a13eba8072a9c8bf1267f00",
+        "scope": "FRONT",
+        "severity": "CRITICAL",
+        "target_id": "rival_front",
+        "target_kind": "REGION",
+        "utility": 851.0
+      },
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "all_controlled_armies_recovering": false,
+          "recovering_army_count": 1,
+          "recovery_strength_fraction": 0.237736
+        },
+        "portfolio_id": "7bd5c129466d6a31167954ec6c6ee03e459b2c94abff57a9e06696ed6b535c31",
+        "priority_type": "PROTECT_RECOVERING_FIELD_FORCE",
+        "rationale": [
+          "one or more controlled field armies are below the frozen recovery threshold",
+          "recovery is protected as strategic capacity rather than treated as free offensive strength"
+        ],
+        "result_digest": "1c4f60bbe778bd5453691d964ffac899403fe8d12ca44dbd7277bc0e5b2f0be9",
+        "scope": "RECOVERY",
+        "severity": "HIGH",
+        "target_id": null,
+        "target_kind": null,
+        "utility": 483.7736
+      },
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "observed_hostile_region_count": 2,
+          "visible_hostile_army_count": 1
+        },
+        "portfolio_id": "8e3b5927d9a44c5b07c1f3dd7b16beac995a04dc5633e7459edbc0e72ed3c8ac",
+        "priority_type": "TRACK_SINGLE_VISIBLE_RIVAL",
+        "rationale": [
+          "visible hostile assets exist but do not satisfy the coherent-rival benchmark",
+          "retain pressure awareness without inventing a durable-rival claim"
+        ],
+        "result_digest": "f22021d2670e6d7ee99a5b001566b26eed3063ee782cb39746e7c58a6b8fd8b6",
+        "scope": "RIVAL_SET",
+        "severity": "MEDIUM",
+        "target_id": null,
+        "target_kind": null,
+        "utility": 280.0
+      },
+      {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "evidence": {
+          "controlled_army_count": 3
+        },
+        "portfolio_id": "103b6900925195ab7a45a72fd2cef3f0e3bb791e532136f060e2eb5d2e0d2257",
+        "priority_type": "PRESERVE_STRATEGIC_RESERVE",
+        "rationale": [
+          "multiple controlled field armies exist",
+          "reserve preservation limits total commitment and reduces strategic brittleness"
+        ],
+        "result_digest": "467f81d673c0e7530e241470b07456530ab307ad0559b37cb1a2ace8b052e4f6",
+        "scope": "RESERVE",
+        "severity": "MEDIUM",
+        "target_id": null,
+        "target_kind": null,
+        "utility": 275.0
+      }
+    ],
+    "strategic_posture": "CRISIS_STABILIZATION",
+    "turn": 110
+  }
+}

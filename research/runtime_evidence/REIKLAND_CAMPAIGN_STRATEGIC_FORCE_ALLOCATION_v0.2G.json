@@ -1,0 +1,730 @@
+{
+  "application_authority": "PROHIBITED",
+  "assignment_envelope": {
+    "application_authority": "PROHIBITED",
+    "authority": "NO_ORDERS",
+    "contract": "CAMPAIGN_THEATER_TO_ARMY_CROSS_EVIDENCE_ASSIGNMENT_V1",
+    "evidence_status": "CONTROL_OFFLINE_OVER_V0_2F_STRATEGIC_PORTFOLIO",
+    "generalization_limits": [
+      "Observed campaign calibration still contains only one controlled Reikland field army on turns 4-7, so multi-army allocation behavior is synthetic.",
+      "Straight-line geometry is not campaign pathfinding, stance legality, zone-of-control legality, or movement reachability.",
+      "No economy, recruitment, diplomacy, native CAI intent, acknowledgement, execution, or causal outcome is inferred."
+    ],
+    "observed_assignments": [
+      {
+        "actor_inventory": {
+          "eligible_controlled_army_ids": [
+            "force:65"
+          ],
+          "healthy_army_ids": [
+            "force:65"
+          ],
+          "recovering_army_ids": []
+        },
+        "application_authority": "PROHIBITED",
+        "assignment_constraints": {
+          "actor_exclusivity": "ONE_PRIORITY_OR_PROTECTION_PER_ARMY",
+          "actor_resource": "ARMY_STRATEGIC_COMMITMENT_SLOT",
+          "assignment_solver": "DETERMINISTIC_SEVERITY_FIRST_GREEDY_NOT_OPTIMALITY_CLAIM",
+          "critical_recovery_override": "ALLOWED_WITH_EXPLICIT_FLAG",
+          "orders_emitted": false,
+          "overflow_sources_expanded_for_assignment": true,
+          "recovering_armies_protected_from_noncritical_assignment": true,
+          "reserve_floor": "ONE_HEALTHY_UNCLAIMED_ARMY_WHEN_POSSIBLE_FOR_NONCRITICAL_WORK",
+          "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY"
+        },
+        "assignments": [],
+        "authority": "NO_ORDERS",
+        "candidate_rankings": {},
+        "challenge_result_digest": "d8cbd88630ad3f17cf1ee1cf7a5a2f4c1d0a746b42b8b1be9edbdab71fe49adf",
+        "contract": "CAMPAIGN_THEATER_TO_ARMY_ASSIGNMENT_V1",
+        "controlled_faction": "wh_main_emp_empire",
+        "effective_priorities": [
+          {
+            "priority_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+            "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "severity": "LOW",
+            "target_id": null,
+            "target_kind": null,
+            "via_critical_overflow": false
+          }
+        ],
+        "evidence_status": "CONTROL_OFFLINE_SHADOW_FORCE_ALLOCATION",
+        "guardrails": [
+          "Geometric distance and movement are assignment references only; no campaign path feasibility is claimed.",
+          "Recovering armies are protected from noncritical commitments; critical emergency use is explicit and remains unexecuted.",
+          "A strategic reserve is an abstract capacity reservation, not a destination or stance order.",
+          "Critical overflow is expanded back to exact source priorities so bounded portfolio representation cannot erase assignment conflicts.",
+          "Assignments are shadow proposals only and establish neither issue, acknowledgement, execution, nor outcome."
+        ],
+        "metrics": {
+          "assignment_count": 0,
+          "critical_force_assignment_coverage": 1.0,
+          "critical_force_priority_count": 0,
+          "double_booked_actor_count": 0,
+          "effective_priority_count": 1,
+          "eligible_controlled_army_count": 1,
+          "recovering_army_count": 0,
+          "recovery_override_count": 0,
+          "recovery_protection_count": 0,
+          "reserve_actor_id": null,
+          "resource_conflict_count": 0,
+          "unfilled_priority_count": 1
+        },
+        "recovery_protections": [],
+        "resource_conflicts": [],
+        "result_digest": "b30781a5b163cf86c7bf2675bd7ca19e18e60d0f86ff2e4fba1aa317f986b968",
+        "scenario_digest": "920d5130a03cba9c3ae96cc6ed0a939e7e1fa19131c8c21fa3ad9f450c742b63",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:4",
+        "schema_version": 1,
+        "strategic_portfolio_result_digest": "d46b05571e6fe097d3daf4187f8a87e7e75bd6a42d0a64751fdb18266fd801c5",
+        "turn": 4,
+        "unfilled_priorities": [
+          {
+            "priority_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+            "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "reason": "STRATEGIC_POSTURE_ONLY",
+            "severity": "LOW",
+            "status": "NO_FORCE_REQUIRED",
+            "via_critical_overflow": false
+          }
+        ]
+      },
+      {
+        "actor_inventory": {
+          "eligible_controlled_army_ids": [
+            "force:65"
+          ],
+          "healthy_army_ids": [
+            "force:65"
+          ],
+          "recovering_army_ids": []
+        },
+        "application_authority": "PROHIBITED",
+        "assignment_constraints": {
+          "actor_exclusivity": "ONE_PRIORITY_OR_PROTECTION_PER_ARMY",
+          "actor_resource": "ARMY_STRATEGIC_COMMITMENT_SLOT",
+          "assignment_solver": "DETERMINISTIC_SEVERITY_FIRST_GREEDY_NOT_OPTIMALITY_CLAIM",
+          "critical_recovery_override": "ALLOWED_WITH_EXPLICIT_FLAG",
+          "orders_emitted": false,
+          "overflow_sources_expanded_for_assignment": true,
+          "recovering_armies_protected_from_noncritical_assignment": true,
+          "reserve_floor": "ONE_HEALTHY_UNCLAIMED_ARMY_WHEN_POSSIBLE_FOR_NONCRITICAL_WORK",
+          "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY"
+        },
+        "assignments": [],
+        "authority": "NO_ORDERS",
+        "candidate_rankings": {},
+        "challenge_result_digest": "e46c42fc53e81a02dcc62abb701d14fb7979d4e41614a1946f645479951e168f",
+        "contract": "CAMPAIGN_THEATER_TO_ARMY_ASSIGNMENT_V1",
+        "controlled_faction": "wh_main_emp_empire",
+        "effective_priorities": [
+          {
+            "priority_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+            "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "severity": "LOW",
+            "target_id": null,
+            "target_kind": null,
+            "via_critical_overflow": false
+          }
+        ],
+        "evidence_status": "CONTROL_OFFLINE_SHADOW_FORCE_ALLOCATION",
+        "guardrails": [
+          "Geometric distance and movement are assignment references only; no campaign path feasibility is claimed.",
+          "Recovering armies are protected from noncritical commitments; critical emergency use is explicit and remains unexecuted.",
+          "A strategic reserve is an abstract capacity reservation, not a destination or stance order.",
+          "Critical overflow is expanded back to exact source priorities so bounded portfolio representation cannot erase assignment conflicts.",
+          "Assignments are shadow proposals only and establish neither issue, acknowledgement, execution, nor outcome."
+        ],
+        "metrics": {
+          "assignment_count": 0,
+          "critical_force_assignment_coverage": 1.0,
+          "critical_force_priority_count": 0,
+          "double_booked_actor_count": 0,
+          "effective_priority_count": 1,
+          "eligible_controlled_army_count": 1,
+          "recovering_army_count": 0,
+          "recovery_override_count": 0,
+          "recovery_protection_count": 0,
+          "reserve_actor_id": null,
+          "resource_conflict_count": 0,
+          "unfilled_priority_count": 1
+        },
+        "recovery_protections": [],
+        "resource_conflicts": [],
+        "result_digest": "86d7ca0a244dfe48b4aba27be46362fb839f5176572114f2338984bac997eae6",
+        "scenario_digest": "6a42c51d5075e8433da318bd2a71aa7f742eab23fda362069c8c96ef15990bfe",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:5",
+        "schema_version": 1,
+        "strategic_portfolio_result_digest": "e1df8731e7c608f38a2b83153811642db5e5f691ba20fca4a331ad51c51e0c54",
+        "turn": 5,
+        "unfilled_priorities": [
+          {
+            "priority_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+            "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "reason": "STRATEGIC_POSTURE_ONLY",
+            "severity": "LOW",
+            "status": "NO_FORCE_REQUIRED",
+            "via_critical_overflow": false
+          }
+        ]
+      },
+      {
+        "actor_inventory": {
+          "eligible_controlled_army_ids": [
+            "force:65"
+          ],
+          "healthy_army_ids": [
+            "force:65"
+          ],
+          "recovering_army_ids": []
+        },
+        "application_authority": "PROHIBITED",
+        "assignment_constraints": {
+          "actor_exclusivity": "ONE_PRIORITY_OR_PROTECTION_PER_ARMY",
+          "actor_resource": "ARMY_STRATEGIC_COMMITMENT_SLOT",
+          "assignment_solver": "DETERMINISTIC_SEVERITY_FIRST_GREEDY_NOT_OPTIMALITY_CLAIM",
+          "critical_recovery_override": "ALLOWED_WITH_EXPLICIT_FLAG",
+          "orders_emitted": false,
+          "overflow_sources_expanded_for_assignment": true,
+          "recovering_armies_protected_from_noncritical_assignment": true,
+          "reserve_floor": "ONE_HEALTHY_UNCLAIMED_ARMY_WHEN_POSSIBLE_FOR_NONCRITICAL_WORK",
+          "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY"
+        },
+        "assignments": [],
+        "authority": "NO_ORDERS",
+        "candidate_rankings": {},
+        "challenge_result_digest": "f4ef8549ef8f4c534c9d79077280783cbe9e1dac5b049dfb114559284b5a4761",
+        "contract": "CAMPAIGN_THEATER_TO_ARMY_ASSIGNMENT_V1",
+        "controlled_faction": "wh_main_emp_empire",
+        "effective_priorities": [
+          {
+            "priority_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+            "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "severity": "LOW",
+            "target_id": null,
+            "target_kind": null,
+            "via_critical_overflow": false
+          }
+        ],
+        "evidence_status": "CONTROL_OFFLINE_SHADOW_FORCE_ALLOCATION",
+        "guardrails": [
+          "Geometric distance and movement are assignment references only; no campaign path feasibility is claimed.",
+          "Recovering armies are protected from noncritical commitments; critical emergency use is explicit and remains unexecuted.",
+          "A strategic reserve is an abstract capacity reservation, not a destination or stance order.",
+          "Critical overflow is expanded back to exact source priorities so bounded portfolio representation cannot erase assignment conflicts.",
+          "Assignments are shadow proposals only and establish neither issue, acknowledgement, execution, nor outcome."
+        ],
+        "metrics": {
+          "assignment_count": 0,
+          "critical_force_assignment_coverage": 1.0,
+          "critical_force_priority_count": 0,
+          "double_booked_actor_count": 0,
+          "effective_priority_count": 1,
+          "eligible_controlled_army_count": 1,
+          "recovering_army_count": 0,
+          "recovery_override_count": 0,
+          "recovery_protection_count": 0,
+          "reserve_actor_id": null,
+          "resource_conflict_count": 0,
+          "unfilled_priority_count": 1
+        },
+        "recovery_protections": [],
+        "resource_conflicts": [],
+        "result_digest": "37e8e1bbccc3fa3fbb203d878cbade654d439deec78795201fb1ffb818c1e4a3",
+        "scenario_digest": "6155fbf99624cb8e2b19ccc51f525fcd6cca8dfb9d8fa81f0d55ef0d53fe32d1",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:6",
+        "schema_version": 1,
+        "strategic_portfolio_result_digest": "10e4af3f19b0721450aa5f9664715f173465dbc0386efe38178a0283b871d67f",
+        "turn": 6,
+        "unfilled_priorities": [
+          {
+            "priority_id": "de72f4f61b62dec7c6213216344fa1aeafe8517fd68d9de7d089e8aecb2d64b9",
+            "priority_type": "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "reason": "STRATEGIC_POSTURE_ONLY",
+            "severity": "LOW",
+            "status": "NO_FORCE_REQUIRED",
+            "via_critical_overflow": false
+          }
+        ]
+      },
+      {
+        "actor_inventory": {
+          "eligible_controlled_army_ids": [
+            "force:65"
+          ],
+          "healthy_army_ids": [
+            "force:65"
+          ],
+          "recovering_army_ids": []
+        },
+        "application_authority": "PROHIBITED",
+        "assignment_constraints": {
+          "actor_exclusivity": "ONE_PRIORITY_OR_PROTECTION_PER_ARMY",
+          "actor_resource": "ARMY_STRATEGIC_COMMITMENT_SLOT",
+          "assignment_solver": "DETERMINISTIC_SEVERITY_FIRST_GREEDY_NOT_OPTIMALITY_CLAIM",
+          "critical_recovery_override": "ALLOWED_WITH_EXPLICIT_FLAG",
+          "orders_emitted": false,
+          "overflow_sources_expanded_for_assignment": true,
+          "recovering_armies_protected_from_noncritical_assignment": true,
+          "reserve_floor": "ONE_HEALTHY_UNCLAIMED_ARMY_WHEN_POSSIBLE_FOR_NONCRITICAL_WORK",
+          "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY"
+        },
+        "assignments": [
+          {
+            "actor_id": "force:65",
+            "application_authority": "PROHIBITED",
+            "assignment_id": "6ea9ef353a9bdee4969a9276bbfc9f7b0e277708f421e406f78cf837f04d9415",
+            "assignment_kind": "THEATER_PRIORITY",
+            "assignment_score": 0.838771,
+            "assignment_status": "SHADOW_PROPOSED_NOT_EXECUTED",
+            "authority": "NO_ORDERS",
+            "geometric_eta_turns_reference": 0.212132,
+            "priority_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+            "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+            "recovery_override": false,
+            "reference_anchor": {
+              "source": "OBSERVER_SAFE_VISIBLE_ASSET_CENTROID",
+              "x": 452.0,
+              "y": 657.0
+            },
+            "result_digest": "e8bfbdc9019fa0c911e9caaab89cbcb1defa59cc73da01dad1940555f59e0d97",
+            "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY",
+            "severity": "HIGH",
+            "target_id": "wh_main_emp_marienburg",
+            "target_kind": "FACTION",
+            "via_critical_overflow": false
+          }
+        ],
+        "authority": "NO_ORDERS",
+        "candidate_rankings": {
+          "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee": [
+            {
+              "actor_id": "force:65",
+              "assignment_score": 0.838771,
+              "blocked_reason": null,
+              "eligible": true,
+              "existing_front_coverage": false,
+              "geometric_eta_turns_reference": 0.212132,
+              "recovering": false,
+              "recovery_override": false
+            }
+          ]
+        },
+        "challenge_result_digest": "13ec4c085a19860838d0b413b07bfc3003b93d2764fb30cdf2ed18de74da4e69",
+        "contract": "CAMPAIGN_THEATER_TO_ARMY_ASSIGNMENT_V1",
+        "controlled_faction": "wh_main_emp_empire",
+        "effective_priorities": [
+          {
+            "priority_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+            "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+            "severity": "HIGH",
+            "target_id": "wh_main_emp_marienburg",
+            "target_kind": "FACTION",
+            "via_critical_overflow": false
+          }
+        ],
+        "evidence_status": "CONTROL_OFFLINE_SHADOW_FORCE_ALLOCATION",
+        "guardrails": [
+          "Geometric distance and movement are assignment references only; no campaign path feasibility is claimed.",
+          "Recovering armies are protected from noncritical commitments; critical emergency use is explicit and remains unexecuted.",
+          "A strategic reserve is an abstract capacity reservation, not a destination or stance order.",
+          "Critical overflow is expanded back to exact source priorities so bounded portfolio representation cannot erase assignment conflicts.",
+          "Assignments are shadow proposals only and establish neither issue, acknowledgement, execution, nor outcome."
+        ],
+        "metrics": {
+          "assignment_count": 1,
+          "critical_force_assignment_coverage": 1.0,
+          "critical_force_priority_count": 0,
+          "double_booked_actor_count": 0,
+          "effective_priority_count": 1,
+          "eligible_controlled_army_count": 1,
+          "recovering_army_count": 0,
+          "recovery_override_count": 0,
+          "recovery_protection_count": 0,
+          "reserve_actor_id": null,
+          "resource_conflict_count": 0,
+          "unfilled_priority_count": 0
+        },
+        "recovery_protections": [],
+        "resource_conflicts": [],
+        "result_digest": "6617a354823e6a5d9e814ba7140effa0c468f65570f76ba7f05701e269d3fb7f",
+        "scenario_digest": "59be34504dd5e05c680bb047d4c434d36d4f9aa9677ed9ddfafd1e61b31786e2",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:7",
+        "schema_version": 1,
+        "strategic_portfolio_result_digest": "3a337cd5aefe4076f84161d7d9a961db68ce4c4a6e8421a090acb40adf2483c3",
+        "turn": 7,
+        "unfilled_priorities": []
+      }
+    ],
+    "result_digest": "7d0fe2d9741b62fd470b130e8f19468b842c44e0af2dcefdfe7e6bb86b0a7c0a",
+    "schema_version": 1,
+    "source_challenge_result_digest": "4cbc5cb253b5cc16966807e889e4c05354a284100cd8f237b90b493281bc9423",
+    "source_strategic_portfolio_result_digest": "13bd4e418a4056e570a656c6821ee002412c8e3d90f32d61ba2cf333538c5c22",
+    "synthetic_late_game_assignment": {
+      "actor_inventory": {
+        "eligible_controlled_army_ids": [
+          "rival_1",
+          "rival_2",
+          "rival_3"
+        ],
+        "healthy_army_ids": [
+          "rival_1",
+          "rival_2"
+        ],
+        "recovering_army_ids": [
+          "rival_3"
+        ]
+      },
+      "application_authority": "PROHIBITED",
+      "assignment_constraints": {
+        "actor_exclusivity": "ONE_PRIORITY_OR_PROTECTION_PER_ARMY",
+        "actor_resource": "ARMY_STRATEGIC_COMMITMENT_SLOT",
+        "assignment_solver": "DETERMINISTIC_SEVERITY_FIRST_GREEDY_NOT_OPTIMALITY_CLAIM",
+        "critical_recovery_override": "ALLOWED_WITH_EXPLICIT_FLAG",
+        "orders_emitted": false,
+        "overflow_sources_expanded_for_assignment": true,
+        "recovering_armies_protected_from_noncritical_assignment": true,
+        "reserve_floor": "ONE_HEALTHY_UNCLAIMED_ARMY_WHEN_POSSIBLE_FOR_NONCRITICAL_WORK",
+        "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY"
+      },
+      "assignments": [
+        {
+          "actor_id": "rival_1",
+          "application_authority": "PROHIBITED",
+          "assignment_id": "9962c684d8c06503ed483025b625d9e750da2ac62d71ea8376d9d7e222685b52",
+          "assignment_kind": "THEATER_PRIORITY",
+          "assignment_score": 0.727549,
+          "assignment_status": "SHADOW_PROPOSED_NOT_EXECUTED",
+          "authority": "NO_ORDERS",
+          "geometric_eta_turns_reference": 1.019804,
+          "priority_id": "e2b61f914c343a4abf884487ca8dd2e62a2adae1abd991c25730093b7e59499f",
+          "priority_type": "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+          "recovery_override": false,
+          "reference_anchor": {
+            "source": "OBSERVED_REGION_POINT",
+            "x": 5.0,
+            "y": 1.0
+          },
+          "result_digest": "6b0f59f22f6625b168bb08ce93752e55a00fdf5e0a4f506c38b89b91505e917d",
+          "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY",
+          "severity": "CRITICAL",
+          "target_id": "rival_front",
+          "target_kind": "REGION",
+          "via_critical_overflow": false
+        },
+        {
+          "actor_id": "rival_2",
+          "application_authority": "PROHIBITED",
+          "assignment_id": "16d8ea5c8d5fa3e41d93619cef23c09dd1399ce969d7f33e4957ab3dddc852b6",
+          "assignment_kind": "STRATEGIC_RESERVE",
+          "assignment_score": 1.403333,
+          "assignment_status": "SHADOW_PROPOSED_NOT_EXECUTED",
+          "authority": "NO_ORDERS",
+          "geometric_eta_turns_reference": null,
+          "priority_id": "103b6900925195ab7a45a72fd2cef3f0e3bb791e532136f060e2eb5d2e0d2257",
+          "priority_type": "PRESERVE_STRATEGIC_RESERVE",
+          "recovery_override": false,
+          "reference_anchor": null,
+          "result_digest": "ff2d8fe23725c3f39eb43d39e739c05a9e96376b706a683f26d90d9e4921e639",
+          "route_status": "NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY",
+          "severity": "MEDIUM",
+          "target_id": null,
+          "target_kind": null,
+          "via_critical_overflow": false
+        }
+      ],
+      "authority": "NO_ORDERS",
+      "candidate_rankings": {
+        "e2b61f914c343a4abf884487ca8dd2e62a2adae1abd991c25730093b7e59499f": [
+          {
+            "actor_id": "rival_1",
+            "assignment_score": 0.727549,
+            "blocked_reason": null,
+            "eligible": true,
+            "existing_front_coverage": true,
+            "geometric_eta_turns_reference": 1.019804,
+            "recovering": false,
+            "recovery_override": false
+          },
+          {
+            "actor_id": "rival_2",
+            "assignment_score": 0.712158,
+            "blocked_reason": null,
+            "eligible": true,
+            "existing_front_coverage": true,
+            "geometric_eta_turns_reference": 0.447214,
+            "recovering": false,
+            "recovery_override": false
+          },
+          {
+            "actor_id": "rival_3",
+            "assignment_score": 0.138525,
+            "blocked_reason": null,
+            "eligible": true,
+            "existing_front_coverage": true,
+            "geometric_eta_turns_reference": 1.341641,
+            "recovering": true,
+            "recovery_override": true
+          }
+        ]
+      },
+      "challenge_result_digest": "9d71f7fea00518c501d9404ff545d68ecc9b7f9e3ffca74b53955c34be7cc10d",
+      "contract": "CAMPAIGN_THEATER_TO_ARMY_ASSIGNMENT_V1",
+      "controlled_faction": "rival_bloc",
+      "effective_priorities": [
+        {
+          "priority_id": "e2b61f914c343a4abf884487ca8dd2e62a2adae1abd991c25730093b7e59499f",
+          "priority_type": "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+          "severity": "CRITICAL",
+          "target_id": "rival_front",
+          "target_kind": "REGION",
+          "via_critical_overflow": false
+        },
+        {
+          "priority_id": "7bd5c129466d6a31167954ec6c6ee03e459b2c94abff57a9e06696ed6b535c31",
+          "priority_type": "PROTECT_RECOVERING_FIELD_FORCE",
+          "severity": "HIGH",
+          "target_id": null,
+          "target_kind": null,
+          "via_critical_overflow": false
+        },
+        {
+          "priority_id": "8e3b5927d9a44c5b07c1f3dd7b16beac995a04dc5633e7459edbc0e72ed3c8ac",
+          "priority_type": "TRACK_SINGLE_VISIBLE_RIVAL",
+          "severity": "MEDIUM",
+          "target_id": null,
+          "target_kind": null,
+          "via_critical_overflow": false
+        },
+        {
+          "priority_id": "103b6900925195ab7a45a72fd2cef3f0e3bb791e532136f060e2eb5d2e0d2257",
+          "priority_type": "PRESERVE_STRATEGIC_RESERVE",
+          "severity": "MEDIUM",
+          "target_id": null,
+          "target_kind": null,
+          "via_critical_overflow": false
+        }
+      ],
+      "evidence_status": "CONTROL_OFFLINE_SHADOW_FORCE_ALLOCATION",
+      "guardrails": [
+        "Geometric distance and movement are assignment references only; no campaign path feasibility is claimed.",
+        "Recovering armies are protected from noncritical commitments; critical emergency use is explicit and remains unexecuted.",
+        "A strategic reserve is an abstract capacity reservation, not a destination or stance order.",
+        "Critical overflow is expanded back to exact source priorities so bounded portfolio representation cannot erase assignment conflicts.",
+        "Assignments are shadow proposals only and establish neither issue, acknowledgement, execution, nor outcome."
+      ],
+      "metrics": {
+        "assignment_count": 2,
+        "critical_force_assignment_coverage": 1.0,
+        "critical_force_priority_count": 1,
+        "double_booked_actor_count": 0,
+        "effective_priority_count": 4,
+        "eligible_controlled_army_count": 3,
+        "recovering_army_count": 1,
+        "recovery_override_count": 0,
+        "recovery_protection_count": 1,
+        "reserve_actor_id": "rival_2",
+        "resource_conflict_count": 0,
+        "unfilled_priority_count": 1
+      },
+      "recovery_protections": [
+        {
+          "actor_id": "rival_3",
+          "application_authority": "PROHIBITED",
+          "authority": "NO_ORDERS",
+          "exclusive_resource": "ARMY_STRATEGIC_COMMITMENT_SLOT",
+          "priority_id": "7bd5c129466d6a31167954ec6c6ee03e459b2c94abff57a9e06696ed6b535c31",
+          "protection_status": "RECOVERY_CAPACITY_PROTECTED",
+          "result_digest": "f39cfb6229e072a11a762830d9226b589c7763f690bdd50838944901dc350d62"
+        }
+      ],
+      "resource_conflicts": [],
+      "result_digest": "8df3eeca95331d698d6bb3cd055229bf3cd1da223f321c7796005727e3071570",
+      "scenario_digest": "ea40b0a48039b9f4e3d8196542580ce57ecd5e335bcbec450d9735fdb4433298",
+      "scenario_id": "tier2_late_game_pressure_v1",
+      "schema_version": 1,
+      "strategic_portfolio_result_digest": "71b701885f706353cef21713daf0c48e0c56232050e869119a6a2a38e552c1d2",
+      "turn": 110,
+      "unfilled_priorities": [
+        {
+          "priority_id": "8e3b5927d9a44c5b07c1f3dd7b16beac995a04dc5633e7459edbc0e72ed3c8ac",
+          "priority_type": "TRACK_SINGLE_VISIBLE_RIVAL",
+          "reason": "AGGRESSIVE_COMMITMENT_VETO",
+          "severity": "MEDIUM",
+          "status": "UNFILLED",
+          "via_critical_overflow": false
+        }
+      ]
+    }
+  },
+  "authority": "NO_ORDERS",
+  "calibration_limits": [
+    "Observed Reikland turns 4-7 contain only one controlled field army, so multi-army exclusivity, reserve allocation, overflow, and anti-thrashing are supported by synthetic adversarial fixtures rather than live campaign observation.",
+    "The observed sequence ends on the first coherent-rival assignment, so it cannot empirically calibrate the project-owned 2/4-turn commitment windows.",
+    "Geometric assignment references are not WH3 path feasibility or action authority.",
+    "No order, acknowledgement, execution, causal outcome, economy, recruitment, diplomacy, or owner enjoyment claim is promoted."
+  ],
+  "contract": "CAMPAIGN_STRATEGIC_FORCE_ALLOCATION_CROSS_EVIDENCE_V1",
+  "evidence_status": "CONTROL_OFFLINE_OVER_V0_2F_PORTFOLIO_AND_OBSERVER_SAFE_CAMPAIGN_STATE",
+  "observed_temporal_schedule": {
+    "application_authority": "PROHIBITED",
+    "authority": "NO_ORDERS",
+    "contract": "CAMPAIGN_STRATEGIC_TEMPORAL_COMMITMENT_V1",
+    "controlled_faction": "wh_main_emp_empire",
+    "engineering_windows": {
+      "material_reassignment_score_margin": 0.15,
+      "maximum_commitment_turns_before_reassignment_review": 4,
+      "minimum_commitment_turns": 2,
+      "status": "PROJECT_OWNED_ANTI_THRASH_THRESHOLDS_NOT_EMPIRICAL_WH3_TIMING"
+    },
+    "events": [
+      {
+        "actor_id": "force:65",
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "event_type": "START",
+        "priority_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+        "reason": "NEW_SHADOW_COMMITMENT",
+        "result_digest": "6c6869e5d0b24571964b33b657b71ddafb2c9ce7b81a037d0288d4a1c25433bb",
+        "turn": 7
+      }
+    ],
+    "evidence_status": "CONTROL_OFFLINE_SHADOW_TEMPORAL_COMMITMENT",
+    "final_active_plans": [
+      {
+        "actor_id": "force:65",
+        "application_authority": "PROHIBITED",
+        "assignment_kind": "THEATER_PRIORITY",
+        "authority": "NO_ORDERS",
+        "commitment_age_turns": 0,
+        "last_review_turn": 7,
+        "plan_id": "a95312bb2fd28673cc811f17402f20e79295e09ae81dce5c6d25b5476dc89b18",
+        "priority_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+        "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+        "severity": "HIGH",
+        "started_turn": 7,
+        "status": "ACTIVE_SHADOW_COMMITMENT_NOT_EXECUTED"
+      }
+    ],
+    "guardrails": [
+      "Commitment windows are turn-count state-machine rules, not campaign movement-time predictions.",
+      "A disappearing priority is observational retirement, never causal credit for an unexecuted proposal.",
+      "Turn gaps reset continuity rather than implying hidden execution or completion.",
+      "Higher-severity obligations may supersede lower-severity shadow commitments; every supersession is explicit.",
+      "No commitment emits a WH3 order or claims acknowledgement, execution, route feasibility, or outcome."
+    ],
+    "result_digest": "519c383b8eca3770857743e8ee726a1a44f353853f4cb29fcb7c2e538b549b1d",
+    "schedule_slices": [
+      {
+        "active_plans": [],
+        "assignment_result_digest": "b30781a5b163cf86c7bf2675bd7ca19e18e60d0f86ff2e4fba1aa317f986b968",
+        "events": [],
+        "metrics": {
+          "active_plan_count": 0,
+          "cancel_count": 0,
+          "continue_count": 0,
+          "continuity_reset_count": 0,
+          "double_booked_actor_count": 0,
+          "retire_count": 0,
+          "start_count": 0,
+          "supersede_count": 0
+        },
+        "result_digest": "1797b967843836bcd749a005715ea3f029be365723cc9e52de5647dc3a0c6274",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:4",
+        "turn": 4
+      },
+      {
+        "active_plans": [],
+        "assignment_result_digest": "86d7ca0a244dfe48b4aba27be46362fb839f5176572114f2338984bac997eae6",
+        "events": [],
+        "metrics": {
+          "active_plan_count": 0,
+          "cancel_count": 0,
+          "continue_count": 0,
+          "continuity_reset_count": 0,
+          "double_booked_actor_count": 0,
+          "retire_count": 0,
+          "start_count": 0,
+          "supersede_count": 0
+        },
+        "result_digest": "6956f7a6705b0b31727ce684a298dad1e15fd9a7601a60401fbb16f5b68446bc",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:5",
+        "turn": 5
+      },
+      {
+        "active_plans": [],
+        "assignment_result_digest": "37e8e1bbccc3fa3fbb203d878cbade654d439deec78795201fb1ffb818c1e4a3",
+        "events": [],
+        "metrics": {
+          "active_plan_count": 0,
+          "cancel_count": 0,
+          "continue_count": 0,
+          "continuity_reset_count": 0,
+          "double_booked_actor_count": 0,
+          "retire_count": 0,
+          "start_count": 0,
+          "supersede_count": 0
+        },
+        "result_digest": "b6a1699137a7d1897d3fb5d00dafa4991d901ddaa2c42a16c9564fcc51a6549c",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:6",
+        "turn": 6
+      },
+      {
+        "active_plans": [
+          {
+            "actor_id": "force:65",
+            "application_authority": "PROHIBITED",
+            "assignment_kind": "THEATER_PRIORITY",
+            "authority": "NO_ORDERS",
+            "commitment_age_turns": 0,
+            "last_review_turn": 7,
+            "plan_id": "a95312bb2fd28673cc811f17402f20e79295e09ae81dce5c6d25b5476dc89b18",
+            "priority_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+            "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+            "severity": "HIGH",
+            "started_turn": 7,
+            "status": "ACTIVE_SHADOW_COMMITMENT_NOT_EXECUTED"
+          }
+        ],
+        "assignment_result_digest": "6617a354823e6a5d9e814ba7140effa0c468f65570f76ba7f05701e269d3fb7f",
+        "events": [
+          {
+            "actor_id": "force:65",
+            "application_authority": "PROHIBITED",
+            "authority": "NO_ORDERS",
+            "event_type": "START",
+            "priority_id": "6bd529caefd4387f50ab5a2afe28b0f46bbe1ffde93b382c69594fa52713daee",
+            "reason": "NEW_SHADOW_COMMITMENT",
+            "result_digest": "6c6869e5d0b24571964b33b657b71ddafb2c9ce7b81a037d0288d4a1c25433bb",
+            "turn": 7
+          }
+        ],
+        "metrics": {
+          "active_plan_count": 1,
+          "cancel_count": 0,
+          "continue_count": 0,
+          "continuity_reset_count": 0,
+          "double_booked_actor_count": 0,
+          "retire_count": 0,
+          "start_count": 1,
+          "supersede_count": 0
+        },
+        "result_digest": "1c33896d56723cbc2407e8cfef3aa2b82a5237a33e15e783b8ec686cbf195263",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:7",
+        "turn": 7
+      }
+    ],
+    "schema_version": 1,
+    "turns": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "result_digest": "1ea40164577d918e349bd7f2873c0afb4a24ecf98f0e437c244f0ada12ea9f72",
+  "schema_version": 1,
+  "source_assignment_envelope_digest": "7d0fe2d9741b62fd470b130e8f19468b842c44e0af2dcefdfe7e6bb86b0a7c0a",
+  "source_strategic_portfolio_result_digest": "13bd4e418a4056e570a656c6821ee002412c8e3d90f32d61ba2cf333538c5c22"
+}

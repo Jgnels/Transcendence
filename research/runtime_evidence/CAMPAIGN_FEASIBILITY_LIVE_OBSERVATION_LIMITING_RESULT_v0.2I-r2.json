@@ -1,0 +1,38 @@
+{
+  "application_authority": "PROHIBITED",
+  "contract": "CAMPAIGN_FEASIBILITY_LIVE_OBSERVATION_LIMITING_RESULT_V1_R2_PARSER_EVENT_DRIFT",
+  "evidence_status": "OWNER_RUNTIME_LIMITING_RESULT_PLUS_OFFLINE_ROOT_CAUSE",
+  "nonpromotions": [
+    "ORDER_ISSUE",
+    "ACKNOWLEDGEMENT",
+    "EXECUTION",
+    "CAUSAL_OUTCOME"
+  ],
+  "offline_root_cause": {
+    "causal_chain": [
+      "WH3 emitted FEASIBILITY_POLL_TICK immediately after executor readiness.",
+      "The sidecar re-read the append log through parse_probe_log.parse_logs.",
+      "The parser treated FEASIBILITY_POLL_TICK as an unknown event and raised ProbeLogError.",
+      "The sidecar recorded WAITING_RETRY_AFTER_PARSE_OR_PIPELINE_ERROR before request generation could complete."
+    ],
+    "classification": "SUPPORTED_CODE_AUDIT",
+    "defect": "The generic probe parser did not allow FEASIBILITY_POLL_TICK or FEASIBILITY_REQUEST_SEEN, and its summarized session validator did not accept campaign_feasibility as a probe kind with snapshots.",
+    "parser": "runtime_probe/tools/parse_probe_log.py"
+  },
+  "orders_emitted": false,
+  "owner_private_paths_retained_in_repository": false,
+  "owner_runtime_observation": {
+    "collector_state": "WAITING_RETRY_AFTER_PARSE_OR_PIPELINE_ERROR",
+    "interpretation": "The v0.2I-r1 real/UI timer executed in the owner runtime, but the local sidecar failed while parsing the newly emitted diagnostic event before it could write a request for WH3 to consume.",
+    "poll_tick_observed": true,
+    "query_result_observed": false,
+    "request_rejected_observed": false,
+    "request_seen_observed": false
+  },
+  "policy_authority": "NO_ORDERS",
+  "raw_runtime_log_retained_in_repository": false,
+  "release": "v0.2I-r2",
+  "result_digest": "a581d864bceb8696d07a9756cae40c53ee4f59b4bd65762ec816e0b6a9726ba7",
+  "save_values_written": false,
+  "schema_version": 1
+}

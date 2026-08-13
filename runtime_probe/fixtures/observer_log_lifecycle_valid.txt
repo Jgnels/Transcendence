@@ -1,0 +1,11 @@
+TRANS_PROBE|1|PACK_LOADED|probe_kind=observer|script=transcendence_observer_probe
+TRANS_PROBE|1|FIRST_TICK|probe_kind=observer|campaign=wh3_main_combi|turn=1|local_faction=test_local|is_new_game=true|is_multiplayer=false
+TRANS_PROBE|1|SNAPSHOT_BEGIN|reason=FIRST_TICK|turn=1|local_faction=test_local
+TRANS_PROBE|1|OWN_ARMY|index=0|force_cqi=10|general_cqi=20|subtype=test_general|unit_count=9|x=10|y=20|region=test_region
+TRANS_PROBE|1|VISIBLE_REGION|index=0|region=test_visible|owner=test_enemy|abandoned=false
+TRANS_PROBE|1|SNAPSHOT_END|reason=FIRST_TICK|turn=1|local_faction=test_local|own_force_total=2|own_armies_emitted=1|own_region_total=1|own_regions_emitted=1|visible_character_total=0|visible_characters_emitted=0|visible_characters_available=true|visible_region_total=1|visible_regions_emitted=1|visible_regions_available=true|war_count=1|item_cap=64
+TRANS_PROBE|1|SNAPSHOT_BEGIN|reason=LOCAL_FACTION_TURN_START|turn=1|local_faction=test_local
+TRANS_PROBE|1|OWN_ARMY|index=0|force_cqi=10|general_cqi=20|subtype=test_general|unit_count=9|x=10|y=20|region=test_region
+TRANS_PROBE|1|VISIBLE_REGION|index=0|region=test_visible|owner=test_enemy|abandoned=false
+TRANS_PROBE|1|VISIBLE_REGION|index=1|region=test_visible_2|owner=test_enemy_2|abandoned=false
+TRANS_PROBE|1|SNAPSHOT_END|reason=LOCAL_FACTION_TURN_START|turn=1|local_faction=test_local|own_force_total=2|own_armies_emitted=1|own_region_total=1|own_regions_emitted=1|visible_character_total=0|visible_characters_emitted=0|visible_characters_available=true|visible_region_total=2|visible_regions_emitted=2|visible_regions_available=true|war_count=1|item_cap=64

@@ -1,0 +1,265 @@
+Executive verdict
+Transcendence (v0.2I-r3 authoritative ZIP) is not primarily reinventing the native CAI wheel in the sense of “we can just retune tables and get fair late-game opposition.” It is deliberately building a parallel, observer-safe, project-owned strategic reasoning stack (v0.2E challenge envelope → v0.2F portfolio → v0.2G exclusive assignment/commitment → v0.2H read-query plan → v0.2I live feasibility transport) under strict NO_ORDERS / application PROHIBITED. This is architecturally orthogonal to the dominant Workshop approach (DeepWar, Hecleas, Organic AI, etc.), which almost exclusively edits native CAI DB tables (personalities, budgets, task generators, strategic components, variables) and occasional diplomacy/autoresolve surfaces.
+The key hypothesis—“Transcendence rebuilt threat/front analysis, priority portfolios and force assignment that native CAI already provides”—is partially true at the conceptual layer and largely false at the control/observability layer. Native CAI already has a real pipeline (threat/strength evaluation → task generation → priority with distance/time/phase scaling → resource/army assignment → personality modulation → executor). CA has actively improved parts of it through 2025–2026 betas and Patch 8.1. However, that pipeline remains opaque, biased, hard to observe cleanly, and not designed for the project’s invariants (explainable, fair, no arbitrary player targeting, SFO-first optional profile, Three-Kingdoms-style late-game blocs, replaceable models, strict evidence labels). Transcendence’s value is the observable, testable, fail-closed planner + evaluator, not a superior native executor.
+Current native capability is better than the project’s early assumptions but still insufficient for the product goals. Native improvements reduce some idling/clumping and anti-player bias; they do not deliver transparent multi-theater portfolios, exclusive commitment slots with anti-thrashing, recovery/reserve protection, critical overflow, or independent reconstruction of plans from snapshots. The project’s extreme caution (NO_ORDERS, independent collector reconstruction, embedded-request handoff) is still justified.
+Overall recommendation: Keep the offline layers (v0.2E–v0.2H) and the read-only feasibility observation path. Treat native CAI parameter surfaces as high-value influence levers to test later under a separately authorized gate, not as a replacement for the project-owned planner. Do not delete the evaluator/research path.
+1. Current WH3 8.1.x native CAI atlas (source-driven)
+From CA blogs (Improving AI in Campaign parts 1–2, 2025), Patch 6.2 options, and Patch 8.1 release notes (9 July 2026):
+
+Threat vs strength: Two distinct scales. Threat (global strategic + individual) incorporates diplomacy, agent actions, occupation decisions, region count, proximity, attitude, aggressive actions; feeds deal evaluation, diplomatic attitude, and task generation. Strength is battle-force evaluation (units, experience, bonuses, stances) used when evaluating tasks and choosing/resourcing armies. Player threat historically had a large multiplier (50–200% by personality/difficulty); betas narrowed this and added a player-strength multiplier (100–120%).
+Task generation & prioritization: Tasks are generated, then priority-modified by distance/time (measured in turns, accounting for movement, stances, recruitment). Hard floors previously limited horizon (~4–5 turns). Betas introduced progression-based scaling (more regions → longer horizon). Patch 8.1 added an explicit turn-since-start prioritization mechanism that can de-prioritize defensive tasks (e.g., defending key regions) in the late game and raise priority of tasks targeting enemy forces. End-game scenario balance uses the same mechanism.
+Resource/army assignment: Strength-ratio search against the target; if no suitable force, recruit. Personality and budget tables heavily modulate allocation.
+Personality, budgets, construction, variables: Core tunable surfaces. DeepWar and Hecleas (and Organic AI) edit these extensively. Script API includes at least cm:force_change_cai_faction_personality. Tables include families such as cai_task_management_system_task_generator_groups_generators_junctions_tables, personality budgets/income, strategic components, cai_variables_tables, construction templates (observed in project’s own audits of the three packs).
+Known remaining issues (Patch 8.1): End-game factions can still clump/idle, especially early spawns, multi-scenario triggers, bordering end-game factions, or vs strong humans. Standoffs proportional to autoresolve evenness.
+Customization options (from 6.x): “AI Strength & Threat Assessment” and “Minor Faction Potential” (the latter default off because of second-order effects on minors).
+
+Native pipeline is real and has improved, but remains black-box for explanation, fairness auditing, and SFO interaction. Capability labels for most of it: INFLUENCE (via tables/scripts) or OBSERVE (limited), not clean CONTROL.
+2. Patch chronology vs project assumptions
+
+Early project baseline (vanilla 8.1.1, owner settings) predates or coincides with the major CAI work.
+2025 CAI Betas + 6.2: threat/strength rebalancing, anti-player bias reduction, distance scaling, faction potential, aggression precision. Some project assumptions about extreme anti-player bias and short horizons became partially stale.
+Patch 8.1 (July 2026): explicit turn-based prioritization + end-game defensive de-prioritization. Directly addresses late-game idling/clumping that motivated parts of v0.2E–v0.2G.
+Residual known issues remain. Project’s “late-game rival powers and political blocs” and “fair but materially stronger opposition without arbitrary targeting” are only partially addressed by native changes.
+
+3. Prior-art matrix (selected meaningful systems; ≥20 attempted)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+System / ModTypeCore approachOverlap with Transcendence layersEvidence qualityNotesNative CAI (8.1)EngineThreat/strength → tasks → priority (time/distance/phase) → assignment → personalityConceptual (threat, priority, assignment)OFFICIAL_GAME_FACTImproved but opaqueDeepWar AI (2978779730)Workshop DBPersonality, budgets, savings pools, aggression, task priorities; claims surgical CAI fix, removes some cheatsHigh on budgets/personality/aggressionVERIFIED_MOD_SOURCE_OR_PACK_FACT (project audit) + MODDER_COMMUNITY_CLAIMProject audited; no Lua; REFERENCE_ONLYHecleas AI Overhaul (2905096541)Workshop DB + broaderDecision policies, task management, strategic components, diplomacy, autoresolve, economyHigh + diplomacySameBroader surface; conflict risk with DeepWarHecleas Grand Strategy (3575054982)Full overhaulCampaign mechanics + AIEnvironment + AIMODDER_COMMUNITY_CLAIMNewer companionOrganic AI OverhaulWorkshop DBBudgets, personalities, trade, warBudgets/personalityMODDER_COMMUNITY_CLAIMSFO: Grimhammer III (2792731173)EnvironmentUnits, buildings, economy, some CAI tables, scripts (mechanic bypasses, recovery, etc.)Profile onlyVERIFIED_REPO_FACT (project audit)Dominant footprint is not pure AICA CAI Betas / 6.2 optionsOfficialThreat, strength, potential, aggressionThreat evaluationOFFICIAL_GAME_FACTPatch 8.1 prioritizationOfficialTurn-based task priorityLate-game portfolio dynamicsOFFICIAL_GAME_FACTRadious-style AI reworksWorkshopRecruitment composition, budgets, conquest decisionsRecruitment / force qualityMODDER_COMMUNITY_CLAIMPersonality force scriptsScriptingforce_change_cai_faction_personalityPersonality controlVERIFIED (script examples)Construction template editsDBAI building prioritiesIndirect force qualityCommon in auditsTask-generator junction tablesDBObjective generationClosest to portfolioObserved in project auditsAlliance / confederation / Reactive World style modsWorkshopDiplomacy / blocsRival/bloc gapSearch-limited; treat as MODDER_COMMUNITY_CLAIMNeed exact pack verificationAI Camping / settlement fixesWorkshopIdle/clump mitigationsAddresses symptoms of task priorityMODDER_COMMUNITY_CLAIMPartially superseded by 8.1Recruitment Revolution styleWorkshopArmy compositionForce qualityMODDER_COMMUNITY_CLAIMAutoresolve / battle personality tablesDBBattle outcomesSeparate from campaign plannerCommonInfluence-map / query system (CA)EngineForeign threat detectionThreat layerOFFICIAL_GAME_FACTProject’s own three-way auditInternalDeepWar/Hecleas/SFO table familiesBaselineVERIFIED_REPO_FACTShared task-generator junctions
+Many “AI” mods are parameter or environment changes; success often mixes better incentives, difficulty, and true planning improvements. Do not equate names.
+4. Top 15 reinvented-wheel risks (ranked by confidence × cost)
+
+Threat / coherent-rival detection (high confidence, medium cost) — Native threat + influence map + strength already exist and were improved. Project’s v0.2E is a cleaner, observer-safe, player-label-invariant version.
+Task prioritization / late-game de-defense (high, medium) — Patch 8.1 mechanism directly targets idling.
+Distance / phase / empire-size scaling (high, medium) — Native now progression-aware.
+Personality-modulated aggression & budgets (high, low–medium) — DeepWar/Hecleas already specialize here; project can influence rather than reimplement.
+Force assignment to tasks (medium-high, high) — Native does strength-ratio search + recruit; project’s exclusive slot + recovery/reserve is stricter and more explainable.
+Construction / economy allocation (medium, medium) — Heavy DB surface already tuned by multiple mods.
+Anti-player bias mitigation (medium-high, medium) — CA betas explicitly targeted this.
+Simple reachability / stance queries (medium, low) — Native model hierarchy exists; project is correctly treating documentation as unproven until live observation.
+Recruitment composition heuristics (medium, medium) — Multiple mods claim better army quality.
+Idle/clump settlement camping (medium, low) — Partially addressed by 8.1 + dedicated fix mods.
+Basic front pressure aggregation (medium, medium) — Overlaps native threat.
+Diplomatic attitude from threat (medium, medium) — Native linkage exists.
+End-game scenario behavior (medium, medium) — 8.1 changes.
+Agent logic (lower, medium) — DeepWar claims improvements.
+Autoload / potential tables (lower, low) — Difficulty side-effect surface.
+
+Most high-confidence overlaps are influenceable via tables; the project’s unique cost is in observability, fairness contracts, and commitment lifecycle.
+5. Top 15 true gaps Transcendence may still need to own
+
+Transparent, digests-bound, adversarial/metamorphic challenge envelope (v0.2E) with explicit player-label invariance and hidden-army filtering.
+Bounded portfolio with critical overflow and explicit aggression veto under crisis/recovery (v0.2F).
+Exclusive army commitment slots + temporal anti-thrashing (min commitment, review window, material margin) (v0.2G).
+Independent plan reconstruction from snapshot before accepting any query result (v0.2H/I).
+Hard NO_ORDERS / application PROHIBITED boundary with capability labels and evidence grades.
+SFO-as-optional-profile with hash certification and unknown-hash fail-closed.
+Explainable reasons + alternatives logging for every proposal.
+Recovery/reserve protection with explicit critical override records.
+Three-Kingdoms-style durable rival/bloc modeling that is not just war-count or anti-player.
+Clean separation of observation / belief / objective / candidate / selected / acknowledgement / outcome.
+Replaceable model + deterministic fallbacks under the same contracts.
+Longitudinal calibration of thresholds (currently engineering definitions).
+Battle-side guarded packets / endpoint reservation / temporal schedule that stay shadow until authority is proven.
+Fairness classification of SFO mechanic bypasses vs true planning gains.
+Public-safe evidence packets that exclude paths, raw logs, and personal artifacts.
+
+These are not provided by native CAI or the major parameter-tuning mods.
+6. SFO-specific overlap/conflict
+Project audit is still accurate: SFO is primarily an environment profile (units, buildings, effects, recruitment, economy, some CAI tables + scripts with mechanic bypasses, direct bonuses, scripted recovery, player-proximity challenge generation). Shared CAI table families with DeepWar/Hecleas are limited; conflict risk is real if multiple row-writing layers are enabled. Apparent “stronger AI” under SFO can be incentive/economy/challenge-generation effects rather than better planning. Project’s OPTIONAL_PROFILE + hash binding + mechanic-bypass ledger is the correct posture. No evidence that SFO supplies the project’s portfolio/assignment contracts.
+7. Three Kingdoms-style rival/bloc opportunity
+Native threat + diplomacy attitude + task generation give a weak form of “coherent rival.” Patch 8.1 and earlier betas improve dynamism but do not create durable political blocs, confederation pressure that feels strategic rather than scripted, or multi-faction containment portfolios that survive recovery crises. Workshop “Alliance Blocs / Reactive World” style mods (exact current packs need verification) attempt diplomacy-side solutions. This remains a high-value gap for a project-owned layer that can stay advisory or later influence diplomacy tables without becoming anti-player.
+8. Battle-AI native-first analysis
+Project’s battle side is still almost entirely observer + offline policy (cross-corpus envelope, guarded packets, schedules, etc.). Native battle AI and autoresolve tables are heavily modded by others; project correctly treats command events as OBSERVED_NOT_ACKNOWLEDGED and has not claimed issue/execution. Native-first path here is even thinner than campaign: influence via personality/autoresolve tables or limited script, but control of ordinary unit orders remains high-risk and largely unavailable without unitcontrollers (explicitly avoided). Keep battle work in the evaluator/research path until a separately authorized authority gate.
+9. Native-first experimental ladder (with falsification)
+
+Influence-only personality/budget/task-generator ablation under vanilla + SFO profiles, measured against project’s own challenge envelope metrics. Falsify if native-tuned AI produces worse coherent-rival persistence or higher thrashing than shadow proposals.
+Turn-priority and distance-scaling interaction tests post-8.1. Falsify if late-game idling remains the dominant failure mode under the new mechanism.
+Live read-only feasibility observation (current open gate). Falsify query availability or plan reconstruction if results cannot be independently reproduced from the snapshot.
+Side-by-side shadow vs native assignment comparison on the same observer snapshots. Falsify project layers if native assignments already satisfy exclusivity, recovery protection, and anti-thrashing at acceptable rates.
+Only after the above: limited, hash-bound, reversible influence experiments on diplomacy/threat tables for bloc behavior. Falsify if second-order effects (minors dying, anti-player re-emergence) dominate.
+
+All steps preserve NO_ORDERS until an explicit application gate.
+10. Exact next verification tasks for you
+
+Re-extract current DeepWar / Hecleas / any new AI packs with latest RPFM schemas; row-level diff against project’s frozen audits (especially task-generator junctions, personalities, budgets, variables).
+Confirm current Workshop status and change notes for DeepWar, Hecleas, Organic, and any “Reactive World / Alliance / Confederation / AI Recruitment” packs (some pages show removal/incompatibility warnings as of early August 2026).
+Map exact table names and key columns for the new 8.1 prioritization mechanism (likely new or extended cai_* tables or variables).
+Run the project’s existing prepare/collect campaign-feasibility path under pure vanilla 8.1.x and under SFO; compare request_seen / query results.
+Schema-decode the shared cai_task_management_system_task_generator_groups_generators_junctions_tables and personality budget tables to quantify value ranges.
+Search RPFM schema_wh3.ron / current schemas for any new post-6.x CAI tables related to phase/turn prioritization or end-game tasks.
+Longitudinal multi-save observation of native late-game clumping under 8.1 with the new options enabled/disabled.
+
+11. What to delete from the APPLICATION PATH (preserve as evaluator/research)
+Delete or hard-gate any future path that would:
+
+Issue campaign movement/attack/stance/garrison/action-point orders from the project planner.
+Treat geometric ETA or point reachability as route/action legality.
+Promote can_assault or similar context-ambiguous calls to attack authority.
+Write saves or mutate campaign state outside an explicit, owner-authorized, disposable persistence probe.
+Silently rewrite runtime identities or treat victory grade as tactical quality.
+
+Preserve the entire offline stack (envelopes, portfolios, assignments, schedules, guarded packets, adversarial matrices, digests, independent reconstruction) as the evaluation and research substrate. It is the project’s strongest differentiator.
+12. Force yourself to be wrong
+
+Weakest part of this audit: Incomplete current pack-level change notes and exact schema for the 8.1 prioritization mechanism; Workshop page states and comments can lag or be gamed. Reliance on project’s July 2026 three-way audit for DeepWar/Hecleas internals.
+Most likely misleading source: Workshop feature descriptions and Reddit praise that attribute “smarter AI” without distinguishing table retunes, difficulty, economy changes, or scripted recovery from true planning.
+Strongest argument for retaining v0.2F/v0.2G as a real planner: Native assignment is still strength-ratio + recruit under opaque priority; it does not give exclusive slots, explicit recovery protection, critical-overflow awareness, or anti-thrashing with material-margin review. The project layers are testable contracts the engine does not expose.
+Strongest argument that a popular AI mod’s success is mostly difficulty/faction-potential side effects: CA themselves documented second-order effects of potential/aggression changes (minors dying early); many mods increase military budgets or aggression while the environment (SFO especially) alters unit values and recovery. Apparent “intelligence” is often higher sustained pressure + better incentives.
+One finding that would reverse the overall recommendation: Clean, documented, stable script or table surfaces that allow full observation of task generation → priority → army assignment with the same invariants (player-label invariance, hidden filtering, exclusive commitment, independent reconstruction) and that survive SFO hash changes without becoming a maintenance sink. If that existed and was proven live, large parts of the parallel stack could be demoted to pure evaluator.
+
+Bottom line: Native CAI is more capable in 8.1.x than a pure 2024-era reading would suggest, and parameter-tuning mods remain the lowest-cost way to influence behavior. Transcendence’s parallel, evidence-first stack is still the correct architecture for the stated product goals. Continue the open live feasibility observation; treat native surfaces as influence candidates only after the current limiting results are closed. No code changes recommended from this audit.

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "capture_kind": "action_authority",
+  "prepared_at_utc": "2026-07-30T07:00:00Z",
+  "runtime_log": "PRIVATE_LOCAL_PATH_OMITTED_FROM_PUBLIC_EVIDENCE",
+  "runtime_log_cleared": true,
+  "previous_runtime_log": null,
+  "pack_name": "transcendence_action_authority_probe.pack",
+  "staged_pack_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "installed_pack_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "previous_installed_pack_sha256": null,
+  "installed_pack_backup": null,
+  "active_mod_list_modified": false,
+  "wh3_save_modified": false,
+  "project_orders_enabled": false,
+  "expected_marker": "TRANS_ACTION|1|PACK_LOADED|probe_kind=action_authority_shadow"
+}

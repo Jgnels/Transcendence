@@ -1,5 +1,30 @@
 {
   "schema_version": 1,
-  "policy": "No third-party code or asset may enter the repository without exact revision, license, provenance, acquisition classification and notices.",
-  "entries": []
+  "policy": "No third-party code or asset may enter the repository without exact revision, license, provenance, acquisition classification, and notices.",
+  "entries": [
+    {
+      "name": "DeepWar AI",
+      "workshop_id": "2978779730",
+      "artifact_sha256": "f02bd8b5a70f899a8b4827af41da3231c71a7f595c06442177ec70f3fd407d50",
+      "acquisition_class": "REFERENCE_ONLY",
+      "repository_content": "Derived paths, hashes, classifications, and audit findings only",
+      "license_status": "Reuse permission not established"
+    },
+    {
+      "name": "Hecleas AI Overhaul",
+      "workshop_id": "2905096541",
+      "artifact_sha256": "5945102b4eac8ed73065bcc054d935f878d4ffd2b4af191ed4a15b0c31abedf8",
+      "acquisition_class": "REFERENCE_ONLY",
+      "repository_content": "Derived paths, hashes, classifications, and audit findings only",
+      "license_status": "Reuse permission not established"
+    },
+    {
+      "name": "SFO Grimhammer III extracted audit",
+      "workshop_id": "2792731173",
+      "artifact_sha256": "0119959f7999844bc49b47bd41d53110ad9a83b6f89478e1bf2199b8c65a828f",
+      "acquisition_class": "OPTIONAL_PROFILE_AUDIT_ONLY",
+      "repository_content": "Derived paths, hashes, classifications, and audit findings only",
+      "license_status": "No pack/script content vendored"
+    }
+  ]
 }

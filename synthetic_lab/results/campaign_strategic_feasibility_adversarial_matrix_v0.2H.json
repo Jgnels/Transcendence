@@ -1,0 +1,231 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "case_count": 5,
+  "case_pass_count": 5,
+  "cases": [
+    {
+      "case_id": "region_target_exposes_point_and_settlement_queries",
+      "checks": {
+        "authority": true,
+        "faction_centroid_not_attack": true,
+        "forbidden_queries": true,
+        "required_queries": true,
+        "settlement_not_promoted": true,
+        "settlement_query_permission": true,
+        "target_kind": true,
+        "unobserved": true
+      },
+      "passed": true,
+      "result_digest": "f3a247e031ae2340c84cfb7608d8090ebb83381fcb1aa409e036e3b0b823945d",
+      "semantic_metrics": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "concrete_attack_target_promoted": false,
+        "faction_centroid_is_attack_target": false,
+        "query_count": 12,
+        "query_keys": [
+          "FORCE_ACTIVE_STANCE",
+          "MODEL_CHARACTER_FROM_CQI",
+          "MODEL_FORCE_FROM_CQI",
+          "MODEL_HAS_CHARACTER_CQI",
+          "MODEL_HAS_FORCE_CQI",
+          "POSITION_EVER_REACHABLE",
+          "POSITION_REACHABLE_THIS_TURN",
+          "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+          "REGION_SETTLEMENT_INTERFACE",
+          "SETTLEMENT_EVER_REACHABLE",
+          "SETTLEMENT_REACHABLE_THIS_TURN",
+          "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE"
+        ],
+        "settlement_interface_query_permitted": true,
+        "settlement_target_promoted": false,
+        "target_kind": "REGION"
+      }
+    },
+    {
+      "case_id": "faction_centroid_is_point_only_not_attack_target",
+      "checks": {
+        "authority": true,
+        "faction_centroid_not_attack": true,
+        "forbidden_queries": true,
+        "required_queries": true,
+        "settlement_not_promoted": true,
+        "settlement_query_permission": true,
+        "target_kind": true,
+        "unobserved": true
+      },
+      "passed": true,
+      "result_digest": "148326dea84b608ba3dfe6de056ad794f4518178055bc085a72613713ea4eeb7",
+      "semantic_metrics": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "concrete_attack_target_promoted": false,
+        "faction_centroid_is_attack_target": false,
+        "query_count": 8,
+        "query_keys": [
+          "FORCE_ACTIVE_STANCE",
+          "MODEL_CHARACTER_FROM_CQI",
+          "MODEL_FORCE_FROM_CQI",
+          "MODEL_HAS_CHARACTER_CQI",
+          "MODEL_HAS_FORCE_CQI",
+          "POSITION_EVER_REACHABLE",
+          "POSITION_REACHABLE_THIS_TURN",
+          "POSITION_REACHABLE_THIS_TURN_IN_STANCE"
+        ],
+        "settlement_interface_query_permitted": false,
+        "settlement_target_promoted": false,
+        "target_kind": "FACTION"
+      }
+    },
+    {
+      "case_id": "sieged_region_adds_context_query_without_attack_legality",
+      "checks": {
+        "authority": true,
+        "faction_centroid_not_attack": true,
+        "forbidden_queries": true,
+        "required_queries": true,
+        "settlement_not_promoted": true,
+        "settlement_query_permission": true,
+        "target_kind": true,
+        "unobserved": true
+      },
+      "passed": true,
+      "result_digest": "717a3767b69d046ed995f1d667ef98f109fe88e1d564d7fec427f972490216f1",
+      "semantic_metrics": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "concrete_attack_target_promoted": false,
+        "faction_centroid_is_attack_target": false,
+        "query_count": 13,
+        "query_keys": [
+          "FORCE_ACTIVE_STANCE",
+          "GARRISON_UNDER_SIEGE",
+          "MODEL_CHARACTER_FROM_CQI",
+          "MODEL_FORCE_FROM_CQI",
+          "MODEL_HAS_CHARACTER_CQI",
+          "MODEL_HAS_FORCE_CQI",
+          "POSITION_EVER_REACHABLE",
+          "POSITION_REACHABLE_THIS_TURN",
+          "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+          "REGION_SETTLEMENT_INTERFACE",
+          "SETTLEMENT_EVER_REACHABLE",
+          "SETTLEMENT_REACHABLE_THIS_TURN",
+          "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE"
+        ],
+        "settlement_interface_query_permitted": true,
+        "settlement_target_promoted": false,
+        "target_kind": "REGION"
+      }
+    },
+    {
+      "case_id": "missing_stance_does_not_invent_stance_specific_query",
+      "checks": {
+        "authority": true,
+        "faction_centroid_not_attack": true,
+        "forbidden_queries": true,
+        "required_queries": true,
+        "settlement_not_promoted": true,
+        "settlement_query_permission": true,
+        "target_kind": true,
+        "unobserved": true
+      },
+      "passed": true,
+      "result_digest": "d4431fc04ffd495a7c7a673ea4e12587b8fee46d55351e76b315b0aa87bdbe9d",
+      "semantic_metrics": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "concrete_attack_target_promoted": false,
+        "faction_centroid_is_attack_target": false,
+        "query_count": 10,
+        "query_keys": [
+          "FORCE_ACTIVE_STANCE",
+          "MODEL_CHARACTER_FROM_CQI",
+          "MODEL_FORCE_FROM_CQI",
+          "MODEL_HAS_CHARACTER_CQI",
+          "MODEL_HAS_FORCE_CQI",
+          "POSITION_EVER_REACHABLE",
+          "POSITION_REACHABLE_THIS_TURN",
+          "REGION_SETTLEMENT_INTERFACE",
+          "SETTLEMENT_EVER_REACHABLE",
+          "SETTLEMENT_REACHABLE_THIS_TURN"
+        ],
+        "settlement_interface_query_permitted": true,
+        "settlement_target_promoted": false,
+        "target_kind": "REGION"
+      }
+    },
+    {
+      "case_id": "reserve_capacity_has_no_destination_or_route_query",
+      "checks": {
+        "authority": true,
+        "faction_centroid_not_attack": true,
+        "forbidden_queries": true,
+        "required_queries": true,
+        "settlement_not_promoted": true,
+        "settlement_query_permission": true,
+        "target_kind": true,
+        "unobserved": true
+      },
+      "passed": true,
+      "result_digest": "381d4d558dd2fb435be826ade301edff19145ef8409bba41e41f0f632ac26939",
+      "semantic_metrics": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "concrete_attack_target_promoted": false,
+        "faction_centroid_is_attack_target": false,
+        "query_count": 5,
+        "query_keys": [
+          "FORCE_ACTIVE_STANCE",
+          "MODEL_CHARACTER_FROM_CQI",
+          "MODEL_FORCE_FROM_CQI",
+          "MODEL_HAS_CHARACTER_CQI",
+          "MODEL_HAS_FORCE_CQI"
+        ],
+        "settlement_interface_query_permitted": false,
+        "settlement_target_promoted": false,
+        "target_kind": null
+      }
+    }
+  ],
+  "contract": "CAMPAIGN_STRATEGIC_FEASIBILITY_ADVERSARIAL_MATRIX_V1",
+  "metamorphic_check_count": 5,
+  "metamorphic_checks": [
+    {
+      "check_id": "hidden_enemy_injection",
+      "passed": true
+    },
+    {
+      "check_id": "player_label_to_npc_label",
+      "passed": true
+    },
+    {
+      "check_id": "input_order",
+      "passed": true
+    },
+    {
+      "check_id": "coordinate_translation",
+      "passed": true
+    },
+    {
+      "check_id": "uniform_strength_scale",
+      "passed": true
+    }
+  ],
+  "metamorphic_pass_count": 5,
+  "passed": true,
+  "result_digest": "08614e2a7e292b495ecb93a54375bc7782b7e7b7a02502d1c4e8a56d59f07cea",
+  "schema_version": 1,
+  "synthetic_observation_checks": {
+    "all_queries_observed": true,
+    "application_prohibited": true,
+    "no_execution": true,
+    "no_orders": true,
+    "no_outcome": true
+  },
+  "tamper_checks": {
+    "authority_promotion_rejected": true,
+    "foreign_query_rejected": true,
+    "stale_turn_rejected": true
+  }
+}

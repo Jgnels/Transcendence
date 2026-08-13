@@ -1,0 +1,8 @@
+Executing mod function transcendence_persistence_probe()
+transcendence_persistence_probe() executed successfully
+TRANS_PROBE|1|PACK_LOADED|probe_kind=persistence|script=transcendence_persistence_probe|writes_save_value=true
+TRANS_PROBE|1|PERSISTENCE_STATE|probe_kind=persistence|phase=WRITE|campaign=wh3_main_combi|turn=1|local_faction=wh_main_emp_empire|is_new_game=true|is_multiplayer=false|key_version=1|previous_found=false|previous=0|current=1
+Executing mod function transcendence_persistence_probe()
+transcendence_persistence_probe() executed successfully
+TRANS_PROBE|1|PACK_LOADED|probe_kind=persistence|script=transcendence_persistence_probe|writes_save_value=true
+TRANS_PROBE|1|PERSISTENCE_STATE|probe_kind=persistence|phase=RELOAD|campaign=wh3_main_combi|turn=1|local_faction=wh_main_emp_empire|is_new_game=false|is_multiplayer=false|key_version=1|previous_found=true|previous=1|current=2

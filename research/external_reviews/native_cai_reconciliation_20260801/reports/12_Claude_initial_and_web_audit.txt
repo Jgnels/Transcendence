@@ -1,0 +1,119 @@
+I read through the canonical source — README, capability matrices, known-risks log, and the three-way AI acquisition audit against DeepWar/Hecleas/SFO. I have enough to give you a real, source-grounded verdict. I did not do fresh external research into current WH3 CAI table semantics for this pass — the repo's own audits already flag that as open research debt, and closing it properly needs RPFM schema work, not a chat answer. I'll say clearly where I'm relying on what's already in your repo vs. where more digging is required.
+
+A. Executive verdict
+
+Your instinct is correct, and the evidence in your own repo proves it more starkly than the prompt implies. Every single layer from v0.2E through v0.2I-r3 — nine major versions, ~300+ tests, dozens of frozen digests — carries the same two labels: authority = NO_ORDERS and application = PROHIBITED. Not one of these layers has ever issued a command to the game. The entire v0.2I arc (r1, r2, r3) is three consecutive attempts to solve one problem: getting WH3 to see a file you wrote to disk. It still hasn't worked (request_seen=false, three times).
+
+That's the real finding. You haven't built "a sophisticated semantic/planning layer before understanding what the game supplies" — you've built a sophisticated semantic/planning layer and a sophisticated evidence-and-safety ceremony around it, while the most basic transport primitive (file → game → file back) remains unproven. The planning logic (v0.2E–H) is arguably the least risky part of this project; the live I/O bridge (v0.2I) is the part that's actually failing, repeatedly, and it's infrastructure, not AI.
+
+B. Real source-critical-path map (abbreviated)
+v0.2E (challenge envelope) → v0.2F (portfolio) → v0.2G (force assignment) → v0.2H (feasibility query plan): fully offline, deterministic, well-tested, exercised only against one frozen historical Reikland turn-4–7 corpus. Nothing here has ever seen a live campaign it wasn't given canned.
+v0.2I / I-r1 / I-r2 / I-r3 (live bridge): this is the only layer touching the running game process. It's a Lua-side probe + Python sidecar + file-based request/response transport. Everything upstream (E–H) is inert until this layer works.
+What breaks if v0.2I is removed: nothing downstream, because nothing is downstream — it's the terminal node. What breaks if E–H are removed: v0.2I has no plan to query, so it degenerates to a no-op probe. They're coupled but E–H could be stubbed/replaced without touching the transport problem.
+C. Native vs. project responsibility (scoped)
+
+Your own THREE_WAY_AI_ACQUISITION_AUDIT already did the right kind of comparison against DeepWar, Hecleas, and SFO, and it's honest about its limits:
+
+All three sources modify native CAI table families (task generators, personality budgets, strategic components); the audit correctly kept them REFERENCE_ONLY — no code/data reuse, comparison only.
+It found the one table family shared across all three: cai_task_management_system_task_generator_groups_generators_junctions_tables — this is the actual seat of native task generation/prioritization, and it's exactly where a full RPFM row-semantic decode should happen first if you want to know what native CAI already does before building your own version.
+It correctly flags that SFO's apparent "AI improvement" is substantially MECHANIC_BYPASS / DIRECT_BONUS / SCRIPTED_RECOVERY — not planning intelligence. That's an important distinction your v0.2E–G layers should inherit: don't benchmark against SFO factions and credit "strategy," when much of what you'd be seeing is scripted resource injection.
+Row-level semantics are explicitly UNVERIFIED pending pinned WH3 8.1.x schemas — this is the one piece of real research debt the prompt asked me to flag, and it's already flagged in your repo. It hasn't moved since that audit.
+
+I don't have grounds to add new native-CAI facts beyond what your audit already states without doing the current-schema research myself, which is a distinct, fairly long task (RPFM table decode against 8.1.x, not something I should hand-wave). I'd treat this as the single highest-leverage next research task if you want the reconciliation to be real rather than aspirational.
+
+D. Dependency-safe decision table (top modules only)
+Module	Decision	Why
+v0.2E challenge envelope	KEEP_INTERFACE_REPLACE_IMPLEMENTATION → eventually REFRAME_AS_EVALUATOR	Deterministic, well-tested, cheap. Its real long-term value is as a benchmark/evaluator for comparing native-CAI-vs-project behavior, not as a permanent hand-rolled scorer. Don't delete it — you'll want it as an oracle once native CAI is decoded.
+v0.2F portfolio	MERGE_OR_THIN	Reasonable abstraction but its constants (6-record budget, thresholds) are disclosed as "engineering hypotheses," never calibrated against a live game. Thin it until v0.2I actually produces live data to calibrate against.
+v0.2G force assignment	DEFER	Genuinely novel project value (multi-turn commitment lifecycle, anti-thrashing) that native CAI likely doesn't expose to a mod at all — this is a plausible "native doesn't do this" case. But it's calibrated on one historical turn range; don't invest further until v0.2I proves you can even read live state repeatably.
+v0.2H feasibility query plan	KEEP_PROJECT_OWNED, but freeze scope	This is the actual interface contract to WH3's query surface (reachability, stance, garrison). It's necessary regardless of what native CAI does, because it's your read-only sensing layer, not a planning duplicate.
+v0.2I / I-r1–r3 live bridge	ALL ENGINEERING PRIORITY GOES HERE	This is the actual bottleneck. No REFRAME/MERGE/REMOVE question applies — it's binary: either you can reliably do file-based (or better, direct Lua-callback-based) round-trip I/O with the running game, or the entire project is a beautifully tested simulator with no organism attached.
+Everything upstream of E (tactical v0.1-series: guarded packets, endpoint reservation, full-pipeline audit)	ARCHIVE_HISTORY_ONLY for now	Same pattern one level down — extremely rigorous, zero live order authority, calibrated on one Battle 4 corpus. Valuable as engineering discipline, not as active development surface until the transport problem is solved once, anywhere.
+E. Minimal post-reconciliation architecture
+
+If I were resetting scope today: one thin live-transport spike, decoupled entirely from E–I's planning logic, whose only job is proving a single round trip — write one query, have WH3 answer it, read the answer back — using the simplest possible mechanism (even a single hardcoded reachability query with no plan-binding, no CQI, no whitelist). Once that spike works even once, re-attach v0.2H's query plan to it. Don't add more retry sophistication (r1→r2→r3 pattern) to a mechanism that has never once succeeded — that's fixing the wrong layer. If a raw file write from a Lua script the game itself runs can't be observed by that same running game, the bug is probably in how/when the file is written or in a path/permissions assumption, not in query semantics — and three "hotfixes" that never got a single success is a signal to stop iterating on this specific transport and try a structurally different one (e.g., an in-process Lua timer polling loop instead of external file handoff, if you aren't already doing that for the write side).
+
+F. Top 10 tasks, in order
+Get one successful, reproducible live round-trip on the v0.2I transport — full stop, before anything else.
+If file-based transport keeps failing, prototype an alternative transport (pure in-Lua polling / different IPC) as a parallel spike, not another patch to the same mechanism.
+Decode the shared native CAI table family (cai_task_management_system_task_generator_groups_generators_junctions_tables) against current WH3 8.1.x RPFM schemas.
+Once decoded, re-run the E vs. native comparison as data, not hypothesis.
+Recalibrate v0.2F's budget/threshold constants against whatever live data v0.2I finally produces.
+Reframe v0.2E as an evaluator/oracle explicitly, with a documented ablation ladder (vanilla → SFO-only → native tweak → prior-art delta → your shadow evaluator).
+Extend the Reikland-only corpus — every layer above v0.1 is calibrated on one save/turn range.
+Decide SFO's role explicitly (see G.5 below) rather than leaving it "optional profile" indefinitely.
+Answer product question 7 (what WH3 truly doesn't expose) concretely, once #1–3 are done — right now it's inference, not evidence.
+Only then: revisit whether v0.2G's commitment lifecycle needs to become project-owned-permanently or can shrink to a thin wrapper.
+G. Top 10 things not to build yet
+Any new retry/hardening pass on the v0.2I file transport (you've done three — the pattern itself is the risk).
+Any new tactical/battle-AI layer (v0.1-series direction) — it inherits the same live-authority gap one level down.
+More adversarial/synthetic matrices for E–H — you have hundreds of tests against zero live executions; more offline coverage doesn't move the bottleneck.
+A generic order/adapter surface — explicitly and correctly deferred already; don't let transport frustration create pressure to add one prematurely.
+Broader mod-compatibility certification (beyond the one SFO profile) — not worth it until live transport works once.
+A metagame/rival-bloc director (question 6) — premature; native faction potential/diplomacy plus bounded scripts should be tried first, and you can't even test that without live I/O.
+More historical-corpus reprocessing of the same Reikland turns.
+Additional hash/digest/checksum ceremony on new artifacts — useful for reproducibility, but it's not solving the transport bug and adds review overhead.
+Expanding the whitelist/query-plan vocabulary in v0.2H before v0.2I proves the existing 16-query cap actually works live.
+Any new "Gate" documentation format changes — the documentation discipline is already thorough to the point of being its own maintenance burden.
+H. 100-turn / late-game risks
+
+Everything calibrated so far is early-game (turn 4–7, one faction, one region). Late-game WH3 campaigns diverge enormously in faction count, army count, and diplomatic complexity — v0.2G's "one healthy unclaimed actor" reserve heuristic and v0.2F's six-record budget are unverified at any scale beyond a handful of armies. If the live bridge starts working, the first thing to break under 100-turn load is likely the query-plan cap (16 queries) and the theater/portfolio budget, not the transport itself.
+
+I. Force yourself to be wrong
+Assumption I'm least confident about: that the file-transport problem is structural rather than a small, specific bug (e.g., a working-directory or timing assumption) three hotfixes just haven't hit yet. If r4 finds a one-line fix, my "stop patching this mechanism" advice above is wrong.
+Evidence most likely to overturn my recommendation: if the next owner run shows request_seen=true — that single boolean flip changes this from "structural bottleneck, do a parallel spike" back to "keep iterating, you're close."
+Project layer that could surprise positively despite apparent duplication: v0.2G's multi-turn commitment/anti-thrashing lifecycle. Native CAI's task-generator/junction tables are almost certainly per-tick reactive rather than committed-over-time; if that's confirmed once decoded, v0.2G may be doing something native genuinely doesn't, and is worth keeping project-owned rather than replacing.
+Native CAI layer that looks rich but may be too opaque to trust: the task-generator/junction table family itself — it's the one thing all three third-party mods touch, which suggests it's also the thing modders find hardest to reason about cleanly (heavy row-level coupling, undocumented semantics). Decoding it may yield "it's configurable but not really legible" rather than a clean spec to build against.
+If you had one day before live testing: skip more offline hardening entirely. Spend the day on the single narrowest possible live-transport experiment — no plan-binding, no whitelist, no CQI, just "can WH3 read one file I write while it's running, yes or no" — and get a definitive answer before touching anything else.
+
+One honest caveat on scope: I did this from your repo's own documentation and existing audits, not fresh WH3-modding-community research (Incata AI Army Tasks, Campaign AI Tweaks, Alliance Blocs, etc., per section THIRD of your prompt) or a current RPFM schema pull. If you want that piece done properly — it's real, separate research — say so and I'll go do it with web search rather than guessing at what those mods currently do.
+
+Please do it with web search
+
+Synthesized mod landscape and schema documentation for comprehensive response
+Synthesized mod landscape and schema documentation for comprehensive response
+
+Did the search. Here's what actually exists in the current WH3 modding/dev landscape, and how it changes a few of the calls I made without it.
+
+Native CAI: it's a live, moving target — not a stable baseline
+
+Creative Assembly ran two beta rounds through 2025 specifically on anti-player bias, distance scaling, aggression, and faction potential, and shipped an 8.1 patch on top of that only a few weeks ago. The mechanism CA disclosed: a threat multiplier that scales player-caused threat from 50% to 200% depending on AI personality and difficulty, plus a new strength multiplier scaling the player's perceived strength from 100% to 120%, and most "attack human forces/settlements" tasks were removed or had priority sharply cut. Community coverage confirms this is ongoing, not finished — CA capped off "a frustrating year" in late 2025 on armies standing around doing nothing, and similar struggles are still a regular sight after 8.1. 
+Creative Assembly + 2
+
+This matters for your architecture directly: anything you calibrate against current AI behavior right now is calibrating against a target CA is actively rewriting. Your v0.2E–F benchmark thresholds aren't just "unproven engineering constants" as your own KNOWN_RISKS says — they may already be stale relative to what 8.1 changed. That's a reason to lean harder into NATIVE_FIRST / evaluator framing rather than building durable project-owned strategic scoring.
+
+The shared table family is real, and it's exactly where the community also struggles
+
+Your audit's finding that DeepWar, Hecleas, and SFO all touch cai_task_management_system_task_generator_groups_generators_junctions_tables checks out — I found live modding threads editing that exact table. One popular task-mod's own support thread instructs users to delete specific rows from it to fix crashes involving defend-own-settlements task generators, by removing named early/mid/late personality-region-group entries. That's independent confirmation this table is both central and fragile — worth decoding first, and worth budgeting real time for, not a quick pass. The schemas to do that decode with are maintained in an actively updated, open, MIT-licensed repo that RPFM itself pulls from automatically — versioned per-table-per-game definitions that anyone can open a PR against. That's your concrete "how to close it" answer to question 3: point RPFM at the current WH3 selection, let it sync rpfm-schemas, decode that table family first. 
+Nexus Mods
+Total War Center
+
+Prior-art mods, updated with real evidence (not just repo audit metadata)
+Mod	What it actually does	Signal for Transcendence
+DeepWar	Narrow: 14 of 18 files are direct CAI tables (construction, personality budgets, task generators). Author notes recent WH3 updates "added nothing to campaign AI," so no DeepWar update was needed 
+Steam Community
+ — i.e., it's a small, targeted parameter set, stable across patches.	Good reference for narrow, low-conflict tuning. Confirms your audit's read of it as the "narrowest" source.
+Hecleas	Broad — diplomacy, autoresolve, war-declaration logic, plus CAI. Its own changelog shows repeated tuning of "anti player focus" as a literal setting adjusted specifically so attacking/defending logic wouldn't break the system — the same axis CA later reworked officially. Community perception is split: one long-time user calls it "really just an aggro booster" and switched to DeepWar instead.	Treat Hecleas less as "broad CAI overhaul reference" and more as "someone else's anti-player-bias hand-tuning, which CA has since partially obsoleted with its own official fix." Lower priority as a comparison target now than your audit assumed.
+Campaign AI Tweaks	Explicitly pushes CAI toward certain behaviors and touches faction potential; author warns it will likely desync multiplayer. 
+Steam Community
+	Confirms faction potential is a live, contested lever multiple parties are hand-tuning independently of CA's own faction-potential beta work. Don't treat any one source's faction-potential numbers as ground truth.
+AI Camping Settlements Fix	Targets specifically the "AI does nothing, camps capitals/cities" failure by changing defend-priority and idle-turn-allowance values, explicitly not touching aggression or personalities. 
+Steam Community
+	This is a narrow, surgical fix to the exact failure mode CA's distance-scaling beta work targeted. Good real-world evidence that a small number of task-priority rows drive most of the "AI does nothing" complaint — supports NATIVE_FIRST for that specific symptom rather than a project-owned fix.
+Campaign AI Overhaul – Alliance Blocs	Requires three additional soft-dependency mods (no AI potential/equalized income, restricted autoresolve, etc.) to function correctly, 
+Creative Assembly
+ and has repeated crash reports across recent beta patches.	Heavyweight, fragile, multi-mod-dependent approach to coalition-forming. Not a good architectural model to imitate.
+Reactive World: Alliances / Confederations	This is the closest existing analogue to your "Three Kingdoms-style rival/bloc" goal, and it's pure bounded script, not a CAI table rewrite: it runs each round after a configurable turn threshold, identifies the top-N factions by strength rank, finds who hates them, and weighs alliance formation by hatred, desperation, proximity, and compatibility; 
+Steam Community
+ the confederation variant works the same way for same-race consolidation using hatred, desperation, proximity, and partner distance as factors, with a hard per-turn cap and probability ceiling.	This directly answers your product question 6. A late-game rival/bloc metagame goal is demonstrably achievable as a bounded, turn-gated script sitting on top of native strength-rank and relations data — no deep CAI ownership, no project-owned semantic planning layer required. This is strong evidence to scope v0.2G/future metagame ambitions down, not up.
+Revised answer to your product questions
+
+Q3 (which table family to decode first): cai_task_management_system_task_generator_groups_generators_junctions_tables, confirmed as both the cross-mod overlap point and a real source of crashes/fragility in the community. Use the maintained rpfm-schemas repo, not a hand-rolled decode.
+
+Q6 (native+scripts vs. project-owned metagame director): Scripts suffice. Reactive World's two mods are working proof at exactly your target scope. This should pull v0.2G's ambition down from "project-owned commitment lifecycle that might grow into a metagame director" toward "thin, turn-gated script triggered off native strength-rank and relations, styled like Reactive World."
+
+Q7 (what WH3 doesn't expose): Nothing in this pass changed my answer here — I still can't state this with confidence without your v0.2I transport actually working, since "not exposed" and "not yet reachable from your probe" are indistinguishable until you get one successful live query.
+
+One architecture-relevant update to my earlier verdict
+
+Because native CAI is being actively reworked by CA on the same axes (anti-player bias, aggression, faction potential) that your v0.2E–G layers benchmark and score, I'd upgrade the urgency of REFRAME_AS_EVALUATOR_OR_ORACLE for v0.2E from "eventually" to "now." Its highest-value future role isn't scoring the world — it's answering "did the last CA patch actually change AI behavior in a measurable way," which is a question CA's own patch notes don't answer and the community is visibly still arguing about post-8.1.

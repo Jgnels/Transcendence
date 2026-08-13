@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scenario_id": "tier4_outnumbered_empire_v1",
+  "max_ticks": 30,
+  "sides": [
+    {
+      "id": "empire",
+      "units": [
+        {"id": "emp_front_1", "role": "frontline", "hp": 100.0, "morale": 80.0, "attack": 23.0, "defense": 18.0, "ammo": 0},
+        {"id": "emp_front_2", "role": "frontline", "hp": 100.0, "morale": 80.0, "attack": 23.0, "defense": 18.0, "ammo": 0},
+        {"id": "emp_ranged", "role": "ranged", "hp": 75.0, "morale": 65.0, "attack": 20.0, "defense": 11.0, "ammo": 14},
+        {"id": "emp_artillery", "role": "artillery", "hp": 60.0, "morale": 60.0, "attack": 31.0, "defense": 8.0, "ammo": 10},
+        {"id": "emp_cavalry", "role": "cavalry", "hp": 88.0, "morale": 75.0, "attack": 27.0, "defense": 15.0, "ammo": 0},
+        {"id": "emp_reserve", "role": "reserve", "hp": 92.0, "morale": 78.0, "attack": 25.0, "defense": 19.0, "ammo": 0, "commit_tick": 7}
+      ]
+    },
+    {
+      "id": "greenskins",
+      "units": [
+        {"id": "grn_front_1", "role": "frontline", "hp": 115.0, "morale": 77.0, "attack": 25.0, "defense": 16.0, "ammo": 0},
+        {"id": "grn_front_2", "role": "frontline", "hp": 115.0, "morale": 77.0, "attack": 25.0, "defense": 16.0, "ammo": 0},
+        {"id": "grn_front_3", "role": "frontline", "hp": 115.0, "morale": 77.0, "attack": 25.0, "defense": 16.0, "ammo": 0},
+        {"id": "grn_ranged", "role": "ranged", "hp": 80.0, "morale": 62.0, "attack": 18.0, "defense": 10.0, "ammo": 12},
+        {"id": "grn_cavalry", "role": "cavalry", "hp": 98.0, "morale": 72.0, "attack": 26.0, "defense": 14.0, "ammo": 0},
+        {"id": "grn_reserve", "role": "reserve", "hp": 105.0, "morale": 74.0, "attack": 24.0, "defense": 17.0, "ammo": 0, "commit_tick": 5},
+        {"id": "grn_reserve_2", "role": "reserve", "hp": 105.0, "morale": 74.0, "attack": 24.0, "defense": 17.0, "ammo": 0, "commit_tick": 8}
+      ]
+    }
+  ]
+}

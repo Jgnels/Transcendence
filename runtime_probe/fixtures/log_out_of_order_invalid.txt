@@ -1,0 +1,1 @@
+TRANS_PROBE|1|OWN_ARMY|index=0|force_cqi=1

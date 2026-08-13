@@ -1,0 +1,86 @@
+{
+  "calibration_anchors": {
+    "canonical_unit_count": 34,
+    "command_event_count": 397,
+    "duration_ms": 739600,
+    "local_casualties_observed_lower_bound": 489,
+    "local_kills_observed_max_sum": 1141,
+    "visible_enemy_casualties_observed_lower_bound": 1096
+  },
+  "checks": {
+    "casualty_claim_matches_terminal_coverage": true,
+    "command_attribution_is_explicit": true,
+    "commander_survival_stress_case_present": true,
+    "enemy_rout_stress_case_present": true,
+    "frontline_collapse_stress_case_present": true,
+    "ranged_output_stress_case_present": true,
+    "sampling_claims_match_coverage": true,
+    "stable_identity_contract_holds": true,
+    "unknown_terminal_state_stress_case_present": true,
+    "visibility_filter_observed_hidden_enemy_units": true
+  },
+  "corpus_id": "battle4_eilhart_observed_v1",
+  "evidence_status": "OBSERVED",
+  "fidelity_label": "OBSERVED_TRACE_REGRESSION_NOT_SIMULATION",
+  "policy_constraints": [
+    "Never interpret absent terminal units as undamaged or idle.",
+    "Never compute timing metrics when sampling coverage is invalid.",
+    "Never attribute commands to units without selection or explicitly labeled bounded inference evidence.",
+    "Never include hidden enemy unit identity or state.",
+    "Never treat the owner trace as an optimal policy label."
+  ],
+  "result_digest": "0d93daf622e65e1bdf498c9a8526c2d34a79c93bbd29099a0d2c31c6ce149e02",
+  "schema_version": 1,
+  "source_corpus_digest": "24af79128738bc648504094784eaced4d872ca05bf680c0e5f16061eac47da8d",
+  "stress_cases": {
+    "collapsed_frontline": [
+      "1:u1003",
+      "1:u1004",
+      "1:u1005"
+    ],
+    "endangered_commanders": [
+      "1:u1001"
+    ],
+    "high_output_ranged_or_specialists": [
+      "1:u1009",
+      "1:u1012",
+      "1:u1013"
+    ],
+    "routed_enemy_terminal": [
+      "2:u1019",
+      "2:u1020",
+      "2:u1021",
+      "2:u1022",
+      "2:u1023",
+      "2:u1024",
+      "2:u1025",
+      "2:u1026",
+      "2:u1027",
+      "2:u1028",
+      "2:u1032",
+      "2:u1033",
+      "2:u1034",
+      "2:u1036",
+      "2:u1037"
+    ],
+    "units_without_terminal_state": [
+      "1:u1008",
+      "1:u1011",
+      "1:u1014",
+      "1:u1015",
+      "1:u1016",
+      "1:u1017",
+      "2:u1031",
+      "2:u1035"
+    ]
+  },
+  "tier": "4R",
+  "warnings": [
+    "The owner command stream is optimal tactical policy.",
+    "Sparse phase samples establish exact engagement, routing, reserve, fatigue, or flank timing.",
+    "Units absent from the terminal sample survived without losses.",
+    "Visible-enemy totals equal complete enemy-army totals before all units are revealed.",
+    "Observed command events prove command acceptance or causal effectiveness.",
+    "One replay establishes general tactical-AI quality or SFO compatibility."
+  ]
+}

@@ -1,0 +1,695 @@
+{
+  "cases": [
+    {
+      "case_id": "region_target_exposes_point_and_settlement_queries",
+      "expected": {
+        "required_queries": [
+          "MODEL_HAS_CHARACTER_CQI",
+          "MODEL_HAS_FORCE_CQI",
+          "FORCE_ACTIVE_STANCE",
+          "POSITION_REACHABLE_THIS_TURN",
+          "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+          "POSITION_EVER_REACHABLE",
+          "REGION_SETTLEMENT_INTERFACE",
+          "SETTLEMENT_REACHABLE_THIS_TURN",
+          "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE",
+          "SETTLEMENT_EVER_REACHABLE"
+        ],
+        "settlement_interface_query_permitted": true,
+        "target_kind": "REGION"
+      },
+      "priority_type": "STABILIZE_EXPOSED_FRONT",
+      "scenario": {
+        "armies": [
+          {
+            "faction": "ai",
+            "id": "a1",
+            "movement": 5.0,
+            "observation": {
+              "force_cqi": 101,
+              "general_cqi": 100,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.9,
+            "strength": 110.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": -15.0,
+            "y": 0.0
+          },
+          {
+            "faction": "ai",
+            "id": "a2",
+            "movement": 5.0,
+            "observation": {
+              "force_cqi": 103,
+              "general_cqi": 102,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.9,
+            "strength": 100.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 35.0,
+            "y": 0.0
+          },
+          {
+            "faction": "enemy",
+            "id": "e1",
+            "movement": 5.0,
+            "replenishment": 1.0,
+            "strength": 90.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 1.0,
+            "y": 0.0
+          },
+          {
+            "faction": "enemy",
+            "id": "e2",
+            "movement": 5.0,
+            "replenishment": 1.0,
+            "strength": 90.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 19.0,
+            "y": 0.0
+          }
+        ],
+        "controlled_faction": "ai",
+        "regions": [
+          {
+            "garrison_strength": 50.0,
+            "id": "r1",
+            "owner": "ai",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "garrison_strength": 50.0,
+            "id": "r2",
+            "owner": "ai",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 20.0,
+            "y": 0.0
+          },
+          {
+            "garrison_strength": 50.0,
+            "id": "er",
+            "owner": "enemy",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 10.0,
+            "y": 10.0
+          }
+        ],
+        "scenario_id": "v02h_region_target",
+        "schema_version": 1,
+        "turn": 50,
+        "wars": [
+          [
+            "ai",
+            "enemy"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "faction_centroid_is_point_only_not_attack_target",
+      "expected": {
+        "forbidden_queries": [
+          "SETTLEMENT_REACHABLE_THIS_TURN",
+          "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE",
+          "SETTLEMENT_EVER_REACHABLE",
+          "GARRISON_CAN_ASSAULT"
+        ],
+        "required_queries": [
+          "POSITION_REACHABLE_THIS_TURN",
+          "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+          "POSITION_EVER_REACHABLE"
+        ],
+        "settlement_interface_query_permitted": false,
+        "target_kind": "FACTION"
+      },
+      "priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+      "scenario": {
+        "armies": [
+          {
+            "faction": "rival_bloc",
+            "id": "r1",
+            "movement": 5,
+            "observation": {
+              "force_cqi": 301,
+              "general_cqi": 300,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 0,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r2",
+            "movement": 5,
+            "observation": {
+              "force_cqi": 303,
+              "general_cqi": 302,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 1,
+            "y": 0
+          },
+          {
+            "faction": "rival_bloc",
+            "id": "r3",
+            "movement": 5,
+            "observation": {
+              "force_cqi": 305,
+              "general_cqi": 304,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 2,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p1",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 120,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 30,
+            "y": 0
+          },
+          {
+            "faction": "player_empire",
+            "id": "p2",
+            "movement": 5,
+            "replenishment": 0.9,
+            "strength": 100,
+            "visible_to": [
+              "rival_bloc"
+            ],
+            "x": 32,
+            "y": 0
+          }
+        ],
+        "controlled_faction": "rival_bloc",
+        "regions": [
+          {
+            "garrison_strength": 50,
+            "id": "home",
+            "owner": "rival_bloc",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.5,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "garrison_strength": 50,
+            "id": "pfront",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 30,
+            "y": 0
+          }
+        ],
+        "scenario_id": "v02h_faction_centroid_target",
+        "schema_version": 1,
+        "turn": 100,
+        "wars": [
+          [
+            "rival_bloc",
+            "player_empire"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "sieged_region_adds_context_query_without_attack_legality",
+      "expected": {
+        "forbidden_queries": [
+          "GARRISON_CAN_ASSAULT",
+          "GARRISON_CAN_BE_OCCUPIED_BY_FACTION"
+        ],
+        "required_queries": [
+          "GARRISON_UNDER_SIEGE",
+          "SETTLEMENT_REACHABLE_THIS_TURN"
+        ],
+        "settlement_interface_query_permitted": true,
+        "target_kind": "REGION"
+      },
+      "priority_type": "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+      "scenario": {
+        "armies": [
+          {
+            "faction": "ai",
+            "id": "recovering",
+            "movement": 5.0,
+            "observation": {
+              "force_cqi": 201,
+              "general_cqi": 200,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.4,
+            "strength": 80.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 8.0,
+            "y": 0.0
+          },
+          {
+            "faction": "enemy",
+            "id": "e1",
+            "movement": 5.0,
+            "replenishment": 1.0,
+            "strength": 100.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 1.0,
+            "y": 0.0
+          }
+        ],
+        "controlled_faction": "ai",
+        "regions": [
+          {
+            "garrison_strength": 50.0,
+            "id": "home",
+            "owner": "ai",
+            "threat": 0.0,
+            "under_siege": true,
+            "value": 1.5,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "garrison_strength": 50.0,
+            "id": "enemy_region",
+            "owner": "enemy",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 2.0,
+            "y": 0.0
+          }
+        ],
+        "scenario_id": "v02h_sieged_region_target",
+        "schema_version": 1,
+        "turn": 90,
+        "wars": [
+          [
+            "ai",
+            "enemy"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "missing_stance_does_not_invent_stance_specific_query",
+      "expected": {
+        "forbidden_queries": [
+          "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+          "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE",
+          "FORCE_CAN_ACTIVATE_STANCE"
+        ],
+        "required_queries": [
+          "POSITION_REACHABLE_THIS_TURN",
+          "SETTLEMENT_REACHABLE_THIS_TURN"
+        ],
+        "settlement_interface_query_permitted": true,
+        "target_kind": "REGION"
+      },
+      "priority_type": "STABILIZE_EXPOSED_FRONT",
+      "scenario": {
+        "armies": [
+          {
+            "faction": "ai",
+            "id": "a1",
+            "movement": 5.0,
+            "observation": {
+              "force_cqi": 101,
+              "general_cqi": 100,
+              "planner_eligible": true,
+              "stance": null
+            },
+            "replenishment": 0.9,
+            "strength": 110.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": -15.0,
+            "y": 0.0
+          },
+          {
+            "faction": "ai",
+            "id": "a2",
+            "movement": 5.0,
+            "observation": {
+              "force_cqi": 103,
+              "general_cqi": 102,
+              "planner_eligible": true,
+              "stance": null
+            },
+            "replenishment": 0.9,
+            "strength": 100.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 35.0,
+            "y": 0.0
+          },
+          {
+            "faction": "enemy",
+            "id": "e1",
+            "movement": 5.0,
+            "replenishment": 1.0,
+            "strength": 90.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 1.0,
+            "y": 0.0
+          },
+          {
+            "faction": "enemy",
+            "id": "e2",
+            "movement": 5.0,
+            "replenishment": 1.0,
+            "strength": 90.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 19.0,
+            "y": 0.0
+          }
+        ],
+        "controlled_faction": "ai",
+        "regions": [
+          {
+            "garrison_strength": 50.0,
+            "id": "r1",
+            "owner": "ai",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "garrison_strength": 50.0,
+            "id": "r2",
+            "owner": "ai",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 20.0,
+            "y": 0.0
+          },
+          {
+            "garrison_strength": 50.0,
+            "id": "er",
+            "owner": "enemy",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 10.0,
+            "y": 10.0
+          }
+        ],
+        "scenario_id": "v02h_region_no_stance",
+        "schema_version": 1,
+        "turn": 50,
+        "wars": [
+          [
+            "ai",
+            "enemy"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "reserve_capacity_has_no_destination_or_route_query",
+      "expected": {
+        "forbidden_queries": [
+          "POSITION_REACHABLE_THIS_TURN",
+          "POSITION_EVER_REACHABLE",
+          "SETTLEMENT_REACHABLE_THIS_TURN",
+          "SETTLEMENT_EVER_REACHABLE"
+        ],
+        "settlement_interface_query_permitted": false,
+        "target_kind": null
+      },
+      "priority_type": "PRESERVE_STRATEGIC_RESERVE",
+      "scenario": {
+        "armies": [
+          {
+            "faction": "ai",
+            "id": "healthy",
+            "movement": 5.0,
+            "observation": {
+              "force_cqi": 401,
+              "general_cqi": 400,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.95,
+            "strength": 120.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 0.0,
+            "y": 0.0
+          },
+          {
+            "faction": "ai",
+            "id": "recovering",
+            "movement": 5.0,
+            "observation": {
+              "force_cqi": 403,
+              "general_cqi": 402,
+              "planner_eligible": true,
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+            },
+            "replenishment": 0.4,
+            "strength": 80.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 2.0,
+            "y": 0.0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e1",
+            "movement": 5.0,
+            "replenishment": 1.0,
+            "strength": 100.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 20.0,
+            "y": 0.0
+          },
+          {
+            "faction": "player_empire",
+            "id": "e2",
+            "movement": 5.0,
+            "replenishment": 1.0,
+            "strength": 100.0,
+            "visible_to": [
+              "ai"
+            ],
+            "x": 21.0,
+            "y": 0.0
+          }
+        ],
+        "controlled_faction": "ai",
+        "regions": [
+          {
+            "garrison_strength": 50.0,
+            "id": "home",
+            "owner": "ai",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.0,
+            "x": 0.0,
+            "y": 10.0
+          },
+          {
+            "garrison_strength": 50.0,
+            "id": "enemy_region",
+            "owner": "player_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.2,
+            "x": 20.0,
+            "y": 0.0
+          }
+        ],
+        "scenario_id": "v02h_reserve_only_target",
+        "schema_version": 1,
+        "turn": 80,
+        "wars": [
+          [
+            "ai",
+            "player_empire"
+          ]
+        ]
+      }
+    }
+  ],
+  "metamorphic_base": {
+    "armies": [
+      {
+        "faction": "rival_bloc",
+        "id": "r1",
+        "movement": 5,
+        "observation": {
+          "force_cqi": 301,
+          "general_cqi": 300,
+          "planner_eligible": true,
+          "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+        },
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 0,
+        "y": 0
+      },
+      {
+        "faction": "rival_bloc",
+        "id": "r2",
+        "movement": 5,
+        "observation": {
+          "force_cqi": 303,
+          "general_cqi": 302,
+          "planner_eligible": true,
+          "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+        },
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 1,
+        "y": 0
+      },
+      {
+        "faction": "rival_bloc",
+        "id": "r3",
+        "movement": 5,
+        "observation": {
+          "force_cqi": 305,
+          "general_cqi": 304,
+          "planner_eligible": true,
+          "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+        },
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 2,
+        "y": 0
+      },
+      {
+        "faction": "player_empire",
+        "id": "p1",
+        "movement": 5,
+        "replenishment": 0.9,
+        "strength": 120,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 30,
+        "y": 0
+      },
+      {
+        "faction": "player_empire",
+        "id": "p2",
+        "movement": 5,
+        "replenishment": 0.9,
+        "strength": 100,
+        "visible_to": [
+          "rival_bloc"
+        ],
+        "x": 32,
+        "y": 0
+      }
+    ],
+    "controlled_faction": "rival_bloc",
+    "regions": [
+      {
+        "garrison_strength": 50,
+        "id": "home",
+        "owner": "rival_bloc",
+        "threat": 0.0,
+        "under_siege": false,
+        "value": 1.5,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "garrison_strength": 50,
+        "id": "pfront",
+        "owner": "player_empire",
+        "threat": 0.0,
+        "under_siege": false,
+        "value": 1.0,
+        "x": 30,
+        "y": 0
+      }
+    ],
+    "scenario_id": "v02h_faction_centroid_target",
+    "schema_version": 1,
+    "turn": 100,
+    "wars": [
+      [
+        "rival_bloc",
+        "player_empire"
+      ]
+    ]
+  },
+  "metamorphic_priority_type": "CONTAIN_COHERENT_VISIBLE_RIVAL",
+  "schema_version": 1,
+  "suite_id": "campaign_strategic_feasibility_adversarial_matrix_v0.2H"
+}

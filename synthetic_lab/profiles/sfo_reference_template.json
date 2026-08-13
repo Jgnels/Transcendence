@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "profile_id": "sfo_reference_unverified_2792731173",
+  "environment": "SFO_OPTIONAL_PROFILE",
+  "compatibility_status": "UNVERIFIED",
+  "source_sha256": "0119959f7999844bc49b47bd41d53110ad9a83b6f89478e1bf2199b8c65a828f",
+  "inherits": "vanilla_wh3_8_1_1_build_48122_4194776",
+  "notes": [
+    "Derived from an owner-supplied extracted audit bundle, not from the full pack.",
+    "No SFO-specific policy is certified until row-level schema decoding and live calibration are complete."
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "aggregate_metrics": {
+    "ambiguous_anchor_intervals": 1,
+    "comparable_actor_intervals": 37,
+    "directional_anchor_proxy_intervals": 0,
+    "first_turn": 4,
+    "foreign_faction_count": 7,
+    "last_turn": 7,
+    "movement_intervals": 1,
+    "position_idle_interval_rate": 0.972973,
+    "position_idle_intervals": 36,
+    "unanchored_movement_intervals": 0,
+    "visibility_gain_count": 6,
+    "visibility_loss_count": 6,
+    "visible_anchor_direction_change_candidate_count": 0
+  },
+  "application_authority": "PROHIBITED",
+  "contract": "PLAYER_VISIBLE_NATIVE_BEHAVIOR_REPROCESS_v0.2K",
+  "evidence_label": "SUPPORTED_DERIVED_OWNER_EVIDENCE",
+  "faction_analyses": [
+    {
+      "analysis_result_digest": "e73c25e22b732dd3537294d56f6df936fa651d1b6c4fcfa4c8245ae23cef59dc",
+      "availability": {
+        "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+        "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+        "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE",
+        "native_task_identity": "UNAVAILABLE",
+        "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+        "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+      },
+      "metrics": {
+        "ambiguous_anchor_intervals": 0,
+        "comparable_actor_intervals": 6,
+        "directional_anchor_proxy_intervals": 0,
+        "directional_anchor_proxy_rate": null,
+        "first_turn": 4,
+        "frame_count": 4,
+        "last_turn": 7,
+        "movement_intervals": 0,
+        "position_idle_intervals": 6,
+        "position_idle_rate": 1.0,
+        "unanchored_movement_intervals": 0,
+        "visibility_gain_count": 3,
+        "visibility_loss_count": 1,
+        "visible_anchor_direction_change_candidate_count": 0
+      },
+      "observed_ai_faction": "wh2_dlc11_vmp_the_barrow_legion"
+    },
+    {
+      "analysis_result_digest": "b09ba3f307a5e0821922ea283291ffe4ea96bbe2166722aeeed42141c317d821",
+      "availability": {
+        "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+        "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+        "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE",
+        "native_task_identity": "UNAVAILABLE",
+        "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+        "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+      },
+      "metrics": {
+        "ambiguous_anchor_intervals": 0,
+        "comparable_actor_intervals": 3,
+        "directional_anchor_proxy_intervals": 0,
+        "directional_anchor_proxy_rate": null,
+        "first_turn": 4,
+        "frame_count": 4,
+        "last_turn": 7,
+        "movement_intervals": 0,
+        "position_idle_intervals": 3,
+        "position_idle_rate": 1.0,
+        "unanchored_movement_intervals": 0,
+        "visibility_gain_count": 1,
+        "visibility_loss_count": 1,
+        "visible_anchor_direction_change_candidate_count": 0
+      },
+      "observed_ai_faction": "wh3_dlc20_chs_festus"
+    },
+    {
+      "analysis_result_digest": "bc6d86bd6a35780ffa1b534df4ab7b2db7d61e367932b6a68b252529ecdb2816",
+      "availability": {
+        "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+        "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+        "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE",
+        "native_task_identity": "UNAVAILABLE",
+        "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+        "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+      },
+      "metrics": {
+        "ambiguous_anchor_intervals": 1,
+        "comparable_actor_intervals": 7,
+        "directional_anchor_proxy_intervals": 0,
+        "directional_anchor_proxy_rate": 0.0,
+        "first_turn": 4,
+        "frame_count": 4,
+        "last_turn": 7,
+        "movement_intervals": 1,
+        "position_idle_intervals": 6,
+        "position_idle_rate": 0.857143,
+        "unanchored_movement_intervals": 0,
+        "visibility_gain_count": 1,
+        "visibility_loss_count": 2,
+        "visible_anchor_direction_change_candidate_count": 0
+      },
+      "observed_ai_faction": "wh_main_dwf_karak_ziflin"
+    },
+    {
+      "analysis_result_digest": "e792e26d5eba03b89c4c1c9ef292ba86bec28ad297768f526b4e2db784f2ec26",
+      "availability": {
+        "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+        "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+        "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE",
+        "native_task_identity": "UNAVAILABLE",
+        "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+        "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+      },
+      "metrics": {
+        "ambiguous_anchor_intervals": 0,
+        "comparable_actor_intervals": 8,
+        "directional_anchor_proxy_intervals": 0,
+        "directional_anchor_proxy_rate": null,
+        "first_turn": 4,
+        "frame_count": 4,
+        "last_turn": 7,
+        "movement_intervals": 0,
+        "position_idle_intervals": 8,
+        "position_idle_rate": 1.0,
+        "unanchored_movement_intervals": 0,
+        "visibility_gain_count": 0,
+        "visibility_loss_count": 1,
+        "visible_anchor_direction_change_candidate_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_marienburg"
+    },
+    {
+      "analysis_result_digest": "82202e79f307ef0d5a451b3d5aec32063551ff964d1ba1d1047930e5c86c7e24",
+      "availability": {
+        "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+        "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+        "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE",
+        "native_task_identity": "UNAVAILABLE",
+        "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+        "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+      },
+      "metrics": {
+        "ambiguous_anchor_intervals": 0,
+        "comparable_actor_intervals": 4,
+        "directional_anchor_proxy_intervals": 0,
+        "directional_anchor_proxy_rate": null,
+        "first_turn": 4,
+        "frame_count": 4,
+        "last_turn": 7,
+        "movement_intervals": 0,
+        "position_idle_intervals": 4,
+        "position_idle_rate": 1.0,
+        "unanchored_movement_intervals": 0,
+        "visibility_gain_count": 1,
+        "visibility_loss_count": 0,
+        "visible_anchor_direction_change_candidate_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_middenland"
+    },
+    {
+      "analysis_result_digest": "a1c1b075e2f0af676eaaa039602852200c8c342e72071809bd1038e8474b5bed",
+      "availability": {
+        "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+        "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+        "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE",
+        "native_task_identity": "UNAVAILABLE",
+        "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+        "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+      },
+      "metrics": {
+        "ambiguous_anchor_intervals": 0,
+        "comparable_actor_intervals": 6,
+        "directional_anchor_proxy_intervals": 0,
+        "directional_anchor_proxy_rate": null,
+        "first_turn": 4,
+        "frame_count": 4,
+        "last_turn": 7,
+        "movement_intervals": 0,
+        "position_idle_intervals": 6,
+        "position_idle_rate": 1.0,
+        "unanchored_movement_intervals": 0,
+        "visibility_gain_count": 0,
+        "visibility_loss_count": 1,
+        "visible_anchor_direction_change_candidate_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_talabecland"
+    },
+    {
+      "analysis_result_digest": "2ddb28fc8601de18fb68b1f79047e230e5981bf204580fb14112c4b89e66103f",
+      "availability": {
+        "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+        "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+        "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "native_assignment_memory": "UNAVAILABLE",
+        "native_hysteresis": "UNAVAILABLE",
+        "native_task_identity": "UNAVAILABLE",
+        "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+        "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+        "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+      },
+      "metrics": {
+        "ambiguous_anchor_intervals": 0,
+        "comparable_actor_intervals": 3,
+        "directional_anchor_proxy_intervals": 0,
+        "directional_anchor_proxy_rate": null,
+        "first_turn": 4,
+        "frame_count": 4,
+        "last_turn": 7,
+        "movement_intervals": 0,
+        "position_idle_intervals": 3,
+        "position_idle_rate": 1.0,
+        "unanchored_movement_intervals": 0,
+        "visibility_gain_count": 0,
+        "visibility_loss_count": 0,
+        "visible_anchor_direction_change_candidate_count": 0
+      },
+      "observed_ai_faction": "wh_main_emp_wissenland"
+    }
+  ],
+  "interpretation": {
+    "not_supported": [
+      "Position-stable intervals are not proof that native CAI is idle, stuck, passive, or low quality.",
+      "Visibility loss is not proof of army destruction, retreat, disbandment, or reassignment.",
+      "The preserved player-visible subset cannot establish full-faction front coverage, response latency, reserve adequacy, recovery misuse, assignment exclusivity, native task identity, memory, or hysteresis.",
+      "The absence of directional-anchor changes is not proof of low task churn because almost all comparable intervals are position-stable and native tasks are hidden."
+    ],
+    "supported": [
+      "Player-visible foreign force positions can be compared longitudinally across the preserved owner turns.",
+      "Foreign force visibility gains and losses can be counted as observation-set transitions.",
+      "Position stability and movement toward player-visible anchors can be measured as proxies."
+    ]
+  },
+  "next_gate": "Acquire or identify richer visibility-safe longitudinal evidence only when it can answer a preregistered native-failure question; do not revive v0.2G/v0.2I from this limiting result.",
+  "policy_authority": "NO_ORDERS",
+  "result_digest": "5d2e6fdf9f2286225815842488977d631d31dae49c74acae22e27f025e6e831d",
+  "schema_version": 1,
+  "scope": {
+    "foreign_ai_factions_visible_in_at_least_two_frames": [
+      "wh2_dlc11_vmp_the_barrow_legion",
+      "wh3_dlc20_chs_festus",
+      "wh_main_dwf_karak_ziflin",
+      "wh_main_emp_marienburg",
+      "wh_main_emp_middenland",
+      "wh_main_emp_talabecland",
+      "wh_main_emp_wissenland"
+    ],
+    "observer": "wh_main_emp_empire",
+    "raw_owner_log_committed": false,
+    "reprocess_uses_public_safe_derived_scenarios_only": true,
+    "turns": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "source": {
+    "foreign_entity_source_required": "WH3_PLAYER_FILTERED_LISTS",
+    "path": "research/runtime_evidence/CAMPAIGN_TURNS_4_7_REPROCESS_v0.1J.json",
+    "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+    "sha256": "8189081fb1b4ad57fb09592f5c9594480b42cf3f575d76eed94014cec7dc37a5",
+    "source_evidence_status": "HYPOTHESIS",
+    "source_result_digest": "953e35299dd0ef9e06de9d5347df01cabbd79cce68727e8b7a12175a058bc03b"
+  }
+}

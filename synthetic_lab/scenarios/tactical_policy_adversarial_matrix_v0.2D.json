@@ -1,0 +1,565 @@
+{
+  "authority": "NO_ORDERS",
+  "contract": "TACTICAL_POLICY_ADVERSARIAL_SUITE_V1",
+  "interpretation_limits": [
+    "CONTROL_SYNTHETIC only; no live tactical quality claim.",
+    "No hidden information, command issue, acknowledgement, execution, causality, or outcome promotion."
+  ],
+  "metamorphic_checks": [
+    {
+      "check_id": "asset_order_invariance",
+      "operation": "REVERSE_ASSET_ORDER",
+      "scenario_id": "simultaneous_terminal_and_local_crisis_preserves_first"
+    },
+    {
+      "check_id": "ratio_scale_invariance",
+      "operation": "SCALE_MODEL_COUNTS_X10",
+      "scenario_id": "elite_cavalry_half_loss_triggers_preservation"
+    },
+    {
+      "check_id": "policy_rule_order_invariance",
+      "operation": "REVERSE_POLICY_RULE_ORDER",
+      "scenario_id": "target_concentration_without_selection_is_hypothesis_only"
+    }
+  ],
+  "result_digest": "776c85dc798c21514b7ee8b1a540b7461f71e436a3c125802b1d5eebfffda413",
+  "scenarios": [
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+        "required_abstentions": [
+          "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+        ],
+        "required_reviews": [],
+        "review_status": {},
+        "terminal_outcome_label": "UNVERIFIED_NONTERMINAL"
+      },
+      "scenario_id": "nonterminal_replay_exhaustion_abstains_outcome",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "nonterminal",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "priority_ordering": "TERMINAL_DISCIPLINE_FIRST",
+        "required_abstentions": [
+          "NO_NEW_HIGH_COMMITMENT_AFTER_TERMINAL_EVIDENCE"
+        ],
+        "required_reviews": [],
+        "review_status": {},
+        "terminal_outcome_label": "OBSERVED_TERMINAL_BOUNDARY"
+      },
+      "scenario_id": "terminal_state_blocks_new_commitment",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": true,
+        "observation_stale": false,
+        "outcome_decided_observed": true,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "terminal",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "required_abstentions": [
+          "NO_TERMINAL_OUTCOME_LEARNING_FROM_NONTERMINAL_STATE"
+        ],
+        "required_reviews": [
+          "FORCE_COMPLETENESS_REVIEW"
+        ],
+        "review_status": {}
+      },
+      "scenario_id": "incomplete_force_defers_whole_force_assumption",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": false,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "force-incomplete",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+        "required_abstentions": [],
+        "required_reviews": [
+          "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+        ],
+        "review_status": {}
+      },
+      "scenario_id": "elite_cavalry_half_loss_triggers_preservation",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [
+          {
+            "asset_id": "cav",
+            "casualties_observed_lower_bound": 30,
+            "commander": false,
+            "high_value": true,
+            "hitpoints_fraction": 1.0,
+            "initial_models": 60,
+            "routing": false
+          }
+        ],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "elite-half",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [
+          "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+        ],
+        "priority_ordering": "NO_LOCAL_CRISIS_DETECTED",
+        "required_abstentions": [],
+        "required_reviews": [],
+        "review_status": {}
+      },
+      "scenario_id": "large_elite_below_half_loss_does_not_trigger",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [
+          {
+            "asset_id": "large",
+            "casualties_observed_lower_bound": 499,
+            "commander": false,
+            "high_value": true,
+            "hitpoints_fraction": 1.0,
+            "initial_models": 1000,
+            "routing": false
+          }
+        ],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "elite-below",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+        "required_abstentions": [],
+        "required_reviews": [
+          "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+        ],
+        "review_status": {}
+      },
+      "scenario_id": "small_elite_above_half_loss_triggers_ratio_guard",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [
+          {
+            "asset_id": "small",
+            "casualties_observed_lower_bound": 5,
+            "commander": false,
+            "high_value": true,
+            "hitpoints_fraction": 1.0,
+            "initial_models": 10,
+            "routing": false
+          }
+        ],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "elite-small",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+        "required_abstentions": [],
+        "required_reviews": [
+          "COMMANDER_PRESERVATION_REVIEW"
+        ],
+        "review_status": {}
+      },
+      "scenario_id": "commander_routing_triggers_preservation",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [
+          {
+            "asset_id": "lord",
+            "casualties_observed_lower_bound": 0,
+            "commander": true,
+            "high_value": false,
+            "hitpoints_fraction": 0.8,
+            "initial_models": 1,
+            "routing": true
+          }
+        ],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "cmd-route",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "priority_ordering": "PRESERVATION_FIRST_LOCAL_CRISIS",
+        "required_abstentions": [],
+        "required_reviews": [
+          "COMMANDER_PRESERVATION_REVIEW"
+        ],
+        "review_status": {}
+      },
+      "scenario_id": "commander_low_hitpoints_triggers_preservation",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [
+          {
+            "asset_id": "lord",
+            "casualties_observed_lower_bound": 0,
+            "commander": true,
+            "high_value": false,
+            "hitpoints_fraction": 0.2,
+            "initial_models": 1,
+            "routing": false
+          }
+        ],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "cmd-hp",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "priority_ordering": "PRESERVATION_FIRST_EVEN_WITH_TERMINAL_EVIDENCE",
+        "required_abstentions": [
+          "NO_NEW_HIGH_COMMITMENT_AFTER_TERMINAL_EVIDENCE"
+        ],
+        "required_reviews": [
+          "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+        ],
+        "review_status": {},
+        "terminal_outcome_label": "OBSERVED_TERMINAL_BOUNDARY"
+      },
+      "scenario_id": "simultaneous_terminal_and_local_crisis_preserves_first",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [
+          {
+            "asset_id": "elite",
+            "casualties_observed_lower_bound": 75,
+            "commander": false,
+            "high_value": true,
+            "hitpoints_fraction": 1.0,
+            "initial_models": 100,
+            "routing": false
+          }
+        ],
+        "natural_completion_observed": true,
+        "observation_stale": false,
+        "outcome_decided_observed": true,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "terminal-crisis",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [
+          "FORCE_COMPLETENESS_REVIEW"
+        ],
+        "required_abstentions": [],
+        "required_reviews": [
+          "RESERVE_STATE_REVIEW"
+        ],
+        "review_status": {}
+      },
+      "scenario_id": "reserve_committed_late_is_not_absent",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "COMMITTED_LATE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "reserve-late",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "required_abstentions": [
+          "RESERVE_STATE_UNKNOWN_DO_NOT_INFER_ABSENCE"
+        ],
+        "required_reviews": [],
+        "review_status": {}
+      },
+      "scenario_id": "reserve_unknown_abstains_from_absence_inference",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "UNKNOWN",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "reserve-unknown",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "required_abstentions": [],
+        "required_reviews": [
+          "TARGET_CONCENTRATION_UTILITY_REVIEW"
+        ],
+        "review_status": {
+          "TARGET_CONCENTRATION_UTILITY_REVIEW": "HYPOTHESIS_REVIEW_ONLY"
+        }
+      },
+      "scenario_id": "target_concentration_without_selection_is_hypothesis_only",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "target-hyp",
+        "target_concentration_share": 0.45
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [],
+        "required_abstentions": [],
+        "required_reviews": [
+          "TARGET_CONCENTRATION_UTILITY_REVIEW"
+        ],
+        "review_status": {
+          "TARGET_CONCENTRATION_UTILITY_REVIEW": "SUPPORTED_OBSERVATION_REVIEW"
+        }
+      },
+      "scenario_id": "target_concentration_with_selection_is_observation_review",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": true,
+        "snapshot_id": "target-observed",
+        "target_concentration_share": 0.45
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": false,
+        "forbidden_reviews": [
+          "HIGH_VALUE_ASSET_PRESERVATION_REVIEW"
+        ],
+        "priority_ordering": "ABSTAIN_STALE_OBSERVATION",
+        "required_abstentions": [
+          "STALE_OBSERVATION_NO_TACTICAL_COMMITMENT_REVIEW"
+        ],
+        "required_reviews": [],
+        "review_status": {}
+      },
+      "scenario_id": "stale_observation_abstains",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [
+          {
+            "asset_id": "elite",
+            "casualties_observed_lower_bound": 90,
+            "commander": false,
+            "high_value": true,
+            "hitpoints_fraction": 1.0,
+            "initial_models": 100,
+            "routing": false
+          }
+        ],
+        "natural_completion_observed": false,
+        "observation_stale": true,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "stale",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": true,
+        "forbidden_reviews": [],
+        "required_abstentions": [],
+        "required_reviews": [],
+        "review_status": {}
+      },
+      "mutation": "HIDDEN_ENEMY_FIELD",
+      "scenario_id": "hidden_enemy_field_fails_closed",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "hidden",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": true,
+        "forbidden_reviews": [],
+        "required_abstentions": [],
+        "required_reviews": [],
+        "review_status": {}
+      },
+      "mutation": "AUTHORITY_PROMOTION",
+      "scenario_id": "authority_promotion_fails_closed",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "authority",
+        "target_concentration_share": null
+      }
+    },
+    {
+      "expectations": {
+        "expect_error": true,
+        "forbidden_reviews": [],
+        "required_abstentions": [],
+        "required_reviews": [],
+        "review_status": {}
+      },
+      "mutation": "FOREIGN_POLICY_DIGEST",
+      "scenario_id": "foreign_policy_provenance_fails_closed",
+      "snapshot": {
+        "authority": "NO_ORDERS",
+        "evidence_status": "CONTROL_SYNTHETIC",
+        "force_discovery_complete": true,
+        "local_assets": [],
+        "natural_completion_observed": false,
+        "observation_stale": false,
+        "outcome_decided_observed": false,
+        "reserve_state": "AVAILABLE",
+        "schema_version": 1,
+        "selection_attribution_observed": false,
+        "snapshot_id": "foreign",
+        "target_concentration_share": null
+      }
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260801,
+  "source_policy_digest": "4fe0d769dee3649bd2f4f9ce2db364ae6dbd75e045f618091096ff3a67de3fee",
+  "suite_id": "tactical_policy_adversarial_matrix_v0.2D"
+}

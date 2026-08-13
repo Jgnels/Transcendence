@@ -1,0 +1,256 @@
+KIMI D — v0.2G + v0.2H SOURCE RECONCILIATION
+Authority: NO_ORDERS / PROHIBITED — research-only, no code changes.
+Baseline: v0.2I-r3 owner-validated. Public GitHub is older supplemental material.
+1. EXACT SOURCE CRITICAL PATH
+1A. v0.2G — strategic_assignment.py — Theater-to-Army Assignment
+Entry: build_theater_to_army_assignment(raw_scenario, challenge_envelope, strategic_portfolio)
+Step 1 — Input Verification (lines 182–200)
+validate_campaign_scenario(raw_scenario) → schema enforcement.
+If caller supplies challenge_envelope or strategic_portfolio, they are recomputed from the scenario and compared for equality. Any mismatch raises StrategicAssignmentError ("stale, forged, or foreign").
+Digests on both envelopes are verified via digest(payload) == claimed.
+Authority check: expected_portfolio.get("authority") == AUTHORITY and application_authority == APPLICATION_AUTHORITY.
+Step 2 — Actor Inventory (lines 202–210)
+_own_armies(scenario) filters to faction == controlled_faction, excludes planner_eligible is False, returns deepcopy sorted by id.
+recovering_ids = armies where replenishment < RECOVERY_REPLENISHMENT_THRESHOLD.
+healthy_ids = complement.
+Step 3 — Effective Priority Expansion (lines 212–214)
+_effective_priorities(portfolio) expands CRITICAL_STRATEGIC_OVERFLOW items back to their source CRITICAL priorities (via source_portfolio_ids), marking via_critical_overflow = True.
+Sort key: (-SEVERITY_RANK, -utility, priority_type, target_id, portfolio_id).
+Step 4 — Recovery Protection (lines 216–228)
+If PROTECT_RECOVERING_FIELD_FORCE priority exists, every recovering_id gets a protection record claiming the ARMY_STRATEGIC_COMMITMENT_SLOT.
+These armies are entered into claimed map.
+Step 5 — Force-Priority Greedy Assignment (lines 230–312)
+reserve_priority extracted.
+force_priorities = all non-reserve, non-consolidation, non-recovery priorities.
+For each priority in severity-first order:
+Aggressive veto: If priority_type in AGGRESSIVE_TYPES and portfolio constraints veto aggressive commitment → UNFILLED / AGGRESSIVE_COMMITMENT_VETO.
+Anchor computation: _anchor_for_priority():
+REGION target → region centroid from scenario.
+FACTION target → centroid of visible enemy armies + regions at war.
+RIVAL_SET scope → centroid of all hostile-faction armies + regions.
+Returns None if no visible assets.
+Coverage IDs: _front_coverage_ids() returns army IDs already near the target region's front.
+Candidate ranking: _rank_candidates():
+max_strength = max(strength) across all armies.
+For each army: recovering = replenishment < threshold.
+If recovering and not critical → eligible=False, blocked_reason=RECOVERY_PROTECTED.
+eta = distance(army, anchor) / max(movement, 1.0) — straight-line Euclidean over movement points.
+proximity = 1.0 / (1.0 + eta).
+strength_norm = strength / max_strength.
+coverage_bonus = 1.0 if army already on front, else 0.0.
+recovery_penalty = 0.35 if recovering.
+Score = 0.50×proximity + 0.25×replenishment + 0.20×strength_norm + 0.05×coverage_bonus − recovery_penalty.
+Sort: eligible first, then descending score, then actor_id.
+Only top MAX_RANKED_CANDIDATES = 16 retained in output.
+Reserve floor: If reserve_priority exists and current priority is non-critical, and len(healthy_unclaimed) <= 1, then all healthy candidates are blocked with RESERVE_FLOOR_PROTECTED.
+Assignment: First available candidate is chosen. If the chosen actor was recovery-protected and priority is CRITICAL, the protection record is updated to RECOVERY_PROTECTION_OVERRIDDEN_BY_CRITICAL and the actor is un-claimed.
+Actor entered into claimed map.
+Step 6 — Strategic Reserve Assignment (lines 314–334)
+If reserve_priority exists, pick the strongest healthy unclaimed army (sort: -strength, -replenishment, id).
+If none, UNFILLED / NO_UNCLAIMED_HEALTHY_ARMY_FOR_RESERVE.
+Step 7 — Consolidation Posture (lines 336–344)
+CONSOLIDATE_LOW_PRESSURE_POSITION priorities are explicitly marked NO_FORCE_REQUIRED / STRATEGIC_POSTURE_ONLY.
+Step 8 — Metrics & Output (lines 346–end)
+critical_coverage = critical_assigned / len(critical_effective).
+double_booked checked (should be empty by construction).
+Result includes full candidate_rankings dictionary, unfilled_priorities, resource_conflicts, recovery_protections.
+evidence_status = "CONTROL_OFFLINE_SHADOW_FORCE_ALLOCATION".
+assignment_solver = "DETERMINISTIC_SEVERITY_FIRST_GREEDY_NOT_OPTIMALITY_CLAIM".
+1B. v0.2G — strategic_commitment.py — Temporal Commitment
+Entry: build_strategic_temporal_commitment(scenarios: list[dict])
+Precondition: Same controlled faction, turns strictly increasing, no gaps in sequence (gaps trigger CONTINUITY_RESET).
+Per-turn state machine (lines 66–228):
+Compute fresh assignment via build_theater_to_army_assignment(scenario) — this recomputes the entire v0.2G pipeline from scratch every turn.
+Priority map from assignment["effective_priorities"].
+Fresh assignment map from assignment["assignments"].
+Army map from scenario (only controlled, planner-eligible armies).
+Phase A — Retire/Cancel existing plans (lines 89–110)
+Priority disappeared → RETIRE ("PRIORITY_NO_LONGER_PRESENT_NO_CAUSAL_CREDIT").
+Actor missing from scenario → CANCEL ("ACTOR_UNAVAILABLE").
+Actor entered recovery (non-critical) → CANCEL ("ACTOR_ENTERED_RECOVERY_PROTECTION").
+Fresh unfilled with AGGRESSIVE_COMMITMENT_VETO → CANCEL ("AGGRESSIVE_COMMITMENT_VETO").
+Phase B — Supersession by higher severity (lines 112–128)
+For each active plan, if the same actor has a different fresh assignment:
+If the fresh assignment is already covered by another active plan → do nothing (anti-steal).
+If incoming severity rank > current severity rank → SUPERSEDE current plan.
+Phase C — Continue or reassign active plans (lines 130–170)
+For each active plan (sorted):
+candidate = _candidate_for_actor(assignment, priority_id, actor_id) — looks up the army's score in the fresh ranking for that priority.
+fresh_item = fresh.get(priority_id).
+age = turn - started_turn.
+If candidate eligible:
+If fresh_item exists but points to a different actor:
+If age >= MAX_COMMITMENT_TURNS (4) AND fresh_score - old_score >= REASSIGN_SCORE_MARGIN (0.15) AND new actor not claimed → REASSIGN_AFTER_REVIEW.
+Else → CONTINUE ("ANTI_THRASH_RETAIN_EXISTING_ACTOR").
+Else → CONTINUE ("PRIORITY_AND_ACTOR_REMAIN_VALID").
+Else (candidate not eligible or missing from ranking window):
+If actor still exists and (healthy or critical) → CONTINUE ("ACTOR_VALID_OUTSIDE_RANKING_WINDOW").
+Else → CANCEL ("ACTOR_NO_LONGER_ELIGIBLE").
+Phase D — Start new plans (lines 172–196)
+Fresh assignments sorted by (-severity_rank, -assignment_score, priority_id, actor_id).
+Skip if priority already active.
+If actor claimed by another active plan:
+Search candidate_rankings[priority_id] for next eligible unclaimed actor.
+If found, substitute actor and score.
+If none → BLOCKED ("TEMPORAL_ACTOR_CONFLICT").
+Create plan with status = "ACTIVE_SHADOW_COMMITMENT_NOT_EXECUTED".
+plan_id = digest({"priority_id", "actor_id", "started_turn"}).
+Output: Per-turn slices with event logs, active plans, metrics. final_active_plans from last turn.
+1C. v0.2H — strategic_feasibility.py — Read-Only Feasibility Envelope
+Entry: build_campaign_strategic_feasibility_plan(raw_scenario, assignment)
+Precondition: Assignment must be SHADOW_PROPOSED_NOT_EXECUTED, authority NO_ORDERS/PROHIBITED, route status NOT_EVALUATED_GEOMETRIC_REFERENCE_ONLY.
+Step 1 — Actor Binding (lines 152–162)
+_scenario_actor() validates the assigned actor exists, is controlled, and has planner_eligible observation.
+Extracts general_cqi and force_cqi from observation (must be positive integers).
+Extracts stance (string or null).
+Step 2 — Query Plan Generation (lines 164–232)
+Binding queries: MODEL_HAS_CHARACTER_CQI, MODEL_CHARACTER_FROM_CQI, MODEL_HAS_FORCE_CQI, MODEL_FORCE_FROM_CQI, FORCE_ACTIVE_STANCE.
+Point reachability queries (if anchor exists):
+POSITION_REACHABLE_THIS_TURN — exact x,y.
+POSITION_REACHABLE_THIS_TURN_IN_STANCE — if stance known.
+POSITION_EVER_REACHABLE — long horizon, no ETA.
+Settlement queries (if target_kind == REGION):
+REGION_SETTLEMENT_INTERFACE — lookup only, no action promotion.
+SETTLEMENT_REACHABLE_THIS_TURN — exact region.
+SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE — if stance known.
+SETTLEMENT_EVER_REACHABLE — long horizon.
+GARRISON_UNDER_SIEGE — if region flagged under siege.
+Target boundary flags explicitly set:
+concrete_attack_target_promoted = False
+settlement_target_promoted = False
+faction_centroid_is_attack_target = False
+Step 3 — Capability Boundary (lines 234–244)
+All flags false: route_path_observed, zone_of_control_observed, interception_observed, movement_or_action_order_emitted, etc.
+documented_queries_only = True.
+owner_runtime_queries_observed = False.
+Cross-evidence builder (lines 272–end):
+build_cross_evidence_campaign_strategic_feasibility() validates observed report and force-allocation envelope, then generates one feasibility plan per assignment per turn.
+build_observation_packet_template() creates a template with observed=False, value=None for every query.
+adjudicate_campaign_strategic_feasibility_observation() validates the packet against the plan, checks query cardinality, type-checks values (booleans for reachability, string for stance), and produces adjudicated record.
+2. NATIVE WH3 CAI — VERIFIED CAPABILITIES (OFFICIAL_GAME_FACT)
+From CA's own campaign-AI improvement blogs and patch notes:
+Table
+Native Capability	Evidence
+Task generation — multiple task generators contribute to same task (attack region X because enemy, bordering, undefended).	
+Task batching — same type + same target combined; allocation pairs tasks with armies, then additional batching.	
+Distance measured in turns — "The AI's perception of 'how far away' is measured in turns...takes into account movement extends, and where appropriate the usage of stances like tunneling/forced march."	
+Dynamic distance scaling — priority floor at 4–8 turns depending on campaign progression and recruitment status.	
+Query system + influence map — two mechanisms: simple queries and influence map showing force range/strength interaction.	
+Query correctness fixes — queries were fixed to check mobile asset types (not agents) for defensive tasks.	
+Scripting API — move/attack/stance — cm:move_character, cm:attack, cm:force_character_force_into_stance, etc. exist but are mutation surfaces the project explicitly prohibits.	
+3. DUPLICATION MATRIX
+Table
+Project Responsibility	Native WH3 CAI Equivalent	Overlap Assessment
+Priority generation / severity ranking	Native task generators + BDI priority system	PARTIAL DUPLICATION. Native uses multiple generators + batching + distance-scaled priority. Project uses observer-safe front evaluator + manual severity tiers.
+Army-to-task assignment / allocation	Native allocation step pairs tasks with armies	NEAR-FULL DUPLICATION. Native allocator already does task-to-resource pairing with turn-distance and stance awareness. Project's greedy Euclidean assignment is strictly less informed.
+Distance / ETA estimation	Native "measured in turns" with movement extends + stance	INFERIOR DUPLICATION. Project uses hypot(x1-x2, y1-y2) / movement_points — straight-line geometry ignoring terrain, roads, ZOC, stance modifiers, interception.
+Recovery protection / army state gating	Native query system + task eligibility	LIKELY DUPLICATION. Native CAI already filters task eligibility by army state; exact mechanism undocumented but implied by task-generator behavior.
+Strategic reserve preservation	Native budget/construction + force distribution	POSSIBLE DUPLICATION. Native has NAVY_LOCAL_DISTRIBUTION_IMPORTANCE_PCT_* and force-distribution managers; land-army reserve logic is implicit in task allocation.
+Anti-thrashing / commitment windows	Native task batching + implicit plan continuity	NOVEL BUT UNVERIFIED. Native batching is per-turn, not temporal. Project's 2–4 turn commitment window is a project-owned concept not explicitly documented in native CAI.
+Reachability / path feasibility queries	Native character_can_reach_position, can_activate_stance, etc.	INTERFACE WRAPPER. Project catalogs documented query surfaces but does not execute them. Native already uses these internally.
+Action authority / order emission	Native campaign executor + scripting cm:move_character, cm:attack	NO DUPLICATION — PROJECT EXPLICITLY PROHIBITS.
+4. RESPONSIBILITY CLASSIFICATION
+v0.2G — strategic_assignment.py
+Table
+Component	Classification	Rationale
+Priority severity-first sorting + greedy assignment solver	REMOVE_FROM_APPLICATION_PATH	Native CAI already has task generators, batching, and allocation. The project's greedy solver uses less information (Euclidean distance, no stance, no ZOC, no terrain) and cannot outperform native allocation without falsifying native CAI first.
+Euclidean eta = distance / movement proximity scoring	REMOVE_FROM_APPLICATION_PATH	Native measures distance in turns with movement extends and stance awareness. Project's straight-line geometry is demonstrably inferior and risks misleading downstream logic.
+Recovery protection (RECOVERY_PROTECTED gating)	REFRAME_AS_EVALUATOR_OR_ORACLE	Useful as a diagnostic to check whether native CAI is already respecting recovery states. If native allocator already skips depleted armies, this is redundant. If not, it identifies a native gap. Should not gate assignment itself.
+Reserve floor (ONE_HEALTHY_UNCLAIMED_ARMY_WHEN_POSSIBLE)	REFRAME_AS_EVALUATOR_OR_ORACLE	Scientifically interesting as a policy probe. Could evaluate whether native CAI maintains adequate reserves. Should not override native allocation.
+Critical overflow expansion (CRITICAL_STRATEGIC_OVERFLOW → source priorities)	KEEP_PROJECT_OWNED	This is a project-owned bounded-representation technique. Native CAI may or may not do this; the expansion logic is a valid data-structure concern.
+Candidate ranking output (candidate_rankings)	REFRAME_AS_EVALUATOR_OR_ORACLE	Valuable as an oracle — given a priority, which armies should be considered? Can be compared against native's actual allocation to detect native CAI anomalies.
+Aggressive commitment veto	REFRAME_AS_EVALUATOR_OR_ORACLE	Useful policy knob for evaluating AI behavior, but should not be an application controller without evidence that native CAI lacks equivalent constraints.
+Front coverage bonus (existing_front_coverage)	REMOVE_FROM_APPLICATION_PATH	Native influence map already captures proximity-based threat/assignment. Project's binary coverage flag is a crude approximation.
+Assignment digest + integrity chain	KEEP_PROJECT_OWNED	Cryptographic integrity and audit trail are project infrastructure, not native CAI concerns.
+v0.2G — strategic_commitment.py
+Table
+Component	Classification	Rationale
+2-turn minimum / 4-turn maximum commitment window	DEFER_PENDING_EVIDENCE	This is the most scientifically novel part of v0.2G. Native CAI does batching per-turn; temporal commitment windows are not documented. However, the project's own calibration limits admit: "Observed Reikland turns 4-7 contain only one controlled field army, so multi-army exclusivity...are supported by synthetic adversarial fixtures rather than live campaign observation." Cannot classify without live multi-army observation.
+Anti-thrash retain (CONTINUE when fresh_score − old_score < 0.15)	DEFER_PENDING_EVIDENCE	Same as above. The 0.15 margin is a project-owned threshold with no empirical calibration against native behavior.
+Supersession by higher severity	REFRAME_AS_EVALUATOR_OR_ORACLE	Useful as an oracle to ask: "Did native CAI correctly reprioritize when a critical threat emerged?" Should not preempt native decision-making.
+Continuity reset on turn gaps	KEEP_PROJECT_OWNED	State-machine hygiene for the project's own shadow pipeline.
+Event logging (START, CANCEL, SUPERSEDE, etc.)	KEEP_PROJECT_OWNED	Audit infrastructure. Scientifically valuable for comparing against native CAI state transitions if those ever become observable.
+v0.2H — strategic_feasibility.py
+Table
+Component	Classification	Rationale
+Documented query catalog (DOCUMENTED_QUERY_CATALOG)	KEEP_PROJECT_OWNED	This is a modding-community documentation artifact, not a native CAI capability claim. It catalogs what the Lua scripting API purportedly exposes. Valuable as reference.
+Query plan generation from assignment	KEEP_PROJECT_OWNED	Systematic derivation of which queries would be relevant to a given shadow assignment. This is a valid scientific instrument.
+Prohibited mutation surface enumeration	KEEP_PROJECT_OWNED	Critical for authority boundary enforcement.
+Observation packet template + adjudication	KEEP_PROJECT_OWNED	Read-only certification protocol. This is the core value of v0.2H: it defines exactly what evidence would be needed to promote a query from DOCUMENTED to OBSERVED.
+Target boundary flags (concrete_attack_target_promoted = False)	KEEP_PROJECT_OWNED	Explicit non-promotion guardrails are essential for scientific rigor.
+Feasibility plan digest chain	KEEP_PROJECT_OWNED	Integrity infrastructure.
+5. WHAT SHOULD NEVER BECOME AN APPLICATION CONTROLLER WITHOUT FALSIFYING NATIVE CAI FIRST
+The Euclidean assignment scorer (_candidate_record).
+Native CAI already measures distance in turns with stance-aware movement extends. The project's hypot(dx, dy) / movement_points is strictly less informed than native distance scaling. To make this a controller, you would need to prove that native distance scaling is broken in a way that Euclidean geometry fixes — which is implausible on its face.
+The severity-first greedy solver.
+Native CAI has task generators → batching → allocation. The project's greedy solver ignores native task batching, native priority randomization, native personality weights, and native budget constraints. It cannot be justified as a controller without first demonstrating that native allocation systematically fails on observable metrics (idle armies, misallocated defenses, etc.).
+Recovery protection as an assignment gate.
+If native CAI already excludes recovering armies from task allocation (highly likely given the query system's mobile-asset filtering), then project-level recovery gating is redundant. It should remain an evaluator that checks whether native CAI respects recovery.
+The reserve floor.
+Native CAI has force-distribution managers and budget behaviors. There is no evidence that native CAI needs a hard reserve floor. Making this a controller would arbitrarily constrain native behavior without falsification.
+Any mutation surface (cm:move_character, cm:attack, etc.).
+The project correctly prohibits these. They should remain prohibited unless the entire architecture shifts to a replacement model (native CAI fully disabled), which the brief explicitly rejects: "prefer native WH3 capabilities and bounded correction before replacement."
+6. WHAT REMAINS SCIENTIFICALLY USEFUL AS AN EVALUATOR
+A. v0.2G as a "Shadow Oracle" for Native CAI
+Even though v0.2G should not control assignment, it is valuable as an independent evaluator:
+Table
+Evaluator Mode	Method
+Allocation Divergence Detector	Run v0.2G shadow assignment alongside native CAI. Where native assigns army A to task X but v0.2G assigns army B, flag for review. High divergence may indicate native bug (e.g., agent-triggered defensive overreaction) or project model error.
+Reserve Adequacy Auditor	Use v0.2G's reserve floor as a threshold check. If native CAI leaves fewer than N healthy armies uncommitted, flag. Do not override.
+Recovery Respect Monitor	Use v0.2G's recovery protection to audit whether native CAI is sending depleted armies into offensive tasks. CA's own fixes show this was a real native bug (agent queries).
+Critical Coverage Metric	critical_force_assignment_coverage is a useful scalar for evaluating whether native CAI is responding adequately to CRITICAL-tier threats.
+B. v0.2H as a Diagnostic / Certification Boundary
+v0.2H is the most scientifically defensible layer of the entire chain. Its value is negative capability — it defines what the project does not know:
+Query Surface Documentation — catalogs what the Lua API purportedly exposes, distinguishing DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD from OBSERVED.
+Authority Firewall — explicit enumeration of prohibited mutations keeps the project honest.
+Observation Protocol — build_observation_packet_template() + adjudicate_campaign_strategic_feasibility_observation() defines the exact evidentiary standard needed to promote a capability claim.
+Target Boundary Discipline — concrete_attack_target_promoted = False, faction_centroid_is_attack_target = False prevent the common modding failure mode of conflating "can reach point" with "can attack settlement."
+Even if v0.2G is entirely discarded from the application path, v0.2H remains valuable as the read-only envelope that would certify whether any future bounded correction (e.g., a stance suggestion, a movement hint) is actually feasible before being offered to native CAI.
+7. MINIMAL ABLATION TEST
+To determine which layers are actually adding information beyond native CAI, run the following ablation:
+Test 1: Native-Only Baseline
+Observe native CAI behavior for 20 turns with one controlled faction.
+Record: task assignments, army movements, stance changes, idle turns.
+Test 2: Shadow-Only (v0.2G output, no application)
+Run v0.2G + v0.2F + v0.2E pipeline on the same scenarios.
+Record: shadow assignments, candidate rankings, unfilled priorities.
+Test 3: Divergence Analysis
+For each turn, compare Test 1 vs Test 2.
+Metrics:
+Assignment agreement rate — same army → same target.
+Severity agreement — does native prioritize CRITICAL when v0.2G does?
+Reserve divergence — does native leave a reserve when v0.2G demands one?
+Recovery violation rate — does native assign recovering armies to non-critical tasks?
+Test 4: Feasibility Gate (v0.2H)
+For each shadow assignment where Test 1 and Test 2 disagree, run v0.2H query plan.
+Determine: was the native assignment feasible per v0.2H's query catalog? Was the shadow assignment feasible?
+If native is feasible and shadow is not → shadow is wrong.
+If shadow is feasible and native is not → potential native bug (flag for CA or mod fix).
+Test 5: Temporal Commitment Calibration (v0.2G temporal)
+With multi-army scenarios (synthetic or observed), measure native CAI's actual plan persistence.
+Compare against v0.2G's 2/4-turn windows.
+If native persistence is ~2–4 turns → v0.2G is descriptive, not prescriptive.
+If native persistence is wildly different → v0.2G's windows are project fiction.
+Decision rule: If Test 3 shows >80% agreement on critical priorities and Test 5 shows native persistence within ±1 turn of project windows, then v0.2G's assignment and commitment layers should be reframed as evaluators only. If agreement is <50%, there may be a genuine native CAI gap worth investigating — but even then, the fix should be native-first (table edits, personality tweaks, budget adjustments) before project-owned controllers.
+8. FORCE YOURSELF TO BE WRONG
+This section is mandatory per the prompt. I must argue against my own conclusions.
+Hypothesis: Maybe v0.2G's Euclidean assignment is better than native CAI.
+Argument: CA's own patch notes admit that native CAI had fundamental bugs — agents incorrectly triggering defensive tasks, batching rules too loose, armies getting "stuck" in core provinces due to distance scaling.  
+If native CAI is demonstrably buggy, a simpler, auditable Euclidean allocator might actually be more reliable than the opaque native system. The project explicitly avoids "invisible cheating and arbitrary anti-player targeting" — native CAI may be doing exactly that via its undocumented BDI randomization and personality tables. A project-owned allocator with explicit weights (0.50 proximity, 0.25 replenishment, 0.20 strength, 0.05 coverage) is explainable, whereas native CAI is a black box.
+Rebuttal to self: This is the "rewrite the engine because the engine has bugs" fallacy. CA fixed the agent-query bug and the batching bug in official patches. The "stuck army" problem was addressed by dynamic distance scaling. The correct response to native bugs is bounded correction (e.g., a mod that adjusts VALUE_ANALYSIS_TIME_HORIZON or distance-scaling tables) or reporting to CA, not replacing the entire allocator with a geometrically inferior one. The project's own brief says "prefer native WH3 capabilities and bounded correction before replacement."
+Hypothesis: Maybe v0.2H's read-only envelope is too conservative and prevents useful action.
+Argument: The project enumerates PROHIBITED_MUTATION_SURFACES including cm:move_character and cm:attack. But these are standard modding tools. Many successful WH3 mods use cm:move_character for scripted events, quest battles, and AI overrides. By prohibiting all mutations, v0.2H may be preventing the project from ever becoming a functional mod. The "NO_ORDERS" authority is a self-imposed paralysis.
+Rebuttal to self: The brief explicitly states this is "personal single-player-first" and "application authority PROHIBITED." The prohibition is a feature, not a bug. It forces the project to either (a) find native-first solutions, or (b) accumulate enough evidence that a specific mutation is safe and necessary. v0.2H's conservatism is exactly what prevents the project from becoming an unmaintainable "move every army via script" lag-fest. The PROHIBITED_MUTATION_SURFACES list should remain.
+Hypothesis: Maybe the 2/4-turn commitment window is a genuine improvement over native per-turn batching.
+Argument: Native CAI batches tasks every turn with no memory. This causes thrashing — an army might be assigned to defend Region A on Turn 1, then reassigned to Region B on Turn 2, then back to A on Turn 3, never actually arriving anywhere. v0.2G's commitment window mimics human-like planning persistence and could reduce idle thrashing.
+Rebuttal to self: This is plausible but unverified. The project's own calibration limits admit: "Observed Reikland turns 4-7 contain only one controlled field army, so multi-army exclusivity...are supported by synthetic adversarial fixtures rather than live campaign observation." Without empirical evidence that native CAI thrashes at a rate that a 2/4-turn window would fix, this is hypothesis, not engineering. The minimal ablation test (Test 5) is required before this can be promoted.
+Hypothesis: Maybe native CAI's "distance in turns" is worse than Euclidean distance for certain factions.
+Argument: CA's distance scaling uses a minimum priority floor at 4–8 turns. For factions with tunneling (Dwarfs, Skaven) or worldroots (Wood Elves), the native "turns" calculation may fail to account for stance shortcuts, causing the AI to underestimate proximity. The project's Euclidean distance divided by base movement might accidentally be more accurate for stance-heavy factions because it doesn't apply CA's conservative floor.
+Rebuttal to self: This is backwards. CA's system explicitly takes stances into account: "takes into account movement extends, and where appropriate the usage of stances like tunneling/forced march."  The project's Euclidean distance uses base movement points (max(movement, 1.0)) with no stance modifier. It is less accurate for tunneling factions, not more. If anything, the project should be querying POSITION_REACHABLE_THIS_TURN_IN_STANCE (v0.2H's documented query #8) rather than using Euclidean ETA.
+9. SUMMARY TABLE
+Table
+Layer	Lines	Verdict
+strategic_assignment.py (v0.2G)	572	Mostly REMOVE/REFRAME. The greedy Euclidean allocator duplicates native task allocation with strictly less information. Recovery protection, reserve floor, and candidate rankings are valuable as evaluators/oracles but should not override native CAI.
+strategic_commitment.py (v0.2G)	316	DEFER/REFRAME. The 2/4-turn commitment window is scientifically interesting but uncalibrated. Event logging is valuable audit infrastructure.
+strategic_feasibility.py (v0.2H)	591	KEEP. This is the project's most defensible layer. It provides documentation discipline, authority boundaries, observation protocols, and negative capability. It should remain read-only and serve as the certification gate for any future bounded corrections.
+Bottom line: v0.2G reconstructs strategic responsibilities that WH3's native CAI already owns via task generation, batching, allocation, query/influence systems, and stance-aware distance scaling. v0.2G's geometric assignment is less informed than the native allocator. v0.2H is valuable as a diagnostic/certification boundary even if native path/action execution remains authoritative. The project's path forward should be: native-first bounded corrections, v0.2G reframed as evaluator/oracle, v0.2H kept as the read-only feasibility envelope.

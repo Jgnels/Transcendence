@@ -1,0 +1,273 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "case_count": 8,
+  "cases": [
+    {
+      "case_id": "coherent_visible_rival_is_separate_from_front_coverage",
+      "errors": [],
+      "passed": true,
+      "result_digest": "d0f2b12df4169312c1a4dc4d4fda92522857501ebb0529b71afe0f259e883943",
+      "semantic_metrics": {
+        "coherent_rival_count": 1,
+        "front_states": [
+          "CONTESTED"
+        ],
+        "metrics": {
+          "at_war_faction_count": 1,
+          "colocated_same_faction_pressure_front_count": 1,
+          "controlled_army_count": 1,
+          "controlled_recovery_army_count": 0,
+          "controlled_recovery_strength_fraction": 0.0,
+          "controlled_region_count": 1,
+          "covered_threatened_front_count": 1,
+          "dominant_visible_hostile_army_share": 1.0,
+          "exposed_front_count": 0,
+          "front_coverage_ratio": 1.0,
+          "observed_hostile_region_count": 2,
+          "observed_hostile_to_controlled_region_value_ratio": 2.5,
+          "threatened_front_count": 1,
+          "visible_hostile_army_concentration_hhi": 1.0,
+          "visible_hostile_army_count": 2,
+          "visible_hostile_to_controlled_army_ratio": 1.8
+        },
+        "pressure_class": "COVERED_VISIBLE_FRONT_PRESSURE",
+        "rival_structure": "COHERENT_VISIBLE_RIVAL_CANDIDATE"
+      }
+    },
+    {
+      "case_id": "three_way_fragmentation_is_not_rewarded_as_coherence",
+      "errors": [],
+      "passed": true,
+      "result_digest": "219cb2507ab3152da58718b2618495cc45b07b55837f736ca0444b8793749803",
+      "semantic_metrics": {
+        "coherent_rival_count": 0,
+        "front_states": [
+          "CONTESTED"
+        ],
+        "metrics": {
+          "at_war_faction_count": 3,
+          "colocated_same_faction_pressure_front_count": 0,
+          "controlled_army_count": 1,
+          "controlled_recovery_army_count": 0,
+          "controlled_recovery_strength_fraction": 0.0,
+          "controlled_region_count": 1,
+          "covered_threatened_front_count": 1,
+          "dominant_visible_hostile_army_share": 0.333333,
+          "exposed_front_count": 0,
+          "front_coverage_ratio": 1.0,
+          "observed_hostile_region_count": 3,
+          "observed_hostile_to_controlled_region_value_ratio": 3.0,
+          "threatened_front_count": 1,
+          "visible_hostile_army_concentration_hhi": 0.333333,
+          "visible_hostile_army_count": 3,
+          "visible_hostile_to_controlled_army_ratio": 1.5
+        },
+        "pressure_class": "COVERED_VISIBLE_FRONT_PRESSURE",
+        "rival_structure": "FRAGMENTED_VISIBLE_PRESSURE"
+      }
+    },
+    {
+      "case_id": "visible_pressure_without_controlled_field_force_is_exposed",
+      "errors": [],
+      "passed": true,
+      "result_digest": "ee7802450e0d8064bd49aea7b6a01048029b7f841a344b910ec81be32f7c1407",
+      "semantic_metrics": {
+        "coherent_rival_count": 0,
+        "front_states": [
+          "EXPOSED"
+        ],
+        "metrics": {
+          "at_war_faction_count": 1,
+          "colocated_same_faction_pressure_front_count": 0,
+          "controlled_army_count": 0,
+          "controlled_recovery_army_count": 0,
+          "controlled_recovery_strength_fraction": null,
+          "controlled_region_count": 1,
+          "covered_threatened_front_count": 0,
+          "dominant_visible_hostile_army_share": 1.0,
+          "exposed_front_count": 1,
+          "front_coverage_ratio": 0.0,
+          "observed_hostile_region_count": 1,
+          "observed_hostile_to_controlled_region_value_ratio": 1.0,
+          "threatened_front_count": 1,
+          "visible_hostile_army_concentration_hhi": 1.0,
+          "visible_hostile_army_count": 1,
+          "visible_hostile_to_controlled_army_ratio": null
+        },
+        "pressure_class": "LOCAL_CRISIS_OR_EXPOSED_FRONT",
+        "rival_structure": "SINGLE_OR_PARTIAL_VISIBLE_RIVAL"
+      }
+    },
+    {
+      "case_id": "hidden_hostile_force_does_not_create_visible_pressure",
+      "errors": [],
+      "passed": true,
+      "result_digest": "6ab20432bad9159cc0361ab3368953330f98635c4ae6c082f848de5f2e82abe5",
+      "semantic_metrics": {
+        "coherent_rival_count": 0,
+        "front_states": [
+          "QUIET"
+        ],
+        "metrics": {
+          "at_war_faction_count": 1,
+          "colocated_same_faction_pressure_front_count": 0,
+          "controlled_army_count": 1,
+          "controlled_recovery_army_count": 0,
+          "controlled_recovery_strength_fraction": 0.0,
+          "controlled_region_count": 1,
+          "covered_threatened_front_count": 0,
+          "dominant_visible_hostile_army_share": 0.0,
+          "exposed_front_count": 0,
+          "front_coverage_ratio": null,
+          "observed_hostile_region_count": 0,
+          "observed_hostile_to_controlled_region_value_ratio": 0.0,
+          "threatened_front_count": 0,
+          "visible_hostile_army_concentration_hhi": 0,
+          "visible_hostile_army_count": 0,
+          "visible_hostile_to_controlled_army_ratio": 0.0
+        },
+        "pressure_class": "LOW_VISIBLE_PRESSURE",
+        "rival_structure": "NO_VISIBLE_HOSTILE_ASSETS"
+      }
+    },
+    {
+      "case_id": "siege_state_is_crisis_without_inventing_enemy_identity",
+      "errors": [],
+      "passed": true,
+      "result_digest": "238ed88a1d6ea9a9a9f14f5238ebe0ef0b0af0034dbb875f82db22a1fdc519c5",
+      "semantic_metrics": {
+        "coherent_rival_count": 0,
+        "front_states": [
+          "SIEGED_EXPOSED"
+        ],
+        "metrics": {
+          "at_war_faction_count": 1,
+          "colocated_same_faction_pressure_front_count": 0,
+          "controlled_army_count": 0,
+          "controlled_recovery_army_count": 0,
+          "controlled_recovery_strength_fraction": null,
+          "controlled_region_count": 1,
+          "covered_threatened_front_count": 0,
+          "dominant_visible_hostile_army_share": 0.0,
+          "exposed_front_count": 1,
+          "front_coverage_ratio": 0.0,
+          "observed_hostile_region_count": 0,
+          "observed_hostile_to_controlled_region_value_ratio": 0.0,
+          "threatened_front_count": 1,
+          "visible_hostile_army_concentration_hhi": 0,
+          "visible_hostile_army_count": 0,
+          "visible_hostile_to_controlled_army_ratio": null
+        },
+        "pressure_class": "LOCAL_CRISIS_OR_EXPOSED_FRONT",
+        "rival_structure": "NO_VISIBLE_HOSTILE_ASSETS"
+      }
+    },
+    {
+      "case_id": "recovery_load_is_reported_without_claiming_recovery_capacity",
+      "errors": [],
+      "passed": true,
+      "result_digest": "45845fd3da2c497621ad1b81d33894167c30b12ebd372b502c5feb1a281046ac",
+      "semantic_metrics": {
+        "coherent_rival_count": 0,
+        "front_states": [
+          "QUIET"
+        ],
+        "metrics": {
+          "at_war_faction_count": 1,
+          "colocated_same_faction_pressure_front_count": 0,
+          "controlled_army_count": 1,
+          "controlled_recovery_army_count": 1,
+          "controlled_recovery_strength_fraction": 1.0,
+          "controlled_region_count": 1,
+          "covered_threatened_front_count": 0,
+          "dominant_visible_hostile_army_share": 1.0,
+          "exposed_front_count": 0,
+          "front_coverage_ratio": null,
+          "observed_hostile_region_count": 1,
+          "observed_hostile_to_controlled_region_value_ratio": 1.0,
+          "threatened_front_count": 0,
+          "visible_hostile_army_concentration_hhi": 1.0,
+          "visible_hostile_army_count": 1,
+          "visible_hostile_to_controlled_army_ratio": 1.0
+        },
+        "pressure_class": "VISIBLE_RIVAL_WITHOUT_NEAR_FRONT_PRESSURE",
+        "rival_structure": "SINGLE_OR_PARTIAL_VISIBLE_RIVAL"
+      }
+    },
+    {
+      "case_id": "dominant_single_rival_plus_minor_enemy_is_not_fragmented_dogpile",
+      "errors": [],
+      "passed": true,
+      "result_digest": "442819a08114fb0e2a77a69ee84459043e0ea5d5696648f95ff45eb6748c1a32",
+      "semantic_metrics": {
+        "coherent_rival_count": 0,
+        "front_states": [
+          "CONTESTED"
+        ],
+        "metrics": {
+          "at_war_faction_count": 2,
+          "colocated_same_faction_pressure_front_count": 0,
+          "controlled_army_count": 1,
+          "controlled_recovery_army_count": 0,
+          "controlled_recovery_strength_fraction": 0.0,
+          "controlled_region_count": 1,
+          "covered_threatened_front_count": 1,
+          "dominant_visible_hostile_army_share": 0.9,
+          "exposed_front_count": 0,
+          "front_coverage_ratio": 1.0,
+          "observed_hostile_region_count": 2,
+          "observed_hostile_to_controlled_region_value_ratio": 2.0,
+          "threatened_front_count": 1,
+          "visible_hostile_army_concentration_hhi": 0.82,
+          "visible_hostile_army_count": 2,
+          "visible_hostile_to_controlled_army_ratio": 1.0
+        },
+        "pressure_class": "COVERED_VISIBLE_FRONT_PRESSURE",
+        "rival_structure": "SINGLE_OR_PARTIAL_VISIBLE_RIVAL"
+      }
+    },
+    {
+      "case_id": "private_path_fields_fail_closed",
+      "errors": [],
+      "passed": true,
+      "result_digest": null,
+      "semantic_metrics": null
+    }
+  ],
+  "contract": "CAMPAIGN_STRATEGIC_CHALLENGE_ADVERSARIAL_MATRIX_V1",
+  "metamorphic_check_count": 5,
+  "metamorphic_checks": [
+    {
+      "check_id": "input_order",
+      "passed": true,
+      "semantic_digest": "435618291d0fabdf7a212483035b20992c2925723a7728d71f38d69f5b270841"
+    },
+    {
+      "check_id": "coordinate_translation",
+      "passed": true,
+      "semantic_digest": "435618291d0fabdf7a212483035b20992c2925723a7728d71f38d69f5b270841"
+    },
+    {
+      "check_id": "uniform_strength_scale",
+      "passed": true,
+      "semantic_digest": "435618291d0fabdf7a212483035b20992c2925723a7728d71f38d69f5b270841"
+    },
+    {
+      "check_id": "hidden_enemy_injection",
+      "passed": true,
+      "semantic_digest": "435618291d0fabdf7a212483035b20992c2925723a7728d71f38d69f5b270841"
+    },
+    {
+      "check_id": "player_label_to_npc_label",
+      "passed": true,
+      "semantic_digest": "435618291d0fabdf7a212483035b20992c2925723a7728d71f38d69f5b270841"
+    }
+  ],
+  "metamorphic_pass_count": 5,
+  "passed_case_count": 8,
+  "result": "PASS",
+  "result_digest": "4acfa02699cd9f78eace303889d2b7bba274b82b65582b2ea21f3cd70690e3df",
+  "schema_version": 1,
+  "suite_id": "campaign_challenge_adversarial_matrix_v0.2E"
+}

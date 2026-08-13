@@ -1,0 +1,1314 @@
+{
+  "authority": "NO_ORDERS",
+  "evaluations": [
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 6,
+      "local_preservation_priorities": [],
+      "posture": "DEPLOYMENT_AND_INFORMATION",
+      "result_digest": "fbe0875443a73177a3842121edf533d91051932bb35b673b09657589eaeb1ffb",
+      "schema_version": 1,
+      "slice_id": "deployment_complete",
+      "time_ms": 128800,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1037",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1019",
+          "target_score": 2.25,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1020",
+          "target_score": 2.25,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 2.25,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 2,
+      "local_preservation_priorities": [],
+      "posture": "RANGED_CONTACT",
+      "result_digest": "a5fc05a8720aa6298c0a86d5445f04b539b8fb76451dbac627673e6e7027b540",
+      "schema_version": 1,
+      "slice_id": "first_contact",
+      "time_ms": 141100,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "commander",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1018",
+          "target_score": 4.5,
+          "unit_type": "wh_main_emp_cha_general_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1037",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1019",
+          "target_score": 2.25,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 4,
+      "local_preservation_priorities": [],
+      "posture": "COMBINED_ENGAGEMENT",
+      "result_digest": "a186b7b0b6a9195ba7fa9c8e06cb64dfadd8b01aa3fe52b3144c94af42184d1d",
+      "schema_version": 1,
+      "slice_id": "local_melee_commitment",
+      "time_ms": 291100,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "commander",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1018",
+          "target_score": 4.5,
+          "unit_type": "wh_main_emp_cha_general_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 3.675,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "cavalry",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1029",
+          "target_score": 3.15,
+          "unit_type": "wh_main_emp_cav_empire_knights"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1031",
+          "target_score": 2.25,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.073052,
+          "model_fraction": 0.159091,
+          "preservation_score": 12.022034,
+          "priority_type": "EXTRACT_OR_SCREEN_ARTILLERY",
+          "reasons": [
+            "artillery combat power at risk",
+            "missile pressure",
+            "routing"
+          ],
+          "role": "artillery",
+          "stable_unit_id": "1:u1015",
+          "unit_type": "wh_main_emp_art_mortar"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.322994,
+          "model_fraction": 0.322994,
+          "preservation_score": 10.40096,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold",
+            "melee contact",
+            "wavering"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.51954,
+          "model_fraction": 0.833333,
+          "preservation_score": 5.725279,
+          "priority_type": "DISENGAGE_OR_PRESERVE_CAVALRY",
+          "reasons": [
+            "cavalry attrition/fatigue threshold",
+            "melee contact",
+            "missile pressure"
+          ],
+          "role": "cavalry",
+          "stable_unit_id": "1:u1014",
+          "unit_type": "wh_main_emp_cav_reiksguard"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.563768,
+          "model_fraction": 0.855556,
+          "preservation_score": 3.830116,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1013",
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.544283,
+          "model_fraction": 0.888889,
+          "preservation_score": 3.465437,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1009",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.6781,
+          "model_fraction": 0.833333,
+          "preservation_score": 2.800376,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1012",
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.839453,
+          "model_fraction": 0.988889,
+          "preservation_score": 2.530453,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "melee contact",
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1011",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.969082,
+          "model_fraction": 1.0,
+          "preservation_score": 1.131405,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "missile pressure",
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        }
+      ],
+      "posture": "CRISIS_STABILIZATION",
+      "result_digest": "6c7a80edd1c89ec8449d3fc991ae6e050ac3f7095e4a436f4c581d8c882355db",
+      "schema_version": 1,
+      "slice_id": "local_crisis",
+      "time_ms": 402100,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "commander",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1018",
+          "target_score": 3.225665,
+          "unit_type": "wh_main_emp_cha_general_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 3.140365,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "cavalry",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1029",
+          "target_score": 3.001521,
+          "unit_type": "wh_main_emp_cav_empire_knights"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1033",
+          "target_score": 2.75,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1032",
+          "target_score": 2.681472,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1037",
+          "target_score": 2.659098,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.068182,
+          "model_fraction": 0.136364,
+          "preservation_score": 15.242613,
+          "priority_type": "EXTRACT_OR_SCREEN_ARTILLERY",
+          "reasons": [
+            "artillery combat power at risk",
+            "routing",
+            "shattered"
+          ],
+          "role": "artillery",
+          "stable_unit_id": "1:u1015",
+          "unit_type": "wh_main_emp_art_mortar"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.118966,
+          "model_fraction": 0.3,
+          "preservation_score": 11.598118,
+          "priority_type": "DISENGAGE_OR_PRESERVE_CAVALRY",
+          "reasons": [
+            "cavalry attrition/fatigue threshold",
+            "melee contact",
+            "routing"
+          ],
+          "role": "cavalry",
+          "stable_unit_id": "1:u1014",
+          "unit_type": "wh_main_emp_cav_reiksguard"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.159515,
+          "model_fraction": 0.159515,
+          "preservation_score": 9.003953,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.169298,
+          "model_fraction": 0.169298,
+          "preservation_score": 7.579599,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold",
+            "melee contact"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.34525,
+          "model_fraction": 0.588889,
+          "preservation_score": 7.30624,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "missile pressure",
+            "ranged asset exposed",
+            "routing"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.112215,
+          "model_fraction": 0.291667,
+          "preservation_score": 5.696977,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "melee contact"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.259211,
+          "model_fraction": 0.466667,
+          "preservation_score": 4.981755,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1008",
+          "unit_type": "wh2_dlc13_emp_inf_greatswords_ror_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.271498,
+          "model_fraction": 0.35,
+          "preservation_score": 4.692123,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "missile pressure"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        }
+      ],
+      "posture": "CRISIS_STABILIZATION",
+      "result_digest": "c8cb3e6ea91be33357629c97c56e5018ea16b7613a4bc832e767650ac1006cfd",
+      "schema_version": 1,
+      "slice_id": "enemy_break",
+      "time_ms": 531100,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.675,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 2.856565,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 2.369414,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1033",
+          "target_score": 2.337951,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1020",
+          "target_score": 2.108146,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 2.007493,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 1.845,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1024",
+          "target_score": 1.537187,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.130702,
+          "model_fraction": 0.130702,
+          "preservation_score": 12.339651,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold",
+            "routing"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.066324,
+          "model_fraction": 0.183333,
+          "preservation_score": 10.065446,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "melee contact",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.159515,
+          "model_fraction": 0.159515,
+          "preservation_score": 9.003953,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.321417,
+          "model_fraction": 0.544444,
+          "preservation_score": 7.437187,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "missile pressure",
+            "ranged asset exposed",
+            "routing"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.157018,
+          "model_fraction": 0.366667,
+          "preservation_score": 7.062924,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "missile pressure"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1008",
+          "unit_type": "wh2_dlc13_emp_inf_greatswords_ror_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.116379,
+          "model_fraction": 0.3,
+          "preservation_score": 7.032229,
+          "priority_type": "DISENGAGE_OR_PRESERVE_CAVALRY",
+          "reasons": [
+            "cavalry attrition/fatigue threshold"
+          ],
+          "role": "cavalry",
+          "stable_unit_id": "1:u1014",
+          "unit_type": "wh_main_emp_cav_reiksguard"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.28901,
+          "model_fraction": 0.358333,
+          "preservation_score": 5.493067,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "melee contact"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1004",
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.256401,
+          "model_fraction": 0.35,
+          "preservation_score": 4.765928,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "missile pressure"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        }
+      ],
+      "posture": "TERMINATE_WITH_PRESERVATION",
+      "result_digest": "b98d4199f228395a6fd7ae21617d607247152197fb4eb7fc8ffcabac6d615acb",
+      "schema_version": 1,
+      "slice_id": "enemy_rout_majority",
+      "time_ms": 555100,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 3.592754,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1025",
+          "target_score": 2.401449,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1020",
+          "target_score": 2.08,
+          "unit_type": "wh_main_emp_inf_spearmen_1"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 1.869414,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 1.845,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1033",
+          "target_score": 1.59587,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1027",
+          "target_score": 1.526667,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": false,
+          "shattered": false,
+          "stable_unit_id": "2:u1035",
+          "target_score": 1.164915,
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.159515,
+          "model_fraction": 0.159515,
+          "preservation_score": 9.003953,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.046005,
+          "model_fraction": 0.125,
+          "preservation_score": 8.327463,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.12814,
+          "model_fraction": 0.275,
+          "preservation_score": 7.974927,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "missile pressure",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.130702,
+          "model_fraction": 0.130702,
+          "preservation_score": 7.074651,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.133172,
+          "model_fraction": 0.322222,
+          "preservation_score": 6.502643,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed",
+            "wavering"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1009",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.183454,
+          "model_fraction": 0.233333,
+          "preservation_score": 5.625344,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "wavering"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1004",
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.267472,
+          "model_fraction": 0.477778,
+          "preservation_score": 4.070622,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        }
+      ],
+      "posture": "TERMINATE_WITH_PRESERVATION",
+      "result_digest": "b4d3eb88269ca1d4ce100277408b787c567727ccc2303a224ce740c30074c651",
+      "schema_version": 1,
+      "slice_id": "victory_countdown",
+      "time_ms": 730700,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": false,
+          "stable_unit_id": "2:u1026",
+          "target_score": 2.605707,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": false,
+          "stable_unit_id": "2:u1021",
+          "target_score": 1.402061,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": false,
+          "stable_unit_id": "2:u1028",
+          "target_score": 1.38375,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1025",
+          "target_score": 1.231938,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1024",
+          "target_score": 0.939694,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1037",
+          "target_score": 0.710797,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1027",
+          "target_score": 0.700109,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1022",
+          "target_score": 0.392437,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    },
+    {
+      "authority": "OFFLINE_SHADOW_EVALUATION_ONLY",
+      "command_budget": {
+        "maximum_priority_changes_this_cycle": 6,
+        "reason": "bounded advisory workload; do not imitate raw human click density"
+      },
+      "constraints": [
+        "No order is emitted.",
+        "No hidden enemy identity or state is consumed.",
+        "A target score is a comparative hypothesis, not a proven optimal target.",
+        "Preservation and engagement priorities are advisory and deterministic."
+      ],
+      "evidence_status": "HYPOTHESIS",
+      "hidden_enemy_units": 0,
+      "local_preservation_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.159515,
+          "model_fraction": 0.159515,
+          "preservation_score": 9.003953,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1001",
+          "unit_type": "wh_main_emp_cha_karl_franz_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.046005,
+          "model_fraction": 0.125,
+          "preservation_score": 8.327463,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1003",
+          "unit_type": "wh_main_emp_inf_halberdiers"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.12814,
+          "model_fraction": 0.275,
+          "preservation_score": 7.974927,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "missile pressure",
+            "routing"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1005",
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.130702,
+          "model_fraction": 0.130702,
+          "preservation_score": 7.074651,
+          "priority_type": "PRESERVE_CHARACTER",
+          "reasons": [
+            "character survival threshold"
+          ],
+          "role": "commander",
+          "stable_unit_id": "1:u1002",
+          "unit_type": "wh_main_emp_cha_wizard_fire_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.133172,
+          "model_fraction": 0.322222,
+          "preservation_score": 6.502643,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed",
+            "wavering"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1009",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.183454,
+          "model_fraction": 0.233333,
+          "preservation_score": 5.625344,
+          "priority_type": "STABILIZE_OR_RELIEVE_FRONTLINE",
+          "reasons": [
+            "frontline collapse risk",
+            "wavering"
+          ],
+          "role": "frontline",
+          "stable_unit_id": "1:u1004",
+          "unit_type": "wh_main_emp_inf_swordsmen"
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "hitpoints_fraction": 0.267472,
+          "model_fraction": 0.477778,
+          "preservation_score": 4.070622,
+          "priority_type": "PROTECT_OR_REPOSITION_RANGED",
+          "reasons": [
+            "ranged asset exposed"
+          ],
+          "role": "ranged",
+          "stable_unit_id": "1:u1010",
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        }
+      ],
+      "posture": "TERMINATE_WITH_PRESERVATION",
+      "result_digest": "3651282590dd82ad3f104925fc5de2d98593de22d7f34762c4ac083c7744a0bc",
+      "schema_version": 1,
+      "slice_id": "battle_complete",
+      "time_ms": 739600,
+      "visible_enemy_target_candidates": [
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1026",
+          "target_score": 2.605707,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1021",
+          "target_score": 1.402061,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1028",
+          "target_score": 1.38375,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1025",
+          "target_score": 1.231938,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1024",
+          "target_score": 0.939694,
+          "unit_type": "wh2_dlc13_emp_inf_archers_0"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1037",
+          "target_score": 0.710797,
+          "unit_type": "wh_main_emp_inf_crossbowmen"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "ranged",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1027",
+          "target_score": 0.700109,
+          "unit_type": "wh_main_emp_inf_handgunners"
+        },
+        {
+          "authority": "VISIBLE_TARGET_CANDIDATE_ONLY",
+          "role": "frontline",
+          "routing": true,
+          "shattered": true,
+          "stable_unit_id": "2:u1022",
+          "target_score": 0.392437,
+          "unit_type": "wh_main_emp_inf_spearmen_0"
+        }
+      ]
+    }
+  ],
+  "evidence_status": "HYPOTHESIS",
+  "fidelity_label": "DETERMINISTIC_OFFLINE_ADVISER_OVER_OBSERVED_TRACE",
+  "result_digest": "1d5892cf47c900e1bbe1eeae09466a28500abd3a735e1f332776f42f82606742",
+  "schema_version": 1,
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "tier": "4R-SHADOW",
+  "trace_corpus_id": "battle4_eilhart_trace_slices_v1",
+  "warnings": [
+    "This evaluator has not controlled or influenced WH3.",
+    "The owner trace is not a gold policy label.",
+    "Scores are designed for falsification and regression, not tactical-quality claims."
+  ]
+}

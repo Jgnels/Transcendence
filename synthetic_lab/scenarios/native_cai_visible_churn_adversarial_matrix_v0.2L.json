@@ -1,0 +1,1172 @@
+{
+  "cases": [
+    {
+      "case_id": "repeated_clean_region_oscillation",
+      "expected": {
+        "hysteresis_unavailable": true,
+        "metric_equals": {
+          "eligible_stable_context_region_windows": 4,
+          "oscillation_candidate_count": 4,
+          "repeated_oscillation_cluster_count": 1
+        },
+        "no_application_authority": true,
+        "status": "PREREGISTERED_VISIBLE_CHURN_SIGNAL_PRESENT_REQUIRES_CAUSAL_REVIEW"
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 5,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 6,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 7,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "single_aba_is_candidate_not_primary_signal",
+      "expected": {
+        "hysteresis_unavailable": true,
+        "metric_equals": {
+          "eligible_stable_context_region_windows": 1,
+          "oscillation_candidate_count": 1,
+          "repeated_oscillation_cluster_count": 0
+        },
+        "status": "NO_REPEATED_SIGNAL_OBSERVED_NOT_PROOF_OF_NATIVE_HYSTERESIS"
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "one_direction_is_not_churn",
+      "expected": {
+        "metric_equals": {
+          "eligible_non_aba_pattern": 1,
+          "oscillation_candidate_count": 0
+        },
+        "status": "NO_REPEATED_SIGNAL_OBSERVED_NOT_PROOF_OF_NATIVE_HYSTERESIS"
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -6,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -9,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "observed_context_motion_excludes_window",
+      "expected": {
+        "metric_equals": {
+          "excluded_observed_context_change": 1,
+          "oscillation_candidate_count": 0
+        },
+        "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              },
+              {
+                "faction": "human",
+                "id": "human1",
+                "x": 0,
+                "y": 10
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              },
+              {
+                "faction": "human",
+                "id": "human1",
+                "x": 1,
+                "y": 10
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              },
+              {
+                "faction": "human",
+                "id": "human1",
+                "x": 1,
+                "y": 10
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              },
+              {
+                "faction": "human",
+                "id": "human1",
+                "x": 1,
+                "y": 10
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "turn_gap_excludes_window",
+      "expected": {
+        "metric_equals": {
+          "excluded_nonconsecutive_turns": 1,
+          "oscillation_candidate_count": 0
+        },
+        "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 5,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "visibility_loss_right_censors_window",
+      "expected": {
+        "metric_equals": {
+          "excluded_visibility_censoring": 1,
+          "oscillation_candidate_count": 0
+        },
+        "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "ambiguous_anchor_approach_excluded",
+      "expected": {
+        "metric_equals": {
+          "oscillation_candidate_count": 0
+        },
+        "metric_min": {
+          "excluded_non_directional_interval": 1
+        },
+        "status": "INSUFFICIENT_ELIGIBLE_EXPOSURE"
+      },
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 3
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 6
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 9
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "privileged_foreign_visibility_rejected",
+      "expect_error": "NativeVisibleBehaviorError",
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "ALL_FACTION_FORCES",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "ai",
+        "observer_faction": "human"
+      }
+    },
+    {
+      "case_id": "self_observation_rejected",
+      "expect_error": "NativeVisibleBehaviorError",
+      "trace": {
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "frames": [
+          {
+            "turn": 1,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 2,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 3,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": 0,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          },
+          {
+            "turn": 4,
+            "visible_armies": [
+              {
+                "faction": "ai",
+                "id": "ai1",
+                "x": -3,
+                "y": 0
+              }
+            ],
+            "visible_regions": [
+              {
+                "id": "A",
+                "owner": "human",
+                "x": -10,
+                "y": 0
+              },
+              {
+                "id": "B",
+                "owner": "human",
+                "x": 10,
+                "y": 0
+              }
+            ]
+          }
+        ],
+        "observed_ai_faction": "human",
+        "observer_faction": "human"
+      }
+    }
+  ],
+  "contract": "NATIVE_CAI_VISIBLE_DIRECTIONAL_CHURN_ADVERSARIAL_SUITE_V1"
+}

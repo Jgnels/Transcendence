@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "profile_id": "SFO_ONLY_PLUS_READ_ONLY_PROBE",
+  "sfo": {"workshop_id": "2792731173", "pack_name": "@sfo_grimhammer_3.pack", "pack_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"},
+  "game": {"executable_name": "Warhammer3.exe", "executable_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+  "expected_probe": {
+    "canonical_pack_name": "transcendence_campaign_feasibility_probe.pack",
+    "pack_size_bytes": 1,
+    "pack_sha256": "PACK_HASH_PLACEHOLDER",
+    "gameplay_mutation": false,
+    "save_mutation": false
+  },
+  "authority": {"active_mod_list_modified": false, "save_modified": false, "orders_emitted": false}
+}

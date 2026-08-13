@@ -1,0 +1,526 @@
+{
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Schedule records are advisory and do not issue, accept, acknowledge, or execute WH3 orders.",
+    "Commitment and cooldown windows are project-owned control contracts, not measured travel or animation times.",
+    "Synthetic lifecycle success does not prove casualty reduction, tactical superiority, path feasibility, or player enjoyment.",
+    "Objective disappearance is observational resolution without causal attribution.",
+    "The bounded transition model predicts no coordinates, formations, casualties, or success probabilities."
+  ],
+  "metamorphic_checks": [
+    {
+      "check_id": "schedule_unit_order_independence",
+      "operation": "REVERSE_UNIT_ORDER",
+      "scenario_id": "minimum_commitment_retains_prior_actor"
+    },
+    {
+      "check_id": "schedule_assignment_record_order_independence",
+      "operation": "REVERSE_ASSIGNMENT_RECORD_ORDER",
+      "scenario_id": "reassignment_allowed_after_review"
+    },
+    {
+      "check_id": "schedule_coordinate_translation_invariance",
+      "offset_x": 700.0,
+      "offset_z": -450.0,
+      "operation": "TRANSLATE_ALL_POSITIONS",
+      "scenario_id": "stable_assignment_continues"
+    }
+  ],
+  "result_digest": "d6c34221a1abe64e8bfc86ef2e7f01cc03c0b8a704422cae84ca9ce95f299270",
+  "scenarios": [
+    {
+      "description": "A balanced observation with no advisory assignment must not manufacture temporal activity.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "balanced": [
+            "PLAN_STARTED"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [
+          "balanced"
+        ],
+        "required_active_plan_actor_by_step_and_objective": {},
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {
+          "balanced": "INITIAL_OBSERVATION"
+        },
+        "required_event_types_by_step": {}
+      },
+      "scenario_id": "balanced_state_starts_no_plan",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "balanced_contact_no_spurious_action",
+          "step_id": "balanced",
+          "time_offset_ms": 0
+        }
+      ]
+    },
+    {
+      "description": "The same canonical objective and actor persist inside the continuity horizon.",
+      "expectations": {
+        "forbidden_event_types_by_step": {},
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {
+          "repeat::CONTAIN_LOCAL_ROUT:BATTLE": "1:u1004",
+          "repeat::SELF:1:u1001": "1:u1001"
+        },
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {
+          "repeat": "WITHIN_BOUNDED_HORIZON",
+          "start": "INITIAL_OBSERVATION"
+        },
+        "required_event_types_by_step": {
+          "repeat": [
+            "PLAN_CONTINUED"
+          ],
+          "start": [
+            "PLAN_STARTED"
+          ]
+        }
+      },
+      "scenario_id": "stable_assignment_continues",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "repeat",
+          "time_offset_ms": 5000
+        }
+      ]
+    },
+    {
+      "description": "Later absence of an objective resolves the advisory lifecycle without crediting the proposal.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "resolved": [
+            "PLAN_CONTINUED"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [
+          "resolved"
+        ],
+        "required_active_plan_actor_by_step_and_objective": {},
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "resolved": [
+            "PLAN_RESOLVED_BY_OBSERVATION_NOT_ATTRIBUTED"
+          ]
+        }
+      },
+      "scenario_id": "objective_retirement_has_no_causal_credit",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "balanced_contact_no_spurious_action",
+          "step_id": "resolved",
+          "time_offset_ms": 10000
+        }
+      ]
+    },
+    {
+      "description": "A routing actor cancels its prior abstract plan instead of being treated as controllable.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "routing": [
+            "PLAN_CONTINUED"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {},
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "routing": [
+            "PLAN_CANCELLED_PRECONDITION_FAILED"
+          ]
+        }
+      },
+      "scenario_id": "actor_control_failure_cancels",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "ranged_rear_flank",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [
+            {
+              "fields": {
+                "idle": false,
+                "routing": true,
+                "wavering": false
+              },
+              "operation": "SET_UNIT_FIELDS",
+              "unit_id": "1:u1009"
+            }
+          ],
+          "source_baseline_scenario_id": "ranged_rear_flank",
+          "step_id": "routing",
+          "time_offset_ms": 2000
+        }
+      ]
+    },
+    {
+      "description": "A minor score change cannot thrash a still-legal responder during the minimum commitment window.",
+      "expectations": {
+        "forbidden_event_types_by_step": {},
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {
+          "score_shift::SELECTIVE_PURSUIT:BATTLE": "1:u1014"
+        },
+        "required_blocked_reasons_by_step": {
+          "score_shift": [
+            "MINIMUM_COMMITMENT_RETAINS_PRIOR_ACTOR"
+          ]
+        },
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "score_shift": [
+            "PLAN_RETAINED_MINIMUM_COMMITMENT"
+          ]
+        }
+      },
+      "scenario_id": "minimum_commitment_retains_prior_actor",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "clean_enemy_break",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [
+            {
+              "fields": {
+                "hitpoints_fraction": 0.8
+              },
+              "operation": "SET_UNIT_FIELDS",
+              "unit_id": "1:u1014"
+            }
+          ],
+          "source_baseline_scenario_id": "clean_enemy_break",
+          "step_id": "score_shift",
+          "time_offset_ms": 2000
+        }
+      ]
+    },
+    {
+      "description": "After minimum commitment, the current canonical responder may replace the prior actor.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "review": [
+            "PLAN_RETAINED_MINIMUM_COMMITMENT"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {
+          "review::SELECTIVE_PURSUIT:BATTLE": "1:u1013"
+        },
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "review": [
+            "PLAN_REASSIGNED_AFTER_REVIEW",
+            "PLAN_STARTED"
+          ]
+        }
+      },
+      "scenario_id": "reassignment_allowed_after_review",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "clean_enemy_break",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [
+            {
+              "fields": {
+                "hitpoints_fraction": 0.8
+              },
+              "operation": "SET_UNIT_FIELDS",
+              "unit_id": "1:u1014"
+            }
+          ],
+          "source_baseline_scenario_id": "clean_enemy_break",
+          "step_id": "review",
+          "time_offset_ms": 5000
+        }
+      ]
+    },
+    {
+      "description": "An actor becoming its own preservation subject supersedes a prior pursuit commitment.",
+      "expectations": {
+        "forbidden_event_types_by_step": {},
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {
+          "fatigued::SELECTIVE_PURSUIT:BATTLE": "1:u1013",
+          "fatigued::SELF:1:u1014": "1:u1014"
+        },
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "fatigued": [
+            "PLAN_SUPERSEDED_HIGHER_PRIORITY",
+            "PLAN_STARTED"
+          ]
+        }
+      },
+      "scenario_id": "self_protection_supersedes_pursuit",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "clean_enemy_break",
+          "step_id": "pursuit",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [
+            {
+              "fields": {
+                "fatigue": "threshold_tired"
+              },
+              "operation": "SET_UNIT_FIELDS",
+              "unit_id": "1:u1014"
+            }
+          ],
+          "source_baseline_scenario_id": "clean_enemy_break",
+          "step_id": "fatigued",
+          "time_offset_ms": 1000
+        }
+      ]
+    },
+    {
+      "description": "A noncritical action that disappears and immediately returns remains blocked through cooldown.",
+      "expectations": {
+        "forbidden_event_types_by_step": {},
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [
+          "returns"
+        ],
+        "required_active_plan_actor_by_step_and_objective": {},
+        "required_blocked_reasons_by_step": {
+          "returns": [
+            "SAME_ACTION_COOLDOWN"
+          ]
+        },
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "resolved": [
+            "PLAN_RESOLVED_BY_OBSERVATION_NOT_ATTRIBUTED"
+          ],
+          "returns": [
+            "PLAN_BLOCKED_COOLDOWN"
+          ]
+        }
+      },
+      "scenario_id": "same_action_cooldown_blocks_thrashing",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "ranged_rear_flank",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "balanced_contact_no_spurious_action",
+          "step_id": "resolved",
+          "time_offset_ms": 5000
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "ranged_rear_flank",
+          "step_id": "returns",
+          "time_offset_ms": 8000
+        }
+      ]
+    },
+    {
+      "description": "A later critical preservation objective may override a same-action cooldown explicitly.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "critical_return": [
+            "PLAN_BLOCKED_COOLDOWN"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {
+          "critical_return::SELF:1:u1001": "1:u1001"
+        },
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "critical_return": [
+            "PLAN_COOLDOWN_OVERRIDDEN_CRITICAL",
+            "PLAN_STARTED"
+          ]
+        }
+      },
+      "scenario_id": "critical_action_overrides_cooldown",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "balanced_contact_no_spurious_action",
+          "step_id": "resolved",
+          "time_offset_ms": 5000
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "rout_cascade_preservation",
+          "step_id": "critical_return",
+          "time_offset_ms": 8000
+        }
+      ]
+    },
+    {
+      "description": "A persistent objective beyond its maximum commitment emits review and receives a fresh plan instance.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "expired": [
+            "PLAN_CONTINUED"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {},
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {},
+        "required_event_types_by_step": {
+          "expired": [
+            "PLAN_REVIEW_REQUIRED_MAX_COMMITMENT",
+            "PLAN_STARTED"
+          ]
+        }
+      },
+      "scenario_id": "maximum_commitment_requires_fresh_plan",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "expired",
+          "time_offset_ms": 21000
+        }
+      ]
+    },
+    {
+      "description": "A gap beyond the horizon erases lifecycle certainty and starts fresh advisory plans.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "after_gap": [
+            "PLAN_CONTINUED"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [],
+        "required_active_plan_actor_by_step_and_objective": {},
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {
+          "after_gap": "CONTINUITY_RESET_OBSERVATION_GAP"
+        },
+        "required_event_types_by_step": {
+          "after_gap": [
+            "CONTINUITY_RESET_OBSERVATION_GAP",
+            "PLAN_STARTED"
+          ]
+        }
+      },
+      "scenario_id": "observation_gap_resets_continuity",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "after_gap",
+          "time_offset_ms": 31000
+        }
+      ]
+    },
+    {
+      "description": "A terminal observation cancels every remaining abstract commitment and schedules nothing new.",
+      "expectations": {
+        "forbidden_event_types_by_step": {
+          "terminal": [
+            "PLAN_STARTED"
+          ]
+        },
+        "maximum_double_booked_active_actor_count": 0,
+        "require_no_active_plans_by_step": [
+          "terminal"
+        ],
+        "required_active_plan_actor_by_step_and_objective": {},
+        "required_blocked_reasons_by_step": {},
+        "required_continuity_class_by_step": {
+          "terminal": "TERMINAL_OBSERVATION"
+        },
+        "required_event_types_by_step": {
+          "terminal": [
+            "PLAN_CANCELLED_TERMINAL"
+          ]
+        }
+      },
+      "scenario_id": "terminal_observation_cancels_all",
+      "steps": [
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "commander_extraction_under_pressure",
+          "step_id": "start",
+          "time_offset_ms": 0
+        },
+        {
+          "additional_mutations": [],
+          "source_baseline_scenario_id": "terminal_no_action",
+          "step_id": "terminal",
+          "time_offset_ms": 5000
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_baseline_suite_digest": "0055bd7cea848202ead9f8b87082f5ce1cb69d77d0e633a3ffc70346648224cd",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_contract": "TACTICAL_TEMPORAL_SCHEDULE_MATRIX_V1",
+  "suite_id": "v0.1Q_tactical_temporal_schedule_matrix"
+}

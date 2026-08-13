@@ -1,0 +1,263 @@
+{
+  "authority": "NO_ORDERS",
+  "defects_corrected": [
+    "malformed observation values were previously coerced or clamped instead of rejected",
+    "local force collapse could be masked by an enemy-rout recovery phase",
+    "slice-scoped opportunity ids falsely counted persistent priorities as new transitions"
+  ],
+  "evidence_status": "CONTROL_OFFLINE",
+  "input_validation_contract": "BATTLE_TRACE_TACTICAL_INPUT_V2",
+  "invalid_input_results": [
+    {
+      "case_id": "string-local-alliance",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "local_alliance must be boolean",
+      "observed_error": "slice deployment_complete unit 1:u1001 local_alliance must be boolean",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AND_COERCED_TRUTHY",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "string-routing-flag",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "routing must be boolean",
+      "observed_error": "slice deployment_complete unit 1:u1001 routing must be boolean",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AND_COERCED_TRUTHY",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "hitpoints-above-one",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "hitpoints_fraction outside [0,1]",
+      "observed_error": "slice deployment_complete unit 1:u1001 hitpoints_fraction outside [0,1]",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AND_CLAMPED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "negative-initial-models",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "initial_men must be positive",
+      "observed_error": "slice deployment_complete unit 1:u1001 initial_men must be positive",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "models-alive-exceed-initial",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "men_alive outside [0, initial_men]",
+      "observed_error": "slice deployment_complete unit 1:u1001 men_alive outside [0, initial_men]",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AND_CLAMPED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "inconsistent-model-fraction",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "men_fraction inconsistent with model counts",
+      "observed_error": "slice deployment_complete unit 1:u1001 men_fraction inconsistent with model counts",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "negative-ammunition",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "ammo outside [0, starting_ammo]",
+      "observed_error": "slice deployment_complete unit 1:u1001 ammo outside [0, starting_ammo]",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "ammunition-exceeds-starting",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "ammo outside [0, starting_ammo]",
+      "observed_error": "slice deployment_complete unit 1:u1003 ammo outside [0, starting_ammo]",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AND_CLAMPED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "string-coordinate",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "position_x must be a finite number",
+      "observed_error": "slice deployment_complete unit 1:u1001 position_x must be a finite number",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AND_DEFAULTED_TO_ZERO",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "nonfinite-coordinate",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "position_x must be a finite number",
+      "observed_error": "slice deployment_complete unit 1:u1001 position_x must be a finite number",
+      "passed": true,
+      "pre_v0_1n_result": "NOT_EXPLICITLY_GUARDED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "unknown-role",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "has unsupported role",
+      "observed_error": "slice deployment_complete unit 1:u1001 has unsupported role: dragon",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_WITH_UNKNOWN_POLICY",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "slice-after-duration",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "slice time exceeds declared battle duration",
+      "observed_error": "slice time exceeds declared battle duration",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "boolean-hidden-count",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "invalid hidden-enemy count",
+      "observed_error": "invalid hidden-enemy count in deployment_complete",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AS_INTEGER",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "missing-position-field",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "unit missing required fields",
+      "observed_error": "slice deployment_complete unit missing required fields: ['position_x']",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED_AND_DEFAULTED_TO_ZERO",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "local-visibility-mismatch",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "visibility_source must be LOCAL_ALLIANCE",
+      "observed_error": "slice deployment_complete unit 1:u1001 visibility_source must be LOCAL_ALLIANCE",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "foreign-visibility-mismatch",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "visibility_source must be VISIBLE_TO_LOCAL_ALLIANCE",
+      "observed_error": "slice deployment_complete unit 2:u1019 visibility_source must be VISIBLE_TO_LOCAL_ALLIANCE",
+      "passed": true,
+      "pre_v0_1n_result": "REJECTED_BY_OLDER_GUARD",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "duplicate-unit-identity",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "duplicate unit identity",
+      "observed_error": "duplicate unit identity in slice deployment_complete",
+      "passed": true,
+      "pre_v0_1n_result": "REJECTED_BY_OLDER_GUARD",
+      "result": "REJECTED_FAIL_CLOSED"
+    },
+    {
+      "case_id": "invalid-target-sentinel",
+      "category": "INVALID_INPUT_REJECTION",
+      "expected_error": "target distance requires target identity",
+      "observed_error": "slice deployment_complete unit 1:u1001 target distance requires target identity",
+      "passed": true,
+      "pre_v0_1n_result": "ACCEPTED",
+      "result": "REJECTED_FAIL_CLOSED"
+    }
+  ],
+  "metamorphic_results": [
+    {
+      "case_id": "unit-order-permutation",
+      "category": "METAMORPHIC_INVARIANT",
+      "details": {
+        "evaluation_digest_baseline": "3218eb979bccf867c814dbf344a252449ade587a58e686acce33c2d642cbd48b",
+        "evaluation_digest_mutated": "3218eb979bccf867c814dbf344a252449ade587a58e686acce33c2d642cbd48b"
+      },
+      "expectation": "EVALUATIONS_IDENTICAL",
+      "passed": true
+    },
+    {
+      "case_id": "global-coordinate-translation",
+      "category": "METAMORPHIC_INVARIANT",
+      "details": {
+        "decision_signature_digest_baseline": "9bf6c83c0698a4a8fe78999bc51c8f778b377ab77aacffa3991497e8a104e345",
+        "decision_signature_digest_mutated": "9bf6c83c0698a4a8fe78999bc51c8f778b377ab77aacffa3991497e8a104e345",
+        "translation": {
+          "x": 10000.0,
+          "z": -7000.0
+        }
+      },
+      "expectation": "DECISION_SIGNATURE_IDENTICAL",
+      "passed": true
+    },
+    {
+      "case_id": "worsened-commander-monotonicity",
+      "category": "METAMORPHIC_INVARIANT",
+      "details": {
+        "danger_after": 0.769477,
+        "danger_before": 0.447792,
+        "recoverability_after": 0.340349,
+        "recoverability_before": 0.459139,
+        "stable_unit_id": "1:u1001"
+      },
+      "expectation": "DANGER_NONDECREASING_RECOVERABILITY_NONINCREASING",
+      "passed": true
+    },
+    {
+      "case_id": "simultaneous-local-and-enemy-collapse",
+      "category": "METAMORPHIC_INVARIANT",
+      "details": {
+        "local_stability_state": "IRREVERSIBLE_COLLAPSE",
+        "tactical_phase_state": "RECOVERY_REQUIRED",
+        "visible_enemy_collapse_state": "TERMINAL_COUNTDOWN"
+      },
+      "expectation": "LOCAL_COLLAPSE_NOT_MASKED_BY_RECOVERY_PHASE",
+      "passed": true
+    },
+    {
+      "case_id": "hidden-enemy-terminal-guard",
+      "category": "METAMORPHIC_INVARIANT",
+      "details": {
+        "hidden_enemy_unit_count": 3,
+        "outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+        "visible_enemy_collapse_state": "ROUT_CASCADE"
+      },
+      "expectation": "NO_EFFECTIVELY_IRREVERSIBLE_OUTCOME",
+      "passed": true
+    },
+    {
+      "case_id": "stable-opportunity-lifecycle",
+      "category": "METAMORPHIC_INVARIANT",
+      "details": {
+        "continued_advisory_priority_count": 11,
+        "lifecycle_identity": "STABLE_OPPORTUNITY_KEY_NOT_SLICE_INSTANCE_ID",
+        "post_v0_1n_transition_count": 28,
+        "pre_v0_1n_transition_count": 50
+      },
+      "expectation": "CONTINUED_PRIORITIES_NOT_RECOUNTED_AS_NEW",
+      "passed": true
+    }
+  ],
+  "result_digest": "96d7287377172712ad440abaabc4160ada3fb9d083bdae33bbbb2a179f01900c",
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_trace_corpus_id": "battle4_eilhart_trace_slices_v1",
+  "source_trace_result_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_id": "tactical-contract-adversarial-v0.1N",
+  "summary": {
+    "all_passed": true,
+    "invalid_input_case_count": 18,
+    "invalid_input_pass_count": 18,
+    "metamorphic_case_count": 6,
+    "metamorphic_pass_count": 6,
+    "total_case_count": 24,
+    "total_pass_count": 24
+  },
+  "tactical_state_contract": "TACTICAL_STATE_TRAJECTORY_V2"
+}

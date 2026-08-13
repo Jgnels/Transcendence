@@ -1,0 +1,85 @@
+{
+  "application_authority": "PROHIBITED",
+  "base_canonical_ledger_sha256": "2db4287a7c15e6b2e94995afaac589b9427cc173e3c542245d5226c9e0ef292f",
+  "base_release": "v0.2H",
+  "contract": "CAMPAIGN_STRATEGIC_FEASIBILITY_LIVE_PREPARATION_V1",
+  "evidence_status": "CONTROL_OFFLINE_LIVE_OBSERVATION_NOT_YET_RUN",
+  "live_gate": {
+    "army_order_required": false,
+    "battle_required": false,
+    "no_assignment_behavior": "VALID_LIMITING_OBSERVATION_NO_QUERY_REQUEST",
+    "required_environment": "SFO_PLUS_DEDICATED_READ_ONLY_FEASIBILITY_PROBE_ONLY",
+    "save_required": false,
+    "status": "OPEN_OWNER_RUNTIME_OBSERVATION_REQUIRED",
+    "turn_advance_required": false
+  },
+  "offline_validation": {
+    "direct_tests_passed": 301,
+    "fixture_plan_digest": "8e2ce2872be8caa36e4c0a87f82f5a22bc8ce0afafec11d87abbdcaeebc3e6ae",
+    "fixture_plan_generation_100_run": {
+      "environment": "BUILD_CONTAINER_REFERENCE_ONLY",
+      "max_seconds": 0.007058,
+      "mean_seconds": 0.005381,
+      "min_seconds": 0.005171,
+      "query_count": 13,
+      "request_size_bytes": 3656,
+      "unique_result_digests": 1
+    },
+    "fixture_query_count": 13,
+    "fixture_sidecar_integration": "CAPTURE_COMPLETE",
+    "pack_build_aggregate_digest": "a7a1032ce2005ab168d0202e07c3cc308aa7443e47b5f4c9594227732192a1bc",
+    "pack_rebuilds_identical": true,
+    "runtime_probe_tests_passed": 151,
+    "synthetic_lab_tests_passed": 150
+  },
+  "policy_authority": "NO_ORDERS",
+  "probe": {
+    "gameplay_mutation": false,
+    "lua_source_sha256": "04d2eff972ae4e15fe25856ae120aa1f4013c57e9705503c78c360f4fddef2e0",
+    "manifest_sha256": "390776be78bd92ecb07de7cf56cd6d77988042a7ffc3cd4aec8f0623e7fa98ee",
+    "pack_name": "transcendence_campaign_feasibility_probe.pack",
+    "pack_sha256": "ccc5b6d5d73386d0814e2f89e02720abdf26772ed4af739bf4c4bea72ee4deea",
+    "pack_size_bytes": 41168,
+    "probe_kind": "campaign_feasibility",
+    "save_mutation": false
+  },
+  "prohibited_promotions": [
+    "ROUTE_GEOMETRY",
+    "ZONE_OF_CONTROL_CLEARANCE",
+    "INTERCEPTION_SAFETY",
+    "ACTION_LEGALITY",
+    "ORDER_ISSUE",
+    "ACKNOWLEDGEMENT",
+    "EXECUTION",
+    "CAUSAL_OUTCOME"
+  ],
+  "query_whitelist": [
+    "MODEL_HAS_CHARACTER_CQI",
+    "MODEL_CHARACTER_FROM_CQI",
+    "MODEL_HAS_FORCE_CQI",
+    "MODEL_FORCE_FROM_CQI",
+    "FORCE_ACTIVE_STANCE",
+    "POSITION_REACHABLE_THIS_TURN",
+    "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+    "POSITION_EVER_REACHABLE",
+    "REGION_SETTLEMENT_INTERFACE",
+    "SETTLEMENT_REACHABLE_THIS_TURN",
+    "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE",
+    "SETTLEMENT_EVER_REACHABLE",
+    "GARRISON_UNDER_SIEGE"
+  ],
+  "release": "v0.2I",
+  "result_digest": "cc5a15b937427d9abbe5852ecdcf7ff35c25d4e7002bdfbfd20671faa838661e",
+  "schema_version": 1,
+  "transport": {
+    "append_log": "transcendence_runtime_log.txt",
+    "artifact_builder_sha256": "a0ae8949226f38c0ca2b16fbc89bf03bf1e8a1243bac8c0c833b3e603765b376",
+    "collector_script_sha256": "4973dd3d82c10bbe69d99c3c67648fc698372c2346a7cc51e463564ba3ec2421",
+    "maximum_query_count": 16,
+    "prepare_script_sha256": "c3c8e995d94dd2b6576c91182ddc79146d4c77995970463539fec10a52604123",
+    "request_file": "transcendence_campaign_feasibility_request.txt",
+    "request_writer": "LOCAL_PYTHON_SIDECAR_ATOMIC_REPLACE",
+    "sidecar_sha256": "248bc924249a27d16dfda63f42bd6729483efb9c0590345b97275ff01a51c1c7",
+    "snapshot_trigger": "FIRST_TICK_AFTER_WORLD_CREATED"
+  }
+}

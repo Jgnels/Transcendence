@@ -1,0 +1,488 @@
+{
+  "generated": "2026-07-28",
+  "scope": "WH3 AI foundation acquisition audit",
+  "excluded_workshop_ids": [
+    "2978779730",
+    "2905096541",
+    "2799316652",
+    "3428755738",
+    "2846183349",
+    "2792395073"
+  ],
+  "classifications": {
+    "COPY_OK": "Direct adaptation may be possible after exact-file license review and tests.",
+    "VENDOR_OR_WRAP": "Use through a stable boundary or vendor a narrow pinned component.",
+    "PORT_ALGORITHM": "Reimplement/port a bounded algorithm with new tests.",
+    "IDEAS_ONLY": "Transfer architecture or behavior specification; do not copy source.",
+    "BENCHMARK_ONLY": "Use for experiments and comparisons, not production runtime.",
+    "LICENSE_REVIEW_REQUIRED": "No direct reuse until licensing is resolved.",
+    "REJECT": "Do not use."
+  },
+  "projects": [
+    {
+      "id": 1,
+      "project": "Rusted PackFile Manager (RPFM)",
+      "repo": "https://github.com/Frodo45127/rpfm",
+      "commit": "cd255a4405f5cc052df3a5809b3aced5717496f5",
+      "license": "MIT",
+      "layer": "WH3 build/data/tooling",
+      "classification": "VENDOR_OR_WRAP",
+      "priority": "P0",
+      "source_paths": [
+        "rpfm_lib/src/files/pack/mod.rs",
+        "rpfm_extensions/src/diagnostics/pack.rs",
+        "rpfm_ui/src/packedfile_views/table/"
+      ],
+      "observed": "Implements Total War PackFile decoding/encoding, dependency metadata, lazy loading, compression, DB/Loc handling and diagnostics. The pack module also contains explicit handling hooks for siege-AI map hints.",
+      "reuse": "Use as the authoritative pack/schema/diagnostic foundation or invoke its headless/server capabilities. Do not write a new pack parser or table editor.",
+      "risks": "Large Rust/Qt codebase; pin schema and game build; keep runtime AI independent from the authoring tool."
+    },
+    {
+      "id": 2,
+      "project": "RPFM Schemas",
+      "repo": "https://github.com/Frodo45127/rpfm-schemas",
+      "commit": "d12f59cb6de106d205f51b81739951adbc840c49",
+      "license": "MIT",
+      "layer": "WH3 schema/version data",
+      "classification": "VENDOR_OR_WRAP",
+      "priority": "P0",
+      "source_paths": [
+        "patches.ron",
+        "schemas/"
+      ],
+      "observed": "Versioned schema and patch data used to decode Total War database tables.",
+      "reuse": "Pin as a submodule/artifact and record the schema revision used for every generated pack and benchmark.",
+      "risks": "Schemas can lag a new game patch; build a compatibility gate rather than silently generating with stale definitions."
+    },
+    {
+      "id": 3,
+      "project": "Warhammer 3 TypeScript Framework",
+      "repo": "https://github.com/admiralnelson/warhammer3-typescript-framework",
+      "commit": "b8b4f647d6abd657fd6e7d528c8cd3022990244f",
+      "license": "MIT",
+      "layer": "WH3 campaign scripting",
+      "classification": "VENDOR_OR_WRAP",
+      "priority": "P0/P1",
+      "source_paths": [
+        "template/campaign/mod/_MyProjectUtils.ts",
+        "template/campaign/mod/MyProjectCharacter.ts",
+        "template/campaign/mod/MyProjectCommonUserInterface.ts"
+      ],
+      "observed": "Provides TypeScript-to-Lua structure, logging, saved-value wrappers, first-tick helpers, engine-synchronized random helpers, timer/listener abstractions and typed campaign code organization.",
+      "reuse": "Strong starting toolchain for compile-time safety. Fork minimally, add generated WH3 interface declarations, strict lint rules, deterministic-random guardrails and testable pure-domain modules.",
+      "risks": "Types are incomplete and transpilation adds another failure layer. Never let wrapper types imply an engine capability that has not been tested."
+    },
+    {
+      "id": 4,
+      "project": "Knights of the Round Belly \u2014 TypeScript",
+      "repo": "https://github.com/admiralnelson/knights-of-round-belly-typescript",
+      "commit": "f2a4fe2d355fe5f4d2b4c281763e6d7632eb7e82",
+      "license": "VERIFY_AT_PIN",
+      "layer": "WH3 production TypeScript mod",
+      "classification": "IDEAS_ONLY",
+      "priority": "P1",
+      "source_paths": [
+        "campaign/mod/KnightsOfRoundBelly.ts",
+        "campaign/mod/KnightsOfRoundBellyOgreSpawner.ts",
+        "campaign/mod/_KnightsOfRoundBellyUtils.ts"
+      ],
+      "observed": "A real mod built on the TypeScript approach, with namespaced modules, typed data maps, event listeners, faction/region data, AI-specific branches and campaign mutations.",
+      "reuse": "Use as evidence that the toolchain can support a nontrivial campaign mod and as a corpus for build/layout conventions.",
+      "risks": "Content-specific global data and large monolithic files are examples to improve, not copy. Verify license before reuse."
+    },
+    {
+      "id": 5,
+      "project": "Dynamic Disasters",
+      "repo": "https://github.com/Frodo45127/tww3_dynamic_disasters",
+      "commit": "c9ccec4dd3c7bdfce57366b5b44a90936d93cc21",
+      "license": "LICENSE_REVIEW_REQUIRED",
+      "layer": "WH3 modular campaign framework",
+      "classification": "PORT_ALGORITHM",
+      "priority": "P0/P1",
+      "source_paths": [
+        "script/campaign/mod/dynamic_disasters.lua",
+        "script/campaign/dynamic_disasters/"
+      ],
+      "observed": "Manager with mandatory module contracts, default settings, persistent staged state, MCT integration, dynamic file discovery, protected loading with pcall, per-module validation and error isolation.",
+      "reuse": "Port the plugin contract, module validation, staged lifecycle, save wrapper and fail-soft loading into faction doctrines, strategic policies and scenario modules.",
+      "risks": "No repository LICENSE found in this pass; concepts are safe to study, direct copying requires owner/license review."
+    },
+    {
+      "id": 6,
+      "project": "Victory Conditions Overhaul Framework",
+      "repo": "https://github.com/msolefonte/vco-framework",
+      "commit": "13a3e48ee0614e6b6be7e42abf288ce27ccdceb1",
+      "license": "Apache-2.0",
+      "layer": "WH3 faction/objective framework",
+      "classification": "COPY_OK",
+      "priority": "P1",
+      "source_paths": [
+        "src/script/campaign/mod/vco-listeners.lua"
+      ],
+      "observed": "Uses first-tick registration, event-specific listeners, model traversal, saved counters and faction-specific objective evaluators.",
+      "reuse": "Adapt its clean event-to-check-to-state-update shape for strategic objective evaluators and faction policy modules.",
+      "risks": "It is an objective framework, not a general AI. Avoid conflating mission completion checks with planning."
+    },
+    {
+      "id": 7,
+      "project": "Cost-based Army Caps (CBAC)",
+      "repo": "https://github.com/msolefonte/tww3-cbac",
+      "commit": "719fbbda4190fe66558c693e6e6c7e0f9947bd9c",
+      "license": "Apache-2.0",
+      "layer": "WH3 AI policy intervention",
+      "classification": "COPY_OK",
+      "priority": "P0/P1",
+      "source_paths": [
+        "src/script/campaign/mod/cbac-ai.lua",
+        "src/script/campaign/mod/cbac-sl.lua"
+      ],
+      "observed": "At FactionTurnStart, inspects AI armies, caches a recruitment-cost pool, detects policy violations, replaces units and reimburses the faction. It demonstrates indirect control around CA's opaque planner.",
+      "reuse": "Use its bounded policy-enforcement pattern for composition constraints, emergency corrections and post-planner safeguards.",
+      "risks": "One path uses math.random rather than the engine RNG; audit determinism before reuse. Replacing units is corrective intervention, not genuine strategic reasoning."
+    },
+    {
+      "id": 8,
+      "project": "Warhammer 3 Mod Manager",
+      "repo": "https://github.com/Shazbot/WH3-Mod-Manager",
+      "commit": "68305199591939931a508b4f87bc252154d2da13",
+      "license": "MIT",
+      "layer": "Compatibility and pack inspection",
+      "classification": "VENDOR_OR_WRAP",
+      "priority": "P0/P1",
+      "source_paths": [
+        "src/packFileSerializer.ts",
+        "src/components/CompatScreen.tsx",
+        "src/nodeExecutor.ts",
+        "test/"
+      ],
+      "observed": "Parses packs, displays DB data, computes load-order overwrite/compatibility information and has a testable Electron/TypeScript codebase.",
+      "reuse": "Reuse or invoke its conflict-analysis ideas to create CI that reports table/script collisions against a benchmark mod list.",
+      "risks": "Desktop application concerns should not leak into runtime. Prefer a small library/CLI boundary or generated compatibility report."
+    },
+    {
+      "id": 9,
+      "project": "Consul Scriptum",
+      "repo": "https://github.com/solon-the-wise/consul-scriptum",
+      "commit": "PIN_DURING_ACQUISITION",
+      "license": "GPL-3.0",
+      "layer": "Total War live scripting/debugging",
+      "classification": "IDEAS_ONLY",
+      "priority": "P1",
+      "source_paths": [
+        "script runner/console implementation",
+        "script object lifecycle and event-handler maps"
+      ],
+      "observed": "Open-source in-game scripting console for earlier Total War titles, using protected dynamic script execution and lifecycle-oriented script objects.",
+      "reuse": "Study its interactive console, hot-run workflow, command history, pcall isolation and start/stop script lifecycle for a WH3 developer harness.",
+      "risks": "Not a WH3 implementation and GPL-3.0. Reimplement behavior cleanly unless the whole relevant component is license-compatible."
+    },
+    {
+      "id": 10,
+      "project": "Total War Simulator / Total War: AI",
+      "repo": "https://github.com/MichelangeloConserva/TotalWarSimulator",
+      "commit": "98e37e86c6f1c121643b2a961fba04f12a836342",
+      "license": "MIT",
+      "layer": "Offline battle simulator",
+      "classification": "VENDOR_OR_WRAP",
+      "priority": "P0/P1",
+      "source_paths": [
+        "Assets/Scripts/Simpler/CUnit.cs",
+        "Assets/Scripts/Restart/CUnitNew.cs",
+        "Assets/"
+      ],
+      "observed": "Unity battle simulator with unit paths, formation-slot assignment, combat-state transitions, melee/ranged/cavalry mechanics and an AI-research goal.",
+      "reuse": "Fork as a starting surrogate battle lab or extract formation/assignment experiments. Use it to test algorithms before expensive WH3 runs.",
+      "risks": "Unity 2019-era simplified physics and mechanics differ greatly from WH3. It must be calibrated against telemetry and never treated as a faithful forward model without validation."
+    },
+    {
+      "id": 11,
+      "project": "Stratega",
+      "repo": "https://github.com/GAIGResearch/Stratega",
+      "commit": "c9e94295397cd3b0cff91b269a1f12e0a8b28494",
+      "license": "VERIFY_AT_PIN",
+      "layer": "General RTS/TBS forward-model research",
+      "classification": "VENDOR_OR_WRAP",
+      "priority": "P0/P1",
+      "source_paths": [
+        "src/stratega/include/Stratega/ForwardModel/ForwardModel.h",
+        "src/stratega/src/ForwardModel/RTSForwardModel.cpp",
+        "src/stratega/include/Stratega/ForwardModel/ActionSpace.h"
+      ],
+      "observed": "Separates state, legal action generation, action assignment, conditions/effects and state advancement; explicitly supports reduced forward models for search/training.",
+      "reuse": "Best reference for a project-owned abstract campaign/battle forward model and action-space contract used by search and offline evaluation.",
+      "risks": "C++ research environment is not a WH3 runtime dependency. Port abstractions and test against real telemetry."
+    },
+    {
+      "id": 12,
+      "project": "OpenRA",
+      "repo": "https://github.com/OpenRA/OpenRA",
+      "commit": "c3f5e3ace2e960db64a21da041dba7fb1d9765c4",
+      "license": "GPL-3.0-or-later",
+      "layer": "Production RTS AI architecture",
+      "classification": "IDEAS_ONLY",
+      "priority": "P0",
+      "source_paths": [
+        "OpenRA.Mods.Common/Traits/BotModules/SquadManagerBotModule.cs",
+        "OpenRA.Mods.Common/Traits/BotModules/Squads/Squad.cs",
+        "OpenRA.Mods.Common/Traits/BotModules/Squads/States/GroundStates.cs",
+        "OpenRA.Mods.Common/Traits/BotModules/UnitBuilderBotModule.cs"
+      ],
+      "observed": "Data-driven bot modules, squad role assignment, staggered update intervals, target filters, visibility checks, path-aware target reachability, attack/defense states and saveable bot data.",
+      "reuse": "Adopt the modular bot-manager shape, update staggering, explicit squad roles, state machines and debug-state visibility.",
+      "risks": "GPL and engine-specific C#. Use patterns unless project licensing deliberately accommodates direct reuse."
+    },
+    {
+      "id": 13,
+      "project": "UAlbertaBot",
+      "repo": "https://github.com/davechurchill/ualbertabot",
+      "commit": "558899d8793456f4a6ec4196efbb5235552e24db",
+      "license": "VERIFY_AT_PIN",
+      "layer": "Competitive RTS bot",
+      "classification": "PORT_ALGORITHM",
+      "priority": "P0/P1",
+      "source_paths": [
+        "UAlbertaBot/Source/GameCommander.cpp",
+        "UAlbertaBot/Source/StrategyManager.cpp",
+        "UAlbertaBot/Source/CombatCommander.cpp",
+        "UAlbertaBot/Source/ProductionManager.cpp",
+        "UAlbertaBot/Source/Squad.cpp",
+        "UAlbertaBot/Source/BOSSManager.cpp"
+      ],
+      "observed": "Thin top-level commander delegates to strategy, production, combat, scouting and squad systems; includes build-order search and combat simulation components.",
+      "reuse": "Use its manager boundaries and explicit command pipeline as a strong template for strategic, operational and tactical decomposition.",
+      "risks": "StarCraft/BWAPI assumptions and high-APM economy differ from Total War. Port interfaces and algorithms selectively."
+    },
+    {
+      "id": 14,
+      "project": "python-sc2",
+      "repo": "https://github.com/BurnySc2/python-sc2",
+      "commit": "81d66110cb0aa57cc7c2895dad207775e496fbd1",
+      "license": "MIT",
+      "layer": "RTS observation/action adapter",
+      "classification": "PORT_ALGORITHM",
+      "priority": "P1",
+      "source_paths": [
+        "sc2/bot_ai.py",
+        "sc2/bot_ai_internal.py",
+        "sc2/units.py",
+        "sc2/cache.py",
+        "examples/competitive/bot.py"
+      ],
+      "observed": "Normalizes game observations into a bot API, separates public and internal lifecycle logic, caches expensive queries, and supports reproducible example agents.",
+      "reuse": "Model the WH3 adapter and immutable snapshot API after this separation: engine details at the edge, clean domain queries and orders in the core.",
+      "risks": "SC2 has a supported external API; WH3 does not expose an equivalent full observation/order protocol."
+    },
+    {
+      "id": 15,
+      "project": "microRTS",
+      "repo": "https://github.com/santiontanon/microrts",
+      "commit": "PIN_DURING_ACQUISITION",
+      "license": "VERIFY_AT_PIN",
+      "layer": "Deterministic RTS search testbed",
+      "classification": "BENCHMARK_ONLY",
+      "priority": "P1",
+      "source_paths": [
+        "src/rts/GameState.java",
+        "src/rts/PlayerAction.java",
+        "src/rts/UnitAction.java",
+        "src/ai/abstraction/",
+        "src/ai/mcts/"
+      ],
+      "observed": "Purpose-built compact RTS research environment with hard-coded rush policies, minimax/Monte Carlo/MCTS variants, action abstraction and explicit computation budgets.",
+      "reuse": "Use as a controlled algorithm bake-off environment and a reference for budgeted search, action abstraction and tournament evaluation.",
+      "risks": "Tiny grid RTS dynamics are far removed from WH3 formations, morale, terrain, spells and campaign state."
+    },
+    {
+      "id": 16,
+      "project": "Gym-\u00b5RTS",
+      "repo": "https://github.com/vwxyzjn/gym-microrts",
+      "commit": "PIN_DURING_ACQUISITION",
+      "license": "VERIFY_AT_PIN",
+      "layer": "RL environment and action masking",
+      "classification": "BENCHMARK_ONLY",
+      "priority": "P2",
+      "source_paths": [
+        "gym_microrts/",
+        "experiments/",
+        "action-mask and vector environment implementation"
+      ],
+      "observed": "Defines structured observation planes, multi-discrete actions, legal-action masking, vectorized environments and affordable full-game RTS RL experiments.",
+      "reuse": "Borrow action-mask, curriculum, vector-evaluation and reproducible-training ideas for the offline surrogate\u2014not for direct WH3 runtime control.",
+      "risks": "Reward hacking, simulator mismatch and large validation burden. Do not make RL a prerequisite for the first competent release."
+    },
+    {
+      "id": 17,
+      "project": "VCMI Nullkiller AI",
+      "repo": "https://github.com/vcmi/vcmi",
+      "commit": "24579d36addd8e169e794f9fe5060f29c8c2e1cf",
+      "license": "GPL-2.0-or-later",
+      "layer": "Turn-based campaign-map AI",
+      "classification": "IDEAS_ONLY",
+      "priority": "P0/P1",
+      "source_paths": [
+        "AI/Nullkiller2/AIGateway.h",
+        "AI/Nullkiller2/",
+        "docs/developers/AI.md",
+        "test/vcai/"
+      ],
+      "observed": "A dedicated AI subsystem with gateway boundary, goal/resource logic and mock-based tests for campaign-map decisions.",
+      "reuse": "Study danger assessment, goal decomposition, hero/army tasking and the use of mocks to test strategic logic without launching the game.",
+      "risks": "Heroes III rules and GPL licensing. Transfer architecture, not code."
+    },
+    {
+      "id": 18,
+      "project": "FreeOrion AI",
+      "repo": "https://github.com/freeorion/freeorion",
+      "commit": "5bd515c2f5237991e39406a699b8a36747bbaf29",
+      "license": "GPL-2.0",
+      "layer": "Persistent 4X strategic AI",
+      "classification": "IDEAS_ONLY",
+      "priority": "P0",
+      "source_paths": [
+        "default/python/AI/AIstate.py",
+        "default/python/AI/FreeOrionAI.py",
+        "default/python/AI/generate_orders.py",
+        "default/python/AI/PriorityAI.py",
+        "default/python/AI/DiplomaticCorp.py",
+        "default/python/AI/fleet_orders.py",
+        "default/python/AI/savegame_codec/"
+      ],
+      "observed": "Persistent AI state, priority calculation, diplomacy, research/production, exploration, fleet mission assignment, order generation and explicit savegame codecs.",
+      "reuse": "Excellent model for campaign-phase decomposition, persisted strategic state and separating priority formation from order emission.",
+      "risks": "Turn-based space-4X abstractions and GPL; patterns only."
+    },
+    {
+      "id": 19,
+      "project": "The Battle for Wesnoth AI",
+      "repo": "https://github.com/wesnoth/wesnoth",
+      "commit": "e1e8d55f6ff482d9d6e615136dca61615180452d",
+      "license": "GPL-2.0-or-later",
+      "layer": "Explainable candidate-action AI",
+      "classification": "IDEAS_ONLY",
+      "priority": "P0",
+      "source_paths": [
+        "src/ai/composite/rca.cpp",
+        "src/ai/default/stage_rca.cpp",
+        "data/core/macros/ai_candidate_actions.cfg",
+        "src/ai/lua/engine_lua.cpp",
+        "data/ai/micro_ais/mai-defs/"
+      ],
+      "observed": "Candidate actions evaluate applicability and score before execution; Lua extension and focused micro-AIs support regroup, protect and recruiting behavior.",
+      "reuse": "Adopt candidate-action/utility evaluation as the default explainable decision kernel and use focused micro-policies rather than one giant planner.",
+      "risks": "Hex turn-based combat and GPL. Transfer design and tests, not implementation."
+    },
+    {
+      "id": 20,
+      "project": "Widelands AI",
+      "repo": "https://github.com/widelands/widelands",
+      "commit": "7c5655c2243068b7af96bdba855e74476a817092",
+      "license": "GPL-2.0",
+      "layer": "Long-horizon economy/logistics AI",
+      "classification": "IDEAS_ONLY",
+      "priority": "P1",
+      "source_paths": [
+        "src/ai/computer_player.h",
+        "src/ai/defaultai.h",
+        "src/ai/"
+      ],
+      "observed": "Production-game AI focused on construction, resources, logistics, expansion and military interaction under long time horizons.",
+      "reuse": "Mine for bottleneck detection, construction prioritization, resource reservation and periodic work scheduling relevant to WH3 economy/building policy.",
+      "risks": "Economic network mechanics are unlike WH3 province slots; GPL."
+    },
+    {
+      "id": 21,
+      "project": "Warzone 2100 SemperFi AI",
+      "repo": "https://github.com/Warzone2100/warzone2100",
+      "commit": "e192d36abc687522184ecd9cc7b8862eafefcf5b",
+      "license": "GPL-2.0-or-later",
+      "layer": "Event-driven scripted RTS AI",
+      "classification": "IDEAS_ONLY",
+      "priority": "P1",
+      "source_paths": [
+        "data/mp/multiplay/skirmish/semperfi.js",
+        "data/mp/multiplay/skirmish/semperfi_includes/events.js",
+        "data/mp/multiplay/skirmish/semperfi_includes/build.js",
+        "doc/Scripting.md"
+      ],
+      "observed": "Script-level skirmish AI split into event handling, build/economy logic and combat behavior.",
+      "reuse": "Useful analogue for a Lua/JS event-driven AI living above an engine-owned simulation, particularly scheduling and modular script layout.",
+      "risks": "Full skirmish scripting API is richer than WH3\u2019s general campaign/battle surfaces; GPL."
+    },
+    {
+      "id": 22,
+      "project": "DCS Dynamic Campaign Tools (DCT)",
+      "repo": "https://github.com/jtoppins/dct",
+      "commit": "bb75e190160e8925d51ef81c23b8594376971c36",
+      "license": "LGPL-3.0",
+      "layer": "Persistent theater/commander system",
+      "classification": "PORT_ALGORITHM",
+      "priority": "P0/P1",
+      "source_paths": [
+        "src/dct/Theater.lua",
+        "src/dct/ai/Commander.lua",
+        "src/dct/systems/tickets.lua",
+        "src/dct/settings/",
+        "src/dct/ui/"
+      ],
+      "observed": "Persistent theater object, AI commander, asset/template systems, ticket/resource system, settings and UI around a Lua-scripted military campaign.",
+      "reuse": "Strong conceptual match for WH3 theaters, strategic objectives, asset assignment and bounded resource accounting.",
+      "risks": "DCS mission API and real-time theater assumptions differ; LGPL obligations require care if code is ported."
+    },
+    {
+      "id": 23,
+      "project": "Fluid HTN",
+      "repo": "https://github.com/ptrefall/fluid-hierarchical-task-network",
+      "commit": "e67af264cfdf240053f392d4e0e6c620c454eb97",
+      "license": "MIT",
+      "layer": "Hierarchical planning",
+      "classification": "PORT_ALGORITHM",
+      "priority": "P1",
+      "source_paths": [
+        "Fluid-HTN/Planners/Planner.cs",
+        "Fluid-HTN/BaseDomainBuilder.cs",
+        "Fluid-HTN/Contexts/BaseContext.cs",
+        "Fluid-HTN.UnitTests/"
+      ],
+      "observed": "Tested HTN decomposition with explicit contexts, conditions, effects, planner state and domain builders.",
+      "reuse": "Port a minimal deterministic HTN kernel only for decisions that genuinely benefit from multi-step decomposition, such as invasion preparation or siege continuation.",
+      "risks": "Do not use HTN for every choice. Runtime is C#, so Lua port and property tests are required."
+    },
+    {
+      "id": 24,
+      "project": "BehaviorTree.CPP",
+      "repo": "https://github.com/BehaviorTree/BehaviorTree.CPP",
+      "commit": "879522c75cce5e67f3dd7b5591bcb96eb3557a42",
+      "license": "MIT",
+      "layer": "Reactive execution and debugging",
+      "classification": "PORT_ALGORITHM",
+      "priority": "P1",
+      "source_paths": [
+        "include/behaviortree_cpp/bt_factory.h",
+        "include/behaviortree_cpp/tree_node.h",
+        "include/behaviortree_cpp/xml_parsing.h",
+        "examples/ex03_sqlite_log.cpp"
+      ],
+      "observed": "Factory-registered nodes, typed ports/blackboards, runtime tree loading, reactive/asynchronous execution and logging examples.",
+      "reuse": "Borrow node contracts, blackboard typing, cancellation and trace tooling for tactical execution plans; implement a small Lua-native subset.",
+      "risks": "A full C++ library cannot run in normal WH3 Lua. Avoid recreating a huge generic editor before proving need."
+    },
+    {
+      "id": 25,
+      "project": "Beyond All Reason \u2014 headless testing corpus",
+      "repo": "https://github.com/beyond-all-reason/Beyond-All-Reason",
+      "commit": "d706b5c6aec96c0d0cf25a692ee41b1da18981d3",
+      "license": "VERIFY_PER_COMPONENT",
+      "layer": "Large-scale RTS testing",
+      "classification": "IDEAS_ONLY",
+      "priority": "P2",
+      "source_paths": [
+        "tools/headless_testing/startscript_barb_smoke.txt",
+        "tools/StartScripts/",
+        "singleplayer/scenarios/"
+      ],
+      "observed": "Repository includes headless smoke scripts, deterministic start scripts and scenario content used to exercise AI/game behavior.",
+      "reuse": "Emulate the scenario-as-code and smoke-test workflow even though WH3 itself may require UI-driven runs.",
+      "risks": "AI implementation is spread across Spring/BAR components; verify component licenses and canonical AI upstream before any copying."
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Synthetic point-query fixtures do not establish live route or formation feasibility.",
+    "Candidate coordinates are bounded advisory geometry and are not orders.",
+    "No acknowledgement, execution, arrival, casualty, or outcome is attributed."
+  ],
+  "metamorphic_checks": [
+    {
+      "check_id": "reverse_unit_order",
+      "operation": "REVERSE_UNIT_ORDER",
+      "scenario_id": "commander_candidate_points_are_query_ready"
+    },
+    {
+      "check_id": "translate_all_positions",
+      "operation": "TRANSLATE_ALL_POSITIONS",
+      "scenario_id": "frontline_relief_uses_local_subject_geometry"
+    },
+    {
+      "check_id": "reverse_query_result_order",
+      "operation": "REVERSE_QUERY_RESULT_ORDER",
+      "scenario_id": "synthetic_true_supports_point_only"
+    }
+  ],
+  "result_digest": "2b51d2c2ca71d9c303dc45112b4cb1c7292df1551bf0598607b2a330ccd2fbab",
+  "scenarios": [
+    {
+      "additional_mutations": [],
+      "description": "Balanced contact with no active plan must not manufacture a candidate point.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [
+          "QUERY_READY_NOT_OBSERVED",
+          "POINT_QUERY_SUPPORTED_ONLY"
+        ],
+        "minimum_candidate_count": 0,
+        "required_feasibility_classes": []
+      },
+      "query_mode": "NONE",
+      "scenario_id": "balanced_has_no_candidate_geometry",
+      "source_baseline_scenario_id": "balanced_contact_no_spurious_action"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Commander extraction and rout containment produce bounded query-ready geometry without live query evidence.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 6,
+        "required_feasibility_classes": [
+          "QUERY_READY_NOT_OBSERVED"
+        ]
+      },
+      "query_mode": "NONE",
+      "scenario_id": "commander_candidate_points_are_query_ready",
+      "source_baseline_scenario_id": "commander_extraction_under_pressure"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Synthetic QUERY_TRUE may support only exact point feasibility and no stronger claim.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 6,
+        "required_feasibility_classes": [
+          "POINT_QUERY_SUPPORTED_ONLY"
+        ]
+      },
+      "query_mode": "ALL_TRUE",
+      "scenario_id": "synthetic_true_supports_point_only",
+      "source_baseline_scenario_id": "commander_extraction_under_pressure"
+    },
+    {
+      "additional_mutations": [],
+      "description": "QUERY_FALSE rejects every artillery candidate point.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 3,
+        "required_feasibility_classes": [
+          "POINT_QUERY_REJECTED"
+        ]
+      },
+      "query_mode": "ALL_FALSE",
+      "scenario_id": "synthetic_false_vetoes_artillery_points",
+      "source_baseline_scenario_id": "artillery_breach"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Unavailable point queries retain feasibility uncertainty.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 3,
+        "required_feasibility_classes": [
+          "POINT_QUERY_UNVERIFIED"
+        ]
+      },
+      "query_mode": "ALL_UNAVAILABLE",
+      "scenario_id": "unavailable_query_preserves_uncertainty",
+      "source_baseline_scenario_id": "ranged_rear_flank"
+    },
+    {
+      "additional_mutations": [],
+      "description": "A single supported cavalry point may be selected as advisory geometry while alternatives are rejected.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 3,
+        "required_feasibility_classes": [
+          "POINT_QUERY_SUPPORTED_ONLY"
+        ]
+      },
+      "query_mode": "FIRST_TRUE_REST_FALSE",
+      "scenario_id": "mixed_cavalry_results_choose_supported_point",
+      "source_baseline_scenario_id": "cavalry_overextension"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Frontline relief geometry uses only observed local subject positions.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 3,
+        "required_feasibility_classes": [
+          "POINT_QUERY_SUPPORTED_ONLY"
+        ]
+      },
+      "query_mode": "ALL_TRUE",
+      "scenario_id": "frontline_relief_uses_local_subject_geometry",
+      "source_baseline_scenario_id": "frontline_crisis_with_reserve"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Selective pursuit geometry is tied only to a visible routing or shattered enemy.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 3,
+        "required_feasibility_classes": [
+          "POINT_QUERY_SUPPORTED_ONLY"
+        ]
+      },
+      "query_mode": "ALL_TRUE",
+      "scenario_id": "selective_pursuit_requires_visible_routing_enemy",
+      "source_baseline_scenario_id": "clean_enemy_break"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Hidden enemy count preserves uncertainty but does not inject hidden identity into local preservation geometry.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 6,
+        "required_feasibility_classes": [
+          "QUERY_READY_NOT_OBSERVED"
+        ]
+      },
+      "query_mode": "NONE",
+      "scenario_id": "hidden_enemy_uncertainty_does_not_block_local_geometry",
+      "source_baseline_scenario_id": "hidden_enemy_blocks_terminal_certainty"
+    },
+    {
+      "additional_mutations": [],
+      "description": "A terminal observation must not retain an active candidate point.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [
+          "QUERY_READY_NOT_OBSERVED",
+          "POINT_QUERY_SUPPORTED_ONLY"
+        ],
+        "minimum_candidate_count": 0,
+        "required_feasibility_classes": []
+      },
+      "query_mode": "NONE",
+      "scenario_id": "terminal_observation_has_no_active_candidate",
+      "source_baseline_scenario_id": "terminal_no_action"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Point-query evidence for a candidate not generated by the envelope fails closed.",
+      "expectations": {
+        "expect_error": true,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 0,
+        "required_feasibility_classes": []
+      },
+      "query_mode": "FORGED_CANDIDATE",
+      "scenario_id": "forged_candidate_evidence_fails_closed",
+      "source_baseline_scenario_id": "ranged_rear_flank"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Point-query evidence bound to a stale tactical state fails closed.",
+      "expectations": {
+        "expect_error": true,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 0,
+        "required_feasibility_classes": []
+      },
+      "query_mode": "STALE_STATE_DIGEST",
+      "scenario_id": "stale_state_evidence_fails_closed",
+      "source_baseline_scenario_id": "ranged_rear_flank"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Point-query evidence that claims control authority fails closed.",
+      "expectations": {
+        "expect_error": true,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 0,
+        "required_feasibility_classes": []
+      },
+      "query_mode": "ALTERED_AUTHORITY",
+      "scenario_id": "altered_authority_evidence_fails_closed",
+      "source_baseline_scenario_id": "ranged_rear_flank"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Role-aware geometry remains bounded to three candidates per plan.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 3,
+        "required_feasibility_classes": [
+          "QUERY_READY_NOT_OBSERVED"
+        ]
+      },
+      "query_mode": "NONE",
+      "scenario_id": "role_threshold_geometry_remains_bounded",
+      "source_baseline_scenario_id": "role_threshold_asymmetry"
+    },
+    {
+      "additional_mutations": [],
+      "description": "Rout-cascade preservation produces local egress candidates without outcome attribution.",
+      "expectations": {
+        "expect_error": false,
+        "forbidden_feasibility_classes": [],
+        "minimum_candidate_count": 6,
+        "required_feasibility_classes": [
+          "QUERY_READY_NOT_OBSERVED"
+        ]
+      },
+      "query_mode": "NONE",
+      "scenario_id": "rout_cascade_preservation_generates_only_local_egress",
+      "source_baseline_scenario_id": "rout_cascade_preservation"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_baseline_suite_digest": "0055bd7cea848202ead9f8b87082f5ce1cb69d77d0e633a3ffc70346648224cd",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_contract": "TACTICAL_FEASIBILITY_MATRIX_V1",
+  "suite_id": "TACTICAL_FEASIBILITY_MATRIX_V0_1T"
+}

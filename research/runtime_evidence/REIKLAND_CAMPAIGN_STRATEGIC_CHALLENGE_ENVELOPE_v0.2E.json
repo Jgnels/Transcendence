@@ -1,0 +1,883 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "benchmark_dimensions": [
+    "visible_rival_structure",
+    "visible_hostile_army_concentration",
+    "front_pressure",
+    "front_coverage",
+    "same_faction_colocation_without_coordination_claim",
+    "controlled_recovery_load",
+    "visible_local_force_balance"
+  ],
+  "contract": "CAMPAIGN_STRATEGIC_CHALLENGE_CROSS_EVIDENCE_ENVELOPE_V1",
+  "design_requirements": [
+    "Late-game challenge should prefer coherent rival powers and meaningful fronts over many unrelated anti-player wars.",
+    "Human/player identity must not enter strategic quality scoring or target utility.",
+    "A strong rival still needs recovery capacity, diplomacy, economy, and longitudinal behavior evidence before being called durable.",
+    "Visible local force balance is not world power rank and must not be used as omniscient campaign truth.",
+    "Any later strategic director remains advisory until a separate campaign order-authority sandbox proves application semantics."
+  ],
+  "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVED_AND_SYNTHETIC_INPUTS",
+  "generalization_limits": [
+    "Observed calibration covers only four early vanilla Reikland turn-start snapshots from turns 4 through 7.",
+    "The late-game reference is synthetic and cannot establish WH3 campaign quality.",
+    "War edges do not establish coalitions, diplomacy intent, or anti-player bias.",
+    "No economy, recruitment, treasury, income, autoresolve, or native CAI intent is consumed.",
+    "SFO campaign observation is proven separately, but detailed SFO strategic-state calibration is not supplied to this envelope."
+  ],
+  "observed_source": {
+    "evidence_limit": "EARLY_REIKLAND_VISIBLE_SNAPSHOT_CALIBRATION_ONLY",
+    "mode": "SHADOW_NO_ORDERS",
+    "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+    "report_result_digest": "953e35299dd0ef9e06de9d5347df01cabbd79cce68727e8b7a12175a058bc03b",
+    "turns": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "observed_turns": [
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "contract": "CAMPAIGN_STRATEGIC_CHALLENGE_ENVELOPE_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "engineering_thresholds": {
+        "coherent_visible_rival_army_share_threshold": 0.5,
+        "fragmented_visible_pressure_dominant_share_ceiling": 0.65,
+        "front_horizon_turns_geometric": 2.0,
+        "recovery_replenishment_threshold": 0.65,
+        "status": "PROJECT_OWNED_BENCHMARK_THRESHOLDS_NOT_EMPIRICAL_TRUTH"
+      },
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_SNAPSHOT",
+      "fronts": [
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.458912
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_altdorf",
+          "region_value": 0.9,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.0
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_eilhart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.679117
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_grunburg",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.363456
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_helmgart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.339706
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_ubersreik",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        }
+      ],
+      "guardrails": [
+        "Do not reward the number of factions at war as a challenge metric.",
+        "Do not consume hidden hostile army identity or state.",
+        "Do not infer coordination from colocated same-faction pressure.",
+        "Do not infer anti-player bias from a single snapshot.",
+        "Keep decision quality separate from stat, resource, or difficulty bonuses.",
+        "Treat late-game rival coherence and front pressure as separate benchmark dimensions."
+      ],
+      "metrics": {
+        "at_war_faction_count": 2,
+        "colocated_same_faction_pressure_front_count": 0,
+        "controlled_army_count": 1,
+        "controlled_army_strength": 120.719995,
+        "controlled_recovery_army_count": 0,
+        "controlled_recovery_strength_fraction": 0.0,
+        "controlled_region_count": 5,
+        "controlled_region_value": 3.1,
+        "covered_threatened_front_count": 0,
+        "dominant_visible_hostile_army_share": 0.0,
+        "dominant_visible_hostile_faction": null,
+        "exposed_front_count": 0,
+        "front_coverage_ratio": null,
+        "observed_hostile_region_count": 0,
+        "observed_hostile_region_value": 0,
+        "observed_hostile_to_controlled_region_value_ratio": 0.0,
+        "threatened_front_count": 0,
+        "visible_hostile_army_concentration_hhi": 0,
+        "visible_hostile_army_count": 0,
+        "visible_hostile_army_strength": 0,
+        "visible_hostile_to_controlled_army_ratio": 0.0
+      },
+      "pressure_class": "LOW_VISIBLE_PRESSURE",
+      "result_digest": "d8cbd88630ad3f17cf1ee1cf7a5a2f4c1d0a746b42b8b1be9edbdab71fe49adf",
+      "rival_structure": "NO_VISIBLE_HOSTILE_ASSETS",
+      "rivals": [
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_dlc03_bst_beastmen",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        },
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_main_nor_baersonling",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        }
+      ],
+      "scenario_id": "shadow:wh_main_emp_empire:turn:4",
+      "schema_version": 1,
+      "turn": 4,
+      "unavailable_dimensions": {
+        "anti_player_bias": "REQUIRES_TARGETING_HISTORY_AND_NONPLAYER_COUNTERFACTUALS",
+        "campaign_quality": "REQUIRES_LONGITUDINAL_OUTCOMES_AND_OWNER_RATINGS",
+        "diplomatic_bloc_intent": "REQUIRES_DIPLOMACY_STATE_BEYOND_WAR_EDGES",
+        "native_ai_intent": "NOT_OBSERVABLE_FROM_POSITION_SNAPSHOT",
+        "recovery_capacity": "REQUIRES_ECONOMY_RECRUITMENT_AND_REPLENISHMENT_HISTORY"
+      },
+      "visibility_policy": {
+        "hidden_enemy_armies_consumed": false,
+        "human_or_player_identity_consumed": false,
+        "region_scope": "SCENARIO_SUPPLIED_OBSERVED_REGIONS_ONLY"
+      }
+    },
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "contract": "CAMPAIGN_STRATEGIC_CHALLENGE_ENVELOPE_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "engineering_thresholds": {
+        "coherent_visible_rival_army_share_threshold": 0.5,
+        "fragmented_visible_pressure_dominant_share_ceiling": 0.65,
+        "front_horizon_turns_geometric": 2.0,
+        "recovery_replenishment_threshold": 0.65,
+        "status": "PROJECT_OWNED_BENCHMARK_THRESHOLDS_NOT_EMPIRICAL_TRUTH"
+      },
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_SNAPSHOT",
+      "fronts": [
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.458912
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_altdorf",
+          "region_value": 0.9,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.0
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_eilhart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.679117
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_grunburg",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.363456
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_helmgart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.339706
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_ubersreik",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        }
+      ],
+      "guardrails": [
+        "Do not reward the number of factions at war as a challenge metric.",
+        "Do not consume hidden hostile army identity or state.",
+        "Do not infer coordination from colocated same-faction pressure.",
+        "Do not infer anti-player bias from a single snapshot.",
+        "Keep decision quality separate from stat, resource, or difficulty bonuses.",
+        "Treat late-game rival coherence and front pressure as separate benchmark dimensions."
+      ],
+      "metrics": {
+        "at_war_faction_count": 2,
+        "colocated_same_faction_pressure_front_count": 0,
+        "controlled_army_count": 1,
+        "controlled_army_strength": 173.501999,
+        "controlled_recovery_army_count": 0,
+        "controlled_recovery_strength_fraction": 0.0,
+        "controlled_region_count": 5,
+        "controlled_region_value": 3.1,
+        "covered_threatened_front_count": 0,
+        "dominant_visible_hostile_army_share": 0.0,
+        "dominant_visible_hostile_faction": null,
+        "exposed_front_count": 0,
+        "front_coverage_ratio": null,
+        "observed_hostile_region_count": 0,
+        "observed_hostile_region_value": 0,
+        "observed_hostile_to_controlled_region_value_ratio": 0.0,
+        "threatened_front_count": 0,
+        "visible_hostile_army_concentration_hhi": 0,
+        "visible_hostile_army_count": 0,
+        "visible_hostile_army_strength": 0,
+        "visible_hostile_to_controlled_army_ratio": 0.0
+      },
+      "pressure_class": "LOW_VISIBLE_PRESSURE",
+      "result_digest": "e46c42fc53e81a02dcc62abb701d14fb7979d4e41614a1946f645479951e168f",
+      "rival_structure": "NO_VISIBLE_HOSTILE_ASSETS",
+      "rivals": [
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_dlc03_bst_beastmen",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        },
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_main_nor_baersonling",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        }
+      ],
+      "scenario_id": "shadow:wh_main_emp_empire:turn:5",
+      "schema_version": 1,
+      "turn": 5,
+      "unavailable_dimensions": {
+        "anti_player_bias": "REQUIRES_TARGETING_HISTORY_AND_NONPLAYER_COUNTERFACTUALS",
+        "campaign_quality": "REQUIRES_LONGITUDINAL_OUTCOMES_AND_OWNER_RATINGS",
+        "diplomatic_bloc_intent": "REQUIRES_DIPLOMACY_STATE_BEYOND_WAR_EDGES",
+        "native_ai_intent": "NOT_OBSERVABLE_FROM_POSITION_SNAPSHOT",
+        "recovery_capacity": "REQUIRES_ECONOMY_RECRUITMENT_AND_REPLENISHMENT_HISTORY"
+      },
+      "visibility_policy": {
+        "hidden_enemy_armies_consumed": false,
+        "human_or_player_identity_consumed": false,
+        "region_scope": "SCENARIO_SUPPLIED_OBSERVED_REGIONS_ONLY"
+      }
+    },
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "contract": "CAMPAIGN_STRATEGIC_CHALLENGE_ENVELOPE_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "engineering_thresholds": {
+        "coherent_visible_rival_army_share_threshold": 0.5,
+        "fragmented_visible_pressure_dominant_share_ceiling": 0.65,
+        "front_horizon_turns_geometric": 2.0,
+        "recovery_replenishment_threshold": 0.65,
+        "status": "PROJECT_OWNED_BENCHMARK_THRESHOLDS_NOT_EMPIRICAL_TRUTH"
+      },
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_SNAPSHOT",
+      "fronts": [
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.458912
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_altdorf",
+          "region_value": 0.9,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.0
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_eilhart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.679117
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_grunburg",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.363456
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_helmgart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.339706
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_ubersreik",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        }
+      ],
+      "guardrails": [
+        "Do not reward the number of factions at war as a challenge metric.",
+        "Do not consume hidden hostile army identity or state.",
+        "Do not infer coordination from colocated same-faction pressure.",
+        "Do not infer anti-player bias from a single snapshot.",
+        "Keep decision quality separate from stat, resource, or difficulty bonuses.",
+        "Treat late-game rival coherence and front pressure as separate benchmark dimensions."
+      ],
+      "metrics": {
+        "at_war_faction_count": 2,
+        "colocated_same_faction_pressure_front_count": 0,
+        "controlled_army_count": 1,
+        "controlled_army_strength": 200.0,
+        "controlled_recovery_army_count": 0,
+        "controlled_recovery_strength_fraction": 0.0,
+        "controlled_region_count": 5,
+        "controlled_region_value": 3.1,
+        "covered_threatened_front_count": 0,
+        "dominant_visible_hostile_army_share": 0.0,
+        "dominant_visible_hostile_faction": null,
+        "exposed_front_count": 0,
+        "front_coverage_ratio": null,
+        "observed_hostile_region_count": 0,
+        "observed_hostile_region_value": 0,
+        "observed_hostile_to_controlled_region_value_ratio": 0.0,
+        "threatened_front_count": 0,
+        "visible_hostile_army_concentration_hhi": 0,
+        "visible_hostile_army_count": 0,
+        "visible_hostile_army_strength": 0,
+        "visible_hostile_to_controlled_army_ratio": 0.0
+      },
+      "pressure_class": "LOW_VISIBLE_PRESSURE",
+      "result_digest": "f4ef8549ef8f4c534c9d79077280783cbe9e1dac5b049dfb114559284b5a4761",
+      "rival_structure": "NO_VISIBLE_HOSTILE_ASSETS",
+      "rivals": [
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_dlc03_bst_beastmen",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        },
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_main_nor_baersonling",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        }
+      ],
+      "scenario_id": "shadow:wh_main_emp_empire:turn:6",
+      "schema_version": 1,
+      "turn": 6,
+      "unavailable_dimensions": {
+        "anti_player_bias": "REQUIRES_TARGETING_HISTORY_AND_NONPLAYER_COUNTERFACTUALS",
+        "campaign_quality": "REQUIRES_LONGITUDINAL_OUTCOMES_AND_OWNER_RATINGS",
+        "diplomatic_bloc_intent": "REQUIRES_DIPLOMACY_STATE_BEYOND_WAR_EDGES",
+        "native_ai_intent": "NOT_OBSERVABLE_FROM_POSITION_SNAPSHOT",
+        "recovery_capacity": "REQUIRES_ECONOMY_RECRUITMENT_AND_REPLENISHMENT_HISTORY"
+      },
+      "visibility_policy": {
+        "hidden_enemy_armies_consumed": false,
+        "human_or_player_identity_consumed": false,
+        "region_scope": "SCENARIO_SUPPLIED_OBSERVED_REGIONS_ONLY"
+      }
+    },
+    {
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "contract": "CAMPAIGN_STRATEGIC_CHALLENGE_ENVELOPE_V1",
+      "controlled_faction": "wh_main_emp_empire",
+      "engineering_thresholds": {
+        "coherent_visible_rival_army_share_threshold": 0.5,
+        "fragmented_visible_pressure_dominant_share_ceiling": 0.65,
+        "front_horizon_turns_geometric": 2.0,
+        "recovery_replenishment_threshold": 0.65,
+        "status": "PROJECT_OWNED_BENCHMARK_THRESHOLDS_NOT_EMPIRICAL_TRUTH"
+      },
+      "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_SNAPSHOT",
+      "fronts": [
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.789177
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_altdorf",
+          "region_value": 0.9,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.331361
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_eilhart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.0
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_fort_bergbres",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.998499
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_grunburg",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.503289
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_helmgart",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        },
+        {
+          "colocated_same_faction_pressure": false,
+          "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+          "covered_by_visible_controlled_force": true,
+          "front_state": "QUIET",
+          "nearby_controlled_armies": [
+            {
+              "army_id": "force:65",
+              "eta_turns_geometric": 0.601664
+            }
+          ],
+          "nearby_visible_hostiles": [],
+          "region_id": "wh3_main_combi_region_ubersreik",
+          "region_value": 0.55,
+          "threatened": false,
+          "under_siege": false
+        }
+      ],
+      "guardrails": [
+        "Do not reward the number of factions at war as a challenge metric.",
+        "Do not consume hidden hostile army identity or state.",
+        "Do not infer coordination from colocated same-faction pressure.",
+        "Do not infer anti-player bias from a single snapshot.",
+        "Keep decision quality separate from stat, resource, or difficulty bonuses.",
+        "Treat late-game rival coherence and front pressure as separate benchmark dimensions."
+      ],
+      "metrics": {
+        "at_war_faction_count": 3,
+        "colocated_same_faction_pressure_front_count": 0,
+        "controlled_army_count": 1,
+        "controlled_army_strength": 181.020004,
+        "controlled_recovery_army_count": 0,
+        "controlled_recovery_strength_fraction": 0.0,
+        "controlled_region_count": 6,
+        "controlled_region_value": 3.65,
+        "covered_threatened_front_count": 0,
+        "dominant_visible_hostile_army_share": 1.0,
+        "dominant_visible_hostile_faction": "wh_main_emp_marienburg",
+        "exposed_front_count": 0,
+        "front_coverage_ratio": null,
+        "observed_hostile_region_count": 1,
+        "observed_hostile_region_value": 1.1,
+        "observed_hostile_to_controlled_region_value_ratio": 0.30137,
+        "threatened_front_count": 0,
+        "visible_hostile_army_concentration_hhi": 1.0,
+        "visible_hostile_army_count": 2,
+        "visible_hostile_army_strength": 290.0,
+        "visible_hostile_to_controlled_army_ratio": 1.602033
+      },
+      "pressure_class": "VISIBLE_RIVAL_WITHOUT_NEAR_FRONT_PRESSURE",
+      "result_digest": "13ec4c085a19860838d0b413b07bfc3003b93d2764fb30cdf2ed18de74da4e69",
+      "rival_structure": "COHERENT_VISIBLE_RIVAL_CANDIDATE",
+      "rivals": [
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_dlc03_bst_beastmen",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        },
+        {
+          "coherent_visible_rival_candidate": true,
+          "faction": "wh_main_emp_marienburg",
+          "observed_region_count": 1,
+          "observed_region_value": 1.1,
+          "visible_army_count": 2,
+          "visible_army_strength": 290.0,
+          "visible_army_strength_share": 1.0
+        },
+        {
+          "coherent_visible_rival_candidate": false,
+          "faction": "wh_main_nor_baersonling",
+          "observed_region_count": 0,
+          "observed_region_value": 0.0,
+          "visible_army_count": 0,
+          "visible_army_strength": 0.0,
+          "visible_army_strength_share": 0.0
+        }
+      ],
+      "scenario_id": "shadow:wh_main_emp_empire:turn:7",
+      "schema_version": 1,
+      "turn": 7,
+      "unavailable_dimensions": {
+        "anti_player_bias": "REQUIRES_TARGETING_HISTORY_AND_NONPLAYER_COUNTERFACTUALS",
+        "campaign_quality": "REQUIRES_LONGITUDINAL_OUTCOMES_AND_OWNER_RATINGS",
+        "diplomatic_bloc_intent": "REQUIRES_DIPLOMACY_STATE_BEYOND_WAR_EDGES",
+        "native_ai_intent": "NOT_OBSERVABLE_FROM_POSITION_SNAPSHOT",
+        "recovery_capacity": "REQUIRES_ECONOMY_RECRUITMENT_AND_REPLENISHMENT_HISTORY"
+      },
+      "visibility_policy": {
+        "hidden_enemy_armies_consumed": false,
+        "human_or_player_identity_consumed": false,
+        "region_scope": "SCENARIO_SUPPLIED_OBSERVED_REGIONS_ONLY"
+      }
+    }
+  ],
+  "result_digest": "4cbc5cb253b5cc16966807e889e4c05354a284100cd8f237b90b493281bc9423",
+  "schema_version": 1,
+  "synthetic_late_game_reference": {
+    "application_authority": "PROHIBITED",
+    "authority": "NO_ORDERS",
+    "contract": "CAMPAIGN_STRATEGIC_CHALLENGE_ENVELOPE_V1",
+    "controlled_faction": "rival_bloc",
+    "engineering_thresholds": {
+      "coherent_visible_rival_army_share_threshold": 0.5,
+      "fragmented_visible_pressure_dominant_share_ceiling": 0.65,
+      "front_horizon_turns_geometric": 2.0,
+      "recovery_replenishment_threshold": 0.65,
+      "status": "PROJECT_OWNED_BENCHMARK_THRESHOLDS_NOT_EMPIRICAL_TRUTH"
+    },
+    "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVER_SAFE_SNAPSHOT",
+    "fronts": [
+      {
+        "colocated_same_faction_pressure": false,
+        "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+        "covered_by_visible_controlled_force": true,
+        "front_state": "QUIET",
+        "nearby_controlled_armies": [
+          {
+            "army_id": "rival_1",
+            "eta_turns_geometric": 0.0
+          },
+          {
+            "army_id": "rival_2",
+            "eta_turns_geometric": 0.72111
+          },
+          {
+            "army_id": "rival_3",
+            "eta_turns_geometric": 0.824621
+          }
+        ],
+        "nearby_visible_hostiles": [],
+        "region_id": "rival_capital",
+        "region_value": 1.5,
+        "threatened": false,
+        "under_siege": false
+      },
+      {
+        "colocated_same_faction_pressure": false,
+        "coordination_claim": "NOT_INFERRED_FROM_COLOCATION",
+        "covered_by_visible_controlled_force": true,
+        "front_state": "SIEGED_COVERED",
+        "nearby_controlled_armies": [
+          {
+            "army_id": "rival_2",
+            "eta_turns_geometric": 0.447214
+          },
+          {
+            "army_id": "rival_1",
+            "eta_turns_geometric": 1.019804
+          },
+          {
+            "army_id": "rival_3",
+            "eta_turns_geometric": 1.341641
+          }
+        ],
+        "nearby_visible_hostiles": [
+          {
+            "army_id": "player_1",
+            "eta_turns_geometric": 1.166667,
+            "faction": "player_empire"
+          }
+        ],
+        "region_id": "rival_front",
+        "region_value": 1.0,
+        "threatened": true,
+        "under_siege": true
+      }
+    ],
+    "guardrails": [
+      "Do not reward the number of factions at war as a challenge metric.",
+      "Do not consume hidden hostile army identity or state.",
+      "Do not infer coordination from colocated same-faction pressure.",
+      "Do not infer anti-player bias from a single snapshot.",
+      "Keep decision quality separate from stat, resource, or difficulty bonuses.",
+      "Treat late-game rival coherence and front pressure as separate benchmark dimensions."
+    ],
+    "metrics": {
+      "at_war_faction_count": 1,
+      "colocated_same_faction_pressure_front_count": 0,
+      "controlled_army_count": 3,
+      "controlled_army_strength": 265.0,
+      "controlled_recovery_army_count": 1,
+      "controlled_recovery_strength_fraction": 0.237736,
+      "controlled_region_count": 2,
+      "controlled_region_value": 2.5,
+      "covered_threatened_front_count": 1,
+      "dominant_visible_hostile_army_share": 1.0,
+      "dominant_visible_hostile_faction": "player_empire",
+      "exposed_front_count": 0,
+      "front_coverage_ratio": 1.0,
+      "observed_hostile_region_count": 2,
+      "observed_hostile_region_value": 2.7,
+      "observed_hostile_to_controlled_region_value_ratio": 1.08,
+      "threatened_front_count": 1,
+      "visible_hostile_army_concentration_hhi": 1.0,
+      "visible_hostile_army_count": 1,
+      "visible_hostile_army_strength": 145.0,
+      "visible_hostile_to_controlled_army_ratio": 0.54717
+    },
+    "pressure_class": "LOCAL_CRISIS_OR_EXPOSED_FRONT",
+    "result_digest": "9d71f7fea00518c501d9404ff545d68ecc9b7f9e3ffca74b53955c34be7cc10d",
+    "rival_structure": "SINGLE_OR_PARTIAL_VISIBLE_RIVAL",
+    "rivals": [
+      {
+        "coherent_visible_rival_candidate": false,
+        "faction": "player_empire",
+        "observed_region_count": 2,
+        "observed_region_value": 2.7,
+        "visible_army_count": 1,
+        "visible_army_strength": 145.0,
+        "visible_army_strength_share": 1.0
+      }
+    ],
+    "scenario_id": "tier2_late_game_pressure_v1",
+    "schema_version": 1,
+    "turn": 110,
+    "unavailable_dimensions": {
+      "anti_player_bias": "REQUIRES_TARGETING_HISTORY_AND_NONPLAYER_COUNTERFACTUALS",
+      "campaign_quality": "REQUIRES_LONGITUDINAL_OUTCOMES_AND_OWNER_RATINGS",
+      "diplomatic_bloc_intent": "REQUIRES_DIPLOMACY_STATE_BEYOND_WAR_EDGES",
+      "native_ai_intent": "NOT_OBSERVABLE_FROM_POSITION_SNAPSHOT",
+      "recovery_capacity": "REQUIRES_ECONOMY_RECRUITMENT_AND_REPLENISHMENT_HISTORY"
+    },
+    "visibility_policy": {
+      "hidden_enemy_armies_consumed": false,
+      "human_or_player_identity_consumed": false,
+      "region_scope": "SCENARIO_SUPPLIED_OBSERVED_REGIONS_ONLY"
+    }
+  }
+}

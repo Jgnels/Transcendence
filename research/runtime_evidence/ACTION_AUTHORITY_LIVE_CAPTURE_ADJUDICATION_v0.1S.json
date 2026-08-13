@@ -1,0 +1,136 @@
+{
+  "adjudication_contract": "ACTION_AUTHORITY_LIVE_ADJUDICATION_V1",
+  "authority": "NO_ORDERS",
+  "capability_adjudications": {
+    "control_loss_state_visibility": {
+      "classification": "OBSERVED",
+      "evidence_count": 1
+    },
+    "current_target_state_match": {
+      "claim_boundary": "STATE_MATCH_NOT_ACKNOWLEDGEMENT",
+      "classification": "OBSERVED",
+      "evidence_count": 443
+    },
+    "leaving_battle_state_visibility": {
+      "classification": "UNVERIFIED",
+      "evidence_count": 0
+    },
+    "movement_state_visibility": {
+      "claim_boundary": "OBSERVED_STATE_NOT_CAUSALLY_ATTRIBUTED",
+      "classification": "OBSERVED",
+      "evidence_count": 739
+    },
+    "ordered_position_state_match": {
+      "claim_boundary": "STATE_MATCH_NOT_ACKNOWLEDGEMENT",
+      "classification": "OBSERVED",
+      "evidence_count": 189
+    },
+    "ordinary_battle_local_selection_events": {
+      "classification": "OBSERVED",
+      "evidence_count": 130
+    },
+    "point_reachability_query": {
+      "claim_boundary": "POINT_IN_TIME_QUERY_NOT_ROUTE_COMPLETION",
+      "classification": "OBSERVED",
+      "query_false": 38,
+      "query_true": 1249,
+      "unavailable": 0
+    },
+    "read_only_action_state_sampling": {
+      "classification": "OBSERVED",
+      "sample_count": 1287
+    },
+    "routing_state_visibility": {
+      "classification": "OBSERVED",
+      "evidence_count": 1
+    },
+    "selected_unit_command_window_binding": {
+      "binding_rate": 1.0,
+      "bound_windows": 89,
+      "claim_boundary": "SELECTION_BOUND_NOT_COMMAND_ORIGIN_ATTRIBUTED",
+      "classification": "OBSERVED",
+      "unbound_windows": 0
+    },
+    "shattered_state_visibility": {
+      "classification": "UNVERIFIED",
+      "evidence_count": 0
+    },
+    "window_interruption_visibility": {
+      "classification": "OBSERVED",
+      "close_reason_counts": {
+        "CONTROL_LOST": 0,
+        "ROUTED": 1,
+        "SHATTERED": 0,
+        "SUBSEQUENT_COMMAND": 45,
+        "TERMINAL": 0,
+        "UNBOUND_SELECTION": 0,
+        "WINDOW_TIMEOUT": 43
+      }
+    }
+  },
+  "claims_rejected": [
+    "Command-window selection binding identifies command origin.",
+    "Ordered-position or current-target matching is direct acknowledgement.",
+    "Movement after a command proves project-caused execution.",
+    "Point reachability proves route completion or formation feasibility.",
+    "Observed state change proves an outcome caused by Transcendence."
+  ],
+  "expected_pack_sha256": "3acf60520b60f87f8c18e13532512324cb7a539626996ce19897fad94cf2d25d",
+  "limiting_results": [
+    "The public schema-1 export omits the prepared-session manifest; its exact preparation checks are preserved through the owner-run verifier output and manifest digest, not independently replayable from the public packet.",
+    "The raw log remains private and is not present in the repository, so raw-event reparsing is not independently reproducible from public artifacts.",
+    "The capture contains no observed leaving-battle or shattered sample.",
+    "No project order was issued, accepted, acknowledged, executed, or credited with an outcome."
+  ],
+  "manifest_schema_version": 1,
+  "next_gate_boundary": {
+    "live_capture_repeat_required": false,
+    "safe_next_work": "Use observed query availability to design a read-only feasibility envelope and retain all route, formation, issue, acknowledgement, execution, and outcome claims as UNVERIFIED."
+  },
+  "public_preparation_attestation": "NOT_PUBLIC_IN_SCHEMA_V1",
+  "result_digest": "bc4a579e7277507c56b815eccfda9a7049308c7a3a916faea4bc6c2d38af6d49",
+  "schema_version": 1,
+  "session_metrics": {
+    "bound_window_count": 89,
+    "close_reason_counts": {
+      "CONTROL_LOST": 0,
+      "ROUTED": 1,
+      "SHATTERED": 0,
+      "SUBSEQUENT_COMMAND": 45,
+      "TERMINAL": 0,
+      "UNBOUND_SELECTION": 0,
+      "WINDOW_TIMEOUT": 43
+    },
+    "command_event_count": 89,
+    "local_unit_count": 13,
+    "reachability_counts": {
+      "NOT_APPLICABLE": 0,
+      "QUERY_FALSE": 38,
+      "QUERY_TRUE": 1249,
+      "UNAVAILABLE": 0
+    },
+    "reachability_false_rate": 0.029526,
+    "reachability_true_rate": 0.970474,
+    "sample_count": 1287,
+    "samples_per_window": 14.460674,
+    "selection_binding_rate": 1.0,
+    "selection_event_count": 130,
+    "state_match_counts": {
+      "control_lost_observed": 1,
+      "current_target_match": 443,
+      "leaving_battle_observed": 0,
+      "movement_observed": 739,
+      "ordered_position_match": 189,
+      "routing_observed": 1,
+      "shattered_observed": 0
+    },
+    "unbound_window_count": 0,
+    "window_count": 89
+  },
+  "source_capture_collected_at_utc": "2026-07-30T08:06:08.5511516Z",
+  "source_export_sha256": "a1c03ec12a4c2b70945311fc57b54f978fcca892a37b12d46a5daa6f22ebf579",
+  "source_raw_log_in_repository": false,
+  "source_raw_log_sha256": "b4f8c4ca9c285018772d50a4eda92f34572f742dd97967bca8229b0a6b3ce951",
+  "source_raw_log_size_bytes": 732081,
+  "status": "OBSERVED_READ_ONLY_ACTION_AUTHORITY_CALIBRATED"
+}

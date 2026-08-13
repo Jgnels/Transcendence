@@ -1,0 +1,3019 @@
+{
+  "authority": {
+    "canonical_game_state_owned": false,
+    "game_orders_emitted": false,
+    "proposal_only": true,
+    "save_values_written": false
+  },
+  "evidence_status": "HYPOTHESIS",
+  "metrics": {
+    "capability_failure_count": 0,
+    "capability_failures": [],
+    "comparable_assignment_pairs": 3,
+    "consecutive_turns": true,
+    "first_turn": 4,
+    "foreign_proxy_violation_count": 0,
+    "foreign_proxy_violations": [],
+    "hold_assignments": 3,
+    "hold_rate": 0.75,
+    "last_turn": 7,
+    "objective_changes": 1,
+    "objective_churn_rate": 0.333333,
+    "scenario_state_change_count": 3,
+    "total_assignments": 4,
+    "turn_count": 4,
+    "turns": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "mode": "SHADOW_NO_ORDERS",
+  "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+  "result_digest": "953e35299dd0ef9e06de9d5347df01cabbd79cce68727e8b7a12175a058bc03b",
+  "schema_version": 1,
+  "turn_results": [
+    {
+      "comparable_armies_from_previous": 0,
+      "decision": {
+        "assignments": [
+          {
+            "alternatives": [],
+            "army_id": "force:65",
+            "components": {
+              "continuity": 0.0,
+              "feasibility": 1.0,
+              "recovery_need": 0.049100006103515996,
+              "strategic_value": 0.1,
+              "travel_cost": 0.0,
+              "urgency": 0.05
+            },
+            "objective": {
+              "target_id": null,
+              "type": "HOLD"
+            },
+            "rationale": [
+              "safe deterministic fallback"
+            ],
+            "score": 2.54865
+          }
+        ],
+        "evidence_status": "HYPOTHESIS",
+        "fidelity_label": "DECISION_QUALITY_HYPOTHESIS",
+        "profile_digest": "f183d81d237482e171e8cb3686b15b54df2967f009309e19415db2007322ad8c",
+        "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+        "result_digest": "5f37a66776c46cd04451eef8033dfdbe479e9ec10f4991890cdbe1ea32e1229e",
+        "scenario_digest": "920d5130a03cba9c3ae96cc6ed0a939e7e1fa19131c8c21fa3ad9f450c742b63",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:4",
+        "schema_version": 1,
+        "tier": 1,
+        "warnings": [
+          "No campaign-outcome claim; Tier 1 evaluates one decision frame only."
+        ]
+      },
+      "metadata": {
+        "decision_evidence_label": "HYPOTHESIS",
+        "entity_event_count": 42,
+        "field_army_garrison_exclusion_count": 1,
+        "filtered_force_count": 4,
+        "input_evidence_label": "UNVERIFIED_LIVE_UNTIL_MANIFEST_REVIEW",
+        "legacy_nonfield_force_count": 4,
+        "provenance": {
+          "canonical_snapshot_reason": "LOCAL_FACTION_TURN_START",
+          "controlled_army_exact_strength": "OBSERVED_FOR_TELEMETRY_NOT_CROSS_FACTION_SCORING",
+          "controlled_army_movement": "MOVEMENT_REMAINING_PERCENT_PROXY",
+          "controlled_army_replenishment": "AVERAGE_UNIT_SOLDIER_PERCENT",
+          "controlled_army_strength": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+          "foreign_army_strength": "VISIBLE_UNIT_COUNT_PROXY",
+          "foreign_entity_source": "WH3_PLAYER_FILTERED_LISTS",
+          "foreign_region_garrison": "SETTLEMENT_STRUCTURE_PROXY_NOT_ACTUAL_GARRISON",
+          "owned_region_garrison": "ARMED_CITIZENRY_UNIT_COUNT_OR_STRUCTURE_PROXY",
+          "region_identity_resolution": "OWN_RECORD_PRECEDENCE_OVER_VISIBLE_DUPLICATE",
+          "region_threat": "VISIBLE_HOSTILE_ARMY_DISTANCE_PROXY_PLUS_SIEGE"
+        },
+        "region_overlap_resolution_count": 5,
+        "schema_version": 1,
+        "snapshot_begin_line": 51,
+        "snapshot_end_line": 94,
+        "warnings": [
+          "No game order is emitted; this is shadow mode only.",
+          "Foreign army strength uses visible unit count, not privileged force strength.",
+          "Foreign garrison strength is a settlement-structure proxy, not observed garrison composition.",
+          "Movement scaling and every utility weight remain uncalibrated against WH3 outcomes.",
+          "Own and foreign field-army feasibility use unit-count-scale proxies; exact own force strength is retained only as telemetry.",
+          "Non-field character forces are excluded from Army Objective Assignment.",
+          "A field army standing in a settlement is not counted as the settlement garrison.",
+          "Owned regions may also appear in WH3 player-visible region lists; the adapter coalesces them by stable region id and gives the richer owned record precedence."
+        ]
+      },
+      "objective_changes_from_previous": 0,
+      "scenario": {
+        "armies": [
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "force:65",
+            "movement": 100.0,
+            "observation": {
+              "action_points_per_turn": 2625.0,
+              "average_unit_health_pct": 75.449996948242,
+              "character_type_key": null,
+              "exact_force_strength": 1666343.0,
+              "force_cqi": 65,
+              "general_cqi": 120,
+              "is_army": true,
+              "movement_remaining_pct": 100.0,
+              "planner_eligible": true,
+              "planner_strength_proxy": 120.71999511718721,
+              "planner_strength_source": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+              "region": "wh3_main_combi_region_eilhart",
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT",
+              "subtype": "wh_main_emp_karl_franz",
+              "unit_count": 16
+            },
+            "replenishment": 0.75449996948242,
+            "strength": 120.71999511718721,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 482.0,
+            "y": 639.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:1373",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1373,
+              "character_type_key": null,
+              "force_cqi": 1154,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_dlc04_vmp_strigoi_ghoul_king",
+              "unit_count": 8
+            },
+            "replenishment": 1.0,
+            "strength": 80.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh3_dlc20_chs_festus",
+            "id": "visible-character:1382",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1382,
+              "character_type_key": null,
+              "force_cqi": 1160,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_chs_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:1562",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1562,
+              "character_type_key": null,
+              "force_cqi": 1287,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:339",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 339,
+              "character_type_key": null,
+              "force_cqi": 237,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 14
+            },
+            "replenishment": 1.0,
+            "strength": 140.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:349",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 349,
+              "character_type_key": null,
+              "force_cqi": 247,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 10
+            },
+            "replenishment": 1.0,
+            "strength": 100.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:357",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 357,
+              "character_type_key": null,
+              "force_cqi": 255,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 18
+            },
+            "replenishment": 1.0,
+            "strength": 180.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "faction": "wh_main_emp_wissenland",
+            "id": "visible-character:531",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 531,
+              "character_type_key": null,
+              "force_cqi": 429,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:546",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 546,
+              "character_type_key": null,
+              "force_cqi": 444,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_vmp_lord",
+              "unit_count": 16
+            },
+            "replenishment": 1.0,
+            "strength": 160.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:797",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 797,
+              "character_type_key": null,
+              "force_cqi": 695,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 14
+            },
+            "replenishment": 1.0,
+            "strength": 140.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:799",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 799,
+              "character_type_key": null,
+              "force_cqi": 697,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_main_emp_middenland",
+            "id": "visible-character:802",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 802,
+              "character_type_key": null,
+              "force_cqi": 700,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:820",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 820,
+              "character_type_key": null,
+              "force_cqi": 718,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:823",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 823,
+              "character_type_key": null,
+              "force_cqi": 721,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:840",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 840,
+              "character_type_key": null,
+              "force_cqi": 738,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 476.0,
+            "y": 608.0
+          }
+        ],
+        "controlled_faction": "wh_main_emp_empire",
+        "regions": [
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_altdorf",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_blackstone_post",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh2_dlc11_vmp_the_barrow_legion",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_carroburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_middenland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_eilhart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 482.0,
+            "y": 639.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_fort_bergbres",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_marienburg",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_grunburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 548.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_helmgart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 487.0,
+            "y": 603.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_hergig",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh3_dlc20_chs_festus",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_karak_azgaraz",
+            "observation": {
+              "abandoned": true,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 0,
+              "walled": false
+            },
+            "owner": "rebels",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 592.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_karak_ziflin",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 476.0,
+            "y": 608.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_kemperbad",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "garrison_strength": 76.0,
+            "id": "wh3_main_combi_region_marienburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 3,
+              "walled": true
+            },
+            "owner": "wh_main_emp_marienburg",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.1,
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_montfort",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_nuln",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_wissenland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_talabheim",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_ubersreik",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 614.0
+          }
+        ],
+        "scenario_id": "shadow:wh_main_emp_empire:turn:4",
+        "schema_version": 1,
+        "turn": 4,
+        "wars": [
+          [
+            "wh_main_emp_empire",
+            "wh_dlc03_bst_beastmen"
+          ],
+          [
+            "wh_main_emp_empire",
+            "wh_main_nor_baersonling"
+          ]
+        ]
+      },
+      "turn": 4
+    },
+    {
+      "comparable_armies_from_previous": 1,
+      "decision": {
+        "assignments": [
+          {
+            "alternatives": [],
+            "army_id": "force:65",
+            "components": {
+              "continuity": 0.2,
+              "feasibility": 1.0,
+              "recovery_need": 0.007220001220704009,
+              "strategic_value": 0.1,
+              "travel_cost": 0.0,
+              "urgency": 0.05
+            },
+            "objective": {
+              "target_id": null,
+              "type": "HOLD"
+            },
+            "rationale": [
+              "safe deterministic fallback"
+            ],
+            "score": 2.64583
+          }
+        ],
+        "evidence_status": "HYPOTHESIS",
+        "fidelity_label": "DECISION_QUALITY_HYPOTHESIS",
+        "profile_digest": "f183d81d237482e171e8cb3686b15b54df2967f009309e19415db2007322ad8c",
+        "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+        "result_digest": "b9900879c84ae9cdc39bd0de972da9778d48959b2c9071ecdd2189eb35948a75",
+        "scenario_digest": "6a42c51d5075e8433da318bd2a71aa7f742eab23fda362069c8c96ef15990bfe",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:5",
+        "schema_version": 1,
+        "tier": 1,
+        "warnings": [
+          "No campaign-outcome claim; Tier 1 evaluates one decision frame only."
+        ]
+      },
+      "metadata": {
+        "decision_evidence_label": "HYPOTHESIS",
+        "entity_event_count": 42,
+        "field_army_garrison_exclusion_count": 1,
+        "filtered_force_count": 3,
+        "input_evidence_label": "UNVERIFIED_LIVE_UNTIL_MANIFEST_REVIEW",
+        "legacy_nonfield_force_count": 3,
+        "provenance": {
+          "canonical_snapshot_reason": "LOCAL_FACTION_TURN_START",
+          "controlled_army_exact_strength": "OBSERVED_FOR_TELEMETRY_NOT_CROSS_FACTION_SCORING",
+          "controlled_army_movement": "MOVEMENT_REMAINING_PERCENT_PROXY",
+          "controlled_army_replenishment": "AVERAGE_UNIT_SOLDIER_PERCENT",
+          "controlled_army_strength": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+          "foreign_army_strength": "VISIBLE_UNIT_COUNT_PROXY",
+          "foreign_entity_source": "WH3_PLAYER_FILTERED_LISTS",
+          "foreign_region_garrison": "SETTLEMENT_STRUCTURE_PROXY_NOT_ACTUAL_GARRISON",
+          "owned_region_garrison": "ARMED_CITIZENRY_UNIT_COUNT_OR_STRUCTURE_PROXY",
+          "region_identity_resolution": "OWN_RECORD_PRECEDENCE_OVER_VISIBLE_DUPLICATE",
+          "region_threat": "VISIBLE_HOSTILE_ARMY_DISTANCE_PROXY_PLUS_SIEGE"
+        },
+        "region_overlap_resolution_count": 5,
+        "schema_version": 1,
+        "snapshot_begin_line": 95,
+        "snapshot_end_line": 138,
+        "warnings": [
+          "No game order is emitted; this is shadow mode only.",
+          "Foreign army strength uses visible unit count, not privileged force strength.",
+          "Foreign garrison strength is a settlement-structure proxy, not observed garrison composition.",
+          "Movement scaling and every utility weight remain uncalibrated against WH3 outcomes.",
+          "Own and foreign field-army feasibility use unit-count-scale proxies; exact own force strength is retained only as telemetry.",
+          "Non-field character forces are excluded from Army Objective Assignment.",
+          "A field army standing in a settlement is not counted as the settlement garrison.",
+          "Owned regions may also appear in WH3 player-visible region lists; the adapter coalesces them by stable region id and gives the richer owned record precedence."
+        ]
+      },
+      "objective_changes_from_previous": 0,
+      "scenario": {
+        "armies": [
+          {
+            "current_objective": {
+              "target_id": null,
+              "type": "HOLD"
+            },
+            "faction": "wh_main_emp_empire",
+            "id": "force:65",
+            "movement": 100.0,
+            "observation": {
+              "action_points_per_turn": 2625.0,
+              "average_unit_health_pct": 96.389999389648,
+              "character_type_key": null,
+              "exact_force_strength": 2453481.0,
+              "force_cqi": 65,
+              "general_cqi": 120,
+              "is_army": true,
+              "movement_remaining_pct": 100.0,
+              "planner_eligible": true,
+              "planner_strength_proxy": 173.5019989013664,
+              "planner_strength_source": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+              "region": "wh3_main_combi_region_eilhart",
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT",
+              "subtype": "wh_main_emp_karl_franz",
+              "unit_count": 18
+            },
+            "replenishment": 0.96389999389648,
+            "strength": 173.5019989013664,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 482.0,
+            "y": 639.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:1373",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1373,
+              "character_type_key": null,
+              "force_cqi": 1154,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_dlc04_vmp_strigoi_ghoul_king",
+              "unit_count": 8
+            },
+            "replenishment": 1.0,
+            "strength": 80.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh3_dlc20_chs_festus",
+            "id": "visible-character:1382",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1382,
+              "character_type_key": null,
+              "force_cqi": 1160,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_chs_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:1501",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1501,
+              "character_type_key": null,
+              "force_cqi": 1249,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_vmp_lord",
+              "unit_count": 5
+            },
+            "replenishment": 1.0,
+            "strength": 50.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 455.0,
+            "y": 621.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:1560",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1560,
+              "character_type_key": null,
+              "force_cqi": 1286,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_dlc06_dwf_runelord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:1562",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1562,
+              "character_type_key": null,
+              "force_cqi": 1287,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:339",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 339,
+              "character_type_key": null,
+              "force_cqi": 237,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 16
+            },
+            "replenishment": 1.0,
+            "strength": 160.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:357",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 357,
+              "character_type_key": null,
+              "force_cqi": 255,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 16
+            },
+            "replenishment": 1.0,
+            "strength": 160.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 476.0,
+            "y": 608.0
+          },
+          {
+            "faction": "wh_main_emp_wissenland",
+            "id": "visible-character:531",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 531,
+              "character_type_key": null,
+              "force_cqi": 429,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:546",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 546,
+              "character_type_key": null,
+              "force_cqi": 444,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_vmp_lord",
+              "unit_count": 16
+            },
+            "replenishment": 1.0,
+            "strength": 160.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:797",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 797,
+              "character_type_key": null,
+              "force_cqi": 695,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 14
+            },
+            "replenishment": 1.0,
+            "strength": 140.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:799",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 799,
+              "character_type_key": null,
+              "force_cqi": 697,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_main_emp_middenland",
+            "id": "visible-character:802",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 802,
+              "character_type_key": null,
+              "force_cqi": 700,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:820",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 820,
+              "character_type_key": null,
+              "force_cqi": 718,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:823",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 823,
+              "character_type_key": null,
+              "force_cqi": 721,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:840",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 840,
+              "character_type_key": null,
+              "force_cqi": 738,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 476.0,
+            "y": 608.0
+          }
+        ],
+        "controlled_faction": "wh_main_emp_empire",
+        "regions": [
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_altdorf",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_blackstone_post",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh2_dlc11_vmp_the_barrow_legion",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_carroburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_middenland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_eilhart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 482.0,
+            "y": 639.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_fort_bergbres",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_marienburg",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_grunburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 548.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_helmgart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 487.0,
+            "y": 603.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_hergig",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh3_dlc20_chs_festus",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_karak_azgaraz",
+            "observation": {
+              "abandoned": true,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 0,
+              "walled": false
+            },
+            "owner": "rebels",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 592.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_karak_ziflin",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 476.0,
+            "y": 608.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_kemperbad",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "garrison_strength": 76.0,
+            "id": "wh3_main_combi_region_marienburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 3,
+              "walled": true
+            },
+            "owner": "wh_main_emp_marienburg",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.1,
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_montfort",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_nuln",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_wissenland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_talabheim",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_ubersreik",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 614.0
+          }
+        ],
+        "scenario_id": "shadow:wh_main_emp_empire:turn:5",
+        "schema_version": 1,
+        "turn": 5,
+        "wars": [
+          [
+            "wh_main_emp_empire",
+            "wh_dlc03_bst_beastmen"
+          ],
+          [
+            "wh_main_emp_empire",
+            "wh_main_nor_baersonling"
+          ]
+        ]
+      },
+      "turn": 5
+    },
+    {
+      "comparable_armies_from_previous": 1,
+      "decision": {
+        "assignments": [
+          {
+            "alternatives": [],
+            "army_id": "force:65",
+            "components": {
+              "continuity": 0.2,
+              "feasibility": 1.0,
+              "recovery_need": 0.0,
+              "strategic_value": 0.1,
+              "travel_cost": 0.0,
+              "urgency": 0.05
+            },
+            "objective": {
+              "target_id": null,
+              "type": "HOLD"
+            },
+            "rationale": [
+              "safe deterministic fallback"
+            ],
+            "score": 2.635
+          }
+        ],
+        "evidence_status": "HYPOTHESIS",
+        "fidelity_label": "DECISION_QUALITY_HYPOTHESIS",
+        "profile_digest": "f183d81d237482e171e8cb3686b15b54df2967f009309e19415db2007322ad8c",
+        "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+        "result_digest": "3e9e2d4b514b34864d65dd5ab57eba5a20fa433f4ea575eb8c2321401674102e",
+        "scenario_digest": "6155fbf99624cb8e2b19ccc51f525fcd6cca8dfb9d8fa81f0d55ef0d53fe32d1",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:6",
+        "schema_version": 1,
+        "tier": 1,
+        "warnings": [
+          "No campaign-outcome claim; Tier 1 evaluates one decision frame only."
+        ]
+      },
+      "metadata": {
+        "decision_evidence_label": "HYPOTHESIS",
+        "entity_event_count": 40,
+        "field_army_garrison_exclusion_count": 1,
+        "filtered_force_count": 2,
+        "input_evidence_label": "UNVERIFIED_LIVE_UNTIL_MANIFEST_REVIEW",
+        "legacy_nonfield_force_count": 2,
+        "provenance": {
+          "canonical_snapshot_reason": "LOCAL_FACTION_TURN_START",
+          "controlled_army_exact_strength": "OBSERVED_FOR_TELEMETRY_NOT_CROSS_FACTION_SCORING",
+          "controlled_army_movement": "MOVEMENT_REMAINING_PERCENT_PROXY",
+          "controlled_army_replenishment": "AVERAGE_UNIT_SOLDIER_PERCENT",
+          "controlled_army_strength": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+          "foreign_army_strength": "VISIBLE_UNIT_COUNT_PROXY",
+          "foreign_entity_source": "WH3_PLAYER_FILTERED_LISTS",
+          "foreign_region_garrison": "SETTLEMENT_STRUCTURE_PROXY_NOT_ACTUAL_GARRISON",
+          "owned_region_garrison": "ARMED_CITIZENRY_UNIT_COUNT_OR_STRUCTURE_PROXY",
+          "region_identity_resolution": "OWN_RECORD_PRECEDENCE_OVER_VISIBLE_DUPLICATE",
+          "region_threat": "VISIBLE_HOSTILE_ARMY_DISTANCE_PROXY_PLUS_SIEGE"
+        },
+        "region_overlap_resolution_count": 5,
+        "schema_version": 1,
+        "snapshot_begin_line": 139,
+        "snapshot_end_line": 180,
+        "warnings": [
+          "No game order is emitted; this is shadow mode only.",
+          "Foreign army strength uses visible unit count, not privileged force strength.",
+          "Foreign garrison strength is a settlement-structure proxy, not observed garrison composition.",
+          "Movement scaling and every utility weight remain uncalibrated against WH3 outcomes.",
+          "Own and foreign field-army feasibility use unit-count-scale proxies; exact own force strength is retained only as telemetry.",
+          "Non-field character forces are excluded from Army Objective Assignment.",
+          "A field army standing in a settlement is not counted as the settlement garrison.",
+          "Owned regions may also appear in WH3 player-visible region lists; the adapter coalesces them by stable region id and gives the richer owned record precedence."
+        ]
+      },
+      "objective_changes_from_previous": 0,
+      "scenario": {
+        "armies": [
+          {
+            "current_objective": {
+              "target_id": null,
+              "type": "HOLD"
+            },
+            "faction": "wh_main_emp_empire",
+            "id": "force:65",
+            "movement": 100.0,
+            "observation": {
+              "action_points_per_turn": 2625.0,
+              "average_unit_health_pct": 100.0,
+              "character_type_key": null,
+              "exact_force_strength": 2763200.0,
+              "force_cqi": 65,
+              "general_cqi": 120,
+              "is_army": true,
+              "movement_remaining_pct": 100.0,
+              "planner_eligible": true,
+              "planner_strength_proxy": 200.0,
+              "planner_strength_source": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+              "region": "wh3_main_combi_region_eilhart",
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT",
+              "subtype": "wh_main_emp_karl_franz",
+              "unit_count": 20
+            },
+            "replenishment": 1.0,
+            "strength": 200.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 482.0,
+            "y": 639.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:1373",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1373,
+              "character_type_key": null,
+              "force_cqi": 1154,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_dlc04_vmp_strigoi_ghoul_king",
+              "unit_count": 8
+            },
+            "replenishment": 1.0,
+            "strength": 80.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh3_dlc20_chs_festus",
+            "id": "visible-character:1382",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1382,
+              "character_type_key": null,
+              "force_cqi": 1160,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_chs_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "faction": "wh3_dlc20_chs_festus",
+            "id": "visible-character:1507",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1507,
+              "character_type_key": null,
+              "force_cqi": 1253,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_chs_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:1562",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1562,
+              "character_type_key": null,
+              "force_cqi": 1287,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "faction": "wh_main_emp_middenland",
+            "id": "visible-character:1698",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1698,
+              "character_type_key": null,
+              "force_cqi": 1387,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_dlc04_emp_arch_lector",
+              "unit_count": 4
+            },
+            "replenishment": 1.0,
+            "strength": 40.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:339",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 339,
+              "character_type_key": null,
+              "force_cqi": 237,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 18
+            },
+            "replenishment": 1.0,
+            "strength": 180.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_main_emp_wissenland",
+            "id": "visible-character:531",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 531,
+              "character_type_key": null,
+              "force_cqi": 429,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:546",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 546,
+              "character_type_key": null,
+              "force_cqi": 444,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_vmp_lord",
+              "unit_count": 16
+            },
+            "replenishment": 1.0,
+            "strength": 160.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:797",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 797,
+              "character_type_key": null,
+              "force_cqi": 695,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 14
+            },
+            "replenishment": 1.0,
+            "strength": 140.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:799",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 799,
+              "character_type_key": null,
+              "force_cqi": 697,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_main_emp_middenland",
+            "id": "visible-character:802",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 802,
+              "character_type_key": null,
+              "force_cqi": 700,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:820",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 820,
+              "character_type_key": null,
+              "force_cqi": 718,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:823",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 823,
+              "character_type_key": null,
+              "force_cqi": 721,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:840",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 840,
+              "character_type_key": null,
+              "force_cqi": 738,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 476.0,
+            "y": 608.0
+          }
+        ],
+        "controlled_faction": "wh_main_emp_empire",
+        "regions": [
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_altdorf",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_blackstone_post",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh2_dlc11_vmp_the_barrow_legion",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_carroburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_middenland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_eilhart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 482.0,
+            "y": 639.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_fort_bergbres",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_marienburg",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_grunburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 548.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_helmgart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 487.0,
+            "y": 603.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_hergig",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh3_dlc20_chs_festus",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_karak_azgaraz",
+            "observation": {
+              "abandoned": true,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 0,
+              "walled": false
+            },
+            "owner": "rebels",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 592.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_karak_ziflin",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 476.0,
+            "y": 608.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_kemperbad",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "garrison_strength": 76.0,
+            "id": "wh3_main_combi_region_marienburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 3,
+              "walled": true
+            },
+            "owner": "wh_main_emp_marienburg",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 1.1,
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_montfort",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_nuln",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_wissenland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_talabheim",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_ubersreik",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.0,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 614.0
+          }
+        ],
+        "scenario_id": "shadow:wh_main_emp_empire:turn:6",
+        "schema_version": 1,
+        "turn": 6,
+        "wars": [
+          [
+            "wh_main_emp_empire",
+            "wh_dlc03_bst_beastmen"
+          ],
+          [
+            "wh_main_emp_empire",
+            "wh_main_nor_baersonling"
+          ]
+        ]
+      },
+      "turn": 6
+    },
+    {
+      "comparable_armies_from_previous": 1,
+      "decision": {
+        "assignments": [
+          {
+            "alternatives": [
+              {
+                "score": 6.359081,
+                "target_id": "wh3_main_combi_region_marienburg",
+                "type": "CAPTURE_REGION"
+              },
+              {
+                "score": 6.246831,
+                "target_id": "visible-character:339",
+                "type": "ATTACK_ARMY"
+              },
+              {
+                "score": 2.66347,
+                "target_id": null,
+                "type": "HOLD"
+              }
+            ],
+            "army_id": "force:65",
+            "components": {
+              "continuity": 0.0,
+              "feasibility": 1.5,
+              "recovery_need": 0.0,
+              "strategic_value": 1.1,
+              "travel_cost": 0.21213203435596426,
+              "urgency": 1.0833333333333333
+            },
+            "objective": {
+              "target_id": "visible-character:799",
+              "type": "ATTACK_ARMY"
+            },
+            "rationale": [
+              "visible enemy army is a legal war target",
+              "estimated force ratio 1.65"
+            ],
+            "score": 6.725748
+          }
+        ],
+        "evidence_status": "HYPOTHESIS",
+        "fidelity_label": "DECISION_QUALITY_HYPOTHESIS",
+        "profile_digest": "f183d81d237482e171e8cb3686b15b54df2967f009309e19415db2007322ad8c",
+        "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+        "result_digest": "ecdc98664c42630413d90e860ce7191fad5c59262bb80603367efd4776e7c783",
+        "scenario_digest": "59be34504dd5e05c680bb047d4c434d36d4f9aa9677ed9ddfafd1e61b31786e2",
+        "scenario_id": "shadow:wh_main_emp_empire:turn:7",
+        "schema_version": 1,
+        "tier": 1,
+        "warnings": [
+          "No campaign-outcome claim; Tier 1 evaluates one decision frame only."
+        ]
+      },
+      "metadata": {
+        "decision_evidence_label": "HYPOTHESIS",
+        "entity_event_count": 48,
+        "field_army_garrison_exclusion_count": 1,
+        "filtered_force_count": 3,
+        "input_evidence_label": "UNVERIFIED_LIVE_UNTIL_MANIFEST_REVIEW",
+        "legacy_nonfield_force_count": 3,
+        "provenance": {
+          "canonical_snapshot_reason": "LOCAL_FACTION_TURN_START",
+          "controlled_army_exact_strength": "OBSERVED_FOR_TELEMETRY_NOT_CROSS_FACTION_SCORING",
+          "controlled_army_movement": "MOVEMENT_REMAINING_PERCENT_PROXY",
+          "controlled_army_replenishment": "AVERAGE_UNIT_SOLDIER_PERCENT",
+          "controlled_army_strength": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+          "foreign_army_strength": "VISIBLE_UNIT_COUNT_PROXY",
+          "foreign_entity_source": "WH3_PLAYER_FILTERED_LISTS",
+          "foreign_region_garrison": "SETTLEMENT_STRUCTURE_PROXY_NOT_ACTUAL_GARRISON",
+          "owned_region_garrison": "ARMED_CITIZENRY_UNIT_COUNT_OR_STRUCTURE_PROXY",
+          "region_identity_resolution": "OWN_RECORD_PRECEDENCE_OVER_VISIBLE_DUPLICATE",
+          "region_threat": "VISIBLE_HOSTILE_ARMY_DISTANCE_PROXY_PLUS_SIEGE"
+        },
+        "region_overlap_resolution_count": 6,
+        "schema_version": 1,
+        "snapshot_begin_line": 181,
+        "snapshot_end_line": 230,
+        "warnings": [
+          "No game order is emitted; this is shadow mode only.",
+          "Foreign army strength uses visible unit count, not privileged force strength.",
+          "Foreign garrison strength is a settlement-structure proxy, not observed garrison composition.",
+          "Movement scaling and every utility weight remain uncalibrated against WH3 outcomes.",
+          "Own and foreign field-army feasibility use unit-count-scale proxies; exact own force strength is retained only as telemetry.",
+          "Non-field character forces are excluded from Army Objective Assignment.",
+          "A field army standing in a settlement is not counted as the settlement garrison.",
+          "Owned regions may also appear in WH3 player-visible region lists; the adapter coalesces them by stable region id and gives the richer owned record precedence."
+        ]
+      },
+      "objective_changes_from_previous": 1,
+      "scenario": {
+        "armies": [
+          {
+            "current_objective": {
+              "target_id": null,
+              "type": "HOLD"
+            },
+            "faction": "wh_main_emp_empire",
+            "id": "force:65",
+            "movement": 100.0,
+            "observation": {
+              "action_points_per_turn": 2791.0,
+              "average_unit_health_pct": 90.51000213623,
+              "character_type_key": null,
+              "exact_force_strength": 2616722.0,
+              "force_cqi": 65,
+              "general_cqi": 120,
+              "is_army": true,
+              "movement_remaining_pct": 100.0,
+              "planner_eligible": true,
+              "planner_strength_proxy": 181.02000427246,
+              "planner_strength_source": "OWN_UNIT_COUNT_TIMES_HEALTH_PROXY",
+              "region": "wh3_main_combi_region_fort_bergbres",
+              "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT",
+              "subtype": "wh_main_emp_karl_franz",
+              "unit_count": 20
+            },
+            "replenishment": 0.9051000213623,
+            "strength": 181.02000427246,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:1373",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1373,
+              "character_type_key": null,
+              "force_cqi": 1154,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_dlc04_vmp_strigoi_ghoul_king",
+              "unit_count": 9
+            },
+            "replenishment": 1.0,
+            "strength": 90.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh3_dlc20_chs_festus",
+            "id": "visible-character:1382",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1382,
+              "character_type_key": null,
+              "force_cqi": 1160,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_chs_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:1501",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1501,
+              "character_type_key": null,
+              "force_cqi": 1249,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_vmp_lord",
+              "unit_count": 8
+            },
+            "replenishment": 1.0,
+            "strength": 80.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 438.0,
+            "y": 627.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:1562",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1562,
+              "character_type_key": null,
+              "force_cqi": 1287,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 6
+            },
+            "replenishment": 1.0,
+            "strength": 60.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "faction": "wh_main_brt_bretonnia",
+            "id": "visible-character:1666",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1666,
+              "character_type_key": null,
+              "force_cqi": 1361,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_brt_lord",
+              "unit_count": 10
+            },
+            "replenishment": 1.0,
+            "strength": 100.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 434.0,
+            "y": 650.0
+          },
+          {
+            "faction": "wh_main_emp_middenland",
+            "id": "visible-character:1698",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1698,
+              "character_type_key": null,
+              "force_cqi": 1387,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_dlc04_emp_arch_lector",
+              "unit_count": 5
+            },
+            "replenishment": 1.0,
+            "strength": 50.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "faction": "wh_main_brt_bretonnia",
+            "id": "visible-character:195",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 195,
+              "character_type_key": null,
+              "force_cqi": 102,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_brt_louen_leoncouer",
+              "unit_count": 20
+            },
+            "replenishment": 1.0,
+            "strength": 200.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 434.0,
+            "y": 650.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:1979",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 1979,
+              "character_type_key": null,
+              "force_cqi": 1003,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_vmp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 438.0,
+            "y": 627.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:339",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 339,
+              "character_type_key": null,
+              "force_cqi": 237,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 18
+            },
+            "replenishment": 1.0,
+            "strength": 180.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_dlc03_grn_black_pit",
+            "id": "visible-character:399",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 399,
+              "character_type_key": null,
+              "force_cqi": 297,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_grn_goblin_great_shaman",
+              "unit_count": 20
+            },
+            "replenishment": 1.0,
+            "strength": 200.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 516.0,
+            "y": 659.0
+          },
+          {
+            "faction": "wh_main_emp_wissenland",
+            "id": "visible-character:531",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 531,
+              "character_type_key": null,
+              "force_cqi": 429,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "faction": "wh2_dlc11_vmp_the_barrow_legion",
+            "id": "visible-character:546",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 546,
+              "character_type_key": null,
+              "force_cqi": 444,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_vmp_lord",
+              "unit_count": 16
+            },
+            "replenishment": 1.0,
+            "strength": 160.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "faction": "wh_main_emp_marienburg",
+            "id": "visible-character:799",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 799,
+              "character_type_key": null,
+              "force_cqi": 697,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "faction": "wh_main_emp_middenland",
+            "id": "visible-character:802",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 802,
+              "character_type_key": null,
+              "force_cqi": 700,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:820",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 820,
+              "character_type_key": null,
+              "force_cqi": 718,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "faction": "wh_main_emp_talabecland",
+            "id": "visible-character:823",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 823,
+              "character_type_key": null,
+              "force_cqi": 721,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_emp_lord",
+              "unit_count": 11
+            },
+            "replenishment": 1.0,
+            "strength": 110.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "faction": "wh_main_dwf_karak_ziflin",
+            "id": "visible-character:840",
+            "movement": 5.0,
+            "observation": {
+              "character_cqi": 840,
+              "character_type_key": null,
+              "force_cqi": 738,
+              "is_army": true,
+              "planner_eligible": true,
+              "strength_source": "VISIBLE_UNIT_COUNT_PROXY",
+              "subtype": "wh_main_dwf_lord",
+              "unit_count": 7
+            },
+            "replenishment": 1.0,
+            "strength": 70.0,
+            "visible_to": [
+              "wh_main_emp_empire"
+            ],
+            "x": 476.0,
+            "y": 608.0
+          }
+        ],
+        "controlled_faction": "wh_main_emp_empire",
+        "regions": [
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_altdorf",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.03789,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_blackstone_post",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh2_dlc11_vmp_the_barrow_legion",
+            "threat": 0.082,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 457.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_carroburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_middenland",
+            "threat": 0.049992,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 509.0,
+            "y": 656.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_eilhart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.080588,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 482.0,
+            "y": 639.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_fort_bergbres",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.130553,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 449.0,
+            "y": 636.0
+          },
+          {
+            "garrison_strength": 49.0,
+            "id": "wh3_main_combi_region_gisoreux",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": false
+            },
+            "owner": "wh2_dlc11_vmp_the_barrow_legion",
+            "threat": 0.085029,
+            "under_siege": false,
+            "value": 0.75,
+            "x": 438.0,
+            "y": 627.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_grunburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.028198,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 548.0,
+            "y": 623.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_grung_zint",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_brt_bretonnia",
+            "threat": 0.142764,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 434.0,
+            "y": 650.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_helmgart",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.044376,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 487.0,
+            "y": 603.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_hergig",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh3_dlc20_chs_festus",
+            "threat": 0.018513,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 601.0,
+            "y": 702.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_karak_azgaraz",
+            "observation": {
+              "abandoned": true,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 0,
+              "walled": false
+            },
+            "owner": "rebels",
+            "threat": 0.03417,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 592.0
+          },
+          {
+            "garrison_strength": 49.0,
+            "id": "wh3_main_combi_region_karak_ziflin",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.052194,
+            "under_siege": false,
+            "value": 0.75,
+            "x": 476.0,
+            "y": 608.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_kemperbad",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.025053,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 565.0,
+            "y": 637.0
+          },
+          {
+            "garrison_strength": 76.0,
+            "id": "wh3_main_combi_region_marienburg",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 3,
+              "walled": true
+            },
+            "owner": "wh_main_emp_marienburg",
+            "threat": 1.5,
+            "under_siege": false,
+            "value": 1.1,
+            "x": 452.0,
+            "y": 657.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_montfort",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_dwf_karak_ziflin",
+            "threat": 0.042227,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 474.0,
+            "y": 593.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_nuln",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_wissenland",
+            "threat": 0.025506,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 553.0,
+            "y": 607.0
+          },
+          {
+            "garrison_strength": 64.0,
+            "id": "wh3_main_combi_region_talabheim",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "VISIBLE",
+              "settlement_level": 2,
+              "walled": true
+            },
+            "owner": "wh_main_emp_talabecland",
+            "threat": 0.018525,
+            "under_siege": false,
+            "value": 0.9,
+            "x": 604.0,
+            "y": 690.0
+          },
+          {
+            "garrison_strength": 37.0,
+            "id": "wh3_main_combi_region_ubersreik",
+            "observation": {
+              "abandoned": false,
+              "garrison_source": "SETTLEMENT_STRUCTURE_PROXY",
+              "record_source": "OWN",
+              "settlement_level": 1,
+              "walled": false
+            },
+            "owner": "wh_main_emp_empire",
+            "threat": 0.041878,
+            "under_siege": false,
+            "value": 0.55,
+            "x": 505.0,
+            "y": 614.0
+          }
+        ],
+        "scenario_id": "shadow:wh_main_emp_empire:turn:7",
+        "schema_version": 1,
+        "turn": 7,
+        "wars": [
+          [
+            "wh_main_emp_empire",
+            "wh_dlc03_bst_beastmen"
+          ],
+          [
+            "wh_main_emp_empire",
+            "wh_main_emp_marienburg"
+          ],
+          [
+            "wh_main_emp_empire",
+            "wh_main_nor_baersonling"
+          ]
+        ]
+      },
+      "turn": 7
+    }
+  ],
+  "warnings": [
+    "Every proposal is offline shadow output; no campaign order was attempted.",
+    "Foreign army strength uses visible unit count rather than exact force strength.",
+    "Foreign garrisons use settlement-structure proxies rather than observed composition.",
+    "Five-turn stability is not a gameplay-quality claim and remains uncalibrated."
+  ]
+}

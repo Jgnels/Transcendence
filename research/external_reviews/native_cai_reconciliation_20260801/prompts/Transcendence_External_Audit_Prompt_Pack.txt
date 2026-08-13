@@ -1,0 +1,504 @@
+TRANSCENDENCE — EXTERNAL AI REVIEW PROMPT PACK
+Prepared: 2026-08-01
+
+AUTHORITATIVE SOURCE TO ATTACH
+Attach: Transcendence_v0.2I-r3_CanonicalSource.zip
+
+IMPORTANT:
+- The attached v0.2I-r3 canonical source ZIP is authoritative.
+- The public GitHub repository Jgnels/Transcendence is supplemental and older than the installed/canonical project state. If the ZIP and GitHub disagree, use the ZIP.
+- Do not review the uninstalled v0.2I-r4 hotfix as the current project. v0.2I-r3 is the owner-validated baseline.
+- Current investigation is READ/RESEARCH ONLY. Do not modify code.
+- Current project authority is NO_ORDERS and application authority is PROHIBITED.
+
+PROJECT TARGET
+Transcendence is a personal, single-player-first Total War: WARHAMMER III AI/gameplay project. It should:
+- retain a vanilla-compatible core;
+- treat SFO: Grimhammer III as the highest-priority optional profile;
+- prioritize hardest campaign/battle settings and Karl Franz/Reikland as an early test case;
+- create materially stronger, more enjoyable, explainable opposition;
+- avoid invisible cheating and arbitrary anti-player targeting;
+- prevent late-game challenge collapse;
+- pursue stronger rival powers, political blocs, diplomacy and empire-management dynamics inspired in part by Total War: THREE KINGDOMS;
+- prefer native WH3 capabilities and narrow corrections over rebuilding a complete AI stack when the game already provides the needed semantics/planning/execution.
+
+EVIDENCE DISCIPLINE
+Use these labels throughout:
+- VERIFIED_REPO_FACT
+- OFFICIAL_GAME_FACT
+- VERIFIED_MOD_SOURCE_OR_PACK_FACT
+- MODDER_COMMUNITY_CLAIM
+- INFERENCE
+- HYPOTHESIS
+- UNVERIFIED
+
+For capability, use:
+- CONTROL
+- INFLUENCE
+- OBSERVE
+- UNAVAILABLE
+- UNVERIFIED
+
+Do not silently promote a Workshop description into a source-level fact.
+Do not silently promote a database-table name into proven runtime semantics.
+Do not silently promote a script API into proof that the native CAI uses that API internally.
+When sources disagree, say so and rank evidence quality.
+
+======================================================================
+KIMI — SEGMENT 1 PROMPT
+Native WH3 CAI + Transcendence source critical path
+======================================================================
+
+You are doing a bounded source-and-host-system audit of a Total War: WARHAMMER III AI project called Transcendence.
+
+I am attaching the authoritative v0.2I-r3 canonical source ZIP. Do NOT try to read every historical file. Work selectively from the current architecture and the source-audit evidence first.
+
+The exact question is:
+
+“Which strategic/campaign/battle responsibilities is Transcendence currently reconstructing that WARHAMMER III already performs natively, exposes through database CAI tables, exposes through scripting APIs, or has recently improved in patches?”
+
+This is the Mosaic-style failure mode I want you to guard against:
+a project can build sophisticated logic on top of a game while missing that the host game already has a richer semantic/planning system underneath.
+
+FIRST: TRACE TRANSCENDENCE
+Inspect at minimum:
+- research/ARCHITECTURE.md
+- research/CURRENT_STATE.md
+- research/CAPABILITY_MATRIX.md
+- research/CLAIM_REGISTER.md
+- research/KNOWN_RISKS.md
+- research/source_audits/WH3_AI_25_PROJECT_SOURCE_AUDIT.md
+- research/source_audits/deepwar_2978779730_audit.json
+- research/source_audits/hecleas_2905096541_audit.json
+- research/source_audits/sfo_2792731173_audit.json
+- synthetic_lab/strategic_challenge.py
+- synthetic_lab/strategic_portfolio.py
+- synthetic_lab/strategic_assignment.py
+- synthetic_lab/strategic_commitment.py
+- synthetic_lab/strategic_feasibility.py
+- relevant runtime_probe campaign-feasibility files only if needed.
+
+For v0.2E, v0.2F, v0.2G, v0.2H and v0.2I, state:
+1. what responsibility the project owns;
+2. what actually runs live versus only shadow/offline/certification;
+3. what evidence enters;
+4. what outputs it creates;
+5. whether it duplicates a native WH3 responsibility, complements it, or measures it.
+
+SECOND: DEEP-AUDIT CURRENT WH3 ITSELF
+Browse current official Creative Assembly material, current WH3 scripting docs, current RPFM schemas/Assembly Kit-derived table definitions, and other primary technical sources.
+
+Do not stop at high-level “the AI has personalities.” Build a native CAI responsibility atlas covering at least:
+
+1. foreign-force detection / query system;
+2. influence maps;
+3. threat evaluation;
+4. strength evaluation;
+5. main/common threat concepts;
+6. task generation;
+7. task priority;
+8. task batching/aggregation;
+9. task-to-army/resource allocation;
+10. distance measured in turns and stance-aware scaling;
+11. early/mid/late or turn-dependent priority;
+12. CAI personalities and turn-dependent personality weighting;
+13. strategic stance / diplomacy;
+14. faction potential;
+15. anti-player-bias mechanisms;
+16. budget and income allocation;
+17. pooled-resource budgeting;
+18. recruitment unit-quality / military-generator composition logic;
+19. construction priorities;
+20. campaign decision policies;
+21. pathing/reachability/action execution;
+22. known native action-failure modes;
+23. battle AI planners/high-level order interfaces;
+24. engine-hardcoded boundaries modders cannot control.
+
+For each item give:
+- exact table names, script functions, interfaces, official terminology, or source names;
+- what is proven versus inferred;
+- capability label CONTROL / INFLUENCE / OBSERVE / UNAVAILABLE / UNVERIFIED;
+- whether Transcendence currently duplicates it.
+
+THIRD: DECODE THE EXISTING PACK AUDITS CONCEPTUALLY
+The repository already observed that DeepWar, Hecleas and SFO contain CAI tables, but earlier work intentionally stopped before row semantics.
+
+Audit that stopping point.
+
+Especially investigate the significance of these families:
+- cai_gds_task_generators_tables
+- cai_task_management_system_task_generator_groups_generators_junctions_tables
+- cai_task_management_system_task_generator_variable_group_junctions_tables
+- cai_task_management_system_task_generator_variables_tables
+- cai_task_management_system_variable_group_junctions_tables
+- cai_task_management_system_variables_tables
+- cai_variables_tables / cai_variables_overides_tables
+- cai_personality_strategic_components_tables
+- cai_personalities_tables
+- cai_personality_variables_tables
+- cai_personality_variable_set_junctions_tables
+- cai_personalities_budget_allocations_tables
+- cai_personalities_income_allocations_tables
+- cai_decision_* tables
+- cai_query_variable_set_junctions_tables
+- campaign_ai_manager_behaviour_junctions_tables
+- cdir_military_generator_template_ratios_tables
+- cdir_military_generator_unit_qualities_tables
+- cai_personality_faction_potential_modifiers_tables
+- AI diplomacy tables in the Hecleas audit.
+
+Use the current WH3 schema and official CAI explanations where possible.
+If you cannot decode exact binary rows from the supplied ZIP, identify exactly what additional artifact is necessary; do not guess values.
+
+OUTPUT
+A. Executive verdict: is Transcendence at serious risk of owning the wrong layer?
+B. Native WH3 CAI atlas.
+C. Source-critical-path map of v0.2E→v0.2I.
+D. “Possible reinvented wheel” table:
+   Transcendence responsibility | native WH3 equivalent | evidence | recommendation.
+E. Top 10 native capabilities the project should exploit before writing more planner/controller code.
+F. Top 10 genuinely project-owned capabilities that WH3 does NOT already provide.
+G. Exact missing source/artifact that would most change your conclusions.
+H. FORCE YOURSELF TO BE WRONG:
+   - What did you infer too strongly?
+   - What native feature looks equivalent but may not actually solve Transcendence’s product goal?
+   - What current Transcendence layer looks redundant statically but could prove valuable as an independent evaluator?
+   - What evidence would justify keeping a project-owned strategic director?
+
+No code changes. No generic praise. No new architecture for its own sake.
+When this segment is complete, stop. Do not propose a broad follow-up program.
+
+======================================================================
+KIMI — SEGMENT 2 PROMPT
+Prior art, mods, ablations, and dependency-safe reconciliation
+======================================================================
+
+This is Segment 2 of a bounded review of Transcendence. Do NOT redo Segment 1.
+
+Use the same authoritative v0.2I-r3 source ZIP if available. If context is tight, rely on your Segment 1 conclusions and selectively inspect only the source-audit JSON/Markdown files.
+
+The exact question is:
+
+“What have current WH3 modders already learned about improving Campaign AI, late-game challenge, rival powers, diplomacy/blocs, recruitment, construction and battle behavior — and which of those lessons should replace or reshape Transcendence code?”
+
+SEARCH CURRENT WEB, NOT OLD MEMORY
+Prioritize:
+1. Creative Assembly official AI blogs/patch notes;
+2. actual mod source or exact pack/table evidence when available;
+3. current Steam Workshop descriptions AND change notes;
+4. RPFM schemas / modding docs;
+5. GitHub/open source;
+6. modder forum posts / Reddit only as secondary evidence.
+
+Explicitly investigate, but do not limit yourself to:
+- DeepWar AI
+- Hecleas AI Overhaul
+- Incata — AI Army Tasks and Strategy
+- Campaign AI Tweaks
+- AI Camping Settlements Fix
+- Alliance Blocs
+- Reactive World: Alliances
+- Reactive World: Confederations
+- AI Recruitment Revolution
+- AI construction-priority mods
+- diplomacy AI mods
+- Loreful Strategic Threat / anti-player-bias mods
+- battle-AI and siege-AI mods that use narrow native tweaks rather than external full control.
+
+Find additional high-value projects I did not name.
+
+For every important mod distinguish:
+- what the author claims;
+- what exact DB/script surface it appears to use;
+- what is source/pack verified;
+- what is merely anecdotal;
+- what second-order failures or tradeoffs are reported.
+
+Pay special attention to:
+- idle/clumping armies;
+- defensive-task over-prioritization;
+- attack/defend balance;
+- target selection;
+- damaged-army recovery;
+- coordination of multiple armies/allies;
+- long-distance pathing;
+- recruitment quality and army composition;
+- economy/construction/budgets;
+- strategic threat;
+- anti-player fairness;
+- late-game rival consolidation;
+- alliances/confederation blocs;
+- SFO conflicts and overlaps;
+- patch 8.1.x changes that may have invalidated older mod assumptions.
+
+THEN RECONCILE WITH TRANSCENDENCE
+For each current project responsibility classify one:
+- KEEP_AS_PROJECT_OWNER
+- REFRAME_AS_SHADOW_EVALUATOR
+- NATIVE_FIRST_TUNING
+- NATIVE_PLUS_BOUNDED_SCRIPT_CORRECTION
+- MERGE_OR_THIN
+- REMOVE_FROM_APPLICATION_PATH
+- ARCHIVE_ONLY
+- DEFER_PENDING_EVIDENCE
+
+At minimum cover:
+- v0.2E strategic challenge envelope
+- v0.2F strategic/theater portfolio
+- v0.2G force assignment
+- v0.2G temporal commitment
+- v0.2H feasibility
+- v0.2I live query bridge
+- future diplomacy/blocs
+- future recruitment/economy/construction
+- future battle control.
+
+DESIGN A FALSIFIABLE NATIVE-FIRST TEST LADDER
+Do not recommend “try all the AI mods together.”
+
+Build the smallest controlled sequence that can determine:
+1. how much current WH3 8.1.x + SFO already accomplishes;
+2. whether one narrow native CAI table delta fixes a measured problem;
+3. whether DeepWar/Hecleas/Incata-style deltas add more;
+4. whether any remaining gap actually requires Transcendence-owned strategic planning.
+
+Keep test conditions as constant as possible.
+Preregister what result means:
+- native CAI is sufficient;
+- native CAI needs tuning;
+- bounded script correction is justified;
+- project-owned planner is justified.
+
+OUTPUT
+A. Ranked prior-art atlas (at least 20 relevant current items/systems if useful, not filler).
+B. “We are reinventing this” table with evidence.
+C. “Nobody appears to have solved this” table.
+D. SFO conflict/overlap table.
+E. Native-first ablation plan.
+F. Dependency-safe reconciliation plan that preserves useful Transcendence research as evaluators/benchmarks.
+G. Top 10 highest-value changes to project direction.
+H. Top 10 things you would refuse to build until native CAI has been falsified.
+I. FORCE YOURSELF TO BE WRONG:
+   - strongest case that Transcendence’s project-owned planner is still necessary;
+   - strongest case that the major AI mods are misleading benchmarks;
+   - what current online claim you trust least;
+   - what exact source/pack diff would most change your recommendation.
+
+No code changes.
+After this response, consider the Kimi review complete unless one clearly identified missing source would materially reverse a decision.
+
+======================================================================
+GROK PROMPT
+Web-heavy adversarial prior-art and current-state audit
+======================================================================
+
+I want a CURRENT, adversarial, source-driven audit of a Total War: WARHAMMER III AI project called Transcendence.
+
+I am attaching Transcendence_v0.2I-r3_CanonicalSource.zip. It is the authoritative source. Public GitHub Jgnels/Transcendence is supplemental and older; if they conflict, the ZIP wins.
+
+Do not modify code.
+
+Your special role is WEB-HEAVY RED TEAM.
+Browse aggressively and verify what is current as of August 2026 / WH3 8.1.x. Do not rely on your training memory for current AI behavior.
+
+Core question:
+“What important WH3-native AI mechanisms, current patches, current mods, technical techniques, or hard-won modder lessons has Transcendence missed — especially anything that means we are rebuilding a wheel the game or mod community already has?”
+
+PROJECT TARGET
+Fair but materially stronger opposition; no arbitrary player targeting; SFO priority; late-game rival powers and political blocs; explainable behavior; Three Kingdoms-inspired late-game dynamics; native-first whenever possible.
+
+EVIDENCE LABELS
+VERIFIED_REPO_FACT
+OFFICIAL_GAME_FACT
+VERIFIED_MOD_SOURCE_OR_PACK_FACT
+MODDER_COMMUNITY_CLAIM
+INFERENCE
+HYPOTHESIS
+UNVERIFIED
+
+CAPABILITY LABELS
+CONTROL / INFLUENCE / OBSERVE / UNAVAILABLE / UNVERIFIED
+
+MANDATORY RESEARCH
+1. Read current Transcendence architecture/source around v0.2E→v0.2I.
+2. Read its existing DeepWar/Hecleas/SFO pack audits.
+3. Deep-search Creative Assembly’s Campaign AI work from 5.2 through current 8.1.x.
+4. Identify the real native pipeline for:
+   threat/strength → task generation → priority → batching → resource/army assignment → distance/phase scaling → personality → executor.
+5. Search current RPFM schemas and WH3 scripting docs for exact tables/functions.
+6. Deep-search Workshop current AI mods and CHANGE NOTES, not just descriptions.
+7. Search current modding discussions for failure cases caused by AI tuning.
+8. Find relevant 2025–2026 mods not already in Transcendence’s old audit.
+9. Look for SFO-specific CAI changes/conflicts.
+10. Investigate rival/bloc solutions: alliance, confederation, threat response, diplomacy and power consolidation.
+11. Investigate recruitment, construction, economy/budget and battle-AI prior art.
+12. Identify engine-hardcoded limitations modders repeatedly hit.
+
+At minimum research:
+DeepWar AI; Hecleas AI Overhaul; AI Army Tasks and Strategy; Campaign AI Tweaks; AI Camping Settlements Fix; Alliance Blocs; Reactive World: Alliances; Reactive World: Confederations; AI Recruitment Revolution; construction/diplomacy/strategic-threat/battle-AI mods.
+
+Do not trust popularity as proof.
+Do not trust a Workshop author’s feature description when exact pack/source evidence contradicts it.
+Do not call two systems equivalent merely because their names sound alike.
+
+KEY HYPOTHESIS TO ATTACK, NOT ACCEPT
+Transcendence may have built project-owned versions of strategic threat/front analysis, priority portfolios and force assignment even though WH3’s native CAI already has query/influence threat detection, task generation/prioritization, time/distance scaling, task batching and task-to-army allocation.
+
+Try to prove that hypothesis wrong.
+
+OUTPUT
+1. Executive verdict.
+2. Current WH3 8.1.x native CAI atlas with exact source citations.
+3. Patch chronology: which project assumptions became stale because CA improved AI after the project began.
+4. Prior-art matrix with at least 20 meaningful systems/mods/projects when available.
+5. Top 15 “reinvented wheel” risks, ranked by confidence and cost.
+6. Top 15 true gaps Transcendence may still need to own.
+7. SFO-specific overlap/conflict analysis.
+8. Three Kingdoms-style rival/bloc opportunity analysis.
+9. Battle-AI native-first analysis.
+10. Native-first experimental ladder with falsification criteria.
+11. Exact source/pack/schema verification tasks I should run next.
+12. “What would you delete from the APPLICATION PATH but preserve as evaluator/research?”
+13. FORCE YOURSELF TO BE WRONG:
+    - weakest part of your audit;
+    - source most likely to be misleading;
+    - strongest argument for retaining v0.2F/v0.2G as a real planner;
+    - strongest argument that a popular AI mod’s apparent success is actually difficulty/faction-potential side effects;
+    - one finding that would make you reverse your overall recommendation.
+
+Be specific about tables, variables, functions, files, mod IDs and patch versions.
+No generic praise. No code changes. No new grand architecture unless evidence forces it.
+
+======================================================================
+CLAUDE PROMPT
+Source/architecture reconciliation and dependency-safe redesign
+======================================================================
+
+Act as a senior game-AI architect and source reviewer doing a dependency-safe reconciliation of a Total War: WARHAMMER III project named Transcendence.
+
+Attach/source authority:
+Transcendence_v0.2I-r3_CanonicalSource.zip is authoritative.
+Public GitHub Jgnels/Transcendence is supplemental and older.
+Do not modify code.
+
+The project has accumulated substantial observer-safe strategic logic:
+v0.2E strategic challenge
+→ v0.2F strategic/theater portfolio
+→ v0.2G force assignment/temporal commitment
+→ v0.2H read-only feasibility
+→ v0.2I live observation bridge.
+
+The owner is concerned we repeated the same process error discovered in another project: building a sophisticated semantic/planning layer before understanding everything the host game already supplies.
+
+Your job is not to praise or rewrite Transcendence. Your job is to decide, source-level and dependency-safe, which responsibilities the project should still own after reconciling it with WH3’s native Campaign AI and mature AI mods.
+
+REVIEW DISCIPLINE
+Use:
+VERIFIED_REPO_FACT
+OFFICIAL_GAME_FACT
+VERIFIED_MOD_SOURCE_OR_PACK_FACT
+MODDER_COMMUNITY_CLAIM
+INFERENCE
+HYPOTHESIS
+UNVERIFIED
+
+Capability:
+CONTROL / INFLUENCE / OBSERVE / UNAVAILABLE / UNVERIFIED
+
+FIRST — TRACE THE REAL PROJECT
+For each v0.2E→v0.2I layer:
+- concrete files/classes/functions;
+- input and output;
+- live reachable path vs offline/shadow/certification-only;
+- performance/maintenance cost;
+- authority boundary;
+- downstream dependency;
+- what would break if removed from the application path.
+
+SECOND — RECONCILE WITH WH3 NATIVE AI
+Research current official/current technical evidence for:
+- query and influence threat detection;
+- threat vs strength;
+- task generators;
+- task priorities;
+- task batching;
+- task/resource or army allocation;
+- distance-in-turns and stance-aware scaling;
+- turn/phase-dependent priority;
+- AI personalities;
+- strategic stance/diplomacy;
+- faction potential;
+- anti-player-bias controls;
+- budgets/pooled resources;
+- recruitment qualities/templates;
+- construction;
+- action/path/reachability;
+- battle AI planners.
+
+THIRD — RECONCILE WITH PRIOR ART
+At least compare DeepWar, Hecleas, Incata AI Army Tasks and Strategy, Campaign AI Tweaks, AI Camping Settlements Fix, Alliance Blocs, Reactive World Alliances/Confederations, recruitment/construction/diplomacy/battle-AI mods.
+
+The repository’s pack audits are important evidence. Where they list CAI tables but explicitly say row semantics were not decoded, treat that as a known research debt and state how to close it with the current WH3 RPFM schema.
+
+DEPENDENCY-SAFE DECISION TABLE
+For every important current module choose exactly one:
+- KEEP_PROJECT_OWNED
+- REFRAME_AS_EVALUATOR_OR_ORACLE
+- KEEP_INTERFACE_REPLACE_IMPLEMENTATION
+- NATIVE_FIRST
+- MERGE_OR_THIN
+- REMOVE_FROM_APPLICATION_PATH
+- ARCHIVE_HISTORY_ONLY
+- DEFER
+
+Include:
+- current responsibility;
+- native equivalent;
+- prior-art equivalent;
+- exact dependency breakage;
+- invariant/evidence at risk;
+- replacement responsibility;
+- evidence required before acting.
+
+IMPORTANT:
+Do not recommend deleting v0.2E/v0.2F/v0.2G just because native CAI exists. Ask whether they have independent value as benchmark/evaluator/ablation oracle.
+Do not recommend keeping them just because effort has already been spent.
+
+PRODUCT / SCIENCE QUESTIONS
+1. What is the minimal architecture that preserves Transcendence’s unique value while leaning maximally on native CAI?
+2. Which current layer has the highest “certification complexity / player value” ratio?
+3. Which native CAI table family should be decoded first?
+4. What should be measured before any new live feasibility/controller work?
+5. How should SFO be treated: baseline overlay, separate profile, or source of native CAI changes to absorb?
+6. Can the Three Kingdoms-style late-game rival/bloc goal be achieved mainly through native faction potential/diplomacy plus bounded scripts, or does it require a project-owned metagame director?
+7. What does WH3 clearly NOT expose/control, making custom project ownership justified?
+
+PREREGISTER ABLATIONS
+Design a short ladder:
+- vanilla/current WH3 8.1.x baseline;
+- SFO-only baseline;
+- one narrow native CAI tweak;
+- best relevant prior-art-style delta;
+- project-owned shadow evaluator;
+- only then any project-owned intervention.
+Give falsification criteria for each step.
+
+OUTPUT
+A. Executive verdict.
+B. Real source-critical-path map.
+C. Native-vs-project responsibility matrix.
+D. Dependency-safe KEEP/REFRAME/MERGE/REMOVE table.
+E. Minimal post-reconciliation architecture.
+F. Top 10 engineering tasks in order.
+G. Top 10 things not to build yet.
+H. 100-turn / late-game risks.
+I. FORCE YOURSELF TO BE WRONG:
+   - assumption you are least confident about;
+   - source evidence most likely to overturn your recommendation;
+   - project layer that could surprise positively despite apparent duplication;
+   - native CAI layer that looks rich but may be too opaque/unreliable to trust;
+   - if you had one day before owner live testing, exactly what would you do.
+
+No code changes.
+Do not ask for a follow-up unless one specific missing source file/pack/schema would materially reverse a recommendation.

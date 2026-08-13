@@ -1,0 +1,379 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Synthetic QUERY_TRUE fixtures prove guarded contract behavior, not live point feasibility.",
+    "A ready packet is eligible only for simultaneous shadow review and cannot issue an order.",
+    "No route, formation, collision, legality, acknowledgement, execution, or outcome is established."
+  ],
+  "metamorphic_check_count": 3,
+  "metamorphic_checks": [
+    {
+      "base_digest": "e76135c5ebc00986eb7560728707a7f45ee8d811bff9dd4ebc81de111e1229e4",
+      "check_id": "guarded_reverse_units",
+      "operation": "REVERSE_UNIT_ORDER",
+      "passed": true,
+      "transformed_digest": "e76135c5ebc00986eb7560728707a7f45ee8d811bff9dd4ebc81de111e1229e4"
+    },
+    {
+      "base_digest": "ecb40beed9eff0e574fef889b53550e99c5a6aa7ca7342ebbbe3ee05139d2d5e",
+      "check_id": "guarded_translate_positions",
+      "operation": "TRANSLATE_ALL_POSITIONS",
+      "passed": true,
+      "transformed_digest": "7ac1cf232d86f2025fd9772fac48817e8676858a4ddefe05ee4deac39d0c053f"
+    },
+    {
+      "base_digest": "8247d92c025eec5c98d9a9f7d65a157f9d686374467f183c500aee4164bdb875",
+      "check_id": "guarded_reverse_query_records",
+      "operation": "REVERSE_QUERY_RESULT_ORDER",
+      "passed": true,
+      "transformed_digest": "8247d92c025eec5c98d9a9f7d65a157f9d686374467f183c500aee4164bdb875"
+    }
+  ],
+  "metamorphic_pass_count": 3,
+  "report_contract": "TACTICAL_GUARDED_ACTION_MATRIX_REPORT_V1",
+  "result_digest": "aaa3cbb80a4167b2fb8da0d9154b59bf5fbd47771f7a2f65b4e884dd87135982",
+  "scenario_count": 15,
+  "scenario_pass_count": 15,
+  "scenarios": [
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": null,
+      "packet_count": 0,
+      "passed": true,
+      "readiness_classes": [],
+      "ready_packet_count": 0,
+      "result_digest": "81fce405775581bba81ec4e8f9dff2abca929d0b07b99a907689508eb75466d1",
+      "scenario_id": "balanced_no_guarded_packet"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 2,
+      "error": null,
+      "packet_count": 2,
+      "passed": true,
+      "readiness_classes": [
+        "DEFERRED_POINT_UNOBSERVED"
+      ],
+      "ready_packet_count": 0,
+      "result_digest": "58ee35f6561c3d00a5bb1db6dba6e833895fab5a3d81901515c06d1edac23024",
+      "scenario_id": "unobserved_commander_defers"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": null,
+      "packet_count": 2,
+      "passed": true,
+      "readiness_classes": [
+        "READY_POINT_SUPPORTED_SHADOW_ONLY"
+      ],
+      "ready_packet_count": 2,
+      "result_digest": "e76135c5ebc00986eb7560728707a7f45ee8d811bff9dd4ebc81de111e1229e4",
+      "scenario_id": "true_point_supports_shadow_review_only"
+    },
+    {
+      "blocked_packet_count": 1,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": null,
+      "packet_count": 1,
+      "passed": true,
+      "readiness_classes": [
+        "BLOCKED_POINT_QUERY_FALSE"
+      ],
+      "ready_packet_count": 0,
+      "result_digest": "778f66615292a29d4e88a1526bff372f08e72237924f386204a23a2af9a9e43f",
+      "scenario_id": "false_artillery_points_block_exact_candidates"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 1,
+      "error": null,
+      "packet_count": 1,
+      "passed": true,
+      "readiness_classes": [
+        "DEFERRED_QUERY_UNAVAILABLE"
+      ],
+      "ready_packet_count": 0,
+      "result_digest": "25376f74566b4b14bade9869b418cf6325ffe360c741e966405f44176f0d3489",
+      "scenario_id": "unavailable_query_defers"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": null,
+      "packet_count": 1,
+      "passed": true,
+      "readiness_classes": [
+        "READY_POINT_SUPPORTED_SHADOW_ONLY"
+      ],
+      "ready_packet_count": 1,
+      "result_digest": "8247d92c025eec5c98d9a9f7d65a157f9d686374467f183c500aee4164bdb875",
+      "scenario_id": "mixed_cavalry_retains_only_supported_packet"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": null,
+      "packet_count": 1,
+      "passed": true,
+      "readiness_classes": [
+        "READY_POINT_SUPPORTED_SHADOW_ONLY"
+      ],
+      "ready_packet_count": 1,
+      "result_digest": "ecb40beed9eff0e574fef889b53550e99c5a6aa7ca7342ebbbe3ee05139d2d5e",
+      "scenario_id": "frontline_support_ready_in_synthetic_fixture"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": null,
+      "packet_count": 1,
+      "passed": true,
+      "readiness_classes": [
+        "READY_POINT_SUPPORTED_SHADOW_ONLY"
+      ],
+      "ready_packet_count": 1,
+      "result_digest": "ada778194f8b967dce9a2e781573c6fa979b3025f97578939983f3bfc79db2f0",
+      "scenario_id": "visible_pursuit_ready_in_synthetic_fixture"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 2,
+      "error": null,
+      "packet_count": 2,
+      "passed": true,
+      "readiness_classes": [
+        "DEFERRED_POINT_UNOBSERVED"
+      ],
+      "ready_packet_count": 0,
+      "result_digest": "a4c4a8a6e927564e3b13fe441902d306ad168dd44530b8f377d04c6b5373986b",
+      "scenario_id": "hidden_enemy_case_remains_unobserved"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": null,
+      "packet_count": 0,
+      "passed": true,
+      "readiness_classes": [],
+      "ready_packet_count": 0,
+      "result_digest": "d5712c19dee0751d955361dc61d0643f40b656779e0ef1ff427cfe3d7db7326d",
+      "scenario_id": "terminal_has_no_packet"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": "point-query result references an unknown candidate",
+      "packet_count": 0,
+      "passed": true,
+      "readiness_classes": [],
+      "ready_packet_count": 0,
+      "result_digest": null,
+      "scenario_id": "forged_candidate_fails_closed"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": "point-query evidence tactical-state digest mismatch",
+      "packet_count": 0,
+      "passed": true,
+      "readiness_classes": [],
+      "ready_packet_count": 0,
+      "result_digest": null,
+      "scenario_id": "stale_state_fails_closed"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 0,
+      "error": "point-query evidence must retain NO_ORDERS authority",
+      "packet_count": 0,
+      "passed": true,
+      "readiness_classes": [],
+      "ready_packet_count": 0,
+      "result_digest": null,
+      "scenario_id": "authority_alteration_fails_closed"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 1,
+      "error": null,
+      "packet_count": 1,
+      "passed": true,
+      "readiness_classes": [
+        "DEFERRED_POINT_UNOBSERVED"
+      ],
+      "ready_packet_count": 0,
+      "result_digest": "78dc2b6d020a05a9142b9757d72d9a25c75f1837844e47d8385d3d6e101f6e6d",
+      "scenario_id": "role_threshold_case_defers_without_evidence"
+    },
+    {
+      "blocked_packet_count": 0,
+      "checks": {
+        "authority_prohibited": true,
+        "error_expectation": true,
+        "forbidden_readiness": true,
+        "minimum_blocked": true,
+        "minimum_deferred": true,
+        "minimum_ready": true,
+        "no_execution_claim": true,
+        "required_readiness": true
+      },
+      "deferred_packet_count": 2,
+      "error": null,
+      "packet_count": 2,
+      "passed": true,
+      "readiness_classes": [
+        "DEFERRED_POINT_UNOBSERVED"
+      ],
+      "ready_packet_count": 0,
+      "result_digest": "57f0c5944a05e187272a42e9477f8ae0e43ad942bdddc4a5b552bcd5b3aa96a7",
+      "scenario_id": "rout_cascade_egress_defers_without_evidence"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "suite_id": "v0.1V_guarded_action_matrix"
+}

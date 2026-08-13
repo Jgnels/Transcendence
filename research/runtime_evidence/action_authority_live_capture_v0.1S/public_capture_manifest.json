@@ -1,0 +1,15 @@
+﻿{
+    "schema_version":  1,
+    "capture_kind":  "action_authority",
+    "collected_at_utc":  "2026-07-30T08:06:08.5511516Z",
+    "raw_log_sha256":  "b4f8c4ca9c285018772d50a4eda92f34572f742dd97967bca8229b0a6b3ce951",
+    "raw_log_size_bytes":  732081,
+    "raw_log_included_in_export":  false,
+    "prepared_manifest_sha256":  "b4a533067be3f83a8aa1a73e2f5003fc008971dc64a14ff15552757f5c4a418d",
+    "summary_sha256":  "4ffbef25751bfb6ceb322157d611f3b93d8c76153214de9c93aaaa3907e766a1",
+    "verification_sha256":  "48c5fee2788091d17d9e87b9aad718a16a53696f0f08979515b61becdf03cba3",
+    "installed_pack_sha256":  "3acf60520b60f87f8c18e13532512324cb7a539626996ce19897fad94cf2d25d",
+    "authority":  "NO_ORDERS",
+    "project_issue_attempt_count":  0,
+    "direct_acknowledgement_count":  0
+}

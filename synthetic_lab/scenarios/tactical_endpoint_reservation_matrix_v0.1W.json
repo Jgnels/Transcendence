@@ -1,0 +1,813 @@
+{
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Endpoint separation is not route, formation, terrain, or collision simulation.",
+    "A reservation is not an order and has no application authority.",
+    "Synthetic fixture performance does not establish live WH3 tactical quality."
+  ],
+  "metamorphic_checks": [
+    {
+      "check_id": "reservation_reverse_packet_order",
+      "operation": "REVERSE_PACKET_ORDER",
+      "scenario_id": "alternative_endpoint_avoids_collision"
+    },
+    {
+      "check_id": "reservation_translate_endpoints",
+      "operation": "TRANSLATE_ALL_ENDPOINTS",
+      "scenario_id": "three_way_chain_uses_nonconflicting_pair"
+    },
+    {
+      "check_id": "reservation_reverse_candidate_order",
+      "operation": "REVERSE_CANDIDATE_ORDER",
+      "scenario_id": "alternative_endpoint_avoids_collision"
+    }
+  ],
+  "result_digest": "98d49b4fe623c3da17227a2c16248a1d02aa7a34fc73f67e28834e6afb4288d5",
+  "scenarios": [
+    {
+      "expectations": {
+        "reservation_count": 0,
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 0
+      },
+      "packets": [],
+      "scenario_id": "empty_packet_set"
+    },
+    {
+      "expectations": {
+        "reservation_count": 1,
+        "reserved_objective_ids": [
+          "OBJ:single"
+        ],
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 0
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "single",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        }
+      ],
+      "scenario_id": "single_ready_endpoint"
+    },
+    {
+      "expectations": {
+        "reservation_count": 2,
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 0
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "left",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "right",
+          "points": [
+            [
+              20,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        }
+      ],
+      "scenario_id": "two_separated_endpoints"
+    },
+    {
+      "expectations": {
+        "reservation_count": 1,
+        "reserved_objective_ids": [
+          "OBJ:critical"
+        ],
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 1
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "critical",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "CRITICAL",
+          "utility": 0.8
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "medium",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.99
+        }
+      ],
+      "scenario_id": "critical_wins_exact_collision"
+    },
+    {
+      "expectations": {
+        "reservation_count": 2,
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 0
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "anchor",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "HIGH",
+          "utility": 0.8
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "flex",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              24,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.7
+        }
+      ],
+      "scenario_id": "alternative_endpoint_avoids_collision"
+    },
+    {
+      "expectations": {
+        "reservation_count": 2,
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 1
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "a",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "HIGH",
+          "utility": 0.8
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "b",
+          "points": [
+            [
+              8,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.7
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "c",
+          "points": [
+            [
+              16,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "HIGH",
+          "utility": 0.6
+        }
+      ],
+      "scenario_id": "three_way_chain_uses_nonconflicting_pair"
+    },
+    {
+      "expectations": {
+        "reservation_count": 1,
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 1
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "tie_a",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "HIGH",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "tie_b",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "HIGH",
+          "utility": 0.5
+        }
+      ],
+      "scenario_id": "identical_priority_tie_is_stable"
+    },
+    {
+      "expectations": {
+        "reservation_count": 1,
+        "reserved_objective_ids": [
+          "OBJ:ready"
+        ],
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 0
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "ready",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "deferred",
+          "points": [],
+          "readiness": "DEFERRED",
+          "severity": "CRITICAL",
+          "utility": 1.0
+        }
+      ],
+      "scenario_id": "deferred_packet_is_not_reserved"
+    },
+    {
+      "expectations": {
+        "reservation_count": 1,
+        "reserved_objective_ids": [
+          "OBJ:critical"
+        ],
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 2
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "critical",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "CRITICAL",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "low_a",
+          "points": [
+            [
+              4,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "LOW",
+          "utility": 1.0
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "low_b",
+          "points": [
+            [
+              -4,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "LOW",
+          "utility": 0.9
+        }
+      ],
+      "scenario_id": "critical_preempts_two_lower_candidates"
+    },
+    {
+      "expectations": {
+        "reservation_count": 20,
+        "solver_mode": "DETERMINISTIC_GREEDY_PACKET_LIMIT_FALLBACK",
+        "unreserved_count": 0
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_00",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_01",
+          "points": [
+            [
+              20,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_02",
+          "points": [
+            [
+              40,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_03",
+          "points": [
+            [
+              60,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_04",
+          "points": [
+            [
+              80,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_05",
+          "points": [
+            [
+              100,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_06",
+          "points": [
+            [
+              120,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_07",
+          "points": [
+            [
+              140,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_08",
+          "points": [
+            [
+              160,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_09",
+          "points": [
+            [
+              180,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_10",
+          "points": [
+            [
+              200,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_11",
+          "points": [
+            [
+              220,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_12",
+          "points": [
+            [
+              240,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_13",
+          "points": [
+            [
+              260,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_14",
+          "points": [
+            [
+              280,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_15",
+          "points": [
+            [
+              300,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_16",
+          "points": [
+            [
+              320,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_17",
+          "points": [
+            [
+              340,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_18",
+          "points": [
+            [
+              360,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "scale_19",
+          "points": [
+            [
+              380,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        }
+      ],
+      "scenario_id": "packet_limit_fallback_is_explicit"
+    },
+    {
+      "expectations": {
+        "reservation_count": 1,
+        "reserved_objective_ids": [
+          "OBJ:one"
+        ],
+        "solver_mode": "EXACT_BRANCH_AND_BOUND",
+        "unreserved_count": 2
+      },
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "one",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "HIGH",
+          "utility": 0.9
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "two",
+          "points": [
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              3,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "HIGH",
+          "utility": 0.8
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "three",
+          "points": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              5,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.99
+        }
+      ],
+      "scenario_id": "all_candidates_collide_one_survives"
+    },
+    {
+      "expectations": {
+        "expect_error": true
+      },
+      "mutation": "ALTER_PACKET_SET_AUTHORITY",
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "bad_auth",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        }
+      ],
+      "scenario_id": "altered_authority_fails_closed"
+    },
+    {
+      "expectations": {
+        "expect_error": true
+      },
+      "mutation": "DUPLICATE_PLAN_ID",
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "dup_a",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        },
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "dup_b",
+          "points": [
+            [
+              20,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        }
+      ],
+      "scenario_id": "duplicate_plan_identity_fails_closed"
+    },
+    {
+      "expectations": {
+        "expect_error": true
+      },
+      "mutation": "NONFINITE_ENDPOINT",
+      "packets": [
+        {
+          "objective_type": "RELIEVE_FRONTLINE",
+          "packet_key": "nan",
+          "points": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "readiness": "READY",
+          "severity": "MEDIUM",
+          "utility": 0.5
+        }
+      ],
+      "scenario_id": "nonfinite_endpoint_fails_closed"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "suite_contract": "TACTICAL_ENDPOINT_RESERVATION_MATRIX_V1",
+  "suite_id": "v0.1W_endpoint_reservation_matrix"
+}
