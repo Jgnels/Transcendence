@@ -1,5 +1,5 @@
 diff --git a/README.md b/README.md
-index 3dde40e..09be77f 100644
+index 3dde40e..9d83ec8 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,6 +1,6 @@
@@ -7,19 +7,19 @@ index 3dde40e..09be77f 100644
 +## v0.2R offline engineering — GITHUB-CANONICAL
  
 -v0.2R prepares three isolated offline capabilities on top of the sealed v0.2Q evidence: a deterministic Native Behavior Replay Lab, a fail-closed single-row native CAI Ablation Factory, and an active-document native-first architecture audit. No fresh Stage-A SFO replication has been consumed; no native row experiment is earned; no real ablation pack is committed or installed. The game-side Lua probes remain frozen. This integration candidate must not supersede sealed v0.2Q until the GitHub canonical cutover and v0.2R promotion checks complete. Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
-+v0.2R is now promoted to GitHub `main` on top of the exact sealed v0.2Q evidence. It adds three isolated offline capabilities: a deterministic Native Behavior Replay Lab, a fail-closed single-row native CAI Ablation Factory, and an active-document native-first architecture audit. GitHub canonicalization completed through PR #1 (sealed v0.2Q cutover) and PR #2 (exact validated v0.2R tree); canonical `main` is merge commit `af389b86861e5a30ac4f32e820d4230342870402` with tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` before this documentation-only closeout. No fresh Stage-A SFO replication has been consumed; no native row experiment is earned; no real ablation pack is committed or installed. The game-side Lua probes remain frozen. v0.2Q remains the authoritative evidence milestone and its fresh Stage-A SFO replication remains the next evidence-gathering step. Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
++v0.2R is now promoted to GitHub `main` on top of the exact sealed v0.2Q evidence. It adds three isolated offline capabilities: a deterministic Native Behavior Replay Lab, a fail-closed single-row native CAI Ablation Factory, and an active-document native-first architecture audit. GitHub canonicalization completed through PR #1 (sealed v0.2Q cutover) and PR #2 (exact validated v0.2R tree); canonical `main` is merge commit `fae5ccdf44b98823182558c96d2f4c87218ac54c` with tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` before this documentation-only closeout. No fresh Stage-A SFO replication has been consumed; no native row experiment is earned; no real ablation pack is committed or installed. The game-side Lua probes remain frozen. v0.2Q remains the authoritative evidence milestone and its fresh Stage-A SFO replication remains the next evidence-gathering step. Authority remains `NO_ORDERS`; application authority remains `PROHIBITED`.
  
  ## Current continuation — v0.2Q
  
 diff --git a/SHA256SUMS.txt b/SHA256SUMS.txt
-index f9a7fda..0a9eee5 100644
+index f9a7fda..7375610 100644
 --- a/SHA256SUMS.txt
 +++ b/SHA256SUMS.txt
 @@ -1,6 +1,6 @@
  c39441d58e3908a1bee4bd924a0d4f2c8c3d451b24aef9bd8541cbbb6e26d14e  .gitignore
  8de6c7880ed0bddb68df4932adb7145a2311d57a699f5957fbb5a4d02a8775e6  AGENTS.md
 -f30db5fa200263b99d18cd023ce4bc6764f5d14f8c6fff432675cd471850c1a6  README.md
-+6ea8e4831596a18ef9fdf5a671f2cd72eec9adc582ccefecd181d7c4a6465ec3  README.md
++19f0b38c265d250a4e7237a13ddbc8221bbf80635c7610ba363de5c6a65fb500  README.md
  0e9259ec39d1dc7dd9a559b4b2fb81c026e7c3007ff7591ae89acbf43001ea72  gates/GATE_0_ACTION_AUTHORITY_AND_FEASIBILITY_PREPARATION_REPORT_v0.1R.md
  3f6432fbb29aba659310316219b3f2589d847f9fefe9d4bf63682ddd347b52aa  gates/GATE_0_ACTION_AUTHORITY_LIVE_OBSERVATION_REPORT_v0.1S.md
  f610be3f8dded327dfe25aa37a14742c71cc846ccecbda4cd412ac0f1084d6b3  gates/GATE_0_ACTION_FEASIBILITY_SEMANTIC_CALIBRATION_REPORT_v0.1U.md
@@ -28,7 +28,7 @@ index f9a7fda..0a9eee5 100644
  c18d39ab18b93d2872539f2c08f362efd0423a6fbe9301c46d19264364043555  gates/GATE_0_OBSERVER_EXACT_REPLICATION_REPORT_v0.1F.md
  edbb244318d20df7a332a05ed04323dacf9642e2846b5d63aaafe8327ee1787a  gates/GATE_0_OBSERVER_RUN_1_REPORT_v0.1D.md
 -78f16f44262fe7a4364daaefde9c2e2deb19227f315d9f5dd7f3437820154897  gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
-+5ae721de0556dccc86c7d09e96cd85d10b632f31a43741330d5cdd472e1d1470  gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
++ddbebfc9b771f1a58460267e89ef4924b8025ae092797235fe67fbf418760d8e  gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
  4a126ec0c7ec6d58f82e7d09d8ca10cdc7af55e1e1e40338dceca6661a912dc5  gates/GATE_0_OFFLINE_SEGMENT_REPORT_v0.1B.md
  ee934b3fc50e8337f026596323ef67d34f3993015927cdd0eaf58fab8a99c507  gates/GATE_0_PERSISTENCE_AND_SHADOW_PREPARATION_REPORT_v0.1G.md
  dd923c5e7fcfae6c30f666ca5d2eb41b8876db188dde1c8172456b5e9227536b  gates/GATE_0_PERSISTENCE_ROUNDTRIP_REPORT_v0.1G.md
@@ -37,12 +37,12 @@ index f9a7fda..0a9eee5 100644
  b2ab596bf2499686e8c49bc13a0057f81f9c81946e8001341edabea72a439dbd  research/CAPABILITY_MATRIX.md
  a99ed3cff7537650e247b15c33e5f22d574575258a85e85dccb393d5b19ef9aa  research/CLAIM_REGISTER.md
 -10c0539a56647d1a2bcee964decace3c2c1648605dff6cc76076489c4b536077  research/CURRENT_STATE.md
-+95cfb8171cc74b977e807fcf447ae0637224a9fb5d53c5f0e0bae0570b2cdb58  research/CURRENT_STATE.md
++23760b49e9fc452f9bc755cf41281b4d0334323058be099e2f2bcd9e9f61a39a  research/CURRENT_STATE.md
  e2ec0f4a00f18f74cf22612cfa018a85f369ef4943d2bc7688bffc344e81abae  research/DECISION_LOG.md
  5b9a6aa13bed5418bbf24f1eafff119179a134d26642f7810a4078c749b9c800  research/GUARDED_TACTICAL_ACTION_PACKET_SPEC_v0.1V.md
  d2ebaddc261ff707d2701d8bf06735f09782adf70b90021cedc4a457af822699  research/KNOWN_RISKS.md
 diff --git a/gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md b/gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
-index 9955979..42f63dc 100644
+index 9955979..88c04da 100644
 --- a/gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
 +++ b/gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
 @@ -1,6 +1,6 @@
@@ -79,11 +79,11 @@ index 9955979..42f63dc 100644
 +6. both frozen game-side Lua hashes unchanged.
 +7. exact v0.2R promotion inventory recorded: 18 changed files relative to canonical v0.2Q `main`.
 +8. v0.2R was built on exact sealed v0.2Q tree `e665e7808aff3d4797ac40793ad145ff19a9aa0b`, not stale historical `main`.
-+9. exact validated v0.2R tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` was promoted through PR #2; `main` reached merge commit `af389b86861e5a30ac4f32e820d4230342870402` before this documentation-only closeout.
++9. exact validated v0.2R tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` was promoted through PR #2; `main` reached merge commit `fae5ccdf44b98823182558c96d2f4c87218ac54c` before this documentation-only closeout.
 +
 +This gate is closed. The active evidence gate remains `GATE_0_NATIVE_SFO_REPLICATION_v0.2Q.md`; no promotion result grants row-ablation or gameplay-order authority.
 diff --git a/research/CURRENT_STATE.md b/research/CURRENT_STATE.md
-index d3580f9..926b2ad 100644
+index d3580f9..b9c090a 100644
 --- a/research/CURRENT_STATE.md
 +++ b/research/CURRENT_STATE.md
 @@ -1,10 +1,11 @@
@@ -92,7 +92,7 @@ index d3580f9..926b2ad 100644
  
 -- Sealed v0.2Q remains the canonical evidence milestone until GitHub cutover/promotion completes.
 -- Offline Behavior Replay Lab now validates capture ZIP inventory/SHA/provenance/completeness, reconstructs per-force timelines, reuses frozen v0.2N–v0.2Q evaluators, produces deterministic JSON/CSV/Markdown, and separates preregistered, causal-review, and `EXPLORATORY` outputs. Raw historical vanilla/SFO capture ZIPs are not present in the canonical source, so no synthetic fixture is being misrepresented as replay of owner evidence.
-+- Repository normalization is complete: PR #1 promoted the exact sealed v0.2Q tree, and PR #2 promoted the exact validated v0.2R offline-engineering tree. `main` reached merge commit `af389b86861e5a30ac4f32e820d4230342870402` / tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` before this documentation-only closeout.
++- Repository normalization is complete: PR #1 promoted the exact sealed v0.2Q tree, and PR #2 promoted the exact validated v0.2R offline-engineering tree. `main` reached merge commit `fae5ccdf44b98823182558c96d2f4c87218ac54c` / tree `3f4b8a721eec479a023561e5324fb4e8f48e8193` before this documentation-only closeout.
 +- v0.2Q remains the authoritative evidence milestone. v0.2R is a canonical engineering layer and does not reinterpret or replace the frozen v0.2Q evidence.
 +- Offline Behavior Replay Lab validates capture ZIP inventory/SHA/provenance/completeness, reconstructs per-force timelines, reuses frozen v0.2N–v0.2Q evaluators, produces deterministic JSON/CSV/Markdown, and separates preregistered, causal-review, and `EXPLORATORY` outputs. Raw historical vanilla/SFO capture ZIPs are not present in the canonical source, so no synthetic fixture is being misrepresented as replay of owner evidence.
  - Single-row native CAI Ablation Factory machinery is ready but inactive. Real row selection remains `NOT_EARNED`; no pack is committed/installed; actual experimental builds require one exact row/value, source header/provenance, explicit future evidence/owner authorization, and fail closed on uncertified keys unless separately authorized.
