@@ -1,0 +1,364 @@
++from transcendence_lab.native_sfo_causal_review import (
++    adjudicate_sfo_replication_stage_a,
++    build_causal_review,
++    replication_policy,
++)
++
++AUTHORITY = "NO_ORDERS"
++APPLICATION_AUTHORITY = "PROHIBITED"
++RESEARCH_VISIBILITY = "PRIVILEGED_OMNISCIENT_DIAGNOSTIC"
++APPLICATION_ELIGIBLE = False
++NORMALIZED_CONTRACT = "NATIVE_CAI_BEHAVIOR_REPLAY_NORMALIZED_V1"
++COMPARISON_CONTRACT = "NATIVE_CAI_BEHAVIOR_REPLAY_COMPARISON_V1"
++STUDY_VERSION = "v0.2R"
++
++KNOWN_DIAGNOSTIC_EVENTS = {
++    "RUNTIME_BEGIN",
++    "PACK_LOADED",
++    "CAPABILITY",
++    "HUMAN_TURN_MARKER",
++    "AI_FACTION_SKIPPED",
++    "AI_SNAPSHOT_BEGIN",
++    "AI_FORCE",
++    "AI_REGION",
++    "AI_WAR",
++    "AI_SNAPSHOT_END",
++    "AI_BATTLE_BEGIN",
++    "AI_BATTLE_PARTICIPANT",
++    "AI_BATTLE_END",
++}
++
++SUPPORTED_EXPORTS: dict[str, dict[str, str | None]] = {
++    "NATIVE_CAI_DIAGNOSTIC_BEHAVIOR_STUDY_PUBLIC_EXPORT_V1": {
++        "profile": "VANILLA",
++        "stored_result": "native_behavior_study_result.json",
++        "profile_binding": "native_behavior_study_profile_binding.json",
++        "verification": "native_behavior_study_verification.json",
++    },
++    "NATIVE_CAI_DIAGNOSTIC_SFO_BEHAVIOR_BENCHMARK_PUBLIC_EXPORT_V1": {
++        "profile": "SFO",
++        "stored_result": "native_sfo_behavior_benchmark_result.json",
++        "profile_binding": "native_sfo_behavior_profile_binding.json",
++        "verification": "native_sfo_behavior_benchmark_verification.json",
++    },
++    "NATIVE_CAI_DIAGNOSTIC_PUBLIC_EXPORT_V1": {
++        "profile": "UNSPECIFIED_DIAGNOSTIC",
++        "stored_result": None,
++        "profile_binding": "native_diagnostic_profile_binding.json",
++        "verification": "native_diagnostic_capture_verification.json",
++    },
++}
++
++TIMELINE_FIELDS = [
++    "faction",
++    "force_cqi",
++    "turn",
++    "present_start",
++    "present_end",
++    "start_x",
++    "start_y",
++    "end_x",
++    "end_y",
++    "movement_distance",
++    "start_region",
++    "end_region",
++    "start_stance",
++    "end_stance",
++    "start_unit_count",
++    "end_unit_count",
++    "start_average_unit_health_pct",
++    "end_average_unit_health_pct",
++    "start_force_strength",
++    "end_force_strength",
++    "start_action_points_remaining_pct",
++    "end_action_points_remaining_pct",
++    "wars",
++    "owned_regions",
++    "territorial",
++    "battle_sequences",
++    "battle_roles",
++    "telemetry_complete",
++    "identity_discontinuity",
++]
++
++
++class NativeBehaviorReplayError(ValueError):
++    pass
++
++
++def _sha256(blob: bytes) -> str:
++    return hashlib.sha256(blob).hexdigest()
++
++
++def _json_bytes(value: Any) -> bytes:
++    return (json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False) + "\n").encode("utf-8")
++
++
++def _authority_fields() -> dict[str, Any]:
++    return {
++        "authority": AUTHORITY,
++        "application_authority": APPLICATION_AUTHORITY,
++        "research_visibility": RESEARCH_VISIBILITY,
++        "application_eligible": APPLICATION_ELIGIBLE,
++    }
++
++
++def _safe_zip_name(name: str) -> bool:
++    if not name or "\\" in name:
++        return False
++    path = PurePosixPath(name)
++    if path.is_absolute() or any(part in {"", ".", ".."} for part in path.parts):
++        return False
++    return True
++
++
++def _load_json_blob(blobs: dict[str, bytes], name: str, *, required: bool = True) -> dict[str, Any] | None:
++    blob = blobs.get(name)
++    if blob is None:
++        if required:
++            raise NativeBehaviorReplayError(f"capture member missing: {name}")
++        return None
++    try:
++        value = json.loads(blob.decode("utf-8-sig"))
++    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
++        raise NativeBehaviorReplayError(f"invalid JSON member {name}: {exc}") from exc
++    if not isinstance(value, dict):
++        raise NativeBehaviorReplayError(f"JSON member must be an object: {name}")
++    return value
++
++
++def _validate_authority(value: dict[str, Any], label: str) -> None:
++    expected = _authority_fields()
++    for key, wanted in expected.items():
++        if value.get(key) != wanted:
++            raise NativeBehaviorReplayError(
++                f"{label} authority boundary drifted for {key}: expected {wanted!r}, got {value.get(key)!r}"
++            )
++
++
++def _read_capture(path: Path, expected_sha256: str | None) -> tuple[dict[str, bytes], dict[str, Any], dict[str, Any]]:
++    blob = path.read_bytes()
++    capture_sha = _sha256(blob)
++    if expected_sha256 is not None and capture_sha.casefold() != expected_sha256.casefold():
++        raise NativeBehaviorReplayError(
++            f"capture SHA-256 mismatch: expected {expected_sha256.casefold()}, got {capture_sha}"
++        )
++    try:
++        archive = zipfile.ZipFile(path)
++    except zipfile.BadZipFile as exc:
++        raise NativeBehaviorReplayError("capture is not a valid ZIP archive") from exc
++    with archive:
++        if archive.testzip() is not None:
++            raise NativeBehaviorReplayError("capture ZIP CRC/integrity check failed")
++        infos = [info for info in archive.infolist() if not info.is_dir()]
++        names = [info.filename for info in infos]
++        if len(names) != len(set(names)):
++            duplicates = sorted(name for name, count in Counter(names).items() if count > 1)
++            raise NativeBehaviorReplayError(f"capture contains duplicate ZIP members: {duplicates}")
++        unsafe = sorted(name for name in names if not _safe_zip_name(name))
++        if unsafe:
++            raise NativeBehaviorReplayError(f"capture contains unsafe member paths: {unsafe}")
++        blobs = {info.filename: archive.read(info) for info in infos}
++
++    manifest = _load_json_blob(blobs, "export_manifest.json")
++    assert manifest is not None
++    contract = str(manifest.get("contract", ""))
++    if contract not in SUPPORTED_EXPORTS:
++        raise NativeBehaviorReplayError(f"unsupported capture export contract: {contract!r}")
++    _validate_authority(manifest, "export manifest")
++    if manifest.get("contains_private_machine_paths") is not False:
++        raise NativeBehaviorReplayError("capture is not declared privacy-safe")
++    rows = manifest.get("files")
++    if not isinstance(rows, list):
++        raise NativeBehaviorReplayError("export manifest files must be a list")
++    expected_members: dict[str, dict[str, Any]] = {}
++    for row in rows:
++        if not isinstance(row, dict):
++            raise NativeBehaviorReplayError("export manifest file row must be an object")
++        name = str(row.get("name", ""))
++        if not _safe_zip_name(name):
++            raise NativeBehaviorReplayError(f"invalid manifest file name: {name!r}")
++        if name == "export_manifest.json" or name in expected_members:
++            raise NativeBehaviorReplayError(f"duplicate/reserved manifest file row: {name}")
++        expected_members[name] = row
++    actual_payload = set(blobs) - {"export_manifest.json"}
++    if set(expected_members) != actual_payload:
++        missing = sorted(set(expected_members) - actual_payload)
++        extra = sorted(actual_payload - set(expected_members))
++        raise NativeBehaviorReplayError(f"manifest/archive member mismatch; missing={missing}; extra={extra}")
++    for name, row in sorted(expected_members.items()):
++        member = blobs[name]
++        if int(row.get("size_bytes", -1)) != len(member):
++            raise NativeBehaviorReplayError(f"manifest size mismatch: {name}")
++        if str(row.get("sha256", "")).casefold() != _sha256(member):
++            raise NativeBehaviorReplayError(f"manifest SHA-256 mismatch: {name}")
++
++    provenance = {
++        "capture_file_name": path.name,
++        "capture_size_bytes": len(blob),
++        "capture_sha256": capture_sha,
++        "external_sha256_bound": expected_sha256 is not None,
++        "export_contract": contract,
++        "export_manifest_sha256": _sha256(blobs["export_manifest.json"]),
++        "manifest_payload_file_count": len(expected_members),
++        "zip_member_count": len(blobs),
++        "zip_integrity": "PASS",
++        "manifest_integrity": "PASS",
++    }
++    return blobs, manifest, provenance
++
++
++def _scan_log_events(log_blob: bytes) -> list[str]:
++    try:
++        text = log_blob.decode("utf-8-sig")
++    except UnicodeDecodeError as exc:
++        raise NativeBehaviorReplayError("diagnostic log is not valid UTF-8") from exc
++    unknown: set[str] = set()
++    for line in text.splitlines():
++        parsed = parse_line(line)
++        if parsed is None:
++            continue
++        event, _ = parsed
++        if event not in KNOWN_DIAGNOSTIC_EVENTS:
++            unknown.add(event)
++    return sorted(unknown)
++
++
++def _parse_trace_from_blob(log_blob: bytes) -> dict[str, Any]:
++    unknown = _scan_log_events(log_blob)
++    if unknown:
++        raise NativeBehaviorReplayError(
++            f"unknown future diagnostic event(s) encountered; replay fails closed: {unknown}"
++        )
++    with tempfile.TemporaryDirectory() as temp:
++        path = Path(temp) / "transcendence_native_diagnostic_log.txt"
++        path.write_bytes(log_blob)
++        try:
++            return parse_diagnostic_trace(path)
++        except (ValueError, KeyError, TypeError) as exc:
++            raise NativeBehaviorReplayError(f"diagnostic log parse failed: {exc}") from exc
++
++
++def _force_map(snapshot: dict[str, Any]) -> dict[str, dict[str, Any]]:
++    out: dict[str, dict[str, Any]] = {}
++    for force in snapshot.get("forces", []):
++        force_id = str(force.get("force_cqi", ""))
++        if not force_id or force_id == "-1":
++            continue
++        if force_id in out:
++            raise NativeBehaviorReplayError(f"duplicate force_cqi in snapshot: {force_id}")
++        out[force_id] = force
++    return out
++
++
++def _position(force: dict[str, Any] | None) -> tuple[float, float] | None:
++    if force is None:
++        return None
++    try:
++        x, y = float(force.get("x", -1)), float(force.get("y", -1))
++    except (TypeError, ValueError):
++        return None
++    if x < 0 or y < 0:
++        return None
++    return x, y
++
++
++def _force_identity(force: dict[str, Any] | None) -> tuple[str, str, str] | None:
++    if force is None:
++        return None
++    general = str(force.get("general_cqi", "-1"))
++    subtype = str(force.get("subtype", "unknown"))
++    char_type = str(force.get("character_type_key", "unknown"))
++    if general in {"", "-1"} and subtype == "unknown" and char_type == "unknown":
++        return None
++    return general, subtype, char_type
++
++
++def _between_battles(
++    battles: list[dict[str, Any]],
++    faction: str,
++    force_cqi: str,
++    left_event_index: int,
++    right_event_index: int,
++) -> tuple[list[int], list[str]]:
++    sequences: list[int] = []
++    roles: set[str] = set()
++    for battle in battles:
++        index = int(battle["begin_event_index"])
++        if not (left_event_index < index < right_event_index):
++            continue
++        matched = [
++            row for row in battle.get("participants", [])
++            if str(row.get("faction")) == faction and str(row.get("force_cqi")) == force_cqi
++        ]
++        if matched:
++            sequences.append(int(battle["battle_sequence"]))
++            roles.update(str(row.get("side")) for row in matched)
++    return sorted(sequences), sorted(roles)
++
++
++def build_force_timeline(trace: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
++    rows: list[dict[str, Any]] = []
++    identity_flags: list[dict[str, Any]] = []
++    previous_identity: dict[tuple[str, str], tuple[int, tuple[str, str, str]]] = {}
++    battles = sorted(trace.get("battle_sequences", []), key=lambda row: int(row["begin_event_index"]))
++
++    for observation in sorted(trace.get("observations", []), key=lambda row: (int(row["turn"]), str(row["faction"]))):
++        turn = int(observation["turn"])
++        faction = str(observation["faction"])
++        start, end = observation["start"], observation["end"]
++        start_forces, end_forces = _force_map(start), _force_map(end)
++        wars = sorted(str(row.get("enemy")) for row in end.get("wars", []) if row.get("enemy"))
++        owned_regions = sorted(str(row.get("region")) for row in end.get("regions", []) if row.get("region"))
++        for force_cqi in sorted(set(start_forces) | set(end_forces), key=lambda value: (len(value), value)):
++            start_force = start_forces.get(force_cqi)
++            end_force = end_forces.get(force_cqi)
++            start_pos, end_pos = _position(start_force), _position(end_force)
++            movement = None
++            if start_pos is not None and end_pos is not None:
++                movement = round(math.hypot(end_pos[0] - start_pos[0], end_pos[1] - start_pos[1]), 6)
++            sequences, roles = _between_battles(
++                battles,
++                faction,
++                force_cqi,
++                int(start["end_event_index"]),
++                int(end["begin_event_index"]),
++            )
++            identity = _force_identity(end_force or start_force)
++            discontinuity = False
++            if identity is not None:
++                key = (faction, force_cqi)
++                prior = previous_identity.get(key)
++                if prior is not None and prior[0] + 1 == turn and prior[1] != identity:
++                    discontinuity = True
++                    identity_flags.append({
++                        "faction": faction,
++                        "force_cqi": force_cqi,
++                        "prior_turn": prior[0],
++                        "turn": turn,
++                        "prior_identity": list(prior[1]),
++                        "current_identity": list(identity),
++                        "classification": "FORCE_CQI_CONSECUTIVE_IDENTITY_CHANGE",
++                    })
++                previous_identity[key] = (turn, identity)
++
++            def get(force: dict[str, Any] | None, key: str) -> Any:
++                return None if force is None else force.get(key)
++
++            rows.append({
++                "faction": faction,
++                "force_cqi": force_cqi,
++                "turn": turn,
++                "present_start": start_force is not None,
++                "present_end": end_force is not None,
++                "start_x": None if start_pos is None else start_pos[0],
++                "start_y": None if start_pos is None else start_pos[1],
++                "end_x": None if end_pos is None else end_pos[0],
++                "end_y": None if end_pos is None else end_pos[1],
++                "movement_distance": movement,
++                "start_region": get(start_force, "region"),
++                "end_region": get(end_force, "region"),
++                "start_stance": get(start_force, "stance"),
++                "end_stance": get(end_force, "stance"),
++                "start_unit_count": get(start_force, "unit_count"),
++                "end_unit_count": get(end_force, "unit_count"),
