@@ -1,0 +1,242 @@
+diff --git a/gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md b/gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
+new file mode 100644
+index 0000000..9955979
+--- /dev/null
++++ b/gates/GATE_0_OFFLINE_ENGINEERING_v0.2R.md
+@@ -0,0 +1,64 @@
++# Gate 0 — v0.2R Offline Engineering Integration
++
++**Status:** OFFLINE PROMOTION VALIDATION PASS; GITHUB CANONICAL BASE CUTOVER STILL REQUIRED  
++**Authority:** `NO_ORDERS`  
++**Application authority:** `PROHIBITED`
++
++## Scope
++
++v0.2R is an offline engineering milestone layered on the sealed v0.2Q evidence. It does not consume a new Stage-A SFO campaign and does not change any frozen v0.2Q threshold or decision rule.
++
++### Track A — Native Behavior Replay Lab
++
++- deterministic capture ZIP normalization with manifest/SHA/provenance/completeness checks;
++- explicit missing-battle-telemetry handling: missing telemetry is never interpreted as “no battle”;
++- per-force longitudinal timelines and deterministic JSON/CSV/Markdown outputs;
++- frozen v0.2N–v0.2Q metric/policy reuse rather than reimplementation;
++- separate preregistered, causal-review, and `EXPLORATORY` outputs;
++- adversarial coverage for partial turns, duplicate records, incomplete battles, CQI identity reuse, stationary/roaming forces, overlapping reversals, concentration, tampering, unknown events, and insufficient denominators;
++- no change to either game-side Lua probe.
++
++Raw historical vanilla/SFO diagnostic capture ZIPs are not in the canonical source. The lab is therefore certified against adversarial fixtures and frozen published references without claiming to have replayed unavailable owner captures.
++
++### Track B — Single-Row Native CAI Ablation Factory
++
++- one-row/one-value deterministic PFH5 machinery;
++- exact table/key/original/experimental/header/provenance manifest;
++- deterministic SHA-256 and rollback instructions;
++- fail closed on multiple rows, key changes, unsupported layouts, and uncertified keys unless a future explicit research override is present;
++- real evidence-earned builds additionally require a future explicit build gate, owner authorization, and evidence digest;
++- no real row selected, no real ablation pack committed, no Workshop/game installation.
++
++Current experiment status: `NOT_EARNED`. Application status: `APPLICATION_INELIGIBLE`.
++
++### Track C — Native-First Active-Document Audit
++
++- v0.2Q made authoritative at the front of active state documentation;
++- paused v0.2I and evaluator-only v0.2G/v0.2H sections relabeled historical where active headings were misleading;
++- old “next gate must add portfolio-to-army assignment” language retired as an active mitigation while preserving the historical proposal;
++- false SFO allocator attribution, Grey Point Scuttlers generalization, privileged-state application leakage, and absence-as-capability claims remain explicitly blocked;
++- decision/evidence history remains preserved.
++
++## Frozen boundaries
++
++- Stage-A SFO replication policy unchanged.
++- Recovery threshold unchanged.
++- Temporal definitions/envelope unchanged.
++- Captured SFO row-footprint interpretation unchanged.
++- `NO_NATIVE_ROW_ABLATION_EARNED` remains binding.
++- Privileged diagnostic telemetry remains permanently `application_eligible=false`.
++- v0.2G/v0.2I remain outside the application path.
++- No campaign or battle order authority is granted.
++
++## Gate close requirements
++
++Before promotion, require:
++
++1. SyntheticLab PASS.
++2. Runtime Probe PASS.
++3. repository validator / manifest PASS.
++4. forbidden-artifact scan PASS.
++5. both frozen game-side Lua hashes unchanged.
++6. exact changed-file inventory recorded.
++7. no real ablation `.pack` in the repository.
++8. GitHub work based on the exact v0.2Q canonical cutover, not stale historical `main`.
+diff --git a/research/NATIVE_FIRST_ACTIVE_DOCUMENT_AUDIT_v0.2R.md b/research/NATIVE_FIRST_ACTIVE_DOCUMENT_AUDIT_v0.2R.md
+new file mode 100644
+index 0000000..09d40fc
+--- /dev/null
++++ b/research/NATIVE_FIRST_ACTIVE_DOCUMENT_AUDIT_v0.2R.md
+@@ -0,0 +1,33 @@
++# Native-first active-document audit — v0.2R
++
++**Status:** ACTIVE-DOCUMENT CORRECTIONS APPLIED OFFLINE  
++**Authority:** `NO_ORDERS`  
++**Application authority:** `PROHIBITED`
++
++## Scope
++
++This audit checks the canonical v0.2Q tree for active documentation that could accidentally reactivate superseded architecture or overstate evidence. Historical implementation/evidence records are preserved; the correction is to their **active-document framing**, not to rewrite what happened.
++
++## Findings and corrections
++
++1. **README milestone drift — corrected.** `VERIFIED_REPO_FACT`: v0.2Q was already the real current continuation, but older v0.2P/v0.2O/v0.2N/v0.2M/v0.2K/v0.2J and v0.2I/v0.2H/v0.2G headings still used “Current”. They are now explicitly historical. No historical implementation body was deleted.
++2. **CURRENT_STATE ordering drift — corrected.** `VERIFIED_REPO_FACT`: the v0.2Q adjudication existed at the bottom of `CURRENT_STATE.md` while the file opened with v0.2P/v0.2N/v0.2M/v0.2L/v0.2K sections labeled `CURRENT`. An authoritative v0.2Q block now leads the file and those older headings are labeled historical checkpoints.
++3. **Superseded v0.2G/v0.2H chain wording — corrected.** `VERIFIED_REPO_FACT`: `ARCHITECTURE.md` already contained an authoritative native-first supersession block, but older preserved sections below it still said “The current campaign reasoning chain is”. Those sentences now say historical, and the supersession boundary is explicit.
++4. **Stale allocator-next-step risk — corrected.** `VERIFIED_REPO_FACT`: an old v0.2F risk said the next gate “must add portfolio-to-army assignment”. The historical idea is preserved, but active mitigation now says v0.2F is evaluator-only and project allocation requires explicit native-first falsification.
++5. **SFO allocator attribution — already correct.** `VERIFIED_REPO_FACT`: current/claim/risk documents already state that captured SFO has no decoded allocator-variable override. No correction of the evidence was required.
++6. **Grey Point Scuttlers — already correctly bounded.** `VERIFIED_REPO_FACT` plus preserved `MODDER_COMMUNITY_CLAIM`: the formal trigger is preserved while ordinary territorial-thrashing causality is withheld. No named-force deletion or history rewrite was performed.
++7. **One campaign does not establish causation — already correct.** `VERIFIED_REPO_FACT`: v0.2Q explicitly blocks row attribution because campaign composition is unresolved and requires staged replication.
++8. **Privileged research telemetry — already correct.** `VERIFIED_REPO_FACT`: active architecture/risk documents preserve `application_eligible=false`, `NO_ORDERS`, and `PROHIBITED` for the diagnostic plane.
++9. **Absence does not prove native capability — already correct.** `VERIFIED_REPO_FACT`: claim/risk documents explicitly reject converting unobserved failure or undocumented internals into proof of native reserves, recovery protection, exclusivity, memory, or hysteresis.
++
++## Machine check
++
++`tools/audit_native_first_architecture.py` enforces a small set of active-document invariants so future edits cannot casually relabel paused v0.2I/v0.2G as current, revive the old allocator-next-step sentence, or remove the key evidence-boundary statements without causing the audit to fail closed.
++
++## Result
++
++The active documentation now has one unambiguous application architecture:
++
++`native WH3 CAI planner/executor → Transcendence observation/evidence → evaluator/oracle → evidence-earned native tuning → narrowly bounded correction after measured failure → project-owned strategic control only after explicit falsification`
++
++No gameplay code, Lua probe, threshold, owner evidence, historical decision, or application authority was changed by this audit.
+diff --git a/research/V02R_OFFLINE_ENGINEERING_VALIDATION_20260813.md b/research/V02R_OFFLINE_ENGINEERING_VALIDATION_20260813.md
+new file mode 100644
+index 0000000..d4db2cb
+--- /dev/null
++++ b/research/V02R_OFFLINE_ENGINEERING_VALIDATION_20260813.md
+@@ -0,0 +1,62 @@
++# v0.2R Offline Engineering Integration Validation — 2026-08-13
++
++**Candidate status:** OFFLINE VALIDATED; NOT YET GITHUB-CANONICAL  
++**Authority:** `NO_ORDERS`  
++**Application authority:** `PROHIBITED`  
++**Application eligibility:** unchanged
++
++## Base provenance
++
++The integration candidate was assembled from the exact sealed v0.2Q canonical source archive whose SHA-256 is:
++
++`653d2d4cd231f91d3acae91d3ae117907cde9bc3a93ddf3642565304cb557f6c`
++
++That source validated before modification at 193/193 SyntheticLab, 198/198 Runtime Probe, 391/391 combined, and 588/588 manifest hashes.
++
++## Integrated tracks
++
++1. Native Behavior Replay Lab.
++2. Single-Row Native CAI Ablation Factory.
++3. Native-First Active-Document Audit.
++
++The tracks were developed in isolated local copies and combined by copying only intentional source/test/document changes. Generated local-input sessions, caches, temporary files, and synthetic `.pack` outputs were excluded from the integration tree.
++
++## Direct regression before final ledger seal
++
++- SyntheticLab: **203/203 PASS**.
++- Runtime Probe: **219/219 PASS**.
++- Combined direct tests: **422/422 PASS**.
++- Python compileall: **PASS**.
++- Native-first active-document audit: **12/12 invariants PASS**.
++
++## Game-side Lua isolation
++
++Frozen hashes remain:
++
++- `runtime_probe/source/script/campaign/mod/transcendence_native_diagnostic_probe.lua`  
++  `0acb4e186a4f4077801a763dbbf5cacc8ae21a9d47ecc76d54fefe5c023ec203`
++- `runtime_probe/source/script/campaign/mod/transcendence_shadow_probe.lua`  
++  `4f8c80fb67efe288e4b7b4eeacc0c48578707a0e554f2dd8a454aa669b50ed98`
++
++No game-side Lua modification was made.
++
++## Repository validator
++
++After integrating the three tracks and the v0.2R gate, the repository validator passed with **599 hashed files** and the same 203 + 219 test split. This validation report is then added as the final audit record; the SHA ledger is regenerated and the validator is rerun so the externally reported final repository count includes this file.
++
++## Preserved experiment semantics
++
++- v0.2Q Stage-A SFO policy unchanged.
++- Frozen vanilla sensitivity ceiling remains 31.7073%.
++- No new Stage-A SFO capture consumed.
++- No native-row ablation earned.
++- No SFO priority increase copied.
++- No SFO allocator release/return attribution promoted.
++- Grey Point Scuttlers remains special-policy causal-review evidence, not ordinary territorial thrashing proof.
++- Privileged diagnostic state remains permanently `application_eligible=false`.
++- v0.2G/v0.2I remain outside the application path.
++- No order, save, Workshop, or game-directory mutation is introduced.
++
++## Remaining boundary
++
++GitHub `main` is still the stale July 29 repository until the exact sealed v0.2Q tree is transported into the existing canonical-cutover branch and reviewed through a draft PR. v0.2R must branch from that verified v0.2Q GitHub base; it must not be layered directly onto stale `main`.
+diff --git a/research/native_cai/NATIVE_BEHAVIOR_REPLAY_LAB_v0.2R.md b/research/native_cai/NATIVE_BEHAVIOR_REPLAY_LAB_v0.2R.md
+new file mode 100644
+index 0000000..1adc33d
+--- /dev/null
++++ b/research/native_cai/NATIVE_BEHAVIOR_REPLAY_LAB_v0.2R.md
+@@ -0,0 +1,148 @@
++# Native CAI Behavior Replay Lab — v0.2R
++
++**Status:** OFFLINE ENGINEERING IMPLEMENTED; REAL RAW CAPTURE REPLAY PENDING CAPTURE AVAILABILITY  
++**Authority:** `NO_ORDERS`  
++**Application authority:** `PROHIBITED`  
++**Research visibility:** `PRIVILEGED_OMNISCIENT_DIAGNOSTIC`  
++**Application eligible:** `false`
++
++## Purpose
++
++v0.2R adds a deterministic offline replay layer around the existing native-diagnostic capture ZIP contract. It does not change the game-side diagnostic probe, the player-visible observer, any frozen v0.2N/v0.2P threshold, or the v0.2Q Stage-A replication policy.
++
++The lab is a verifier/replayer, not a new behavior definition. Frozen behavior metrics are recomputed by calling the existing sealed evaluators:
++
++- `analyze_native_diagnostic_behavior_study` for v0.2N recovery and temporal behavior;
++- `stratify_temporal_trace` and `temporal_cluster_diagnostics` for territorial/non-territorial and cluster diagnostics;
++- `analyze_sfo_benchmark` for the v0.2P SFO matched benchmark;
++- `adjudicate_sfo_replication_stage_a` only when the caller explicitly declares an SFO capture as Stage A.
++
++## Capture normalization and fail-closed rules
++
++`runtime_probe/tools/native_behavior_replay.py`:
++
++1. validates ZIP integrity and rejects duplicate/unsafe member names;
++2. validates the public `export_manifest.json` member inventory, sizes and SHA-256 values;
++3. optionally binds the whole capture ZIP to an externally supplied SHA-256;
++4. enforces `NO_ORDERS`, `APPLICATION_AUTHORITY=PROHIBITED`, privileged-research visibility and `application_eligible=false` across the manifest, profile binding and parsed trace;
++5. recognizes only the existing diagnostic event vocabulary and fails closed on unknown future `TRANS_DIAG` events;
++6. distinguishes complete AI faction turns, incomplete turns, complete battles and incomplete battle sequences;
++7. refuses frozen metric replay when battle-participant telemetry is missing/undeclared, a faction turn is incomplete, a battle sequence is incomplete, a capability failed, or human-turn continuity is absent;
++8. never converts missing battle telemetry into a `no battle` conclusion;
++9. checks a stored frozen result against the deterministic recomputation when the capture contains one.
++
++Supported public export contracts are the vanilla behavior study, the SFO matched behavior benchmark and the earlier generic native diagnostic export. Only the first two are profile-qualified for vanilla↔SFO comparison.
++
++## Longitudinal force timeline
++
++For every paired AI faction turn and every observed force CQI, Replay Lab emits deterministic timeline rows containing where available:
++
++- faction and military-force CQI;
++- turn and start/end presence;
++- start/end position and realized within-turn movement distance;
++- start/end region and stance;
++- start/end unit count, average health, force strength and action-points remaining;
++- current war set and owned-region set;
++- territorial/non-territorial classification;
++- battle sequence participation and attacker/defender roles;
++- telemetry-completeness marker;
++- CQI identity-discontinuity flag.
++
++A consecutive reuse of the same `(faction, force_cqi)` with a changed general/subtype identity is flagged as `FORCE_CQI_CONSECUTIVE_IDENTITY_CHANGE`. The replay lab does not silently rewrite historical frozen metrics because of that flag; it makes the discontinuity visible for causal review.
++
++## Deterministic outputs
++
++Single-capture replay writes:
++
++- `normalized.json` — normalized provenance, completeness, timeline, frozen replay and exploratory diagnostics;
++- `summary.json` — compact frozen-result summary;
++- `timeline.csv` — per-force longitudinal rows;
