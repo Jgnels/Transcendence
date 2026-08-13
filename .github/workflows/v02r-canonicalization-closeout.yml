@@ -69,7 +69,7 @@ jobs:
           test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_native_diagnostic_probe.lua | awk '{print $1}')" = '0acb4e186a4f4077801a763dbbf5cacc8ae21a9d47ecc76d54fefe5c023ec203'
           test "$(sha256sum runtime_probe/source/script/campaign/mod/transcendence_shadow_probe.lua | awk '{print $1}')" = '4f8c80fb67efe288e4b7b4eeacc0c48578707a0e554f2dd8a454aa669b50ed98'
           PYTHONPATH=synthetic_lab python tools/validate_repository.py
-          test -z "$(find . -type f -name '*.pack' -print -quit)" || { echo 'Closeout contains .pack bytes' >&2; exit 1; }
+          test -z "$(git ls-files '*.pack')" || { echo 'Tracked closeout contains .pack bytes' >&2; exit 1; }
 
       - name: Verify exact tree and advance closeout branch
         if: steps.detect.outputs.ready == 'true'
