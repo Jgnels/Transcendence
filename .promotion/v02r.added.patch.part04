@@ -1,0 +1,298 @@
++                "start_average_unit_health_pct": get(start_force, "average_unit_health_pct"),
++                "end_average_unit_health_pct": get(end_force, "average_unit_health_pct"),
++                "start_force_strength": get(start_force, "force_strength"),
++                "end_force_strength": get(end_force, "force_strength"),
++                "start_action_points_remaining_pct": get(start_force, "action_points_remaining_pct"),
++                "end_action_points_remaining_pct": get(end_force, "action_points_remaining_pct"),
++                "wars": wars,
++                "owned_regions": owned_regions,
++                "territorial": bool(owned_regions),
++                "battle_sequences": sequences,
++                "battle_roles": roles,
++                "telemetry_complete": True,
++                "identity_discontinuity": discontinuity,
++            })
++    return rows, identity_flags
++
++
++def _capture_completeness(trace: dict[str, Any]) -> dict[str, Any]:
++    capability_failures = [row for row in trace.get("capabilities", []) if row.get("available") is False]
++    incomplete_turns = list(trace.get("incomplete_ai_faction_turns", []))
++    incomplete_battles = list(trace.get("incomplete_battle_sequences", []))
++    battle_declared = trace.get("battle_participant_telemetry_declared") is True
++    consecutive = trace.get("human_turns_consecutive") is True
++    human_turns = list(trace.get("human_turn_starts", []))
++    human_turns_present = bool(human_turns)
++    complete_battles = len(trace.get("battle_sequences", []))
++    analysis_eligible = all((battle_declared, consecutive, human_turns_present, not capability_failures, not incomplete_turns, not incomplete_battles))
++    return {
++        "battle_participant_telemetry_declared": battle_declared,
++        "complete_battle_sequence_count": complete_battles,
++        "incomplete_battle_sequence_count": len(incomplete_battles),
++        "incomplete_battle_sequences": incomplete_battles,
++        "incomplete_ai_faction_turn_count": len(incomplete_turns),
++        "incomplete_ai_faction_turns": incomplete_turns,
++        "capability_failure_count": len(capability_failures),
++        "capability_failures": capability_failures,
++        "human_turn_starts": human_turns,
++        "human_turns_present": human_turns_present,
++        "human_turns_consecutive": consecutive,
++        "frozen_metric_replay_eligible": analysis_eligible,
++        "battle_surface_observed": complete_battles > 0,
++        "battle_absence_interpretation": (
++            "BATTLE_TELEMETRY_MISSING_OR_UNDECLARED; DO_NOT_INFER_NO_BATTLE"
++            if not battle_declared
++            else (
++                "INCOMPLETE_BATTLE_SEQUENCE_PRESENT; DO_NOT_INFER_NO_BATTLE_FROM_MISSING_END"
++                if incomplete_battles
++                else "DECLARED_BATTLE_TELEMETRY_SURFACE_VALID"
++            )
++        ),
++    }
++
++
++def _stored_result_check(
++    blobs: dict[str, bytes],
++    result_name: str | None,
++    recomputed: dict[str, Any] | None,
++) -> dict[str, Any]:
++    if result_name is None:
++        return {"stored_result_present": False, "recomputed_match": None}
++    stored = _load_json_blob(blobs, result_name, required=False)
++    if stored is None:
++        return {"stored_result_present": False, "recomputed_match": None}
++    if recomputed is None:
++        return {
++            "stored_result_present": True,
++            "stored_result_digest": stored.get("result_digest"),
++            "recomputed_match": None,
++            "reason": "REPLAY_INELIGIBLE_CAPTURE; STORED_RESULT_NOT_USED_AS_SUBSTITUTE",
++        }
++    matches = stored == recomputed
++    if not matches:
++        raise NativeBehaviorReplayError(
++            f"stored frozen result {result_name} does not exactly match deterministic replay"
++        )
++    return {
++        "stored_result_present": True,
++        "stored_result_digest": stored.get("result_digest"),
++        "recomputed_result_digest": recomputed.get("result_digest"),
++        "recomputed_match": True,
++    }
++
++
++def _exploratory_diagnostics(
++    timeline: list[dict[str, Any]],
++    frozen: dict[str, Any] | None,
++    identity_flags: list[dict[str, Any]],
++) -> dict[str, Any]:
++    movements = [float(row["movement_distance"]) for row in timeline if row.get("movement_distance") is not None]
++    battle_adjacent = [row for row in timeline if row.get("battle_sequences")]
++    battle_free = [row for row in timeline if not row.get("battle_sequences")]
++    per_force_turns: dict[tuple[str, str], int] = Counter((row["faction"], row["force_cqi"]) for row in timeline)
++    faction_turns: dict[str, set[int]] = defaultdict(set)
++    for row in timeline:
++        faction_turns[str(row["faction"])].add(int(row["turn"]))
++    faction_rows = []
++    for faction, turns in sorted(faction_turns.items()):
++        ordered = sorted(turns)
++        gaps = [[a, b] for a, b in zip(ordered, ordered[1:]) if b - a > 1]
++        faction_rows.append({"faction": faction, "observed_turns": ordered, "gaps": gaps})
++
++    cluster = None if frozen is None else frozen.get("territorial_cluster_diagnostics")
++    reversal_by_force: dict[tuple[str, str], int] = Counter()
++    if isinstance(cluster, dict):
++        for row in cluster.get("candidate_windows", []):
++            reversal_by_force[(str(row.get("faction")), str(row.get("force_cqi")))] += 1
++
++    return {
++        "label": "EXPLORATORY",
++        "movement_distance_distribution": {
++            "count": len(movements),
++            "minimum": None if not movements else round(min(movements), 6),
++            "median": None if not movements else round(float(statistics.median(movements)), 6),
++            "maximum": None if not movements else round(max(movements), 6),
++            "stationary_force_turn_count": sum(value == 0.0 for value in movements),
++        },
++        "battle_adjacency": {
++            "battle_participating_force_turn_count": len(battle_adjacent),
++            "battle_free_force_turn_count": len(battle_free),
++        },
++        "force_turn_counts": [
++            {"faction": faction, "force_cqi": force, "force_turn_count": count}
++            for (faction, force), count in sorted(per_force_turns.items())
++        ],
++        "territorial_reversal_counts_by_force": [
++            {"faction": faction, "force_cqi": force, "reversal_candidate_count": count}
++            for (faction, force), count in sorted(reversal_by_force.items())
++        ],
++        "faction_observation_continuity": faction_rows,
++        "force_cqi_identity_discontinuities": identity_flags,
++        "territorial_cluster_concentration": None if not isinstance(cluster, dict) else cluster.get("candidate_concentration"),
++        "interpretation": "EXPLORATORY_ONLY; DOES_NOT_CHANGE_FROZEN_THRESHOLDS_OR_EARN_APPLICATION_AUTHORITY",
++    }
++
++
++def replay_capture(path: Path, *, expected_sha256: str | None = None) -> dict[str, Any]:
++    path = path.resolve()
++    blobs, manifest, provenance = _read_capture(path, expected_sha256)
++    config = SUPPORTED_EXPORTS[str(manifest["contract"])]
++    profile = str(config["profile"])
++    log_blob = blobs.get("transcendence_native_diagnostic_log.txt")
++    if log_blob is None:
++        raise NativeBehaviorReplayError("capture lacks transcendence_native_diagnostic_log.txt")
++    trace = _parse_trace_from_blob(log_blob)
++    _validate_authority(trace, "parsed trace")
++    completeness = _capture_completeness(trace)
++    timeline, identity_flags = build_force_timeline(trace)
++
++    profile_binding_name = config.get("profile_binding")
++    profile_binding = None
++    if isinstance(profile_binding_name, str):
++        profile_binding = _load_json_blob(blobs, profile_binding_name, required=False)
++        if profile_binding is not None:
++            _validate_authority(profile_binding, "profile binding")
++    verification_name = config.get("verification")
++    verification = None
++    if isinstance(verification_name, str):
++        verification = _load_json_blob(blobs, verification_name, required=False)
++        if verification is not None:
++            _validate_authority(verification, "capture verification")
++
++    frozen: dict[str, Any] | None = None
++    recomputed_result: dict[str, Any] | None = None
++    if completeness["frozen_metric_replay_eligible"]:
++        base = analyze_native_diagnostic_behavior_study(trace)
++        stratification = stratify_temporal_trace(trace)
++        territorial_cluster = temporal_cluster_diagnostics(trace, "territorial")
++        nonterritorial_cluster = temporal_cluster_diagnostics(trace, "nonterritorial")
++        frozen = {
++            "base_v0_2n_behavior_result": base,
++            "temporal_stratification": stratification,
++            "territorial_cluster_diagnostics": territorial_cluster,
++            "nonterritorial_cluster_diagnostics": nonterritorial_cluster,
++        }
++        if profile == "VANILLA":
++            recomputed_result = base
++        elif profile == "SFO":
++            vanilla_reference = _load_json_blob(blobs, "vanilla_reference.json")
++            assert vanilla_reference is not None
++            recomputed_result = analyze_sfo_benchmark(trace, vanilla_reference)
++            frozen["sfo_v0_2p_benchmark_result"] = recomputed_result
++
++    stored_check = _stored_result_check(blobs, config.get("stored_result"), recomputed_result)
++    exploratory = _exploratory_diagnostics(timeline, frozen, identity_flags)
++
++    result: dict[str, Any] = {
++        "contract": NORMALIZED_CONTRACT,
++        "study_version": STUDY_VERSION,
++        **_authority_fields(),
++        "profile": profile,
++        "capture_provenance": provenance,
++        "profile_binding": profile_binding,
++        "capture_verification": verification,
++        "telemetry_completeness": completeness,
++        "timeline_schema": {
++            "contract": "NATIVE_CAI_FORCE_LONGITUDINAL_TIMELINE_V1",
++            "fields": TIMELINE_FIELDS,
++            "row_count": len(timeline),
++        },
++        "timeline": timeline,
++        "frozen_metric_replay": frozen,
++        "stored_result_reproduction": stored_check,
++        "exploratory_diagnostics": exploratory,
++        "mechanism_nomination_eligible": False,
++        "mechanism_nomination_reason": "CAPTURE_REPLAY_ALONE_CANNOT_EARN_NATIVE_ROW_MECHANISM_SELECTION_OR_APPLICATION",
++        "interpretation_limits": [
++            "Frozen v0.2N/v0.2P evaluators are reused; Replay Lab does not alter their thresholds or semantics.",
++            "Missing or undeclared battle telemetry is never interpreted as evidence that no battle occurred.",
++            "Force CQI identity discontinuities are flagged for causal review; Replay Lab does not silently rewrite frozen historical metrics.",
++            "Privileged telemetry remains permanently application-ineligible.",
++            "Exploratory diagnostics cannot overwrite preregistered results.",
++        ],
++    }
++    result["normalized_digest"] = digest(result)
++    return result
++
++
++def _shared_faction_comparison(vanilla_cluster: dict[str, Any], sfo_cluster: dict[str, Any]) -> dict[str, Any]:
++    def rows(cluster: dict[str, Any]) -> dict[str, tuple[int, int]]:
++        return {
++            str(row["faction"]): (int(row["eligible_windows"]), int(row["reversal_candidates"]))
++            for row in cluster.get("faction_rows", [])
++            if int(row.get("eligible_windows", 0)) > 0
++        }
++
++    vanilla_rows, sfo_rows = rows(vanilla_cluster), rows(sfo_cluster)
++    shared = sorted(set(vanilla_rows) & set(sfo_rows))
++
++    def pooled(source: dict[str, tuple[int, int]]) -> dict[str, Any]:
++        eligible = sum(source[f][0] for f in shared)
++        candidates = sum(source[f][1] for f in shared)
++        return {
++            "eligible_windows": eligible,
++            "reversal_candidates": candidates,
++            "reversal_candidate_rate": None if eligible == 0 else round(candidates / eligible, 6),
++        }
++
++    return {
++        "label": "CAUSAL_REVIEW_POST_HOC",
++        "shared_factions": shared,
++        "vanilla": pooled(vanilla_rows),
++        "sfo": pooled(sfo_rows),
++        "interpretation": "POST_HOC_COMPOSITION_REVIEW; CANNOT_ERASE_PREREGISTERED_AGGREGATE_RESULT",
++    }
++
++
++def compare_replays(
++    vanilla: dict[str, Any],
++    sfo: dict[str, Any],
++    *,
++    sfo_role: str = "original",
++) -> dict[str, Any]:
++    if vanilla.get("profile") != "VANILLA":
++        raise NativeBehaviorReplayError("comparison vanilla input is not a VANILLA behavior-study export")
++    if sfo.get("profile") != "SFO":
++        raise NativeBehaviorReplayError("comparison SFO input is not an SFO behavior-study export")
++    if sfo_role not in {"original", "stage-a"}:
++        raise NativeBehaviorReplayError("sfo_role must be 'original' or 'stage-a'")
++    vf = vanilla.get("frozen_metric_replay")
++    sf = sfo.get("frozen_metric_replay")
++    if not isinstance(vf, dict) or not isinstance(sf, dict):
++        raise NativeBehaviorReplayError("both captures must be complete enough for frozen metric replay")
++    sfo_benchmark = sf.get("sfo_v0_2p_benchmark_result")
++    if not isinstance(sfo_benchmark, dict):
++        raise NativeBehaviorReplayError("SFO frozen benchmark result is unavailable")
++    vanilla_cluster = vf["territorial_cluster_diagnostics"]
++    sfo_cluster = sf["territorial_cluster_diagnostics"]
++    synthetic_reference = {
++        "reference_digest": digest({"replay_vanilla_cluster": vanilla_cluster}),
++        "cluster_diagnostics": vanilla_cluster,
++    }
++    causal_review = build_causal_review(sfo_benchmark, synthetic_reference)
++    shared = _shared_faction_comparison(vanilla_cluster, sfo_cluster)
++    stage_a = None
++    if sfo_role == "stage-a":
++        stage_a = adjudicate_sfo_replication_stage_a(sfo_benchmark)
++
++    preregistered = {
++        "label": "PREREGISTERED_RESULT",
++        "sfo_role": sfo_role,
++        "sfo_v0_2p_decision": sfo_benchmark.get("precommitted_post_sfo_decision"),
++        "recovery_status": sfo_benchmark.get("recovery_status"),
++        "primary_territorial_temporal_status": sfo_benchmark.get("primary_territorial_temporal_status"),
++        "stage_a_adjudication": stage_a,
++        "stage_a_policy_digest": replication_policy()["policy_digest"],
++        "note": (
++            "v0.2Q Stage-A policy applied because the caller explicitly declared this SFO capture role."
++            if sfo_role == "stage-a"
++            else "v0.2Q Stage-A policy not applied; capture is treated as the original/ordinary SFO benchmark."
++        ),
++    }
++    exploratory = {
++        "label": "EXPLORATORY",
++        "vanilla": vanilla.get("exploratory_diagnostics"),
++        "sfo": sfo.get("exploratory_diagnostics"),
++        "aggregate_territorial_rate_delta_sfo_minus_vanilla": (
++            None
++            if vanilla_cluster.get("reversal_candidate_rate") is None or sfo_cluster.get("reversal_candidate_rate") is None
