@@ -1,0 +1,360 @@
++- `report.md` — human-readable research-only report.
++
++Vanilla↔SFO comparison writes:
++
++- `comparison.json`;
++- `comparison.md`.
++
++The comparison explicitly separates:
++
++- `PREREGISTERED_RESULT`;
++- `CAUSAL_REVIEW`;
++- `EXPLORATORY`;
++- mechanism-nomination eligibility.
++
++No one-vanilla/one-SFO comparison can set mechanism nomination or native-row ablation eligibility to true. A Stage-A SFO capture can only apply the already frozen v0.2Q Stage-A policy when explicitly declared with `--sfo-role stage-a`; Stage A still never earns a row ablation by itself.
++
++## Commands
++
++Replay one capture:
++
++```powershell
++.\runtime_probe\tools\Replay-NativeBehavior.ps1 replay `
++  <capture.zip> `
++  --expected-sha256 <capture_sha256> `
++  --output-dir <output_directory>
++```
++
++Compare vanilla and SFO:
++
++```powershell
++.\runtime_probe\tools\Replay-NativeBehavior.ps1 compare `
++  --vanilla <vanilla_capture.zip> `
++  --sfo <sfo_capture.zip> `
++  --output-dir <output_directory>
++```
++
++For the future v0.2Q Stage-A SFO replication only, add:
++
++```text
++--sfo-role stage-a
++```
++
++Do not infer Stage-A status from timestamps or filenames.
++
++## Adversarial coverage
++
++The v0.2R regression suite covers:
++
++- payload hash mismatch / tampered manifest inventory;
++- wrong externally supplied capture SHA-256;
++- duplicate ZIP members;
++- unknown future diagnostic event;
++- missing battle telemetry;
++- partial faction turn;
++- incomplete battle sequence;
++- duplicate force records;
++- destroyed/recreated or recycled CQI identity discontinuity;
++- stationary army;
++- roaming/non-territorial faction;
++- overlapping reversal windows;
++- one-faction candidate concentration;
++- insufficient denominator;
++- disappearing faction observations;
++- deterministic replay output bytes;
++- deterministic comparison output bytes;
++- explicit Stage-A policy application with no ablation authority;
++- frozen v0.2Q published reference numbers and replication-policy digest;
++- byte identity of both game-side Lua probes.
++
++## Frozen reference bindings
++
++Regression tests preserve the sealed v0.2Q reference facts:
++
++- vanilla recovery: `38` exposures / `6` attacker-side reentries = `0.157895`;
++- vanilla territorial temporal: `48` eligible / `13` reversals = `0.270833`;
++- SFO recovery rate: `0.142857`;
++- SFO territorial temporal: `39` eligible / `18` reversals = `0.461538`;
++- v0.2Q replication-policy digest: `3171982731ca16a635723f5d5a788c6ce5fb397590f82a60cabb221e26ac0120`.
++
++The game-side Lua probes are asserted unchanged at:
++
++- native diagnostic: `0acb4e186a4f4077801a763dbbf5cacc8ae21a9d47ecc76d54fefe5c023ec203`;
++- shadow probe: `4f8c80fb67efe288e4b7b4eeacc0c48578707a0e554f2dd8a454aa669b50ed98`.
++
++## Current evidence boundary
++
++The sealed v0.2Q canonical source contains the published result/reference artifacts but not the owner's raw vanilla and SFO behavior-study capture ZIPs. Therefore v0.2R can certify its replay machinery and frozen bindings offline now, but it cannot honestly claim a fresh byte-for-byte replay of those two historical raw capture ZIPs until those captures are supplied.
++
++That absence does not block Stage-A engineering or future capture replay, and it does not alter the existing v0.2Q conclusions.
+diff --git a/research/native_cai/NATIVE_CAI_SINGLE_ROW_ABLATION_FACTORY_v0.2R.md b/research/native_cai/NATIVE_CAI_SINGLE_ROW_ABLATION_FACTORY_v0.2R.md
+new file mode 100644
+index 0000000..2fb2a0b
+--- /dev/null
++++ b/research/native_cai/NATIVE_CAI_SINGLE_ROW_ABLATION_FACTORY_v0.2R.md
+@@ -0,0 +1,53 @@
++# Native CAI Single-Row Ablation Factory — v0.2R
++
++**Status:** MACHINERY READY; REAL ROW EXPERIMENT `NOT_EARNED`  
++**Authority:** `NO_ORDERS`  
++**Application authority:** `PROHIBITED`  
++**Application eligibility:** `APPLICATION_INELIGIBLE`
++
++## Purpose
++
++This factory prepares the smallest deterministic PFH5 experiment container for **one** evidence-approved native CAI DB row/value change. It does not choose a row, install a pack, edit a Workshop item, mutate a game directory, or expand application authority.
++
++The current v0.2Q evidence has **not** earned a native CAI row ablation. The only packs built during factory certification are synthetic fixtures and remain `FACTORY_VALIDATION_NOT_EARNED`.
++
++## Fail-closed contract
++
++`tools/native_cai_ablation_factory.py` requires one JSON object using `NATIVE_CAI_SINGLE_ROW_ABLATION_SPEC_V1`. It rejects:
++
++- multiple row specifications or a `rows` collection;
++- unknown/unverified table layouts;
++- key-field changes;
++- more or fewer than one changed non-key value;
++- incomplete source-header or provenance data;
++- real `NOT_EARNED` source rows masquerading as factory fixtures;
++- an evidence-earned build unless `--allow-earned-build`, owner authorization, and an evidence digest are all present;
++- a pending/provisional pinned-schema key unless both the spec and command explicitly authorize that research risk.
++
++A successful build contains one PFH5 entry only:
++
++`db/<table>/transcendence_single_row_ablation`
++
++The pack timestamp is zero and the PFH5 index is deterministic. Sidecars record the original row/value, experimental row/value, table/key, exact source header, provenance, SHA-256 values, authority status, and rollback instructions.
++
++## Key-schema discipline
++
++The 2026-08-02 owner row-diff work proved several **binary layouts by full-file consumption**, but its reconciliation artifact also says current pinned-schema key certification remains pending. Those are different claims.
++
++The factory therefore does not convert successful decoding into silent row-targeting authority. A future row experiment should prefer a `VERIFIED_PINNED_SCHEMA_KEY` contract. A provisional-key experiment requires a deliberate two-part override and remains research-only.
++
++The task-generator group/generator/variable-group composite key has the stronger label `PROVISIONAL_COMPOSITE_KEY_SCHEMA_CERTIFICATION_PENDING` and receives the same fail-closed treatment.
++
++## Rollback and installation boundary
++
++The factory performs **no installation**. If a future separately approved experiment activates a generated pack, rollback is removal/disablement of that generated override from the experimental load order only. Native, SFO, and prior-art packs remain untouched. A rollback-clean campaign must verify that the experimental pack is absent before evidence is interpreted.
++
++## Current disposition
++
++- Factory machinery: ready offline.
++- Real row selected: **NO**.
++- Real row ablation earned: **NO**.
++- Pack installed: **NO**.
++- Workshop action: **NO**.
++- Game-directory mutation: **NO**.
++- Orders issued: **NO**.
+diff --git a/runtime_probe/tests/test_native_behavior_replay.py b/runtime_probe/tests/test_native_behavior_replay.py
+new file mode 100644
+index 0000000..c5022d8
+--- /dev/null
++++ b/runtime_probe/tests/test_native_behavior_replay.py
+@@ -0,0 +1,418 @@
++from __future__ import annotations
++
++import hashlib
++import json
++import sys
++import tempfile
++import unittest
++import warnings
++import zipfile
++from pathlib import Path
++
++REPO_ROOT = Path(__file__).resolve().parents[2]
++sys.path.insert(0, str(REPO_ROOT / "runtime_probe" / "tools"))
++
++from native_behavior_replay import (
++    NativeBehaviorReplayError,
++    compare_replays,
++    replay_capture,
++    write_comparison_outputs,
++    write_replay_outputs,
++)
++
++VANILLA_CONTRACT = "NATIVE_CAI_DIAGNOSTIC_BEHAVIOR_STUDY_PUBLIC_EXPORT_V1"
++SFO_CONTRACT = "NATIVE_CAI_DIAGNOSTIC_SFO_BEHAVIOR_BENCHMARK_PUBLIC_EXPORT_V1"
++
++
++def scalar(value):
++    if value is True:
++        return "true"
++    if value is False:
++        return "false"
++    if value is None:
++        return "null"
++    return str(value)
++
++
++def emit(event: str, **fields) -> str:
++    return "TRANS_DIAG|1|" + event + "|" + "|".join(f"{key}={scalar(value)}" for key, value in fields.items())
++
++
++def force_fields(turn: int, phase: str, faction: str, force_cqi: int, x: float, *, general_cqi: int = 100,
++                 region: str = "r", health: float = 100.0, strength: float = 1000.0, units: int = 20):
++    return dict(
++        turn=turn,
++        phase=phase,
++        faction=faction,
++        index=0,
++        force_cqi=force_cqi,
++        general_cqi=general_cqi,
++        subtype="general",
++        character_type_key="general",
++        unit_count=units,
++        force_strength=strength,
++        average_unit_health_pct=health,
++        action_points_remaining_pct=100,
++        stance="MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT",
++        x=x,
++        y=0,
++        region=region,
++    )
++
++
++def snapshot_lines(turn: int, faction: str, phase: str, *, force_cqi: int, x: float, general_cqi: int = 100,
++                   territorial: bool = True, duplicate_force: bool = False):
++    lines = [emit("AI_SNAPSHOT_BEGIN", turn=turn, faction=faction, phase=phase)]
++    ff = force_fields(turn, phase, faction, force_cqi, x, general_cqi=general_cqi, region=("r" if territorial else "none"))
++    lines.append(emit("AI_FORCE", **ff))
++    if duplicate_force:
++        lines.append(emit("AI_FORCE", **ff))
++    region_count = 1 if territorial else 0
++    if territorial:
++        lines.append(emit("AI_REGION", turn=turn, phase=phase, faction=faction, index=0, region="home", x=0, y=0))
++    lines.append(emit(
++        "AI_SNAPSHOT_END",
++        turn=turn,
++        faction=faction,
++        phase=phase,
++        forces_emitted=(2 if duplicate_force else 1),
++        regions_emitted=region_count,
++        wars_emitted=0,
++    ))
++    return lines
++
++
++def build_log(
++    positions=(0.0, 10.0, 0.0),
++    *,
++    faction="ai",
++    force_cqi=1,
++    territorial=True,
++    battle_declared=True,
++    include_battle=False,
++    partial_turn=None,
++    incomplete_battle=False,
++    unknown_event=False,
++    duplicate_force=False,
++    general_by_turn=None,
++):
++    lines = [
++        emit("RUNTIME_BEGIN", runtime="campaign"),
++        emit(
++            "PACK_LOADED",
++            probe_kind="native_diagnostic",
++            read_only=True,
++            research_visibility="PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
++            application_eligible=False,
++            authority="NO_ORDERS",
++            application_authority="PROHIBITED",
++            battle_participant_telemetry=battle_declared,
++        ),
++    ]
++    if unknown_event:
++        lines.append(emit("AI_FUTURE_EVENT", version=2))
++    for turn, x in enumerate(positions, 1):
++        lines.append(emit("HUMAN_TURN_MARKER", turn=turn, phase="TURN_START"))
++        general = 100 if general_by_turn is None else general_by_turn[turn - 1]
++        lines.extend(snapshot_lines(
++            turn, faction, "TURN_START", force_cqi=force_cqi, x=x, general_cqi=general,
++            territorial=territorial, duplicate_force=duplicate_force,
++        ))
++        if turn == 2 and (incomplete_battle or include_battle):
++            lines.append(emit("AI_BATTLE_BEGIN", battle_sequence=1, turn=turn))
++            lines.append(emit(
++                "AI_BATTLE_PARTICIPANT", battle_sequence=1, turn=turn, index=0,
++                char_cqi=general, force_cqi=force_cqi, faction=faction, side="ATTACKER",
++            ))
++            if not incomplete_battle:
++                lines.append(emit("AI_BATTLE_END", battle_sequence=1, turn=turn, attackers_emitted=1, defenders_emitted=0))
++        if partial_turn == turn:
++            continue
++        lines.extend(snapshot_lines(
++            turn, faction, "TURN_END", force_cqi=force_cqi, x=x, general_cqi=general,
++            territorial=territorial, duplicate_force=duplicate_force,
++        ))
++    return ("\n".join(lines) + "\n").encode()
++
++
++def authority_object(contract: str, **extra):
++    return {
++        "contract": contract,
++        "authority": "NO_ORDERS",
++        "application_authority": "PROHIBITED",
++        "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
++        "application_eligible": False,
++        **extra,
++    }
++
++
++def make_capture(
++    path: Path,
++    *,
++    contract=VANILLA_CONTRACT,
++    log_blob=None,
++    tamper_payload=False,
++    duplicate_zip_member=False,
++):
++    if log_blob is None:
++        log_blob = build_log()
++    if contract == VANILLA_CONTRACT:
++        binding_name = "native_behavior_study_profile_binding.json"
++        verify_name = "native_behavior_study_verification.json"
++        binding = authority_object("NATIVE_CAI_DIAGNOSTIC_PROFILE_BINDING_V1", profile="VANILLA_TEST")
++        verification = authority_object("NATIVE_CAI_DIAGNOSTIC_BEHAVIOR_STUDY_VERIFICATION_V1")
++    elif contract == SFO_CONTRACT:
++        binding_name = "native_sfo_behavior_profile_binding.json"
++        verify_name = "native_sfo_behavior_benchmark_verification.json"
++        binding = authority_object("NATIVE_CAI_DIAGNOSTIC_SFO_PROFILE_BINDING_V1", profile="SFO_TEST")
++        verification = authority_object("NATIVE_CAI_DIAGNOSTIC_SFO_BEHAVIOR_BENCHMARK_VERIFICATION_V1")
++    else:
++        binding_name = "native_diagnostic_profile_binding.json"
++        verify_name = "native_diagnostic_capture_verification.json"
++        binding = authority_object("NATIVE_CAI_DIAGNOSTIC_PROFILE_BINDING_V1", profile="GENERIC_TEST")
++        verification = authority_object("NATIVE_CAI_DIAGNOSTIC_CAPTURE_VERIFICATION_V1")
++
++    files = {
++        binding_name: (json.dumps(binding, indent=2, sort_keys=True) + "\n").encode(),
++        verify_name: (json.dumps(verification, indent=2, sort_keys=True) + "\n").encode(),
++        "native_diagnostic_summary.json": b"{}\n",
++        "transcendence_native_diagnostic_log.txt": log_blob,
++    }
++    if contract == SFO_CONTRACT:
++        files["vanilla_reference.json"] = (
++            REPO_ROOT / "research/runtime_evidence/NATIVE_BEHAVIOR_STUDY_VANILLA_REFERENCE_v0.2O_2026-08-03.json"
++        ).read_bytes()
++    manifest = authority_object(
++        contract,
++        confirmatory_eligible=True,
++        contains_private_machine_paths=False,
++        files=[
++            {"name": name, "size_bytes": len(blob), "sha256": hashlib.sha256(blob).hexdigest()}
++            for name, blob in sorted(files.items())
++        ],
++    )
++    manifest_blob = (json.dumps(manifest, indent=2, sort_keys=True) + "\n").encode()
++    with zipfile.ZipFile(path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
++        archive.writestr("export_manifest.json", manifest_blob)
++        for name, blob in sorted(files.items()):
++            archive.writestr(name, blob)
++        if duplicate_zip_member:
++            with warnings.catch_warnings():
++                warnings.simplefilter("ignore", UserWarning)
++                archive.writestr("native_diagnostic_summary.json", b"{}\n")
++    if tamper_payload:
++        # Rebuild with one changed payload while preserving the original manifest.
++        with zipfile.ZipFile(path) as archive:
++            members = {info.filename: archive.read(info) for info in archive.infolist()}
