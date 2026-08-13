@@ -1,0 +1,466 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "battle_summaries": [
+    {
+      "battle_id": "chaos",
+      "battle_type": "land_normal",
+      "command_events": 89,
+      "duration_ms": 338500,
+      "environment": "SFO",
+      "force_discovery_end_ms": 100,
+      "force_initial_fraction": 1.0,
+      "identity": {
+        "display_identity": "An Ogre's Folly",
+        "enemy_display": "Warhost of the Apocalypse",
+        "identity_resolution": "DISPLAY_IDENTITY_RETAINED_SEPARATELY_FROM_RUNTIME_BATTLEFIELD_IDENTITY",
+        "runtime_battlefield_identity": "Battle of Eilhart — Reikland vs Empire Secessionists",
+        "source_layers_agree": false
+      },
+      "initial_local_units_observed": 13,
+      "local_casualties_observed_lower_bound": 472,
+      "local_casualty_lower_bound_ratio": 0.457364,
+      "local_initial_models": 1032,
+      "local_terminal_coverage_ratio": 0.0,
+      "local_units": 13,
+      "natural_completion_observed": false,
+      "original_live_outcome": "OWNER_ATTESTED_DEFEAT",
+      "outcome_grade": "UNVERIFIED_NONTERMINAL",
+      "role_summary": {
+        "artillery": {
+          "casualties_observed_lower_bound": 28,
+          "casualty_lower_bound_ratio": 0.318182,
+          "initial_models": 88,
+          "kills_observed_max_sum": 14,
+          "routing_units_observed": 2,
+          "unit_count": 2
+        },
+        "cavalry": {
+          "casualties_observed_lower_bound": 58,
+          "casualty_lower_bound_ratio": 0.966667,
+          "initial_models": 60,
+          "kills_observed_max_sum": 1,
+          "routing_units_observed": 1,
+          "unit_count": 1
+        },
+        "commander": {
+          "casualties_observed_lower_bound": 0,
+          "casualty_lower_bound_ratio": 0.0,
+          "initial_models": 2,
+          "kills_observed_max_sum": 7,
+          "routing_units_observed": 2,
+          "unit_count": 2
+        },
+        "frontline": {
+          "casualties_observed_lower_bound": 291,
+          "casualty_lower_bound_ratio": 0.454688,
+          "initial_models": 640,
+          "kills_observed_max_sum": 142,
+          "routing_units_observed": 1,
+          "unit_count": 5
+        },
+        "ranged": {
+          "casualties_observed_lower_bound": 95,
+          "casualty_lower_bound_ratio": 0.392562,
+          "initial_models": 242,
+          "kills_observed_max_sum": 24,
+          "routing_units_observed": 1,
+          "unit_count": 3
+        }
+      },
+      "selection_attribution_ratio": 0.0,
+      "source_dense_digest": "4d84f49ec1782d29e872eff6674e93af089c3290a765b5d20c95b815ee70cea4",
+      "victorious_alliance": "UNVERIFIED",
+      "visible_enemy_casualties_observed_lower_bound": 191,
+      "visible_enemy_terminal_coverage_ratio": 0.0
+    },
+    {
+      "battle_id": "eilhart",
+      "battle_type": "land_normal",
+      "command_events": 397,
+      "duration_ms": 739600,
+      "environment": "VANILLA",
+      "force_discovery_end_ms": 249100,
+      "force_initial_fraction": 0.882353,
+      "identity": {
+        "display_identity": "Battle of Eilhart",
+        "identity_resolution": "RUNTIME_IDENTITY_PRIMARY_NO_VISUAL_TITLE_OVERRIDE",
+        "runtime_battlefield_identity": "Battle of Eilhart — Reikland vs Empire Secessionists",
+        "source_layers_agree": true
+      },
+      "initial_local_units_observed": 15,
+      "local_casualties_observed_lower_bound": 742,
+      "local_casualty_lower_bound_ratio": 0.580595,
+      "local_initial_models": 1278,
+      "local_terminal_coverage_ratio": 0.647059,
+      "local_units": 17,
+      "natural_completion_observed": true,
+      "outcome_grade": "UNVERIFIED",
+      "role_summary": {
+        "artillery": {
+          "casualties_observed_lower_bound": 38,
+          "casualty_lower_bound_ratio": 0.863636,
+          "initial_models": 44,
+          "kills_observed_max_sum": 58,
+          "routing_units_observed": 1,
+          "unit_count": 1
+        },
+        "cavalry": {
+          "casualties_observed_lower_bound": 44,
+          "casualty_lower_bound_ratio": 0.733333,
+          "initial_models": 60,
+          "kills_observed_max_sum": 69,
+          "routing_units_observed": 1,
+          "unit_count": 1
+        },
+        "commander": {
+          "casualties_observed_lower_bound": 0,
+          "casualty_lower_bound_ratio": 0.0,
+          "initial_models": 4,
+          "kills_observed_max_sum": 474,
+          "routing_units_observed": 1,
+          "unit_count": 4
+        },
+        "frontline": {
+          "casualties_observed_lower_bound": 457,
+          "casualty_lower_bound_ratio": 0.634722,
+          "initial_models": 720,
+          "kills_observed_max_sum": 296,
+          "routing_units_observed": 2,
+          "unit_count": 6
+        },
+        "ranged": {
+          "casualties_observed_lower_bound": 203,
+          "casualty_lower_bound_ratio": 0.451111,
+          "initial_models": 450,
+          "kills_observed_max_sum": 482,
+          "routing_units_observed": 3,
+          "unit_count": 5
+        }
+      },
+      "selection_attribution_ratio": 0.0,
+      "source_dense_digest": "442e187638c4d2b3457910efdbb50d13f16fd27a8391e7ac9bd2d6aaed47c33d",
+      "victorious_alliance": "1",
+      "visible_enemy_casualties_observed_lower_bound": 1388,
+      "visible_enemy_terminal_coverage_ratio": 0.75
+    },
+    {
+      "battle_id": "marienburg",
+      "battle_type": "land_normal",
+      "command_events": 328,
+      "duration_ms": 1049800,
+      "environment": "SFO",
+      "force_discovery_end_ms": 154100,
+      "force_initial_fraction": 0.05,
+      "identity": {
+        "display_identity": "Battle of Marienburg",
+        "identity_resolution": "VISUAL_TITLE_FOR_DISPLAY_RUNTIME_IDENTITY_RETAINED",
+        "runtime_battlefield_identity": "Battle of Eilhart — Reikland vs Empire Secessionists",
+        "source_layers_agree": false
+      },
+      "initial_local_units_observed": 1,
+      "local_casualties_observed_lower_bound": 782,
+      "local_casualty_lower_bound_ratio": 0.443311,
+      "local_initial_models": 1764,
+      "local_terminal_coverage_ratio": 0.05,
+      "local_units": 20,
+      "natural_completion_observed": true,
+      "outcome_grade": "PYRRHIC_VICTORY",
+      "role_summary": {
+        "artillery": {
+          "casualties_observed_lower_bound": 35,
+          "casualty_lower_bound_ratio": 0.291667,
+          "initial_models": 120,
+          "kills_observed_max_sum": 81,
+          "routing_units_observed": 0,
+          "unit_count": 2
+        },
+        "cavalry": {
+          "casualties_observed_lower_bound": 58,
+          "casualty_lower_bound_ratio": 0.483333,
+          "initial_models": 120,
+          "kills_observed_max_sum": 276,
+          "routing_units_observed": 0,
+          "unit_count": 2
+        },
+        "commander": {
+          "casualties_observed_lower_bound": 0,
+          "casualty_lower_bound_ratio": 0.0,
+          "initial_models": 4,
+          "kills_observed_max_sum": 341,
+          "routing_units_observed": 1,
+          "unit_count": 4
+        },
+        "frontline": {
+          "casualties_observed_lower_bound": 536,
+          "casualty_lower_bound_ratio": 0.496296,
+          "initial_models": 1080,
+          "kills_observed_max_sum": 380,
+          "routing_units_observed": 4,
+          "unit_count": 8
+        },
+        "ranged": {
+          "casualties_observed_lower_bound": 153,
+          "casualty_lower_bound_ratio": 0.347727,
+          "initial_models": 440,
+          "kills_observed_max_sum": 242,
+          "routing_units_observed": 1,
+          "unit_count": 4
+        }
+      },
+      "selection_attribution_ratio": 0.0,
+      "source_dense_digest": "058f10ad125b554d3d63a0c1f768ed58ef8a9818473c2aebf515ac1458f957c0",
+      "victorious_alliance": "1",
+      "visible_enemy_casualties_observed_lower_bound": 1314,
+      "visible_enemy_terminal_coverage_ratio": 0.0
+    },
+    {
+      "battle_id": "ubersreik",
+      "battle_type": "land_normal",
+      "command_events": 183,
+      "duration_ms": 499700,
+      "environment": "SFO",
+      "force_discovery_end_ms": 229100,
+      "force_initial_fraction": 0.1875,
+      "identity": {
+        "display_identity": "Battle of Ubersreik",
+        "identity_resolution": "VISUAL_TITLE_FOR_DISPLAY_RUNTIME_IDENTITY_RETAINED",
+        "runtime_battlefield_identity": "Battle of Eilhart — Reikland vs Empire Secessionists",
+        "source_layers_agree": false
+      },
+      "initial_local_units_observed": 3,
+      "local_casualties_observed_lower_bound": 334,
+      "local_casualty_lower_bound_ratio": 0.234715,
+      "local_initial_models": 1423,
+      "local_terminal_coverage_ratio": 0.1875,
+      "local_units": 16,
+      "natural_completion_observed": true,
+      "outcome_grade": "DECISIVE_VICTORY",
+      "role_summary": {
+        "artillery": {
+          "casualties_observed_lower_bound": 0,
+          "casualty_lower_bound_ratio": 0.0,
+          "initial_models": 60,
+          "kills_observed_max_sum": 16,
+          "routing_units_observed": 0,
+          "unit_count": 1
+        },
+        "cavalry": {
+          "casualties_observed_lower_bound": 4,
+          "casualty_lower_bound_ratio": 0.033333,
+          "initial_models": 120,
+          "kills_observed_max_sum": 260,
+          "routing_units_observed": 0,
+          "unit_count": 2
+        },
+        "commander": {
+          "casualties_observed_lower_bound": 0,
+          "casualty_lower_bound_ratio": 0.0,
+          "initial_models": 3,
+          "kills_observed_max_sum": 100,
+          "routing_units_observed": 0,
+          "unit_count": 3
+        },
+        "frontline": {
+          "casualties_observed_lower_bound": 330,
+          "casualty_lower_bound_ratio": 0.4125,
+          "initial_models": 800,
+          "kills_observed_max_sum": 247,
+          "routing_units_observed": 1,
+          "unit_count": 6
+        },
+        "ranged": {
+          "casualties_observed_lower_bound": 0,
+          "casualty_lower_bound_ratio": 0.0,
+          "initial_models": 440,
+          "kills_observed_max_sum": 140,
+          "routing_units_observed": 0,
+          "unit_count": 4
+        }
+      },
+      "selection_attribution_ratio": 0.0,
+      "source_dense_digest": "a93340421c1c7a0623f21381d6d83de209299276e93c418ed193adb65ca8a5ec",
+      "victorious_alliance": "1",
+      "visible_enemy_casualties_observed_lower_bound": 981,
+      "visible_enemy_terminal_coverage_ratio": 1.0
+    }
+  ],
+  "benchmark_dimensions": [
+    "outcome_status",
+    "outcome_grade_when_observed",
+    "local_casualty_lower_bound",
+    "role_specific_loss",
+    "commander_crisis",
+    "force_discovery",
+    "reserve_state",
+    "terminal_discipline",
+    "identity_provenance",
+    "command_churn_reference_only"
+  ],
+  "contract": "TACTICAL_CROSS_CORPUS_POLICY_ENVELOPE_V1",
+  "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVED_AND_LIMITING_INPUTS",
+  "generalization_limits": [
+    "All four dense corpora are ordinary land-battle replays.",
+    "The SFO calibration cohort is Reikland-only and contains two naturally completed victories plus one nonterminal Chaos divergence trace.",
+    "The vanilla Eilhart replay is a single battle and cannot establish cross-faction or SFO behavior.",
+    "No source proves project command acknowledgement, command execution causality, route completion, formation feasibility, line of fire, or tactical optimality.",
+    "No policy threshold in this envelope is faction-general, siege-general, ambush-general, multiplayer-safe, or a learned causal effect.",
+    "Owner command traces are observational references and never training truth for required command frequency."
+  ],
+  "identity_provenance_boundary": {
+    "display_identity_may_differ": true,
+    "interpretation": "The repeated Battle of Eilhart runtime battlefield identity is preserved because v0.2A/v0.2C source evidence explicitly binds different replay/display identities. This is provenance, not a claim that those battles were Eilhart.",
+    "known_runtime_identity_alias_cohort": [
+      "ubersreik",
+      "marienburg",
+      "chaos"
+    ],
+    "runtime_identity_field_is_authoritative_for_runtime_source": true,
+    "silent_identity_reconciliation_prohibited": true
+  },
+  "policy_id": "reikland_cross_corpus_tactical_policy_envelope_v0.2D",
+  "policy_rules": [
+    {
+      "application": "ABSTAIN_FROM_TERMINAL_LEARNING_WITHOUT_TERMINAL_EVIDENCE",
+      "authority": "NO_ORDERS",
+      "rule": "Never infer a terminal result from replay exhaustion, process exit, stable log bytes, or a post-replay summary. Outcome labels require natural completion or a separately bound result artifact.",
+      "rule_id": "terminal_evidence_authority_guard",
+      "status": "SUPPORTED_MULTI_CORPUS",
+      "supporting_battles": [
+        "eilhart",
+        "ubersreik",
+        "marienburg",
+        "chaos"
+      ]
+    },
+    {
+      "application": "PRESERVE_IDENTITY_LAYERS",
+      "authority": "NO_ORDERS",
+      "rule": "Preserve runtime battlefield identity and replay/display identity as separate provenance layers when they disagree; never silently rewrite either source.",
+      "rule_id": "identity_provenance_separation",
+      "status": "OBSERVED_MULTI_SOURCE",
+      "supporting_battles": [
+        "ubersreik",
+        "marienburg",
+        "chaos"
+      ]
+    },
+    {
+      "application": "DEFER_WHOLE_FORCE_ASSUMPTIONS_WHILE_DISCOVERY_CHANGES",
+      "authority": "ADVISORY_ONLY",
+      "rule": "Treat the currently observed local hierarchy as incomplete while force discovery is changing; defer whole-force assumptions until the observation boundary stabilizes.",
+      "rule_id": "force_completeness_guard",
+      "status": "SUPPORTED_MULTI_CORPUS",
+      "supporting_battles": [
+        "eilhart",
+        "ubersreik",
+        "marienburg"
+      ]
+    },
+    {
+      "application": "SCORE_COST_DIMENSIONS_SEPARATELY_FROM_WIN_STATUS",
+      "authority": "ADVISORY_ONLY",
+      "rule": "Evaluate victory grade separately from preservation cost, role-specific losses, crisis exposure, and duration.",
+      "rule_id": "victory_grade_cost_separation",
+      "status": "SUPPORTED_MULTI_CORPUS",
+      "supporting_battles": [
+        "ubersreik",
+        "marienburg"
+      ]
+    },
+    {
+      "application": "PRESERVATION_FIRST_DURING_LOCAL_CRISIS",
+      "authority": "ADVISORY_ONLY",
+      "rule": "When local morale or high-value assets are in crisis, preserve those assets before adding discretionary commitment, including when visible enemy collapse or terminal evidence is also present.",
+      "rule_id": "local_crisis_preservation_priority",
+      "status": "SUPPORTED_MULTI_CORPUS",
+      "supporting_battles": [
+        "eilhart",
+        "marienburg",
+        "chaos"
+      ]
+    },
+    {
+      "application": "REVIEW_HIGH_VALUE_ASSET_AT_OR_ABOVE_HALF_LOSS",
+      "authority": "ADVISORY_ONLY",
+      "rule": "Trigger preservation review from loss fraction, not an absolute model-loss count. A 50% observed lower-bound loss is severe regardless of unit model count.",
+      "rule_id": "severe_asset_loss_ratio_guard",
+      "severe_loss_ratio_threshold": 0.5,
+      "status": "SUPPORTED_MULTI_CORPUS",
+      "supporting_battles": [
+        "eilhart",
+        "chaos"
+      ]
+    },
+    {
+      "application": "RETAIN_EXPLICIT_RESERVE_STATE",
+      "authority": "ADVISORY_ONLY",
+      "rule": "Distinguish reserve unknown, absent, available, committed late, and unable to support. Never collapse delayed or uneven commitment into a no-reserve label.",
+      "rule_id": "reserve_state_refinement",
+      "status": "SUPPORTED_BOUNDED",
+      "supporting_battles": [
+        "chaos"
+      ]
+    },
+    {
+      "application": "NO_NEW_HIGH_COMMITMENT_AFTER_TERMINAL_EVIDENCE",
+      "authority": "ADVISORY_ONLY",
+      "rule": "After natural outcome-decision evidence, prohibit new high-commitment proposals; bounded preservation, disengagement, reformation, and pursuit review may remain advisory.",
+      "rule_id": "terminal_commitment_abstention",
+      "status": "SUPPORTED_MULTI_CORPUS",
+      "supporting_battles": [
+        "eilhart",
+        "ubersreik",
+        "marienburg"
+      ]
+    },
+    {
+      "application": "HYPOTHESIS_REVIEW_ONLY",
+      "authority": "ADVISORY_ONLY",
+      "rule": "When a large share of targeted command traffic concentrates on one target while other threats remain, request utility re-evaluation only. Without selection-bound attribution this is not a finding of tactical error.",
+      "rule_id": "target_concentration_review",
+      "status": "HYPOTHESIS_SINGLE_CORPUS",
+      "supporting_battles": [
+        "chaos"
+      ]
+    },
+    {
+      "application": "REFERENCE_ONLY_NOT_CAUSAL",
+      "authority": "NO_ORDERS",
+      "rule": "Observed owner command counts are workload and chronology references, not target control rates, acknowledgements, execution proof, or optimal-policy labels.",
+      "rule_id": "owner_command_churn_reference_only",
+      "status": "SUPPORTED_BOUNDARY",
+      "supporting_battles": [
+        "eilhart",
+        "ubersreik",
+        "marienburg",
+        "chaos"
+      ]
+    }
+  ],
+  "rejected_promotions": [
+    "No observed command event is promoted to project issue, acceptance, acknowledgement, or causal execution.",
+    "No nonterminal Chaos observation is promoted to a replayed defeat or terminal grade.",
+    "No owner action sequence is promoted to optimal policy.",
+    "No policy rule may consume hidden enemy identity or state.",
+    "No runtime or order adapter is introduced by this offline policy layer."
+  ],
+  "result_digest": "4fe0d769dee3649bd2f4f9ce2db364ae6dbd75e045f618091096ff3a67de3fee",
+  "schema_version": 1,
+  "source_provenance": {
+    "chaos_replay_calibration_digest": "a69f2ed4e09034dc79ac5462aefa7f9c949c09a33a3e4e843e4a8cdecddcaab4",
+    "dense_result_digests": {
+      "chaos": "4d84f49ec1782d29e872eff6674e93af089c3290a765b5d20c95b815ee70cea4",
+      "eilhart": "442e187638c4d2b3457910efdbb50d13f16fd27a8391e7ac9bd2d6aaed47c33d",
+      "marienburg": "058f10ad125b554d3d63a0c1f768ed58ef8a9818473c2aebf515ac1458f957c0",
+      "ubersreik": "a93340421c1c7a0623f21381d6d83de209299276e93c418ed193adb65ca8a5ec"
+    },
+    "dual_replay_calibration_digest": "364431a064ef1f15bc6ab7da4417b688d882ac7f2035be753728d9d75870565e",
+    "replay_sha256": {
+      "chaos": "28d780d02f2af07fe16fe4a24a27cd37f41bdb870d485f11949d5ed63f838cb5",
+      "eilhart": "76b8807f5cc2d223d454028f54fc18b791a254c3ce543aa587ad4286658e302b",
+      "marienburg": "844d2efc4434c18d09d5958fc5cf9c60bf21201d5ca2af2e254077666ba0c902",
+      "ubersreik": "e96c160ce8ca83463407d2008c676da1bcad2a0e0d2ec1f03b475097b4c4ea89"
+    }
+  }
+}

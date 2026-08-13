@@ -1,0 +1,248 @@
+1. Native support classification for each v0.2F/v0.2G concept
+Exact evidence standard: only official CA wording, project’s own frozen pack audits, or publicly documented schema/script surfaces. No inference from “it must exist.”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ConceptClassificationEvidenceStrategic priority portfolio (bounded multi-priority representation with explicit overflow)NO_EVIDENCE_FOUNDCA blogs describe task generation + priority modification; no public description of a fixed-size portfolio record or explicit overflow carrier. Project audits of DeepWar/Hecleas/SFO show task-generator groups and strategic components, not a portfolio object.Critical-priority handling (100% critical-source awareness via overflow)NO_EVIDENCE_FOUNDNo official or schema evidence of an explicit critical-overflow mechanism that preserves omitted sources.Task batching/aggregationPROVEN_NATIVE_PARTIALCA describes task generation then priority evaluation; task-generator groups/junctions exist in audited packs and are edited by DeepWar/Hecleas/Incata-style mods. Exact batching semantics and whether multiple generators are aggregated into one decision cycle remain undocumented.Force-to-task allocationPROVEN_NATIVE_PARTIALCA (BETA blogs): when a task is evaluated, strength evaluation is performed on the target; owned forces are searched for a good strength ratio; if none, recruit. This is real allocation logic. Exact exclusivity, multi-task arbitration, or deterministic ranking rules are not published.Reserve preservationNO_EVIDENCE_FOUNDNo official statement or schema surface describing an explicit “keep one healthy unclaimed reserve” rule.Recovering-army protectionNO_EVIDENCE_FOUNDNo public evidence of a recovery-state gate that blocks non-critical work. Strength evaluation exists, but recovery as a distinct protected status is unproven.Exclusive army commitment (one abstract slot per actor)NO_EVIDENCE_FOUND / UNKNOWN_ENGINE_INTERNALCA describes force selection per task; no public evidence of a hard exclusive commitment slot that prevents double-booking across concurrent tasks. Engine may enforce some form of exclusivity internally; this is not proven.Temporal commitment / anti-thrashingNO_EVIDENCE_FOUNDPatch 8.1 and earlier betas discuss priority and distance scaling; no public description of multi-turn commitment windows, review intervals, or anti-oscillation rules.Reassignment only after material changeNO_EVIDENCE_FOUNDNo evidence of a material-score threshold or hysteresis on reassignment.Aggression veto during crisis/recoveryNO_EVIDENCE_FOUNDCA discusses defensive tasks and end-game prioritization; no explicit veto that empties aggressive priorities while preserving awareness under total-force recovery or front crisis.
+Summary for the claim: The claim that v0.2F/v0.2G should remain potential real planners is weakened. Force-to-task allocation and some task prioritization are PROVEN_NATIVE_PARTIAL. Everything that makes the project layers distinctive (exclusive slots, recovery protection, critical overflow, temporal anti-thrashing, material-change hysteresis, crisis veto) is currently NO_EVIDENCE_FOUND. That does not prove absence; it does prove that the project cannot yet claim native equivalence or superiority on those axes.
+2. Sunk-cost attack (assume v0.2E–H never existed)
+Knowing current 8.1.x CAI, DeepWar, Hecleas, Incata-style task tuning, SFO CAI surface, and available scripting/DB:
+
+Evaluator/research use: Yes, I would still build a lightweight observer-safe challenge/portfolio/assignment evaluator today. The native system is still hard to score fairly and longitudinally. A pure metric harness that measures coherent-rival persistence, recovery mishandling, thrashing, and overcommitment has clear value and low risk.
+Actual campaign decision-making: No. I would not build a full parallel strategic stack intended to select the tasks the game should pursue. I would start with native CAI + aggressive, measured DB/script influence (personality, budgets, task-generator priorities, the new 8.1 prioritization surface if exposed) under controlled ablations, and only escalate to a parallel planner if native + tuning failed specific, pre-registered fairness and late-game metrics.
+Live action control: Definitely not. Control remains the highest-risk surface; I would keep it gated far downstream.
+
+This differs from the first audit’s implicit recommendation. The first audit treated the parallel planner as the default architecture; under a clean-slate view the default becomes native executor + evaluator/tuner, with parallel ownership as a contingency.
+3. Is v0.2I the highest-value next experiment?
+Comparison:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CriterionA. Continue v0.2I live feasibilityB. Pause for row-level native-CAI reconciliationArchitectural information gainMedium (proves or limits one query transport)High (exposes exact current values of the surfaces the project is trying to approximate or replace)Probability of invalidating current assumptionsMedium-lowHighOwner testing burdenHigh (repeated WH3 launches, pack binding, idle-map observation)Medium (offline pack extraction + schema work; some live ablations later)Engineering timeAlready high sunk + more transport debuggingHigher upfront schema/row work, but amortizes across all future decisionsRisk of optimizing a layer we later removeHigh (feasibility bridge is only useful if the upstream planner remains the decision source)Low
+Choice: B. Pause v0.2I. The transport work is optimizing a downstream bridge whose upstream justification is still under-resolved. Row-level reconciliation of vanilla / SFO / DeepWar / Hecleas / Incata / 8.1 prioritization surfaces is the higher-leverage experiment.
+4. Evaluator value vs controller necessity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Transcendence capabilityEvaluator valueController valueEvidence that controller ownership is necessaryStrategic priority portfolioHigh – can score whether native task sets cover fronts/recovery/rivalsMediumNone. Native task generation already produces priorities.Critical-priority handling / overflowHigh – metric for dropped urgent frontsMediumNone.Task batching/aggregationMediumLow–MediumNone.Force-to-task allocationHigh – can measure exclusivity, strength-ratio quality, shortagesMedium–HighWeak. Native already performs strength-ratio search + recruit.Reserve preservationHigh – overcommitment metricMediumNone.Recovering-army protectionHigh – damaged-army misuse metricMediumNone.Exclusive army commitmentHigh – double-booking metricMediumNone proven.Temporal commitment / anti-thrashingHigh – longitudinal churn metricMediumNone.Material-change reassignmentHigh – oscillation metricMediumNone.Aggression veto under crisisHigh – suicide/overextension metricMediumNone.
+Controller ownership is not required for any of these to retain value. Most of the distinctive project machinery is more naturally an evaluation harness than a decision replacement.
+5. Falsifying “native CAI is opaque, therefore we need our own planner”
+Opaqueness is real but incomplete. Reconstructible or experimentally inferable surfaces include:
+
+Task-generator groups and junctions (edited by every major AI mod; visible in RPFM).
+Personality sets and their associated variables/budgets.
+Budget and income allocation tables.
+Strategic components.
+Faction potential.
+Distance/time scaling parameters (publicly described and changed in betas).
+The new turn-dependent prioritization mechanism (at least the behavioral effect is public; schema exposure is UNVERIFIED).
+Strength evaluation inputs (units, experience, bonuses, stances).
+Campaign outcomes under controlled ablations of the above.
+
+Strongest alternative architecture: Transcendence as instrumentation + evaluator + native-tuning system.
+
+Observer packs remain for clean, path-free snapshots.
+Offline evaluator (current v0.2E-style metrics + longitudinal churn/recovery/overcommit scores) scores native behavior.
+Controlled DB/script influence layer (personalities, budgets, task-generator priorities, 8.1 prioritization surface if exposed) under hash-bound profiles.
+Bounded correction only when evaluator detects a clear, pre-registered failure mode that native tuning cannot fix.
+No project-owned task selection or force assignment in the application path unless the evaluator repeatedly falsifies the tuned native system on the registered metrics.
+
+This removes the need to own strategic task selection while preserving fairness, explainability, and SFO compatibility.
+6. Patch 8.1 source-level precision
+Exact CA wording (Patch 8.1 release notes):
+“There are certain Campaign AI tasks that lead to its armies clustering and idling e.g. focusing on defending key regions therefore, we’ve added a new mechanism that allows us to control exactly what the Campaign AI prioritises, depending on how many turns have passed since campaign start. Using this new mechanism we’ve de-prioritised tasks e.g. defending key regions in the late game… Utilising the mechanism above defensive tasks for end game factions have had their priority decreased… The priority of tasks that target enemy forces is increased slightly.”
+
+Exact table/variable/schema surface: UNVERIFIED. No public schema or table name has been located.
+Exposed to modders vs engine-hardcoded: UNVERIFIED. Behavioral effect is public; whether the mechanism is a new DB table, a variable, or hardcoded is unknown.
+DeepWar / Hecleas / other mods interaction: UNVERIFIED for post-8.1 versions. Pre-8.1 packs cannot have targeted a surface that did not yet exist.
+Redundancy with v0.2F phase-dependent priorities: Partial behavioral overlap is clear (late-game defensive de-prioritization). Whether the project’s explicit portfolio + veto is still necessary is the open question; the native mechanism does not prove equivalence on overflow, recovery, or exclusivity.
+
+7. Native force allocation vs v0.2G
+Best available evidence (CA BETA blogs):
+task generation → priority modification (distance/time, now also turn-progress) → strength evaluation on target → search owned forces for acceptable strength ratio → if none, recruit → execution.
+Native advantages the project currently lacks:
+
+Real route/path knowledge and stance costs (project uses geometric reference only).
+Full strength evaluation that includes experience, bonuses, stances, and local context.
+Recruitment feasibility and timing inside the same decision loop.
+Local campaign context (threat maps, influence, exact movement extents) unavailable to the observer-safe snapshot.
+
+Using v0.2G as an application allocator therefore risks systematically worse force selection: it can propose an exclusive, recovery-protected, anti-thrashing assignment that is geometrically attractive but path-infeasible, stance-illegal, or strength-misestimated relative to what the native system already knows. Explainability would improve; realized campaign performance could degrade. This is a concrete reason to keep v0.2G evaluator-only until native allocation quality is measured against the same metrics.
+8. Deletion / demotion thresholds (achievable)
+
+Demote v0.2F to evaluator-only if, after row-level reconciliation + controlled personality/task-generator ablations, native task sets under 8.1 already cover ≥90 % of critical fronts and recovery states on the project’s own challenge envelope across 10+ controlled late-game saves, with no systematic dropped-critical pattern.
+Demote v0.2G to evaluator-only if native force-to-task allocation shows double-booking rate <5 %, recovering-army misuse rate below a pre-registered threshold, and thrashing (reassignment without material score gain) below the project’s own 4-turn/0.15-margin rate on the same saves.
+Abandon v0.2I feasibility bridge if the above two demotions occur, or if live query results remain unavailable after one more bounded transport attempt and the upstream planner is no longer the decision source.
+Adopt native CAI + bounded DB/script tuning as primary architecture if the evaluator metrics (coherent-rival persistence, recovery protection, thrashing, overcommit) are satisfied by tuned native under both vanilla and SFO profiles across the registered test set, and no fairness invariant is violated.
+
+9. Reverse conclusion
+Strongest case for “Transcendence should NOT own a strategic planner”:
+Native CAI already performs the core loop (threat/strength → task generation → priority with distance/time/turn scaling → strength-ratio force selection → recruit-or-assign). Patch 8.1 and the 2025 betas demonstrably improved the exact late-game idling and anti-player problems that motivated the parallel stack. Major mods (DeepWar, Hecleas, Incata) already operate successfully by editing the exposed surfaces. The project’s distinctive machinery (exclusive slots, recovery gates, critical overflow, anti-thrashing) has no proven native equivalent but also has no proven necessity for good play; they can be metrics. Building a parallel planner risks both sunk-cost protection and performance degradation from poorer information (no real paths, incomplete strength, no recruitment loop). The high-value, low-risk role is evaluator + instrumentation + measured native tuning + fairness guardrails.
+Strongest case against:
+Native remains opaque on the exact decision that matters (which fronts are kept, which armies are protected, whether commitments thrash). Mod success is confounded with difficulty, budgets, and environment changes. Fairness, player-label invariance, SFO compatibility, and explainability are not native goals. If the evaluator repeatedly shows systematic recovery misuse, critical-front drops, or thrashing that cannot be fixed by the exposed tables, then a parallel planner becomes justified. The project’s contracts are the only currently existing specification of the desired behavior.
+Probabilities
+A — NATIVE_CAI_PRIMARY + TRANSCENDENCE_EVALUATOR/TUNER: 55 %
+B — HYBRID_NATIVE_EXECUTOR + TRANSCENDENCE_STRATEGIC_PLANNER: 30 %
+C — TRANSCENDENCE_PROJECT_OWNED_STRATEGIC_STACK: 15 %
+10. Final decision
+
+Yes. Pause v0.2I right now.
+Row-level native-CAI reconciliation (vanilla 8.1 + SFO deltas + DeepWar + Hecleas + Incata-style + any exposed 8.1 prioritization surface).
+The v0.2I feasibility bridge / live query transport layer is the most likely to be unnecessary in the final application path.

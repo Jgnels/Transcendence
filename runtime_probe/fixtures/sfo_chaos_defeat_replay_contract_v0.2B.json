@@ -1,0 +1,51 @@
+{
+  "authority": "NO_ORDERS",
+  "capture": {
+    "corpus_version": "v0.2B",
+    "private_raw_log_upload_required": true,
+    "replay_binary_exported": false,
+    "schema2_complete_required": true,
+    "timeout_minutes_default": 45,
+    "video_exported": false
+  },
+  "contract": "SFO_CHAOS_DEFEAT_EXACT_REPLAY_CAPTURE_V1",
+  "environment": {
+    "battle_replay_pack_name": "transcendence_battle_replay_probe.pack",
+    "battle_replay_pack_sha256": "6e3f8e7bbc7d66754a7fa764c802e2b5599d13e83820e0785cb85d738040f66d",
+    "required_active_mod_count": 2,
+    "required_load_order": [
+      "SFO_TOTAL_OVERHAUL",
+      "READ_ONLY_BATTLE_OBSERVER"
+    ],
+    "script_equivalent_shadow_pack_name": "transcendence_shadow_probe.pack",
+    "script_equivalent_shadow_pack_sha256": "0714863e2081206aa7d0790ec14d7c3c3c7ae33eea416d72dba0d6a2ecd0a89e",
+    "sfo_pack_sha256": "ae20a0a08037aa3ebcbe7461d2589fc28dc15a5fe5d9ca4c0a9d0ff0a26da603",
+    "sfo_workshop_id": "2792731173",
+    "shared_battle_script_sha256": "86e18ec655c4a45a4a062d1dae7d10e6fd9a1cb77af5557757fbca9ed896562e"
+  },
+  "interpretation_limits": [
+    "Observed command events would remain observation only and not acknowledgement.",
+    "Visible movement after a command is not causal execution proof.",
+    "The owner trace is not an optimal-policy label.",
+    "The visual diagnosis does not prove that any alternative would have produced victory.",
+    "Embedded replay strings are evidence of labels present in the binary, not a complete roster or deployment reconstruction."
+  ],
+  "replay": {
+    "battle_label": "An Ogre's Folly — Reikland vs Warhost of the Apocalypse",
+    "binary_committed": false,
+    "display_title": "An Ogre's Folly",
+    "replay_name_hint": "test.replay",
+    "sha256": "28d780d02f2af07fe16fe4a24a27cd37f41bdb870d485f11949d5ed63f838cb5",
+    "size_bytes": 86067
+  },
+  "result_digest": "84eac2499b0fe34d460ff05b44bb615ca0976e220dcf589dc15a8039b58d133b",
+  "schema_version": 1,
+  "status": "READY_FOR_OWNER_READ_ONLY_REPLAY_CAPTURE",
+  "visual_binding": {
+    "outcome_status": "OWNER_ATTESTED_DEFEAT_VISUALLY_CONSISTENT",
+    "recording_committed": false,
+    "recording_sha256": "6e008c378a8e4273ca7d2c8101ca69279839a5c21dbaf749fb5e666adde56155",
+    "result_screen_observed": false,
+    "visual_preparation_result_digest": "33147a76c6499694b9ae1623dd8698deb5c83a8eb77b9435a8451a64a12d54ab"
+  }
+}

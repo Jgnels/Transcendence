@@ -1,0 +1,58 @@
+{
+  "authority_boundary": {
+    "acknowledgements_observed": false,
+    "campaign_mutation_observed": false,
+    "orders_observed": false,
+    "outcomes_observed": false,
+    "save_mutation_observed": false
+  },
+  "environment": {
+    "campaign": "wh3_main_combi",
+    "is_multiplayer": false,
+    "is_new_game": true,
+    "local_faction": "wh_main_emp_empire",
+    "profile": "pure_vanilla_plus_transcendence_observer_probe",
+    "turn": 1
+  },
+  "evidence_status": "OBSERVED",
+  "schema_version": 1,
+  "source_artifacts": {
+    "evidence_manifest_sha256": "96e388d0013ca182113e89598d99efdaae3b79fe789e8da1e0b70ff0ab73b165",
+    "lua_mod_log_sha256": "ddf462130e6551c034ddd5e79dfc916fba0a133cfa0cf6ef715e6df7afd1f9f7",
+    "v0_1c_summary_sha256": "5177ee7ba8db6214e3cd605d035e73912e2708679e72f2b3b9ee60a197d51a6b"
+  },
+  "v0_1d_reparse": {
+    "canonical_planner_snapshot_reason": "LOCAL_FACTION_TURN_START",
+    "capability_promotions": {
+      "campaign_first_tick_callback": "OBSERVED",
+      "campaign_local_faction_turn_start_snapshot": "OBSERVED",
+      "campaign_mod_pack_loaded": "OBSERVED",
+      "local_army_observation": "OBSERVED",
+      "local_region_observation": "OBSERVED",
+      "save_reload_saved_value_roundtrip": "UNVERIFIED",
+      "visibility_filtered_foreign_characters": "OBSERVED",
+      "visibility_filtered_foreign_regions": "OBSERVED"
+    },
+    "duplicate_event_count": 0,
+    "event_count": 55,
+    "lifecycle_deltas": [
+      {
+        "canonical_reason": "LOCAL_FACTION_TURN_START",
+        "deltas": {
+          "own_armies_emitted": 0,
+          "own_regions_emitted": 0,
+          "visible_characters_emitted": 3,
+          "visible_regions_emitted": 2,
+          "war_count": 0
+        },
+        "different": true,
+        "first_tick_reason": "FIRST_TICK"
+      }
+    ],
+    "repeated_across_snapshot_count": 8,
+    "result_digest": "4391fed3eb2a87244e558797625eabdad0f8a4672a7f4073b6305cf271ce4f27",
+    "session_count": 1,
+    "snapshot_count": 2,
+    "summary_sha256": "d8215b9f93664401c64c7842d190cef57042bc38115e8085bdcea30485a3b992"
+  }
+}

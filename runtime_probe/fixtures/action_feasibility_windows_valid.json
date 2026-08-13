@@ -1,0 +1,147 @@
+{
+  "authority": "NO_ORDERS",
+  "capture_kind": "action_feasibility_window_reexport",
+  "direct_acknowledgement_count": 0,
+  "export_contract": "ACTION_FEASIBILITY_WINDOW_EXPORT_V1",
+  "installed_pack_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "interpretation_limits": [
+    "The re-export preserves local unit and visible target identities from one read-only capture but excludes raw lines and machine paths.",
+    "Command origin remains unresolved and state matches are not acknowledgement.",
+    "Reachability is a point-in-time query, not route completion, formation feasibility, arrival, execution, or outcome."
+  ],
+  "privacy_boundary": {
+    "game_install_path_included": false,
+    "machine_paths_included": false,
+    "raw_lines_included": false,
+    "user_identity_included": false
+  },
+  "project_issue_attempt_count": 0,
+  "raw_log_in_export": false,
+  "result_digest": "8416122d9347fb6ff0eacf58dc1fac348dea56c72b045bece07204b9b6ac27a9",
+  "sample_count": 2,
+  "schema_version": 1,
+  "session_count": 1,
+  "source_prepared_manifest_sha256": "e8cdf067b99cdab03954334347bfe756a85c7907c0fe7bcee448786a3e14a0d8",
+  "source_raw_log_sha256": "09daefe9129e7dab6821b438b7bb591ccfb8c8e820c48faad3e6950537a24496",
+  "source_raw_log_size_bytes": 3278,
+  "window_count": 2,
+  "windows": [
+    {
+      "actor_count": 1,
+      "actors": [
+        {
+          "result_digest": "4fa6a2e8935f56b78093ae66f9ecc2f5386e23575809f79964a5d8bf205ed00a",
+          "samples": [
+            {
+              "ai_controlled": false,
+              "controllable": true,
+              "current_target_id": "none",
+              "current_target_match": false,
+              "idle": true,
+              "leaving": false,
+              "moving": false,
+              "ordered_position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": 20.0
+              },
+              "ordered_position_match": true,
+              "player_controlled": true,
+              "reachability": "QUERY_TRUE",
+              "routing": false,
+              "sample_index": 1,
+              "script_controlled": false,
+              "shattered": false,
+              "time_offset_ms": 0,
+              "unit_id": "1:u1001"
+            },
+            {
+              "ai_controlled": false,
+              "controllable": true,
+              "current_target_id": "none",
+              "current_target_match": false,
+              "idle": false,
+              "leaving": false,
+              "moving": true,
+              "ordered_position": {
+                "x": 10.0,
+                "y": 0.0,
+                "z": 20.0
+              },
+              "ordered_position_match": true,
+              "player_controlled": true,
+              "reachability": "QUERY_TRUE",
+              "routing": false,
+              "sample_index": 2,
+              "script_controlled": false,
+              "shattered": false,
+              "time_offset_ms": 250,
+              "unit_id": "1:u1001"
+            }
+          ],
+          "summary": {
+            "any_control_loss_observed": false,
+            "any_current_target_match": false,
+            "any_leaving_observed": false,
+            "any_movement_observed": true,
+            "any_ordered_position_match": true,
+            "any_routing_observed": false,
+            "any_shattered_observed": false,
+            "first_query_result": "QUERY_TRUE",
+            "last_query_result": "QUERY_TRUE",
+            "reachability_counts": {
+              "NOT_APPLICABLE": 0,
+              "QUERY_FALSE": 0,
+              "QUERY_TRUE": 2,
+              "UNAVAILABLE": 0
+            },
+            "sample_count": 2
+          },
+          "unit_id": "1:u1001"
+        }
+      ],
+      "close_reason": "WINDOW_TIMEOUT",
+      "command": "Move",
+      "command_index": 1,
+      "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+      "direct_acknowledgement_observed": false,
+      "duration_ms": 5000,
+      "interpretation": "OBSERVED_STATE_WINDOW_NOT_CAUSALLY_ATTRIBUTED",
+      "opened_time_ms": 1100,
+      "project_issue_attempted": false,
+      "result_digest": "c48721d225f7e1bf598dd2a87aa63eb42af8cad3c167a0a6649d3977e1197eac",
+      "selected_unit_ids": [
+        "1:u1001"
+      ],
+      "target_position": {
+        "x": 10.0,
+        "y": 0.0,
+        "z": 20.0
+      },
+      "target_unit_id": "none",
+      "window_id": "w1"
+    },
+    {
+      "actor_count": 0,
+      "actors": [],
+      "close_reason": "UNBOUND_SELECTION",
+      "command": "Move",
+      "command_index": 2,
+      "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+      "direct_acknowledgement_observed": false,
+      "duration_ms": 0,
+      "interpretation": "OBSERVED_STATE_WINDOW_NOT_CAUSALLY_ATTRIBUTED",
+      "opened_time_ms": 6300,
+      "project_issue_attempted": false,
+      "result_digest": "f969e99ca1f1489d3bcfc7f674822877dbd624407d6e0d0a6f5033d957a141bb",
+      "selected_unit_ids": [],
+      "target_position": {
+        "x": 30.0,
+        "y": 0.0,
+        "z": 40.0
+      },
+      "target_unit_id": "none",
+      "window_id": "w2"
+    }
+  ]
+}

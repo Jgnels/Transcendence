@@ -1,0 +1,40 @@
+{
+  "authority": "NO_ORDERS",
+  "capture_kind": "ordinary_single_player_battle",
+  "fixed_v0_1r_values": {
+    "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+    "direct_acknowledgement": "UNAVAILABLE_NOT_OBSERVED",
+    "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+    "project_issue_attempt": "NOT_ATTEMPTED"
+  },
+  "interpretation_limits": [
+    "The command callback does not identify player-versus-script origin.",
+    "Selection binding is observational and may be absent.",
+    "Reachability is a point-in-time query, not proof of a valid completed route.",
+    "State matches do not establish direct acknowledgement or causal execution."
+  ],
+  "private_local_only_sections": [
+    "raw_transcendence_runtime_log",
+    "machine_profile",
+    "installed_game_path",
+    "used_mods_path"
+  ],
+  "required_claim_separation": [
+    "CANDIDATE_ACTION",
+    "GAME_COMMAND_EVENT_OBSERVED",
+    "PROJECT_ISSUE_ATTEMPT",
+    "DIRECT_ACKNOWLEDGEMENT",
+    "STATE_MATCH_EVIDENCE",
+    "INTERRUPTION_OR_CANCELLATION",
+    "OUTCOME_ATTRIBUTION"
+  ],
+  "required_sections": [
+    "prepared_session_manifest",
+    "public_action_authority_summary",
+    "action_authority_verification",
+    "public_capture_manifest"
+  ],
+  "result_digest": "2a0eba9ce4c9bb176bb3ca0e8247d01db7dba769e721ada243e92946a034cde2",
+  "schema_version": 1,
+  "template_contract": "ACTION_AUTHORITY_LIVE_CAPTURE_PACKET_TEMPLATE_V1"
+}

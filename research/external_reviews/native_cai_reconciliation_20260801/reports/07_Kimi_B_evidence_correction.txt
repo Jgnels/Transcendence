@@ -1,0 +1,188 @@
+KIMI B — FINAL EVIDENCE-CORRECTION PASS
+Authority: v0.2I-r3 project brief + frozen audit artifacts. No new packs acquired.
+Discipline: VERIFIED_REPO_FACT / OFFICIAL_GAME_FACT / MODDER_COMMUNITY_CLAIM / INFERENCE / HYPOTHESIS / UNVERIFIED.
+1. 6.3.4 NATIVE TASK PIPELINE — EXPLICIT ONLY
+Source: CA Total War: WARHAMMER III — Hotfix 6.3.4 release notes (Nov 2025).
+Game baseline for this audit is v8.1.1 build 48122.4194776; the relationship between 6.3.4 and 8.1.1 is UNVERIFIED.
+Table
+Claim	Classification
+A native CAI pipeline contains a “generation step”	PROVEN_CURRENT_WH3
+Multiple task generators can contribute to the same task	PROVEN_CURRENT_WH3 — “The generation step involves multiple task generators contributing to the same task”
+An “allocation step” pairs tasks with armies	PROVEN_CURRENT_WH3 — “During the allocation step tasks and armies are paired together”
+Batching is allowed during generation	PROVEN_CURRENT_WH3 — “During the generation step tasks are allowed to be ‘batched’ together if they are of the same type and target the same thing”
+Batching is allowed during allocation	PROVEN_CURRENT_WH3 — “During the allocation step tasks are allowed to be ‘batched’ together if they are of the same type and target the same thing”
+Same-type + same-target is the batching criterion	PROVEN_CURRENT_WH3
+Specific defensive generators were identified as problematic	PARTIAL — CA says “the biggest offender task generators” were replaced and that “changes that deprioritise defensive behaviour” were implemented; this implies problematic defensive generators but does not name them
+Those generators were replaced with non-batchable alternatives	PROVEN_CURRENT_WH3 — “replaced the biggest offender task generators with ones that are not allowed to be ‘batched’ together”
+The replacement causally reduces multi-army stacking	PROVEN_CURRENT_WH3 — CA explicitly states “This means that the AI should be less likely to send multiple armies to the same target”
+No semantics beyond the source text are added. CA does not describe in these notes how task types are defined, how armies are scored for pairing, how batching interacts with force composition, or whether the pipeline runs per-faction or globally.
+Native responsibility vs. external strategic portfolio
+The following are definitely proven native as of 6.3.4:
+Task generation from multiple generator sources.
+Task combination/batching by type and target.
+Task-to-army allocation (pairing).
+Defensive-behavior deprioritization via generator replacement.
+The following remain unproven as native capabilities:
+Cross-theater portfolio prioritization (weighted scoring of which theater globally deserves resources).
+Exclusive army assignment (preventing an allocated army from being immediately reallocated).
+Temporal commitment (holding an army to a task for a bounded number of turns).
+Multi-faction strategic coordination (bloc-level planning).
+Answer: The native pipeline demonstrably owns task generation, combination, and force assignment. It does not demonstrably own the higher-level “portfolio” functions (exclusive assignment, temporal commitment, cross-faction coordination) that Transcendence’s v0.2E–v0.2I chain targets.
+2. SCHEMA SEMANTICS VS. FILENAME INFERENCE
+The supplied audits state explicitly: “Row semantics are not decoded without pinned WH3 schemas and remain unverified.”
+I do not hold the pinned v8.1.1 schema. The following classifications reflect only what is proven by the audit artifacts plus CA primary sources.
+Table
+Table Family	Classification	Reasoning
+cai_gds_task_generators_tables	PURPOSE_PARTIALLY_SUPPORTED	CA 6.3.4 explicitly names “task generators” as native CAI objects. “GDS” prefix is unverified. Pack audit proves presence only.
+cai_task_management_system_task_generator_groups_generators_junctions_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Name implies a junction between generator groups and generators. CA 6.3.4 mentions generators and batching, but not this specific junction table.
+cai_task_management_system_task_generator_variable_group_junctions_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Pack audit proves presence only.
+cai_task_management_system_task_generator_variables_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Pack audit proves presence only.
+cai_task_management_system_variable_group_junctions_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Pack audit proves presence only.
+cai_task_management_system_variables_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Pack audit proves presence only.
+cai_personality_strategic_components_tables	PURPOSE_PARTIALLY_SUPPORTED	CA Beta #2 names “Desired Attitudes component” and discusses aggression/strategic posture. Table name aligns; exact column mapping unverified.
+cai_personalities_budget_allocations_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Name is self-describing. No CA primary source explicitly references this table. Pack audit proves presence only.
+cai_personalities_income_allocations_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Same as above.
+cai_variables_tables	INFERRED_FROM_NAME/RELATIONSHIPS	CA Beta #2 discusses “Distance Scaling” and threat variables conceptually, but does not map them to this specific table.
+cai_variables_overides_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Pack audit proves presence only (Hecleas).
+cai_decision_policy_junctions_tables	PURPOSE_PARTIALLY_SUPPORTED	CA 6.3.4 mentions “Decision Making profiles/behaviors.” Table name is conceptually adjacent; exact mapping unverified.
+cai_query_variable_set_junctions_tables	INFERRED_FROM_NAME/RELATIONSHIPS	CA Beta #1 mentions a “simple query system.” Table name aligns; exact mapping unverified.
+campaign_ai_manager_behaviour_junctions_tables	INFERRED_FROM_NAME/RELATIONSHIPS	Pack audit proves presence only (Hecleas).
+cdir_military_generator_template_ratios_tables	SEMANTICS_VERIFIED_BY_CA_PRIMARY_SOURCE	CA 6.3.4 explicitly: “Generator template — a list of unit group + weight pairs, gives the AI a guideline on what a balanced and varied army looks like.” This matches the table name precisely.
+cdir_military_generator_unit_qualities_tables	SEMANTICS_VERIFIED_BY_CA_PRIMARY_SOURCE	CA 6.3.4 explicitly: “Unit quality — a hint for how strong a unit is before any upgrades.” Matches table name precisely.
+No table family in this list has SEMANTICS_VERIFIED_BY_CURRENT_SCHEMA because the schema was not successfully retrieved and pinned.
+3. FILE-SIZE REASONING — WITHDRAWN
+Every conclusion in the first B response that relied on byte size as a proxy for behavioral scope, row count, or surgical vs. comprehensive change is withdrawn. Size proves payload size only.
+Table
+Previous Claim	Status	Why Withdrawn
+DeepWar’s 175 KB cai_personalities_tables indicates “massive swath of faction-to-personality assignments”	WITHDRAWN	175 KB could be 5 changed rows with large string fields, 500 vanilla rows copied unchanged, or 50 new rows. Undecoded.
+Hecleas’s 58 KB cai_decision_policy_junctions_tables indicates “comprehensive decision-policy remapping”	WITHDRAWN	Payload size does not prove number of changed keys or behavioral scope.
+Hecleas’s 108 KB cdir_military_generator_template_ratios_tables indicates “extensive template rebalancing”	WITHDRAWN	Same reasoning.
+Hecleas’s 152 KB cai_personality_deal_evaluation_deal_component_values_tables indicates “extensive diplomacy reweighting”	WITHDRAWN	Same reasoning.
+Hecleas’s 43 KB cai_variables_tables vs. DeepWar’s 8 KB indicates “much broader variable override”	WITHDRAWN	Size differential could reflect table-format overhead, different numbers of vanilla rows copied, or different data types.
+DeepWar’s 548-byte cai_gds_task_generators_tables indicates “surgical generator replacement”	WITHDRAWN	Small size could mean few rows, small fields, or delta-format efficiency. Does not prove “surgical.”
+DeepWar and Hecleas 958-byte cai_task_management_system_variables_tables with identical size suggests “overriding the same vanilla rows”	WITHDRAWN	Size equality at small payloads is statistically meaningless without schema.
+Hecleas includes cai_task_management_system_task_generator_variable_group_junctions_tables while DeepWar does not, therefore Hecleas does “more parameterized, context-variable-driven task generation”	WITHDRAWN	Presence of a table family does not prove the behavioral mechanism inferred from its name.
+“DeepWar is surgical / high-leverage” and “Hecleas is broad / dilute” as comparative behavioral assessments	WITHDRAWN	These were scope inferences from file counts and sizes, not proven behavioral effects.
+4. CONFLICT ANALYSIS — CORRECTED
+The audit artifacts prove only the following overlap categories. All stronger claims are retracted.
+DeepWar ↔ Hecleas
+TABLE_FAMILY_OVERLAP: 10 shared families. PROVEN.
+ROW_KEY_OVERLAP: Unverified. The audits do not decode primary keys. UNVERIFIED.
+CHANGED_CELL_COLLISION: Unverified. UNVERIFIED.
+LOAD_ORDER_OVERRIDE: If ROW_KEY_OVERLAP exists, the last-loaded mod’s row wins for that key. Since ROW_KEY_OVERLAP is unverified, load-order effects are UNVERIFIED.
+SEMANTIC_INTERACTION_WITHOUT_KEY_COLLISION: Possible in principle (e.g., both mods change different variables that interact in the native engine), but UNPROVEN.
+DeepWar ↔ SFO
+TABLE_FAMILY_OVERLAP: 2 shared families. PROVEN.
+All deeper overlap categories: UNVERIFIED.
+Hecleas ↔ SFO
+TABLE_FAMILY_OVERLAP: 5 shared families. PROVEN.
+All deeper overlap categories: UNVERIFIED.
+All three
+TABLE_FAMILY_OVERLAP: 1 shared family (cai_task_management_system_task_generator_groups_generators_junctions_tables). PROVEN.
+Retracted: The claim that loading DeepWar and Hecleas together is “guaranteed to produce row-level conflicts.” This is unproven. Table-family overlap is necessary but not sufficient for row-level conflict.
+5. “SMALL TWEAK → BIG BEHAVIOR” EXAMPLES — REVISED
+Table
+Example	Previous Attribution	Revised Classification	Basis
+6.3.4 non-batchable generator replacement → less multi-army stacking	Attributed to CA	OFFICIAL_CA_CAUSAL_EVIDENCE	CA 6.3.4 explicitly states the replacement and the expected behavioral result.
+Budget-allocation changes → more stacks earlier	Attributed to DeepWar/Hecleas	UNSUPPORTED for those mods. PLAUSIBLE_INFERENCE in general.	DeepWar and Hecleas both modify cai_personalities_budget_allocations_tables, but no decoded rows or live telemetry prove their specific changes cause “more stacks earlier.” The general economic link (more army budget → more stacks) is plausible game mechanics, not proven mod causality.
+Faction-potential scalar increase → major factions survive longer	Attributed to CA Beta #1	OFFICIAL_CA_CAUSAL_EVIDENCE	CA Beta #1: “Small increase of base faction potential for all factions… Major factions will conquer minor factions faster and survive longer.”
+Anti-player threat multiplier changes → fairer behavior	Attributed to CA Beta #2	OFFICIAL_CA_CAUSAL_EVIDENCE	CA Beta #2: “changing the threat player actions generate to be between 90% and 120%… the vast majority of tasks of the ‘attack human forces/settlements’ variety have been removed.”
+Construction-priority changes → better faction recruitment	Attributed to CA 6.3.4 Chaos Dwarfs	OFFICIAL_CA_CAUSAL_EVIDENCE	CA 6.3.4: “increased construction priority on Advanced Military… Our internal testing indicate roughly a 25% increase in Chaos Warriors recruitment and ~150% increase to Infernal Guard recruitment.”
+Distance-scaling expansion → AI invades distant regions	Attributed to CA Beta #2	OFFICIAL_CA_CAUSAL_EVIDENCE	CA Beta #2: “expanding the distance scaling… Minimum of 15% priority at above 6 turns away when recruiting… Minimum of 15% priority at above 7 turns away when not recruiting.”
+Critical correction: I previously implied that because DeepWar or Hecleas modify the same table families as CA’s proven fixes, their changes produce similar behavioral improvements. This is unsupported. Shared table-family membership does not prove shared row changes, shared values, or shared behavioral effects.
+6. BETA → LIVE RELEASE CHAIN
+I previously stated that Beta #1 and Beta #2 changes were “rolled into 6.3.4.” No official source proves this specific integration. The following table separates demonstration from confirmed release.
+Table
+Change	First Demonstrated	Confirmed Live Release	Current v8.1.1 Status
+Query system tweaks	Beta #1 (Feb 2025)	UNVERIFIED	UNVERIFIED_CURRENT
+Aggression / Desired Attitudes	Beta #1 (Feb 2025)	UNVERIFIED	UNVERIFIED_CURRENT
+Faction potential base increase	Beta #1 (Feb 2025)	UNVERIFIED	UNVERIFIED_CURRENT
+Anti-player bias threat reduction	Beta #2 (Apr 2025)	UNVERIFIED	UNVERIFIED_CURRENT
+Distance scaling expansion	Beta #2 (Apr 2025)	UNVERIFIED	UNVERIFIED_CURRENT
+Task generator batching fix	Hotfix 6.3.4 (Nov 2025)	6.3.4	UNVERIFIED_CURRENT
+Defensive behavior deprioritization	Hotfix 6.3.4 (Nov 2025)	6.3.4	UNVERIFIED_CURRENT
+Construction priority (Chaos Dwarfs)	Hotfix 6.3.4 (Nov 2025)	6.3.4	UNVERIFIED_CURRENT
+Decision profiles (Golgfag)	Hotfix 6.3.4 (Nov 2025)	6.3.4	UNVERIFIED_CURRENT
+Invasion task generators (Golgfag)	Hotfix 6.3.4 (Nov 2025)	6.3.4	UNVERIFIED_CURRENT
+Note: The audit baseline is v8.1.1. I hold no patch notes for v8.1.1. Therefore, even changes confirmed in 6.3.4 are marked UNVERIFIED_CURRENT because reversion or further modification in v8.1.1 is possible and unproven.
+7. “NO CUSTOM STRATEGIC DIRECTOR EXISTS” — REVISED
+Strongest statement supported by current evidence:
+NO_CUSTOM_DIRECTOR_FOUND_IN_AUDITED_PACKS
+Evidence:
+DeepWar: 0 Lua scripts; 15 DB files.
+Hecleas: 0 Lua scripts; 28 DB files.
+SFO extracted audit: 43 Lua scripts, 20 with state-mutation calls. Audit classifies these as MECHANIC_BYPASS, DIRECT_BONUS, SCRIPTED_RECOVERY, and PLAYER_PROXIMITY_CHALLENGE — not as strategic directors replacing native CAI planning.
+I cannot support:
+NO_CUSTOM_DIRECTOR_EXISTS — I have not audited every WH3 mod.
+NO_CUSTOM_DIRECTOR_FOUND_IN_CURRENT_SEARCH — my web search was not exhaustive enough to prove non-existence.
+UNKNOWN — too weak; I do have negative evidence for the audited packs.
+Artifacts needed to strengthen:
+Pack audit for Incata AI Army Tasks and Strategy — check for Lua scripts or DB-only surface.
+Pack audit for Campaign AI Tweaks — same.
+Pack audit for AI Camping Settlements Fix — same.
+Pack audit for Reactive World: Alliances and Reactive World: Confederations — same.
+Static analysis of any Lua found in the above for campaign_ai namespace hooks, custom task injection, or cm:callback patterns that override native allocation.
+8. “NATIVE TUNING IS SUFFICIENT” — CHALLENGED
+Table
+Goal	Classification	Reasoning
+Better attack/defend balance	NATIVE_TUNING_DEMONSTRATED	CA 6.3.4: batching fix + defensive deprioritization explicitly addresses this.
+Less idling/clumping	NATIVE_TUNING_DEMONSTRATED	CA 6.3.4 explicitly targeted idle/overcommit behavior via generator replacement.
+Better force assignment	NATIVE_TUNING_PLAUSIBLE	Native allocation step exists (proven in 6.3.4). Whether DB tuning can improve assignment quality is plausible but unproven for any mod.
+Better recruitment	NATIVE_TUNING_DEMONSTRATED	CA 6.3.4: military generator templates + unit qualities + construction priorities produced measured recruitment improvements.
+Better construction	NATIVE_TUNING_DEMONSTRATED	CA 6.3.4: construction priority changes produced measurable recruitment increases.
+More rational diplomacy	BOUNDED_SCRIPT_PRIOR_ART_EXISTS	Hecleas modifies diplomacy tables; SFO uses scripted diplomacy mutations. Neither is proven “rational,” but native + script hooks exist.
+Fairer anti-player behavior	NATIVE_TUNING_DEMONSTRATED	CA Beta #2: threat multiplier changes and task removal explicitly addressed anti-player bias.
+Durable late-game rival factions	NATIVE_TUNING_PLAUSIBLE	Faction potential system exists natively. Whether tuning it produces durable rivals (as opposed to merely stronger factions) is unproven.
+Dynamic political blocs	NO_VERIFIED_SOLUTION	No native mechanism for faction-group strategic coordination has been proven. Hecleas modifies cultural relations and deal evaluation, but bloc dynamics are unverified.
+Coordinated multi-faction strategy	NO_VERIFIED_SOLUTION	Native CAI is per-faction. No proven cross-faction planning layer exists in the audited evidence.
+Explicit recovery/reserve protection	PROJECT_SPECIFIC_REQUIREMENT	Not a documented native CAI design goal. No verified DB or script mechanism addresses this specifically.
+Explicit anti-thrashing	PROJECT_SPECIFIC_REQUIREMENT	Same as above.
+Explainability/auditability	PROJECT_SPECIFIC_REQUIREMENT	Native CAI execution is a black box. DB tables are observable, but runtime task generation, allocation, and batching decisions are not explainable from DB rows alone.
+Previous claim retracted: “Native CAI tuning appears sufficient for all observed behavioral goals.” This was a generalization from CA’s successes in specific categories to all categories. It is now replaced by a per-goal classification showing NO_VERIFIED_SOLUTION for multi-faction coordination and PROJECT_SPECIFIC_REQUIREMENT for explainability, recovery, and anti-thrashing.
+9. INCATA/SFO INTEGRATION CLAIM
+Previous statement: “Hecleas (recently integrated into SFO) Ai Army Tasks and Strategy by Incata” — presented in the prior-art atlas.
+Source of that statement: A single Reddit community comment: “Share your experiences with these two campaign ai mods: Hecleas (recently integrated into SFO) Ai Army Tasks and Strategy by Incata.”
+Verification attempt: No SFO credits, change notes, Incata Workshop page statements, or pack row evidence was found in this session to confirm the claim.
+Revised classification: MODDER_COMMUNITY_CLAIM only. Preserved as such, not as fact.
+10. CORRECTED PRIOR-ART CORE
+A. HIGH-CONFIDENCE FINDINGS (12)
+DeepWar’s supplied pack contains 15 DB table files, zero Lua scripts, with 14 classified DIRECT_NATIVE_CAI and 1 DIFFICULTY_OR_POTENTIAL. (VERIFIED_REPO_FACT)
+Hecleas’s supplied pack contains 28 DB table files, zero Lua scripts, with 17 DIRECT_NATIVE_CAI, 7 DIRECT_AI_DIPLOMACY, 2 BATTLE_OR_AUTORESOLVE, 1 DIPLOMACY_ENVIRONMENT, and 1 OTHER_GAME_DATA. (VERIFIED_REPO_FACT)
+SFO’s extracted audit contains 612 DB files, 43 Lua scripts, 54 localization files, across 338 distinct DB families; only 12 families are direct native-CAI, and 20 scripts contain detected direct state-mutation calls. (VERIFIED_REPO_FACT)
+DeepWar and Hecleas share exactly 10 table families. (VERIFIED_REPO_FACT)
+DeepWar, Hecleas, and SFO all include cai_task_management_system_task_generator_groups_generators_junctions_tables. (VERIFIED_REPO_FACT)
+CA Hotfix 6.3.4 explicitly describes a native CAI pipeline with generation, allocation, batching, and task-to-army pairing. (OFFICIAL_GAME_FACT)
+CA Hotfix 6.3.4 explicitly states it replaced batchable task generators with non-batchable alternatives to reduce multi-army stacking. (OFFICIAL_GAME_FACT)
+CA’s Beta #1 blog describes a native Faction Potential system that scales AI capability by numeric value. (OFFICIAL_GAME_FACT)
+CA’s Beta #2 blog describes native Distance Scaling, Desired Attitudes (aggression), and anti-player bias mechanisms. (OFFICIAL_GAME_FACT)
+No supplied pack audit contains decoded row contents or primary keys; all row semantics remain unverified per the audit’s own limitations. (VERIFIED_REPO_FACT)
+SFO’s audit identified scripted interventions including direct region transfer, treasury support, horde re-emergence placement near human factions, and asymmetric human-only penalties. (VERIFIED_REPO_FACT)
+No audited pack (DeepWar, Hecleas, SFO-extracted) contains a Lua-based custom strategic director that replaces native CAI task generation or allocation. (INFERENCE_FROM_AUDIT)
+B. DOWNGRADED / RETRACTED FINDINGS
+Table
+#	Previous Claim	New Status
+1	“DeepWar is surgical / high-leverage”	RETRACTED. File sizes and table counts do not prove surgical scope.
+2	“Hecleas is broad / dilute”	RETRACTED. Same reasoning.
+3	“Loading DeepWar + Hecleas is guaranteed to produce row-level conflicts”	RETRACTED. Only TABLE_FAMILY_OVERLAP is proven.
+4	“DeepWar’s 175 KB personalities file indicates massive global personality reassignment”	RETRACTED. Payload size ≠ row count or scope.
+5	“Hecleas’s 58 KB decision-policy file indicates comprehensive remapping”	RETRACTED.
+6	“Hecleas’s 108 KB military-generator file indicates extensive template rebalancing”	RETRACTED.
+7	“Hecleas’s 152 KB diplomacy file indicates extensive reweighting”	RETRACTED.
+8	“Hecleas does more parameterized task generation than DeepWar” (because of extra TMS variable tables)	RETRACTED. Presence of tables does not prove behavioral mechanism.
+9	“Beta #1 and Beta #2 changes were rolled into 6.3.4”	RETRACTED. No official source proves this integration.
+10	“No custom strategic director exists”	DOWNGRADED to “No custom director found in audited packs.”
+11	“Native CAI tuning is sufficient for all observed behavioral goals”	RETRACTED. Replaced by per-goal classification with multiple NO_VERIFIED_SOLUTION and PROJECT_SPECIFIC_REQUIREMENT entries.
+12	“Incata’s work was integrated into SFO”	DOWNGRADED to MODDER_COMMUNITY_CLAIM. No primary source verified.
+13	“SFO’s AI is all environment + bypasses”	DOWNGRADED. “All” was too strong; SFO does modify 12 direct-CAI families. Correct claim: SFO’s dominant footprint is environmental, with some direct CAI and scripted bypasses.
+14	“Hecleas’s 43 KB cai_variables_tables vs. DeepWar’s 8 KB indicates broader variable override”	RETRACTED. Size differential is uninterpretable without schema.
+C. FIVE HIGHEST-VALUE MISSING ARTIFACTS
+Table
+Rank	Artifact	Expected Information Gain
+1	Pinned RPFM schema_wh3.ron at v8.1.1 build 48122.4194776	Decodes all audited table columns, primary keys, and foreign-key relationships. Enables ROW_KEY_OVERLAP detection and actual scope measurement.
+2	Decoded row dump (TSV/CSV) of DeepWar’s cai_personalities_tables	Determines whether 175 KB is full-table replacement or delta rows. Critical for understanding DeepWar’s actual intervention surface.
+3	Pack audit for Incata AI Army Tasks and Strategy	Closes the largest unverified gap in the “Big 3” AI mods. Determines if it is DB-only or contains Lua hooks.
+4	Live AI-only campaign telemetry (vanilla v8.1.1 vs. DeepWar vs. Hecleas)	The audit explicitly states no live comparison exists. This is the only way to verify behavioral deltas claimed by mods.
+5	CA official patch notes for v8.1.1	Establishes which 6.3.4 changes persist, whether Beta #1/#2 changes were integrated, and what new CAI changes exist in the current baseline.
+D. FINAL NARROW CONCLUSION
+NATIVE_CAIs_SURFACE_IS_BROAD_BUT_SUFFICIENCY_UNPROVEN
+The native CAI pipeline demonstrably includes task generation, multi-source composition, batching, task-to-army allocation, personality-driven strategy, budgeting, construction guidance, military templates, diplomacy weights, and faction-potential scaling. CA has proven that tuning these parameters achieves specific behavioral corrections in attack/defend balance, recruitment, and anti-player fairness. However, no verified native mechanism exists for cross-faction strategic coordination,

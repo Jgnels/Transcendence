@@ -1,0 +1,378 @@
+{
+  "analysis": {
+    "application_authority": "PROHIBITED",
+    "authority": "NO_ORDERS",
+    "availability": {
+      "assignment_exclusivity": "UNAVAILABLE_FROM_TRAJECTORY_ONLY",
+      "engagement_role": "UNAVAILABLE_CURRENT_PROBE",
+      "front_coverage": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+      "native_assignment_memory": "UNAVAILABLE",
+      "native_hysteresis": "UNAVAILABLE",
+      "native_task_identity": "UNAVAILABLE",
+      "recovery_misuse": "UNAVAILABLE_NO_SAFE_FOREIGN_REPLENISHMENT_AT_ENGAGEMENT",
+      "reserve_adequacy": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+      "response_latency": "UNAVAILABLE_INCOMPLETE_FOREIGN_FACTION_VISIBILITY",
+      "target_intent": "UNAVAILABLE_DIRECTION_ONLY"
+    },
+    "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_ANALYSIS_V1",
+    "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+    "interpretation_limits": [
+      "Foreign entities originate only from WH3 player-filtered visibility lists.",
+      "A foreign army disappearing from the visible set is right-censored; it is not evidence of destruction, retreat, reassignment, or disbandment.",
+      "Movement toward a visible anchor is a directional proxy, not evidence of a native CAI task or intent.",
+      "A visible-anchor direction change is a review candidate, not task churn or hysteresis failure.",
+      "Absence of an observed failure cannot establish good full-faction coverage, reserves, recovery policy, exclusivity, memory, or hysteresis.",
+      "No result authorizes campaign orders or any application path."
+    ],
+    "intervals": [
+      {
+        "actor_id": "visible-force:90",
+        "anchor_proxy": null,
+        "approach_delta": 0.999645,
+        "distance_moved": 1.0,
+        "from_turn": 1,
+        "position_idle_proxy": false,
+        "proxy_status": "AMBIGUOUS_VISIBLE_ANCHOR_APPROACH",
+        "to_turn": 2
+      },
+      {
+        "actor_id": "visible-force:90",
+        "anchor_proxy": null,
+        "approach_delta": 0.999625,
+        "distance_moved": 1.0,
+        "from_turn": 2,
+        "position_idle_proxy": false,
+        "proxy_status": "AMBIGUOUS_VISIBLE_ANCHOR_APPROACH",
+        "to_turn": 3
+      },
+      {
+        "actor_id": "visible-force:90",
+        "anchor_proxy": null,
+        "approach_delta": 0.999603,
+        "distance_moved": 1.0,
+        "from_turn": 3,
+        "position_idle_proxy": false,
+        "proxy_status": "AMBIGUOUS_VISIBLE_ANCHOR_APPROACH",
+        "to_turn": 4
+      },
+      {
+        "actor_id": "visible-force:90",
+        "anchor_proxy": null,
+        "approach_delta": 0.99958,
+        "distance_moved": 1.0,
+        "from_turn": 4,
+        "position_idle_proxy": false,
+        "proxy_status": "AMBIGUOUS_VISIBLE_ANCHOR_APPROACH",
+        "to_turn": 5
+      }
+    ],
+    "metrics": {
+      "ambiguous_anchor_intervals": 4,
+      "comparable_actor_intervals": 4,
+      "directional_anchor_proxy_intervals": 0,
+      "directional_anchor_proxy_rate": 0.0,
+      "first_turn": 1,
+      "frame_count": 5,
+      "last_turn": 5,
+      "movement_intervals": 4,
+      "position_idle_intervals": 0,
+      "position_idle_rate": 0.0,
+      "unanchored_movement_intervals": 0,
+      "visibility_gain_count": 0,
+      "visibility_loss_count": 0,
+      "visible_anchor_direction_change_candidate_count": 0
+    },
+    "observation_scope": "PLAYER_VISIBLE_PARTIAL_FOREIGN_AI",
+    "observed_ai_faction": "wh_main_emp_empire_separatists",
+    "observer_faction": "wh_main_emp_empire",
+    "result_digest": "de9c754ddb40d4774288ab4e079ed1195e1e945a149bc75f7483944bb9e68f34",
+    "visibility_gains": [],
+    "visibility_losses": [],
+    "visible_anchor_direction_change_candidates": []
+  },
+  "trace": {
+    "application_authority": "PROHIBITED",
+    "authority": "NO_ORDERS",
+    "contract": "NATIVE_CAI_PLAYER_VISIBLE_PARTIAL_TRACE_V1",
+    "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+    "frames": [
+      {
+        "turn": 1,
+        "visible_armies": [
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:65",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 525.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:66",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 520.0,
+            "y": 640.0
+          },
+          {
+            "faction": "wh_main_emp_empire_separatists",
+            "id": "visible-force:90",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 482.0,
+            "y": 639.0
+          }
+        ],
+        "visible_regions": [
+          {
+            "id": "wh3_main_combi_region_altdorf",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "id": "wh3_main_combi_region_eilhart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire_separatists",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 500.0,
+            "y": 630.0
+          },
+          {
+            "id": "wh3_main_combi_region_helmgart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 487.0,
+            "y": 603.0
+          }
+        ]
+      },
+      {
+        "turn": 2,
+        "visible_armies": [
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:65",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 526.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:66",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 520.0,
+            "y": 640.0
+          },
+          {
+            "faction": "wh_main_emp_empire_separatists",
+            "id": "visible-force:90",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 483.0,
+            "y": 639.0
+          }
+        ],
+        "visible_regions": [
+          {
+            "id": "wh3_main_combi_region_altdorf",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "id": "wh3_main_combi_region_eilhart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire_separatists",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 500.0,
+            "y": 630.0
+          },
+          {
+            "id": "wh3_main_combi_region_helmgart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 487.0,
+            "y": 603.0
+          }
+        ]
+      },
+      {
+        "turn": 3,
+        "visible_armies": [
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:65",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 527.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:66",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 520.0,
+            "y": 640.0
+          },
+          {
+            "faction": "wh_main_emp_empire_separatists",
+            "id": "visible-force:90",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 484.0,
+            "y": 639.0
+          }
+        ],
+        "visible_regions": [
+          {
+            "id": "wh3_main_combi_region_altdorf",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "id": "wh3_main_combi_region_eilhart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire_separatists",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 500.0,
+            "y": 630.0
+          },
+          {
+            "id": "wh3_main_combi_region_helmgart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 487.0,
+            "y": 603.0
+          }
+        ]
+      },
+      {
+        "turn": 4,
+        "visible_armies": [
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:65",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 528.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:66",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 520.0,
+            "y": 640.0
+          },
+          {
+            "faction": "wh_main_emp_empire_separatists",
+            "id": "visible-force:90",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 485.0,
+            "y": 639.0
+          }
+        ],
+        "visible_regions": [
+          {
+            "id": "wh3_main_combi_region_altdorf",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "id": "wh3_main_combi_region_eilhart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire_separatists",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 500.0,
+            "y": 630.0
+          },
+          {
+            "id": "wh3_main_combi_region_helmgart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 487.0,
+            "y": 603.0
+          }
+        ]
+      },
+      {
+        "turn": 5,
+        "visible_armies": [
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:65",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 529.0,
+            "y": 636.0
+          },
+          {
+            "faction": "wh_main_emp_empire",
+            "id": "observer-force:66",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 520.0,
+            "y": 640.0
+          },
+          {
+            "faction": "wh_main_emp_empire_separatists",
+            "id": "visible-force:90",
+            "observer_faction": "wh_main_emp_empire",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 486.0,
+            "y": 639.0
+          }
+        ],
+        "visible_regions": [
+          {
+            "id": "wh3_main_combi_region_altdorf",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 527.0,
+            "y": 648.0
+          },
+          {
+            "id": "wh3_main_combi_region_eilhart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire_separatists",
+            "visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+            "x": 500.0,
+            "y": 630.0
+          },
+          {
+            "id": "wh3_main_combi_region_helmgart",
+            "observer_faction": "wh_main_emp_empire",
+            "owner": "wh_main_emp_empire",
+            "visibility_source": "OBSERVER_OWN_STATE",
+            "x": 487.0,
+            "y": 603.0
+          }
+        ]
+      }
+    ],
+    "observed_ai_faction": "wh_main_emp_empire_separatists",
+    "observer_faction": "wh_main_emp_empire"
+  }
+}

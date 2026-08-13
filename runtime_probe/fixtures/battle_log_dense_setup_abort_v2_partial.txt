@@ -1,0 +1,12 @@
+TRANS_BATTLE|2|PACK_LOADED|probe_kind=battle_replay_shadow|script=transcendence_battle_probe|read_only=true|enemy_visibility_policy=VISIBLE_TO_LOCAL_ALLIANCE_ONLY|sample_interval_ms=3000|aggregate_interval_ms=1000|real_tick_interval_ms=500
+TRANS_BATTLE|2|BATTLE_START|time_ms=100|from_campaign=false|quest_battle=false|multiplayer=false|replay=true|siege=false|ambush=false|battle_type=land_normal|unit_scale_factor=1|local_alliance=1|local_army=1
+TRANS_BATTLE|2|SAMPLE_BEGIN|time_ms=100|sample_index=1|reason=INITIAL|scheduler_source=DIRECT
+TRANS_BATTLE|2|UNIT_HIERARCHY|time_ms=100|unit_id=1:u101|alliance_index=1|army_index=1|unit_index=1|local_alliance=true|visibility_source=LOCAL_ALLIANCE|previous_hierarchy=none
+TRANS_BATTLE|2|UNIT_STATIC|time_ms=100|unit_id=1:u101|stable_unit_id=1:u101|unique_ui_id=101|alliance_index=1|army_index=1|unit_index=1|local_alliance=true|visibility_source=LOCAL_ALLIANCE|unit_type=wh_main_emp_inf_swordsmen|unit_class=inf_mel|is_commander=false|initial_men=100|starting_ammo=0
+TRANS_BATTLE|2|UNIT_STATE|time_ms=100|sample_index=1|unit_id=1:u101|stable_unit_id=1:u101|alliance_index=1|army_index=1|unit_index=1|local_alliance=true|visibility_source=LOCAL_ALLIANCE|men_alive=100|hitpoints_fraction=1|kills=0|ammo=0|strategic_value_proxy=100|position_x=0|position_y=0|position_z=0|ordered_position_x=0|ordered_position_y=0|ordered_position_z=0
+TRANS_BATTLE|2|SAMPLE_END|time_ms=100|sample_index=1|reason=INITIAL|scheduler_source=DIRECT|observed_units=1|hidden_enemy_units=0|total_units_seen_by_hierarchy=1|unit_cap=240
+TRANS_BATTLE|2|PHASE|time_ms=8000|phase=Complete
+TRANS_BATTLE|2|SAMPLE_BEGIN|time_ms=8000|sample_index=2|reason=PHASE_Complete|scheduler_source=PHASE
+TRANS_BATTLE|2|UNIT_STATE|time_ms=8000|sample_index=2|unit_id=1:u101|stable_unit_id=1:u101|alliance_index=1|army_index=1|unit_index=1|local_alliance=true|visibility_source=LOCAL_ALLIANCE|men_alive=90|hitpoints_fraction=.8|kills=10|ammo=0|strategic_value_proxy=80|position_x=10|position_y=0|position_z=10|ordered_position_x=10|ordered_position_y=0|ordered_position_z=10
+TRANS_BATTLE|2|SAMPLE_END|time_ms=8000|sample_index=2|reason=PHASE_Complete|scheduler_source=PHASE|observed_units=1|hidden_enemy_units=0|total_units_seen_by_hierarchy=1|unit_cap=240
+TRANS_BATTLE|2|BATTLE_COMPLETE|time_ms=8000|outcome_decided=true|victorious_alliance=1|draw=false|detail_samples=2|aggregate_samples=1|model_tick_count=0|real_tick_count=0|commands_observed=0

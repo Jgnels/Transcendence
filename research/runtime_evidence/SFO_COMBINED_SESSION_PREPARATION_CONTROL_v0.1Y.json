@@ -1,0 +1,158 @@
+{
+  "authority": {
+    "active_mod_list_modified": false,
+    "orders_emitted": false,
+    "save_values_written": false
+  },
+  "checkpoint_chain": [
+    {
+      "markers": {
+        "battle_complete": 0,
+        "battle_runtime_begin": 0,
+        "campaign_runtime_begin": 1,
+        "campaign_turn_end_snapshots": 0,
+        "transition_events": [
+          "CAMPAIGN_RUNTIME_BEGIN"
+        ]
+      },
+      "prefix_of_next_control": true,
+      "sequence": 1,
+      "sha256": "f50419058d02bc00f61599804a9d9e42f9ddd33ec16ce5a1a43b10b9d3b660b4",
+      "size_bytes": 156
+    },
+    {
+      "markers": {
+        "battle_complete": 0,
+        "battle_runtime_begin": 1,
+        "campaign_runtime_begin": 1,
+        "campaign_turn_end_snapshots": 2,
+        "transition_events": [
+          "CAMPAIGN_RUNTIME_BEGIN",
+          "BATTLE_RUNTIME_BEGIN"
+        ]
+      },
+      "prefix_of_next_control": true,
+      "sequence": 2,
+      "sha256": "6d2e14c8c4af2b59def8ec52203561492e7c63e0bb8d2933ca4efbd81b3fed2b",
+      "size_bytes": 538
+    },
+    {
+      "markers": {
+        "battle_complete": 1,
+        "battle_runtime_begin": 1,
+        "campaign_runtime_begin": 1,
+        "campaign_turn_end_snapshots": 2,
+        "transition_events": [
+          "CAMPAIGN_RUNTIME_BEGIN",
+          "BATTLE_RUNTIME_BEGIN",
+          "BATTLE_COMPLETE"
+        ]
+      },
+      "prefix_of_next_control": true,
+      "sequence": 3,
+      "sha256": "40351ffd2437a7abd524bfa0cf18bd408100b667357375d0f1565399cef1447a",
+      "size_bytes": 603
+    },
+    {
+      "markers": {
+        "battle_complete": 1,
+        "battle_runtime_begin": 1,
+        "campaign_runtime_begin": 2,
+        "campaign_turn_end_snapshots": 2,
+        "transition_events": [
+          "CAMPAIGN_RUNTIME_BEGIN",
+          "BATTLE_RUNTIME_BEGIN",
+          "BATTLE_COMPLETE",
+          "CAMPAIGN_RUNTIME_BEGIN"
+        ]
+      },
+      "prefix_of_next_control": true,
+      "sequence": 4,
+      "sha256": "896357c95d2039dda4cff003e451ce28b67425c68fd85d02c1d2e6f45a6f38c1",
+      "size_bytes": 759
+    },
+    {
+      "markers": {
+        "battle_complete": 2,
+        "battle_runtime_begin": 2,
+        "campaign_runtime_begin": 2,
+        "campaign_turn_end_snapshots": 4,
+        "transition_events": [
+          "CAMPAIGN_RUNTIME_BEGIN",
+          "BATTLE_RUNTIME_BEGIN",
+          "BATTLE_COMPLETE",
+          "CAMPAIGN_RUNTIME_BEGIN",
+          "BATTLE_RUNTIME_BEGIN",
+          "BATTLE_COMPLETE"
+        ]
+      },
+      "prefix_of_next_control": true,
+      "sequence": 5,
+      "sha256": "73514d1bf613c69ec39684d12a3974328a8eb08a5246ef481db8d8513306c3b8",
+      "size_bytes": 1206
+    },
+    {
+      "markers": {
+        "battle_complete": 2,
+        "battle_runtime_begin": 2,
+        "campaign_runtime_begin": 3,
+        "campaign_turn_end_snapshots": 5,
+        "transition_events": [
+          "CAMPAIGN_RUNTIME_BEGIN",
+          "BATTLE_RUNTIME_BEGIN",
+          "BATTLE_COMPLETE",
+          "CAMPAIGN_RUNTIME_BEGIN",
+          "BATTLE_RUNTIME_BEGIN",
+          "BATTLE_COMPLETE",
+          "CAMPAIGN_RUNTIME_BEGIN"
+        ]
+      },
+      "prefix_of_next_control": true,
+      "sequence": 6,
+      "sha256": "e94117b090cbc234ab433352ae03540d81cd5a0de71d0c6e9910ac6f7cecb062",
+      "size_bytes": 1461
+    }
+  ],
+  "checkpoint_count": 6,
+  "checks": {
+    "append_prefix_chain": true,
+    "campaign_return_after_every_battle": true,
+    "current_battle_probe_kind_present": true,
+    "five_turn_snapshots": true,
+    "public_export_excludes_private_paths": true,
+    "public_export_excludes_raw_log": true,
+    "sfo_only_profile_requires_exact_two_mods": true,
+    "two_battle_completions": true,
+    "two_battle_runtime_starts": true
+  },
+  "evidence_label": "CONTROL_OFFLINE",
+  "fixture_sha256": "e94117b090cbc234ab433352ae03540d81cd5a0de71d0c6e9910ac6f7cecb062",
+  "gate": "SFO_COMBINED_SESSION_PREPARATION_AND_CHECKPOINTING",
+  "limitations": [
+    "This artifact proves deterministic preparation and verification contracts only.",
+    "SFO compatibility and campaign-to-battle continuity remain unverified until one exact owner-machine session passes."
+  ],
+  "result_digest": "2723d63682e16234e91df781b90b386f9ad4d85893a7f5946ba7c76532c67efe",
+  "schema_version": 1,
+  "transition_summary": {
+    "all_battles_returned_to_campaign": true,
+    "battle_complete": 2,
+    "battle_complete_followed_by_campaign_return": [
+      true,
+      true
+    ],
+    "battle_runtime_begin": 2,
+    "campaign_runtime_begin": 3,
+    "campaign_turn_end_snapshots": 5,
+    "first_campaign_before_first_battle": true,
+    "transition_events": [
+      "CAMPAIGN_RUNTIME_BEGIN",
+      "BATTLE_RUNTIME_BEGIN",
+      "BATTLE_COMPLETE",
+      "CAMPAIGN_RUNTIME_BEGIN",
+      "BATTLE_RUNTIME_BEGIN",
+      "BATTLE_COMPLETE",
+      "CAMPAIGN_RUNTIME_BEGIN"
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+KIMI SMALL-CONTEXT AUDIT — USE EACH SECTION IN A NEW CHAT
+
+============================================================
+KIMI A — NATIVE WH3 CAI ATLAS
+Attach: Kimi_A_Native_WH3_CAI.zip
+============================================================
+
+Do a current-web, source-driven audit of WARHAMMER III's native Campaign AI.
+The attachment contains only a compact Transcendence brief and its earlier source-audit context.
+
+Do NOT audit Transcendence code in this pass. Do NOT redesign it.
+
+Question:
+"What strategic responsibilities does current WH3 8.1.x already perform natively that an external AI project might mistakenly rebuild?"
+
+Research current Creative Assembly AI blogs/patch notes, WH3 scripting docs, RPFM schemas/Assembly-Kit-derived table definitions, and strong primary technical sources.
+
+Build an exact atlas for:
+query/influence maps; threat vs strength; task generators; task priority; task batching;
+task-to-army/resource allocation; distance-in-turns and stance handling; turn/phase-dependent priority;
+personalities; strategic stance/diplomacy; faction potential; anti-player bias; budgets/income;
+recruitment/unit qualities/templates; construction; path/reachability/action execution;
+battle AI planner interfaces; engine-hardcoded boundaries.
+
+For every capability give:
+exact native name/table/function/source;
+what is proven vs inferred;
+CONTROL / INFLUENCE / OBSERVE / UNAVAILABLE / UNVERIFIED;
+source citation.
+
+Also produce:
+- current patch chronology 5.2 → 8.1.x for AI changes;
+- top 15 native capabilities a mod should test before replacing;
+- top 10 known native failure modes that still justify intervention;
+- FORCE YOURSELF TO BE WRONG section.
+
+Stop after this answer. Do not consume context on a second phase.
+
+============================================================
+KIMI B — MOD PRIOR ART + PACK SEMANTICS
+Attach: Kimi_B_PriorArt_PackSemantics.zip
+============================================================
+
+This is an independent new chat.
+
+Audit what experienced WH3 AI mods actually alter and what that teaches us about the native CAI.
+
+The attachment contains exact existing pack-audit evidence for DeepWar, Hecleas and an AI-only
+extract of SFO. Distinguish pack evidence from author claims.
+
+First, use current RPFM schema information to explain the semantics/purpose of the observed families,
+especially cai_gds_task_generators, cai_task_management_system_*, cai_variables,
+cai_personality_*, cai_decision_*, budgets/income, faction potential,
+military generator/unit qualities, construction and diplomacy families.
+
+Then research current prior art, including:
+DeepWar; Hecleas; Incata AI Army Tasks and Strategy; Campaign AI Tweaks;
+AI Camping Settlements Fix; Alliance Blocs; Reactive World Alliances;
+Reactive World Confederations; AI Recruitment Revolution; relevant construction/diplomacy/
+strategic-threat/battle-AI mods; and high-value 2025-2026 projects I did not name.
+
+For each meaningful mod:
+author claim;
+verified DB/script surface;
+source/pack evidence;
+reported failure modes/tradeoffs;
+SFO overlap/conflict;
+whether it tunes native CAI or replaces it.
+
+Output:
+- ranked prior-art atlas;
+- "small native tweak, big behavior change" examples;
+- "full custom director actually required" examples if any;
+- SFO overlap table;
+- exact artifacts needed to decode any remaining unknown rows;
+- FORCE YOURSELF TO BE WRONG.
+
+No Transcendence redesign yet. Stop after this pass.
+
+============================================================
+KIMI C — v0.2E + v0.2F SOURCE RECONCILIATION
+Attach: Kimi_C_Transcendence_v02E_v02F.zip
+============================================================
+
+This is an independent new chat.
+
+Source-review only the attached Transcendence v0.2E/v0.2F implementations:
+campaign challenge/front evaluation and strategic/theater portfolio.
+
+Trace exact inputs, scoring, outputs, invariants and live-vs-shadow authority.
+
+Then compare each responsibility against current WH3 native systems you can verify from current web sources:
+threat/strength, influence/query systems, task generation, task priority, task batching,
+turn/phase scaling, personality and strategic stance.
+
+For every major responsibility classify:
+KEEP_PROJECT_OWNED
+REFRAME_AS_EVALUATOR_OR_ORACLE
+NATIVE_FIRST
+MERGE_OR_THIN
+REMOVE_FROM_APPLICATION_PATH
+DEFER_PENDING_EVIDENCE
+
+Do not judge by names alone. Explain what independent evaluator value remains even if native CAI performs a similar task.
+
+Output:
+- source critical path;
+- responsibility-by-responsibility duplication matrix;
+- best case for retaining v0.2E/F as controllers;
+- best case for using them only as evaluators;
+- exact experiment that would decide;
+- FORCE YOURSELF TO BE WRONG.
+
+Stop after this pass.
+
+============================================================
+KIMI D — v0.2G + v0.2H SOURCE RECONCILIATION
+Attach: Kimi_D_Transcendence_v02G_v02H.zip
+============================================================
+
+This is an independent new chat.
+
+Source-review only the attached Transcendence v0.2G/v0.2H implementations:
+army assignment, temporal commitment and read-only feasibility.
+
+Trace exact candidate generation, recovery/reserve logic, scoring, commitment rules,
+distance/reference assumptions, query planning and authority boundaries.
+
+Compare against current WH3 native:
+task-to-army/resource allocation;
+strength ratios;
+distance measured in turns;
+stance-aware movement;
+path/reachability/action interfaces;
+native campaign executor.
+
+Classify every major responsibility:
+KEEP_PROJECT_OWNED
+REFRAME_AS_EVALUATOR_OR_ORACLE
+KEEP_INTERFACE_REPLACE_IMPLEMENTATION
+NATIVE_FIRST
+MERGE_OR_THIN
+REMOVE_FROM_APPLICATION_PATH
+DEFER_PENDING_EVIDENCE
+
+Pay special attention to whether v0.2G's geometric/reference assignment is less informed than
+the native allocator and whether v0.2H is valuable as a diagnostic/certification boundary even if
+native path/action execution remains authoritative.
+
+Output:
+- exact source critical path;
+- duplication matrix;
+- what should never become an application controller without falsifying native CAI first;
+- what remains scientifically useful as an evaluator;
+- minimal ablation test;
+- FORCE YOURSELF TO BE WRONG.
+
+Stop after this pass.

@@ -1,0 +1,36 @@
+{
+  "capability": "one namespaced project integer persisted through save/reload",
+  "date": "2026-07-29",
+  "environment": {
+    "campaign": "wh3_main_combi",
+    "local_faction": "wh_main_emp_empire",
+    "multiplayer": false,
+    "turn": 1
+  },
+  "limits": [
+    "one integer only",
+    "disposable pure-vanilla campaign only",
+    "no migration or valued-save claim",
+    "no campaign-order authority"
+  ],
+  "owner_export_verifier_digest": "6b9445f51d106558b1dd23e808ef4e3b9554c130ac92f7fa7672d68fc2f5e3da",
+  "pack_sha256": "71bf96e4fca54d16e323f5eef9766a6098c6ea4b9416b33aa012317d5f682bd2",
+  "reload": {
+    "current": 2,
+    "is_new_game": false,
+    "log_sha256": "97e0be11a777dd43c2cfa65f69406422a0a7a3ba4a7ff71b3aced723c1782a46",
+    "manifest_sha256": "01ca50da36e137853dd29ac960ceeb545e4aa1fd19658ae708c8421fc567807c",
+    "previous": 1
+  },
+  "schema_version": 1,
+  "status": "REPLICATED",
+  "v0_1g_semantic_digest": "b996cc93f07275bc8d36fa428baa5e055ee03ba19bebc113175beedf048198bb",
+  "v0_1g_transport_result_digest": "e824800620a019a760772e8b219b89d9dd4eca5185ba9b56623481393da82d0c",
+  "write": {
+    "current": 1,
+    "is_new_game": true,
+    "log_sha256": "9625cec56ff01c33422f340dbb66eda1c2de2067e793c107f677e173b779eb69",
+    "manifest_sha256": "423b4da078a1bcae54cbad62301c84ee901c1e2c9d7e2a05cb77d03e9a05695b",
+    "previous": 0
+  }
+}

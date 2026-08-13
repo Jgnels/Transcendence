@@ -1,0 +1,31 @@
+{
+  "applicability_limits": [
+    "The aggregate capture does not identify feasibility for any Transcendence-generated candidate point.",
+    "QUERY_TRUE is not route completion, path safety, formation feasibility, command legality, acknowledgement, execution, or outcome.",
+    "The observation is scoped to one ordinary vanilla single-player battle and does not certify SFO or other battle types."
+  ],
+  "authority": "NO_ORDERS",
+  "evidence_status": "OBSERVED_AGGREGATE_CAPABILITY_PROFILE",
+  "point_reachability": {
+    "availability_rate": 1.0,
+    "claim_boundary": "POINT_IN_TIME_QUERY_NOT_ROUTE_COMPLETION",
+    "classification": "OBSERVED",
+    "not_applicable": 0,
+    "query_false": 38,
+    "query_true": 1249,
+    "sample_count": 1287,
+    "unavailable": 0
+  },
+  "profile_contract": "TACTICAL_FEASIBILITY_CAPABILITY_PROFILE_V1",
+  "result_digest": "11c6591f2edfa99519208eb4ba1ed45b47baf73dd5aa340d6d3d70195b437a5c",
+  "schema_version": 1,
+  "scope": "ONE_ORDINARY_SINGLE_PLAYER_BATTLE",
+  "source_adjudication_digest": "bc4a579e7277507c56b815eccfda9a7049308c7a3a916faea4bc6c2d38af6d49",
+  "source_export_sha256": "a1c03ec12a4c2b70945311fc57b54f978fcca892a37b12d46a5daa6f22ebf579",
+  "state_evidence": {
+    "control_loss_observed_count": 1,
+    "current_target_match_count": 443,
+    "movement_observed_count": 739,
+    "ordered_position_match_count": 189
+  }
+}

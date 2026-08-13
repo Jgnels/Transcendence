@@ -1,0 +1,52 @@
+{
+  "application_authority": "PROHIBITED",
+  "contract": "CAMPAIGN_FEASIBILITY_EMBEDDED_RETRY_PREPARATION_V1",
+  "evidence_acceptance": {
+    "all_query_ids_and_packet_end_must_match": true,
+    "current_snapshot_must_reproduce_saved_plan_exactly": true,
+    "environment_must_bind_generated_pack_hash": true,
+    "foreign_or_duplicate_results_fail_closed": true
+  },
+  "files": {
+    "adjudicator": {
+      "path": "runtime_probe/tools/build_campaign_feasibility_live_artifact.py",
+      "sha256": "a0ae8949226f38c0ca2b16fbc89bf03bf1e8a1243bac8c0c833b3e603765b376"
+    },
+    "builder": {
+      "path": "runtime_probe/tools/build_embedded_campaign_feasibility_probe.py",
+      "sha256": "3de9dcb7a9eadadf8d6f14021e1d8625eb5ed3c55daf0cc0e9a8122b3b0a3789"
+    },
+    "collect": {
+      "path": "runtime_probe/tools/collect_campaign_feasibility_embedded_retry.ps1",
+      "sha256": "c0d3e9de36ce44863a0b3c6180e2a2a7be0709b9bf537cea58d4837f56a3e7be"
+    },
+    "prepare": {
+      "path": "runtime_probe/tools/prepare_campaign_feasibility_embedded_retry.ps1",
+      "sha256": "7e266ad25c38e663b85c941a7b779c358d63f1a4b5f824ab2caea081a093463a"
+    },
+    "template": {
+      "path": "runtime_probe/source/script/campaign/mod/transcendence_campaign_feasibility_probe.lua",
+      "sha256": "f6b3373fb82a6a50655fd7f8d7f3aefa0d8d5170f649c19582c2c7da8b9c82ed"
+    }
+  },
+  "limitations": [
+    "The embedded retry is a two-launch evidence transport workaround, not a general campaign controller.",
+    "A generated pack is session-local/private evidence tooling and is not added to the canonical source ledger as generated output.",
+    "Observed read-query results still do not prove route safety, action legality, acknowledgement, execution, or outcome."
+  ],
+  "orders_emitted": false,
+  "policy_authority": "NO_ORDERS",
+  "release": "v0.2I-r3",
+  "result_digest": "9fac2625f84e55ec1d7dc56e6fe64c091d0f73d196a0734bdb4cb2acd0278e01",
+  "save_values_written": false,
+  "schema_version": 1,
+  "transport": {
+    "generated_pack_is_canonical_repository_artifact": false,
+    "generated_pack_name": "transcendence_campaign_feasibility_probe.pack",
+    "maximum_query_count": 16,
+    "restores_pre_retry_probe_after_collection": true,
+    "runtime_created_inbound_file_required": false,
+    "source_session_requirement": "WAITING_FOR_QUERY_RESULTS with saved plan and request",
+    "strategy": "PRELAUNCH_EMBEDDED_REQUEST_PFH5"
+  }
+}

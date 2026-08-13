@@ -1,0 +1,365 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "contract": "CAMPAIGN_STRATEGIC_FEASIBILITY_CROSS_EVIDENCE_V1",
+  "documented_query_catalog": [
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "MODEL_HAS_CHARACTER_CQI",
+      "scope": "EXISTENCE_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.has_character_command_queue_index"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "MODEL_CHARACTER_FROM_CQI",
+      "scope": "INTERFACE_LOOKUP_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.character_for_command_queue_index"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "MODEL_HAS_FORCE_CQI",
+      "scope": "EXISTENCE_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.has_military_force_command_queue_index"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "MODEL_FORCE_FROM_CQI",
+      "scope": "INTERFACE_LOOKUP_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.military_force_for_command_queue_index"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "FORCE_ACTIVE_STANCE",
+      "scope": "CURRENT_STATE_ONLY",
+      "surface": "MILITARY_FORCE_SCRIPT_INTERFACE.active_stance"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "FORCE_CAN_ACTIVATE_STANCE",
+      "scope": "STANCE_ELIGIBILITY_ONLY_NOT_TARGET_REACHABILITY",
+      "surface": "MILITARY_FORCE_SCRIPT_INTERFACE.can_activate_stance"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "POSITION_REACHABLE_THIS_TURN",
+      "scope": "THIS_TURN_POINT_REACHABILITY_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.character_can_reach_position"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+      "scope": "THIS_TURN_POINT_REACHABILITY_IN_EXACT_STANCE_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.character_can_reach_position_in_stance"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "POSITION_EVER_REACHABLE",
+      "scope": "LONG_HORIZON_REACHABILITY_ONLY_NO_ETA_OR_ROUTE_QUALITY",
+      "surface": "MODEL_SCRIPT_INTERFACE.character_can_ever_reach_position"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "SETTLEMENT_REACHABLE_THIS_TURN",
+      "scope": "THIS_TURN_SETTLEMENT_REACHABILITY_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.character_can_reach_settlement"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "SETTLEMENT_REACHABLE_THIS_TURN_IN_STANCE",
+      "scope": "THIS_TURN_SETTLEMENT_REACHABILITY_IN_EXACT_STANCE_ONLY",
+      "surface": "MODEL_SCRIPT_INTERFACE.character_can_reach_settlement_in_stance"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "SETTLEMENT_EVER_REACHABLE",
+      "scope": "LONG_HORIZON_SETTLEMENT_REACHABILITY_ONLY_NO_ETA_OR_ROUTE_QUALITY",
+      "surface": "MODEL_SCRIPT_INTERFACE.character_can_ever_reach_settlement"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "REGION_SETTLEMENT_INTERFACE",
+      "scope": "REGION_TO_SETTLEMENT_INTERFACE_ONLY",
+      "surface": "REGION_SCRIPT_INTERFACE.settlement"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+      "query_key": "GARRISON_UNDER_SIEGE",
+      "scope": "CURRENT_SIEGE_STATE_ONLY",
+      "surface": "GARRISON_RESIDENCE_SCRIPT_INTERFACE.is_under_siege"
+    },
+    {
+      "classification": "DOCUMENTED_AMBIGUOUS_CONTEXT_NOT_PROMOTED",
+      "query_key": "GARRISON_CAN_ASSAULT",
+      "scope": "NOT_USED_AS_ACTOR_TARGET_ATTACK_LEGALITY",
+      "surface": "GARRISON_RESIDENCE_SCRIPT_INTERFACE.can_assault"
+    },
+    {
+      "classification": "DOCUMENTED_READ_QUERY_NOT_ACTOR_ACTION_LEGALITY",
+      "query_key": "GARRISON_CAN_BE_OCCUPIED_BY_FACTION",
+      "scope": "RESIDENCE_FACTION_OCCUPANCY_ONLY",
+      "surface": "GARRISON_RESIDENCE_SCRIPT_INTERFACE.can_be_occupied_by_faction"
+    }
+  ],
+  "evidence_status": "CONTROL_OFFLINE_DOCUMENTED_QUERY_ENVELOPE",
+  "live_observation_requirement": {
+    "historical_turn_7_replay_required": false,
+    "minimum_packet": [
+      "bind one current planner-eligible controlled army by exact character and force CQI",
+      "record its current active stance",
+      "evaluate only query ids generated from a current shadow assignment",
+      "preserve each boolean/string result with turn/scenario/assignment binding",
+      "emit no campaign mutation call before, during, or after the query packet"
+    ],
+    "new_campaign_session_required_now": false,
+    "reason": "Documentation establishes query surfaces but cannot prove the exact owner build/runtime semantics or results.",
+    "status": "OPEN_DISTINCT_READ_ONLY_GATE"
+  },
+  "metrics": {
+    "campaign_orders_emitted": 0,
+    "documented_query_surface_count": 16,
+    "live_query_result_count": 0,
+    "observed_assignment_plan_count": 1,
+    "owner_runtime_capability_promotions": 0,
+    "planned_query_count": 8,
+    "prohibited_mutation_surface_count": 16
+  },
+  "nonpromotions": [
+    "No documented query is promoted to owner-runtime OBSERVED in v0.2H.",
+    "No straight-line assignment ETA is promoted to WH3 path feasibility.",
+    "No faction centroid is promoted to a concrete attack target.",
+    "No reachability result can imply movement/attack order legality, acknowledgement, execution, or outcome.",
+    "No ambiguous garrison can_assault surface is used as actor-target attack legality."
+  ],
+  "observed_feasibility_plans": [
+    {
+      "actor": {
+        "actor_id": "force:65",
+        "character_cqi": 120,
+        "force_cqi": 65,
+        "observed_stance_reference": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT"
+      },
+      "application_authority": "PROHIBITED",
+      "authority": "NO_ORDERS",
+      "capability_boundary": {
+        "acknowledgement_observed": false,
+        "causal_outcome_observed": false,
+        "documented_queries_only": true,
+        "execution_observed": false,
+        "interception_observed": false,
+        "movement_or_action_order_emitted": false,
+        "owner_runtime_queries_observed": false,
+        "route_path_observed": false,
+        "zone_of_control_observed": false
+      },
+      "contract": "CAMPAIGN_STRATEGIC_FEASIBILITY_ENVELOPE_V1",
+      "evidence_status": "CONTROL_OFFLINE_QUERY_PLAN_UNOBSERVED_RUNTIME",
+      "guardrails": [
+        "A documented query surface is not an observed owner-build capability until a read-only live packet records it.",
+        "A true can-reach query is scoped to the exact actor, target representation, stance when supplied, and observation instant.",
+        "Point reachability to a faction centroid does not create a character, settlement, or attack target.",
+        "Can-ever-reach is not an ETA, route-quality, safety, interception, or eventual-success claim.",
+        "No feasibility result grants application authority; campaign mutation surfaces remain prohibited."
+      ],
+      "queries": [
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "EXISTENCE_ONLY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "character_cqi": 120
+          },
+          "query_id": "32382ac6ad18111b3b61b75577d7b378613bb9c7de4e163f7eb788e7e23aec17",
+          "query_key": "MODEL_HAS_CHARACTER_CQI",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MODEL_SCRIPT_INTERFACE.has_character_command_queue_index",
+          "target_semantics": "ACTOR_BINDING"
+        },
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "INTERFACE_LOOKUP_ONLY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "character_cqi": 120
+          },
+          "query_id": "8e06e176ffa022b4881562869001ea76ccd3cdd354b7b5bad106611c9708de71",
+          "query_key": "MODEL_CHARACTER_FROM_CQI",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MODEL_SCRIPT_INTERFACE.character_for_command_queue_index",
+          "target_semantics": "ACTOR_BINDING"
+        },
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "EXISTENCE_ONLY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "force_cqi": 65
+          },
+          "query_id": "4a0b44632dd02615a2296e72a861a07dfadc047e81b3e8460c3509c92bd58ea3",
+          "query_key": "MODEL_HAS_FORCE_CQI",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MODEL_SCRIPT_INTERFACE.has_military_force_command_queue_index",
+          "target_semantics": "ACTOR_BINDING"
+        },
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "INTERFACE_LOOKUP_ONLY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "force_cqi": 65
+          },
+          "query_id": "da5d7e50eb1e9c6ef1ef8d5a5a22c86c36f4715136323b706046d2b73b27053d",
+          "query_key": "MODEL_FORCE_FROM_CQI",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MODEL_SCRIPT_INTERFACE.military_force_for_command_queue_index",
+          "target_semantics": "ACTOR_BINDING"
+        },
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "CURRENT_STATE_ONLY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "force_cqi": 65
+          },
+          "query_id": "cd87f4323940ec1f49ad9cbe103d5ec80253fabeb3f017dc86cc429e64b2b667",
+          "query_key": "FORCE_ACTIVE_STANCE",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MILITARY_FORCE_SCRIPT_INTERFACE.active_stance",
+          "target_semantics": "CURRENT_ACTOR_STATE"
+        },
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "THIS_TURN_POINT_REACHABILITY_ONLY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "character_cqi": 120,
+            "force_cqi": 65,
+            "x": 452.0,
+            "y": 657.0
+          },
+          "query_id": "2722dcd755658f787d66f8074b835f5383b4850d8f27e07a3de6903f5169f7fb",
+          "query_key": "POSITION_REACHABLE_THIS_TURN",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MODEL_SCRIPT_INTERFACE.character_can_reach_position",
+          "target_semantics": "REFERENCE_POINT_ONLY_NOT_ATTACK_TARGET"
+        },
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "THIS_TURN_POINT_REACHABILITY_IN_EXACT_STANCE_ONLY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "character_cqi": 120,
+            "force_cqi": 65,
+            "stance": "MILITARY_FORCE_ACTIVE_STANCE_TYPE_DEFAULT",
+            "x": 452.0,
+            "y": 657.0
+          },
+          "query_id": "ba8d56e2dfd4e31550eeff557964ececefa06866a33c26cd6d7334ee02afce6f",
+          "query_key": "POSITION_REACHABLE_THIS_TURN_IN_STANCE",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MODEL_SCRIPT_INTERFACE.character_can_reach_position_in_stance",
+          "target_semantics": "REFERENCE_POINT_ONLY_NOT_ATTACK_TARGET"
+        },
+        {
+          "acknowledgement": "NOT_ESTABLISHED",
+          "action_legality": "NOT_ESTABLISHED",
+          "documented_classification": "DOCUMENTED_READ_QUERY_UNOBSERVED_OWNER_BUILD",
+          "documented_scope": "LONG_HORIZON_REACHABILITY_ONLY_NO_ETA_OR_ROUTE_QUALITY",
+          "execution": "NOT_ESTABLISHED",
+          "observed_result": null,
+          "outcome": "NOT_ESTABLISHED",
+          "parameters": {
+            "character_cqi": 120,
+            "force_cqi": 65,
+            "x": 452.0,
+            "y": 657.0
+          },
+          "query_id": "e94dabfcdea0e65797ccbf3d8d89cb55eccae58f8c54eafaaf0e381b86bc0ad4",
+          "query_key": "POSITION_EVER_REACHABLE",
+          "result_status": "UNOBSERVED_QUERY_NOT_RUN",
+          "route_details": "NOT_ESTABLISHED",
+          "surface": "MODEL_SCRIPT_INTERFACE.character_can_ever_reach_position",
+          "target_semantics": "REFERENCE_POINT_ONLY_NOT_ATTACK_TARGET"
+        }
+      ],
+      "query_count": 8,
+      "result_digest": "5a1c3b2ca6e54ec41bbdc3abc1b1e3411170cd0b5adcb2de2867c4460e784875",
+      "scenario_id": "shadow:wh_main_emp_empire:turn:7",
+      "schema_version": 1,
+      "source_assignment_id": "6ea9ef353a9bdee4969a9276bbfc9f7b0e277708f421e406f78cf837f04d9415",
+      "source_assignment_result_digest": "e8bfbdc9019fa0c911e9caaab89cbcb1defa59cc73da01dad1940555f59e0d97",
+      "source_scenario_digest": "59be34504dd5e05c680bb047d4c434d36d4f9aa9677ed9ddfafd1e61b31786e2",
+      "target_boundary": {
+        "assignment_target_id": "wh_main_emp_marienburg",
+        "assignment_target_kind": "FACTION",
+        "concrete_attack_target_promoted": false,
+        "faction_centroid_is_attack_target": false,
+        "faction_target_limitation": "FACTION priority retains only observer-safe visible-asset centroid reachability; it does not select a character, settlement, or attack target.",
+        "settlement_interface_query_permitted": false,
+        "settlement_target_promoted": false
+      },
+      "turn": 7
+    }
+  ],
+  "prohibited_mutation_surfaces": [
+    "cm:move_to",
+    "campaign_manager:move_character",
+    "cm:attack",
+    "cm:attack_region",
+    "cm:attack_queued",
+    "cm:force_attack_of_opportunity",
+    "cm:join_garrison",
+    "cm:leave_garrison",
+    "cm:force_character_force_into_stance",
+    "cm:replenish_action_points",
+    "cm:zero_action_points",
+    "cm:disable_movement_for_character",
+    "cm:enable_movement_for_character",
+    "cm:disable_movement_for_faction",
+    "cm:enable_movement_for_faction",
+    "cm:disable_pathfinding_restriction"
+  ],
+  "result_digest": "b6519eb75d141642a925f919f20fe1cf7300655b40300660dd1aabf8a873f553",
+  "schema_version": 1,
+  "source_force_allocation_digest": "1ea40164577d918e349bd7f2873c0afb4a24ecf98f0e437c244f0ada12ea9f72",
+  "source_observed_report_digest": "953e35299dd0ef9e06de9d5347df01cabbd79cce68727e8b7a12175a058bc03b",
+  "turns_without_force_assignment": [
+    4,
+    5,
+    6
+  ]
+}

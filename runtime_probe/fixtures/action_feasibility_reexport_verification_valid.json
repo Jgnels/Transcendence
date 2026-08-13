@@ -1,0 +1,18 @@
+{
+  "authority": "NO_ORDERS",
+  "direct_acknowledgement_count": 0,
+  "installed_pack_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "interpretation_limits": [
+    "Command origin remains unresolved.",
+    "Point reachability and state matches do not establish route completion, acknowledgement, execution, arrival, or outcome."
+  ],
+  "project_issue_attempt_count": 0,
+  "result_digest": "aebaeb04e1cd9fee6e76479ec2ff3c341a155080cd39735921a2ed6d8c44af24",
+  "sample_count": 2,
+  "schema_version": 1,
+  "source_raw_log_sha256": "09daefe9129e7dab6821b438b7bb591ccfb8c8e820c48faad3e6950537a24496",
+  "source_zip_sha256": "abed1596763fcb3dafb50a7d2dae0b039e62c5479b0ac199bf1894273f9118b9",
+  "status": "VERIFIED_PUBLIC_SAFE_DETAILED_REEXPORT",
+  "verification_contract": "ACTION_FEASIBILITY_REEXPORT_VERIFICATION_V1",
+  "window_count": 2
+}

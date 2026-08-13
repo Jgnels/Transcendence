@@ -1,0 +1,95 @@
+1. NATIVE CLAIM AUDIT
+Table
+Capability	Classification	Basis
+Query system	PROVEN_HISTORICAL_OR_BETA	Beta #1 blog: dual detection mechanisms
+Influence map	PROVEN_HISTORICAL_OR_BETA	Beta #1 blog: "extent of every force's range and strength of interaction"
+Threat evaluation	PROVEN_HISTORICAL_OR_BETA	Beta #2 blog: global + individual threat with proximity/attitude modifiers
+Strength evaluation	PROVEN_HISTORICAL_OR_BETA	Beta #2 blog: units + experience + bonuses + stances
+Task generation	PROVEN_HISTORICAL_OR_BETA	6.3.4 hotfix notes + Beta #3 blog
+Multiple generators contributing to tasks	PROVEN_HISTORICAL_OR_BETA	6.3.4 hotfix: "multiple task generators…contributing to the same task"
+Batching	PROVEN_HISTORICAL_OR_BETA	6.3.4 hotfix: batching rules replaced for defensive tasks
+Task-to-army allocation	PROVEN_HISTORICAL_OR_BETA	Beta #2: "all owned forces are evaluated to find a force we can justify resourcing"
+Distance in turns	PROVEN_HISTORICAL_OR_BETA	Beta #2: 20% at >4 turns recruiting, 10% at >5 turns non-recruiting
+Stance-aware distance	PROVEN_HISTORICAL_OR_BETA	Beta #2: "existing assets: movement + stances (tunneling/forced march)"
+Recruitment time/distance	PROVEN_HISTORICAL_OR_BETA	Beta #2: fresh armies include recruitment distance + time
+Personality/strategic components	PROVEN_EXISTENCE_BUT_CURRENT_VALUES_UNVERIFIED	cai_personalities_tables and manager junctions exist in game files; current 8.1 values not reconfirmed
+Faction potential	PROVEN_HISTORICAL_OR_BETA	Beta #1: numeric per-faction potential value
+Anti-player multipliers	PROVEN_HISTORICAL_OR_BETA	Beta #2: 50–200% reducing to 90–120%; current 8.1 values unverified
+Patch 8.1 turn-dependent priority	PROVEN_HISTORICAL_OR_BETA	Beta #2: scaling component based on campaign progression; current 8.1 values unverified
+None of the above are PROVEN_CURRENT_WH3. All numeric claims from Beta #1/#2 are treated as historical/beta values only.
+2. RETRACTION OF UNSUPPORTED NATIVE CAPABILITIES
+The following were cited as native advantages in my previous answer. None are proven to participate in native task prioritization or force allocation:
+Table
+Claim	Status	Reason
+Zone-of-control geometry	UNVERIFIED	Not mentioned in task generation/allocation blogs
+Settlement garrison strength in allocation	UNVERIFIED	Garrisons exist; not proven to enter task-priority math
+Ambush risk in allocation	UNVERIFIED	Stances mentioned; ambush risk not tied to allocation
+Supply lines / upkeep in allocation	UNVERIFIED	Economy exists; not proven in task-priority math
+Diplomatic reliability in allocation	UNVERIFIED	Diplomacy exists; reliability not proven in allocation step
+Campaign-object interaction knowledge	UNVERIFIED	Rituals/rites exist; not proven in task generation
+These are removed from the comparison. The corrected argument for native superiority rests only on proven capabilities: query+influence detection, stance-aware turn-distance, dynamic distance scaling, task generation/batching/allocation, and personality/manager tables.
+3. v0.2E FRONT DETECTION — RECHECK
+Proven native: query system, influence map (range + interaction strength), turn-distance, stance-aware distance, task types ("defend settlements when enemy forces present," "defend regions neighboring threat").
+Proven v0.2E: visible armies, geometric distance, movement scalar, 2-turn horizon, war state, explicit bounded classifications (SIEGED_COVERED / EXPOSED / CONTESTED / QUIET).
+Application: Native influence map detects "extent of every force's range and strength of interaction with assets" — strictly more information than geometric distance. Native distance scaling (4–8 turns, stance-aware) covers the same operational space. Verdict: NATIVE_FIRST.
+Evaluator: Native classifications are implicit in generated task types. v0.2E produces explicit, bounded, human-auditable front-state records. Verdict: REFRAME_AS_EVALUATOR_ORACLE.
+4. v0.2F PORTFOLIO — RECHECK
+Native is proven to have: task generation; multiple generators contributing to tasks; same-type/same-target batching; allocation pairing tasks with armies; distance-sensitive priority; turn-dependent priority modulation (historical/beta).
+Native is NOT proven to have: explicit six-slot portfolios; critical overflow; one-aggressive-priority cap; recovery-crisis veto; temporal anti-thrashing; project-style explainability.
+v0.2F AS APPLICATION CONTROLLER: REMOVE_FROM_APPLICATION_PATH. Native possesses the underlying strategic capabilities (generation, batching, allocation, distance priority). v0.2F's exact implementation differs, but the functional coverage overlaps. Crucially, no runtime control surface is proven for dynamic portfolio override.
+v0.2F AS SHADOW EVALUATOR: KEEP_PROJECT_OWNED. Native does not output explicit bounded portfolios, critical-overflow records, aggressive caps, or recovery vetoes. An independent evaluator providing these benchmarks, explainability, and anti-player-bias auditing retains value regardless of native operational quality.
+5. CHRONOLOGY CLAIM — RETRACTED
+Previous claim: "v0.2E/F were designed when these native systems were broken" and are "now largely fixed."
+Audit: The project brief provides no calendar dates for v0.2E, v0.2F, or any baseline. CA patch dates are not supplied in the sources. No temporal ordering can be established.
+Verdict: RETRACTED ENTIRELY. The claim is unsupported.
+Distinction:
+CA demonstrated a fix: 6.3.4 hotfix demonstrated batching changes; Beta blogs demonstrated query/threat/strength/task-generation redesigns.
+Problem is solved in current 8.1.x: UNVERIFIED. Beta values and mechanisms are not reconfirmed as current live values.
+6. EXPERIMENT AUDIT — OBSERVABILITY
+Table
+Assumed Observable	Classification	Reason
+Every native task generated	ENGINE_INTERNAL	No proven API exposes internal task list pre-allocation
+Native task priority	ENGINE_INTERNAL	Priority math is internal; not exposed to Lua/DB
+Batching decisions	ENGINE_INTERNAL	Batching logic is internal
+Assigned army	INDIRECTLY_INFERABLE	Final army positions are visible; the assignment decision itself is not
+Native threat score	ENGINE_INTERNAL	Not exposed
+Native strength evaluation	ENGINE_INTERNAL	Not exposed
+Conclusion: The proposed experiment is infeasible as designed. It assumed observability of engine internals.
+7. TREATMENT B/C — AUTHORITY AUDIT
+Table
+Proposed Intervention	Classification	Reason
+Vetoing a native task	UNAVAILABLE	No proven runtime hook for task veto
+Boosting native task priority dynamically	UNAVAILABLE	DB tables set static weights; no proven dynamic per-turn override
+Blocking an aggressive task	POSSIBLE_THROUGH_STATIC_DB_PROFILE_ONLY	Personality/manager tables can reduce aggression weights globally
+Replacing native task generation	UNAVAILABLE	No proven modder entry point to replace task generator
+Conclusion: Treatments B and C are impossible as described. Only static DB profile changes are proven modder control surfaces.
+8. FEASIBLE NATIVE-FIRST ABLATION EXPERIMENT
+Question: Does tuned native CAI already achieve the behaviors that v0.2E/F would otherwise control?
+Design:
+Select 5 Reikland campaign seeds (vanilla + SFO), turns 4–30.
+Run 3 static-profile conditions per seed:
+Default: unmodified cai_personalities_tables + manager junctions.
+Defensive: increased defensive-task weights, reduced aggression weights in DB tables.
+Symmetric: reduced anti-player threat multipliers in DB tables (where accessible).
+Each turn, extract visible scenario (armies, regions, wars) and run v0.2E + v0.2F shadow.
+Observe over 10 turns using only SCRIPT_API_PROVEN / save-visible data:
+Front coverage ratio (own army within 2-turn geometric distance of threatened region).
+Recovery exposure (low-replenishment armies entering hostile territory).
+Rival concentration stability (HHI of enemy strength in wars).
+Anti-player targeting index (enemy army movement toward player vs. other targets).
+Compare: Does Condition B increase front coverage toward v0.2F's crisis-stabilization posture? Does Condition C reduce anti-player targeting?
+Decision rule:
+If static DB tuning achieves v0.2F-recommended patterns → native-first is sufficient.
+If no static profile achieves the patterns → bounded controller might be justified, but only if a runtime control surface is later proven.
+Uses only: controlled saves, observer-visible state, longitudinal position observations, static DB changes, v0.2E/F shadow outputs, no Transcendence game orders.
+9. CORRECTED CLASSIFICATIONS
+Table
+Responsibility	Old Classification	Corrected Classification	Reason
+Recovery Detection	KEEP_PROJECT_OWNED	DEFER_PENDING_EVIDENCE	Native strength evaluation includes unit state and stances; no evidence it ignores replenishment as a strategic signal. Project claim that native treats recovery as "free offensive strength" is unsupported.
+Cross-Evidence / Longitudinal Portfolio	KEEP_PROJECT_OWNED	DEFER_PENDING_EVIDENCE	Native Faction Potential is campaign-scoped and may update turn-by-turn; no evidence native lacks longitudinal state tracking. Cannot claim novelty without disproving native internals.
+Front Detection	NATIVE_FIRST	NATIVE_FIRST (application) / REFRAME_AS_EVALUATOR_ORACLE (evaluator)	Native query+influence+stance-aware distance strictly dominates geometric 2-turn horizon operationally; v0.2E retains independent value as explicit bounded-classification oracle.
+v0.2F Portfolio	REMOVE_FROM_APPLICATION_PATH	REMOVE_FROM_APPLICATION_PATH (application) / KEEP_PROJECT_OWNED (shadow evaluator)	Native proven to possess task generation, batching, allocation, distance priority; no proven runtime control surface for dynamic override. As evaluator, explicit portfolio, overflow, aggressive cap, and recovery veto provide explainable benchmark native does not output.
+Retracted from previous answer: Zone-of-control geometry, garrison strength, ambush risk, supply lines, diplomatic reliability, and campaign-object knowledge as proven native task-prioritization advantages. The chronology claim ("designed when broken, now fixed") is fully retracted due to absent project dates.
+v0.2E application-path verdict: NATIVE_FIRST — native query+influence+stance-aware distance strictly dominates the geometric 2-turn horizon for operational front detection; v0.2E retains value only as a shadow evaluator producing explicit bounded classifications.
+v0.2F application-path verdict: REMOVE_FROM_APPLICATION_PATH — native is proven to possess task generation, batching, allocation, and distance-sensitive priority; no proven runtime control surface exists for dynamic portfolio override; v0.2F should remain SHADOW_EVALUATOR_ONLY.
+highest-value next evidence: Whether static DB personality/manager ablations can reproduce v0.2F-recommended postures in observable native behavior, because if native-first tuning achieves project goals, no runtime controller is justified and Transcendence should remain an evaluator suite.

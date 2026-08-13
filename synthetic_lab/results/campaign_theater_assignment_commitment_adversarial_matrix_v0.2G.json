@@ -1,0 +1,576 @@
+{
+  "application_authority": "PROHIBITED",
+  "assignment_case_count": 8,
+  "assignment_cases": [
+    {
+      "case_id": "two_exposed_fronts_use_unique_armies",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "6e4493b45c080bee9757116e72431960b83358f299cd9ec9ebac3e1d28f5520a",
+      "semantic_metrics": {
+        "assignment_kinds": [
+          "THEATER_PRIORITY",
+          "THEATER_PRIORITY"
+        ],
+        "assignment_priority_types": [
+          "STABILIZE_EXPOSED_FRONT",
+          "STABILIZE_EXPOSED_FRONT"
+        ],
+        "critical_force_assignment_coverage": 1.0,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 0,
+        "reserve_present": false,
+        "unfilled": [
+          [
+            "CONTAIN_COHERENT_VISIBLE_RIVAL",
+            "AGGRESSIVE_COMMITMENT_VETO"
+          ],
+          [
+            "PRESERVE_STRATEGIC_RESERVE",
+            "NO_UNCLAIMED_HEALTHY_ARMY_FOR_RESERVE"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "recovery_and_reserve_protection_block_noncritical_aggression",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "1fe369c10ada08fe1566b822db16a80f9869b0ee6083911b7b5f36aa8a1f3153",
+      "semantic_metrics": {
+        "assignment_kinds": [
+          "STRATEGIC_RESERVE"
+        ],
+        "assignment_priority_types": [
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "critical_force_assignment_coverage": 1.0,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 1,
+        "reserve_present": true,
+        "unfilled": [
+          [
+            "CONTAIN_COHERENT_VISIBLE_RIVAL",
+            "RECOVERY_PROTECTED+RESERVE_FLOOR_PROTECTED"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "critical_front_can_explicitly_override_recovery_lock",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "0b856e467e936fe5030c9c459d2dcf8980a950c6cd2e1542e73d21942ca89223",
+      "semantic_metrics": {
+        "assignment_kinds": [
+          "THEATER_PRIORITY"
+        ],
+        "assignment_priority_types": [
+          "MAINTAIN_SIEGE_RELIEF_COVERAGE"
+        ],
+        "critical_force_assignment_coverage": 1.0,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 1,
+        "reserve_present": false,
+        "unfilled": [
+          [
+            "TRACK_SINGLE_VISIBLE_RIVAL",
+            "AGGRESSIVE_COMMITMENT_VETO"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "low_pressure_posture_does_not_manufacture_force_assignment",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "9d403c91c6e829eb1ef6047596d4f97e4f9baeee224269156227ca46f0bab474",
+      "semantic_metrics": {
+        "assignment_kinds": [],
+        "assignment_priority_types": [],
+        "critical_force_assignment_coverage": 1.0,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 0,
+        "reserve_present": false,
+        "unfilled": [
+          [
+            "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "STRATEGIC_POSTURE_ONLY"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "planner_ineligible_controlled_army_is_not_assigned",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "459c09376dea3210a836fdadab7f0bac5057ae88f42817ff64c7ce482455f230",
+      "semantic_metrics": {
+        "assignment_kinds": [
+          "THEATER_PRIORITY"
+        ],
+        "assignment_priority_types": [
+          "MAINTAIN_SIEGE_RELIEF_COVERAGE"
+        ],
+        "critical_force_assignment_coverage": 1.0,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 0,
+        "reserve_present": false,
+        "unfilled": [
+          [
+            "PRESERVE_STRATEGIC_RESERVE",
+            "NO_UNCLAIMED_HEALTHY_ARMY_FOR_RESERVE"
+          ],
+          [
+            "TRACK_SINGLE_VISIBLE_RIVAL",
+            "AGGRESSIVE_COMMITMENT_VETO"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "critical_overflow_is_expanded_and_resource_shortage_is_explicit",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "ca532b77d91b75ebf7cb0f7a29a1e8ba82c37829a299409fe75201fad54e4352",
+      "semantic_metrics": {
+        "assignment_kinds": [
+          "THEATER_PRIORITY",
+          "THEATER_PRIORITY",
+          "THEATER_PRIORITY"
+        ],
+        "assignment_priority_types": [
+          "RELIEVE_SIEGED_EXPOSED_FRONT",
+          "RELIEVE_SIEGED_EXPOSED_FRONT",
+          "RELIEVE_SIEGED_EXPOSED_FRONT"
+        ],
+        "critical_force_assignment_coverage": 0.428571,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 0,
+        "reserve_present": false,
+        "unfilled": [
+          [
+            "RELIEVE_SIEGED_EXPOSED_FRONT",
+            "ARMY_SLOT_ALREADY_CLAIMED"
+          ],
+          [
+            "RELIEVE_SIEGED_EXPOSED_FRONT",
+            "ARMY_SLOT_ALREADY_CLAIMED"
+          ],
+          [
+            "RELIEVE_SIEGED_EXPOSED_FRONT",
+            "ARMY_SLOT_ALREADY_CLAIMED"
+          ],
+          [
+            "RELIEVE_SIEGED_EXPOSED_FRONT",
+            "ARMY_SLOT_ALREADY_CLAIMED"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "visible_nonwar_assets_do_not_create_target_assignment",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "5a7728200feba2541144772711e1bc97d104914687636e6bc51e2851192e4240",
+      "semantic_metrics": {
+        "assignment_kinds": [],
+        "assignment_priority_types": [],
+        "critical_force_assignment_coverage": 1.0,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 0,
+        "reserve_present": false,
+        "unfilled": [
+          [
+            "CONSOLIDATE_LOW_PRESSURE_POSITION",
+            "STRATEGIC_POSTURE_ONLY"
+          ]
+        ]
+      }
+    },
+    {
+      "case_id": "equal_candidate_scores_are_deterministically_tied",
+      "checks": {
+        "authority": true,
+        "critical_coverage": true,
+        "forbidden_assignment_types": true,
+        "max_double_booked": true,
+        "minimum_recovery_overrides": true,
+        "minimum_recovery_protections": true,
+        "required_assignment_types": true,
+        "required_unfilled_reasons": true,
+        "reserve": true
+      },
+      "passed": true,
+      "result_digest": "4417bf57542c5ae299b757321eb9b412fb3d9b0ddd361ace54e113f9aab863e7",
+      "semantic_metrics": {
+        "assignment_kinds": [
+          "STRATEGIC_RESERVE",
+          "THEATER_PRIORITY"
+        ],
+        "assignment_priority_types": [
+          "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "critical_force_assignment_coverage": 1.0,
+        "double_booked_actor_count": 0,
+        "recovery_protection_count": 0,
+        "reserve_present": true,
+        "unfilled": [
+          [
+            "TRACK_SINGLE_VISIBLE_RIVAL",
+            "AGGRESSIVE_COMMITMENT_VETO"
+          ]
+        ]
+      }
+    }
+  ],
+  "assignment_pass_count": 8,
+  "authority": "NO_ORDERS",
+  "contract": "CAMPAIGN_THEATER_ASSIGNMENT_AND_COMMITMENT_ADVERSARIAL_MATRIX_V1",
+  "metamorphic_checks": [
+    {
+      "check_id": "hidden_enemy_injection",
+      "passed": true
+    },
+    {
+      "check_id": "player_label_to_npc_label",
+      "passed": true
+    },
+    {
+      "check_id": "input_order",
+      "passed": true
+    },
+    {
+      "check_id": "coordinate_translation",
+      "passed": true
+    },
+    {
+      "check_id": "uniform_strength_scale",
+      "passed": true
+    },
+    {
+      "check_id": "temporal_input_order",
+      "passed": true
+    },
+    {
+      "check_id": "temporal_coordinate_translation",
+      "passed": true
+    }
+  ],
+  "metamorphic_pass_count": 7,
+  "result_digest": "61fa5cc91ba3c4a6f96c4e43f3613b01e6b484e606192c3039b33134f821e353",
+  "schema_version": 1,
+  "temporal_case_count": 6,
+  "temporal_cases": [
+    {
+      "case_id": "small_geometry_change_does_not_churn_existing_commitment",
+      "checks": {
+        "authority": true,
+        "forbidden_event_types": true,
+        "max_double_booked": true,
+        "required_event_types": true,
+        "required_final_priority_types": true,
+        "required_reason_fragments": true
+      },
+      "passed": true,
+      "result_digest": "f6602eeaf7240c821a034ad4d9b6a4d9ad1d40710932fddde77bf8fd94eef047",
+      "semantic_metrics": {
+        "active_counts": [
+          2,
+          2
+        ],
+        "double_booked_counts": [
+          0,
+          0
+        ],
+        "event_reasons": [
+          "NEW_SHADOW_COMMITMENT",
+          "NEW_SHADOW_COMMITMENT",
+          "ACTOR_VALID_OUTSIDE_RANKING_WINDOW",
+          "ANTI_THRASH_RETAIN_EXISTING_ACTOR"
+        ],
+        "event_types": [
+          "START",
+          "START",
+          "CONTINUE",
+          "CONTINUE"
+        ],
+        "final_active_priority_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "turn_count": 2
+      }
+    },
+    {
+      "case_id": "material_better_actor_waits_until_review_window",
+      "checks": {
+        "authority": true,
+        "forbidden_event_types": true,
+        "max_double_booked": true,
+        "required_event_types": true,
+        "required_final_priority_types": true,
+        "required_reason_fragments": true
+      },
+      "passed": true,
+      "result_digest": "8aa0b205578fc6c865a3ab7062591f65fa5e4193bba30bfa57a31bab191ce2d3",
+      "semantic_metrics": {
+        "active_counts": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "double_booked_counts": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "event_reasons": [
+          "NEW_SHADOW_COMMITMENT",
+          "NEW_SHADOW_COMMITMENT",
+          "ACTOR_VALID_OUTSIDE_RANKING_WINDOW",
+          "ANTI_THRASH_RETAIN_EXISTING_ACTOR",
+          "ACTOR_VALID_OUTSIDE_RANKING_WINDOW",
+          "ANTI_THRASH_RETAIN_EXISTING_ACTOR",
+          "ACTOR_VALID_OUTSIDE_RANKING_WINDOW",
+          "ANTI_THRASH_RETAIN_EXISTING_ACTOR",
+          "ACTOR_VALID_OUTSIDE_RANKING_WINDOW",
+          "MAX_WINDOW_AND_MATERIAL_SCORE_MARGIN"
+        ],
+        "event_types": [
+          "START",
+          "START",
+          "CONTINUE",
+          "CONTINUE",
+          "CONTINUE",
+          "CONTINUE",
+          "CONTINUE",
+          "CONTINUE",
+          "CONTINUE",
+          "REASSIGN_AFTER_REVIEW"
+        ],
+        "final_active_priority_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "turn_count": 5
+      }
+    },
+    {
+      "case_id": "actor_entering_recovery_cancels_noncritical_commitment",
+      "checks": {
+        "authority": true,
+        "forbidden_event_types": true,
+        "max_double_booked": true,
+        "required_event_types": true,
+        "required_final_priority_types": true,
+        "required_reason_fragments": true
+      },
+      "passed": true,
+      "result_digest": "3309e1a9a55a7cb5d1d805bdf90cf3100d6604cc3012bcca55505bdf117120dd",
+      "semantic_metrics": {
+        "active_counts": [
+          1,
+          0
+        ],
+        "double_booked_counts": [
+          0,
+          0
+        ],
+        "event_reasons": [
+          "NEW_SHADOW_COMMITMENT",
+          "ACTOR_ENTERED_RECOVERY_PROTECTION"
+        ],
+        "event_types": [
+          "START",
+          "CANCEL"
+        ],
+        "final_active_priority_types": [],
+        "turn_count": 2
+      }
+    },
+    {
+      "case_id": "disappearing_priority_is_retired_without_causal_credit",
+      "checks": {
+        "authority": true,
+        "forbidden_event_types": true,
+        "max_double_booked": true,
+        "required_event_types": true,
+        "required_final_priority_types": true,
+        "required_reason_fragments": true
+      },
+      "passed": true,
+      "result_digest": "70840a10161d28f2d7499271ae844c891b02a0da208eeacf849e88817ac07601",
+      "semantic_metrics": {
+        "active_counts": [
+          1,
+          0
+        ],
+        "double_booked_counts": [
+          0,
+          0
+        ],
+        "event_reasons": [
+          "NEW_SHADOW_COMMITMENT",
+          "PRIORITY_NO_LONGER_PRESENT_NO_CAUSAL_CREDIT"
+        ],
+        "event_types": [
+          "START",
+          "RETIRE"
+        ],
+        "final_active_priority_types": [],
+        "turn_count": 2
+      }
+    },
+    {
+      "case_id": "turn_gap_resets_commitment_continuity",
+      "checks": {
+        "authority": true,
+        "forbidden_event_types": true,
+        "max_double_booked": true,
+        "required_event_types": true,
+        "required_final_priority_types": true,
+        "required_reason_fragments": true
+      },
+      "passed": true,
+      "result_digest": "91f957c8ea5c83c082884ea928910c2ca97910af472def1e091b7eeed8de2ef8",
+      "semantic_metrics": {
+        "active_counts": [
+          1,
+          1
+        ],
+        "double_booked_counts": [
+          0,
+          0
+        ],
+        "event_reasons": [
+          "NEW_SHADOW_COMMITMENT",
+          "TURN_GAP_BREAKS_COMMITMENT_CONTINUITY",
+          "NEW_SHADOW_COMMITMENT"
+        ],
+        "event_types": [
+          "START",
+          "CONTINUITY_RESET",
+          "START"
+        ],
+        "final_active_priority_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL"
+        ],
+        "turn_count": 2
+      }
+    },
+    {
+      "case_id": "new_critical_front_supersedes_lower_severity_actor_claim",
+      "checks": {
+        "authority": true,
+        "forbidden_event_types": true,
+        "max_double_booked": true,
+        "required_event_types": true,
+        "required_final_priority_types": true,
+        "required_reason_fragments": true
+      },
+      "passed": true,
+      "result_digest": "1cf56bfdbf9ffb218836ce67a828602017f8020d42e352afe4fd95b005580ad7",
+      "semantic_metrics": {
+        "active_counts": [
+          1,
+          1
+        ],
+        "double_booked_counts": [
+          0,
+          0
+        ],
+        "event_reasons": [
+          "NEW_SHADOW_COMMITMENT",
+          "HIGHER_SEVERITY:RELIEVE_SIEGED_EXPOSED_FRONT",
+          "NEW_SHADOW_COMMITMENT"
+        ],
+        "event_types": [
+          "START",
+          "SUPERSEDE",
+          "START"
+        ],
+        "final_active_priority_types": [
+          "RELIEVE_SIEGED_EXPOSED_FRONT"
+        ],
+        "turn_count": 2
+      }
+    }
+  ],
+  "temporal_pass_count": 6
+}

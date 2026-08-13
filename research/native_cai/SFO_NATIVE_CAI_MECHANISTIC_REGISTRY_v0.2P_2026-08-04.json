@@ -1,0 +1,899 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "captured_sfo_cai_footprint": {
+    "allocator_table": {
+      "changed_rows": 0,
+      "direct_sfo_allocator_override_observed": false,
+      "rows_carried": 0,
+      "table": "cai_task_management_system_variables_tables"
+    },
+    "decoded_table_family_count": 1,
+    "tables_with_decoded_sfo_rows": {
+      "cai_task_management_system_task_generator_groups_generators_junctions_tables": {
+        "changed_rows": 88,
+        "rows_carried": 93,
+        "same_as_vanilla_rows": 5
+      }
+    },
+    "task_priority_table": {
+      "changed_priority_rows": 88,
+      "changed_rows": [
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_aggressive_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_aggressive_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 19.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES",
+          "group": "wh3_combi_tms_generator_group_beastmen_brayherd",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 19.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS",
+          "group": "wh3_combi_tms_generator_group_beastmen_brayherd",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 6.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_BEASTMEN_ATTACK_POTENTIAL_HERDSTONE_SITES",
+          "group": "wh3_combi_tms_generator_group_beastmen_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 4.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_combi_tms_generator_group_cathay_gatecapture_additive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_LOCAL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_combi_tms_generator_group_cathay_gatecapture_additive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_combi_tms_generator_group_chaos_gatedestroyer",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_LOCAL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_combi_tms_generator_group_chaos_gatedestroyer",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 6.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 4.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_AGENTS_LEVEL_SCALED",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 6.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 4.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ENEMY_SETTLEMENTS_LOCAL_TO_OUR_FORCES_THAT_ARE_BESIEGED_BY_OUR_ALLIES",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 6.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_NEIGHBOURING_WAR_REGIONS",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_SETTLEMENTS_NEAR_OUR_FORCES",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_UNDEFENDED_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS",
+          "group": "wh3_combi_tms_generator_group_default",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_forest_dweller_specific_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 6.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_forest_dweller_specific_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_combi_tms_generator_group_forest_dweller_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 3.0,
+          "variable_group": null
+        },
+        {
+          "delta": 3.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 7.0,
+          "variable_group": null
+        },
+        {
+          "delta": 3.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 7.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_AGENTS_LEVEL_SCALED",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 6.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ENEMY_SETTLEMENTS_LOCAL_TO_OUR_FORCES_THAT_ARE_BESIEGED_BY_OUR_ALLIES",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 6.0,
+          "variable_group": null
+        },
+        {
+          "delta": 3.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_NEIGHBOURING_WAR_REGIONS",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_SETTLEMENTS_NEAR_OUR_FORCES",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_UNDEFENDED_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS",
+          "group": "wh3_combi_tms_generator_group_horde",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_minor_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_minor_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_norsca_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 3.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_norsca_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 3.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_norsca_vassal_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 6.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_norsca_vassal_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_combi_tms_generator_group_norsca_vassal_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 3.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ENEMY_SETTLEMENTS_LOCAL_TO_OUR_FORCES_THAT_ARE_BESIEGED_BY_OUR_ALLIES",
+          "group": "wh3_combi_tms_generator_group_norsca_vassal_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_NEIGHBOURING_WAR_REGIONS",
+          "group": "wh3_combi_tms_generator_group_norsca_vassal_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 16.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES",
+          "group": "wh3_combi_tms_generator_group_norsca_vassal_additive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 4.0,
+          "variable_group": null
+        },
+        {
+          "delta": 16.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS",
+          "group": "wh3_combi_tms_generator_group_norsca_vassal_additive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 4.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_opportunistic_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_opportunistic_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_UNDEFENDED_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_opportunistic_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_AGENTS_LEVEL_SCALED",
+          "group": "wh3_combi_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_combi_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_NEIGHBOURING_WAR_REGIONS",
+          "group": "wh3_combi_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES",
+          "group": "wh3_combi_tms_generator_group_passive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS",
+          "group": "wh3_combi_tms_generator_group_passive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_combi_tms_generator_group_protective_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_UNDEFENDED_ENEMY_SETTLEMENTS",
+          "group": "wh3_combi_tms_generator_group_skaven_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 19.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES",
+          "group": "wh3_tms_generator_group_beastmen_brayherd",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 19.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS",
+          "group": "wh3_tms_generator_group_beastmen_brayherd",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_tms_generator_group_cathay_gatecapture_additive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_LOCAL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_tms_generator_group_cathay_gatecapture_additive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_tms_generator_group_chaos_gatedestroyer",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_LOCAL_FLAGGED_VICTORY_CONDITION_REGIONS",
+          "group": "wh3_tms_generator_group_chaos_gatedestroyer",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_tms_generator_group_minor_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_tms_generator_group_minor_additive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": -2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_tms_generator_group_norsca_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 3.0,
+          "variable_group": null
+        },
+        {
+          "delta": 7.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_tms_generator_group_norsca_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 3.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_AGENTS_LEVEL_SCALED",
+          "group": "wh3_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_NEIGHBOURING_WAR_REGIONS",
+          "group": "wh3_tms_generator_group_passive",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES",
+          "group": "wh3_tms_generator_group_passive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 10.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS",
+          "group": "wh3_tms_generator_group_passive",
+          "sfo_priority": 20.0,
+          "vanilla_priority": 10.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_tms_generator_group_prologue_active",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_tms_generator_group_prologue_active",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_tms_generator_group_regionless",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ENEMY_SETTLEMENTS_LOCAL_TO_OUR_FORCES_THAT_ARE_BESIEGED_BY_OUR_ALLIES",
+          "group": "wh3_tms_generator_group_regionless",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.5,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_SETTLEMENTS_NEAR_OUR_FORCES",
+          "group": "wh3_tms_generator_group_regionless",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 0.5,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_UNDEFENDED_ENEMY_SETTLEMENTS",
+          "group": "wh3_tms_generator_group_regionless",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": "timed_priority_boost_instant"
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_tms_generator_group_rift_spawned_khorne",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_tms_generator_group_rift_spawned_legion",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_tms_generator_group_rift_spawned_nurgle",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_tms_generator_group_rift_spawned_slaanesh",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_tms_generator_group_rift_spawned_tzeentch",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES",
+          "group": "wh3_tms_generator_group_simple",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 4.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS",
+          "group": "wh3_tms_generator_group_simple",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 1.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_AGENTS_LEVEL_SCALED",
+          "group": "wh3_tms_generator_group_simple",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        },
+        {
+          "delta": 6.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED",
+          "group": "wh3_tms_generator_group_simple",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 4.0,
+          "variable_group": null
+        },
+        {
+          "delta": 3.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_NEIGHBOURING_WAR_REGIONS",
+          "group": "wh3_tms_generator_group_simple",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 3.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_SETTLEMENTS_NEAR_OUR_FORCES",
+          "group": "wh3_tms_generator_group_simple",
+          "sfo_priority": 5.0,
+          "vanilla_priority": 2.0,
+          "variable_group": null
+        },
+        {
+          "delta": 5.0,
+          "direction": "INCREASE",
+          "generator": "CAI_TMS_TASK_GENERATOR_ATTACK_UNDEFENDED_ENEMY_SETTLEMENTS",
+          "group": "wh3_tms_generator_group_skaven_specific_additive",
+          "sfo_priority": 10.0,
+          "vanilla_priority": 5.0,
+          "variable_group": null
+        }
+      ],
+      "distinct_generator_groups_changed": 30,
+      "distinct_generators_changed": 13,
+      "generator_change_counts": {
+        "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_FORCES": 15,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_ENEMY_SETTLEMENTS": 13,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_FLAGGED_VICTORY_CONDITION_REGIONS": 4,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_AGENTS_LEVEL_SCALED": 5,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_ALL_LOCAL_FORCES_SIZE_SCALED": 12,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_ENEMY_SETTLEMENTS_LOCAL_TO_OUR_FORCES_THAT_ARE_BESIEGED_BY_OUR_ALLIES": 4,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_LOCAL_FLAGGED_VICTORY_CONDITION_REGIONS": 4,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_NEIGHBOURING_WAR_REGIONS": 6,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_SETTLEMENTS_NEAR_OUR_FORCES": 4,
+        "CAI_TMS_TASK_GENERATOR_ATTACK_UNDEFENDED_ENEMY_SETTLEMENTS": 6,
+        "CAI_TMS_TASK_GENERATOR_BEASTMEN_ATTACK_POTENTIAL_HERDSTONE_SITES": 1,
+        "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_FORCES": 7,
+        "CAI_TMS_TASK_GENERATOR_WAR_COORDINATION_ATTACK_REGIONS": 7
+      },
+      "group_change_counts": {
+        "wh3_combi_tms_generator_group_aggressive_additive": 2,
+        "wh3_combi_tms_generator_group_beastmen_brayherd": 2,
+        "wh3_combi_tms_generator_group_beastmen_specific_additive": 1,
+        "wh3_combi_tms_generator_group_cathay_gatecapture_additive": 2,
+        "wh3_combi_tms_generator_group_chaos_gatedestroyer": 2,
+        "wh3_combi_tms_generator_group_default": 10,
+        "wh3_combi_tms_generator_group_forest_dweller_specific_additive": 3,
+        "wh3_combi_tms_generator_group_horde": 10,
+        "wh3_combi_tms_generator_group_minor_additive": 2,
+        "wh3_combi_tms_generator_group_norsca_specific_additive": 2,
+        "wh3_combi_tms_generator_group_norsca_vassal_additive": 7,
+        "wh3_combi_tms_generator_group_opportunistic_additive": 3,
+        "wh3_combi_tms_generator_group_passive": 6,
+        "wh3_combi_tms_generator_group_protective_additive": 1,
+        "wh3_combi_tms_generator_group_skaven_specific_additive": 1,
+        "wh3_tms_generator_group_beastmen_brayherd": 2,
+        "wh3_tms_generator_group_cathay_gatecapture_additive": 2,
+        "wh3_tms_generator_group_chaos_gatedestroyer": 2,
+        "wh3_tms_generator_group_minor_additive": 2,
+        "wh3_tms_generator_group_norsca_specific_additive": 2,
+        "wh3_tms_generator_group_passive": 6,
+        "wh3_tms_generator_group_prologue_active": 2,
+        "wh3_tms_generator_group_regionless": 4,
+        "wh3_tms_generator_group_rift_spawned_khorne": 1,
+        "wh3_tms_generator_group_rift_spawned_legion": 1,
+        "wh3_tms_generator_group_rift_spawned_nurgle": 1,
+        "wh3_tms_generator_group_rift_spawned_slaanesh": 1,
+        "wh3_tms_generator_group_rift_spawned_tzeentch": 1,
+        "wh3_tms_generator_group_simple": 6,
+        "wh3_tms_generator_group_skaven_specific_additive": 1
+      },
+      "priority_decreases": 0,
+      "priority_increases": 88,
+      "rows_carried": 93,
+      "same_as_vanilla_rows": 5,
+      "table": "cai_task_management_system_task_generator_groups_generators_junctions_tables"
+    }
+  },
+  "contract": "NATIVE_CAI_SFO_MECHANISTIC_REGISTRY_V1",
+  "endpoint_mechanism_eligibility": {
+    "recovery": {
+      "allocator_release_return_rows": "NOT_ELIGIBLE_TO_EXPLAIN_AN_SFO_DIFFERENCE_FROM_CAPTURED_SFO_CAI_DB_FOOTPRINT; NO_SFO_ALLOCATOR_OVERRIDE_OBSERVED",
+      "other_sfo_systems": "UNRESOLVED_CONFOUNDERS; SFO_MODIFIES_MANY_CAMPAIGN_SYSTEMS",
+      "sfo_task_priority_rows": "ELIGIBLE_FOR_REPLICATION_ONLY_IF_SFO_RECOVERY_DIFFERS; INDIRECT_AND_NONCAUSAL"
+    },
+    "territorial_temporal_reversal": {
+      "allocator_release_return_rows": "NOT_ELIGIBLE_TO_EXPLAIN_AN_SFO_DIFFERENCE_FROM_CAPTURED_SFO_CAI_DB_FOOTPRINT",
+      "project_owned_assignment_hysteresis": "NOT_AUTHORIZED; NATIVE_FIRST RULE REMAINS",
+      "sfo_task_priority_rows": "ELIGIBLE_FOR_REPLICATION_NOMINATION_IF_DIRECTIONALLY_CONSISTENT_BENCHMARK_DIFFERENCE_IS_OBSERVED"
+    }
+  },
+  "interpretation_limits": [
+    "Decoded SFO row presence is not causal proof of behavior.",
+    "The captured SFO CAI footprint may be incomplete outside the decoded targeted table set.",
+    "No SFO row is application-authorized by this registry.",
+    "Absence of a decoded SFO allocator override rules out only that direct captured-DB attribution path; it does not rule out indirect SFO systems or native engine interactions."
+  ],
+  "registry_digest": "82dd1c6a02881c9e079473d8bcf7df14eb28b6324af64ca3b42c78101bd06ec2",
+  "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+  "source": {
+    "key_status": {},
+    "row_diff_authority": "READ_ONLY_OWNER_EXPORTED_DB_RECONCILIATION",
+    "row_diff_contract": 1
+  },
+  "study_version": "v0.2P"
+}

@@ -1,0 +1,109 @@
+{
+  "capture_contract": {
+    "enabled_mods": [
+      "transcendence_battle_replay_probe.pack"
+    ],
+    "orders_allowed": false,
+    "probe_pack": "transcendence_battle_replay_probe.pack",
+    "probe_pack_sha256": "6e3f8e7bbc7d66754a7fa764c802e2b5599d13e83820e0785cb85d738040f66d",
+    "raw_log_committed": false,
+    "replay_binary_committed": false,
+    "required_runtime_schema": 2
+  },
+  "cohort_id": "sfo_reikland_replay_deep_dive_v0.1Z",
+  "deep_dive_questions": [
+    "Do observed deployment movements correspond to coherent role-based formation placement?",
+    "Where do command bursts occur relative to first contact, melee commitment, crisis, rout cascade, and victory countdown?",
+    "Which high-value units accumulate avoidable exposure, idle time, target switching, or pursuit distance?",
+    "Do visible routing and wavering signals create decision windows early enough for bounded disengagement or exploitation?",
+    "Which telemetry-derived tactical-state classifications disagree with the visible replay?",
+    "Which proposed shadow actions would be unsafe because of terrain, collision, formation depth, or hidden information not represented in current fields?"
+  ],
+  "ironman_save": {
+    "campaign": "Immortal Empires / wh3_main_combi",
+    "format_signature": "CBAB",
+    "header_timestamp_utc": "2026-07-31T02:46:01+00:00",
+    "season": "Summer",
+    "sha256": "7086075e0c1dcd2aa844d70f2dc6aa9f178be88c7d0ef72ad1712363608fe7f5",
+    "size_bytes": 14419212
+  },
+  "limitations": [
+    "Replay files preserve battle setup, results, and replay state, but they are not a substitute for the Transcendence append-only probe log.",
+    "The Ironman save proves the campaign and mod binding at save time but does not reconstruct every missing runtime observation.",
+    "The emergency rescue ZIP remains the highest-value source for campaign-to-battle continuity and checkpoint evidence."
+  ],
+  "release": "v0.1Z",
+  "replays": [
+    {
+      "battle_name": "Battle of Ubersreik",
+      "filename": "test1.replay",
+      "format_signature": "CBAB",
+      "header_timestamp_utc": "2026-07-31T02:05:58+00:00",
+      "observed_named_units_and_characters": [
+        "Emperor Karl Franz",
+        "Claude Wissen",
+        "Elgar Schneider",
+        "Thomas Maier",
+        "Empire Captain",
+        "Master Engineer",
+        "Zintler's Reiksguard",
+        "Reiksguard",
+        "Imperial Foot",
+        "Halberdiers",
+        "Swordsmen",
+        "Pikemen",
+        "Crossbowmen",
+        "Handgunners",
+        "Empire Archers",
+        "Mortars",
+        "Settlement garrison"
+      ],
+      "opponent_or_location": "Empire Secessionists",
+      "sha256": "e96c160ce8ca83463407d2008c676da1bcad2a0e0d2ec1f03b475097b4c4ea89",
+      "shared_session_id": "239641785461549",
+      "size_bytes": 109465
+    },
+    {
+      "battle_name": "Battle of Marienburg",
+      "filename": "Auto-save(1).replay",
+      "format_signature": "CBAB",
+      "header_timestamp_utc": "2026-07-31T02:39:35+00:00",
+      "observed_named_units_and_characters": [
+        "Emperor Karl Franz",
+        "Claude Wissen",
+        "Emil von Korden",
+        "Gunter Sollander",
+        "Elgar Schneider",
+        "General of the Empire",
+        "Master Engineer",
+        "Amethyst Wizard",
+        "Zintler's Reiksguard",
+        "Reiksguard",
+        "Knights of the Blazing Sun",
+        "Imperial Foot",
+        "Pistoliers",
+        "Free Company Militia",
+        "Spearmen (Shields)",
+        "Swordsmen",
+        "Pikemen",
+        "Crossbowmen",
+        "Handgunners",
+        "Empire Archers",
+        "Mortars"
+      ],
+      "opponent_or_location": "Marienburg",
+      "sha256": "844d2efc4434c18d09d5958fc5cf9c60bf21201d5ca2af2e254077666ba0c902",
+      "shared_session_id": "239641785461549",
+      "size_bytes": 206120
+    }
+  ],
+  "result_digest": "da95b3165ed2ca8bea7f9541361ef03aafb97a0219848c6994e20fb2f0061713",
+  "schema_version": 1,
+  "shared_campaign": {
+    "build": "48122.4194776",
+    "faction": "Reikland",
+    "persistent_session_id": "239641785461549",
+    "wh3_version": "8.1.1"
+  },
+  "status": "OWNER_REPLAY_CAPTURE_READY"
+}

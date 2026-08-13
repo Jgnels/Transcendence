@@ -1,0 +1,115 @@
+1. Clean-slate counterfactual
+Layer	Verdict
+v0.2E challenge evaluator	YES_AS_EVALUATOR/RESEARCH_LAYER — its value isn't scoring the world, it's answering "did the last CA patch change AI behavior," which nothing else answers.
+v0.2F strategic portfolio controller	THIN/GENERALIZE — its budgets/thresholds duplicate faction-potential and task-priority levers that native already owns and CA is actively re-tuning. Keep only as a feature-set generator for the evaluator, not as a controller with authority-adjacent semantics.
+v0.2G project-owned army allocator	NO. Knowing what I now know, I would not start this. It's an application-layer decision component competing with a native system I haven't even measured yet.
+v0.2G temporal commitment controller	NO as a build-first item — see section 7, I can no longer support the premise that motivated it.
+v0.2H assignment-derived feasibility layer	THIN/GENERALIZE — the read-only query/reachability machinery is worth keeping; the "derive queries from a hypothetical project assignment" framing is not (see section 5).
+v0.2I live assignment-feasibility transport	THIN/GENERALIZE — not as scoped. What survives clean-slate scrutiny is a much smaller thing: a live observation transport, not an assignment-feasibility transport.
+
+Net: from scratch today, I would build an evaluator and an observation bridge. I would not build an allocator, a commitment controller, or an assignment-feasibility harness. That's a real departure from "keep E–H, fix I."
+
+2. The transport bottleneck, reevaluated
+
+Under Architecture A, v0.2I's job is "tell me if the assignment I'm about to issue is reachable" — that only matters if Transcendence issues assignments.
+
+Under Architecture B, Transcendence issues nothing. There is no hypothetical assignment to test feasibility of. So: there is no project requirement that makes assignment-derived v0.2I transport the highest-priority engineering problem under Architecture B. I explicitly retract "ALL ENGINEERING PRIORITY GOES HERE" as I framed it.
+
+What I do not retract: the underlying, more general problem — can this project get WH3 to reliably exchange data with a running campaign at all — is still real and still blocked. But under B that problem needs a simpler artifact (read live state, no CQI, no whitelist, no plan-binding to a hypothetical order) than what v0.2I built across three revisions. The three-hotfix pattern was partly caused by building the harder, assignment-coupled version first.
+
+3. A vs. B, scored
+	A: make assignment-derived v0.2I work	B: decode rows / 8.1 surfaces
+Probability of changing architecture	2	8
+Information gain	3	9
+Owner burden	7 (three failed live sessions already)	2 (mostly offline)
+Implementation cost	8 (sunk cost climbing, still failing)	3
+Risk work becomes unnecessary	8 (moot under B)	2 (needed regardless of architecture)
+Ability to improve actual WH3 AI behavior	1 (nothing on the application path)	6 (identifies concrete tunable rows, matches proven prior art like AI Camping Settlements Fix)
+
+Choose B.
+
+4. Correcting the "not exposed" claim
+
+That statement was wrong — it collapsed two different questions into one. Corrected:
+
+OFFICIAL_SCRIPT_API_DOCUMENTED — the Lua campaign scripting surface. Established by CA's own modding docs and used by every mod I found. Doesn't need v0.2I.
+CURRENT_SCHEMA_EXPOSED — whatever rpfm-schemas currently defines for 8.1.x tables. Fully offline.
+DB_TUNABLE — whether a given table is a flat, moddable DB table vs. compiled logic. Determinable from the schema and RPFM decoder alone, offline.
+PACK_PRIOR_ART_PROVEN — behaviors other mods demonstrably achieve live right now (e.g., AI Camping Settlements Fix changing idle-turn allowance). This is proof by someone else's running game, not yours — doesn't need your v0.2I.
+DOCUMENTED_BUT_RUNTIME_UNVERIFIED — something the API/schema claims exists that your specific harness hasn't confirmed it can read/write in your environment. This is the one category that actually needs a live check.
+ENGINE_INTERNAL_OR_UNEXPOSED — never touched by any documentation, schema, or mod. Only inferable, never provable, from outside CA.
+UNKNOWN — not yet researched.
+
+Most of "what does WH3 expose" is answerable in the first four categories, entirely offline. My original claim conflated capability discovery (mostly offline-answerable) with harness verification (the narrow slice that needs one live check). That was a real error, not a matter of framing.
+
+5. v0.2H, reclassified under Architecture B
+Component	Decision
+Query catalog	GENERALIZE
+Capability labels (CONTROL/INFLUENCE/OBSERVE/UNAVAILABLE)	KEEP — orthogonal to which architecture wins
+Actor/CQI binding	REMOVE_ASSIGNMENT_COUPLING
+Reachability queries	GENERALIZE — repoint at observed native choices, not hypothetical ones
+Assignment-derived query construction	REMOVE_ASSIGNMENT_COUPLING — regenerate from observation instead of proposal
+Observation packet	KEEP — this is exactly what an evaluator consumes
+Adjudication	DEFER — irrelevant until live queries exist at all
+Authority firewall	KEEP — cheap insurance regardless of architecture
+Digest/evidence binding	DEFER — reduce ceremony until there's live data worth binding
+
+Why prove a hypothetical assignment reachable if Transcendence will never issue it: you shouldn't. That's zero decision-relevant information under B. The only legitimate survival path for this machinery is re-targeting it at native's actual choices — "was what native just did reachable/sound by my own read-only sensing" — which is an evaluator diagnostic, not an order-vetting function.
+
+6. Reactive World, audited
+
+I overclaimed. Correcting:
+
+Author-described algorithm (threat-rank/hatred/desperation/proximity pipeline): AUTHOR_CLAIM
+Verified pack/script contents: UNVERIFIED — I read Workshop description text, not the mod's actual Lua/DB.
+Current compatibility: UNVERIFIED — I didn't check comment threads for these two specific mods.
+Demonstrated formation of durable late-game blocs: UNVERIFIED
+Demonstrated strategic coordination between bloc members: UNVERIFIED
+Demonstrated gameplay quality: UNVERIFIED
+
+You're right to flag it: I equated "diplomatic alliance/confederation forms" with "coordinated bloc strategy," which is exactly the conflation you warned against. What I actually have evidence for is narrower and weaker: a plausible, author-described pattern showing that alliance/confederation formation can be gated by threat-rank and relations data via a bounded script, without touching core CAI tables. Whether that produces the coordinated multi-army strategic behavior the Three Kingdoms goal actually wants is unestablished. Downgrade this from "working proof" to "a plausible existence pattern for the diplomatic precondition, unverified for the strategic-coordination part."
+
+7. v0.2G temporal commitment — prove or retract
+
+I can't prove it. Retracting the "almost certainly per-tick reactive" claim.
+
+Native task reevaluation cadence: UNKNOWN_ENGINE_INTERNAL
+Native assignment memory: UNKNOWN_ENGINE_INTERNAL
+Native hysteresis: UNKNOWN_ENGINE_INTERNAL, but the AI Camping Settlements Fix mod having to override an "idle turn allowance" counter is indirect evidence native already tracks some turn-based dwell state — which cuts against my original "genuinely novel" claim rather than for it. Same for the "distance-in-turns and stance-aware scaling" your original prompt listed as a native mechanism to research — that's inherently temporal.
+Native temporal commitment (multi-turn binding of a decision once made): UNKNOWN_ENGINE_INTERNAL
+
+Given the available indirect evidence leans toward native having some temporal machinery, not none, I retract "genuinely novel" as a confident claim. The 2–4 turn commitment window and 0.15 reassignment margin are UNCALIBRATED_HYPOTHESES — calibrated on one historical corpus, never run live, and possibly duplicating something native already does in some form. Worth keeping only as a metric an evaluator could compare against native's observed reassignment frequency once that's measurable — not as application logic.
+
+8. Row-level reconciliation gate
+
+Minimum artifact set, and what's offline-only:
+
+Artifact	Offline?
+Exact schema/version pinned to 8.1.x	Yes — RPFM schema sync
+Vanilla table export (task-generator-junction family + related CAI tables)	Yes — RPFM against the installed pack, game doesn't need to be running
+SFO deltas	Yes — your repo already has a 4,400-line SFO audit; likely already covers much of this
+DeepWar deltas	Yes — small mod, narrow table set
+Hecleas deltas	Yes, but larger effort — broad scripted overhaul
+Incata, if obtainable	Unconfirmed whether this is the same mod as "AI Army Tasks and Strategy" I found — flag as unresolved, not blocking
+Patch 8.1 priority-mechanism evidence	Yes — CA's own blog posts and patch notes
+Narrow AI-mod comparisons (AI Camping Settlements Fix, Campaign AI Tweaks)	Yes
+
+Yes — this gate can be completed substantially before asking the owner to run WH3 again. The only step that genuinely requires a live session is verifying your own harness can read a value you already know exists from the schema — a narrow confirmation step, not a discovery step, and it should come after the offline gate, not before or instead of it.
+
+9. Reissued architecture decision
+A — NATIVE_CAI_PRIMARY + TRANSCENDENCE_EVALUATOR/TUNER: 45%
+B — NATIVE_CAI_PRIMARY + BOUNDED_PROJECT_CORRECTIONS: 40%
+C — HYBRID_NATIVE_EXECUTOR + TRANSCENDENCE_STRATEGIC_PLANNER: 12%
+D — TRANSCENDENCE_PROJECT_OWNED_STRATEGIC_STACK: 3%
+
+A and B are close because B is likely where A leads once the evaluator has enough evidence to justify narrow, proven corrections (in the spirit of AI Camping Settlements Fix — small, targeted, evidence-backed). Today, before that evidence exists, A is the honest starting stance.
+
+10. Final answers
+
+Should v0.2I remain paused right now? YES
+
+Highest-value next task: the offline row-level reconciliation gate (section 8) — decode the shared task-generator-junction table family against current 8.1.x schemas, diff it against SFO/DeepWar/Hecleas, and compile CA's own 2025–2026 anti-player-bias/distance-scaling/aggression/faction-potential mechanism disclosures into one reference.
+
+Most likely existing layer to leave the final application path: v0.2G's project-owned army allocator, and the assignment-coupled portions of v0.2H/v0.2I built to serve it.
+
+Most valuable existing layer to preserve in generalized form: v0.2H's query catalog and reachability-query machinery — decoupled from assignment-binding and repointed at observing native's actual choices, it becomes the sensing layer v0.2E needs to function as a real evaluator.

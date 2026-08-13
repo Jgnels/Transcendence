@@ -1,0 +1,230 @@
+The user is asking for a source review of two Python files (v0.2E and v0.2F) from the Transcendence project, which is a Total War: WARHAMMER III AI/gameplay enhancement mod. They want me to:
+Trace exact inputs, scoring, outputs, invariants, and live-vs-shadow authority
+Compare responsibilities against WH3 native systems (CAI - Campaign AI)
+Classify each major responsibility into categories
+Output specific deliverables
+This is a complex technical review. I need to:
+First read and understand the code deeply
+Then search for current WH3 native CAI systems to compare against
+Provide the requested analysis
+Let me start by reading the files carefully and then searching for WH3 CAI documentation.
+I'll begin with a deep read of the sources, then verify current WH3 native CAI capabilities, and finally produce the reconciliation.
+Search
+Total War Warhammer 3 CAI campaign AI threat strength influence query system 2024 2025 WH3 native campaign AI task generation priority batching personality strategic stance modding documentation Total War Warhammer 3 campaign AI internals modding CAI query system influence map
+13 results
+Search WH3 CAI for Task Batching, Resource Allocation, Tables, Structures
+Search
+WH3 campaign AI task batching resource allocation turn phase scaling modding tables Total War Warhammer 3 cai_task_generator cai_task_priority cai_personality strategic stance mod pack WH3 campaign AI executor system army assignment route planning native code
+16 results
+Exploring WH3 CAI Modding API and Task System Details
+Search
+WH3 lua campaign AI cai_task_generator cai_interface query_faction threat score Total War Warhammer 3 modding campaign AI personality strategic stance tables 2024 2025 WH3 campaign AI influence map task priority resource allocation mod pack rpfm
+14 results
+Drafting Modding Community Claims with Logical Inference
+plain
+Search
+WH3 campaign AI task types defend attack threat region native tables 2025 Total War Warhammer 3 CAI task generator task types list modding WH3 campaign AI how tasks are assigned to armies native system
+15 results
+Explainability is a developer convenience, not a player benefit
+plain
+Table
+KIMI C — v0.2E + v0.2F SOURCE RECONCILIATION
+Transcendence Strategic Chain Audit — Research-Only, No Code Changes
+0. EVIDENCE DISCIPLINE KEY
+Table
+Tag	Meaning
+VERIFIED_REPO_FACT	Directly observable in uploaded source
+OFFICIAL_GAME_FACT	From CA official blogs / patch notes (2025 Betas, 6.3.4 hotfix)
+MODDER_COMMUNITY_CLAIM	From TWC, Reddit, modding wikis (treated as hearsay)
+INFERENCE	Logical deduction from verified facts
+HYPOTHESIS	Educated guess requiring experiment
+UNVERIFIED	Unknown; no source found
+1. SOURCE CRITICAL PATH
+v0.2E — campaign_challenge.py
+Inputs (VERIFIED_REPO_FACT):
+raw_scenario dict containing:
+scenario_id, turn, controlled_faction (string key)
+armies[]: {id, faction, x, y, movement, strength, replenishment}
+regions[]: {id, owner, value, under_siege}
+wars[]: [faction_a, faction_b] undirected edges
+Passed through validate_campaign_scenario() and visible_scenario() (contracts not provided)
+Processing (VERIFIED_REPO_FACT):
+Visibility filter: own_armies = faction==observer; hostile_armies = faction≠observer ∧ war-edge exists
+Front record per own region (_front_record):
+Geometric ETA = hypot(dx, dy) / max(movement, 1.0)
+Hostile inclusion threshold: ETA ≤ FRONT_HORIZON_TURNS = 2.0
+Front state derived from under_siege + hostile presence + own coverage:
+SIEGED_COVERED / SIEGED_EXPOSED / CONTESTED / EXPOSED / QUIET
+colocated_same_faction_pressure: flag if ≥2 hostile armies from same faction within horizon
+coordination_claim hardcoded to "NOT_INFERRED_FROM_COLOCATION"
+Hostile aggregation by faction: strength sum, army count, region value, region count
+Concentration metrics: HHI over strength shares; dominant faction + share
+Rival structure: COHERENT_VISIBLE_RIVAL_CANDIDATE (≥2 armies, ≥1 region, ≥50% share) → FRAGMENTED_VISIBLE_PRESSURE (≥2 asset factions, dominant share <65%) → SINGLE_OR_PARTIAL_VISIBLE_RIVAL → NO_VISIBLE_HOSTILE_ASSETS
+Pressure class: LOCAL_CRISIS_OR_EXPOSED_FRONT (siege or exposed) → COVERED_VISIBLE_FRONT_PRESSURE (threatened but covered) → VISIBLE_RIVAL_WITHOUT_NEAR_FRONT_PRESSURE → LOW_VISIBLE_PRESSURE
+Recovery detection: armies with replenishment < 0.65; recovery strength fraction
+16 scalar metrics: counts, ratios, HHI, coverage ratios
+Outputs (VERIFIED_REPO_FACT):
+Structured envelope: schema_version=1, contract, scenario_id, turn, controlled_faction
+rival_structure, pressure_class, rivals[], fronts[], metrics{}
+unavailable_dimensions: explicitly lists 5 dimensions NOT consumed (anti-player bias, diplomatic bloc intent, recovery capacity, native AI intent, campaign quality)
+guardrails[]: 6 policy statements (no war-count reward, no hidden armies, no coordination inference, no anti-player bias from snapshot, separate decision quality from bonuses, separate rival coherence from front pressure)
+result_digest from canonical digest
+Invariants (VERIFIED_REPO_FACT):
+Single-turn snapshot only (no history within one evaluation)
+Geometric distance only — no pathfinding, no zone of control, no stance effects
+War edges only — no vassals, alliances, non-aggression pacts, trade
+Visible scenario only — hidden armies not consumed, human identity not consumed
+Observer-safe — operates only on visible_scenario() output
+Authority (VERIFIED_REPO_FACT):
+AUTHORITY = "NO_ORDERS" — never emits game orders
+APPLICATION_AUTHORITY = "PROHIBITED" — no save values written
+_validate_observed_report enforces mode == "SHADOW_NO_ORDERS", game_orders_emitted is False, save_values_written is False
+v0.2F — strategic_portfolio.py
+Inputs (VERIFIED_REPO_FACT):
+raw_scenario (same schema as v0.2E)
+Optional challenge_envelope (v0.2E output); if supplied, must match fresh _verify_challenge() evaluation or raises StrategicPortfolioError
+Cross-evidence mode: observed_report (multi-turn shadow) + late_game_scenario + challenge_envelope
+Processing (VERIFIED_REPO_FACT):
+Posture derivation (_posture()): 8-way classification from challenge pressure_class + rival_structure + recovery metrics:
+CRISIS_STABILIZATION → RECOVERY_AND_DEFENSE → COHERENT_RIVAL_CONTAINMENT → FRAGMENTED_PRESSURE_MANAGEMENT → VISIBLE_RIVAL_WATCH → RECOVERY_AND_CONSOLIDATION → CONSOLIDATE_AND_RESERVE
+Candidate priority generation (_candidate_priorities()):
+Front priorities: RELIEVE_SIEGED_EXPOSED_FRONT (CRITICAL, utility 900+value), MAINTAIN_SIEGE_RELIEF_COVERAGE (CRITICAL, 850+value), STABILIZE_EXPOSED_FRONT (CRITICAL, 800+value), MAINTAIN_THREATENED_FRONT_COVERAGE (HIGH, 500+value)
+Recovery priority: PROTECT_RECOVERING_FIELD_FORCE (CRITICAL if all armies recovering, else HIGH, utility 700 or 460+100*fraction)
+Rival priorities: CONTAIN_COHERENT_VISIBLE_RIVAL (HIGH, 420+100share+10value), MANAGE_FRAGMENTED_VISIBLE_PRESSURE (MEDIUM, 300+100*(1-dominant_share)), TRACK_SINGLE_VISIBLE_RIVAL (MEDIUM, 280)
+Reserve: PRESERVE_STRATEGIC_RESERVE (MEDIUM, 260+min(40, 5*count))
+Low pressure: CONSOLIDATE_LOW_PRESSURE_POSITION (LOW, 100)
+Selection (_select_priorities()):
+Sort key: (-severity_rank, -utility, type, target_id)
+Cap: MAX_SELECTED_PRIORITIES = 6
+Overflow handling: if >6 CRITICAL, create CRITICAL_STRATEGIC_OVERFLOW meta-priority
+Aggressive filtering:
+AGGRESSIVE_TYPES = {CONTAIN..., TRACK..., MANAGE...}
+MAX_AGGRESSIVE_PRIORITIES = 1
+Vetoed if pressure_class == LOCAL_CRISIS_OR_EXPOSED_FRONT OR all armies recovering
+Coverage metric: critical_coverage = fraction of critical source IDs represented in selected + overflow
+Outputs (VERIFIED_REPO_FACT):
+Portfolio envelope with strategic_posture, selected_priorities (≤6), candidate_priorities, critical_overflow, metrics
+portfolio_constraints: documents abstentions (force_assignment_status=NOT_PERFORMED, route_or_action_status=NOT_EVALUATED, coordination_claim_from_colocation=PROHIBITED, human_or_player_identity_consumed=False)
+Cross-evidence version: observed_turns[] + synthetic_late_game_reference
+Invariants (VERIFIED_REPO_FACT):
+Max 6 selected, max 1 aggressive
+Crisis or total-force recovery vetoes aggression
+No per-faction war-count priority inflation
+Army assignment, route feasibility, command construction, execution, outcome remain separate gates
+2. NATIVE WH3 CAI — VERIFIED CAPABILITIES
+OFFICIAL_GAME_FACT from CA's 2025 Beta blogs and 6.3.4 hotfix notes:
+Table
+System	Native Mechanism	Source
+Threat vs Strength	Two scales. Threat = diplomatic + region count + interactions + proximity + attitude + direct aggression. Strength = units + experience + bonuses + stances.	
+Global / Individual Threat	Global = faction leaderboard. Individual = per-faction view with proximity/attitude modifiers. Affects task generation, diplomacy, deal evaluation.	
+Query System + Influence Map	Dual detection: simple queries + influence map showing "extent of every force's range and strength of interaction with assets." Fixed agent false-positive bug in Beta 1.	
+Task Generation	Multiple task generators contribute to same task (e.g., attack region X because enemy + bordering + undefended).	
+Task Batching	Same-type + same-target tasks combined during allocation. Defensive batching was too loose, causing idle AI. Fixed in 6.3.4 by replacing offenders with non-batchable generators.	
+Task-to-Army Allocation	Tasks paired with armies; "all owned forces are evaluated to find a force we can justify resourcing." Strength ratio against target is critical.	
+Distance Scaling	Priority modified by distance in turns. Existing assets: movement + stances (tunneling/forced march). Fresh armies: +recruitment distance + recruit time. Base: min 20% at >4 turns (recruiting), 10% at >5 turns (non-recruiting). Scales to 6-8 turns with 15+/30+ regions.	
+Anti-Player Bias	Threat multiplier on player actions: 50-200% (reducing to 90-120%). Strength multiplier: 100-120% based on personality + difficulty. Most "attack human" tasks removed or deprioritized.	
+Faction Potential	Numeric per-faction value; varies by campaign/difficulty. Affects AI-to-AI under shroud. Major vs minor strength scaling.	
+Personality / Managers	cai_personalities_tables + campaign_ai_manager_behaviour_junctions_tables control expansion, defense, aggression, ally help, etc.	
+Specific Task Types	"defend settlements when enemy forces present", "defend regions neighboring threat", "attack threat", "attack human forces/settlements"	
+3. RESPONSIBILITY-BY-RESPONSIBILITY DUPLICATION MATRIX
+Table
+#	v0.2E/F Responsibility	Native CAI Equivalent	Classification	Independent Evaluator Value
+1	Front Detection (_front_record): 2-turn geometric ETA horizon; classify SIEGED/CONTESTED/EXPOSED/QUIET	Query System + Influence Map: Detects forces near assets; tasks like "defend settlements when enemy forces present" generated from proximity. Distance scaling uses turns-based distance with stance/movement.	NATIVE_FIRST	Native uses influence map (range+strength interaction), not just geometric distance; considers stances, agents, ZOC. v0.2E's 2-turn geometric horizon is a crude subset.
+2	Rival Structure / Concentration (HHI, dominant share, coherent candidate: ≥2 armies, ≥1 region, ≥50% share)	Threat System + Faction Potential: Global threat = leaderboard; individual threat includes proximity/attitude. Faction Potential promotes major survival. No evidence of explicit HHI or "coherent rival" thresholds.	REFRAME_AS_EVALUATOR_OR_ORACLE	Native has implicit concentration via threat scores, but no explicit market-structure metrics. v0.2E's HHI provides explainable, bounded diagnostic native lacks.
+3	Pressure Classification (pressure_class: 4-tier crisis→low)	Task Generation + Posture: Defensive posture triggered by bordering threat. Classification is implicit in which tasks get generated/prioritized.	REFRAME_AS_EVALUATOR_OR_ORACLE	Native already classifies pressure implicitly. v0.2E's explicit 4-tier system is valuable for explainability and benchmarking, but redundant as a controller.
+4	Recovery State Detection (replenishment < 0.65; recovery strength fraction)	Strength Evaluation: Considers "units, experience, bonuses, stances, among others." UNVERIFIED whether native treats replenishment as strategic recovery signal vs. just strength modifier.	KEEP_PROJECT_OWNED	No evidence native treats low-replenishment armies as strategic liabilities requiring protection. v0.2E's framing ("recovery is protected as strategic capacity rather than treated as free offensive strength") is a design insight native does not express.
+5	Priority Generation / Portfolio (typed priorities with severity/utility; max 6; max 1 aggressive; crisis/recovery veto)	Task Generation + Batching + Allocation: Multiple generators, batching, army pairing, distance scaling, personality/difficulty modifiers. Specific task types: defend settlements, defend regions, attack threat, attack human.	REMOVE_FROM_APPLICATION_PATH	Native system is vastly richer (stances, recruitment distance, agent effects, personality, difficulty, batching). v0.2F's 6-record portfolio with fixed weights is a toy model by comparison. Value is strictly as evaluator of native output.
+6	Strategic Posture (_posture: 8-way classification from visible state)	Personality + Manager Behavior: cai_personalities_tables and manager junctions control expansion, defense, aggression, ally help.	REFRAME_AS_EVALUATOR_OR_ORACLE	Native personalities encode posture by faction identity. v0.2F's posture is derived from visible state. Serves as cross-check ("does native personality match actual situation?") but should not override native tables.
+7	Army-to-Task Assignment	Native Allocation: "all owned forces are evaluated to find a force we can justify resourcing."	NATIVE_FIRST (already abstained)	v0.2F correctly abstains (NOT_PERFORMED). This is the correct design.
+8	Cross-Evidence / Longitudinal Portfolio (multi-turn observed + synthetic late-game reference)	UNVERIFIED — No evidence of native cross-turn portfolio comparison. Faction Potential varies per campaign but is not turn-by-turn.	KEEP_PROJECT_OWNED	Genuinely novel. Native CAI operates turn-by-turn (with threat score persistence). Longitudinal evaluator tracking posture evolution is outside native scope.
+9	Anti-Player Bias Guardrail (human_or_player_identity_consumed=False)	Native Threat Multiplier: Explicit player threat multiplier 50-200% (reducing to 90-120%) and player strength multiplier 100-120%.	KEEP_PROJECT_OWNED	Core differentiator. Native CAI is explicitly biased. An evaluator treating player and AI symmetrically is independently valuable for measuring "fair" challenge.
+10	Bounded Correction Ethic (prefer native capabilities; bounded correction before replacement)	CA's Own Iterative Fixes: Query system, batching, distance scaling, anti-player bias all fixed through official patches.	MERGE_OR_THIN	Project ethic aligns with CA's approach. Rather than parallel systems, hook into native outputs and apply bounded corrections where native fails (SFO calibration, bias detection).
+4. BEST CASE FOR RETAINING v0.2E/F AS CONTROLLERS
+HYPOTHESIS:
+SFO Profile Calibration: Native CAI tables are tuned for vanilla rosters/economy. SFO changes unit stats, replenishment curves, and building chains. A controller could intercept native task priorities and rescale them based on SFO-specific knowledge that native tables cannot express.
+Anti-Player Bias Override: Even post-2025 Beta (90-120% threat, 100-120% strength), native still applies player-specific multipliers. A controller could normalize threat/strength inputs to native task generators, making the AI treat the player as just another faction. This is removing cheating against the player, not adding cheating for the AI.
+Late-Game Rival Coercion: Native Faction Potential helps majors survive, but v0.2E's coherent rival detection could trigger custom diplomatic events or war declarations creating meaningful late-game blocs. CA notes "common threats for several factions" but says "those are a subject for another time" — implying the system is underdeveloped.
+Recovery-Aware Task Filtering: Native AI may send a 40% replenishment army into offense because raw strength looks adequate. A controller could veto such assignments based on v0.2E recovery detection, forcing wait/defend instead.
+Front Crisis Sequencing: Native task batching combined defensive tasks, which CA admits caused idle AI. A controller could enforce that "relieve sieged exposed front" always gets a dedicated, non-batchable task slot before other priorities — hardcoding the fix CA applied in 6.3.4 but with project-owned thresholds.
+5. BEST CASE FOR USING v0.2E/F ONLY AS EVALUATORS
+OFFICIAL_GAME_FACT + INFERENCE:
+Native System Superiority on Every Operational Dimension: Native CAI has access to:
+Influence map (range + strength interaction, not geometric distance)
+Stance effects (tunneling, forced march, ambush, raiding)
+Agent detection (fixed in 6.3.4)
+Recruitment distance + time-to-recruit in priority
+Dynamic distance scaling (4-8 turns based on region count)
+Personality-specific threat/strength multipliers
+Batching and allocation optimization across all tasks and armies
+v0.2E's 2-turn geometric horizon and v0.2F's fixed 6-priority cap cannot compete operationally.
+CA Is Actively Fixing the Exact Problems v0.2E/F Target: The 2025 Betas and 6.3.4 hotfix addressed:
+Idle AI / defensive clumping (task batching fix) 
+Anti-player bias (threat/strength multiplier reduction) 
+Distance horizon scaling (campaign progression) 
+Query system accuracy (agent filtering) 
+v0.2E/F were designed when these native systems were broken. They are now largely fixed.
+Controller Risk of Compounding Errors: If v0.2F overrides native task priorities, it loses native's implicit knowledge of:
+Zone of control geometry
+Settlement garrison strength
+Ambush stance risk
+Supply lines and upkeep
+Diplomatic reliability
+Campaign object interactions (rituals, rites, mechanics)
+A controller with incomplete information will make worse decisions than native CAI with complete information.
+Evaluator Value Is Independent of Native Quality: Even a perfect native AI benefits from:
+Explainability: Native is a black box. v0.2E/F produces human-readable challenge metrics.
+Benchmarking: "Is this campaign challenging or just annoying?" v0.2E's pressure_class and rival_structure answer this.
+Mod Quality Assurance: "Did SFO break the AI's strategic sense?" v0.2F's portfolio metrics detect this.
+Anti-Player Bias Auditing: Even at 90-120%, bias exists. An evaluator can measure it.
+Longitudinal Tracking: Native has no turn-by-turn strategic posture history. v0.2F's cross-evidence envelope provides this.
+Authority Boundaries Are Correctly Drawn: The code already says NO_ORDERS / PROHIBITED. The best case is that this was the right call all along.
+6. EXACT EXPERIMENT THAT WOULD DECIDE
+Experiment: "Shadow Controller A/B"
+Setup:
+Instrument a WH3 campaign (vanilla + SFO) with a lua hook capturing:
+Every native task generated (type, target, priority, assigned army)
+Every native task batching decision
+Native threat scores and strength evaluations per faction
+Final army orders (move, attack, defend, recruit)
+Run v0.2E + v0.2F in SHADOW_NO_ORDERS mode on identical snapshots.
+Treatment A (Evaluator-Only): Use v0.2F output only to label turns post-hoc. Compare:
+Turns where v0.2F says CRISIS_STABILIZATION vs. native's actual defensive task density
+Turns where v0.2F says COHERENT_RIVAL_CONTAINMENT vs. native's actual threat concentration
+Correlation between v0.2F's front_coverage_ratio and native's defensive success rate
+Treatment B (Bounded Controller): For a subset of turns, allow v0.2F to:
+Veto one native task assignment per turn (e.g., "don't send recovering army to attack")
+Boost priority of one native task by one severity tier (e.g., "relieve siege" from HIGH to CRITICAL)
+Block one aggressive task if posture is crisis/recovery
+Compare campaign outcomes between Treatment A and B.
+Treatment C (Full Controller): Replace native task generation with v0.2F's portfolio for one faction. Compare against native and Treatment B.
+Decision Criteria:
+Treatment B shows statistically significant improvement in player-reported challenge quality WITHOUT increasing AI suicidality/idleness → MERGE_OR_THIN — bounded controller justified.
+Treatment B shows no improvement or regression → REFRAME_AS_EVALUATOR_OR_ORACLE — native is good enough; project adds value only as diagnostics.
+Treatment C shows improvement → KEEP_PROJECT_OWNED — full controller justified.
+Treatment A correlation is weak (v0.2F metrics don't predict native behavior) → REMOVE_FROM_APPLICATION_PATH — the model is wrong.
+Key Measurements:
+Player-rated "fair challenge" (1-10) per 10-turn block
+AI army survival rate (fraction surviving 10 turns)
+Territory volatility (region ownership changes per turn)
+Anti-player targeting index (fraction of AI armies moving toward player vs. nearest threat)
+7. FORCE YOURSELF TO BE WRONG
+I might be wrong about NATIVE_FIRST on Front Detection.
+v0.2E's _front_record uses a 2-turn geometric horizon. Native CAI's distance scaling uses 4-8 turns depending on region count, and considers stances. But v0.2E's 2-turn horizon might actually be more accurate for immediate tactical threat than native's longer horizon. Native's 4-8 turn horizon causes it to overreact to distant threats (the "defend regions neighboring threat" problem CA fixed). v0.2E's tighter horizon correctly filters out noise. If v0.2E's front detection correlates better with actual battles in the next 2 turns than native's task generation does, then Front Detection should be KEEP_PROJECT_OWNED as a tactical filter.
+I might be wrong about REMOVE_FROM_APPLICATION_PATH on Priority Generation.
+v0.2F's 6-priority cap and aggressive veto might seem crude, but native task batching was explicitly broken until 6.3.4. CA's fix was to make certain tasks non-batchable. v0.2F's portfolio is essentially a hardcoded, non-batchable task list with explicit precedence rules. If CA's fix proves insufficient (e.g., defensive tasks still absorb offensive ones in SFO), then v0.2F's bounded portfolio could be a more robust controller than native's emergent behavior. The fixed utility weights, while crude, prevent the "priority inflation" that caused native idle AI.
+I might be wrong about KEEP_PROJECT_OWNED on Recovery Detection.
+Native strength evaluation considers "stances, among others." Replenishment IS a stance-like modifier. It is entirely possible that native CAI already treats low-replenishment armies as weak and avoids offensive tasks with them. If so, v0.2E's recovery detection is redundant, not novel. The project has no evidence that native ignores replenishment. This should be DEFER_PENDING_EVIDENCE.
+I might be wrong about KEEP_PROJECT_OWNED on Cross-Evidence.
+Native Faction Potential varies between campaigns and difficulty levels. It is UNVERIFIED whether native maintains internal longitudinal state (e.g., "this faction was strong 10 turns ago, so potential is high"). If native DOES maintain campaign-long potential state, then v0.2F's cross-evidence portfolio is just a poor man's version of Faction Potential and should be REFRAME_AS_EVALUATOR_OR_ORACLE at best.
+I might be wrong about the entire project's premise.
+The brief states: "We may have reconstructed strategic responsibilities that WH3 already owns natively." I have classified most responsibilities as NATIVE_FIRST or REFRAME. But what if the native systems, even post-6.3.4, are still fundamentally inadequate for the project's goals? CA's blogs emphasize they are reducing anti-player bias, not eliminating it. They are making the AI "more aggressive," not "more strategically coherent." The project's goal is "harder/fairer/explainable opposition; late-game rival powers/blocs; avoid invisible cheating and arbitrary anti-player targeting."
+If CA's definition of "fixed" is "AI attacks player less" and the project's definition is "AI creates coherent late-game rival blocs that challenge the player fairly," then native CAI is not fixed at all — it's just less annoying. In that case, the classifications should shift toward KEEP_PROJECT_OWNED for rival structure, cross-evidence, and posture, because native CAI simply does not pursue the project's strategic goals.
+I might be wrong about SFO calibration being a controller justification.
+SFO changes unit stats and economy, but native CAI's strength evaluation uses actual unit stats from live game data. If SFO changes a unit's stats, native's strength evaluation automatically reflects that. The "SFO profile" justification assumes native is hardcoded to vanilla balance, but native reads live game data. Unless SFO changes the fundamental AI tables (personalities, managers, task generators), native might already handle SFO correctly. This is UNVERIFIED and needs testing.
+I might be wrong about the value of explainability.
+The project treats explainability as a core value. But the player of a single-player game does not need to read JSON challenge envelopes. They need to feel challenged. If a black-box native AI produces better gameplay than an explainable evaluator, then explainability is a developer convenience, not a player benefit. The correct classification for explainability-focused responsibilities is REMOVE_FROM_APPLICATION_PATH — they are debug tools, not game features.
+END OF PASS.
+
+
+
+Reference

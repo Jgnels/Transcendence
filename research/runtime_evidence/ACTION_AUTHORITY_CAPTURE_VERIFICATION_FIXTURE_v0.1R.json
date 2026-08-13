@@ -1,0 +1,62 @@
+{
+  "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+  "authority": "NO_ORDERS",
+  "bound_window_count": 1,
+  "checks": {
+    "active_mod_list_not_modified_by_preparer": true,
+    "at_least_one_command_window": true,
+    "authority_remains_no_orders": true,
+    "direct_acknowledgements_zero": true,
+    "exact_expected_pack": true,
+    "project_issue_attempts_zero": true,
+    "required_capabilities_available": true,
+    "runtime_log_was_cleared_before_capture": true,
+    "save_not_modified_by_preparer": true,
+    "single_complete_session": true
+  },
+  "close_reason_counts": {
+    "CONTROL_LOST": 0,
+    "ROUTED": 0,
+    "SHATTERED": 0,
+    "SUBSEQUENT_COMMAND": 0,
+    "TERMINAL": 0,
+    "UNBOUND_SELECTION": 1,
+    "WINDOW_TIMEOUT": 1
+  },
+  "direct_acknowledgement_count": 0,
+  "execution_attribution": "OBSERVED_STATE_ONLY_NOT_CAUSALLY_ATTRIBUTED",
+  "expected_pack_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "fixture_control": true,
+  "limiting_results": [
+    "Game command callbacks do not identify player-versus-script origin.",
+    "State matches are not direct acknowledgement.",
+    "Reachability is a point-in-time query and not proof of route completion.",
+    "No project order was issued, accepted, acknowledged, executed, or credited with an outcome."
+  ],
+  "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+  "prepared_manifest_pack_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "project_issue_attempt_count": 0,
+  "reachability_counts": {
+    "NOT_APPLICABLE": 0,
+    "QUERY_FALSE": 0,
+    "QUERY_TRUE": 2,
+    "UNAVAILABLE": 0
+  },
+  "result_digest": "691d19f127e5e24a895651cd7d606a0d3be025d23a2b9fcba8bbbcdad2f1a4b2",
+  "sample_count": 2,
+  "schema_version": 1,
+  "session_count": 1,
+  "state_match_counts": {
+    "control_lost_observed": 0,
+    "current_target_match": 0,
+    "leaving_battle_observed": 0,
+    "movement_observed": 1,
+    "ordered_position_match": 2,
+    "routing_observed": 0,
+    "shattered_observed": 0
+  },
+  "status": "CONTROL_FIXTURE_READ_ONLY_ACTION_AUTHORITY",
+  "unbound_window_count": 1,
+  "verification_contract": "ACTION_AUTHORITY_CAPTURE_VERIFICATION_V1",
+  "window_count": 2
+}

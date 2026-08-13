@@ -1,0 +1,17 @@
+TRANS_PROBE|1|PACK_LOADED|probe_kind=shadow|script=transcendence_shadow_probe|read_only=true
+TRANS_PROBE|1|RUNTIME_BEGIN|probe_kind=shadow|runtime=campaign
+TRANS_PROBE|1|SNAPSHOT_END|reason=LOCAL_FACTION_TURN_START|turn=1|local_faction=wh_main_emp_empire
+TRANS_PROBE|1|SNAPSHOT_END|reason=LOCAL_FACTION_TURN_START|turn=2|local_faction=wh_main_emp_empire
+TRANS_BATTLE|1|PACK_LOADED|probe_kind=battle_replay_shadow|script=transcendence_battle_probe|read_only=true
+TRANS_BATTLE|1|RUNTIME_BEGIN|probe_kind=battle_replay_shadow|runtime=battle
+TRANS_BATTLE|1|BATTLE_COMPLETE|time_ms=1000|outcome_decided=true
+TRANS_PROBE|1|PACK_LOADED|probe_kind=shadow|script=transcendence_shadow_probe|read_only=true
+TRANS_PROBE|1|RUNTIME_BEGIN|probe_kind=shadow|runtime=campaign
+TRANS_PROBE|1|SNAPSHOT_END|reason=LOCAL_FACTION_TURN_START|turn=3|local_faction=wh_main_emp_empire
+TRANS_PROBE|1|SNAPSHOT_END|reason=LOCAL_FACTION_TURN_START|turn=4|local_faction=wh_main_emp_empire
+TRANS_BATTLE|1|PACK_LOADED|probe_kind=battle_replay_shadow|script=transcendence_battle_probe|read_only=true
+TRANS_BATTLE|1|RUNTIME_BEGIN|probe_kind=battle_replay_shadow|runtime=battle
+TRANS_BATTLE|1|BATTLE_COMPLETE|time_ms=1200|outcome_decided=true
+TRANS_PROBE|1|PACK_LOADED|probe_kind=shadow|script=transcendence_shadow_probe|read_only=true
+TRANS_PROBE|1|RUNTIME_BEGIN|probe_kind=shadow|runtime=campaign
+TRANS_PROBE|1|SNAPSHOT_END|reason=LOCAL_FACTION_TURN_START|turn=5|local_faction=wh_main_emp_empire

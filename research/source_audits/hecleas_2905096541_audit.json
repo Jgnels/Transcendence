@@ -1,0 +1,277 @@
+{
+  "classification_counts": {
+    "BATTLE_OR_AUTORESOLVE": 2,
+    "DIPLOMACY_ENVIRONMENT": 1,
+    "DIRECT_AI_DIPLOMACY": 7,
+    "DIRECT_NATIVE_CAI": 17,
+    "OTHER_GAME_DATA": 1
+  },
+  "evidence_status": "OBSERVED",
+  "limitations": [
+    "Table membership and file hashes are observed directly from the pack index.",
+    "Row semantics are not decoded without pinned WH3 schemas and remain unverified."
+  ],
+  "non_db_entries": [
+    {
+      "compression_flag": 0,
+      "path": "dependencies_manager_v2.rpfm_reserved",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size": 2
+    },
+    {
+      "compression_flag": 0,
+      "path": "notes.rpfm_reserved",
+      "sha256": "8374dce04d556d527e04355c6cf8addf816321deb21e7f9cab7397d190955d25",
+      "size": 42
+    },
+    {
+      "compression_flag": 0,
+      "path": "settings.rpfm_reserved",
+      "sha256": "c141d32af171fb1fee56691369ccca419b282fffe83bbbd1fcf34c39a55eba06",
+      "size": 287
+    }
+  ],
+  "pack_metadata": {
+    "dependency_count": 0,
+    "file_count": 31,
+    "flags": 0,
+    "format": "PFH5",
+    "index_size": 2039,
+    "pack_type": 3,
+    "timestamp_raw": 1783816626
+  },
+  "schema_version": 1,
+  "source_id": "hecleas_2905096541",
+  "source_kind": "PFH5_PACK",
+  "source_sha256": "5945102b4eac8ed73065bcc054d935f878d4ffd2b4af191ed4a15b0c31abedf8",
+  "source_size": 560184,
+  "table_count": 28,
+  "table_families": [
+    "autoresolver_ai_usage_group_combat_potential_modifiers_tables",
+    "autoresolver_modifier_group_to_modifiers_tables",
+    "cai_construction_system_templates_junctions_tables",
+    "cai_decision_policy_junctions_tables",
+    "cai_diplomacy_complex_treacheries_tables",
+    "cai_personalities_budget_allocations_tables",
+    "cai_personalities_income_allocations_tables",
+    "cai_personality_cultural_relations_overrides_tables",
+    "cai_personality_deal_evaluation_components_tables",
+    "cai_personality_deal_evaluation_deal_component_values_tables",
+    "cai_personality_deal_generation_generator_priorities_tables",
+    "cai_personality_diplomatic_event_values_tables",
+    "cai_personality_empire_rivalry_components_tables",
+    "cai_personality_strategic_components_tables",
+    "cai_personality_variable_set_junctions_tables",
+    "cai_personality_variables_tables",
+    "cai_query_variable_set_junctions_tables",
+    "cai_task_management_system_task_generator_groups_generators_junctions_tables",
+    "cai_task_management_system_task_generator_variable_group_junctions_tables",
+    "cai_task_management_system_task_generator_variables_tables",
+    "cai_task_management_system_variable_group_junctions_tables",
+    "cai_task_management_system_variables_tables",
+    "cai_variables_overides_tables",
+    "cai_variables_tables",
+    "campaign_ai_manager_behaviour_junctions_tables",
+    "campaign_cultural_relations_tables",
+    "campaign_variables_tables",
+    "cdir_military_generator_template_ratios_tables"
+  ],
+  "tables": [
+    {
+      "classification": "BATTLE_OR_AUTORESOLVE",
+      "internal_file": "data_hecleas",
+      "sha256": "80220abfbb236fd6787a0a1fe2b1fea38bf301eb2e6e247c6778f14cafc07e27",
+      "size": 2279,
+      "table": "autoresolver_ai_usage_group_combat_potential_modifiers_tables"
+    },
+    {
+      "classification": "BATTLE_OR_AUTORESOLVE",
+      "internal_file": "data__hecleas",
+      "sha256": "c99dc9c5b3aef4b8bed9cf04b9931a329a85e925d1dbb4d172482dcbb5c27153",
+      "size": 4370,
+      "table": "autoresolver_modifier_group_to_modifiers_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "1e29e15524872f21dab7723db02a73c03c40347af76839aa9fabcbd4ccc53484",
+      "size": 2404,
+      "table": "cai_construction_system_templates_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "b0eed47163ec77c066c149c93f57af907b4affa3a06ec0ebe8d7076a75ad0df7",
+      "size": 58217,
+      "table": "cai_decision_policy_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_AI_DIPLOMACY",
+      "internal_file": "data__hecleas",
+      "sha256": "4b4649e409dba15cf4d2025bf1d93b1e694112a87123e0cd6e7040b79f8525e1",
+      "size": 1117,
+      "table": "cai_diplomacy_complex_treacheries_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "9102c797cb1947bb25b6b38313cf94c85321b692ceeeae08e62048994904db79",
+      "size": 4544,
+      "table": "cai_personalities_budget_allocations_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "6335dad758a970c34a9b1c39bba933ddda7903cb7c4e4980b03b7027ac80fd74",
+      "size": 361,
+      "table": "cai_personalities_income_allocations_tables"
+    },
+    {
+      "classification": "DIRECT_AI_DIPLOMACY",
+      "internal_file": "data__hecleas",
+      "sha256": "6e1ebf0499cf5026fdb681454fc6f07865ced4aebe1552d207f5d43cb87727d3",
+      "size": 6702,
+      "table": "cai_personality_cultural_relations_overrides_tables"
+    },
+    {
+      "classification": "DIRECT_AI_DIPLOMACY",
+      "internal_file": "data__hecleas",
+      "sha256": "57925201c6ac2c9f304ae1157568187955ad31f3d107baaa7ddcca6fe2cf9c80",
+      "size": 13404,
+      "table": "cai_personality_deal_evaluation_components_tables"
+    },
+    {
+      "classification": "DIRECT_AI_DIPLOMACY",
+      "internal_file": "data__hecleas",
+      "sha256": "6a27c0a4030632eaae3f0f36846f2e47fb011bab2da65039ec25638d10f600d5",
+      "size": 151648,
+      "table": "cai_personality_deal_evaluation_deal_component_values_tables"
+    },
+    {
+      "classification": "DIRECT_AI_DIPLOMACY",
+      "internal_file": "data__hecleas",
+      "sha256": "b519e1e88708e30ae5db5fc07567da3f5a5bed4e19bfdf1ac34c6c58f39af790",
+      "size": 16250,
+      "table": "cai_personality_deal_generation_generator_priorities_tables"
+    },
+    {
+      "classification": "DIRECT_AI_DIPLOMACY",
+      "internal_file": "data__hecleas",
+      "sha256": "4f6ff00c4e417f2a782c6e192be3fd072392ec258e0b16156d10466371aca04f",
+      "size": 8761,
+      "table": "cai_personality_diplomatic_event_values_tables"
+    },
+    {
+      "classification": "DIRECT_AI_DIPLOMACY",
+      "internal_file": "data__hecleas",
+      "sha256": "02af39e92240a2f530881352e8ae3536a897db1da31eba888caa9bf7564122e8",
+      "size": 245,
+      "table": "cai_personality_empire_rivalry_components_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "45c717ac16b2318ff497ae6d7a835aaeeb94424bf6ffed03819d949932c47b66",
+      "size": 13901,
+      "table": "cai_personality_strategic_components_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "7bd4c01fbf964cee27946f2a0316e1bee6dda0121c7808e6a6c58cb0897eb40f",
+      "size": 7302,
+      "table": "cai_personality_variable_set_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "cd52b99213ed0729e90a79e6cbcda1209d86d7fbbb8a9035be34c57efb9d01e3",
+      "size": 7708,
+      "table": "cai_personality_variables_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "b67fc6bf2f2482fdfcc1f447a2d147aa3cf89dffb665e2ba2da402cb70c91ee7",
+      "size": 341,
+      "table": "cai_query_variable_set_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "a9577772cd4a84a0be2abdb367443f55bf0785ffa42a82b93de6041336ec2a5a",
+      "size": 57349,
+      "table": "cai_task_management_system_task_generator_groups_generators_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "8967617e5334864dbbb43112c947f68dde8e51fd241fbe22f628d19ea272d680",
+      "size": 1037,
+      "table": "cai_task_management_system_task_generator_variable_group_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "5ee133c7a6a1a82a8f5cc40675ace8567540a3d6210d7e582c630a29306b49ed",
+      "size": 646,
+      "table": "cai_task_management_system_task_generator_variables_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "d382902e9c253c053e9337430df617d0a91171f110de9490e6e8e16f4143845f",
+      "size": 493,
+      "table": "cai_task_management_system_variable_group_junctions_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "2813debefd161d2406b0aba9f8df20b5c251492079e994c9982969802851f746",
+      "size": 958,
+      "table": "cai_task_management_system_variables_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "83539150763009bce50b2735a23e42bd48543a14f89821b27260454e3e39781f",
+      "size": 2137,
+      "table": "cai_variables_overides_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "d9a5604a12b236427a780d34af6b0b6e12b435fb009f3795228d21f72d903258",
+      "size": 42803,
+      "table": "cai_variables_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "8cff49718186482f10132780988ebe6f165605e17258cfdfbda708df1422809c",
+      "size": 790,
+      "table": "campaign_ai_manager_behaviour_junctions_tables"
+    },
+    {
+      "classification": "DIPLOMACY_ENVIRONMENT",
+      "internal_file": "data__hecleas",
+      "sha256": "c47b05f8d1bf1992ebb0229b012145edd855b86404a776399fa7e7619b03815a",
+      "size": 44226,
+      "table": "campaign_cultural_relations_tables"
+    },
+    {
+      "classification": "OTHER_GAME_DATA",
+      "internal_file": "data__hecleas",
+      "sha256": "8f8d2ea54fc0dd943ad0bde8faaf7f2e56fea4a15fc919726790342c2b86a7f8",
+      "size": 179,
+      "table": "campaign_variables_tables"
+    },
+    {
+      "classification": "DIRECT_NATIVE_CAI",
+      "internal_file": "data__hecleas",
+      "sha256": "53d47cd4ed3c624d5456fd5144cc301d31440a47a37e3ebcc5328f960bef8483",
+      "size": 107614,
+      "table": "cdir_military_generator_template_ratios_tables"
+    }
+  ]
+}

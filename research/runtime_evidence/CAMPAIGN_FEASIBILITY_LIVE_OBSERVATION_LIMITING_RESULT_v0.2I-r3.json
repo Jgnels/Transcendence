@@ -1,0 +1,37 @@
+{
+  "application_authority": "PROHIBITED",
+  "bounded_conclusion": {
+    "architectural_response": "Stop relying on runtime-created inbound files. Generate a one-session read-only PFH5 probe with the exact already-derived request embedded before WH3 starts, then independently reconstruct the current plan from the new snapshot before accepting evidence.",
+    "exact_os_or_lua_cause": "UNVERIFIED",
+    "not_distinguished": [
+      "relative-path resolution mismatch",
+      "runtime file-read restriction or sandbox behavior",
+      "other engine-specific io.open read behavior"
+    ],
+    "runtime_file_inbound_handoff": "UNAVAILABLE_IN_OBSERVED_OWNER_ENVIRONMENT"
+  },
+  "contract": "CAMPAIGN_FEASIBILITY_LIVE_OBSERVATION_LIMITING_RESULT_V1_R3_RUNTIME_FILE_INBOUND_UNSEEN",
+  "evidence_status": "OWNER_RUNTIME_LIMITING_RESULT",
+  "nonpromotions": [
+    "ORDER_ISSUE",
+    "ACKNOWLEDGEMENT",
+    "EXECUTION",
+    "CAUSAL_OUTCOME"
+  ],
+  "orders_emitted": false,
+  "owner_private_paths_retained_in_repository": false,
+  "owner_runtime_observation": {
+    "collector_state": "WAITING_FOR_QUERY_RESULTS",
+    "interpretation": "The r2 parser and r1 real/UI polling path both progressed, but the owner WH3 runtime did not observe the sidecar request through the relative io.open read handoff, including a retry intended to start with the request already present.",
+    "poll_tick_observed": true,
+    "query_result_observed": false,
+    "request_rejected_observed": false,
+    "request_seen_observed": false
+  },
+  "policy_authority": "NO_ORDERS",
+  "raw_runtime_log_retained_in_repository": false,
+  "release": "v0.2I-r3",
+  "result_digest": "f075adbe97e1e40075ffedd6e35eded71022029414d367ea8effd4940b614d5a",
+  "save_values_written": false,
+  "schema_version": 1
+}

@@ -1,0 +1,466 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "contract": "CAMPAIGN_STRATEGIC_THEATER_PORTFOLIO_ADVERSARIAL_MATRIX_V1",
+  "metamorphic_checks": [
+    {
+      "check_id": "hidden_enemy_injection",
+      "passed": true
+    },
+    {
+      "check_id": "player_label_to_npc_label",
+      "passed": true
+    },
+    {
+      "check_id": "input_order",
+      "passed": true
+    },
+    {
+      "check_id": "coordinate_translation",
+      "passed": true
+    },
+    {
+      "check_id": "uniform_strength_scale",
+      "passed": true
+    },
+    {
+      "check_id": "empty_war_edge",
+      "passed": true
+    }
+  ],
+  "metamorphic_pass_count": 6,
+  "result_digest": "e1c1b8408e3b405bbedbcef01d1802e10206a71c38a9264337aa8cdb62959125",
+  "scenario_count": 12,
+  "scenario_pass_count": 12,
+  "scenarios": [
+    {
+      "case_id": "low_pressure_consolidates_instead_of_inventing_target",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "5e368189cf2a6cd7af688c71ea84a1229c98192f7c994a7ab093442e8019f1c7",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 2,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [],
+        "selected_priority_count": 2,
+        "selected_priority_types": [
+          "CONSOLIDATE_LOW_PRESSURE_POSITION",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "selected_severities": [
+          "LOW",
+          "MEDIUM"
+        ],
+        "strategic_posture": "CONSOLIDATE_AND_RESERVE"
+      }
+    },
+    {
+      "case_id": "coherent_visible_rival_creates_one_containment_priority",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "55ad235d7405eb98dcbfccb42a3898f61457329c71fbf9aba6fdea106d7852b5",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 2,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL"
+        ],
+        "selected_priority_count": 2,
+        "selected_priority_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "selected_severities": [
+          "HIGH",
+          "MEDIUM"
+        ],
+        "strategic_posture": "COHERENT_RIVAL_CONTAINMENT"
+      }
+    },
+    {
+      "case_id": "fragmented_pressure_is_aggregated_not_one_aggression_per_war",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "3658d9ff02c3b0fe9b16e6101fb1b5f950cab0e15fe4ccc8af674be4f031c63e",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 2,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [
+          "MANAGE_FRAGMENTED_VISIBLE_PRESSURE"
+        ],
+        "selected_priority_count": 2,
+        "selected_priority_types": [
+          "MANAGE_FRAGMENTED_VISIBLE_PRESSURE",
+          "PRESERVE_STRATEGIC_RESERVE"
+        ],
+        "selected_severities": [
+          "MEDIUM",
+          "MEDIUM"
+        ],
+        "strategic_posture": "FRAGMENTED_PRESSURE_MANAGEMENT"
+      }
+    },
+    {
+      "case_id": "exposed_front_vetoes_new_aggression",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "cab6f44e9262b93d62735270ab93173acc173df908a4c27ec19d3bebeea1f908",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": false,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 2,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 1,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [],
+        "selected_priority_count": 2,
+        "selected_priority_types": [
+          "STABILIZE_EXPOSED_FRONT",
+          "TRACK_SINGLE_VISIBLE_RIVAL"
+        ],
+        "selected_severities": [
+          "CRITICAL",
+          "MEDIUM"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      }
+    },
+    {
+      "case_id": "sieged_covered_front_preserves_relief_coverage",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "147a304414332e9e2331096e5f60f021865d939c816b28c0da7d8dc0dff31d19",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": false,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 3,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 1,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [],
+        "selected_priority_count": 3,
+        "selected_priority_types": [
+          "MAINTAIN_SIEGE_RELIEF_COVERAGE",
+          "PRESERVE_STRATEGIC_RESERVE",
+          "TRACK_SINGLE_VISIBLE_RIVAL"
+        ],
+        "selected_severities": [
+          "CRITICAL",
+          "MEDIUM",
+          "MEDIUM"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      }
+    },
+    {
+      "case_id": "recovery_capacity_is_protected_while_covered_front_holds",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "202300bb37eb398d687962fd05630b25e61a14347c037823663534531d04dfc4",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 4,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [
+          "TRACK_SINGLE_VISIBLE_RIVAL"
+        ],
+        "selected_priority_count": 4,
+        "selected_priority_types": [
+          "MAINTAIN_THREATENED_FRONT_COVERAGE",
+          "PRESERVE_STRATEGIC_RESERVE",
+          "PROTECT_RECOVERING_FIELD_FORCE",
+          "TRACK_SINGLE_VISIBLE_RIVAL"
+        ],
+        "selected_severities": [
+          "HIGH",
+          "HIGH",
+          "MEDIUM",
+          "MEDIUM"
+        ],
+        "strategic_posture": "RECOVERY_AND_DEFENSE"
+      }
+    },
+    {
+      "case_id": "all_recovering_force_vetoes_new_aggression",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "f49b6fd5c2aa5c39fdf1e89c2bbd79280df06948a7f78f5a85ee75d259526140",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": false,
+        "all_controlled_armies_recovering": true,
+        "candidate_priority_count": 2,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 1,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [],
+        "selected_priority_count": 2,
+        "selected_priority_types": [
+          "PRESERVE_STRATEGIC_RESERVE",
+          "PROTECT_RECOVERING_FIELD_FORCE"
+        ],
+        "selected_severities": [
+          "CRITICAL",
+          "MEDIUM"
+        ],
+        "strategic_posture": "RECOVERY_AND_CONSOLIDATION"
+      }
+    },
+    {
+      "case_id": "critical_front_overflow_preserves_all_sources",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "15b5a7f05fe63dad365055e67683071d7b59a209e92ac2088cbfb3683b905ef1",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": false,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 8,
+        "critical_overflow_source_count": 2,
+        "critical_source_count": 7,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [],
+        "selected_priority_count": 6,
+        "selected_priority_types": [
+          "CRITICAL_STRATEGIC_OVERFLOW",
+          "STABILIZE_EXPOSED_FRONT",
+          "STABILIZE_EXPOSED_FRONT",
+          "STABILIZE_EXPOSED_FRONT",
+          "STABILIZE_EXPOSED_FRONT",
+          "STABILIZE_EXPOSED_FRONT"
+        ],
+        "selected_severities": [
+          "CRITICAL",
+          "CRITICAL",
+          "CRITICAL",
+          "CRITICAL",
+          "CRITICAL",
+          "CRITICAL"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      }
+    },
+    {
+      "case_id": "visible_nonwar_assets_do_not_become_hostile_priorities",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "11185638d0f318a678cc82602c26f3cc4f66ae0fcd272650f42ac7293449c052",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 1,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [],
+        "selected_priority_count": 1,
+        "selected_priority_types": [
+          "CONSOLIDATE_LOW_PRESSURE_POSITION"
+        ],
+        "selected_severities": [
+          "LOW"
+        ],
+        "strategic_posture": "CONSOLIDATE_AND_RESERVE"
+      }
+    },
+    {
+      "case_id": "single_partial_rival_is_tracked_without_coherent_claim",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "6e393d498e9476454f2b8976dfc31269bd1ea9eb4ac305014ea2eed221d4df08",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 2,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [
+          "TRACK_SINGLE_VISIBLE_RIVAL"
+        ],
+        "selected_priority_count": 2,
+        "selected_priority_types": [
+          "PRESERVE_STRATEGIC_RESERVE",
+          "TRACK_SINGLE_VISIBLE_RIVAL"
+        ],
+        "selected_severities": [
+          "MEDIUM",
+          "MEDIUM"
+        ],
+        "strategic_posture": "VISIBLE_RIVAL_WATCH"
+      }
+    },
+    {
+      "case_id": "coherent_rival_awareness_does_not_override_front_crisis_veto",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "72bd6d9898263dfe954ec75e2fa04112a7b61df4b92d9dceba812be6226327a5",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": false,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 3,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 1,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [],
+        "selected_priority_count": 3,
+        "selected_priority_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "PRESERVE_STRATEGIC_RESERVE",
+          "STABILIZE_EXPOSED_FRONT"
+        ],
+        "selected_severities": [
+          "CRITICAL",
+          "HIGH",
+          "MEDIUM"
+        ],
+        "strategic_posture": "CRISIS_STABILIZATION"
+      }
+    },
+    {
+      "case_id": "noncritical_portfolio_is_bounded_at_six_records",
+      "checks": {
+        "aggression": true,
+        "authority": true,
+        "bounded": true,
+        "critical_coverage": true,
+        "forbidden_selected_types": true,
+        "posture": true,
+        "required_selected_types": true
+      },
+      "passed": true,
+      "result_digest": "ba20df479a1fdd8c2597a616bdc74ed35ebec5dd55e059268ce63811ededc6d5",
+      "semantic_metrics": {
+        "aggressive_commitment_allowed": true,
+        "all_controlled_armies_recovering": false,
+        "candidate_priority_count": 10,
+        "critical_overflow_source_count": 0,
+        "critical_source_count": 0,
+        "critical_source_coverage": 1.0,
+        "selected_aggressive_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL"
+        ],
+        "selected_priority_count": 6,
+        "selected_priority_types": [
+          "CONTAIN_COHERENT_VISIBLE_RIVAL",
+          "MAINTAIN_THREATENED_FRONT_COVERAGE",
+          "MAINTAIN_THREATENED_FRONT_COVERAGE",
+          "MAINTAIN_THREATENED_FRONT_COVERAGE",
+          "MAINTAIN_THREATENED_FRONT_COVERAGE",
+          "MAINTAIN_THREATENED_FRONT_COVERAGE"
+        ],
+        "selected_severities": [
+          "HIGH",
+          "HIGH",
+          "HIGH",
+          "HIGH",
+          "HIGH",
+          "HIGH"
+        ],
+        "strategic_posture": "COHERENT_RIVAL_CONTAINMENT"
+      }
+    }
+  ],
+  "schema_version": 1
+}

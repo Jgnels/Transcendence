@@ -1,0 +1,54 @@
+{
+  "capability_result": {
+    "campaign_observer_behavior": "SUPPORTED",
+    "exact_same_pack_replication": "UNVERIFIED",
+    "loader_entrypoint_fix": "OBSERVED",
+    "save_reload_saved_value_roundtrip": "UNVERIFIED"
+  },
+  "checks": {
+    "exact_pack_verified": false,
+    "independent_raw_artifacts": true,
+    "loader_entrypoint_clean": false,
+    "no_capability_failures": true,
+    "observer_sessions_valid": true,
+    "same_environment": true,
+    "same_semantic_observation": true
+  },
+  "evidence_status": "SUPPORTED",
+  "next_required_evidence": {
+    "pack_sha256": "0c1dd8940a697a2d840876f08092ba02f988170e90c5f77b6f934ac15c79f173",
+    "requirement": "One additional clean pure-vanilla Karl Franz run using the unchanged v0.1D observer pack. The v0.1E collector records the installed pack hash directly."
+  },
+  "observer_acceptance_status": "SUPPORTED_CROSS_REVISION",
+  "reason": "Two clean pure-vanilla Karl Franz sessions produced semantically identical structured observer records, but run 1 used v0.1C pack hash 33f3... and run 2 used v0.1D pack hash 0c1d....",
+  "replication_report_digest": "1470cd524f3c24a44d7232b96d25646c26eda5bbb675a1af7490edeee428f0c5",
+  "runs": [
+    {
+      "campaign": "wh3_main_combi",
+      "evidence_manifest_sha256": "96e388d0013ca182113e89598d99efdaae3b79fe789e8da1e0b70ff0ab73b165",
+      "loader_entrypoint": "MISSING",
+      "local_faction": "wh_main_emp_empire",
+      "pack_sha256": "33f3f9cf43441470348e28e4ea03e5091ac47dd8ae99e17ba2ab2662d9db7abd",
+      "raw_log_sha256": "ddf462130e6551c034ddd5e79dfc916fba0a133cfa0cf6ef715e6df7afd1f9f7",
+      "run": 1,
+      "semantic_digest": "947d9aa1815485a7ba844d79b20e680ea8e36ed5eeb108a8fc5692e7e2bfb6f7",
+      "turn": 1,
+      "uploaded_summary_sha256": "5177ee7ba8db6214e3cd605d035e73912e2708679e72f2b3b9ee60a197d51a6b"
+    },
+    {
+      "campaign": "wh3_main_combi",
+      "evidence_manifest_sha256": "46f04d7789173395256fee3fe02f059a825f837786553db4fcfa0272fc9e6d07",
+      "loader_entrypoint": "SUCCESS",
+      "local_faction": "wh_main_emp_empire",
+      "pack_sha256": "0c1dd8940a697a2d840876f08092ba02f988170e90c5f77b6f934ac15c79f173",
+      "raw_log_sha256": "c12afd4fce48708990e251ba271cb877b07f3163749960d68cadb9eed51f925c",
+      "run": 2,
+      "semantic_digest": "947d9aa1815485a7ba844d79b20e680ea8e36ed5eeb108a8fc5692e7e2bfb6f7",
+      "turn": 1,
+      "uploaded_summary_sha256": "f605b42a2207b6f4f73a6c4a03c608322fac96f8d965ac4381517b837d502e46"
+    }
+  ],
+  "schema_version": 1,
+  "shared_semantic_digest": "947d9aa1815485a7ba844d79b20e680ea8e36ed5eeb108a8fc5692e7e2bfb6f7",
+  "strict_same_pack_replication": false
+}

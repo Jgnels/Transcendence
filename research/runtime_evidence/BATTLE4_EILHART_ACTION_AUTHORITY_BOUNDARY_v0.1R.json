@@ -1,0 +1,40 @@
+{
+  "authority": "NO_ORDERS",
+  "candidate_inferred_attribution_count": 302,
+  "command_event_count": 397,
+  "direct_acknowledgement_count": 0,
+  "direct_selection_attributed_command_count": 0,
+  "evidence_status": "CONTROL_OFFLINE_DERIVED_FROM_OBSERVED_INPUT",
+  "execution_claim_count": 0,
+  "inferred_attribution_status": "INFERRED_NOT_ACKNOWLEDGED",
+  "inferred_confidence_counts": {
+    "HIGH": 121,
+    "LOW": 20,
+    "MEDIUM": 161
+  },
+  "limiting_results": [
+    "Replay command callbacks observed game command events but did not identify player-versus-script origin.",
+    "Zero commands had direct selection-callback attribution in the replay.",
+    "Candidate state-matching attribution remains INFERRED_NOT_ACKNOWLEDGED.",
+    "The existing replay corpus contains no can_reach_position query at command time.",
+    "No unitcontroller was created and no project issue attempt occurred."
+  ],
+  "outcome_attribution_count": 0,
+  "project_issue_attempt_count": 0,
+  "reachability_query_count": 0,
+  "report_contract": "TACTICAL_ACTION_AUTHORITY_BOUNDARY_REPORT_V1",
+  "required_future_live_evidence": [
+    "ordinary live battle rather than replay-only selection behavior",
+    "command-bound local actor identity",
+    "point-in-time reachability query for positional commands",
+    "ordered-position or current-target state after the command",
+    "control-state loss, routing, shattering, halt, or subsequent-command interruption",
+    "explicit preservation of direct acknowledgement as unavailable unless a real callback is found"
+  ],
+  "result_digest": "96f72f77206b783d1e2c1e9ad60af4ffc233ff567bff4283ac2a40ee238f1672",
+  "schema_version": 1,
+  "source_dense_corpus_digest": "442e187638c4d2b3457910efdbb50d13f16fd27a8391e7ac9bd2d6aaed47c33d",
+  "source_id": "battle4_eilhart_observed_dense_v2",
+  "source_temporal_schedule_digest": "eeea9726dc33557110def72771dba8adc26b43934a46345edb7e631202f8af0e",
+  "temporal_schedule_active_plan_max": 10
+}

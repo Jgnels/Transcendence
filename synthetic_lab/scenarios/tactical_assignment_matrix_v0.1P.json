@@ -1,0 +1,299 @@
+{
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Straight-line geometry does not establish terrain-aware pathfinding or formation feasibility.",
+    "Assignments are advisory proposals and do not issue, accept, acknowledge, or execute WH3 orders.",
+    "Synthetic contract passes do not prove better battle outcomes, casualty reduction, or player enjoyment.",
+    "One unit-action slot per slice is an offline exclusivity model, not a live command scheduler.",
+    "Unfilled objectives are evidence of current model limits or observed infeasibility, not planner success."
+  ],
+  "metamorphic_checks": [
+    {
+      "check_id": "unit_order_independence",
+      "operation": "REVERSE_UNIT_ORDER",
+      "scenario_id": "critical_overflow_resolves_single_actor_conflict"
+    },
+    {
+      "check_id": "portfolio_order_independence",
+      "operation": "REVERSE_PORTFOLIO_PRIORITY_ORDER",
+      "scenario_id": "critical_overflow_resolves_single_actor_conflict"
+    },
+    {
+      "check_id": "coordinate_translation_invariance",
+      "offset_x": 500.0,
+      "offset_z": -350.0,
+      "operation": "TRANSLATE_ALL_POSITIONS",
+      "scenario_id": "reserve_relief_assignment"
+    }
+  ],
+  "result_digest": "8a29d77eefdc9c56c64ddf38627e4821e82d268e1f3e5abf5b6207af0d8dd024",
+  "scenarios": [
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "EXTRACT_COMMANDER",
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "require_no_assignments": true,
+        "required_assignment_count": 0,
+        "required_assignments": {},
+        "required_objective_count": 0,
+        "required_objective_types": [],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "balanced_contact_no_assignment",
+      "source_baseline_scenario_id": "balanced_contact_no_spurious_action"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "minimum_assignable_objective_coverage": 1.0,
+        "required_assignment_count": 2,
+        "required_assignments": {
+          "CONTAIN_LOCAL_ROUT:BATTLE": "1:u1004",
+          "SELF:1:u1001": "1:u1001"
+        },
+        "required_objective_count": 2,
+        "required_objective_types": [
+          "EXTRACT_COMMANDER",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "commander_self_extraction_and_support",
+      "source_baseline_scenario_id": "commander_extraction_under_pressure"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "required_assignment_count": 1,
+        "required_assignments": {
+          "SELF:1:u1015": "1:u1015"
+        },
+        "required_objective_count": 1,
+        "required_objective_types": [
+          "EVACUATE_ARTILLERY"
+        ],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "artillery_self_evacuation",
+      "source_baseline_scenario_id": "artillery_breach"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "required_assignment_count": 1,
+        "required_assignments": {
+          "SELF:1:u1009": "1:u1009"
+        },
+        "required_objective_count": 1,
+        "required_objective_types": [
+          "REPOSITION_RANGED"
+        ],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "ranged_self_reposition",
+      "source_baseline_scenario_id": "ranged_rear_flank"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "required_assignment_count": 1,
+        "required_assignments": {
+          "SELF:1:u1014": "1:u1014"
+        },
+        "required_objective_count": 1,
+        "required_objective_types": [
+          "DISENGAGE_CAVALRY"
+        ],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "cavalry_self_disengagement",
+      "source_baseline_scenario_id": "cavalry_overextension"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "minimum_critical_assignable_objective_coverage": 1.0,
+        "required_assignment_count": 1,
+        "required_assignments": {
+          "RELIEVE:1:u1003": "1:u1008"
+        },
+        "required_objective_count": 1,
+        "required_objective_types": [
+          "RELIEVE_FRONTLINE"
+        ],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "reserve_relief_assignment",
+      "source_baseline_scenario_id": "frontline_crisis_with_reserve"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "required_assignment_count": 1,
+        "required_assignments": {
+          "SELECTIVE_PURSUIT:BATTLE": "1:u1014"
+        },
+        "required_objective_count": 1,
+        "required_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "selective_pursuit_assignment",
+      "source_baseline_scenario_id": "clean_enemy_break"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "minimum_assignable_objective_coverage": 1.0,
+        "required_assignment_count": 2,
+        "required_assignments": {
+          "SELF:1:u1001": "1:u1001",
+          "SELF:1:u1014": "1:u1014"
+        },
+        "required_objective_count": 4,
+        "required_objective_types": [
+          "EXTRACT_COMMANDER",
+          "REPOSITION_RANGED",
+          "DISENGAGE_CAVALRY",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_unfilled_reasons": {
+          "CONTAIN_LOCAL_ROUT:BATTLE": "NO_LEGAL_CANDIDATE",
+          "SELF:1:u1010": "SUBJECT_NOT_CONTROLLABLE"
+        }
+      },
+      "scenario_id": "uncontrollable_subjects_remain_unfilled",
+      "source_baseline_scenario_id": "rout_cascade_preservation"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "require_no_assignments": true,
+        "required_assignment_count": 0,
+        "required_assignments": {},
+        "required_objective_count": 4,
+        "required_objective_types": [
+          "RELIEVE_FRONTLINE",
+          "TERMINATE_PURSUIT"
+        ],
+        "required_unfilled_reasons": {
+          "RELIEVE:1:u1003": "NO_LEGAL_CANDIDATE",
+          "RELIEVE:1:u1004": "NO_LEGAL_CANDIDATE",
+          "SELF:1:u1003": "SUBJECT_NOT_CONTROLLABLE",
+          "SELF:1:u1004": "SUBJECT_NOT_CONTROLLABLE"
+        }
+      },
+      "scenario_id": "simultaneous_collapse_discloses_infeasibility",
+      "source_baseline_scenario_id": "simultaneous_local_and_enemy_collapse"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "minimum_assignable_objective_coverage": 0.333333,
+        "minimum_critical_assignable_objective_coverage": 0.333333,
+        "required_assignment_count": 1,
+        "required_assignments": {
+          "CONTAIN_LOCAL_ROUT:BATTLE": "1:u1008"
+        },
+        "required_objective_count": 9,
+        "required_objective_types": [
+          "EXTRACT_COMMANDER",
+          "EVACUATE_ARTILLERY",
+          "REPOSITION_RANGED",
+          "DISENGAGE_CAVALRY",
+          "RELIEVE_FRONTLINE",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_unfilled_reasons": {
+          "RELIEVE:1:u1003": "RESOURCE_CONFLICT_WITH_HIGHER_VALUE_OBJECTIVE",
+          "RELIEVE:1:u1004": "RESOURCE_CONFLICT_WITH_HIGHER_VALUE_OBJECTIVE",
+          "SELF:1:u1001": "SUBJECT_NOT_CONTROLLABLE",
+          "SELF:1:u1002": "SUBJECT_NOT_CONTROLLABLE",
+          "SELF:1:u1009": "SUBJECT_NOT_CONTROLLABLE",
+          "SELF:1:u1010": "SUBJECT_NOT_CONTROLLABLE",
+          "SELF:1:u1014": "SUBJECT_NOT_CONTROLLABLE",
+          "SELF:1:u1015": "SUBJECT_NOT_CONTROLLABLE"
+        }
+      },
+      "scenario_id": "critical_overflow_resolves_single_actor_conflict",
+      "source_baseline_scenario_id": "critical_group_overflow_disclosed"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "required_assignment_count": 2,
+        "required_assignments": {
+          "SELF:1:u1001": "1:u1001",
+          "SELF:1:u1010": "1:u1010"
+        },
+        "required_objective_count": 2,
+        "required_objective_types": [
+          "EXTRACT_COMMANDER",
+          "REPOSITION_RANGED"
+        ],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "hidden_enemy_uncertainty_blocks_pursuit",
+      "source_baseline_scenario_id": "hidden_enemy_blocks_terminal_certainty"
+    },
+    {
+      "expectations": {
+        "forbidden_objective_types": [
+          "EXTRACT_COMMANDER",
+          "RELIEVE_FRONTLINE",
+          "TERMINATE_PURSUIT",
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_double_booked_actor_count": 0,
+        "require_no_assignments": true,
+        "required_assignment_count": 0,
+        "required_assignments": {},
+        "required_objective_count": 0,
+        "required_objective_types": [],
+        "required_unfilled_reasons": {}
+      },
+      "scenario_id": "terminal_state_has_no_assignment",
+      "source_baseline_scenario_id": "terminal_no_action"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_baseline_suite_digest": "0055bd7cea848202ead9f8b87082f5ce1cb69d77d0e633a3ffc70346648224cd",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_contract": "TACTICAL_ASSIGNMENT_MATRIX_V1",
+  "suite_id": "v0.1P_tactical_objective_assignment_matrix"
+}

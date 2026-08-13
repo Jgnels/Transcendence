@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "scenario_id": "tier2_late_game_pressure_v1",
+  "turn": 110,
+  "controlled_faction": "rival_bloc",
+  "wars": [["rival_bloc", "player_empire"]],
+  "armies": [
+    {"id": "rival_1", "faction": "rival_bloc", "strength": 120.0, "x": 0.0, "y": 0.0, "movement": 5.0, "replenishment": 0.92, "visible_to": ["rival_bloc"]},
+    {"id": "rival_2", "faction": "rival_bloc", "strength": 82.0, "x": 3.0, "y": 2.0, "movement": 5.0, "replenishment": 0.72, "visible_to": ["rival_bloc"]},
+    {"id": "rival_3", "faction": "rival_bloc", "strength": 63.0, "x": -1.0, "y": 4.0, "movement": 5.0, "replenishment": 0.48, "visible_to": ["rival_bloc"]},
+    {"id": "player_1", "faction": "player_empire", "strength": 145.0, "x": 12.0, "y": 1.0, "movement": 6.0, "replenishment": 0.9, "visible_to": ["rival_bloc"]},
+    {"id": "player_hidden", "faction": "player_empire", "strength": 95.0, "x": 7.0, "y": 8.0, "movement": 6.0, "replenishment": 0.85, "visible_to": []}
+  ],
+  "regions": [
+    {"id": "rival_capital", "owner": "rival_bloc", "x": 0.0, "y": 0.0, "value": 1.5, "threat": 0.32, "under_siege": false, "garrison_strength": 70.0},
+    {"id": "rival_front", "owner": "rival_bloc", "x": 5.0, "y": 1.0, "value": 1.0, "threat": 0.86, "under_siege": true, "garrison_strength": 42.0},
+    {"id": "player_front", "owner": "player_empire", "x": 10.0, "y": 1.0, "value": 1.1, "threat": 0.45, "under_siege": false, "garrison_strength": 76.0},
+    {"id": "player_capital", "owner": "player_empire", "x": 16.0, "y": 0.0, "value": 1.6, "threat": 0.15, "under_siege": false, "garrison_strength": 115.0}
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "base_frozen_thresholds_digest": "4499a497bfc7dd6a33a6c0a50da4e1e52b1705d1f2f20f1a917cdfebeb5486ac",
+  "base_result_digest": "ebe747ca69a8b7da86586a7ea6759d65e2f81f5128cf45917fd9c41c495a8542",
+  "causal_review": {
+    "architecture_conclusion": "NO_NATIVE_ROW_ABLATION_EARNED_FROM_V0_2N_TEMPORAL_SIGNAL_ALONE",
+    "ordinary_territorial_repeated_trigger_count": 0,
+    "primary_repeated_trigger": {
+      "classification": "NON_TERRITORIAL_SPECIAL_PATROL_CAUSAL_EXPLANATION_PLAUSIBLE",
+      "faction": "wh2_dlc11_cst_rogue_grey_point_scuttlers",
+      "force_cqi": "922",
+      "owned_regions": [],
+      "selected_non_overlapping_turn_intervals": [
+        [
+          2,
+          4
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "wars": []
+    }
+  },
+  "contract": "NATIVE_CAI_VANILLA_BEHAVIOR_REFERENCE_V1",
+  "date": "2026-08-03",
+  "recovery": {
+    "recovering_army_turn_count": 38,
+    "recovering_attacker_side_army_turn_count": 6,
+    "recovering_attacker_side_rate": 0.157895,
+    "status": "NO_PREREGISTERED_RECOVERY_SIGNAL_IN_COHORT"
+  },
+  "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+  "source_bundle": {
+    "filename": "Transcendence_NativeBehaviorStudy_VANILLA_20260803T072222Z.zip",
+    "game_exe_sha256": "b7315fa718fd84e2e018e2c4df06600e9df0076156b474f148d9d558c939aa55",
+    "probe_sha256": "7c1c0e21d178973ba35d66217f39b717fa3a0d9dea41b9bfb3192cabfe2961b4",
+    "sha256": "9416e0b73765570e6ffda1c1855a0430133b447e14cd63d307c966312987429d",
+    "zip_integrity": "PASS"
+  },
+  "temporal": {
+    "eligible_windows": 106,
+    "exact_region_ababa_signal_count": 0,
+    "repeated_reversal_force_count": 1,
+    "reversal_candidates": 18,
+    "status": "REPEATED_BATTLE_FREE_REVERSAL_SIGNAL_OBSERVED"
+  },
+  "temporal_stratification": {
+    "classification_note": "Retrospective stratification chosen during causal review after the sealed v0.2N vanilla result. Preserve as a hash-frozen reference; do not call it a fresh confirmatory subgroup.",
+    "nonterritorial": {
+      "eligible_windows": 58,
+      "exposure_sufficient_for_primary_interpretation": true,
+      "repeated_reversal_force_count": 1,
+      "repeated_reversal_forces": [
+        {
+          "candidate_count": 2,
+          "faction": "wh2_dlc11_cst_rogue_grey_point_scuttlers",
+          "force_cqi": "922",
+          "non_overlapping_candidate_count": 2,
+          "selected_non_overlapping_turn_intervals": [
+            [
+              2,
+              4
+            ],
+            [
+              8,
+              10
+            ]
+          ]
+        }
+      ],
+      "reversal_candidate_rate": 0.086207,
+      "reversal_candidates": 5
+    },
+    "territorial": {
+      "eligible_windows": 48,
+      "exposure_sufficient_for_primary_interpretation": true,
+      "repeated_reversal_force_count": 0,
+      "repeated_reversal_forces": [],
+      "reversal_candidate_rate": 0.270833,
+      "reversal_candidates": 13
+    }
+  }
+}

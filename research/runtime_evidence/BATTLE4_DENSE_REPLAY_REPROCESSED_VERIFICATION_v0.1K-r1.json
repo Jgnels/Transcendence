@@ -1,0 +1,54 @@
+{
+  "authority": {
+    "battle_speed_modified": false,
+    "orders_emitted": false,
+    "save_values_written": false,
+    "unitcontrollers_created": false,
+    "visibility_modified": false
+  },
+  "checks": {
+    "completed_replay_observed": true,
+    "dense_interval_coverage": false,
+    "exact_pack_verified": true,
+    "exact_replay_verified": true,
+    "local_units_observed": true,
+    "log_volume_bounded": true,
+    "maximum_detail_gap_bounded": false,
+    "read_only_authority_preserved": true,
+    "required_capability_failures_absent": true,
+    "sampler_heartbeat_observed": false,
+    "schema2_session_observed": true,
+    "stable_identity_without_aliases": true,
+    "terminal_coverage_reported": true,
+    "visible_enemy_units_observed": true
+  },
+  "evidence_label": "UNVERIFIED",
+  "metrics": {
+    "aggregate_sample_count": 0,
+    "canonical_unit_count": 34,
+    "captured_log_size_bytes": 282078,
+    "command_event_count": 397,
+    "coverage_ratio": 0.020243,
+    "detail_samples": 5,
+    "expected_detail_samples": 247,
+    "identity_alias_count": 0,
+    "inferred_command_count": 0,
+    "maximum_sample_gap_ms": 601900,
+    "sampler_heartbeat_count": 0,
+    "selection_attribution_ratio": 0.0
+  },
+  "result_digest": "fc94c58a79d1cb4a78e809b4783f81246f764b0f56cef0f8c1d77800e6a42908",
+  "schema_version": 1,
+  "selection_callback_observed": false,
+  "status": "PARTIAL",
+  "target": {
+    "battle_identity": "Battle of Eilhart \u2014 Reikland vs Empire Secessionists",
+    "expected_pack_sha256": "185baaa832beb458797e47766a3ad121530cdcf811097e8eb90d787df50c8443",
+    "replay_sha256": "76b8807f5cc2d223d454028f54fc18b791a254c3ce543aa587ad4286658e302b"
+  },
+  "warnings": [
+    "Dense replay telemetry calibrates observation and SyntheticLab; it does not prove order acceptance or tactical-AI quality.",
+    "Visible-enemy time series remains intentionally incomplete while units are hidden.",
+    "Inferred command attribution is never an acknowledgement and must remain separately labeled."
+  ]
+}

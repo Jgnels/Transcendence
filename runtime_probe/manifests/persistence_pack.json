@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "pack_name": "transcendence_persistence_probe.pack",
+  "pack_type": 3,
+  "deterministic_timestamp": 0,
+  "probe_kind": "persistence",
+  "save_mutation": true,
+  "gameplay_mutation": false,
+  "entries": [
+    {
+      "source": "runtime_probe/source/script/campaign/mod/transcendence_persistence_probe.lua",
+      "internal_path": "script/campaign/mod/transcendence_persistence_probe.lua"
+    }
+  ]
+}

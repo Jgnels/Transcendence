@@ -1,0 +1,373 @@
+{
+  "aggregate_metrics": {
+    "candidate_rate_per_eligible_window": 1.0,
+    "eligible_stable_context_region_windows": 9,
+    "oscillation_candidate_count": 9,
+    "repeated_oscillation_cluster_count": 1
+  },
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "contract": "NATIVE_CAI_VISIBLE_DIRECTIONAL_CHURN_RUNTIME_BATCH_V1",
+  "factions": [
+    {
+      "analysis": {
+        "actor_results": [
+          {
+            "actor_id": "visible-force:90",
+            "candidate_count": 9,
+            "counters": {
+              "aba_without_heading_reversal": 0,
+              "actor_four_frame_windows": 9,
+              "eligible_non_aba_pattern": 0,
+              "eligible_stable_context_region_windows": 9,
+              "excluded_non_directional_interval": 0,
+              "excluded_non_region_anchor": 0,
+              "excluded_nonconsecutive_turns": 0,
+              "excluded_observed_context_change": 0,
+              "excluded_visibility_censoring": 0
+            }
+          }
+        ],
+        "application_authority": "PROHIBITED",
+        "authority": "NO_ORDERS",
+        "availability": {
+          "hidden_context_stability": "UNAVAILABLE",
+          "native_assignment_memory": "UNAVAILABLE",
+          "native_hysteresis": "UNAVAILABLE_ENGINE_INTERNAL",
+          "native_task_identity": "UNAVAILABLE",
+          "visible_directional_churn_proxy": "OBSERVE_PREREGISTERED"
+        },
+        "contract": "NATIVE_CAI_VISIBLE_DIRECTIONAL_CHURN_ANALYSIS_V1",
+        "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+        "interpretation_limits": [
+          "The primary endpoint is deliberately stricter than a simple direction-change count: it requires region-anchor A->B->A oscillation, two >=120-degree heading reversals, continuous player visibility, consecutive turns, and exact stability of all observed non-target anchors.",
+          "Exact observed-context stability does not imply hidden-context stability; unseen armies, native tasks, diplomacy, recruitment, and engine-internal state may change.",
+          "One qualifying A->B->A window is a candidate only. The preregistered primary signal requires at least two non-overlapping episodes for the same actor and anchor pair.",
+          "A detected cluster is evidence of repeated player-visible directional oscillation under stable observed context, not direct evidence of native task reassignment or missing engine-internal hysteresis.",
+          "No detected cluster is not proof that native CAI has adequate assignment memory or hysteresis, especially when eligible exposure is low.",
+          "No result authorizes campaign orders, DB mutation, save mutation, or a project-owned strategic planner."
+        ],
+        "metrics": {
+          "aba_without_heading_reversal": 0,
+          "actor_four_frame_windows": 9,
+          "candidate_rate_per_eligible_window": 1.0,
+          "eligible_non_aba_pattern": 0,
+          "eligible_stable_context_region_windows": 9,
+          "excluded_non_directional_interval": 0,
+          "excluded_non_region_anchor": 0,
+          "excluded_nonconsecutive_turns": 0,
+          "excluded_observed_context_change": 0,
+          "excluded_visibility_censoring": 0,
+          "oscillation_candidate_count": 9,
+          "repeated_oscillation_cluster_count": 1
+        },
+        "observation_scope": "PLAYER_VISIBLE_PARTIAL_FOREIGN_AI",
+        "observed_ai_faction": "wh_main_emp_empire_separatists",
+        "observer_faction": "wh_main_emp_empire",
+        "oscillation_candidates": [
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 1,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 4
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 2,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 5
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 3,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 6
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 4,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 7
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 5,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 8
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 6,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 9
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 7,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 10
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 8,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 11
+          },
+          {
+            "actor_continuously_player_visible": true,
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "anchor_sequence": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right",
+              "VISIBLE_REGION:region_left"
+            ],
+            "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+            "from_turn": 9,
+            "heading_cosines": [
+              -1.0,
+              -1.0
+            ],
+            "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+            "observed_context_exactly_stable": true,
+            "to_turn": 12
+          }
+        ],
+        "preregistration_contract": "NATIVE_CAI_VISIBLE_DIRECTIONAL_CHURN_PREREGISTRATION_V1",
+        "primary_endpoint": "REPEATED_STABLE_CONTEXT_REGION_OSCILLATION_CLUSTER",
+        "primary_endpoint_parameters": {
+          "heading_reversal_cosine_max": -0.5,
+          "minimum_heading_change_degrees": 120.0,
+          "observed_context_rule": "EXACT_NON_TARGET_VISIBLE_ANCHOR_SET_AND_POSITIONS_STABLE_ACROSS_WINDOW",
+          "required_anchor_kind": "VISIBLE_REGION_ONLY",
+          "required_anchor_pattern": "A->B->A",
+          "required_nonoverlapping_episodes_per_cluster": 2,
+          "window_frame_count": 4,
+          "window_interval_count": 3
+        },
+        "repeated_oscillation_clusters": [
+          {
+            "actor_id": "visible-force:90",
+            "anchor_pair": [
+              "VISIBLE_REGION:region_left",
+              "VISIBLE_REGION:region_right"
+            ],
+            "causal_status": "REQUIRES_REVIEW_HIDDEN_CONTEXT_REMAINS_UNOBSERVED",
+            "classification": "REPEATED_STABLE_CONTEXT_REGION_OSCILLATION_CLUSTER",
+            "episodes": [
+              {
+                "actor_continuously_player_visible": true,
+                "actor_id": "visible-force:90",
+                "anchor_pair": [
+                  "VISIBLE_REGION:region_left",
+                  "VISIBLE_REGION:region_right"
+                ],
+                "anchor_sequence": [
+                  "VISIBLE_REGION:region_left",
+                  "VISIBLE_REGION:region_right",
+                  "VISIBLE_REGION:region_left"
+                ],
+                "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+                "from_turn": 1,
+                "heading_cosines": [
+                  -1.0,
+                  -1.0
+                ],
+                "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+                "observed_context_exactly_stable": true,
+                "to_turn": 4
+              },
+              {
+                "actor_continuously_player_visible": true,
+                "actor_id": "visible-force:90",
+                "anchor_pair": [
+                  "VISIBLE_REGION:region_left",
+                  "VISIBLE_REGION:region_right"
+                ],
+                "anchor_sequence": [
+                  "VISIBLE_REGION:region_right",
+                  "VISIBLE_REGION:region_left",
+                  "VISIBLE_REGION:region_right"
+                ],
+                "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+                "from_turn": 4,
+                "heading_cosines": [
+                  -1.0,
+                  -1.0
+                ],
+                "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+                "observed_context_exactly_stable": true,
+                "to_turn": 7
+              },
+              {
+                "actor_continuously_player_visible": true,
+                "actor_id": "visible-force:90",
+                "anchor_pair": [
+                  "VISIBLE_REGION:region_left",
+                  "VISIBLE_REGION:region_right"
+                ],
+                "anchor_sequence": [
+                  "VISIBLE_REGION:region_left",
+                  "VISIBLE_REGION:region_right",
+                  "VISIBLE_REGION:region_left"
+                ],
+                "classification": "STABLE_OBSERVED_CONTEXT_REGION_ABA_OSCILLATION_CANDIDATE",
+                "from_turn": 7,
+                "heading_cosines": [
+                  -1.0,
+                  -1.0
+                ],
+                "interpretation": "PLAYER_VISIBLE_DIRECTIONAL_PROXY_NOT_NATIVE_TASK_IDENTITY",
+                "observed_context_exactly_stable": true,
+                "to_turn": 10
+              }
+            ],
+            "from_turn": 1,
+            "nonoverlapping_episode_count": 3,
+            "to_turn": 10
+          }
+        ],
+        "result_digest": "1aa803dd7e64011efe4b751475dd9d770f5500a28e4727dee3931fdeeb3267b7",
+        "status": "PREREGISTERED_VISIBLE_CHURN_SIGNAL_PRESENT_REQUIRES_CAUSAL_REVIEW"
+      },
+      "observed_ai_faction": "wh_main_emp_empire_separatists"
+    }
+  ],
+  "foreign_visibility_source": "WH3_PLAYER_FILTERED_LISTS",
+  "interpretation": "BATCH_SUMMARY_OF_PLAYER_VISIBLE_PARTIAL_TRACES_NOT_FULL_FACTION_STATE",
+  "minimum_frames_for_faction_inclusion": 4,
+  "observed_ai_faction_count": 1,
+  "profile": "VANILLA",
+  "result_digest": "d91edd2df8c9196f8a977053e3bcba8993bff45352d9ab2b96289a553aefb2b4"
+}

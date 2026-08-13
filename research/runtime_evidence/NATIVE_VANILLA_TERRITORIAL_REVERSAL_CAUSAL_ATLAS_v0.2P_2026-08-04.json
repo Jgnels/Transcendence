@@ -1,0 +1,270 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "atlas_digest": "74614a10b6d6f05d525b41e6bbe4b396a0a7ca961d5a2b1cf015aaa0f1d7698f",
+  "authority": "NO_ORDERS",
+  "candidate_window_count": 13,
+  "candidate_windows": [
+    {
+      "faction": "wh2_main_emp_new_world_colonies",
+      "force_cqi": "239",
+      "heading_cosine": -1.0,
+      "movement_distances": [
+        33.734256,
+        33.734256
+      ],
+      "regions": [
+        "wh3_main_combi_region_ziggurat_of_dawn",
+        "wh3_main_combi_region_swamp_town",
+        "wh3_main_combi_region_ziggurat_of_dawn"
+      ],
+      "turns": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "faction": "wh2_main_lzd_tlaqua",
+      "force_cqi": "40",
+      "heading_cosine": -0.715574,
+      "movement_distances": [
+        8.062258,
+        21.84033
+      ],
+      "regions": [
+        "wh3_main_combi_region_tlaqua",
+        "wh3_main_combi_region_tlaqua",
+        "wh3_main_combi_region_statues_of_the_gods"
+      ],
+      "turns": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "faction": "wh2_main_lzd_xlanhuapec",
+      "force_cqi": "189",
+      "heading_cosine": -0.999882,
+      "movement_distances": [
+        24.698178,
+        23.769729
+      ],
+      "regions": [
+        "wh3_main_combi_region_axlotl",
+        "wh3_main_combi_region_xlanhuapec",
+        "wh3_main_combi_region_axlotl"
+      ],
+      "turns": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "faction": "wh2_main_lzd_xlanhuapec",
+      "force_cqi": "189",
+      "heading_cosine": -0.99115,
+      "movement_distances": [
+        23.769729,
+        23.769729
+      ],
+      "regions": [
+        "wh3_main_combi_region_xlanhuapec",
+        "wh3_main_combi_region_axlotl",
+        "wh3_main_combi_region_xlanhuapec"
+      ],
+      "turns": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "faction": "wh3_dlc23_chd_minor_faction",
+      "force_cqi": "343",
+      "heading_cosine": -1.0,
+      "movement_distances": [
+        38.897301,
+        38.897301
+      ],
+      "regions": [
+        "wh3_main_combi_region_the_gates_of_zharr",
+        "wh3_main_combi_region_tower_of_gorgoth",
+        "wh3_main_combi_region_the_gates_of_zharr"
+      ],
+      "turns": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "faction": "wh3_main_cth_the_western_provinces",
+      "force_cqi": "1431",
+      "heading_cosine": -0.951914,
+      "movement_distances": [
+        19.924859,
+        182.002747
+      ],
+      "regions": [
+        "wh3_main_combi_region_black_fortress",
+        "wh3_main_combi_region_pigbarter",
+        "wh3_main_combi_region_karak_azul"
+      ],
+      "turns": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "faction": "wh_main_emp_averland",
+      "force_cqi": "1483",
+      "heading_cosine": -0.999635,
+      "movement_distances": [
+        37.013511,
+        35.0
+      ],
+      "regions": [
+        "wh3_main_combi_region_grenzstadt",
+        "wh3_main_combi_region_averheim",
+        "wh3_main_combi_region_grenzstadt"
+      ],
+      "turns": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "faction": "wh_main_emp_averland",
+      "force_cqi": "1483",
+      "heading_cosine": -0.998074,
+      "movement_distances": [
+        35.0,
+        35.468296
+      ],
+      "regions": [
+        "wh3_main_combi_region_averheim",
+        "wh3_main_combi_region_grenzstadt",
+        "wh3_main_combi_region_averheim"
+      ],
+      "turns": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "faction": "wh_main_emp_averland",
+      "force_cqi": "233",
+      "heading_cosine": -1.0,
+      "movement_distances": [
+        42.011903,
+        42.011903
+      ],
+      "regions": [
+        "wh3_main_combi_region_averheim",
+        "wh3_main_combi_region_grenzstadt",
+        "wh3_main_combi_region_averheim"
+      ],
+      "turns": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "faction": "wh_main_grn_black_venom",
+      "force_cqi": "260",
+      "heading_cosine": -0.984271,
+      "movement_distances": [
+        25.455844,
+        28.017851
+      ],
+      "regions": [
+        "wh3_main_combi_region_averheim",
+        "wh3_main_combi_region_grenzstadt",
+        "wh3_main_combi_region_averheim"
+      ],
+      "turns": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "faction": "wh_main_grn_black_venom",
+      "force_cqi": "260",
+      "heading_cosine": -1.0,
+      "movement_distances": [
+        28.017851,
+        28.017851
+      ],
+      "regions": [
+        "wh3_main_combi_region_grenzstadt",
+        "wh3_main_combi_region_averheim",
+        "wh3_main_combi_region_grenzstadt"
+      ],
+      "turns": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "faction": "wh_main_vmp_mousillon",
+      "force_cqi": "305",
+      "heading_cosine": -1.0,
+      "movement_distances": [
+        7.071068,
+        7.071068
+      ],
+      "regions": [
+        "wh3_main_combi_region_mousillon",
+        "wh3_main_combi_region_mousillon",
+        "wh3_main_combi_region_mousillon"
+      ],
+      "turns": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "faction": "wh_main_vmp_mousillon",
+      "force_cqi": "305",
+      "heading_cosine": -0.948683,
+      "movement_distances": [
+        7.071068,
+        6.708204
+      ],
+      "regions": [
+        "wh3_main_combi_region_mousillon",
+        "wh3_main_combi_region_mousillon",
+        "wh3_main_combi_region_mousillon"
+      ],
+      "turns": [
+        6,
+        7,
+        8
+      ]
+    }
+  ],
+  "contract": "NATIVE_CAI_VANILLA_TERRITORIAL_REVERSAL_CAUSAL_ATLAS_V1",
+  "interpretation": [
+    "These are single stable-context battle-free reversal candidates from the hash-frozen vanilla cohort.",
+    "No territorial force met the v0.2N repeated non-overlapping reversal criterion.",
+    "The atlas is for causal review and matched-profile comparison; it is not a list of proven AI mistakes."
+  ],
+  "population": "TERRITORIAL",
+  "source_bundle": {
+    "filename": "Transcendence_NativeBehaviorStudy_VANILLA_20260803T072222Z.zip",
+    "sha256": "9416e0b73765570e6ffda1c1855a0430133b447e14cd63d307c966312987429d",
+    "trace_contract": "NATIVE_CAI_PRIVILEGED_DIAGNOSTIC_PARSED_TRACE_V2",
+    "zip_integrity": "PASS"
+  },
+  "study_version": "v0.2P"
+}

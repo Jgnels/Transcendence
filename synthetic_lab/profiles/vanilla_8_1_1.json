@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "profile_id": "vanilla_wh3_8_1_1_build_48122_4194776",
+  "environment": "VANILLA",
+  "compatibility_status": "OWNER_OBSERVED_SETTINGS_ONLY",
+  "game_version": "8.1.1",
+  "build": "48122.4194776",
+  "campaign": "IMMORTAL_EMPIRES",
+  "difficulty": {
+    "campaign": "LEGENDARY",
+    "battle": "VERY_HARD",
+    "battle_realism": true,
+    "unit_size": "ULTRA"
+  },
+  "ai_battle_stat_modifiers": {
+    "base_weapon_damage_percent": 10,
+    "leadership_flat": 8,
+    "melee_attack_percent": 10,
+    "melee_defence_percent": 10,
+    "charge_bonus_percent": 10,
+    "armour_piercing_weapon_damage_percent": 10,
+    "reload_skill_flat": 20
+  },
+  "target_capacity": 2,
+  "minimum_attack_ratio": 0.82,
+  "minimum_capture_ratio": 0.9,
+  "replenish_threshold": 0.64,
+  "weights": {
+    "urgency": 2.0,
+    "strategic_value": 1.25,
+    "feasibility": 2.25,
+    "continuity": 0.8,
+    "recovery_need": 1.5,
+    "travel_cost": -0.9,
+    "overconcentration": -1.4
+  }
+}

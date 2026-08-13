@@ -1,0 +1,394 @@
+{
+  "authority": "NO_ORDERS",
+  "failed_count": 0,
+  "passed_count": 12,
+  "report_contract": "TACTICAL_ACTION_AUTHORITY_MATRIX_REPORT_V1",
+  "result_digest": "3c9d5e9cbb6ccf0d8c2e8868827df5b4c1172b821573e25345f99195c24fb61d",
+  "scenario_count": 12,
+  "scenarios": [
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": null,
+        "authority": "NO_ORDERS",
+        "binding_status": "NO_COMMAND_EVENT",
+        "command_event_status": "NOT_OBSERVED",
+        "command_name": null,
+        "command_origin": "NO_COMMAND_EVENT",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "NO_ISSUE_ATTEMPT",
+        "feasibility_status": "REACHABILITY_NOT_APPLICABLE",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "NONE",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "NOT_APPLICABLE",
+        "result_digest": "c5742d55a0e509c5a95b390ae3bb4794db8c7888e3d33d0b9f9deaae600c410c",
+        "schema_version": 1,
+        "selected_unit_ids": [],
+        "state_match_evidence": [],
+        "target_position": null,
+        "target_unit_id": null
+      },
+      "passed": true,
+      "scenario_id": "proposal_without_issue_attempt"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": "1:u1001",
+        "authority": "NO_ORDERS",
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Move",
+        "command_origin": "OWNER_INPUT_DECLARED_BY_FIXTURE",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "OBSERVED_STATE_MATCH_NOT_CAUSALLY_ATTRIBUTED",
+        "feasibility_status": "POSITION_QUERY_REACHABLE",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "NONE",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "QUERY_TRUE",
+        "result_digest": "a59e9c6336caf4edc4e2e24e4e131b2b3a0a10356a8103f4ec1e42752ed6b52b",
+        "schema_version": 1,
+        "selected_unit_ids": [
+          "1:u1001"
+        ],
+        "state_match_evidence": [
+          "ORDERED_POSITION_MATCH",
+          "MOVEMENT_OBSERVED"
+        ],
+        "target_position": {
+          "x": 25.0,
+          "y": 0.0,
+          "z": 80.0
+        },
+        "target_unit_id": null
+      },
+      "passed": true,
+      "scenario_id": "owner_move_state_match"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": "1:u1002",
+        "authority": "NO_ORDERS",
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Attack Unit",
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "OBSERVED_STATE_MATCH_NOT_CAUSALLY_ATTRIBUTED",
+        "feasibility_status": "REACHABILITY_NOT_APPLICABLE",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "NONE",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "NOT_APPLICABLE",
+        "result_digest": "71a63f2daaa322d6e91c1cb0ed4f8bbd5308bf60450eb18620d294200c27f64f",
+        "schema_version": 1,
+        "selected_unit_ids": [
+          "1:u1002"
+        ],
+        "state_match_evidence": [
+          "CURRENT_TARGET_MATCH",
+          "MOVEMENT_OBSERVED"
+        ],
+        "target_position": null,
+        "target_unit_id": "2:u2001"
+      },
+      "passed": true,
+      "scenario_id": "attack_target_state_match"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": "1:u1003",
+        "authority": "NO_ORDERS",
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Move",
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "INTERRUPTED_OR_CONTROL_LOST",
+        "feasibility_status": "POSITION_QUERY_UNREACHABLE",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "WINDOW_TIMEOUT",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "QUERY_FALSE",
+        "result_digest": "49d78a0b15e977e27b05c60a82d8e09964b38ed695eaf3bb1c6419d14511d736",
+        "schema_version": 1,
+        "selected_unit_ids": [
+          "1:u1003"
+        ],
+        "state_match_evidence": [],
+        "target_position": {
+          "x": 5000.0,
+          "y": 0.0,
+          "z": 5000.0
+        },
+        "target_unit_id": null
+      },
+      "passed": true,
+      "scenario_id": "unreachable_position"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": "1:u1004",
+        "authority": "NO_ORDERS",
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Attack Unit",
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "NO_MATCHING_STATE_CHANGE_OBSERVED",
+        "feasibility_status": "REACHABILITY_UNVERIFIED",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "NONE",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "UNAVAILABLE",
+        "result_digest": "bd05203807b9fe1f54fc7d23b270b9046a32339c389a3ad7b9f85d834d05c966",
+        "schema_version": 1,
+        "selected_unit_ids": [
+          "1:u1004"
+        ],
+        "state_match_evidence": [],
+        "target_position": null,
+        "target_unit_id": "2:u2002"
+      },
+      "passed": true,
+      "scenario_id": "reachability_unavailable"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": "1:u1005",
+        "authority": "NO_ORDERS",
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Move",
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "INTERRUPTED_OR_CONTROL_LOST",
+        "feasibility_status": "POSITION_QUERY_REACHABLE",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "SUBSEQUENT_COMMAND",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "QUERY_TRUE",
+        "result_digest": "4f677a3e8f6d5a2c0573d07d8f75a846e4122cacf336116036176ad039f81efe",
+        "schema_version": 1,
+        "selected_unit_ids": [
+          "1:u1005"
+        ],
+        "state_match_evidence": [
+          "ORDERED_POSITION_MATCH",
+          "MOVEMENT_OBSERVED"
+        ],
+        "target_position": {
+          "x": 10.0,
+          "y": 0.0,
+          "z": 30.0
+        },
+        "target_unit_id": null
+      },
+      "passed": true,
+      "scenario_id": "subsequent_command_interrupts"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": "1:u1006",
+        "authority": "NO_ORDERS",
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Move",
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "INTERRUPTED_OR_CONTROL_LOST",
+        "feasibility_status": "POSITION_QUERY_REACHABLE",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "CONTROL_LOST",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "QUERY_TRUE",
+        "result_digest": "a96fbb739d9289ac03105cf15b2ec69e4bd8455c97b9ee9511ec554b3210dfbc",
+        "schema_version": 1,
+        "selected_unit_ids": [
+          "1:u1006"
+        ],
+        "state_match_evidence": [],
+        "target_position": {
+          "x": 10.0,
+          "y": 0.0,
+          "z": 30.0
+        },
+        "target_unit_id": null
+      },
+      "passed": true,
+      "scenario_id": "control_lost_after_command"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": "1:u1007",
+        "authority": "NO_ORDERS",
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Withdraw",
+        "command_origin": "OWNER_INPUT_DECLARED_BY_FIXTURE",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "OBSERVED_STATE_MATCH_NOT_CAUSALLY_ATTRIBUTED",
+        "feasibility_status": "REACHABILITY_NOT_APPLICABLE",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "NONE",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "NOT_APPLICABLE",
+        "result_digest": "7ca38403b39bf04d91cc1faa2d59dbbaed901e01a3769f53b6aa847a1cf16baa",
+        "schema_version": 1,
+        "selected_unit_ids": [
+          "1:u1007"
+        ],
+        "state_match_evidence": [
+          "MOVEMENT_OBSERVED",
+          "LEAVING_BATTLE_OBSERVED"
+        ],
+        "target_position": null,
+        "target_unit_id": null
+      },
+      "passed": true,
+      "scenario_id": "withdrawal_state_observed"
+    },
+    {
+      "error": null,
+      "expect_error": false,
+      "packet": {
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED",
+        "actor_unit_id": null,
+        "authority": "NO_ORDERS",
+        "binding_status": "UNBOUND_COMMAND_EVENT",
+        "command_event_status": "OBSERVED_GAME_COMMAND_EVENT",
+        "command_name": "Move",
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED",
+        "execution_status": "UNBOUND_COMMAND_NO_EXECUTION_CLAIM",
+        "feasibility_status": "REACHABILITY_UNVERIFIED",
+        "interpretation_limits": [
+          "A command callback does not identify whether player or script originated the command.",
+          "Ordered-position, target, movement, or withdrawal matches are state evidence, not direct acknowledgement.",
+          "A reachability query is a point-in-time engine query, not proof of route completion.",
+          "No project order was issued and no causal gameplay outcome is claimed."
+        ],
+        "interruption": "NONE",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED",
+        "packet_contract": "TACTICAL_ACTION_AUTHORITY_EVIDENCE_PACKET_V1",
+        "project_issue_status": "NOT_ATTEMPTED",
+        "reachability_query": "UNAVAILABLE",
+        "result_digest": "e6d248ab24e7f4fa4b3a884fcaa5f50bb9fdef13ffeab6f0abb9690a90696105",
+        "schema_version": 1,
+        "selected_unit_ids": [],
+        "state_match_evidence": [],
+        "target_position": {
+          "x": 2.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "target_unit_id": null
+      },
+      "passed": true,
+      "scenario_id": "command_without_selection_is_unbound"
+    },
+    {
+      "error": "v0.1R packet is read-only and forbids project issue attempts",
+      "expect_error": true,
+      "packet": null,
+      "passed": true,
+      "scenario_id": "forbid_project_issue_attempt"
+    },
+    {
+      "error": "v0.1R has no direct acknowledgement source",
+      "expect_error": true,
+      "packet": null,
+      "passed": true,
+      "scenario_id": "forbid_fabricated_direct_ack"
+    },
+    {
+      "error": "hidden target identity is prohibited",
+      "expect_error": true,
+      "packet": null,
+      "passed": true,
+      "scenario_id": "forbid_hidden_target_identity"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730
+}

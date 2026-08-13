@@ -1,0 +1,77 @@
+{
+  "battle_session_count": 1,
+  "capability_failures": [],
+  "completed_battle_count": 1,
+  "evidence_status": "OBSERVED",
+  "optional_unavailable": [
+    "unit.is_crumbling",
+    "unit.is_unstable"
+  ],
+  "result_digest": "cc75f626329f3ceae381d30a4dc17743b111cd06088a3d6b8b1fbc2def9fde8f",
+  "schema_version": 2,
+  "sessions": [
+    {
+      "battle_complete": {
+        "aggregate_samples": "740",
+        "commands_observed": "397",
+        "detail_samples": "249",
+        "draw": "false",
+        "model_tick_count": "739",
+        "outcome_decided": "true",
+        "real_tick_count": "1206",
+        "time_ms": "739600",
+        "victorious_alliance": "1"
+      },
+      "battle_start": {
+        "alliance_count": "2",
+        "ambush": "false",
+        "battle_type": "land_normal",
+        "from_campaign": "false",
+        "local_alliance": "1",
+        "local_army": "1",
+        "multiplayer": "false",
+        "quest_battle": "false",
+        "replay": "true",
+        "siege": "false",
+        "spectator": "false",
+        "time_ms": "100",
+        "unit_scale_factor": "1"
+      },
+      "capability_failures": [],
+      "complete": true,
+      "event_count": 10643,
+      "event_counts": {
+        "ALLIANCE_AGGREGATE": 1477,
+        "ARMY_STATIC": 2,
+        "BATTLE_COMPLETE": 1,
+        "BATTLE_START": 1,
+        "CAPABILITY": 2,
+        "COMMAND": 397,
+        "PACK_LOADED": 1,
+        "PHASE": 4,
+        "RUNTIME_BEGIN": 1,
+        "SAMPLER_HEARTBEAT": 120,
+        "SAMPLER_START": 1,
+        "SAMPLE_BEGIN": 249,
+        "SAMPLE_END": 249,
+        "UNIT_HIERARCHY": 91,
+        "UNIT_STATE": 8010,
+        "UNIT_STATIC": 37
+      },
+      "optional_unavailable": [
+        "unit.is_crumbling",
+        "unit.is_unstable"
+      ],
+      "sample_count": 249,
+      "schema": 2,
+      "source": "battle4_dense_trans_battle_log.txt",
+      "start_line": 1
+    }
+  ],
+  "warnings": [
+    "Battle records prove only observed query and event availability.",
+    "No battle order, unitcontroller, AI replacement, or tactical-quality claim is promoted.",
+    "Foreign unit records are accepted only when marked visible to the local alliance.",
+    "Unavailable optional fields are disclosed separately and do not invalidate the minimum gate."
+  ]
+}

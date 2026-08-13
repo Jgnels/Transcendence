@@ -1,0 +1,4407 @@
+{
+  "classification_counts": {
+    "BATTLE_OR_AUTORESOLVE": 7,
+    "DIFFICULTY_OR_POTENTIAL": 5,
+    "DIPLOMACY_ENVIRONMENT": 2,
+    "DIRECT_NATIVE_CAI": 12,
+    "INDIRECT_AI_ENVIRONMENT": 268,
+    "OTHER_GAME_DATA": 318
+  },
+  "evidence_status": "OBSERVED",
+  "file_count": 709,
+  "files": [
+    {
+      "path": "db/_kv_fatigue_tables/SFO_data",
+      "sha256": "6a2b80682850e2e391a16a9d7a8985acfec22caa710d358452e1f7d85d729004",
+      "size": 704
+    },
+    {
+      "path": "db/_kv_key_buildings_tables/SFO_data",
+      "sha256": "44bb9f130ff34e7f9cb8e4e57cd134923088e46a702b26a0dfb9a5bf1d9e8928",
+      "size": 186
+    },
+    {
+      "path": "db/_kv_morale_tables/SFO_data",
+      "sha256": "c35c1e7ec8a9e8695b8a1078f2144d5d39baa7514ec8b42e2b0aeb2e045a51ce",
+      "size": 2612
+    },
+    {
+      "path": "db/_kv_rules_tables/SFO_data",
+      "sha256": "eff6f154fc80d7be95ee3c574928e1fc32bd3a153d153f06ba4304a930bfc421",
+      "size": 734
+    },
+    {
+      "path": "db/_kv_unit_ability_scaling_rules_tables/SFO_data",
+      "sha256": "f6bc39e8d6e084ec4081e2567607ec04dd92221b61cd0c92900ead86580e3cf5",
+      "size": 153
+    },
+    {
+      "path": "db/action_results_additional_outcomes_tables/SFO_campaign",
+      "sha256": "f82f83924b2eadb99158adc23c3ac362b6dd84ed4ff93cff172c8b07718dca40",
+      "size": 621
+    },
+    {
+      "path": "db/action_results_tables/SFO_campaign",
+      "sha256": "b5565db2e43db096b12904ae18f9d3af96fc87a5e61c580d45463e5a11cb1e0e",
+      "size": 324
+    },
+    {
+      "path": "db/agent_culture_details_tables/Skrolk_plagues",
+      "sha256": "79565df5a68491db98d7a17e4b5cd94574cbf5beefa547c35322ab72cef6cbf6",
+      "size": 235
+    },
+    {
+      "path": "db/agent_recruitment_categories_tables/#SFO_hero",
+      "sha256": "b5a40aa5800445f0b1be1c8631a806c7455932bd95aaf89d9624f31c4f27645f",
+      "size": 701
+    },
+    {
+      "path": "db/agent_subtype_set_items_tables/SFO_campaign",
+      "sha256": "4fbf9667588d7fc6db6317ea78e4d6af5d3164d8cfe48febc07a5f70cbe11018",
+      "size": 127
+    },
+    {
+      "path": "db/agent_subtype_to_vows_tables/#SFO_hero",
+      "sha256": "c96a5a7bac7ca7c6e16b581f8d1564d4e07955fab06c2cb260742f18d1530ec2",
+      "size": 181
+    },
+    {
+      "path": "db/agent_subtypes_tables/#SFO_hero",
+      "sha256": "914ebeb1132f809dbc353292a8215f21d6d6cc2d15c7f545596fae5c817a1bb0",
+      "size": 3651
+    },
+    {
+      "path": "db/agent_subtypes_tables/SFO_campaign",
+      "sha256": "e1c34d19aa03047c9603f0fc00efd8818fc72ec7a78034d5b5f70eb21115bdcb",
+      "size": 3763
+    },
+    {
+      "path": "db/agent_uniforms_tables/#SFO_hero",
+      "sha256": "7bc983fef17f938fd8b6874189c7dc23c8821bdeca8d760b4cc9eeb4a9b06c17",
+      "size": 9666
+    },
+    {
+      "path": "db/agents_tables/SFO_data",
+      "sha256": "047b6cbac2914f890b6a0e7a274e5cd475dfc4611ec849ae0a382170a0355a5e",
+      "size": 396
+    },
+    {
+      "path": "db/ancillaries_included_agent_subtypes_tables/#SFO_hero",
+      "sha256": "7173c46e85f1471bf1ecd5de592ca337f182c476d3f44dd51a512b970bfc113f",
+      "size": 975
+    },
+    {
+      "path": "db/ancillaries_included_agent_subtypes_tables/SFO_campaign",
+      "sha256": "4dafbac65fc1d5e8f9210e5e03b8e3c5376cad44dddf5a75159b4ecc05a5df2f",
+      "size": 438
+    },
+    {
+      "path": "db/ancillaries_required_skills_tables/#SFO_hero",
+      "sha256": "3b70b96f1ef012cdd089f7aa3e34c5968b24408b978eb275e6313c88958200b1",
+      "size": 295
+    },
+    {
+      "path": "db/ancillaries_tables/#SFO_hero",
+      "sha256": "af16362f0fd497d42e421cff7b7f679960bbc5238280d39c0c69c73801d50316",
+      "size": 2839
+    },
+    {
+      "path": "db/ancillaries_tables/SFO_campaign",
+      "sha256": "b052d116dfd72a7e4a6446f024878df90914a5463aa1c6d10dbb7fd3195ff05f",
+      "size": 17048
+    },
+    {
+      "path": "db/ancillaries_tables/herald_test",
+      "sha256": "6920a20f29a01183cdb17d2a1d5920d5d8325f910eb53b64425c3d5c935e860e",
+      "size": 1436
+    },
+    {
+      "path": "db/ancillary_info_tables/#SFO_hero",
+      "sha256": "47a5f775b3c8089831a66491494f742bca2152c3abd414502c798a8dcc10ac37",
+      "size": 614
+    },
+    {
+      "path": "db/ancillary_info_tables/SFO_campaign",
+      "sha256": "a4dd288b2ff54b354621d7dbbb982090f58c5d9b31f03c61b03600433585a20f",
+      "size": 2997
+    },
+    {
+      "path": "db/ancillary_set_effect_junctions_tables/SFO_vanilla",
+      "sha256": "1c3a23849f3fc6878badb6a102c2a4f238240f49c5440dc82f2eb1cc3d94cd5b",
+      "size": 21240
+    },
+    {
+      "path": "db/ancillary_to_effects_tables/#SFO_hero",
+      "sha256": "b391bec650d9516d48d812e1f01be7a08aca8f0af50f350b448858317c3aa626",
+      "size": 678
+    },
+    {
+      "path": "db/ancillary_to_effects_tables/SFO_campaign",
+      "sha256": "985047c8e484addbe0a4998b480c8dd54babcf47db32c4a2020ede6b6f7205cd",
+      "size": 40191
+    },
+    {
+      "path": "db/ancillary_to_effects_tables/SFO_followers",
+      "sha256": "a8eeea1fedd0d90889e69d0b7536bf51ae28b006f9b782212a76f031139db197",
+      "size": 81337
+    },
+    {
+      "path": "db/ancillary_to_effects_tables/SFO_vanilla",
+      "sha256": "962c625be3a75ca2183187707f23884f275df6a3f7267212dfcb32e9e8ce73b5",
+      "size": 48438
+    },
+    {
+      "path": "db/ancillary_to_effects_tables/SFO_vanilla_LL",
+      "sha256": "90ca885e6bb0230d6b181769c62e340a914360b908a7f82f95b2b622ad2f7d67",
+      "size": 124809
+    },
+    {
+      "path": "db/ancillary_to_effects_tables/SFO_vanilla_crafted",
+      "sha256": "1e166e5951f14ed6c329aa061213fc3e468805a8275397e117048400e7a98679",
+      "size": 35989
+    },
+    {
+      "path": "db/ancillary_to_included_agents_tables/SFO_campaign",
+      "sha256": "27bb3e1e5b9e0b2267346d0ae799ca84967a0e2b4e5f20d8644b10d13177f275",
+      "size": 5476
+    },
+    {
+      "path": "db/ancillary_types_tables/#SFO_hero",
+      "sha256": "8afb7b140af5ea0c0a52aeec0839c3ebb89ab39c0bcdcfa63d732eef177779a7",
+      "size": 390
+    },
+    {
+      "path": "db/ancillary_types_tables/SFO_campaign",
+      "sha256": "a5a599adcc80ba06f1a1ff080f8c25be5cc36a9088c7fafa5f1b872f795b2413",
+      "size": 5297
+    },
+    {
+      "path": "db/ancillary_types_tables/herald_test",
+      "sha256": "ec04e24a791a6755c282cef7d8830a140a6a47ab2d4fd3e9604e3041393ed48e",
+      "size": 932
+    },
+    {
+      "path": "db/armed_citizenry_unit_groups_tables/SFO_campaign",
+      "sha256": "be0d16cf38aeec92e2e8d8713c6d1502a56359cb50cbb4e9fa8fa43451f1d441",
+      "size": 8635
+    },
+    {
+      "path": "db/armed_citizenry_units_to_unit_groups_junctions_tables/SFO_campaign",
+      "sha256": "1a657d66bd010db09157efb1f31ba089015d62241de6c68a1e196114d3fb6535",
+      "size": 147605
+    },
+    {
+      "path": "db/armed_citizenry_units_to_unit_groups_junctions_tables/SFO_vanilla",
+      "sha256": "e6796d8cb640bbacfb5b79f10026bc8084dcfa71ac077b7c2cce7b9dccbf8c25",
+      "size": 52906
+    },
+    {
+      "path": "db/armory_item_set_to_effects_tables/data__",
+      "sha256": "2c82a81b72f445c2194dbcb1d30cababa40445cc541c8ab562fec9d92f4f4dac",
+      "size": 10343
+    },
+    {
+      "path": "db/armory_items_to_effects_tables/data__",
+      "sha256": "bb544732c29702424c4951f0c484fe071b460b433f98d564a3a05b2bb468c671",
+      "size": 198018
+    },
+    {
+      "path": "db/army_special_abilities_for_faction_junctions_tables/SFO_abilities",
+      "sha256": "30296b4b5e82f9062e7bcee79f095a8bbd01342640a8ad002ec321ab6b1b143f",
+      "size": 684
+    },
+    {
+      "path": "db/army_special_abilities_tables/SFO_abilities",
+      "sha256": "e31d5f936eb2132697207126ad816721ccf00f9fedbad4e04c87da6642cec92c",
+      "size": 7620
+    },
+    {
+      "path": "db/autoresolver_modifier_group_to_modifiers_tables/SFO_data",
+      "sha256": "4e728c95463e75804810f300acbfd77867d5ec905948f87457fbf550b8324ddf",
+      "size": 2691
+    },
+    {
+      "path": "db/banners_permitted_unit_sets_tables/SFO_campaign",
+      "sha256": "c7b557a1bd5431d8de41f206f7fb3565792712b560c39912c3711ea079657dba",
+      "size": 429
+    },
+    {
+      "path": "db/banners_tables/SFO_campaign",
+      "sha256": "7c0f997de039baf21d8ab0a82a333dccd95b7de25c6d89f12fbe94033c61f304",
+      "size": 428
+    },
+    {
+      "path": "db/battle_animations_table_tables/SFO_units",
+      "sha256": "29a62e5c203f560804aa44b92ad1311dcf6a3fa4137e13eb34cedf6c64d58ee2",
+      "size": 576
+    },
+    {
+      "path": "db/battle_cameras_tables/kam2105_mod",
+      "sha256": "af7c3bbde5db861b94059922abfa49402fe19686b12f6b00f63bdc589416e69e",
+      "size": 335
+    },
+    {
+      "path": "db/battle_context_army_special_ability_junctions_tables/SFO_campaign",
+      "sha256": "8fbb752efa8c2e7e103c100be1be3b49a3f9871cc606b053ebcb766a7c0201c3",
+      "size": 2960
+    },
+    {
+      "path": "db/battle_context_unit_ability_junctions_tables/SFO_campaign",
+      "sha256": "bfcde2647aa3a8c28b81ccaa6cfe5a69fab32f712489222855824ab8b18c7c89",
+      "size": 289
+    },
+    {
+      "path": "db/battle_context_unit_attribute_junctions_tables/SFO_campaign",
+      "sha256": "972a9ed313982f096597c3d39a718954f7044b2adb25d93119d69825e36a6e4b",
+      "size": 156
+    },
+    {
+      "path": "db/battle_currency_army_special_abilities_cost_values_tables/SFO_data",
+      "sha256": "90e76b0017bf15686080bdf5b44349c1ca0a703707fa09a4d95732a4c0004517",
+      "size": 2169
+    },
+    {
+      "path": "db/battle_currency_buildings_cost_values_tables/SFO_data",
+      "sha256": "bf06f9ebde0ab03de206f2fdfb80a9aff3e7c53300add454ba0fd277bcdac4b1",
+      "size": 10083
+    },
+    {
+      "path": "db/battle_currency_unit_abilities_cost_values_tables/SFO_data",
+      "sha256": "566644636da9321bf51a31631cb7bf53c2cdeebf15050249ae149df8bcda08b2",
+      "size": 1374
+    },
+    {
+      "path": "db/battle_entities_tables/#SFO_hero",
+      "sha256": "3e161829540ae62a8af783ea8a509fc0ae5ae6b10ee7941972f91c57aad1a9b0",
+      "size": 4085
+    },
+    {
+      "path": "db/battle_entities_tables/SFO_data",
+      "sha256": "c3e5d0773427b2e67081f5fe155318cc7ef943ce8ff05d1c12aa1c816d094923",
+      "size": 400592
+    },
+    {
+      "path": "db/battle_entities_tables/SFO_units",
+      "sha256": "c947675c2bbfeb4d45dfe06d475b0fe2f57106647823738799d88ca20d780260",
+      "size": 25231
+    },
+    {
+      "path": "db/battle_entity_stats_tables/SFO_data",
+      "sha256": "fbd5817f250bed3a30075c72347f5116d0f6a04059f4ba73111885f606a28e14",
+      "size": 178
+    },
+    {
+      "path": "db/battle_entity_stats_tables/SFO_units",
+      "sha256": "a3947f0c4ca5c5827eecf208e080f11cfe1e70ff174a26d815c2025b335ac45c",
+      "size": 356
+    },
+    {
+      "path": "db/battle_personalities_tables/#SFO_hero",
+      "sha256": "ef2d3d919c32d8e717d18eed0314afb43a50cc64d7339404546a415d44e75f66",
+      "size": 494
+    },
+    {
+      "path": "db/battle_personalities_tables/SFO_data",
+      "sha256": "7a145632882e1bb2659ae69dc094a8ecffcb3db29094a71e11d58f1889ce17fe",
+      "size": 1459
+    },
+    {
+      "path": "db/battle_personalities_tables/SFO_units",
+      "sha256": "7d62ff58c9243598775e0a09f583b5a5add5c12b1e1242fce01cf288404d9cf5",
+      "size": 3006
+    },
+    {
+      "path": "db/battle_secondary_currency_sources_links_tables/SFO_data",
+      "sha256": "d2c6fc37ebe46e436bab16289e0c54628244cde8fd677a3e02fdc6ae77543e20",
+      "size": 728
+    },
+    {
+      "path": "db/battle_set_piece_armies_characters_items_tables/#SFO_hero",
+      "sha256": "28b4a5219ce951bc91cd77127b5be99079812e2dde21c7201981472b9db59f0d",
+      "size": 1062
+    },
+    {
+      "path": "db/battle_set_piece_armies_characters_items_tables/SFO_data",
+      "sha256": "6e428fe22943c80f00ac46e543cc3b621e65a91ca1adff6e92842c5e72746c3f",
+      "size": 683
+    },
+    {
+      "path": "db/battle_set_piece_armies_characters_tables/#SFO_hero",
+      "sha256": "633d7bca04be61b3e5a6737b4bc2476a8e0ab05cca8f8bbdcc5790fa321134d1",
+      "size": 1423
+    },
+    {
+      "path": "db/battle_set_piece_armies_effect_bundles_tables/SFO_campaign",
+      "sha256": "d8788a9fd8d1101f174964e96acdeeda545c2a1f77eb612ee339f0a582d5271c",
+      "size": 63091
+    },
+    {
+      "path": "db/battle_set_piece_armies_units_junctions_tables/SFO_campaign",
+      "sha256": "dc7a0c329a1f9c8952df24caacacc5a35a411d603b7b55ad2beb16dfc2a5ca67",
+      "size": 2915
+    },
+    {
+      "path": "db/battle_set_pieces_tables/SFO_campaign",
+      "sha256": "66a0f68ab748ab21b75e8433a60af5f700cefb9771070d71b6d2c9523ece43e6",
+      "size": 153662
+    },
+    {
+      "path": "db/battle_skeletons_tables/SFO_units",
+      "sha256": "bc33389470d9a49bbeb6de60e5e41fed8c5830766f0486a4adadd4cf90b26007",
+      "size": 574
+    },
+    {
+      "path": "db/battle_vortexs_tables/SFO_abilities",
+      "sha256": "019baca50fdfcc98f53ae806061a5e484989f728490f9a34c2b9813c09b5b781",
+      "size": 12020
+    },
+    {
+      "path": "db/battle_vortexs_tables/SFO_data",
+      "sha256": "13b0cc81873efd3b6dae0cc5ae33968950b31545b843f67e1cfba7243c9865dc",
+      "size": 74733
+    },
+    {
+      "path": "db/battlefield_buildings_tables/SFO_data",
+      "sha256": "fe86d3355e4621b6a30ad3abeb693fcf0e19267d5d68802d12577026ee3670ee",
+      "size": 82051
+    },
+    {
+      "path": "db/battlefield_buildings_to_special_abilities_tables/data__",
+      "sha256": "14df7b88ca8e6520d389cb16e7a8493445d4ff81148ff78c0841000c68af4119",
+      "size": 14788
+    },
+    {
+      "path": "db/battlefield_deployable_siege_items_tables/SFO_data",
+      "sha256": "68a5439955d334eb8166cf2217efd34b11eb26f06eb43e3a1a5c8026904adcd4",
+      "size": 2733
+    },
+    {
+      "path": "db/battlefield_engines_tables/SFO_units",
+      "sha256": "6ac016b9cbaec5e888d2e07b17bdf30451d93c7e8910c9c8e1f1e113d2e0a5fb",
+      "size": 1293
+    },
+    {
+      "path": "db/battlefield_siege_vehicles_tables/SFO_data",
+      "sha256": "dcbf04808c4ac0ef0bbb2424769769cf80d36e2e5e91612c687fbd19b93bc537",
+      "size": 9668
+    },
+    {
+      "path": "db/building_chain_availability_sets_tables/SFO_buildings",
+      "sha256": "5d54f1caae7c39423652eca951b2a2e7792b7709e92a3612fcbfac12d6baa513",
+      "size": 5021
+    },
+    {
+      "path": "db/building_chain_set_items_tables/SFO_buildings",
+      "sha256": "9f24fa636bafc876f82fc4716a0ce6846562dca7779f3b05be35d94a14baec88",
+      "size": 9403
+    },
+    {
+      "path": "db/building_chain_set_items_tables/SFO_vanilla",
+      "sha256": "c6fc456a47b18f6cd5d17303a9c1be7c3972f3966aff1d8103f19a6f0ce18574",
+      "size": 695
+    },
+    {
+      "path": "db/building_chains_tables/SFO_buildings",
+      "sha256": "768c534f280bd0b8e169890d8dedaf927d329c1b66d02e18c351db56b8611f18",
+      "size": 7109
+    },
+    {
+      "path": "db/building_chains_tables/SFO_vanilla",
+      "sha256": "719e6899ba0d292a0adc89332fa1b65d6532e18a7919dd337f5caf30fa7ccf51",
+      "size": 4085
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_IE_icons",
+      "sha256": "170d002a5621ea98c69f882c558d15a7d7e785b7dd6093a4f997ab8794507459",
+      "size": 297199
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__cathay",
+      "sha256": "50473b89eb4e7c9b89fcea1b2f464e2ea34fd2d2e27ee429cdf0a2d0196053a6",
+      "size": 13880
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__daemon",
+      "sha256": "972d192a669392fc98060c62bb66a493f7fddf2177305b8da0f99188262d0d65",
+      "size": 22670
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__khorne",
+      "sha256": "42368d89a4fc08a7b1d9fc0c834fe05f5b53d9cdc137b1553214ab32c8718eed",
+      "size": 7622
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__kislev",
+      "sha256": "479126a31f98ea2e0c05344a926b759f5949c4101478f127398552853fe5e62c",
+      "size": 26975
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__nurgle",
+      "sha256": "2a1d01fbdd739c77fd7479a0a0bb6ae07da93fefb114bf50cc78c23dc9123bfb",
+      "size": 7319
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__ogre",
+      "sha256": "41e3f466b2dbe403a5791b80bf8d97aee0f4b54c3cf78b8d3ae2157743a262cc",
+      "size": 11308
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__slaanesh",
+      "sha256": "59c6323a49ffa8d45639adcf4dbd02ac400e569f9fe9a8bf5b17d33d743afb32",
+      "size": 9217
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data__tzeentch",
+      "sha256": "3a5b8370924be7c6097e6fec7e7f1f2720c8cd8b281b2dcc57fdeed194f91e31",
+      "size": 7703
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_data_chaosdwf",
+      "sha256": "af60ff8a93d1faac09712c5d427e251dbd77694302af2f291176389128eb1be2",
+      "size": 16901
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_omens",
+      "sha256": "a73501417ba5f3acb655c2fd856319cd82c747e8eb66f20698896338eaec649f",
+      "size": 19514
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_outposts",
+      "sha256": "65635344143dd15b75e70b29d7970a3d6b3ec16e1ab501fcff2a125b1b64fe20",
+      "size": 10792
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_resources",
+      "sha256": "c5e0f23a97427e99a0550e0cc64171894dc6ba3707fc7682ee681bbf96bf9a3b",
+      "size": 55020
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_shadowsofchange",
+      "sha256": "3fabdba83b22a545aef1048980dd2e3f78aa11c88918ef02ecd7c89563a7118e",
+      "size": 10211
+    },
+    {
+      "path": "db/building_culture_variants_tables/@@svi_thronesdecay",
+      "sha256": "127b2d19fa320c130bf15b682f0a90f8a42acd136081b43d883882da5dd51b2b",
+      "size": 8154
+    },
+    {
+      "path": "db/building_culture_variants_tables/SFO_buildings",
+      "sha256": "c5d7cfe7fb5b5c8c8c956aba499dfc8ac13bb6f87cdf56fccd1594b9f25c3453",
+      "size": 41721
+    },
+    {
+      "path": "db/building_effect_context_expressions_tables/SFO_campaign",
+      "sha256": "d0d5f07804aadee082887092d172d16c8be3e1b98f7ef31f9ccee56aadbc86aa",
+      "size": 3925
+    },
+    {
+      "path": "db/building_effects_junction_tables/#SFO_hero",
+      "sha256": "35be8b7f0a536a118e9f2cd4acaa24b3715c08240667a13239630007a6f55ed5",
+      "size": 2975
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_brt",
+      "sha256": "615095b4e8988b5703b84a864365664b63df83c4c4964deb24ba835233425b82",
+      "size": 50744
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_bst",
+      "sha256": "d5a7d59df593dd3be6898177c6695ee9441536c5cef64515b468bcfc6aa722ed",
+      "size": 37505
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_buildings",
+      "sha256": "56123c0a389333c39229e93df94420d567b74642a4cffb3f154dc2b4e6bff280",
+      "size": 137838
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_chd",
+      "sha256": "7a170b056434552d663218ee1268f231b68cf4fa9c5acaf7ad0d3d0d903441f8",
+      "size": 66151
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_chs",
+      "sha256": "a04099df151e302ea0475a29cd58dda9533da7d7b92d5edc01e591a32c2ef558",
+      "size": 77548
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_cst",
+      "sha256": "c9eae9a219fd689ef7ab448c906efaf30a991fe04bb693194c9baef8d21afa4e",
+      "size": 57617
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_cth",
+      "sha256": "1582defe5edcbc06e211a1f57af310f7b2938402cb03ef78185c1af61d3fca44",
+      "size": 147045
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_dae",
+      "sha256": "f49e890229fcdadb02133c5cd5a03b29bf139ebeebe47bec56a18faae2a35415",
+      "size": 108095
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_def",
+      "sha256": "fe1a6f60fd6b5243c6cde4f4b2bdaf660b63bd02d750c5e8f8c89fbd2d4c1e34",
+      "size": 105992
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_dwf",
+      "sha256": "1f7d70f0ec9828f2dfa921170d1a365afa0744d20603ed1ccbf41de9fab94142",
+      "size": 113501
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_emp",
+      "sha256": "dffb8707b526d5613e6184010af512681e8f163fd5ffa76466e0589988d2875a",
+      "size": 67265
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_grn",
+      "sha256": "57d8f5bd3b590aee2d611ef24a97a8bce974248ce6b9cf0301d60d11c2bbddce",
+      "size": 64783
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_hef",
+      "sha256": "2d86375b6689ff50f9b956fe55e5da65ac51ba7f4ba9674424ee57dfa53a2d27",
+      "size": 134691
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_imperial",
+      "sha256": "c99a96b8f21f793e2d8913651a37574ff2ecc6b0e19dfb72aa67e4093e6c2c2d",
+      "size": 23015
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_kho",
+      "sha256": "e090cbc6634cf273464a6ab5580b46e25313ac6b65e53081b602bac72d3e823a",
+      "size": 72242
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_ksl",
+      "sha256": "3a91434dc304771e94e997ed717e565f5401e425e17b79d8d25dd29d853e20c9",
+      "size": 123150
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_lzd",
+      "sha256": "1fd499fc5b2b8b2772a99f14d2f7bfd997d65727098b048ab8333b6594ff23ea",
+      "size": 88225
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_nor",
+      "sha256": "f5dfbf2b79b9fbeef11452574cbf163ff86056ad635f4a63f6cf4b6e9cbc8c0a",
+      "size": 234128
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_nur",
+      "sha256": "8ed6cd848012b7ca6c5764037fa0100dae1ff0f5c8eb84ab86f2b83be25451ac",
+      "size": 56024
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_ogr",
+      "sha256": "6c1ffee4b463165414b58147429a8711b1c4765934065e03752b8e6c55edff8d",
+      "size": 61737
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_rogue",
+      "sha256": "7b54cc3fe9a927e2d5c2c4f8fc92461a29fbba259e412c6c5ce3acca48f9b073",
+      "size": 19820
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_skv",
+      "sha256": "45616add4545263eef69faa6203ff3f98172460f16b26858f8c84f98a256418e",
+      "size": 100716
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_sla",
+      "sha256": "b6c818ab0020ec007fac370d3c9afc3f18ff937292ce15b3f5be8f5f19fc2e59",
+      "size": 207191
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_special",
+      "sha256": "a9ae9952163679c92c64622ceac172495e9c80c72780900a0750243ed0587d02",
+      "size": 911955
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_tmb",
+      "sha256": "ce7e94895f6bd718e2884f78f078bf9c2eaca550128cc1816d69fec443075882",
+      "size": 59334
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_tze",
+      "sha256": "d7c36e5e501ed4406ba8058ecb12df83ee66cd9ce3285c83d9eaad74ba620e7e",
+      "size": 89689
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_vmp",
+      "sha256": "796ac02247179c42b990e241713096e82deacacab2e0fe32cbc6d7ec936566e9",
+      "size": 54603
+    },
+    {
+      "path": "db/building_effects_junction_tables/SFO_wef",
+      "sha256": "9ee1429ad79ec2895b948f785ccab3fa9d78ac1ecf465cca144a99a9edfe9d17",
+      "size": 61066
+    },
+    {
+      "path": "db/building_effects_junction_tables/data__",
+      "sha256": "1f1469aab729e21cd3e0a4e0d6105955836204251347e4b517b4c673dc6d75ad",
+      "size": 134381
+    },
+    {
+      "path": "db/building_instances_tables/SFO_buildings",
+      "sha256": "7524dc2d85e4e01cc7441929d161a7c1e7b8061d326b96fbdc9bf5b40433747d",
+      "size": 2323
+    },
+    {
+      "path": "db/building_instant_constructions_tables/SFO_campaign",
+      "sha256": "68531230ddeb2ccdba85184d66a9462d1008cecdc1dc55bf4b86c5458f3875c0",
+      "size": 156
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_brt",
+      "sha256": "8578bb4a1ea09cbc1524f7b4a3206d21239310f1561b2c451c1f9206232533b9",
+      "size": 6550
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_chd",
+      "sha256": "98569fd9ab06d1832b28a8423dde373a62bb281a0296be26e69210895389d1df",
+      "size": 4241
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_cst",
+      "sha256": "4df6248b7fa35d28f8dec41a7dcf73bd7aaab88a8b10630b04be385c1af3c81b",
+      "size": 4227
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_cth",
+      "sha256": "1400a9ee057fd29e4a5eb1871ae3a817807471d9347fc3a388b37ac63900edcc",
+      "size": 5112
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_def",
+      "sha256": "f446464cd979e75644bccab3ffd5e967a8819642fd0050628652b8137a545c5a",
+      "size": 3542
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_dwf",
+      "sha256": "6be5b96db10f3a9a948df0cab6753ab9f4c5c834255c752373d686ddf6eb654e",
+      "size": 5632
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_emp",
+      "sha256": "8e6031e0a2955abc5fd4e3178681c5901bc467b33a85b43b396a5f00294d66c7",
+      "size": 2997
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_grn",
+      "sha256": "c2ea9343fa87883c925a50f4cced335ce35cff156cee78bdab4028cc623e09ec",
+      "size": 7844
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_hef",
+      "sha256": "f341e29d9e37bebcbe1ac2b13f81a57308b2cfc424811e023cb5723582864d1d",
+      "size": 3966
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_kho",
+      "sha256": "6594eade21aaf2f16f4df86a025838740b3091f3a0def21e768c5994ffdd75c8",
+      "size": 3955
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_ksl",
+      "sha256": "549c13f20fef232f59d0d59a5861c29efd34626675625a29cdd304c4e9e74d07",
+      "size": 14992
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_lzd",
+      "sha256": "e458738ff7e37b7ff027763922360b4428332e7e3084481370dd0b30368689fc",
+      "size": 3637
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_nor",
+      "sha256": "87ddce862e71c6634d634f8eaa0c9d2d6bb2a7834c60024fd3f78bb310940785",
+      "size": 4686
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_nur",
+      "sha256": "c86bb2ecad1ea690d4e99f0d294f3c55e4ddfe9a03ad531acfad9932e8c951fc",
+      "size": 91
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_ogr",
+      "sha256": "9875dac799cf6ea95ec9bb1e0657b1b96276567b5a432e11ed2db2939d98349b",
+      "size": 91
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_skv",
+      "sha256": "04573f48c52aa81a95859452deb109e7718fd1cc7fa748317906d11371d37b31",
+      "size": 9765
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_sla",
+      "sha256": "83038f174284bc3bb07c53c74c60878a85723d444f4d98065ce3e50fdfeb75e4",
+      "size": 1545
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_tmb",
+      "sha256": "2a1affcb5f6f254f81cbc0dbb006a5829123d30ce6b1ecc4b03613bae9a7c5c6",
+      "size": 2564
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_tze",
+      "sha256": "e902be871f17ab1146afc747ba00f8f0f785a1ff79e9c46405016e4846886842",
+      "size": 1893
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_vanilla",
+      "sha256": "099d499408a50fd559f305834cbcda7fe5e207cc8d4ca632b7b8298040ce7163",
+      "size": 55774
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_vmp",
+      "sha256": "b6d39017e3e9f607f72bb41b3003c2351ad61da418b589a1be86dc5a2f6e82ca",
+      "size": 11828
+    },
+    {
+      "path": "db/building_level_armed_citizenry_junctions_tables/SFO_wef",
+      "sha256": "30f85c62db6a3b6766128ebdfb17e542de03748e865312fee607a4292f323333",
+      "size": 12532
+    },
+    {
+      "path": "db/building_level_required_buildings_tables/SFO_build",
+      "sha256": "6aebaa6d27b65ef678555385950ca0bde920a08e759fd5cb85afd0d54df77ea9",
+      "size": 670
+    },
+    {
+      "path": "db/building_level_required_buildings_tables/data__",
+      "sha256": "387b612017346bb164bef3a5c86aef0c73b9f52de80d0aca346ab5a9447dea9a",
+      "size": 83
+    },
+    {
+      "path": "db/building_levels_tables/SFO_buildings",
+      "sha256": "49429f575e00e275094bbfc03d0cf0c2f378dbce7ebbb32208deeacf2a54708d",
+      "size": 35923
+    },
+    {
+      "path": "db/building_levels_tables/SFO_vanilla",
+      "sha256": "eeba10454be6493a0f2209645e8a317b2b930cac92266384440b39b41bb82e88",
+      "size": 128378
+    },
+    {
+      "path": "db/building_set_to_building_junctions_tables/SFO_buildings",
+      "sha256": "ca5aa009dd6989fc9beffc80169c568267e929013a5eda3df8bd86af809bcb56",
+      "size": 7642
+    },
+    {
+      "path": "db/building_set_to_building_junctions_tables/SFO_vanilla",
+      "sha256": "f1b97ba74de3c89eec5f11f4e1e4b9b52694b6628e59884dd76fddc0022eb515",
+      "size": 2727
+    },
+    {
+      "path": "db/building_sets_tables/SFO_buildings",
+      "sha256": "09bf96f2978cd67470948351b146d3bcdd1aab073dd1f50b1a802d0b5efd7426",
+      "size": 966
+    },
+    {
+      "path": "db/building_sets_tables/SFO_campaign",
+      "sha256": "cd16047e403f763bf446f5082150d7fd6bc2334d4fb575db0f9103eeb9e28b8a",
+      "size": 216
+    },
+    {
+      "path": "db/building_superchains_tables/SFO_buildings",
+      "sha256": "161dfb6504e4a054ab64913832331012a0ce173eeb4e4d47cf459cb51ddf8a85",
+      "size": 307
+    },
+    {
+      "path": "db/building_units_allowed_tables/SFO_campaign",
+      "sha256": "cd279f00ba15d8f6f1a87fd9e8a28b3d0aff8de54736d7d16cc46052cd9f9df9",
+      "size": 35823
+    },
+    {
+      "path": "db/building_units_allowed_tables/SFO_units",
+      "sha256": "d45da1f00a3f38f7fd8f6a7b4102f8360979686d310d798d324ad9a13bb4e487",
+      "size": 29487
+    },
+    {
+      "path": "db/building_units_allowed_tables/SFO_vanilla",
+      "sha256": "2d4a302778c033ebefbf01659ba1cf14e1d9dd15648555780cef987a23d927fc",
+      "size": 30464
+    },
+    {
+      "path": "db/building_upgrades_junction_tables/SFO_buildings",
+      "sha256": "bd0f41f9a9bbc82309632de0bd5e2d9b660635e461f4c5590c45ddc2e1e347ca",
+      "size": 7754
+    },
+    {
+      "path": "db/building_upgrades_junction_tables/SFO_vanilla",
+      "sha256": "6f2751da4363fbdf81d5abcaa22b8daba4df3e39197757e6d03324814d9927a7",
+      "size": 707
+    },
+    {
+      "path": "db/cai_construction_system_unblocking_buildings_tables/SFO_build",
+      "sha256": "d3bb090dc35cfbb5a9916bf5fba1ba17b9073c17f7c7cdf2f0d4875543baa6af",
+      "size": 158
+    },
+    {
+      "path": "db/cai_decision_items_tables/Skrolk_plagues",
+      "sha256": "757cc9e10b90d0340f5459fcfe9b3966bb28de6f7c7f660fff1de4e993dab6e2",
+      "size": 246
+    },
+    {
+      "path": "db/cai_decision_policies_tables/Skrolk_plagues",
+      "sha256": "b5eb0035c80de3078ec2730e575172334676073b6f8753f2e4971578c466a7a0",
+      "size": 168
+    },
+    {
+      "path": "db/cai_decision_policy_domain_junctions_tables/Skrolk_plagues",
+      "sha256": "e03d91ff570e16f0bee84dd74adf2c07746737c2318595ef61398092cddff0ea",
+      "size": 800
+    },
+    {
+      "path": "db/cai_decision_policy_junctions_tables/Skrolk_plagues",
+      "sha256": "23fba692077db877a3a9096195044c06c99c0c9a8a52399eb4c73349e025f8b6",
+      "size": 1509
+    },
+    {
+      "path": "db/cai_decision_profiles_tables/Skrolk_plagues",
+      "sha256": "ceed4027d7e88094acc78da7923c4fcfdc738ce8bcd009734a89ced3af396f7b",
+      "size": 225
+    },
+    {
+      "path": "db/cai_personalities_decision_profile_junctions_tables/Skrolk_plagues",
+      "sha256": "67e205e6af0e9135726d8f4ef75febc9b1379f1517027d383db34566a89f935d",
+      "size": 168
+    },
+    {
+      "path": "db/cai_personality_faction_potential_modifiers_tables/SFO_campaign",
+      "sha256": "dc6489612f4f5460892b5ff8151b59b241f51e1d8c04bfca75103eae93da566b",
+      "size": 111
+    },
+    {
+      "path": "db/cai_plague_recipes_tables/Skrolk_plagues",
+      "sha256": "b21181b70b37eea58c72dd8910332082d499d8b99037736476c755798a816dfc",
+      "size": 195
+    },
+    {
+      "path": "db/cai_task_management_system_task_generator_groups_generators_junctions_tables/SFO_data",
+      "sha256": "e485dfa2689b0a482a17f64ce9a63f04223f1b1325ed52c94f84853ec5f6ac36",
+      "size": 10155
+    },
+    {
+      "path": "db/campaign_agent_subtype_factorial_effect_junctions_tables/#SFO_hero",
+      "sha256": "fcef0e6d460f53e8ef155aa11fd401996e7269cd98900d1ade9782e9143f3974",
+      "size": 575
+    },
+    {
+      "path": "db/campaign_agent_subtype_factorial_effect_junctions_tables/SFO_campaign",
+      "sha256": "70d046f993c73d7f51daa419c26b0a852f85dc5b16954a8b2ae3e4110e52b1f8",
+      "size": 24240
+    },
+    {
+      "path": "db/campaign_building_level_factorial_effect_junctions_tables/SFO_campaign",
+      "sha256": "73c96a4f55cd3514b36a452872ec86b7f6ee0de6d6ed2972204fdf19487a9668",
+      "size": 20910
+    },
+    {
+      "path": "db/campaign_character_art_sets_tables/#SFO_hero",
+      "sha256": "3e08486ec2da6c856f4fde9f7bbb781f71807776b4c6f72b4c15892c45c224d2",
+      "size": 4008
+    },
+    {
+      "path": "db/campaign_character_arts_tables/#SFO_hero",
+      "sha256": "d4110f54ec9258591dd181a81ec5c5ae5e2f9a26f61d3782e05ecb9885aad6f9",
+      "size": 14728
+    },
+    {
+      "path": "db/campaign_character_arts_tables/SFO_data",
+      "sha256": "1060c9aa4c8845ff225b5d010b709a26dfff88d562018c1d078a9ab37099a352",
+      "size": 1278
+    },
+    {
+      "path": "db/campaign_character_uniform_ancillary_junctions_tables/#SFO_hero",
+      "sha256": "8c4c680a0245cda844c11fdf7ccc0fe43a05136f6756ad7c908ef60b9a90a3a2",
+      "size": 1968
+    },
+    {
+      "path": "db/campaign_cultural_relations_tables/SFO_campaign",
+      "sha256": "73b5c64bf42ae5f76790177e69b87d63d9ec67dc8375c1245da695fa51783a47",
+      "size": 44158
+    },
+    {
+      "path": "db/campaign_difficulty_handicap_effects_tables/SFO_balance",
+      "sha256": "944fe43a9c6697de11fee7004259804070e63a26719112c238d5ee1af3a0d509",
+      "size": 7283
+    },
+    {
+      "path": "db/campaign_difficulty_handicap_effects_tables/SFO_campaign",
+      "sha256": "81179b53d016d227f6aa41504c8dc59b5bab6ab5dece1765236b96ebda611b36",
+      "size": 44798
+    },
+    {
+      "path": "db/campaign_difficulty_handicap_effects_tables/df_tabletopcaps",
+      "sha256": "1d0edf49c80c431a0c787632e8e040a7ada736684dd06c29e439621ba0a6f4c1",
+      "size": 1353
+    },
+    {
+      "path": "db/campaign_effect_list_effect_junctions_tables/SFO_campaign",
+      "sha256": "660db349f413c3676cbd22c90c21845638b8481e7c1802e17eb08f283470a092",
+      "size": 928
+    },
+    {
+      "path": "db/campaign_effect_list_effect_junctions_tables/data__",
+      "sha256": "5587788fee466651a49ec6d182ca551b65632ccb2e73fb9b5f0dac796fe0b43a",
+      "size": 225842
+    },
+    {
+      "path": "db/campaign_effect_lists_tables/SFO_campaign",
+      "sha256": "3fca9d6b8467d61b2b528a2b37667c5a8f811bad959bbc60e69a264d46d862d0",
+      "size": 138
+    },
+    {
+      "path": "db/campaign_effect_scopes_tables/SFO_campaign",
+      "sha256": "e9484f726c7b45817cdf8750d3db10f6b39ac03a3462879afe46e3caa6f89643",
+      "size": 4644
+    },
+    {
+      "path": "db/campaign_features_tables/SFO_campaign",
+      "sha256": "17609792dd3c06869054e6d87b67985a7818b187868bc7f703b5909cc0156851",
+      "size": 271
+    },
+    {
+      "path": "db/campaign_group_crafting_infos_tables/SFO_campaign",
+      "sha256": "234f052507dee96f7a48af8858268fbd37bbcca952a4c363c5ad075320a81385",
+      "size": 485
+    },
+    {
+      "path": "db/campaign_group_faction_plague_setup_sets_tables/Skrolk_plagues",
+      "sha256": "9fcda4aba60324034957d45daf551d3bc3125728f6021c811ff3d181af1887f4",
+      "size": 131
+    },
+    {
+      "path": "db/campaign_group_member_criteria_agent_subtypes_tables/SFO_campaign",
+      "sha256": "0dd494c441efaddd2b72f740ffa0e52f7e790952fa970e1b135d4ef5b3a886fc",
+      "size": 161
+    },
+    {
+      "path": "db/campaign_group_member_criteria_cultures_tables/SFO_campaign",
+      "sha256": "5c263eb072b1eec52829d1f8ab4818bbfc481ceb70f064a31593f977d029c340",
+      "size": 755
+    },
+    {
+      "path": "db/campaign_group_member_criteria_cultures_tables/SFO_ritual",
+      "sha256": "f0259ca4154b4742b1650078c5511ca20fb9b2d016367e51267249d3ef84aa2c",
+      "size": 182
+    },
+    {
+      "path": "db/campaign_group_member_criteria_factions_tables/SFO_campaign",
+      "sha256": "f5024f662c4df33319c0a62cb266eb07674da0271277c3fad8dc754b3d94265e",
+      "size": 6163
+    },
+    {
+      "path": "db/campaign_group_member_criteria_factions_tables/SFO_ritual",
+      "sha256": "6d313ebb643b13281e90f65af280089b55981215e608038fcb461f6ddaad8407",
+      "size": 778
+    },
+    {
+      "path": "db/campaign_group_member_criteria_factions_tables/Skrolk_plagues",
+      "sha256": "6f734cc0daf78f3bf90325aada2189dd1d0ad80c5ccc740ef08b36985651e016",
+      "size": 236
+    },
+    {
+      "path": "db/campaign_group_member_criteria_numeric_ranges_tables/SFO_campaign",
+      "sha256": "6039bcc76cbcce13263fa13e9c4ecba0211247754bae582374e7ec6cb8b7f6b9",
+      "size": 3585
+    },
+    {
+      "path": "db/campaign_group_member_criteria_numeric_ranges_tables/SFO_vanilla",
+      "sha256": "16e722650bbccd43e47593830488d991801c8f5e2316993e0873d0ad586a0f90",
+      "size": 1014
+    },
+    {
+      "path": "db/campaign_group_member_criteria_pooled_resources_tables/SFO_campaign",
+      "sha256": "cdf9d6f43c98ced71235f7f515accff8201ab894f8a66df8001fcb69a4152c8e",
+      "size": 3632
+    },
+    {
+      "path": "db/campaign_group_member_criteria_pooled_resources_tables/SFO_vanilla",
+      "sha256": "1cf5536780393dc0fb4cc18b5fa56d2f2bd7b0059b82a9128f3063468b0f4ab7",
+      "size": 979
+    },
+    {
+      "path": "db/campaign_group_member_criteria_subcultures_tables/SFO_campaign",
+      "sha256": "e99204ec2debc8fa15f15aa92c684ce85d43bb6bda67246903605ff64031eb01",
+      "size": 748
+    },
+    {
+      "path": "db/campaign_group_members_tables/SFO_campaign",
+      "sha256": "f422f46510833eeeff2f1d7d70731b7a182414c7a3eb0cfa21d57ea4609342bb",
+      "size": 6392
+    },
+    {
+      "path": "db/campaign_group_members_tables/SFO_ritual",
+      "sha256": "ffb89be60a0631a6387cc627649abbd76488787713ee018d81becf5fcb48f368",
+      "size": 627
+    },
+    {
+      "path": "db/campaign_group_members_tables/SFO_vanilla",
+      "sha256": "08b147c5a089e09aa328129faa515ea726ffd64a44e149aff358e93fd29a40d0",
+      "size": 1395
+    },
+    {
+      "path": "db/campaign_group_members_tables/Skrolk_plagues",
+      "sha256": "8f6e38783507815b5b4302b6e26233c296887c8ec59de10c9ef69ce173323175",
+      "size": 235
+    },
+    {
+      "path": "db/campaign_group_morale_effects_tables/SFO_campaign",
+      "sha256": "bff06e5704a384351ac4e11ba1c2e79b27fb5526d3fb6ae28dbff2200d922530",
+      "size": 527
+    },
+    {
+      "path": "db/campaign_group_plague_component_setup_sets_tables/Skrolk_plagues",
+      "sha256": "f67d9e6e642dc18c69ec26b86c55c052a430e0cb4a3309d85b917d32742f11c6",
+      "size": 121
+    },
+    {
+      "path": "db/campaign_group_pooled_resource_effects_tables/SFO_campaign",
+      "sha256": "0cdd66a5a6f59827fcb833231e424ad7c9a0c6d1050c961bbec102027d05e171",
+      "size": 5589
+    },
+    {
+      "path": "db/campaign_group_pooled_resource_effects_tables/SFO_vanilla",
+      "sha256": "76dee167cb40bcd1e19a9dc063234095cba31f615b8504c76a5ad5df4fdfd64e",
+      "size": 1603
+    },
+    {
+      "path": "db/campaign_group_pooled_resources_tables/SFO_campaign",
+      "sha256": "6e9fa058e6366473419920f7375eb969fbe85ce17662ce97e9148219f5775b91",
+      "size": 2648
+    },
+    {
+      "path": "db/campaign_group_pooled_resources_tables/Skrolk_plagues",
+      "sha256": "cab6559021efe9032ca5edea156889f70dfed49edb130d85e9d13f0cc15b102a",
+      "size": 142
+    },
+    {
+      "path": "db/campaign_group_post_battle_casualty_resources_tables/SFO_campaign",
+      "sha256": "2b21c0b8cdf268e6962e52f92df3e8683ecef5d6de6f4eb799a000175189a60e",
+      "size": 175
+    },
+    {
+      "path": "db/campaign_group_post_battle_looted_pooled_resources_tables/SFO_campaign",
+      "sha256": "4bf82d78fd9e134f4d16320f5f39dcb215801c79d5031e0488448d81ceadcfbb",
+      "size": 972
+    },
+    {
+      "path": "db/campaign_group_post_battle_looted_pooled_resources_tables/SFO_vanilla",
+      "sha256": "bcbd431b348fa7c7d850465bc33303c558c907cbe55d79ebc8b980b472923f01",
+      "size": 794
+    },
+    {
+      "path": "db/campaign_group_post_battle_looted_pooled_resources_tables/Skrolk_plagues",
+      "sha256": "23f03541806fcdeea5429f64d2bc7b1f3e3edb0c98bba4e47e72bf7b47cccca2",
+      "size": 189
+    },
+    {
+      "path": "db/campaign_group_rituals_tables/SFO_ritual",
+      "sha256": "91215f94580e29a7d4b56417855cf448d7296559eb9385835aa13de02e392cf8",
+      "size": 6203
+    },
+    {
+      "path": "db/campaign_group_rituals_tables/Skrolk_plagues",
+      "sha256": "c5d639c84ca090621ff72975a79fd68a5e3dfc2947e98300574375f757cb1cec",
+      "size": 373
+    },
+    {
+      "path": "db/campaign_group_settlement_occupation_looted_pooled_resources_tables/Skrolk_plagues",
+      "sha256": "bd45d217105d2218cf4f4b49d6399631c4c6725176cb05d427ac6844835ede7e",
+      "size": 200
+    },
+    {
+      "path": "db/campaign_groups_tables/SFO_campaign",
+      "sha256": "77c3958f2d315e8534846441b6fb50cc501479e73e983c5cf7c47f3dadd069f4",
+      "size": 2685
+    },
+    {
+      "path": "db/campaign_groups_tables/SFO_ritual",
+      "sha256": "7c9821463188b8af9a807b70a880681d8cae93212b53b1f15e9c1adc08f23409",
+      "size": 321
+    },
+    {
+      "path": "db/campaign_groups_tables/SFO_vanilla",
+      "sha256": "a89753a935d2d4c854e843581eb7b2d0743e5f4392b6745b75f5e48f182df0f1",
+      "size": 703
+    },
+    {
+      "path": "db/campaign_groups_tables/Skrolk_plagues",
+      "sha256": "7bb360f02184ca0d7b0f03140fe150cc110c48cbd9ffa309c7995d24031c8ad2",
+      "size": 151
+    },
+    {
+      "path": "db/campaign_map_attrition_damages_tables/SFO_campaign",
+      "sha256": "7b5a6c5a50f652a45c26543a5688ebd3fd0a9ed1e63a73e8da22de4c44d30aa7",
+      "size": 880
+    },
+    {
+      "path": "db/campaign_map_attrition_unit_immunities_tables/#SFO_hero",
+      "sha256": "288b931d09464d436b1ea4cd294d550ba5d7bdd9af4ce9daa9df21ba9d6ee83a",
+      "size": 3936
+    },
+    {
+      "path": "db/campaign_map_attrition_unit_immunities_tables/SFO_units",
+      "sha256": "a777bfcdb474e8c79249941d3e1167423af6f828712c205d5109b88f6584f047",
+      "size": 12828
+    },
+    {
+      "path": "db/campaign_map_attritions_tables/SFO_campaign",
+      "sha256": "7b83561feebfb4dcf4d1ca8ea2f2876ccb04be680cdc3131930e2f0a378b5de5",
+      "size": 167
+    },
+    {
+      "path": "db/campaign_mercenary_unit_character_level_restrictions_tables/SFO_campaign",
+      "sha256": "2a19304446c914465623fb9e66dc752dcd38e8d8f247d1c971d2d7ce9b73f278",
+      "size": 17279
+    },
+    {
+      "path": "db/campaign_mount_animation_set_overrides_tables/#SFO_hero",
+      "sha256": "9a638ce2577f4c9f95fd3c05585f18ccc26173faeb3a99cc42b2d270700c48a8",
+      "size": 2201
+    },
+    {
+      "path": "db/campaign_mounts_tables/#SFO_hero",
+      "sha256": "100868f8821d407f210f92386ee63e42a8b58dd9f05b005cf7bcc990116e9cab",
+      "size": 717
+    },
+    {
+      "path": "db/campaign_operation_set_armory_item_elements_tables/data__",
+      "sha256": "341f9a229bbbc480953d780635c3b707c833fd207dc15eaf45595ce92532b30e",
+      "size": 28510
+    },
+    {
+      "path": "db/campaign_post_battle_captive_options_tables/SFO_campaign",
+      "sha256": "8922d616dd287e9baab9621ef5e088b0e02b6779543ab144269af340c37e8991",
+      "size": 6281
+    },
+    {
+      "path": "db/campaign_post_battle_captive_options_tables/Skrolk_plagues",
+      "sha256": "7cf0f90a1947cb3d4e929248bde44d040a1b25cda8f68e9df56e3c317a99c3c7",
+      "size": 261
+    },
+    {
+      "path": "db/campaign_public_order_populace_effects_tables/data__",
+      "sha256": "daefbcf6dbed0eab70f2f1e34bc3484b8b3f02964e650fcdb4f5e9d8e3b55ac4",
+      "size": 16112
+    },
+    {
+      "path": "db/campaign_settlement_display_building_ids_tables/SFO_campaign",
+      "sha256": "e647c7c76efedd1a8162e70955c1dc33278714fff8d19ac082879371bfd7f57f",
+      "size": 561
+    },
+    {
+      "path": "db/campaign_stance_effects_junctions_tables/data__",
+      "sha256": "5606e2cccd6edc8ca881311f19232042e6a7d876127e681a34328c8df91223cc",
+      "size": 20011
+    },
+    {
+      "path": "db/campaign_stances_composite_scenes_tables/SFO_campaign",
+      "sha256": "503f1db526ba09f384354c28f86823b1015c374812d06c837b08165361e22e0e",
+      "size": 184
+    },
+    {
+      "path": "db/campaign_variables_tables/SFO_campaign",
+      "sha256": "579b7802ddd2214174d1fa8221c0a75bfe31566a80ba7b7f86983321ecfbd0bb",
+      "size": 6095
+    },
+    {
+      "path": "db/campaigns_campaign_variables_junctions_tables/SFO_campaign",
+      "sha256": "c06039abf46f0e31edf198921a7e86d7df2c066b69391a08d28c04144dd46073",
+      "size": 3835
+    },
+    {
+      "path": "db/cdir_events_dilemma_choice_details_tables/SFO_campaign",
+      "sha256": "700bf89d289154c403f9c2634321c223679f34137599edd1302338f3163b65bf",
+      "size": 18657
+    },
+    {
+      "path": "db/cdir_events_dilemma_followup_dilemmas_tables/SFO_campaign",
+      "sha256": "84629063e2dda0a605c5bd38935962146a424adde2ad9a346e3829c77cf06bba",
+      "size": 745
+    },
+    {
+      "path": "db/cdir_events_dilemma_followup_missions_tables/SFO_campaign",
+      "sha256": "48746f545561e49946bfa4f02dd514feab6b6744254035ad21524c503deff6ce",
+      "size": 2592
+    },
+    {
+      "path": "db/cdir_events_dilemma_option_junctions_tables/SFO_campaign",
+      "sha256": "ff7c80f94d307602e5b46bf08f458c4a7c41e50a4b252c4b6407fabf72a3a1a4",
+      "size": 30880
+    },
+    {
+      "path": "db/cdir_events_dilemma_option_junctions_tables/SFO_vanilla",
+      "sha256": "5af0b62d78ad8813a5a7cf8057b05629fff255b9769776bc4cda2991d3c72c41",
+      "size": 419
+    },
+    {
+      "path": "db/cdir_events_dilemma_payloads_tables/SFO_campaign",
+      "sha256": "98d1bd8c74d32cc337b3e401494b9ea087cca0dfb02cb77e4995251a1107a274",
+      "size": 84189
+    },
+    {
+      "path": "db/cdir_events_dilemma_payloads_tables/SFO_vanilla",
+      "sha256": "9219fcf6b271b78401bf331bcd8d86d5a745148f364a8a715703de0d8a62d774",
+      "size": 21352
+    },
+    {
+      "path": "db/cdir_events_incident_option_junctions_tables/@pj_emp_intrigue",
+      "sha256": "e9a5c44f57a1c23d774458fb9eafce835e696bfc5e7bc8b36709a13a27f7a2fd",
+      "size": 221
+    },
+    {
+      "path": "db/cdir_events_incident_option_junctions_tables/SFO_campaign",
+      "sha256": "deb2b36835d7842d562105ff8d9cfd835224e4c034f79358a13e9fa3fc4e62e3",
+      "size": 3034
+    },
+    {
+      "path": "db/cdir_events_incident_payloads_tables/SFO_campaign",
+      "sha256": "ff93f2dc32d924a4fce93fa7a23833af19e5dbb44366a1efed6197aad7ec4853",
+      "size": 1537
+    },
+    {
+      "path": "db/cdir_events_incident_payloads_tables/SFO_vanilla",
+      "sha256": "c18c32e871bb9a9d3959f4ba3748281e25c20d3548a53f83ba73f0e9ee6d582f",
+      "size": 2182
+    },
+    {
+      "path": "db/cdir_events_mission_followup_missions_tables/SFO_campaign",
+      "sha256": "e996f9642df7e7b4b2e6c9bef82c09cbeda7bff20a0807b1b9641e89d8c93dcb",
+      "size": 1218
+    },
+    {
+      "path": "db/cdir_events_mission_issuer_junctions_tables/SFO_campaign",
+      "sha256": "6ec5bdddd38875672b635672680e4383c9b1ceee9ec3f604369bad872a65daec",
+      "size": 3674
+    },
+    {
+      "path": "db/cdir_events_mission_option_junctions_tables/SFO_campaign",
+      "sha256": "e42335f09febcd2152c1f5097906cf086c1b256456eba0b682f054cc11e305d4",
+      "size": 50179
+    },
+    {
+      "path": "db/cdir_events_mission_option_junctions_tables/SFO_vanilla",
+      "sha256": "1f7c9262f0610b6318a2e52dd6702896fda22c1c620d1cc2ed8971d5e74463f2",
+      "size": 1314
+    },
+    {
+      "path": "db/cdir_events_mission_payloads_tables/SFO_campaign",
+      "sha256": "19fdfb6f3b1013183d09d93b58120428d796cd62daf782d0eaf9d49ec13afc4b",
+      "size": 27451
+    },
+    {
+      "path": "db/cdir_events_mission_payloads_tables/SFO_vanilla",
+      "sha256": "45fe8ed282714e958ac56b4f0aa598cfd793d805bac45702d34d14ced305ddf2",
+      "size": 66672
+    },
+    {
+      "path": "db/cdir_military_generator_unit_qualities_tables/#SFO_hero",
+      "sha256": "6d0093216d81bc65f0a596de7a8e91369f47c64eafdfa6ceb9b00df9e8da9e85",
+      "size": 2745
+    },
+    {
+      "path": "db/cdir_military_generator_unit_qualities_tables/SFO_units",
+      "sha256": "19b5d9ccb7fae1601d2f244aa64548eea02d81bbefff3999f792719209519ddc",
+      "size": 12196
+    },
+    {
+      "path": "db/character_ancillary_quest_ui_details_tables/SFO_campaign",
+      "sha256": "6b054d837a0f58d4dce43e28a7037962b81a2ecd3d782dac055b0b499d17ac92",
+      "size": 13973
+    },
+    {
+      "path": "db/character_experience_skill_tiers_tables/SFO_campaign",
+      "sha256": "0226ca335b029aad0090d00842a357d19557b30621a27ddf239f15fafb88c4f4",
+      "size": 9220
+    },
+    {
+      "path": "db/character_skill_level_details_tables/#SFO_hero",
+      "sha256": "d2554ef3513c78b1fbae36453c3157e6e8ff59d2f9c9cc8beb1f83ead7029937",
+      "size": 2716
+    },
+    {
+      "path": "db/character_skill_level_details_tables/SFO_skill",
+      "sha256": "2be421e028c242e652eeed0e01c694fba2d56a378a7c2e0eec0f63ef2ff9ef7e",
+      "size": 14057
+    },
+    {
+      "path": "db/character_skill_level_details_tables/SFO_vanilla",
+      "sha256": "9d1b0d41aec71a0190659b5477422767d6308c1c9352caa4b92b6230d7669601",
+      "size": 1127
+    },
+    {
+      "path": "db/character_skill_level_to_ancillaries_junctions_tables/#SFO_hero",
+      "sha256": "aa302f12b0e9c111bc1cd788fa6f7846b5f103f9e1d27c29b29b8e0d9e8b6754",
+      "size": 1210
+    },
+    {
+      "path": "db/character_skill_level_to_ancillaries_junctions_tables/SFO_skill",
+      "sha256": "808a05a1d15185c076db6391b1e3fd505674a3aadaa9851c4ee5984ece68fb78",
+      "size": 957
+    },
+    {
+      "path": "db/character_skill_level_to_dilemmas_junctions_tables/SFO_campaign",
+      "sha256": "8afa9de6f20d61fd89f098a4ce4625dce38f61daa6ff264d9143ca5316566ec3",
+      "size": 2803
+    },
+    {
+      "path": "db/character_skill_level_to_effects_junctions_tables/#SFO_hero",
+      "sha256": "c3420644b535a872bc1d11d53b272f0144985780e2c4190ab6f91a4d63f12506",
+      "size": 62424
+    },
+    {
+      "path": "db/character_skill_level_to_effects_junctions_tables/SFO_skill",
+      "sha256": "ff23f89e860e3a68fe8da60a467a4e27bbcd31583bbc85cd41ca60ddd6e33c59",
+      "size": 333663
+    },
+    {
+      "path": "db/character_skill_level_to_effects_junctions_tables/SFO_traits",
+      "sha256": "81acd2ea8a5e4e4141b3b1f78de9290ca41058245466e71d59ab8393a20af3df",
+      "size": 531428
+    },
+    {
+      "path": "db/character_skill_level_to_effects_junctions_tables/SFO_traits_LL",
+      "sha256": "a61ca34599e6e7e4c2101c1e2bb604bcd92af06d55fe23a917bfb3b27e1cfe29",
+      "size": 82759
+    },
+    {
+      "path": "db/character_skill_level_to_effects_junctions_tables/SFO_vanilla",
+      "sha256": "dd0c9628b27ba4b1ba96c7fbee5a4aba6623da213874da121760dc09e146f3a0",
+      "size": 172825
+    },
+    {
+      "path": "db/character_skill_level_to_effects_junctions_tables/SFO_vanilla_LL",
+      "sha256": "dfcb55372c537c4038a928fd4d17d5dc9bd18b5c321c60eee00bf31b413acaa6",
+      "size": 428863
+    },
+    {
+      "path": "db/character_skill_node_links_tables/#SFO_hero",
+      "sha256": "e260c176007e3d7649087cdda9147455e71dab9d4a28100608c053e0ea68cb09",
+      "size": 67937
+    },
+    {
+      "path": "db/character_skill_node_links_tables/SFO_skill",
+      "sha256": "931523650d6a7580b12364e99f01d1ec94630c5b66d2aca8a0ad3230e00078a1",
+      "size": 293575
+    },
+    {
+      "path": "db/character_skill_node_set_items_tables/SFO_hero",
+      "sha256": "89bfe443470fac3445ff2f9bc186d9201ec89d47c8692218a50a5f7e970d3a11",
+      "size": 57567
+    },
+    {
+      "path": "db/character_skill_node_set_items_tables/SFO_removed",
+      "sha256": "03f518a7ae2f7e31930c70b1954f0cb57ba471e9645467ff4bfb2fcb496a1fd0",
+      "size": 336675
+    },
+    {
+      "path": "db/character_skill_node_set_items_tables/SFO_skill",
+      "sha256": "bee5193ae8da2661834364ddf9a8774527cc7b09763e45dd793d4256c229110d",
+      "size": 219159
+    },
+    {
+      "path": "db/character_skill_node_set_items_tables/SFO_skill_generic",
+      "sha256": "a209010b1e1c7cc6c66b9f4c59daa46b5e83f2e101ccdc34d694dbe1f688b268",
+      "size": 101323
+    },
+    {
+      "path": "db/character_skill_node_set_items_tables/SFO_traits",
+      "sha256": "3f2b2e63c9cae4b7a2055290569c35add5ceae0848074c5c7d906d12bafc7408",
+      "size": 136893
+    },
+    {
+      "path": "db/character_skill_node_sets_tables/#SFO_hero",
+      "sha256": "3b671eabdfde734851299520d2c6603184a822007bf998b90d453f7ef741cd09",
+      "size": 1033
+    },
+    {
+      "path": "db/character_skill_nodes_skill_locks_tables/#SFO_hero",
+      "sha256": "ec102fd516662fe440a00ddee7d254d82de66f06859c386babf354720d0bd951",
+      "size": 4692
+    },
+    {
+      "path": "db/character_skill_nodes_skill_locks_tables/SFO_skill",
+      "sha256": "201e4f275397d304cdc3f7ae25a2d2299b855d141341b3783a3e8d2c50bc973f",
+      "size": 48284
+    },
+    {
+      "path": "db/character_skill_nodes_tables/#SFO_hero",
+      "sha256": "763bda51048298483a20d5c21256c871a909d60cf30f258ffeae269a5ed364c4",
+      "size": 65149
+    },
+    {
+      "path": "db/character_skill_nodes_tables/SFO_skill",
+      "sha256": "b930c55cfb65f230e911f0971893c4496b60eff04a6380495ffde5e725d5100b",
+      "size": 161161
+    },
+    {
+      "path": "db/character_skill_nodes_tables/SFO_skill_hero_generic",
+      "sha256": "7a230102c8f69723c3826c3113c39a7c510b69d051acc6a69bc6b96c2a868100",
+      "size": 62694
+    },
+    {
+      "path": "db/character_skill_nodes_tables/SFO_traits",
+      "sha256": "a5e255d8713ac9a9da3338afaca9b28014aa1e10f102a74c4bba09e64c9584c6",
+      "size": 65659
+    },
+    {
+      "path": "db/character_skill_utilization_hints_junctions_tables/SFO_campaign",
+      "sha256": "6e66857892460913f6b03a144bbe196229eed93eeaf76146a8cd5ba3a2b0bd85",
+      "size": 14290
+    },
+    {
+      "path": "db/character_skills_tables/#SFO_hero",
+      "sha256": "9b50652a998c2fdb89c1601ff1236b8057fbcdd8d0df84676d3327e03a9d7ace",
+      "size": 16699
+    },
+    {
+      "path": "db/character_skills_tables/SFO_skill",
+      "sha256": "a8d6502dc3a4be2d5e1f1093949e1a303b0d92f3d1e94854504bc543eb783ef5",
+      "size": 158588
+    },
+    {
+      "path": "db/character_skills_tables/SFO_vanilla",
+      "sha256": "5afe098311f5bce7438d229c07ea2a4a1e269d550db67406b63f43b73c41b29e",
+      "size": 131949
+    },
+    {
+      "path": "db/character_skills_to_level_reached_criterias_tables/#SFO_hero",
+      "sha256": "618e7271b558031b135c02037d23be3680196077d2922a1ad46d5e03576d369d",
+      "size": 471
+    },
+    {
+      "path": "db/character_skills_to_level_reached_criterias_tables/SFO_skills",
+      "sha256": "ab8cf404ea7d8b26875eb5b11ec9559d6a4fc8023f9b649e6640ece4261b6f16",
+      "size": 9987
+    },
+    {
+      "path": "db/character_skills_to_level_reached_criterias_tables/SFO_vanilla",
+      "sha256": "6768e71f0393bf055800e2cd26e950e9d28d75b33bf79e5370ed5d3a94bcbc6b",
+      "size": 380
+    },
+    {
+      "path": "db/character_skills_to_quest_ancillaries_tables/#SFO_hero",
+      "sha256": "cfa04bb09170c281c34c9f49197b7f22dedee924a0e6e9d48400ba9d140b2744",
+      "size": 131
+    },
+    {
+      "path": "db/character_skills_to_quest_ancillaries_tables/SFO_skill",
+      "sha256": "a9b142969d2a971677d2d8f381c87d748b4418799f344448230cceb800a241a0",
+      "size": 915
+    },
+    {
+      "path": "db/commodities_tables/SFO_campaign",
+      "sha256": "739c618ea03db59b008f177e1de7a6394e528d7a4684ae75efaaeee9798803c7",
+      "size": 394
+    },
+    {
+      "path": "db/culture_settlement_occupation_options_tables/MUS_data",
+      "sha256": "900f159a714ff01ceb1afe951681b55fa209ba73246679b42d2cf4f55bf29376",
+      "size": 20664
+    },
+    {
+      "path": "db/culture_settlement_occupation_options_tables/SFO_campaign",
+      "sha256": "c1e2eec8c8080990c0d3009ba09d62cc3867c1c5cdabc11b6eb3c9bad38c83e6",
+      "size": 2065
+    },
+    {
+      "path": "db/culture_to_battle_animation_tables_tables/SFO_bastion",
+      "sha256": "bd6e387a0e828dc57b31669eca11b4d7c33e4b1f226ac7aa8842111e8a185806",
+      "size": 5185
+    },
+    {
+      "path": "db/culture_to_battle_animation_tables_tables/SFO_units",
+      "sha256": "e97d3c88d8cdd558b00dd2e6af3e9caa3978f3161170b13644023c68e1d157c3",
+      "size": 7491
+    },
+    {
+      "path": "db/dilemmas_tables/SFO_campaign",
+      "sha256": "c21b20c1c224db138d1a26a2451a8106863eb2b4a921140c44c998ae4c509077",
+      "size": 7678
+    },
+    {
+      "path": "db/diplomatic_relationship_effects_tables/SFO_campaign",
+      "sha256": "2e0a5c0a880de2ebecf4e99b035befa83a937aa2f4618e0061ecb86b8a8ea61f",
+      "size": 232
+    },
+    {
+      "path": "db/effect_bonus_value_agent_junction_tables/#SFO_hero",
+      "sha256": "3116c2836bacea95c259b7113e94e07c32d4dc2f0a6d5b97102cae89e4e89700",
+      "size": 418
+    },
+    {
+      "path": "db/effect_bonus_value_agent_junction_tables/SFO_campaign",
+      "sha256": "b115171b005f0f864b57f90b4c0ee997fee543a9bdd975402c6b0eccadbeb9c7",
+      "size": 4699
+    },
+    {
+      "path": "db/effect_bonus_value_agent_subtype_junctions_tables/#SFO_hero",
+      "sha256": "242c43a5ab505aa4cde0c7628dd9a672b60e60db758526958fb1ed33315ec353",
+      "size": 811
+    },
+    {
+      "path": "db/effect_bonus_value_agent_subtype_junctions_tables/SFO_campaign",
+      "sha256": "330e94ecd4f08c00ead5e2175a76ce9db09267c0abae62a228fa752479f2bbca",
+      "size": 12370
+    },
+    {
+      "path": "db/effect_bonus_value_attrition_record_junctions_tables/SFO_campaign",
+      "sha256": "e7ab795dcde47bb7b7c33e659881b4527737c0f27f4dec40ebea5f0038fe5a81",
+      "size": 312
+    },
+    {
+      "path": "db/effect_bonus_value_basic_junction_tables/SFO_campaign",
+      "sha256": "2f10711c48e68c4d52b44bd6b4bf5f85cc7391eedd0efa87f2f37211f9a69784",
+      "size": 3844
+    },
+    {
+      "path": "db/effect_bonus_value_battle_context_army_special_ability_junctions_tables/SFO_campaign",
+      "sha256": "8da4f2e3ca33974ccd107bec9d332341979f0530725769597ecac4e91c510e1a",
+      "size": 1868
+    },
+    {
+      "path": "db/effect_bonus_value_battle_context_junctions_tables/SFO_campaign",
+      "sha256": "5b595b152802aabd956f9c646e2bd9c8b86562260b0f661d933183b50fa5b6e1",
+      "size": 11322
+    },
+    {
+      "path": "db/effect_bonus_value_battle_context_unit_ability_junctions_tables/SFO_campaign",
+      "sha256": "0ab88953ea49490cdd8ce3b36ac62ee37ae6981368625f3eadb7625ba34de7bc",
+      "size": 259
+    },
+    {
+      "path": "db/effect_bonus_value_battle_context_unit_attribute_junctions_tables/SFO_campaign",
+      "sha256": "3d093645aff206855cf0febdbc72a740c9647574213a656bef811a031d0aa494",
+      "size": 145
+    },
+    {
+      "path": "db/effect_bonus_value_building_set_junctions_tables/SFO_campaign",
+      "sha256": "f4bd40828a0ccae04fc7fd59a9400b7c7665e95616edf306dc8da2b33db8ed1a",
+      "size": 1365
+    },
+    {
+      "path": "db/effect_bonus_value_faction_junctions_tables/SFO_campaign",
+      "sha256": "4497b3438a1e9223fdf09746c676f9d04662f38299cd7fbdba4679b3048a4324",
+      "size": 6001
+    },
+    {
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/SFO_balance",
+      "sha256": "0e4ecf6337352877e5fc87eeb6ce57d290c0192e121f3bc1ea15f0db0ad3562e",
+      "size": 2578
+    },
+    {
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/SFO_campaign",
+      "sha256": "e201c863cfaacdd65b06cc0c795f9c59d2dbe037ec289bfb71d8d0c5855e6e3e",
+      "size": 133773
+    },
+    {
+      "path": "db/effect_bonus_value_ids_unit_sets_tables/SFO_cap",
+      "sha256": "325202d7f52e647ec27bbaab052bad85c982cbe031ca0f8b2cb473ecdd8e0232",
+      "size": 21374
+    },
+    {
+      "path": "db/effect_bonus_value_military_force_ability_junctions_tables/SFO_campaign",
+      "sha256": "0aedd731272892af2dee5abc7ede826289ab88d8f3a645a25e538365d08a4219",
+      "size": 12955
+    },
+    {
+      "path": "db/effect_bonus_value_missile_weapon_junctions_tables/SFO_campaign",
+      "sha256": "6317fd954c901b37987fa8e5b79c00b840dc58cca0641e6e5e97d88b14a11f22",
+      "size": 130
+    },
+    {
+      "path": "db/effect_bonus_value_name_record_junctions_tables/#SFO_hero",
+      "sha256": "4278cdf6f6e8910819a5860a943009ce7a3b6c04273da7e02ba3135d86065ea0",
+      "size": 583
+    },
+    {
+      "path": "db/effect_bonus_value_plague_component_junctions_tables/Skrolk_plagues",
+      "sha256": "b26d4b8239420520a047ee906f168ee88e313e2f71fd928ee077f81b44a90c31",
+      "size": 170
+    },
+    {
+      "path": "db/effect_bonus_value_pooled_resource_factor_junctions_tables/SFO_campaign",
+      "sha256": "c8912e4bd6a34d4ef1225683c3b83fc8476e25a4b8616b5f70e829455a4b80c1",
+      "size": 3918
+    },
+    {
+      "path": "db/effect_bonus_value_pooled_resource_factor_junctions_tables/SFO_vanilla",
+      "sha256": "b4d5f20d9ed5c0c06b45858dc0d63972f921c1f7e760979259f8cd44f1467816",
+      "size": 333
+    },
+    {
+      "path": "db/effect_bonus_value_pooled_resource_junctions_tables/SFO_campaign",
+      "sha256": "01ebaf2dcc611066d58725095b1111d050faf5511cc5adae843960032d1c9296",
+      "size": 645
+    },
+    {
+      "path": "db/effect_bonus_value_pooled_resource_junctions_tables/SFO_vanilla",
+      "sha256": "c9e49351739a36304e0761cd21a93aaeb8729a55ec575d06759f173054b099d2",
+      "size": 1472
+    },
+    {
+      "path": "db/effect_bonus_value_province_growth_factor_junctions_tables/SFO_campaign",
+      "sha256": "93a81f8ea9c42cebae89511c3715930b247bdf1941b02ff778cee48e219b81b8",
+      "size": 268
+    },
+    {
+      "path": "db/effect_bonus_value_public_order_provider_junctions_tables/SFO_campaign",
+      "sha256": "f4d4fa4e43db21ed32aa760772ce45fd827f388cc432ededb608a3811c13db8b",
+      "size": 590
+    },
+    {
+      "path": "db/effect_bonus_value_ritual_junctions_tables/SFO_ritual",
+      "sha256": "dd4c9c58a4efd810e3561be9255c149ad66892305b64b351d1cfe2b5de18d07f",
+      "size": 10080
+    },
+    {
+      "path": "db/effect_bonus_value_ritual_junctions_tables/SFO_vanilla",
+      "sha256": "8e4f5ca9d5c72c0b8d49f104c3b30beb232cf2c761a6e4490aa201ef540b8334",
+      "size": 3846
+    },
+    {
+      "path": "db/effect_bonus_value_scripted_junctions_tables/SFO_campaign",
+      "sha256": "6ad4c5fee589cc6ab326340a24af6001843d2adf8d06b9fd8a75a3d4bc5cce90",
+      "size": 387
+    },
+    {
+      "path": "db/effect_bonus_value_scripted_junctions_tables/df_tabletopcaps",
+      "sha256": "231461bcee87a17e28de799cb54eb560a89f142d3497cde1a30a1ab5a114508d",
+      "size": 179
+    },
+    {
+      "path": "db/effect_bonus_value_scripted_junctions_tables/df_tabletopcaps_special_rules",
+      "sha256": "9e9f3b5012da9788d9d92332e8083e5295a0ce89d181e7bc445004d13b017305",
+      "size": 255
+    },
+    {
+      "path": "db/effect_bonus_value_special_ability_group_junctions_tables/SFO_campaign",
+      "sha256": "260ea4da8c2ee935c1290c133eb2da91f8931916fa6a0989753064d86c979e43",
+      "size": 875
+    },
+    {
+      "path": "db/effect_bonus_value_special_ability_phase_record_junctions_tables/SFO_campaign",
+      "sha256": "7f3084a21a5d9e9f92664d4feb3b2051c12d831e70d72cf5ec30269c36baf4c5",
+      "size": 1430
+    },
+    {
+      "path": "db/effect_bonus_value_stance_junctions_tables/SFO_campaign",
+      "sha256": "1487b21e676a754eaa63092bc2246e54664396adb796d27e2201d0c788bd6755",
+      "size": 200
+    },
+    {
+      "path": "db/effect_bonus_value_subculture_junctions_tables/SFO_campaign",
+      "sha256": "2799812f9700f658409e67b21ff0b9fd5b66382af7abb27fe6cd6944cd7b49a7",
+      "size": 9798
+    },
+    {
+      "path": "db/effect_bonus_value_unit_ability_junctions_tables/SFO_campaign",
+      "sha256": "b212c7c3533faba4e469ac2ae9ecd83b593370fccc97d1272ee859572aa83280",
+      "size": 58335
+    },
+    {
+      "path": "db/effect_bonus_value_unit_attribute_junctions_tables/SFO_campaign",
+      "sha256": "368d997df09d98bdbabf3125fdd63264b6dc87329169b5e230f03da870bd8d4a",
+      "size": 811
+    },
+    {
+      "path": "db/effect_bonus_value_unit_list_junctions_tables/@z_iron_favour",
+      "sha256": "f37f28e4bcce86e81822cca52fef7d5b0c74fc2e562fedfd9c51a99076d3adf5",
+      "size": 1460
+    },
+    {
+      "path": "db/effect_bonus_value_unit_list_junctions_tables/cth_shared_unit_cap",
+      "sha256": "a1b3e74a293383e1d633f55f539e409a8fda1f68155c165aded107a1d120ff90",
+      "size": 2513
+    },
+    {
+      "path": "db/effect_bonus_value_unit_record_junctions_tables/SFO_units",
+      "sha256": "cdb31956c5a4632ef42e4549d5eb9b09411826bd5126a8857e24737ce920246d",
+      "size": 275
+    },
+    {
+      "path": "db/effect_bonus_value_unit_set_unit_ability_junctions_tables/SFO_campaign",
+      "sha256": "e6a41c7c352837e2e90d8d9fce3a1ed77ba0b343bbd46caeac8ccc45974bce7e",
+      "size": 16370
+    },
+    {
+      "path": "db/effect_bonus_value_unit_set_unit_attribute_junctions_tables/SFO_campaign",
+      "sha256": "163957b17558320cd8a6bf0d80d4324f6bc335ed948dec638275a3d52e4ead8a",
+      "size": 5400
+    },
+    {
+      "path": "db/effect_bundles_tables/@z_iron_favour",
+      "sha256": "329b480d8f5045a3828d62250cc700a2e0d2f72f9392df772df860ec78f2800a",
+      "size": 143
+    },
+    {
+      "path": "db/effect_bundles_tables/PO_data",
+      "sha256": "3d4d0eb0d9602dbb5dfc988e400ae8c775e69e6a81fd46adb447c320246fa441",
+      "size": 25611
+    },
+    {
+      "path": "db/effect_bundles_tables/SFO_campaign",
+      "sha256": "0302419064c67ac2e8a5003e67a1eb4b0ce94ac54e8c9b5c8a9a7cfd449e218f",
+      "size": 95747
+    },
+    {
+      "path": "db/effect_bundles_tables/df_tabletopcaps",
+      "sha256": "c0935720665eacafbd60ef3e9ac21727ae3c7bf5891da2ed797cdbc72e8c873f",
+      "size": 131
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/PO_data",
+      "sha256": "e32d0ddc9303911203045a03485cf4d78848c66fb367b42321130d1c8e485779",
+      "size": 129361
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_campaign",
+      "sha256": "ec317204a3d0817327ed41171d0bd4fdf19fdd566781ad0ac7c36fc757666543",
+      "size": 199541
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_corruption",
+      "sha256": "a3578cef886290aeacb7dc8edb9365ac85508ccbfde743b6e64cf12c285b15f9",
+      "size": 627627
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_edicts",
+      "sha256": "396b3d83561edfb34b04babb1b7fd37ce9a3266e2ef4bcc0c4292cd2abb2cac7",
+      "size": 84768
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_factions",
+      "sha256": "a399c275cc4c14d9954e036076827c31b2fbca2b99e51ab598fbc00ab8016d54",
+      "size": 200047
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_factions_buff",
+      "sha256": "09987c38d317b0dbdc316b033df33e010313c9950c09cf90c91a138c9e3ef572",
+      "size": 3200
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_menu",
+      "sha256": "c133c4f119acae9f794b2af044e256e5a2a2b8a94a0d2b04833d280746129bbd",
+      "size": 41644
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_ritual",
+      "sha256": "c927a1104a1e6639944b5f426a5b62b1e2874d837d88620bb0c1381906314c2d",
+      "size": 49531
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_stances",
+      "sha256": "2671aaf60243986e4a5e4c821a6d6809c6d10a1679cde073fa3b859a4916bc9d",
+      "size": 124547
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/SFO_vanilla",
+      "sha256": "63a3a8281f4b025f56461ee555edde059b3bfd53131492eac9f2f1e20b96334c",
+      "size": 756537
+    },
+    {
+      "path": "db/effect_bundles_to_effects_junctions_tables/data__",
+      "sha256": "8ac4778f6525aba7feb9f745c7c049b40192c5ad9dd35a2f4934d89e4ec7cbe1",
+      "size": 995563
+    },
+    {
+      "path": "db/effects_tables/#SFO_hero",
+      "sha256": "a4909b016c416022ea864ca43883249ad2dbd66f53b0cc77f574a4b977025932",
+      "size": 1522
+    },
+    {
+      "path": "db/effects_tables/@z_iron_favour",
+      "sha256": "f01519d0b67977a81eac2094deb219709a743c367775d7e711c74f714e302f64",
+      "size": 1300
+    },
+    {
+      "path": "db/effects_tables/SFO_balance",
+      "sha256": "7af26454e0fd399daa74e5a90d91689c591ed6fca36a7bd8bdc52e6346f505b1",
+      "size": 2227
+    },
+    {
+      "path": "db/effects_tables/SFO_campaign",
+      "sha256": "e5dbb9da78eec584d9f078c0df183980f12661a2bcf1ac9b965459d4b82ce97a",
+      "size": 206620
+    },
+    {
+      "path": "db/effects_tables/SFO_cap",
+      "sha256": "70fbd6a274a0b07bd4e4b20a3763da00f71d0e4b3e90c4a3a4337bedcd08df00",
+      "size": 20686
+    },
+    {
+      "path": "db/effects_tables/df_tabletopcaps",
+      "sha256": "52402eaacc271c943f8cdc06a36f8cdcc1344b30ded92f583aa175fc54639feb",
+      "size": 378
+    },
+    {
+      "path": "db/event_feed_strings_tables/SFO_campaign",
+      "sha256": "fb3466b95447ab944a2bcbd82c172aa27c1aa3ea367d27a3b15890c07a751de4",
+      "size": 923
+    },
+    {
+      "path": "db/faction_agent_permitted_subtypes_tables/#SFO_hero",
+      "sha256": "91c08178b8a21cb712103251b1c8a031073213382e5d504a68b32d43391c90b3",
+      "size": 13781
+    },
+    {
+      "path": "db/faction_agent_permitted_subtypes_tables/SFO_campaign",
+      "sha256": "c5449f20e367f80dfbb4d8a8eb517bef657333473943301a53aac80f0563e3ec",
+      "size": 952
+    },
+    {
+      "path": "db/faction_agent_permitted_subtypes_tables/Skrolk_plagues",
+      "sha256": "f4ef67a9112ee0168487b13a39e246e9d0d0fadcd5de6d55b8e93e5f76ac3582",
+      "size": 168
+    },
+    {
+      "path": "db/faction_banned_unit_purchasable_effects_tables/SFO_campaign",
+      "sha256": "8bfaf114e4889f8a2cd3bd844098cee0beb619e304fd65c19dfd0e9231db8032",
+      "size": 22081
+    },
+    {
+      "path": "db/faction_plague_setup_set_items_tables/Skrolk_plagues",
+      "sha256": "bd188469d3b477ef82aabf473e3703eba4a9ea81a4dfede5806ab5c2f0ab5b95",
+      "size": 134
+    },
+    {
+      "path": "db/faction_plague_setup_sets_tables/Skrolk_plagues",
+      "sha256": "00c78a1e4171bba53c39dd9af8ffd1e015c83e717a6fd4ee9432ef80c70ff3bf",
+      "size": 108
+    },
+    {
+      "path": "db/faction_potential_difficulty_overrides_tables/SFO_campaign",
+      "sha256": "f1415c0ca8bbe530c1fbcc2c3e834fb26e5ecd773c6801df179c5304dc955c46",
+      "size": 31652
+    },
+    {
+      "path": "db/faction_potential_handicap_effects_tables/data__",
+      "sha256": "e1de5baeb3401439d48dd3f046cd0543bcbbb64a1a480e57359075680b9b5915",
+      "size": 2460
+    },
+    {
+      "path": "db/faction_set_effect_bundles_tables/Skrolk_plagues",
+      "sha256": "174eb2280d7b250d62ecb301ee5c03110e35e3f0de5e98905789e4f62ba178e3",
+      "size": 217
+    },
+    {
+      "path": "db/faction_set_items_tables/SFO_campaign",
+      "sha256": "d880d208aa42d9b6a1f72bcae3d4902c3b0763eb63856f7bfd1ab3bdf69a5b88",
+      "size": 237
+    },
+    {
+      "path": "db/faction_set_items_tables/Skrolk_plagues",
+      "sha256": "f2d361936feba5f2b8aff6a0a383e78dd3a76baf18aa5837754d3c83326529dc",
+      "size": 243
+    },
+    {
+      "path": "db/faction_set_items_tables/cth_shared_unit_cap",
+      "sha256": "42b2f5ab23cfc16510c80229bb99176da4cb6e6496495c91ed3fc6ef63aed280",
+      "size": 227
+    },
+    {
+      "path": "db/faction_sets_tables/cth_shared_unit_cap",
+      "sha256": "87fc834ff4b8b8e24722f39caa2d4935b99dc3a7c311a55b7a7b6bc47c0de937",
+      "size": 101
+    },
+    {
+      "path": "db/factions_tables/UFUI_sfo",
+      "sha256": "5beacb5d41f1aad5229e94cbb81bcdf5e739afe6f028604d000d9a8ffcf3b938",
+      "size": 411610
+    },
+    {
+      "path": "db/feature_set_to_faction_features_tables/SFO_campaign",
+      "sha256": "45679d21a3d36b891eeeea4f018a7cb2f4c5e06fb113d720b2bb1cdb10028617",
+      "size": 120
+    },
+    {
+      "path": "db/frontend_themes_tables/SFO_frontend",
+      "sha256": "5a37f372c7bea9ffb2a701a419676894ac0912bfd39474f3fde76939aa0c587e",
+      "size": 343
+    },
+    {
+      "path": "db/incidents_tables/@pj_emp_intrigue",
+      "sha256": "39be47a473317c8941fe79552d1cbe43aee49bc4bd70a68643e525f3b6b9e36b",
+      "size": 148
+    },
+    {
+      "path": "db/incidents_tables/SFO_campaign",
+      "sha256": "82baa40a3b72f8a276ac48589540005f0be8fc2eeb02b9afeb8f13d4c517d401",
+      "size": 1070
+    },
+    {
+      "path": "db/initiatives_tables/SFO_campaign",
+      "sha256": "11e7f64b8f3d86ad86a54fa6e87ca3a9ab0784251de257b4621d974b545c1b1c",
+      "size": 13475
+    },
+    {
+      "path": "db/land_units_tables/#SFO_hero",
+      "sha256": "4bf071832d27f8ddb1a5ac349083d8dcce9586874307b35e036b21cd42a651eb",
+      "size": 21022
+    },
+    {
+      "path": "db/land_units_tables/SFO_data",
+      "sha256": "d040ff2dab4ce844941701499f3cc1ac5dc7d7538b2095721d879b81cb2ba329",
+      "size": 1583033
+    },
+    {
+      "path": "db/land_units_tables/SFO_units",
+      "sha256": "96a357a13e82c666e15e0bcc32b0699d002c275976abb16eff0fd22c20903ffc",
+      "size": 88418
+    },
+    {
+      "path": "db/land_units_to_battle_personalities_junctions_tables/#SFO_hero",
+      "sha256": "ebb5777441d97a52fab6dbbbc38816e7e64fe5c8f6bdd9f3a5a4eba5fbff0ceb",
+      "size": 456
+    },
+    {
+      "path": "db/land_units_to_battle_personalities_junctions_tables/SFO_data",
+      "sha256": "859238b08e6d783325498fe30bb86d60862e268d8d55f960e5e8ab5bfbd82dd5",
+      "size": 847
+    },
+    {
+      "path": "db/land_units_to_battle_personalities_junctions_tables/SFO_units",
+      "sha256": "dc5ad54d1c460d10250068b9508938024de866d016ea990a6937b51852cbc34d",
+      "size": 3157
+    },
+    {
+      "path": "db/land_units_to_unit_abilites_junctions_tables/#SFO_hero",
+      "sha256": "5fd6f4b5b0023979c7cfb0cee0b8f55991aaeaa4ff295e3b15cd94c4ee6901a7",
+      "size": 14245
+    },
+    {
+      "path": "db/land_units_to_unit_abilites_junctions_tables/SFO_AR_unit_balance",
+      "sha256": "01afe9f3d0ff90bac137568997774102f4c15a73dd2c6f97073159f72278cefd",
+      "size": 14681
+    },
+    {
+      "path": "db/land_units_to_unit_abilites_junctions_tables/SFO_abilities",
+      "sha256": "2af7ea0eef5d0a919060876057fdd9eb2e39a56b72ec3625422276aaa125c58d",
+      "size": 124419
+    },
+    {
+      "path": "db/land_units_to_unit_abilites_junctions_tables/SFO_units",
+      "sha256": "a528e325b57e2a84f7fa449645f6d0ddba4f30260cfcdd7a83a6a6ef6a83254c",
+      "size": 30390
+    },
+    {
+      "path": "db/land_units_to_unit_abilites_junctions_tables/data__",
+      "sha256": "a973907d7b02a86a0f9bd11a668f97d7caae6a9d6980718590ed32528c4edca4",
+      "size": 679173
+    },
+    {
+      "path": "db/main_unit_faction_overrides_tables/SFO_data",
+      "sha256": "a8d140dcc30d40d1e20b45e2226bff5f17a219b918d1fafbc14a753162bd3326",
+      "size": 7839
+    },
+    {
+      "path": "db/main_units_tables/#SFO_hero",
+      "sha256": "8454c766e47d09de159a6b2db4f1d262dded044ef92cc61b1c67fd6083afa3e3",
+      "size": 12325
+    },
+    {
+      "path": "db/main_units_tables/SFO_data",
+      "sha256": "8d1fe161a3acc0ce184ea40b41fd22d4a967c967b02d433199fc02361907ef09",
+      "size": 911698
+    },
+    {
+      "path": "db/main_units_tables/SFO_units",
+      "sha256": "1bf1b18bffb9646c37e734ae48b02039cfd2b55be943fb834be3caa985b2b2ab",
+      "size": 54656
+    },
+    {
+      "path": "db/melee_weapons_tables/#SFO_hero",
+      "sha256": "9a3a0c7fa5715a3977307dbfa13c5de1cfb0cc5ae2313c0bc55003c358c3aadf",
+      "size": 4200
+    },
+    {
+      "path": "db/melee_weapons_tables/SFO_data",
+      "sha256": "1f0f06c34d647692f8b900672c0acd25d577648c906884a3506378f632dd46aa",
+      "size": 165700
+    },
+    {
+      "path": "db/melee_weapons_tables/SFO_units",
+      "sha256": "d71fec1e9b98bb0d73b97575b18e1f1ff4b47400c533ee3c93d1c5e08a0f99ea",
+      "size": 14981
+    },
+    {
+      "path": "db/mercenary_pool_to_groups_junctions_tables/@z_iron_favour",
+      "sha256": "c4afd20ab8ce6d4a94da605c332ea59de59acf034b2d4ada04e6c2862a114304",
+      "size": 1064
+    },
+    {
+      "path": "db/mercenary_pool_to_groups_junctions_tables/SFO_units",
+      "sha256": "12c317173f48ff090e05d180587b0a592993ed425a0656832c2931a44ace60de",
+      "size": 791
+    },
+    {
+      "path": "db/mercenary_unit_groups_tables/@z_iron_favour",
+      "sha256": "254014faf0871355c31068033edeba869c14f17e9273323f7a8e7f368d44fcb6",
+      "size": 1023
+    },
+    {
+      "path": "db/mercenary_unit_groups_tables/SFO_data",
+      "sha256": "b68f1a92778d3c676565cd55db475cde94fc23a90e798d941c197aa49540cdfb",
+      "size": 2711
+    },
+    {
+      "path": "db/mercenary_unit_groups_tables/SFO_units",
+      "sha256": "7c97688b478fd91425a87d6c3f3a5901f5e9f11b9a82b1f89917f58bda2554a8",
+      "size": 340
+    },
+    {
+      "path": "db/missile_weapons_tables/#SFO_hero",
+      "sha256": "da22e7fcf587ada8a6241cbc5c33d1ab3d2d34ab0d446605f67d90d5443fd223",
+      "size": 439
+    },
+    {
+      "path": "db/missile_weapons_tables/SFO_data",
+      "sha256": "1b2205bc09a4963b96d455f1a797120fb3e42a5723fc7affec27381415f12c0a",
+      "size": 50220
+    },
+    {
+      "path": "db/missile_weapons_tables/SFO_units",
+      "sha256": "76339b0abd98743354f0824bf2f5b8da9d661840615c3d862311394a73195525",
+      "size": 2223
+    },
+    {
+      "path": "db/missile_weapons_to_projectiles_tables/SFO_data",
+      "sha256": "8fa17b8ebce7857857e5ccc2341b56fb49e372ae83737d9f1fa8e2baa782da85",
+      "size": 145
+    },
+    {
+      "path": "db/missions_tables/SFO_campaign",
+      "sha256": "307b7e78a86e70e715e5f961e6aa27bb43787657706186e4fddbabd29d73ed21",
+      "size": 13061
+    },
+    {
+      "path": "db/mortuary_cult_categories_tables/SFO_ritual",
+      "sha256": "63e2f5b54f321b5ef7f672178e12f46eca00e3ca0d695d531c60481c9fff6de3",
+      "size": 638
+    },
+    {
+      "path": "db/mortuary_cult_categories_to_rituals_tables/SFO_ritual",
+      "sha256": "09243c83446820461f755796b45860f10f50694836f00909a86c2e803e819155",
+      "size": 4441
+    },
+    {
+      "path": "db/mounts_tables/#SFO_hero",
+      "sha256": "8e98c6640b8a2d013b3a68c91f407c79f2200766e0c718b50e9782abc9f7686c",
+      "size": 1654
+    },
+    {
+      "path": "db/mounts_tables/SFO_data",
+      "sha256": "114ee85d2b9baa68c9ea2299c666d9771fa54ec08d066eb8f8c443c006ebf147",
+      "size": 2889
+    },
+    {
+      "path": "db/mounts_tables/SFO_units",
+      "sha256": "49e4dfdc103249481409997c229a8934b0016acfa4d35c0530fcc3fa825a89e3",
+      "size": 651
+    },
+    {
+      "path": "db/names_tables/#SFO_hero",
+      "sha256": "2ebe2ddcb1c728bdffacba36cead77cbb4826b1c09fc7035eb187eb3b9c86d9f",
+      "size": 437
+    },
+    {
+      "path": "db/plague_component_set_items_tables/Skrolk_plagues",
+      "sha256": "a6e9f113aa1fcad92ee68bd687fb4e544fa169a7c7246f3020e5db1db72a8e04",
+      "size": 155
+    },
+    {
+      "path": "db/plague_component_sets_tables/Skrolk_plagues",
+      "sha256": "c3873ed189f78b341bc79556f281e494405c8ba09486d2da70378e3b1e72be48",
+      "size": 125
+    },
+    {
+      "path": "db/plague_component_setup_sets_tables/Skrolk_plagues",
+      "sha256": "c366604116813092e49d974043982a0317420ab722689ab90eba3eed5f68453e",
+      "size": 99
+    },
+    {
+      "path": "db/plague_component_setups_tables/Skrolk_plagues",
+      "sha256": "2541c4bb9f0b99ca5604c22c325b2b123f575a9af1938cc98c330ab497d4b318",
+      "size": 2311
+    },
+    {
+      "path": "db/plague_components_tables/Skrolk_plagues",
+      "sha256": "a4f5fbe6f7620eedd47051f5eb300d5836c4fca5f956c8f7f9f6da1cd59bee92",
+      "size": 262
+    },
+    {
+      "path": "db/plague_effect_setups_tables/Skrolk_plagues",
+      "sha256": "d7481b60c2edbfadd166d4af89dc41d7ab21953fc87a8d92e8839aec88a00dc0",
+      "size": 238
+    },
+    {
+      "path": "db/plague_effects_tables/Skrolk_plagues",
+      "sha256": "0e49fd8da8454c5e3fc4f5e4d76804ed0f3cb4907ecec4a40eec124f455891d0",
+      "size": 466
+    },
+    {
+      "path": "db/pooled_resource_constraint_set_junctions_tables/data__",
+      "sha256": "3d32ac2a92745c1793605001b5e80fdc1da0541a3ad14c300de63864bae2988c",
+      "size": 4724
+    },
+    {
+      "path": "db/pooled_resource_constraints_tables/SFO_campaign",
+      "sha256": "cef5e03d5f12b216ec64c7979858cc72c42ac863e8d2a63e72ff451f983f9d1f",
+      "size": 941
+    },
+    {
+      "path": "db/pooled_resource_factor_junctions_tables/SFO_campaign",
+      "sha256": "6cfe0534cfc9e378c7429252ee521371e52831ff96cca0308b6011c288bcc631",
+      "size": 6991
+    },
+    {
+      "path": "db/pooled_resource_factor_junctions_tables/SFO_vanilla",
+      "sha256": "007c9a60bbf32874dc7e2a7a72d0cd7af67a9233b6084847205d72674f34a490",
+      "size": 599
+    },
+    {
+      "path": "db/pooled_resource_factors_tables/SFO_campaign",
+      "sha256": "6d3152e4b1f6f5fe946b5e0b99f9f0c852fe0d96e53388416c0293d2bca35c96",
+      "size": 2427
+    },
+    {
+      "path": "db/pooled_resource_factors_tables/SFO_vanilla",
+      "sha256": "1f4edf7b5528fde046e3724c64879a8607666ae9db30fcbe238189bab9d1ac6a",
+      "size": 299
+    },
+    {
+      "path": "db/pooled_resource_threshold_operation_sets_tables/SFO_campaign",
+      "sha256": "178f53cbf5c2f4e33e2683579c90069f6ca80bad92efe6661774e1b0e5f184f1",
+      "size": 337
+    },
+    {
+      "path": "db/pooled_resources_tables/SFO_campaign",
+      "sha256": "22e447ad2c481a809eab4a5e330c76e7df12c9407b1f741b95a389b7409aa286",
+      "size": 3349
+    },
+    {
+      "path": "db/pooled_resources_tables/SFO_vanilla",
+      "sha256": "e8b46baffe0f945d6c09b5507a88a58d16ab95b02fa11e8ab6eb93b1f9855140",
+      "size": 178
+    },
+    {
+      "path": "db/projectile_bombardments_tables/SFO_abilities",
+      "sha256": "9f4e12a4465b74e7c6b48e711a1554e8c92fc75b37a9542a9681bfdcf807f037",
+      "size": 731
+    },
+    {
+      "path": "db/projectile_bombardments_tables/SFO_data",
+      "sha256": "f31cc1c301de7faf9da55e4cc5b2c0b4595192340a8bb50ac5d9decec9a548df",
+      "size": 2374
+    },
+    {
+      "path": "db/projectile_displays_tables/SFO_data",
+      "sha256": "5ade18b16362f016db42af80d7ea664128b5f03a4dad0745e55a8c2c536a450a",
+      "size": 1447
+    },
+    {
+      "path": "db/projectile_shot_type_displays_tables/SFO_data",
+      "sha256": "a15819f214bf33b5f00643dd4b0a38fd84a511df4bbf7a6fd5842179789f06a7",
+      "size": 256
+    },
+    {
+      "path": "db/projectile_shot_type_enum_tables/SFO_data",
+      "sha256": "d3e0ba6c812d73bcfcddeec83b965b8c879f23784b6f3d0d58894e79cfc7069c",
+      "size": 136
+    },
+    {
+      "path": "db/projectile_shrapnels_tables/SFO_data",
+      "sha256": "cd9df319cb73ac90140a944230f39ccfe1f33ba41b5ffb07fe92bb1dd99ec188",
+      "size": 251
+    },
+    {
+      "path": "db/projectiles_explosions_tables/#SFO_hero",
+      "sha256": "c1f03c44fbd9b721d11f6b1cd8ae00c478c18e835389659ff7050cf7655a1008",
+      "size": 417
+    },
+    {
+      "path": "db/projectiles_explosions_tables/SFO_data",
+      "sha256": "b13a74265a9e635f6a96a5a6278d7ced44486012728db6de6e50a71121829428",
+      "size": 85217
+    },
+    {
+      "path": "db/projectiles_explosions_tables/SFO_units",
+      "sha256": "f8d9f6bbd0d04a52ba77557b1f301376574ba7e2760d3ac12cdf9c8545424f9e",
+      "size": 4054
+    },
+    {
+      "path": "db/projectiles_scaling_damages_tables/SFO_data",
+      "sha256": "6a69489d0c8e786ee8f8f1018cb2f371dbbb6b27280e9a835206f672e5f37ac9",
+      "size": 224
+    },
+    {
+      "path": "db/projectiles_tables/#SFO_hero",
+      "sha256": "0fd021fac37cac86e8a51d7ede54f98821f8c8c5c9e25a0b2b8dafa863c2009f",
+      "size": 1959
+    },
+    {
+      "path": "db/projectiles_tables/SFO_data",
+      "sha256": "18fd366ddeed52b34df2e278276a1c52cd46465cbc984685d96e4fb831607372",
+      "size": 338693
+    },
+    {
+      "path": "db/projectiles_tables/SFO_units",
+      "sha256": "208ebbd7f2c24d0522e081883be46bb98fae0ddbb478c7422fe0372a9e9cc700",
+      "size": 14264
+    },
+    {
+      "path": "db/provincial_initiative_records_tables/SFO_campaign",
+      "sha256": "c68ee0a7b4f8a178f2fcd594423e34f81e6f73103bc1cc877a3efd1305a37a9c",
+      "size": 589
+    },
+    {
+      "path": "db/provincial_initiatives_to_subculture_junctions_tables/SFO_campaign",
+      "sha256": "01aabe2607308fc0e744d639f5e6484886ffca62464245a206a8fc1ee31b0db7",
+      "size": 230
+    },
+    {
+      "path": "db/public_order_providers_tables/SFO_campaign",
+      "sha256": "00ac486c6a0c40f62068fb6f1a0f825e251e0f36a6048de418bd9595f64557c5",
+      "size": 184
+    },
+    {
+      "path": "db/random_localisation_strings_tables/SFO_frontend",
+      "sha256": "220c268299de6456b7c61c3140d4304ef90a1c2b3d52a15f6b59e61575169dbd",
+      "size": 160
+    },
+    {
+      "path": "db/resource_cost_pooled_resource_junctions_tables/SFO_campaign",
+      "sha256": "9af5fbf9a2d2e1084dd0582bce8d1a6c93f0964040019b4decf491ea5e0b2090",
+      "size": 5631
+    },
+    {
+      "path": "db/resource_cost_pooled_resource_junctions_tables/SFO_ritual",
+      "sha256": "45b61a6c4697c0eeacaa613b2c874b830d033667c1b6e0297649411bcf69c99b",
+      "size": 1067
+    },
+    {
+      "path": "db/resource_cost_pooled_resource_junctions_tables/SFO_vanilla",
+      "sha256": "858c7f89c9a455690ee2dc35798a3005438abdb81bbaee85077503168044e725",
+      "size": 37847
+    },
+    {
+      "path": "db/resource_costs_tables/SFO_campaign",
+      "sha256": "f706d708572467ab7af4cc50c26622369b6bd3e6c8ae02e1ed4e1101e09dd631",
+      "size": 6960
+    },
+    {
+      "path": "db/resource_costs_tables/SFO_ritual",
+      "sha256": "85a651b878fc35a1441f12844ab969e1e070458451b69153c2694e8bffeea58c",
+      "size": 1239
+    },
+    {
+      "path": "db/resource_costs_tables/SFO_vanilla",
+      "sha256": "a8377c8fc30056552882ec503694a8c0f38f38adb5279c57145035d152e54afd",
+      "size": 7316
+    },
+    {
+      "path": "db/ritual_payload_ancillaries_tables/SFO_ritual",
+      "sha256": "21a8e0dbf3dd5983679eb24ef9143e9f1b7d0c9063e026c3f772a6b8578a7118",
+      "size": 1577
+    },
+    {
+      "path": "db/ritual_payload_effect_bundles_tables/SFO_ritual",
+      "sha256": "e639f76119618aecf4fcf81b246161e7d78cf28f419b1c7217223da3cc8424a8",
+      "size": 5941
+    },
+    {
+      "path": "db/ritual_payload_effect_bundles_tables/SFO_vanilla",
+      "sha256": "ff0c59162c45434b3b627886a0e502653d465599dc92e79ff97c60e79f2e9cb1",
+      "size": 4480
+    },
+    {
+      "path": "db/ritual_payload_form_confederations_tables/SFO_ritual",
+      "sha256": "8e7123b0bbcd9842c5532a743d5eeba8e0ef71d99f8178e6c067fdbd3d2f1128",
+      "size": 392
+    },
+    {
+      "path": "db/ritual_payload_trigger_dilemmas_tables/SFO_campaign",
+      "sha256": "f208e6a5e2310db59ff199e0c7db1a53d1431284921ffd30235afb801b539ecb",
+      "size": 699
+    },
+    {
+      "path": "db/ritual_payloads_tables/SFO_ritual",
+      "sha256": "04aa05ba1c5f9321b238d0e0308d685ffbe1d0e3739273d08a994d96905d3290",
+      "size": 3644
+    },
+    {
+      "path": "db/rituals_tables/SFO_ritual",
+      "sha256": "90ebb41e7d8f10b84df12d7ab8f29cb91a2cf6ddcaa2bb5a527cc32d0d224026",
+      "size": 28728
+    },
+    {
+      "path": "db/rituals_tables/SFO_vanilla",
+      "sha256": "50e78ae586de02104a4a834c29df5f033bc6bbeaf100ae89f16e1eba9c9a922f",
+      "size": 14432
+    },
+    {
+      "path": "db/scripted_bonus_value_ids_tables/df_tabletopcaps_special_rules",
+      "sha256": "0b8e35d6c8f465f7ad9606c67a9ea0545ebf656bfe98b9269b680fafa279fc7b",
+      "size": 197
+    },
+    {
+      "path": "db/scripted_bonus_value_ids_tables/tabletop_caps_capacity",
+      "sha256": "0116b81b53c8693e48de6cee405ff51a4f2864dd15a4a726022e9de36c17b5cf",
+      "size": 124
+    },
+    {
+      "path": "db/settlement_type_to_building_chains_junctions_tables/SFO_data",
+      "sha256": "975b5caff8049d52bf69f713a6fe492429b83d14ea73cfde44043bc6c2082ee3",
+      "size": 5328
+    },
+    {
+      "path": "db/spawnable_force_unit_list_junctions_tables/SFO_campaign",
+      "sha256": "58160b2db9e2f8ba6529065d2e9b75914bdc1c1414c4aad043c1bee5f8ff8605",
+      "size": 329
+    },
+    {
+      "path": "db/special_ability_exclusive_toggle_groups_tables/SFO_abilities",
+      "sha256": "fcb0bad1bdb2b08f32b2647595678aa475fa6a03293a222da5a87b6976e0463e",
+      "size": 161
+    },
+    {
+      "path": "db/special_ability_groups_tables/#SFO_hero",
+      "sha256": "e805ef8b811fcb92282b36fc8f343880bea51c9f8dfc2bf12fa955203be228a4",
+      "size": 248
+    },
+    {
+      "path": "db/special_ability_groups_tables/SFO_abilities",
+      "sha256": "b93b442704e075ff5ba0842975dcc6f67af33ec4fc0b7122284d005bd21d7076",
+      "size": 444
+    },
+    {
+      "path": "db/special_ability_groups_to_unit_abilities_junctions_tables/#SFO_hero",
+      "sha256": "07bfe9369d16ac077f23b857d435fc05fe6a32f9456ae1af8750a2df5a69eb43",
+      "size": 323
+    },
+    {
+      "path": "db/special_ability_groups_to_unit_abilities_junctions_tables/SFO_abilities",
+      "sha256": "dcfb577564eb09487106a4028228d08a5e88f6ecb5c68ca5f244fd65763a3bca",
+      "size": 751
+    },
+    {
+      "path": "db/special_ability_groups_to_units_junctions_tables/#SFO_hero",
+      "sha256": "cb0802aa4f52fb60877f56193d183a788581d1e889e9416f0d651800e659158e",
+      "size": 503
+    },
+    {
+      "path": "db/special_ability_groups_to_units_junctions_tables/SFO_data",
+      "sha256": "41f714a3d6d9725ee6b50c3816feb3d82d71e12f904db1fd1eff5d60e8017d0e",
+      "size": 380
+    },
+    {
+      "path": "db/special_ability_intensity_settings_tables/SFO_abilities",
+      "sha256": "b983edf5f4149d44f80f33335ccb0f8718d9cb62da08162ad4ac73c3bcc3de2e",
+      "size": 1403
+    },
+    {
+      "path": "db/special_ability_intensity_settings_tables/SFO_data",
+      "sha256": "b04b2189c41790425906e790d3d7826a742d078ec552cabbd08f9c2e8284d28f",
+      "size": 1266
+    },
+    {
+      "path": "db/special_ability_phase_attribute_effects_tables/SFO_abilities",
+      "sha256": "96db722fe45ae6d82cb3b7f8da0472facffc1b5e808d5aad59e11a49bcd0d2c6",
+      "size": 8639
+    },
+    {
+      "path": "db/special_ability_phase_attribute_effects_tables/SFO_data",
+      "sha256": "8b14baf6e0ceca1f9a5b89bee070107e5a5ce0ad359ace612262a7fc911eef5c",
+      "size": 8522
+    },
+    {
+      "path": "db/special_ability_phase_stat_effects_tables/SFO_abilities",
+      "sha256": "fc4a8277e6139648e75e151b6b6ba0dc2d200d9564c966dc66a5e9f8fb70b6ce",
+      "size": 71292
+    },
+    {
+      "path": "db/special_ability_phase_stat_effects_tables/data__",
+      "sha256": "cd901997ad092e7f39f6cb605e60d55ca682194c54886c55c38f52dd1b5677b6",
+      "size": 261821
+    },
+    {
+      "path": "db/special_ability_phases_tables/SFO_abilities",
+      "sha256": "8058f2250cbabbbb92de9bb40a69ca8511a0a31044093268f5a3dcdd6d4c368f",
+      "size": 79392
+    },
+    {
+      "path": "db/special_ability_phases_tables/SFO_data",
+      "sha256": "a5b679b4cd86f4ced1daae3f33b4868c6022205ad8d167f2644db53ffb5bb94e",
+      "size": 395531
+    },
+    {
+      "path": "db/special_ability_spreadings_tables/SFO_abilities",
+      "sha256": "74216ee6352a5067a1f73c7f227576807247a05c1244f93e55bc8d74349e1a13",
+      "size": 232
+    },
+    {
+      "path": "db/special_ability_spreadings_tables/SFO_data",
+      "sha256": "6deb3020f7caecbf60cdb1f450da93b8818fe80d2d47ed88bf940323766cfe11",
+      "size": 171
+    },
+    {
+      "path": "db/special_ability_to_auto_deactivate_flags_tables/SFO_abilities",
+      "sha256": "65d433fca45832109bfcb2b9178a25455a391e0db6affa9a56c0382d2cdf8b84",
+      "size": 17157
+    },
+    {
+      "path": "db/special_ability_to_auto_deactivate_flags_tables/data__",
+      "sha256": "a9e953f444c71db2b0528d1f2f879e6cec8988f1dc7504c1e7f862b3bb3e211a",
+      "size": 39735
+    },
+    {
+      "path": "db/special_ability_to_invalid_target_flags_tables/SFO_abilities",
+      "sha256": "155ff36f5a1787304a2d797a62254ade1beb4291d3ec87a41f801f14351caca2",
+      "size": 7732
+    },
+    {
+      "path": "db/special_ability_to_invalid_target_flags_tables/SFO_data",
+      "sha256": "9214cc88ddaede2b59754e98eb23f050d4e17147c93d3b50326d6200ed3dfba3",
+      "size": 1122
+    },
+    {
+      "path": "db/special_ability_to_invalid_usage_flags_tables/SFO_abilities",
+      "sha256": "9860b94c95c995b8016379703274505644744b4dbbf88ed6cbbe12eb54f9b66f",
+      "size": 5262
+    },
+    {
+      "path": "db/special_ability_to_recharge_contexts_tables/SFO_abilities",
+      "sha256": "4d2f49e1e8d04da46b41fc8313bc3c8945de900cff8057041fd243eae0afc432",
+      "size": 2434
+    },
+    {
+      "path": "db/special_ability_to_recharge_contexts_tables/SFO_data",
+      "sha256": "5583bac1f6abb380ef2e96ad4be4c86cd4a79b9ae771765f66d7d9df2a31d0dd",
+      "size": 358
+    },
+    {
+      "path": "db/special_ability_to_recharge_contexts_tables/data__",
+      "sha256": "04edffc2588777be855a9a6f6abab2c1f056474016df97db6db3c17c968b47a0",
+      "size": 5200
+    },
+    {
+      "path": "db/special_ability_to_special_ability_phase_junctions_tables/SFO_abilities",
+      "sha256": "3619841d4b8543d63b6f21ba80b32a288aba588f7e7035d461dd40e8457f656b",
+      "size": 33546
+    },
+    {
+      "path": "db/special_ability_to_special_ability_phase_junctions_tables/SFO_data",
+      "sha256": "b0786a9ac7f264f258768119e90866ad8ce26fc9697b76c46b995bb3af33584d",
+      "size": 9248
+    },
+    {
+      "path": "db/taxes_effects_jct_tables/SFO_campaign",
+      "sha256": "78119052c9320728383894d1537ab9bccbff3d55474999a984b20d078e36ce29",
+      "size": 473
+    },
+    {
+      "path": "db/technologies_tables/SFO_tech",
+      "sha256": "302ee9b2dbd690cee467c761bdb1854401109e27de7da88c042481ee6652cf57",
+      "size": 89259
+    },
+    {
+      "path": "db/technologies_tables/SFO_tech_bst",
+      "sha256": "71dcc42ae84be0ff7d1fb4b5eb0c6b3f8146ac2bcafa3a2fd44628f0111cd8c2",
+      "size": 2622
+    },
+    {
+      "path": "db/technologies_tables/SFO_vanilla",
+      "sha256": "417db225ef7dffa829fed93a1ddc9a47d3618c5191276c8e0c43fe0e5b16a325",
+      "size": 1529
+    },
+    {
+      "path": "db/technology_effects_junction_tables/SFO_tech",
+      "sha256": "b5ba8123417d9dc79e3dcfa0078467acfa7b7d587220e60a3add654254e66fa1",
+      "size": 193202
+    },
+    {
+      "path": "db/technology_effects_junction_tables/data__",
+      "sha256": "62bcb4a9b751f3b9782f90e23e73e43a5e3c952926300f43fd8136c3396be2bc",
+      "size": 452633
+    },
+    {
+      "path": "db/technology_node_links_tables/SFO_tech",
+      "sha256": "6b4690fd233b389463f658de474c83b2bce68b299924ca54bfc15c3ef9a73335",
+      "size": 39005
+    },
+    {
+      "path": "db/technology_node_links_tables/SFO_vanilla",
+      "sha256": "93af8616c599ea5bbba01fd38798189b5b7905f7743423b44fe1d1b61d77a129",
+      "size": 1459
+    },
+    {
+      "path": "db/technology_node_sets_tables/SFO_tech",
+      "sha256": "7bec22f5508e4ac7992be5d83033f037f9d85dabbb40cd63152dc62b5b68ee5a",
+      "size": 116
+    },
+    {
+      "path": "db/technology_nodes_tables/SFO_tech",
+      "sha256": "33e62c762136e7eb2ebd1b1963d97a081b270a1b9ac5ae3f4b051303267795ee",
+      "size": 123005
+    },
+    {
+      "path": "db/technology_nodes_tables/SFO_vanilla",
+      "sha256": "3997e4bb4ce033dd235feef1a227da9106424d255e00bda31974fb64fea57f4c",
+      "size": 206983
+    },
+    {
+      "path": "db/technology_nodes_to_ancillaries_junctions_tables/SFO_tech",
+      "sha256": "e012031ec03b0a7359bf687629fa4f5544c8ccaaeb23ddd7b1797f429c5fedc4",
+      "size": 1434
+    },
+    {
+      "path": "db/technology_required_building_levels_junctions_tables/SFO_tech",
+      "sha256": "3c521b387edfced9f3d6240abb501cc50b54bb2f263c8775cfcfc734ba4e6f13",
+      "size": 7185
+    },
+    {
+      "path": "db/technology_required_technology_junctions_tables/SFO_tech",
+      "sha256": "37baef22c946cd6fff74cb8eb773475e2d47cbac06035aebc461bab519a157cc",
+      "size": 25007
+    },
+    {
+      "path": "db/technology_ui_groups_tables/SFO_tech",
+      "sha256": "931465ba2c301d96719fe7ec6e3f97f48778a4ea6bcb26fee2882c7479f9b508",
+      "size": 6783
+    },
+    {
+      "path": "db/technology_ui_groups_tables/UFUI_sfo",
+      "sha256": "748dfbd1dd4e9c910c78748c79ff8509fa132d2459509d0335a6bd27fa376dd7",
+      "size": 351
+    },
+    {
+      "path": "db/technology_ui_groups_to_technology_nodes_junctions_tables/SFO_tech",
+      "sha256": "251b6a9973ff520c7622fb9ea84679dbe50da7c42e9e3f52f44d57cb85b21351",
+      "size": 14669
+    },
+    {
+      "path": "db/technology_ui_tabs_tables/SFO_tech",
+      "sha256": "9f46988f4efd621696bc7d5e5fb679583d47c3161f2a7128bceacbfb6f32132d",
+      "size": 568
+    },
+    {
+      "path": "db/technology_ui_tabs_to_technology_nodes_junctions_tables/SFO_tech",
+      "sha256": "2f2456eb8889f56437f094cfe41d8e07914b1c544291f9f64aed9daf7d3a7187",
+      "size": 36045
+    },
+    {
+      "path": "db/toggle_system_building_variants_tables/SFO_campaign",
+      "sha256": "8705009b012d3cadafd9e94ff9dec47d94a2baab109e14950aebe788c66c4446",
+      "size": 26584
+    },
+    {
+      "path": "db/trait_level_effects_tables/SFO_LL",
+      "sha256": "7436b024a6983c71166198b3239a5439f39a9b7749c7e104e089dfe3a7213b13",
+      "size": 101092
+    },
+    {
+      "path": "db/trait_level_effects_tables/SFO_vanilla",
+      "sha256": "dc947df0443c3d74e5e3122cab497d2823c8e403dabd699f382f1086403a57a7",
+      "size": 71351
+    },
+    {
+      "path": "db/transported_military_forces_tables/SFO_campaign",
+      "sha256": "29378dcd5f90454f0f28e63e58fb179765834af6c753f2a54ba1f5d09c01409b",
+      "size": 169
+    },
+    {
+      "path": "db/twad_key_deletes_tables/SFO_delete",
+      "sha256": "6a43b555dfafcd8b7ae4696b578fdaeec9b83c9d0b246f731740c0852232278c",
+      "size": 732
+    },
+    {
+      "path": "db/ui_colours_tables/UFUI_sfo",
+      "sha256": "b4f377de9addc580cd5d37cf5fa86682aa340d85688a1989720fba5c57bfd1a5",
+      "size": 227
+    },
+    {
+      "path": "db/ui_features_to_factions_tables/Skrolk_plagues",
+      "sha256": "96427c5c7e92d68f37dae8168235e753d4ebbc2762cd4cb31f052a4e69406d37",
+      "size": 128
+    },
+    {
+      "path": "db/ui_main_theme_options_tables/UFUI_sfo",
+      "sha256": "5cfb5660900d63729f83ac516a36ee6be6741f086db85475b9ce14525736b998",
+      "size": 862
+    },
+    {
+      "path": "db/ui_tagged_images_tables/SFO_campaign",
+      "sha256": "3538ac3fe0bc3167fd4db700cd9af9203ca18d03bbc40f2653646d8d855b36d2",
+      "size": 157
+    },
+    {
+      "path": "db/ui_tagged_images_tables/df_tabletopcaps",
+      "sha256": "f207ecbe2ef4fb2759070acfa1c6df61d1f42a6151c8816706ecabfd7a66cc30",
+      "size": 500
+    },
+    {
+      "path": "db/ui_text_replacements_tables/SFO_campaign",
+      "sha256": "0d22e481ccaa79aaf5f18a6f2486223f62db6edcd176579515d88442598df42c",
+      "size": 4055
+    },
+    {
+      "path": "db/ui_unit_bullet_point_enums_tables/SFO_data",
+      "sha256": "a637c8981866c69e45e2fea37190c763978868f77769397748ef25a38d8250a5",
+      "size": 1992
+    },
+    {
+      "path": "db/ui_unit_bullet_point_unit_overrides_tables/#SFO_hero",
+      "sha256": "2dbfbd75bf6abe8cbd4fc79b330b0235fa92833f5e77e838b4088bcbf86ca1ed",
+      "size": 4258
+    },
+    {
+      "path": "db/ui_unit_bullet_point_unit_overrides_tables/SFO_units",
+      "sha256": "fd46d128c7ca7497c461d514dcbc68a67e3a05bb039e60b9b74173a4d0a1ec05",
+      "size": 18339
+    },
+    {
+      "path": "db/ui_unit_bullet_point_unit_overrides_tables/data__",
+      "sha256": "a7bfd7f68a2dadca0cae9e0cd1317114c25ebe73a28807f4e74ae24cf6445f5a",
+      "size": 390084
+    },
+    {
+      "path": "db/ui_unit_groupings_tables/#SFO_hero",
+      "sha256": "fa34e16c3699dc9b2b38a6f8656067212bdc3b7f618b02d7771650f3fabaa75d",
+      "size": 849
+    },
+    {
+      "path": "db/ui_unit_groupings_tables/SFO_units",
+      "sha256": "2774da418b8fb06184b58ae207f070320eff7f83ab4c580765c44ee0bd606fb5",
+      "size": 161
+    },
+    {
+      "path": "db/unique_agent_component_junctions_tables/SFO_campaign",
+      "sha256": "bf80711ee9da43b56c1eedd57c79c4eda09232b07c5ec9b90776f451006896b4",
+      "size": 188
+    },
+    {
+      "path": "db/unit_abilities_additional_ui_effects_tables/SFO_data",
+      "sha256": "7b11c5af441a3e0fd28ac87f00c63a69efc329d54860f6b182ada9cd76dbe779",
+      "size": 8730
+    },
+    {
+      "path": "db/unit_abilities_tables/SFO_abilities",
+      "sha256": "f9141498d06bb9d7573d9809cf3000d8711bbaa5af21472f3bba75b4f9faa3d5",
+      "size": 79169
+    },
+    {
+      "path": "db/unit_abilities_tables/SFO_data",
+      "sha256": "d308f7b17ae26a34f2bfa6d63d0f805e1978309da2bb98fe907a883c8699d9a8",
+      "size": 3529
+    },
+    {
+      "path": "db/unit_abilities_to_additional_ui_effects_juncs_tables/SFO_abilities",
+      "sha256": "73d41461d21b5f01a88cb17c6304d11c08fb7ece104c519c37ae4ec1c697d1bb",
+      "size": 27181
+    },
+    {
+      "path": "db/unit_abilities_to_additional_ui_effects_juncs_tables/data__",
+      "sha256": "760438313012c3579b92a39facb983b49b6c4977cbeb531eba438475f459d096",
+      "size": 233106
+    },
+    {
+      "path": "db/unit_allowances_tables/cth_shared_unit_cap",
+      "sha256": "9d8a21162a83d6894fd33447419e4f392d708da1d5e5ebcac8993f00ea269339",
+      "size": 746
+    },
+    {
+      "path": "db/unit_armour_types_tables/SFO_data",
+      "sha256": "e0c69d768f98034e8e0f4ddd6c3a42fd6cf4d322385b711f6389d3b8d0184fd9",
+      "size": 3570
+    },
+    {
+      "path": "db/unit_attributes_groups_tables/#SFO_hero",
+      "sha256": "fcb5ab4a57fef576b18fe1e81f248d86c070f73ce173262a9b91dffce9b62cb6",
+      "size": 1443
+    },
+    {
+      "path": "db/unit_attributes_groups_tables/SFO_data",
+      "sha256": "2a5ed9b5f248a430936361c336edb2343bde59615c72678806e7251a070cfba9",
+      "size": 117733
+    },
+    {
+      "path": "db/unit_attributes_groups_tables/SFO_units",
+      "sha256": "9674743e972e16c1d927fa0fbf6059331601bcb783502673250f93427c05d027",
+      "size": 4267
+    },
+    {
+      "path": "db/unit_attributes_to_groups_junctions_tables/#SFO_hero",
+      "sha256": "ba4a26dc847c110218fac5df1e391c2acaf5193279438cd2dee4c5ea3f188b02",
+      "size": 7297
+    },
+    {
+      "path": "db/unit_attributes_to_groups_junctions_tables/SFO_data",
+      "sha256": "87edcdd84b5b3fd68f94022cddfffee9338d20b8164f37bab3fa3c80cbeca33a",
+      "size": 565490
+    },
+    {
+      "path": "db/unit_attributes_to_groups_junctions_tables/SFO_units",
+      "sha256": "d1f2efe6d7993452fe172abfc235e12aa8073b154d1e0e064b9380f7c49b6a18",
+      "size": 24066
+    },
+    {
+      "path": "db/unit_description_historical_texts_tables/@SFO_hero",
+      "sha256": "342a3c587e30139ce3b095271c9481e6475f69f245f9ed1da1c8be4d0659dc49",
+      "size": 342
+    },
+    {
+      "path": "db/unit_description_historical_texts_tables/SFO_units",
+      "sha256": "05cc015aac34611d226d446b6fef8d3f2fcf0bcb592ec22287ce58ab9367703c",
+      "size": 1963
+    },
+    {
+      "path": "db/unit_description_short_texts_tables/#SFO_hero",
+      "sha256": "5cd2dba944291403bf04a06b093de7c27381e276f6db3e9a6a5d199235fe5893",
+      "size": 342
+    },
+    {
+      "path": "db/unit_description_short_texts_tables/SFO_units",
+      "sha256": "0c8a0085233b5406f8e0917cce0766e7a3ede241acbf01b065fd114059bb476b",
+      "size": 2472
+    },
+    {
+      "path": "db/unit_experience_bonuses_tables/SFO_data",
+      "sha256": "f261a95583967ddccefdabe8e11b6268ee12148a1fd43915a1222caa9008cf87",
+      "size": 234
+    },
+    {
+      "path": "db/unit_experience_threshold_modifiers_tables/SFO_campaign",
+      "sha256": "a630ea4419345703b78f6d36a4f8f296392ec8616bdbdd01ee92f5d3d076ecbb",
+      "size": 444
+    },
+    {
+      "path": "db/unit_experience_threshold_modifiers_tables/SFO_units",
+      "sha256": "2506b26c31090105363fcaa5e6686a286bed7b927b75c041c3a9d914f53c5aae",
+      "size": 463
+    },
+    {
+      "path": "db/unit_experience_thresholds_tables/data__",
+      "sha256": "0e9047175ffc38ecb561b235e86419225a60aab4120f9da063c5e57b2776938b",
+      "size": 434
+    },
+    {
+      "path": "db/unit_fatigue_effects_tables/SFO_data",
+      "sha256": "281812a6739661c1c27b520039a145296ac77927806e04a2fd038842edd09c6b",
+      "size": 3115
+    },
+    {
+      "path": "db/unit_lists_tables/@z_iron_favour",
+      "sha256": "7c10bbab2dcdca5c6f6156e049bce98116f0c918e1444364f5917185babaa88a",
+      "size": 556
+    },
+    {
+      "path": "db/unit_lists_tables/cth_shared_unit_cap",
+      "sha256": "7169cf629d068b9356f1a6172a72265a8084723edb4a344de74d8aa97b4bd387",
+      "size": 462
+    },
+    {
+      "path": "db/unit_missile_weapon_junctions_tables/SFO_campaign",
+      "sha256": "21ab129561d7abb1882f0683404ed5e14b94215c6eb9dcca32ca9e4fdb1b02f7",
+      "size": 550
+    },
+    {
+      "path": "db/unit_porthole_camera_settings_tables/SFO_units",
+      "sha256": "e7b427efaaa2cf4851da2d54b8b774592b04a81fbd691fe40e32d7c4fb678f9e",
+      "size": 180
+    },
+    {
+      "path": "db/unit_purchasable_effect_lock_reasons_tables/SFO_campaign",
+      "sha256": "ce7079286d6cf039ba8e56ca155a2762b06256c1dc3a3734571dc2d5b921e8f4",
+      "size": 690
+    },
+    {
+      "path": "db/unit_purchasable_effect_sets_tables/SFO_campaign",
+      "sha256": "403f9bdb9b2b3afc8c02d223679483864112003077483f66ce19ec91652e780c",
+      "size": 14274
+    },
+    {
+      "path": "db/unit_purchasable_effect_sets_tables/SFO_units",
+      "sha256": "b56623efd1c918214ae222d7bc191662f8fe7a4dbb156b14eaaf31473da8d132",
+      "size": 1821
+    },
+    {
+      "path": "db/unit_purchasable_effects_categories_tables/SFO_campaign",
+      "sha256": "d450e5854ea589c30737f7b79856162142739b1d7ad896d412ca49ab87c6dd63",
+      "size": 2120
+    },
+    {
+      "path": "db/unit_purchasable_effects_tables/SFO_campaign",
+      "sha256": "3347c2bc686f9dd340c81cca5c6b83477dcbb6de6637527ebae1c336a20d8514",
+      "size": 7459
+    },
+    {
+      "path": "db/unit_recruitment_source_overrides_tables/SFO_campaign",
+      "sha256": "c52c659fcb6f9f62a38881f6830436769771d789b9b756ce8716542658935452",
+      "size": 2103
+    },
+    {
+      "path": "db/unit_required_technology_junctions_tables/SFO_units",
+      "sha256": "8b0952466c9b89c260c35853db2c2e669dfc66cc83279f442c7911928a89f124",
+      "size": 715
+    },
+    {
+      "path": "db/unit_set_to_mp_unit_caps_tables/#SFO_hero",
+      "sha256": "3cbaf907cb8fdc634ee3e08ea9c556a6ffe157777a38d3e281f601cf76500e40",
+      "size": 112
+    },
+    {
+      "path": "db/unit_set_to_unit_junctions_tables/#SFO_hero",
+      "sha256": "056cf545a6e19014d60fb8e08ff6cba950d9c51023ef79c977d9ae44109a957f",
+      "size": 4069
+    },
+    {
+      "path": "db/unit_set_to_unit_junctions_tables/SFO_LL",
+      "sha256": "f47e870ae7cb60b19d1a5d77d3a7894bbf8b5e4122d3772c8dea93e09b7a5dc1",
+      "size": 17427
+    },
+    {
+      "path": "db/unit_set_to_unit_junctions_tables/SFO_balance",
+      "sha256": "556eb1ae023023a4c2d5d7c1cc3bb35043b80297c20730bfdc124fa527b10f89",
+      "size": 83840
+    },
+    {
+      "path": "db/unit_set_to_unit_junctions_tables/SFO_campaign",
+      "sha256": "f80ab36d1117bfd7fb9381daff67519474d298c23c30eeb4b5b60ceb12acb8de",
+      "size": 80376
+    },
+    {
+      "path": "db/unit_set_to_unit_junctions_tables/SFO_cap",
+      "sha256": "674596d801abb42c36256fa27e99c691921e7311a9b7061136ee1b35022fbaea",
+      "size": 53792
+    },
+    {
+      "path": "db/unit_set_to_unit_junctions_tables/SFO_units",
+      "sha256": "b859e6713daf4ee93b729bf28b861c0c7787732e5166b3536003c5e79de5686b",
+      "size": 81891
+    },
+    {
+      "path": "db/unit_set_unit_ability_junctions_tables/SFO_campaign",
+      "sha256": "17928fa34b163a320dbe702fae2e045bcbd006b54b9da97793792192bc98a3d4",
+      "size": 16441
+    },
+    {
+      "path": "db/unit_set_unit_ability_junctions_tables/SFO_vanilla",
+      "sha256": "5173e05d1434bba0d403c8591da3425f0576fdf8f1bfe6d49850839cb1b32a7c",
+      "size": 291
+    },
+    {
+      "path": "db/unit_set_unit_attribute_junctions_tables/SFO_campaign",
+      "sha256": "84674f44efc748cb2ff5c772200ca22867549c06dbb3cd964cdb9ff13916c245",
+      "size": 5061
+    },
+    {
+      "path": "db/unit_sets_tables/SFO_balance",
+      "sha256": "fe7911f9281e584ecd9bd5486a7cbf10aa973981cb3a8bfed33d1c1c2c4cedc0",
+      "size": 414
+    },
+    {
+      "path": "db/unit_sets_tables/SFO_campaign",
+      "sha256": "7265e393612e7361e69ab19ac0c0a98f84b1a5fc243adcd69ff6f8084dd37825",
+      "size": 7955
+    },
+    {
+      "path": "db/unit_sets_tables/SFO_cap",
+      "sha256": "317b23768a8ddc1cb6c2b2b801e857d0e770e7d2113760a075e9941dbfe421cb",
+      "size": 8612
+    },
+    {
+      "path": "db/unit_shield_types_tables/SFO_data",
+      "sha256": "1af8c3d97a0884485fa4c1f5f7be5926ac880f0256ca652ad8f8beb2e023a8ea",
+      "size": 1804
+    },
+    {
+      "path": "db/unit_spacings_tables/SFO_data",
+      "sha256": "b811ff52d41d27ff66e78a5f1bae1ce742bb4baa2e598af47921c1e2b4e43c99",
+      "size": 1004
+    },
+    {
+      "path": "db/unit_special_abilities_tables/SFO_abilities",
+      "sha256": "d2d2e27ee24ea41034c4a91f08d0f238bc406d421146a8a1d08e5212cda13b38",
+      "size": 178583
+    },
+    {
+      "path": "db/unit_special_abilities_tables/SFO_data",
+      "sha256": "85388ff64c78174b8271bf830d95a2f380dd6ce1b49dd60be56d1412eaace92b",
+      "size": 953057
+    },
+    {
+      "path": "db/unit_special_ability_to_special_ability_toggle_groups_junctions_tables/SFO_abilities",
+      "sha256": "53c437862fc8102c1c778f663a0fbd1312154ae05962cb46100822a41c60e7ee",
+      "size": 737
+    },
+    {
+      "path": "db/unit_to_unit_list_junctions_tables/@z_iron_favour",
+      "sha256": "d032ecddec0e0e371b6c0487d6f4ead33d4467447362480658443a143fcdbc04",
+      "size": 983
+    },
+    {
+      "path": "db/unit_to_unit_list_junctions_tables/SFO_campaign",
+      "sha256": "115bd63626b169be35e9313bed4bfac42111ec0a963d883c67cd801cf5502d81",
+      "size": 748
+    },
+    {
+      "path": "db/unit_to_unit_list_junctions_tables/cth_shared_unit_cap",
+      "sha256": "68b6b789b8c2bdc24ad2e1503f36c3a10f899698d18d1bcadbc8d96510c48735",
+      "size": 888
+    },
+    {
+      "path": "db/unit_variants_colours_tables/#SFO_hero",
+      "sha256": "b3e41b8e7b4e084c5fa00c044f78a44294d3b36753d5eb91153078ed86875775",
+      "size": 833
+    },
+    {
+      "path": "db/unit_variants_colours_tables/SFO_data",
+      "sha256": "0589f3da1540d249fb461178c9e97753af7b332d39a9ad5768a6e329df09685c",
+      "size": 727
+    },
+    {
+      "path": "db/unit_variants_colours_tables/SFO_units",
+      "sha256": "24f9931f1f43f21a741ed4cdfc245b096aa08b013a967cbeb3b5dca41f2e1d50",
+      "size": 2770
+    },
+    {
+      "path": "db/unit_variants_tables/#SFO_hero",
+      "sha256": "c32ef013ce95e41ff463399794112cd4df064968c333ba14d35ce5207c5b3ac9",
+      "size": 3926
+    },
+    {
+      "path": "db/unit_variants_tables/SFO_data",
+      "sha256": "92da436226c7b6086e61007b58e081af4d20f1fbfbd16e822d4dd52ceb254f0f",
+      "size": 1447
+    },
+    {
+      "path": "db/unit_variants_tables/SFO_units",
+      "sha256": "81f44dff01a3e1bfba090cd6f2ebbb244914cd3f0c63efa9454060b3c28c6899",
+      "size": 13328
+    },
+    {
+      "path": "db/units_custom_battle_mounts_tables/#SFO_hero",
+      "sha256": "9cf800d49c435094a1fc6e724714afcd04b0c690e1b355eac45ec493e1822b65",
+      "size": 1702
+    },
+    {
+      "path": "db/units_custom_battle_permissions_tables/#SFO_hero",
+      "sha256": "3c86001931498773a33620f57337eeee10187fd420f49a72c28a60f0d386a7bb",
+      "size": 6421
+    },
+    {
+      "path": "db/units_custom_battle_permissions_tables/SFO_data",
+      "sha256": "0eeaffb40f9e450fa01029a67951e28b2343cddf3077d37d8c60f7d22931aede",
+      "size": 744
+    },
+    {
+      "path": "db/units_custom_battle_permissions_tables/SFO_units",
+      "sha256": "e2076dc6bfcdae31d5e375c34221732bfabea42d52c1374d33d0f98e43ff9598",
+      "size": 7408
+    },
+    {
+      "path": "db/units_to_exclusive_faction_permissions_tables/#SFO_hero",
+      "sha256": "ee0c44485c0d6a471e49c1d5bd4fcdf9f8e6b7fe479ddea2c3d2f183080a41f9",
+      "size": 211
+    },
+    {
+      "path": "db/units_to_exclusive_faction_permissions_tables/SFO_campaign",
+      "sha256": "962fc2fd813e9a5a99a5f0b996a2347e065f03098dab535e2a988b06199cedc5",
+      "size": 669
+    },
+    {
+      "path": "db/units_to_exclusive_faction_permissions_tables/SFO_units",
+      "sha256": "8669bf749bba8de5c01cce98fee1fe9033942fb1672ba734b8373396dfc5119d",
+      "size": 5336
+    },
+    {
+      "path": "db/units_to_groupings_military_permissions_tables/#SFO_hero",
+      "sha256": "d8b748a06be9bc950786419eafe50bef79f822341ebc9e382f4d08474aaa17f8",
+      "size": 1742
+    },
+    {
+      "path": "db/units_to_groupings_military_permissions_tables/SFO_campaign",
+      "sha256": "114b80b9daa64f9a5eae786e7e0d2d0809e989614386b2be7757084850ba5f7a",
+      "size": 561
+    },
+    {
+      "path": "db/units_to_groupings_military_permissions_tables/SFO_units",
+      "sha256": "58ecb9df1cb2f5e3983136ebe074d134ad16101ac4548c9968857fbac19aae41",
+      "size": 6040
+    },
+    {
+      "path": "db/variants_tables/#SFO_hero",
+      "sha256": "73ecb6b9dc8eed509495e308e4afabc06670e5543d59b26cfa3de635bfd239df",
+      "size": 6085
+    },
+    {
+      "path": "db/variants_tables/Daelin_resize",
+      "sha256": "d00a245afbedda2f60302422b6ee0762e6b4184ecd74aee4d6060324503a8fa9",
+      "size": 95492
+    },
+    {
+      "path": "db/variants_tables/SFO_data",
+      "sha256": "4aff81f50771a9138fd1b49f5787668958d2d4d88cc383844eb55c92e4930a0b",
+      "size": 936
+    },
+    {
+      "path": "db/variants_tables/SFO_units",
+      "sha256": "48e5490e5e155acff42f952615d732e6562716f0d56d0733c6e532d6eb3abeb1",
+      "size": 18061
+    },
+    {
+      "path": "db/videos_tables/SFO_frontend",
+      "sha256": "beccc3b271dcfdbca4f8005b527e78d4bc40735ce27749b471376c77c20ba49b",
+      "size": 246
+    },
+    {
+      "path": "db/warscape_animated_lod_tables/SFO_units",
+      "sha256": "363ae72a2e9595d70e24d752d07f4732c29bfad11ba20ca4bbe52c3f85e1aea6",
+      "size": 488
+    },
+    {
+      "path": "db/warscape_animated_tables/SFO_units",
+      "sha256": "3a48ca74dcd43f381092e6728524366c095babeb60a646b9f935c41380313cd8",
+      "size": 310
+    },
+    {
+      "path": "script/_lib/mod/TableTopCaps.lua",
+      "sha256": "6b90878d7800f1ed3473ccd2b2b54cc9c6b84f6ed295fb72ba2e5c26566fc536",
+      "size": 128709
+    },
+    {
+      "path": "script/_lib/mod/pj_error_wrapping.lua",
+      "sha256": "3035dff75f841000995f6316c89fc4504f66150338a50f69e3907f384502e6f3",
+      "size": 1738
+    },
+    {
+      "path": "script/campaign/main_warhammer/wh_dlc07_peasant_economy.lua",
+      "sha256": "dbcd4b32f16dbbe70e6d8a23bf5be7ae430e068321dc5e7cc158fce44815d26a",
+      "size": 7639
+    },
+    {
+      "path": "script/campaign/main_warhammer/wh_dlc07_vows.lua",
+      "sha256": "b7ce868dd777d5614df7575cccec58fe311ac959df5169a9df449261470aeccf",
+      "size": 22866
+    },
+    {
+      "path": "script/campaign/main_warhammer/wh_horde_reemergence.lua",
+      "sha256": "6f31f32ab853444cb652dec26129907dc5f9a2fc3821d6caae787c8bf823444b",
+      "size": 11339
+    },
+    {
+      "path": "script/campaign/mod/!achangeling_immortal_empires.lua",
+      "sha256": "c64cd610b543c0f8082812aae79c50dfb04b04d2e45aec7c4a4850895566919e",
+      "size": 5066
+    },
+    {
+      "path": "script/campaign/mod/!achangeling_old_world.lua",
+      "sha256": "cdb0bb7eab4f0633e992f7b78a8618aaa86560fd68455b526358735bf6d238b0",
+      "size": 5017
+    },
+    {
+      "path": "script/campaign/mod/!anakai_immortal_empires.lua",
+      "sha256": "23aa338fb5b059977c4eea6b82c20fc6980892d363ad816c4fcb20407f661426",
+      "size": 5186
+    },
+    {
+      "path": "script/campaign/mod/Greentide.lua",
+      "sha256": "9f6e8c5cf92aade98c13abbdfb1b1456f2116a742b43f50d2638dd7b72c426bb",
+      "size": 2989
+    },
+    {
+      "path": "script/campaign/mod/WoodElfSeasons.lua",
+      "sha256": "70babe90a720bd89d1595dd49afd27298e1c3624e403efe20e0cbef2368b6f64",
+      "size": 4716
+    },
+    {
+      "path": "script/campaign/mod/cth_resource_miao.lua",
+      "sha256": "24dce5eeb5d8b42bece54245436927a64f3b7bc8884dd1c116b4fb87df7133f0",
+      "size": 2671
+    },
+    {
+      "path": "script/campaign/mod/cth_resource_zhao.lua",
+      "sha256": "113fb92d85f21fa0acc1481a30f83730cb807d06e0035aa6841d232a91833257",
+      "size": 2670
+    },
+    {
+      "path": "script/campaign/mod/pj_emp_intrigue.lua",
+      "sha256": "1592fb87ce24b89cd40eb4a923fde05bbca95190f422dade8a1217ac89e1d0d6",
+      "size": 22028
+    },
+    {
+      "path": "script/campaign/mod/rhox_pestilens_template_pooled_resource_ui.lua",
+      "sha256": "1bcdbe92ba736fd676595a7efee06016f86f32b65dab7df961a628f712d96d70",
+      "size": 437
+    },
+    {
+      "path": "script/campaign/mod/rhox_pestilens_tod.lua",
+      "sha256": "cd8b889b85f5fd382c0caf36675263e7860092d9ee9c0025b55c1b75ae5a7d44",
+      "size": 4592
+    },
+    {
+      "path": "script/campaign/mod/sfo_add_effect_bundle.lua",
+      "sha256": "8717db3184be555223170ba99131f29ba4541c3507182e9f0f6c513604c1d35c",
+      "size": 1961
+    },
+    {
+      "path": "script/campaign/mod/sfo_add_ror_script.lua",
+      "sha256": "7a70be815ca0781285a7a8ecdeb3b6e0142d52eb24f05658bcadad9730d2250b",
+      "size": 6055
+    },
+    {
+      "path": "script/campaign/mod/sfo_character_spawns.lua",
+      "sha256": "1d8de55edd8f4b8faf44d5147d318a962b3125584a059dfaab98524c69805d71",
+      "size": 1668
+    },
+    {
+      "path": "script/campaign/mod/sfo_confederation_bonus.lua",
+      "sha256": "21559766f197f984eb2e2de8efa145b4635b6bb0cd942b8373861ebceb1e7d51",
+      "size": 3048
+    },
+    {
+      "path": "script/campaign/mod/sfo_grimhammer_the_skaven.lua",
+      "sha256": "52b0c97107e7d8d9a9112f2063673c3bbe9a33b66ffaa3c5225c68db45a890fc",
+      "size": 5928
+    },
+    {
+      "path": "script/campaign/mod/sfo_supply_lines_removal.lua",
+      "sha256": "2aab65cf9835b79dbf769e961689b0a25623fde9e902c16340fb5851774136b2",
+      "size": 2381
+    },
+    {
+      "path": "script/campaign/mod/sfo_tech_pr_hiding.lua",
+      "sha256": "d94f840eb7446b2c8728502d99ab5c45ecd7eba77ac52b54f9e84b31af43766f",
+      "size": 2785
+    },
+    {
+      "path": "script/campaign/mod/sfo_tech_to_anc.lua",
+      "sha256": "083c6f989fd55b214b8b6fb1f1a8e5efe838d79cd3b8c61ecb46f80713389ad8",
+      "size": 2580
+    },
+    {
+      "path": "script/campaign/mod/sfo_ui_buttons.lua",
+      "sha256": "42df969041ca964ac1eade5776565b6ccb77d8193fe7a35479e1f302df0eb7c6",
+      "size": 21867
+    },
+    {
+      "path": "script/campaign/mod/sfo_xen_mod_menu.lua",
+      "sha256": "74e0592a6a20355a3c80cb68893d92a39b5c95d29623833d0c6c9b5ac93610ff",
+      "size": 93518
+    },
+    {
+      "path": "script/campaign/mod/skv_resource_rictus.lua",
+      "sha256": "628b007cf678eb6b7f30816084ffc5c364e161f35241e2ecba16991ef8fd58ac",
+      "size": 2665
+    },
+    {
+      "path": "script/campaign/mod/tmb_resource_khalida.lua",
+      "sha256": "2e8b9345164aa8ae893122e922c60d0cfd77aa88e84fae868ad489d1a4646ed4",
+      "size": 2663
+    },
+    {
+      "path": "script/campaign/mod/ttc_start.lua",
+      "sha256": "aa601cb1bf8484a48deec34464cab2b0b904b700256fe6d8c891fef60f6b1a89",
+      "size": 11242
+    },
+    {
+      "path": "script/campaign/mod/vmp_resource_court.lua",
+      "sha256": "9d84fdb7a1ce39c8811aab94e120dca5c73082261f2561f43d7de2171ef346c9",
+      "size": 2755
+    },
+    {
+      "path": "script/campaign/mod/z_iron_favour.lua",
+      "sha256": "db6636e56a0142ed5f8583c3d8262c46d7f0e883301a436bf2b04ba00ee8f29f",
+      "size": 3979
+    },
+    {
+      "path": "script/campaign/wh2_dlc11_treasure_maps.lua",
+      "sha256": "b21b2330cc82e0d1bc50c308c5dbac98e7a882e2c65f3c677fd89410457de768",
+      "size": 18089
+    },
+    {
+      "path": "script/campaign/wh2_dlc14_malus_sanity.lua",
+      "sha256": "08070df97f13c468ddce4a58d5b986dafdc8bff2691e0bb215a802e0d06387de",
+      "size": 10952
+    },
+    {
+      "path": "script/campaign/wh3_campaign_great_bastion.lua",
+      "sha256": "d71fb491acd8810071ce444c894395556e98c275906df7a5278df7f3f300a230",
+      "size": 93381
+    },
+    {
+      "path": "script/campaign/wh3_cp1_iron_favour.lua",
+      "sha256": "ed44c5f034db72552370c56291673189872727e867af91cc0e1aab2e7053c96f",
+      "size": 94574
+    },
+    {
+      "path": "script/campaign/wh3_dlc25_grudge_cycles.lua",
+      "sha256": "dabbbc2b35edeacc7817399b9a164a750558da15eb8ed9b10bada75eac9541da",
+      "size": 56137
+    },
+    {
+      "path": "script/campaign/wh3_dlc25_imperial_authority.lua",
+      "sha256": "a4ffa225a2c25cec6ae583d6a5ca439363a6ec97dca1a4634daa4b94907d8ff7",
+      "size": 10092
+    },
+    {
+      "path": "script/campaign/wh3_dlc26_cloak_of_skulls.lua",
+      "sha256": "ee4c9fd3cf4d1247b9281062b3fa805454aa91ef0ede8d267d06a1b006d6ec3e",
+      "size": 16300
+    },
+    {
+      "path": "script/campaign/wh3_main_prologue/factions/wh3_prologue_kislev_expedition/wh3_prologue_kislev_expedition_stage_3.lua",
+      "sha256": "339ad52555153be43514ad097515fcb6fa37289267b376c6feefa578fcbdb562",
+      "size": 21631
+    },
+    {
+      "path": "script/campaign/wh_campaign_bretonnia_chivalry.lua",
+      "sha256": "2b26d8b778b0e50bb19e5dbf1c3edb0163709f0f8e0b7fe85d78dabd9f8bcbdc",
+      "size": 12312
+    },
+    {
+      "path": "script/frontend/mod/ttc_browser.lua",
+      "sha256": "a0b67d066465f048525400f9b0645df15f211befdfc1daa591828d278a4cdf13",
+      "size": 179
+    },
+    {
+      "path": "script/frontend/mod/xen_sfo_game_resize_news.lua",
+      "sha256": "7416f0d4545bc7c06595bac8217a2866e4487f3e4a89df5537110056509320ad",
+      "size": 318
+    },
+    {
+      "path": "script/mct/settings/TableTopCaps.lua",
+      "sha256": "0a00c1d732ae3a8a2ba8d27ec91bad5889c10a294a7034f0f3694f738c19c074",
+      "size": 1817
+    },
+    {
+      "path": "script/ttc/ttc_vanilla_units.lua",
+      "sha256": "11bf3f2d5c78b2c74009a70dc287e9e7102976dd01cfd3814a7125cab4e0a43d",
+      "size": 83034
+    },
+    {
+      "path": "text/db/!!!skrolk_cauldron_override_text.loc",
+      "sha256": "98f46971576015a77b01276f6f63a09701d70dd33bf315206ee6c93da6640735",
+      "size": 3002
+    },
+    {
+      "path": "text/db/!HN_NEWTYPE.loc",
+      "sha256": "600d83496f3163d56cdbcdd76cb6495e8b6eb9523b38ff7b233af7011c01274c",
+      "size": 12303
+    },
+    {
+      "path": "text/db/##SFO_attributes_removed_text.loc",
+      "sha256": "f74983862ddaead85cf070f0ed104564f0de635ca73141459a9f2b1e1a593ad7",
+      "size": 14293
+    },
+    {
+      "path": "text/db/##SFO_effect_bundles__.loc",
+      "sha256": "cbd90f749e40224307c9a7c6262c22a4c6e526e46b0e266dfe64334c43916e2a",
+      "size": 345798
+    },
+    {
+      "path": "text/db/##SFO_effects__.loc",
+      "sha256": "9c8b4a281758a2e47a155869b224760c0e28b056490c7a29f881c7044065b8d4",
+      "size": 652862
+    },
+    {
+      "path": "text/db/#PO_effect_bundles__core.loc",
+      "sha256": "787bb9355be94b25e89177241787aa1ccf9650aec569973daabd7139c57809ae",
+      "size": 66604
+    },
+    {
+      "path": "text/db/#SFO_ancillaries__.loc",
+      "sha256": "8a15fd26b67956ef13048b6d1f05cfa8ea8307ce3b9cefd8f0aa214694ee06aa",
+      "size": 58223
+    },
+    {
+      "path": "text/db/#SFO_build_building_chains_chain_tooltip__data.loc",
+      "sha256": "045e93018383ebcc282667977d3b7afaf14ce12c9e8b63047ad03aa89086ac12",
+      "size": 16361
+    },
+    {
+      "path": "text/db/#SFO_build_building_culture_variants_tables__data.loc",
+      "sha256": "85b3ca97ac28e0c31bd6f5c77361c2cbb2056d8288f9b48ac342dcdcb8552798",
+      "size": 50419
+    },
+    {
+      "path": "text/db/#SFO_build_building_short_description_texts_data.loc",
+      "sha256": "112566a0b37041e51d30e9892933013d9a48208bd8a0c1c0956f9b8f6d39a66f",
+      "size": 93367
+    },
+    {
+      "path": "text/db/#SFO_building_effect_context_expressions__.loc",
+      "sha256": "ebf4e3b13865d4d4d2e7e60c346d9d5df1c4ef54c35581545a519b210a7962a6",
+      "size": 8945
+    },
+    {
+      "path": "text/db/#SFO_building_sets.loc",
+      "sha256": "e42a04fbdf9c1bc2bf5db5821dd7586f44f5b865c65164266f699c5fdbbcf224",
+      "size": 4076
+    },
+    {
+      "path": "text/db/#SFO_campaign_effect_scopes__.loc",
+      "sha256": "5de952812e2043b056978d88d7191cad20d02177ab7cd93fe61d9b88249a89fd",
+      "size": 17581
+    },
+    {
+      "path": "text/db/#SFO_cdir_events_dilemma_choice_details__.loc",
+      "sha256": "7bc75372a1694be291c1cbadeb82476c4c8ebe1955eb7722fcbb19dbfc7bbf8b",
+      "size": 246005
+    },
+    {
+      "path": "text/db/#SFO_character_skills.loc",
+      "sha256": "9afce1d25b5df72bd1af9f50f01d7ba65ea929201763a0eff5e58a5504ec9ca1",
+      "size": 971764
+    },
+    {
+      "path": "text/db/#SFO_dilemmas__core.loc",
+      "sha256": "bfd91e8838cab7ac2f8d05284832ecf78013de85fb2c52f7f8ad14d1135cab7e",
+      "size": 107850
+    },
+    {
+      "path": "text/db/#SFO_hero_agent_recruitment_categories__.loc",
+      "sha256": "d10ddf95cd35fa251b49dd8eae85d78449704ddd3c0c120830113b0e38db3eb1",
+      "size": 1091
+    },
+    {
+      "path": "text/db/#SFO_hero_agent_subtypes.loc",
+      "sha256": "634897ad910c88d3f8a591480a500fece67c2e7030b7d988ff231ab272c48f7f",
+      "size": 8377
+    },
+    {
+      "path": "text/db/#SFO_hero_culture_details__.loc",
+      "sha256": "67a318150d4e5c660f6cc8cd85c7bbc746903015adae46368df970389a5f63be",
+      "size": 1050
+    },
+    {
+      "path": "text/db/#SFO_hero_custom_battle_mounts__.loc",
+      "sha256": "2ff99dd7f71975a62a19f245db4bbf0d9c5cad5c9883e4f72b6058929fe631cc",
+      "size": 15177
+    },
+    {
+      "path": "text/db/#SFO_hero_land_units__.loc",
+      "sha256": "2e9699d53c311acec5811ebab8e1858e8dbac754208712ddfa69e874e9940745",
+      "size": 7481
+    },
+    {
+      "path": "text/db/#SFO_hero_names__.loc",
+      "sha256": "26b2bdf046c1e65f1913d2e04b7ddba9fb0a84312a250d9c0d6775bc33bee321",
+      "size": 1031
+    },
+    {
+      "path": "text/db/#SFO_hero_unit_description_short_texts__.loc",
+      "sha256": "35e061fc45e672a376e5a2aea8e0dd7a37b14c93a31fa23a8cd00f548c277529",
+      "size": 15074
+    },
+    {
+      "path": "text/db/#SFO_incidents__core.loc",
+      "sha256": "d0462f85f0d513b7716b782adaba0185c9deb22405b42282dcd13c0761115b14",
+      "size": 9302
+    },
+    {
+      "path": "text/db/#SFO_message_event_feed_strings__core.loc",
+      "sha256": "16870eb2a8ef44cd5c15476fc07dd96ac5767abac862d3a3633b9b862d96efe5",
+      "size": 4726
+    },
+    {
+      "path": "text/db/#SFO_missions__.loc",
+      "sha256": "883ae7e800eeb332a7192b799ff2bba36c72dd300bffc98995be771b5afe67d2",
+      "size": 64040
+    },
+    {
+      "path": "text/db/#SFO_mortuary_cult_categories__.loc",
+      "sha256": "29423ae428756e30ff5175689a5b44b1575467ce998a276a18a65ca987783258",
+      "size": 18848
+    },
+    {
+      "path": "text/db/#SFO_pooled_resource_factors__.loc",
+      "sha256": "d87f22221752b978ea4b8758024d50c0ba69a4a78a01decabf4ebcf90fabe61f",
+      "size": 41218
+    },
+    {
+      "path": "text/db/#SFO_pooled_resources__.loc",
+      "sha256": "00b47616a80044d48dd75ce0ff054c982b33b394a82bf5429e34121e7bb5c1e1",
+      "size": 55321
+    },
+    {
+      "path": "text/db/#SFO_projectile_shot_type_enum__.loc",
+      "sha256": "11d4cf5431595daa06faeec85b3b7096801552d94eda8587a6eec97d0f745d2d",
+      "size": 3604
+    },
+    {
+      "path": "text/db/#SFO_provincial_initiative_records__.loc",
+      "sha256": "eaf8a20fcdf3a82e6f320e1cf726a38a603f617879bf172c2af359325bf86685",
+      "size": 1654
+    },
+    {
+      "path": "text/db/#SFO_rituals__.loc",
+      "sha256": "9ea50c8c42e6a7f24546fa6ed02b3696c90b139402e6b9269aa820feb46d12a1",
+      "size": 31124
+    },
+    {
+      "path": "text/db/#SFO_script.loc",
+      "sha256": "87ad445f3b8825a2ae15a6a6a66a59952633dee1a1d380910468f56f2b22b9e5",
+      "size": 96125
+    },
+    {
+      "path": "text/db/#SFO_tech_technologies__.loc",
+      "sha256": "f0cbd563cbea343f82bd49053c34a757586cc46cae379286555a24c7c76c1432",
+      "size": 525311
+    },
+    {
+      "path": "text/db/#SFO_tech_ui groups.loc",
+      "sha256": "4dd80378d386606d7628215a4f3893e298708e7eb33bf2a51eab8d7b6d4a79c8",
+      "size": 19058
+    },
+    {
+      "path": "text/db/#SFO_technology_nodes_to_ancillaries_junctions__.loc",
+      "sha256": "c942b42f3c07585afe533ba9ba45d01b16aa7ca032bd5fc18175ce3d1afe65cb",
+      "size": 8462
+    },
+    {
+      "path": "text/db/#SFO_technology_ui_tabs__.loc",
+      "sha256": "a4c7956b0b8521f20e0c404152caef17509f61b2f6d9ef4418f5a73d06615987",
+      "size": 6270
+    },
+    {
+      "path": "text/db/#SFO_ui_text_replacements__.loc",
+      "sha256": "a83f924d1d191ae76d1fa8f8e15bd5ebf3d55a188b35a0c8d5f56edc59e3d511",
+      "size": 22741
+    },
+    {
+      "path": "text/db/#SFO_ui_unit_bullet_point_enums.loc",
+      "sha256": "81c420478b2e34928b769e74b693e18fe6c9ec139049fa20ee68a328a98ef71d",
+      "size": 30816
+    },
+    {
+      "path": "text/db/#SFO_unit_abilities_additional_ui_effects__.loc",
+      "sha256": "374faa9530e5186a15a24cfc33a452fc282a1ae2ecb683446640542d2637d117",
+      "size": 52418
+    },
+    {
+      "path": "text/db/#SFO_unit_attributes__.loc",
+      "sha256": "42d3ddd0ed521482d0addb75cefe3b9d9865d7c945b4cb316e41d442a841586f",
+      "size": 3606
+    },
+    {
+      "path": "text/db/#SFO_unit_description_historical_texts__.loc",
+      "sha256": "a0dbce50d0cbd544a7f2f06212826584c05234299df1ff1ab59c1caac956c573",
+      "size": 84321
+    },
+    {
+      "path": "text/db/#SFO_unit_description_short_texts.loc",
+      "sha256": "c26181b4e388f077b64b5c768ba3889bdd68c070620ee7369b629379e73bac39",
+      "size": 42571
+    },
+    {
+      "path": "text/db/#SFO_unit_land_units.loc",
+      "sha256": "06544973c9d4c11df367d0d7705cca7dcfa51bc861aa8fe847e910b8a2cec418",
+      "size": 23857
+    },
+    {
+      "path": "text/db/#SFO_unit_special_ability_phases.loc",
+      "sha256": "634b8f89af7c64c154969508c9b1df24501ab6a89d2fd1905ae79d93205f6674",
+      "size": 50399
+    },
+    {
+      "path": "text/db/#SFO_unit_unit_abilities.loc",
+      "sha256": "ed1a9aeaf97b755c6e39fa2cc07ccf953adf2439022b0db12c79799860045531",
+      "size": 287404
+    },
+    {
+      "path": "text/db/#random_localisation_strings__.loc",
+      "sha256": "f65f552616c9621505e8dad91b0e6e329ecddaa897b201d30fddf06ba27acd65",
+      "size": 10117
+    },
+    {
+      "path": "text/db/@land_units.loc",
+      "sha256": "29c08bc456d6a7aecd66e72b8b62fd47eb10bebf7e08888ad00f8e4b8b111edd",
+      "size": 6026
+    },
+    {
+      "path": "text/db/@special_ability_invalid_usage_flags__.loc",
+      "sha256": "f284a3d3e0304c5c9e7984f80aae3362acb3b5a05c5e0bde57a017970a64dd59",
+      "size": 850
+    },
+    {
+      "path": "text/db/@unit_description_short_texts__.loc",
+      "sha256": "b2c876aafe01adc29d0d74a61b04b8a751df104382c4f6b1448c3576239050b8",
+      "size": 4039
+    },
+    {
+      "path": "text/db/pj_emp_intrigue.loc",
+      "sha256": "cc42f434e94608dd6d507e5c3bcf15fe5d162e93b0ec6199d158ac15c69210f4",
+      "size": 1039
+    },
+    {
+      "path": "text/db/wec_unit_caps_mct.loc",
+      "sha256": "f2a654dd2a98f7800b2649fab0535c039b543913e8812212ead0f7aefcc4fa65",
+      "size": 1964
+    },
+    {
+      "path": "text/db/wec_unit_caps_text.loc",
+      "sha256": "002a83bc42a0f1b5b2a4d589eb9d3a9599a0b45123dc9d5be5c9e42b93c0bd2a",
+      "size": 2170
+    },
+    {
+      "path": "text/db/z_iron_favor_mission.loc",
+      "sha256": "a59be0a74e4bdab78de9f629a3382ffc9fc313273c43e3df20e364f21aaf82ec",
+      "size": 1620
+    }
+  ],
+  "limitations": [
+    "Database row semantics require pinned WH3 schemas and are not inferred from binary payloads.",
+    "Call-pattern classification identifies possible interventions, not proof that every path executes in a campaign."
+  ],
+  "root_counts": {
+    "db": 612,
+    "script": 43,
+    "text": 54
+  },
+  "schema_version": 1,
+  "script_count": 43,
+  "scripts": [
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 5,
+        "listener": 43,
+        "random_number": 1
+      },
+      "path": "script/_lib/mod/TableTopCaps.lua",
+      "sha256": "6b90878d7800f1ed3473ccd2b2b54cc9c6b84f6ed295fb72ba2e5c26566fc536",
+      "size": 128709
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {},
+      "path": "script/_lib/mod/pj_error_wrapping.lua",
+      "sha256": "3035dff75f841000995f6316c89fc4504f66150338a50f69e3907f384502e6f3",
+      "size": 1738
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "apply_effect_bundle": 2,
+        "human_branch": 3,
+        "listener": 6,
+        "saved_value": 11
+      },
+      "path": "script/campaign/main_warhammer/wh_dlc07_peasant_economy.lua",
+      "sha256": "dbcd4b32f16dbbe70e6d8a23bf5be7ae430e068321dc5e7cc158fce44815d26a",
+      "size": 7639
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 11,
+        "listener": 11
+      },
+      "path": "script/campaign/main_warhammer/wh_dlc07_vows.lua",
+      "sha256": "b7ce868dd777d5614df7575cccec58fe311ac959df5169a9df449261470aeccf",
+      "size": 22866
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 1,
+      "observed_calls": {
+        "create_force": 1,
+        "listener": 4,
+        "random_number": 3,
+        "saved_value": 9
+      },
+      "path": "script/campaign/main_warhammer/wh_horde_reemergence.lua",
+      "sha256": "6f31f32ab853444cb652dec26129907dc5f9a2fc3821d6caae787c8bf823444b",
+      "size": 11339
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "listener": 1,
+        "teleport": 2
+      },
+      "path": "script/campaign/mod/!achangeling_immortal_empires.lua",
+      "sha256": "c64cd610b543c0f8082812aae79c50dfb04b04d2e45aec7c4a4850895566919e",
+      "size": 5066
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "listener": 1,
+        "teleport": 2
+      },
+      "path": "script/campaign/mod/!achangeling_old_world.lua",
+      "sha256": "cdb0bb7eab4f0633e992f7b78a8618aaa86560fd68455b526358735bf6d238b0",
+      "size": 5017
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "listener": 1,
+        "teleport": 2
+      },
+      "path": "script/campaign/mod/!anakai_immortal_empires.lua",
+      "sha256": "23aa338fb5b059977c4eea6b82c20fc6980892d363ad816c4fcb20407f661426",
+      "size": 5186
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 1,
+        "listener": 1,
+        "random_number": 1,
+        "saved_value": 5
+      },
+      "path": "script/campaign/mod/Greentide.lua",
+      "sha256": "9f6e8c5cf92aade98c13abbdfb1b1456f2116a742b43f50d2638dd7b72c426bb",
+      "size": 2989
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 1,
+      "observed_calls": {
+        "apply_effect_bundle": 1,
+        "human_branch": 2,
+        "listener": 1,
+        "random_number": 1
+      },
+      "path": "script/campaign/mod/WoodElfSeasons.lua",
+      "sha256": "70babe90a720bd89d1595dd49afd27298e1c3624e403efe20e0cbef2368b6f64",
+      "size": 4716
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 3
+      },
+      "path": "script/campaign/mod/cth_resource_miao.lua",
+      "sha256": "24dce5eeb5d8b42bece54245436927a64f3b7bc8884dd1c116b4fb87df7133f0",
+      "size": 2671
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 3
+      },
+      "path": "script/campaign/mod/cth_resource_zhao.lua",
+      "sha256": "113fb92d85f21fa0acc1481a30f83730cb807d06e0035aa6841d232a91833257",
+      "size": 2670
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 6,
+      "observed_calls": {
+        "force_alliance": 2,
+        "force_confederation": 1,
+        "force_declare_war": 2,
+        "force_make_peace": 1,
+        "human_branch": 2,
+        "listener": 6
+      },
+      "path": "script/campaign/mod/pj_emp_intrigue.lua",
+      "sha256": "1592fb87ce24b89cd40eb4a923fde05bbca95190f422dade8a1217ac89e1d0d6",
+      "size": 22028
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {},
+      "path": "script/campaign/mod/rhox_pestilens_template_pooled_resource_ui.lua",
+      "sha256": "1bcdbe92ba736fd676595a7efee06016f86f32b65dab7df961a628f712d96d70",
+      "size": 437
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 1,
+        "listener": 2,
+        "random_number": 3
+      },
+      "path": "script/campaign/mod/rhox_pestilens_tod.lua",
+      "sha256": "cd8b889b85f5fd382c0caf36675263e7860092d9ee9c0025b55c1b75ae5a7d44",
+      "size": 4592
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 1,
+      "observed_calls": {
+        "apply_effect_bundle": 1,
+        "human_branch": 1,
+        "listener": 1
+      },
+      "path": "script/campaign/mod/sfo_add_effect_bundle.lua",
+      "sha256": "8717db3184be555223170ba99131f29ba4541c3507182e9f0f6c513604c1d35c",
+      "size": 1961
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "saved_value": 2
+      },
+      "path": "script/campaign/mod/sfo_add_ror_script.lua",
+      "sha256": "7a70be815ca0781285a7a8ecdeb3b6e0142d52eb24f05658bcadad9730d2250b",
+      "size": 6055
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 3,
+      "observed_calls": {
+        "saved_value": 6,
+        "spawn_character": 3
+      },
+      "path": "script/campaign/mod/sfo_character_spawns.lua",
+      "sha256": "1d8de55edd8f4b8faf44d5147d318a962b3125584a059dfaab98524c69805d71",
+      "size": 1668
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "apply_effect_bundle": 2,
+        "human_branch": 2,
+        "listener": 1
+      },
+      "path": "script/campaign/mod/sfo_confederation_bonus.lua",
+      "sha256": "21559766f197f984eb2e2de8efa145b4635b6bb0cd942b8373861ebceb1e7d51",
+      "size": 3048
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 4,
+      "observed_calls": {
+        "apply_effect_bundle": 1,
+        "human_branch": 3,
+        "listener": 3,
+        "random_number": 3,
+        "saved_value": 1,
+        "transfer_region": 2,
+        "treasury_mod": 1
+      },
+      "path": "script/campaign/mod/sfo_grimhammer_the_skaven.lua",
+      "sha256": "52b0c97107e7d8d9a9112f2063673c3bbe9a33b66ffaa3c5225c68db45a890fc",
+      "size": 5928
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 1,
+      "observed_calls": {
+        "apply_effect_bundle": 1,
+        "human_branch": 1
+      },
+      "path": "script/campaign/mod/sfo_supply_lines_removal.lua",
+      "sha256": "2aab65cf9835b79dbf769e961689b0a25623fde9e902c16340fb5851774136b2",
+      "size": 2381
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 1
+      },
+      "path": "script/campaign/mod/sfo_tech_pr_hiding.lua",
+      "sha256": "d94f840eb7446b2c8728502d99ab5c45ecd7eba77ac52b54f9e84b31af43766f",
+      "size": 2785
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 1
+      },
+      "path": "script/campaign/mod/sfo_tech_to_anc.lua",
+      "sha256": "083c6f989fd55b214b8b6fb1f1a8e5efe838d79cd3b8c61ecb46f80713389ad8",
+      "size": 2580
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 1,
+        "listener": 9,
+        "random_number": 3
+      },
+      "path": "script/campaign/mod/sfo_ui_buttons.lua",
+      "sha256": "42df969041ca964ac1eade5776565b6ccb77d8193fe7a35479e1f302df0eb7c6",
+      "size": 21867
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 9,
+      "observed_calls": {
+        "apply_effect_bundle": 9,
+        "human_branch": 3,
+        "listener": 5,
+        "random_number": 2,
+        "saved_value": 36
+      },
+      "path": "script/campaign/mod/sfo_xen_mod_menu.lua",
+      "sha256": "74e0592a6a20355a3c80cb68893d92a39b5c95d29623833d0c6c9b5ac93610ff",
+      "size": 93518
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 3
+      },
+      "path": "script/campaign/mod/skv_resource_rictus.lua",
+      "sha256": "628b007cf678eb6b7f30816084ffc5c364e161f35241e2ecba16991ef8fd58ac",
+      "size": 2665
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 3
+      },
+      "path": "script/campaign/mod/tmb_resource_khalida.lua",
+      "sha256": "2e8b9345164aa8ae893122e922c60d0cfd77aa88e84fae868ad489d1a4646ed4",
+      "size": 2663
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "apply_effect_bundle": 2,
+        "listener": 2
+      },
+      "path": "script/campaign/mod/ttc_start.lua",
+      "sha256": "aa601cb1bf8484a48deec34464cab2b0b904b700256fe6d8c891fef60f6b1a89",
+      "size": 11242
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 3
+      },
+      "path": "script/campaign/mod/vmp_resource_court.lua",
+      "sha256": "9d84fdb7a1ce39c8811aab94e120dca5c73082261f2561f43d7de2171ef346c9",
+      "size": 2755
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 1,
+        "listener": 2,
+        "saved_value": 2
+      },
+      "path": "script/campaign/mod/z_iron_favour.lua",
+      "sha256": "db6636e56a0142ed5f8583c3d8262c46d7f0e883301a436bf2b04ba00ee8f29f",
+      "size": 3979
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 2,
+        "listener": 5,
+        "random_number": 5,
+        "saved_value": 4
+      },
+      "path": "script/campaign/wh2_dlc11_treasure_maps.lua",
+      "sha256": "b21b2330cc82e0d1bc50c308c5dbac98e7a882e2c65f3c677fd89410457de768",
+      "size": 18089
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 6,
+      "observed_calls": {
+        "apply_effect_bundle": 6,
+        "human_branch": 3,
+        "listener": 7
+      },
+      "path": "script/campaign/wh2_dlc14_malus_sanity.lua",
+      "sha256": "08070df97f13c468ddce4a58d5b986dafdc8bff2691e0bb215a802e0d06387de",
+      "size": 10952
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 3,
+      "observed_calls": {
+        "apply_effect_bundle": 2,
+        "force_alliance": 1,
+        "human_branch": 2,
+        "listener": 7,
+        "random_number": 4,
+        "saved_value": 13
+      },
+      "path": "script/campaign/wh3_campaign_great_bastion.lua",
+      "sha256": "d71fb491acd8810071ce444c894395556e98c275906df7a5278df7f3f300a230",
+      "size": 93381
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "apply_effect_bundle": 2,
+        "human_branch": 4,
+        "listener": 16,
+        "random_number": 24,
+        "saved_value": 5
+      },
+      "path": "script/campaign/wh3_cp1_iron_favour.lua",
+      "sha256": "ed44c5f034db72552370c56291673189872727e867af91cc0e1aab2e7053c96f",
+      "size": 94574
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 6,
+      "observed_calls": {
+        "apply_effect_bundle": 4,
+        "force_declare_war": 2,
+        "human_branch": 5,
+        "listener": 19,
+        "random_number": 7
+      },
+      "path": "script/campaign/wh3_dlc25_grudge_cycles.lua",
+      "sha256": "dabbbc2b35edeacc7817399b9a164a750558da15eb8ed9b10bada75eac9541da",
+      "size": 56137
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "apply_effect_bundle": 2,
+        "listener": 1
+      },
+      "path": "script/campaign/wh3_dlc25_imperial_authority.lua",
+      "sha256": "a4ffa225a2c25cec6ae583d6a5ca439363a6ec97dca1a4634daa4b94907d8ff7",
+      "size": 10092
+    },
+    {
+      "classification": "SCRIPTED_STATE_INTERVENTION",
+      "direct_mutation_call_count": 2,
+      "observed_calls": {
+        "apply_effect_bundle": 1,
+        "human_branch": 2,
+        "listener": 6,
+        "saved_value": 11,
+        "transfer_region": 1
+      },
+      "path": "script/campaign/wh3_dlc26_cloak_of_skulls.lua",
+      "sha256": "ee4c9fd3cf4d1247b9281062b3fa805454aa91ef0ede8d267d06a1b006d6ec3e",
+      "size": 16300
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "listener": 19,
+        "saved_value": 4
+      },
+      "path": "script/campaign/wh3_main_prologue/factions/wh3_prologue_kislev_expedition/wh3_prologue_kislev_expedition_stage_3.lua",
+      "sha256": "339ad52555153be43514ad097515fcb6fa37289267b376c6feefa578fcbdb562",
+      "size": 21631
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {
+        "human_branch": 2,
+        "listener": 4,
+        "saved_value": 2
+      },
+      "path": "script/campaign/wh_campaign_bretonnia_chivalry.lua",
+      "sha256": "2b26d8b778b0e50bb19e5dbf1c3edb0163709f0f8e0b7fe85d78dabd9f8bcbdc",
+      "size": 12312
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {},
+      "path": "script/frontend/mod/ttc_browser.lua",
+      "sha256": "a0b67d066465f048525400f9b0645df15f211befdfc1daa591828d278a4cdf13",
+      "size": 179
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {},
+      "path": "script/frontend/mod/xen_sfo_game_resize_news.lua",
+      "sha256": "7416f0d4545bc7c06595bac8217a2866e4487f3e4a89df5537110056509320ad",
+      "size": 318
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {},
+      "path": "script/mct/settings/TableTopCaps.lua",
+      "sha256": "0a00c1d732ae3a8a2ba8d27ec91bad5889c10a294a7034f0f3694f738c19c074",
+      "size": 1817
+    },
+    {
+      "classification": "MECHANIC_OR_UI_SCRIPT",
+      "direct_mutation_call_count": 0,
+      "observed_calls": {},
+      "path": "script/ttc/ttc_vanilla_units.lua",
+      "sha256": "11bf3f2d5c78b2c74009a70dc287e9e7102976dd01cfd3814a7125cab4e0a43d",
+      "size": 83034
+    }
+  ],
+  "source_id": "sfo_2792731173",
+  "source_kind": "EXTRACTED_AUDIT_ZIP",
+  "source_sha256": "0119959f7999844bc49b47bd41d53110ad9a83b6f89478e1bf2199b8c65a828f",
+  "source_size": 3723908,
+  "table_families": [
+    "_kv_fatigue_tables",
+    "_kv_key_buildings_tables",
+    "_kv_morale_tables",
+    "_kv_rules_tables",
+    "_kv_unit_ability_scaling_rules_tables",
+    "action_results_additional_outcomes_tables",
+    "action_results_tables",
+    "agent_culture_details_tables",
+    "agent_recruitment_categories_tables",
+    "agent_subtype_set_items_tables",
+    "agent_subtype_to_vows_tables",
+    "agent_subtypes_tables",
+    "agent_uniforms_tables",
+    "agents_tables",
+    "ancillaries_included_agent_subtypes_tables",
+    "ancillaries_required_skills_tables",
+    "ancillaries_tables",
+    "ancillary_info_tables",
+    "ancillary_set_effect_junctions_tables",
+    "ancillary_to_effects_tables",
+    "ancillary_to_included_agents_tables",
+    "ancillary_types_tables",
+    "armed_citizenry_unit_groups_tables",
+    "armed_citizenry_units_to_unit_groups_junctions_tables",
+    "armory_item_set_to_effects_tables",
+    "armory_items_to_effects_tables",
+    "army_special_abilities_for_faction_junctions_tables",
+    "army_special_abilities_tables",
+    "autoresolver_modifier_group_to_modifiers_tables",
+    "banners_permitted_unit_sets_tables",
+    "banners_tables",
+    "battle_animations_table_tables",
+    "battle_cameras_tables",
+    "battle_context_army_special_ability_junctions_tables",
+    "battle_context_unit_ability_junctions_tables",
+    "battle_context_unit_attribute_junctions_tables",
+    "battle_currency_army_special_abilities_cost_values_tables",
+    "battle_currency_buildings_cost_values_tables",
+    "battle_currency_unit_abilities_cost_values_tables",
+    "battle_entities_tables",
+    "battle_entity_stats_tables",
+    "battle_personalities_tables",
+    "battle_secondary_currency_sources_links_tables",
+    "battle_set_piece_armies_characters_items_tables",
+    "battle_set_piece_armies_characters_tables",
+    "battle_set_piece_armies_effect_bundles_tables",
+    "battle_set_piece_armies_units_junctions_tables",
+    "battle_set_pieces_tables",
+    "battle_skeletons_tables",
+    "battle_vortexs_tables",
+    "battlefield_buildings_tables",
+    "battlefield_buildings_to_special_abilities_tables",
+    "battlefield_deployable_siege_items_tables",
+    "battlefield_engines_tables",
+    "battlefield_siege_vehicles_tables",
+    "building_chain_availability_sets_tables",
+    "building_chain_set_items_tables",
+    "building_chains_tables",
+    "building_culture_variants_tables",
+    "building_effect_context_expressions_tables",
+    "building_effects_junction_tables",
+    "building_instances_tables",
+    "building_instant_constructions_tables",
+    "building_level_armed_citizenry_junctions_tables",
+    "building_level_required_buildings_tables",
+    "building_levels_tables",
+    "building_set_to_building_junctions_tables",
+    "building_sets_tables",
+    "building_superchains_tables",
+    "building_units_allowed_tables",
+    "building_upgrades_junction_tables",
+    "cai_construction_system_unblocking_buildings_tables",
+    "cai_decision_items_tables",
+    "cai_decision_policies_tables",
+    "cai_decision_policy_domain_junctions_tables",
+    "cai_decision_policy_junctions_tables",
+    "cai_decision_profiles_tables",
+    "cai_personalities_decision_profile_junctions_tables",
+    "cai_personality_faction_potential_modifiers_tables",
+    "cai_plague_recipes_tables",
+    "cai_task_management_system_task_generator_groups_generators_junctions_tables",
+    "campaign_agent_subtype_factorial_effect_junctions_tables",
+    "campaign_building_level_factorial_effect_junctions_tables",
+    "campaign_character_art_sets_tables",
+    "campaign_character_arts_tables",
+    "campaign_character_uniform_ancillary_junctions_tables",
+    "campaign_cultural_relations_tables",
+    "campaign_difficulty_handicap_effects_tables",
+    "campaign_effect_list_effect_junctions_tables",
+    "campaign_effect_lists_tables",
+    "campaign_effect_scopes_tables",
+    "campaign_features_tables",
+    "campaign_group_crafting_infos_tables",
+    "campaign_group_faction_plague_setup_sets_tables",
+    "campaign_group_member_criteria_agent_subtypes_tables",
+    "campaign_group_member_criteria_cultures_tables",
+    "campaign_group_member_criteria_factions_tables",
+    "campaign_group_member_criteria_numeric_ranges_tables",
+    "campaign_group_member_criteria_pooled_resources_tables",
+    "campaign_group_member_criteria_subcultures_tables",
+    "campaign_group_members_tables",
+    "campaign_group_morale_effects_tables",
+    "campaign_group_plague_component_setup_sets_tables",
+    "campaign_group_pooled_resource_effects_tables",
+    "campaign_group_pooled_resources_tables",
+    "campaign_group_post_battle_casualty_resources_tables",
+    "campaign_group_post_battle_looted_pooled_resources_tables",
+    "campaign_group_rituals_tables",
+    "campaign_group_settlement_occupation_looted_pooled_resources_tables",
+    "campaign_groups_tables",
+    "campaign_map_attrition_damages_tables",
+    "campaign_map_attrition_unit_immunities_tables",
+    "campaign_map_attritions_tables",
+    "campaign_mercenary_unit_character_level_restrictions_tables",
+    "campaign_mount_animation_set_overrides_tables",
+    "campaign_mounts_tables",
+    "campaign_operation_set_armory_item_elements_tables",
+    "campaign_post_battle_captive_options_tables",
+    "campaign_public_order_populace_effects_tables",
+    "campaign_settlement_display_building_ids_tables",
+    "campaign_stance_effects_junctions_tables",
+    "campaign_stances_composite_scenes_tables",
+    "campaign_variables_tables",
+    "campaigns_campaign_variables_junctions_tables",
+    "cdir_events_dilemma_choice_details_tables",
+    "cdir_events_dilemma_followup_dilemmas_tables",
+    "cdir_events_dilemma_followup_missions_tables",
+    "cdir_events_dilemma_option_junctions_tables",
+    "cdir_events_dilemma_payloads_tables",
+    "cdir_events_incident_option_junctions_tables",
+    "cdir_events_incident_payloads_tables",
+    "cdir_events_mission_followup_missions_tables",
+    "cdir_events_mission_issuer_junctions_tables",
+    "cdir_events_mission_option_junctions_tables",
+    "cdir_events_mission_payloads_tables",
+    "cdir_military_generator_unit_qualities_tables",
+    "character_ancillary_quest_ui_details_tables",
+    "character_experience_skill_tiers_tables",
+    "character_skill_level_details_tables",
+    "character_skill_level_to_ancillaries_junctions_tables",
+    "character_skill_level_to_dilemmas_junctions_tables",
+    "character_skill_level_to_effects_junctions_tables",
+    "character_skill_node_links_tables",
+    "character_skill_node_set_items_tables",
+    "character_skill_node_sets_tables",
+    "character_skill_nodes_skill_locks_tables",
+    "character_skill_nodes_tables",
+    "character_skill_utilization_hints_junctions_tables",
+    "character_skills_tables",
+    "character_skills_to_level_reached_criterias_tables",
+    "character_skills_to_quest_ancillaries_tables",
+    "commodities_tables",
+    "culture_settlement_occupation_options_tables",
+    "culture_to_battle_animation_tables_tables",
+    "dilemmas_tables",
+    "diplomatic_relationship_effects_tables",
+    "effect_bonus_value_agent_junction_tables",
+    "effect_bonus_value_agent_subtype_junctions_tables",
+    "effect_bonus_value_attrition_record_junctions_tables",
+    "effect_bonus_value_basic_junction_tables",
+    "effect_bonus_value_battle_context_army_special_ability_junctions_tables",
+    "effect_bonus_value_battle_context_junctions_tables",
+    "effect_bonus_value_battle_context_unit_ability_junctions_tables",
+    "effect_bonus_value_battle_context_unit_attribute_junctions_tables",
+    "effect_bonus_value_building_set_junctions_tables",
+    "effect_bonus_value_faction_junctions_tables",
+    "effect_bonus_value_ids_unit_sets_tables",
+    "effect_bonus_value_military_force_ability_junctions_tables",
+    "effect_bonus_value_missile_weapon_junctions_tables",
+    "effect_bonus_value_name_record_junctions_tables",
+    "effect_bonus_value_plague_component_junctions_tables",
+    "effect_bonus_value_pooled_resource_factor_junctions_tables",
+    "effect_bonus_value_pooled_resource_junctions_tables",
+    "effect_bonus_value_province_growth_factor_junctions_tables",
+    "effect_bonus_value_public_order_provider_junctions_tables",
+    "effect_bonus_value_ritual_junctions_tables",
+    "effect_bonus_value_scripted_junctions_tables",
+    "effect_bonus_value_special_ability_group_junctions_tables",
+    "effect_bonus_value_special_ability_phase_record_junctions_tables",
+    "effect_bonus_value_stance_junctions_tables",
+    "effect_bonus_value_subculture_junctions_tables",
+    "effect_bonus_value_unit_ability_junctions_tables",
+    "effect_bonus_value_unit_attribute_junctions_tables",
+    "effect_bonus_value_unit_list_junctions_tables",
+    "effect_bonus_value_unit_record_junctions_tables",
+    "effect_bonus_value_unit_set_unit_ability_junctions_tables",
+    "effect_bonus_value_unit_set_unit_attribute_junctions_tables",
+    "effect_bundles_tables",
+    "effect_bundles_to_effects_junctions_tables",
+    "effects_tables",
+    "event_feed_strings_tables",
+    "faction_agent_permitted_subtypes_tables",
+    "faction_banned_unit_purchasable_effects_tables",
+    "faction_plague_setup_set_items_tables",
+    "faction_plague_setup_sets_tables",
+    "faction_potential_difficulty_overrides_tables",
+    "faction_potential_handicap_effects_tables",
+    "faction_set_effect_bundles_tables",
+    "faction_set_items_tables",
+    "faction_sets_tables",
+    "factions_tables",
+    "feature_set_to_faction_features_tables",
+    "frontend_themes_tables",
+    "incidents_tables",
+    "initiatives_tables",
+    "land_units_tables",
+    "land_units_to_battle_personalities_junctions_tables",
+    "land_units_to_unit_abilites_junctions_tables",
+    "main_unit_faction_overrides_tables",
+    "main_units_tables",
+    "melee_weapons_tables",
+    "mercenary_pool_to_groups_junctions_tables",
+    "mercenary_unit_groups_tables",
+    "missile_weapons_tables",
+    "missile_weapons_to_projectiles_tables",
+    "missions_tables",
+    "mortuary_cult_categories_tables",
+    "mortuary_cult_categories_to_rituals_tables",
+    "mounts_tables",
+    "names_tables",
+    "plague_component_set_items_tables",
+    "plague_component_sets_tables",
+    "plague_component_setup_sets_tables",
+    "plague_component_setups_tables",
+    "plague_components_tables",
+    "plague_effect_setups_tables",
+    "plague_effects_tables",
+    "pooled_resource_constraint_set_junctions_tables",
+    "pooled_resource_constraints_tables",
+    "pooled_resource_factor_junctions_tables",
+    "pooled_resource_factors_tables",
+    "pooled_resource_threshold_operation_sets_tables",
+    "pooled_resources_tables",
+    "projectile_bombardments_tables",
+    "projectile_displays_tables",
+    "projectile_shot_type_displays_tables",
+    "projectile_shot_type_enum_tables",
+    "projectile_shrapnels_tables",
+    "projectiles_explosions_tables",
+    "projectiles_scaling_damages_tables",
+    "projectiles_tables",
+    "provincial_initiative_records_tables",
+    "provincial_initiatives_to_subculture_junctions_tables",
+    "public_order_providers_tables",
+    "random_localisation_strings_tables",
+    "resource_cost_pooled_resource_junctions_tables",
+    "resource_costs_tables",
+    "ritual_payload_ancillaries_tables",
+    "ritual_payload_effect_bundles_tables",
+    "ritual_payload_form_confederations_tables",
+    "ritual_payload_trigger_dilemmas_tables",
+    "ritual_payloads_tables",
+    "rituals_tables",
+    "scripted_bonus_value_ids_tables",
+    "settlement_type_to_building_chains_junctions_tables",
+    "spawnable_force_unit_list_junctions_tables",
+    "special_ability_exclusive_toggle_groups_tables",
+    "special_ability_groups_tables",
+    "special_ability_groups_to_unit_abilities_junctions_tables",
+    "special_ability_groups_to_units_junctions_tables",
+    "special_ability_intensity_settings_tables",
+    "special_ability_phase_attribute_effects_tables",
+    "special_ability_phase_stat_effects_tables",
+    "special_ability_phases_tables",
+    "special_ability_spreadings_tables",
+    "special_ability_to_auto_deactivate_flags_tables",
+    "special_ability_to_invalid_target_flags_tables",
+    "special_ability_to_invalid_usage_flags_tables",
+    "special_ability_to_recharge_contexts_tables",
+    "special_ability_to_special_ability_phase_junctions_tables",
+    "taxes_effects_jct_tables",
+    "technologies_tables",
+    "technology_effects_junction_tables",
+    "technology_node_links_tables",
+    "technology_node_sets_tables",
+    "technology_nodes_tables",
+    "technology_nodes_to_ancillaries_junctions_tables",
+    "technology_required_building_levels_junctions_tables",
+    "technology_required_technology_junctions_tables",
+    "technology_ui_groups_tables",
+    "technology_ui_groups_to_technology_nodes_junctions_tables",
+    "technology_ui_tabs_tables",
+    "technology_ui_tabs_to_technology_nodes_junctions_tables",
+    "toggle_system_building_variants_tables",
+    "trait_level_effects_tables",
+    "transported_military_forces_tables",
+    "twad_key_deletes_tables",
+    "ui_colours_tables",
+    "ui_features_to_factions_tables",
+    "ui_main_theme_options_tables",
+    "ui_tagged_images_tables",
+    "ui_text_replacements_tables",
+    "ui_unit_bullet_point_enums_tables",
+    "ui_unit_bullet_point_unit_overrides_tables",
+    "ui_unit_groupings_tables",
+    "unique_agent_component_junctions_tables",
+    "unit_abilities_additional_ui_effects_tables",
+    "unit_abilities_tables",
+    "unit_abilities_to_additional_ui_effects_juncs_tables",
+    "unit_allowances_tables",
+    "unit_armour_types_tables",
+    "unit_attributes_groups_tables",
+    "unit_attributes_to_groups_junctions_tables",
+    "unit_description_historical_texts_tables",
+    "unit_description_short_texts_tables",
+    "unit_experience_bonuses_tables",
+    "unit_experience_threshold_modifiers_tables",
+    "unit_experience_thresholds_tables",
+    "unit_fatigue_effects_tables",
+    "unit_lists_tables",
+    "unit_missile_weapon_junctions_tables",
+    "unit_porthole_camera_settings_tables",
+    "unit_purchasable_effect_lock_reasons_tables",
+    "unit_purchasable_effect_sets_tables",
+    "unit_purchasable_effects_categories_tables",
+    "unit_purchasable_effects_tables",
+    "unit_recruitment_source_overrides_tables",
+    "unit_required_technology_junctions_tables",
+    "unit_set_to_mp_unit_caps_tables",
+    "unit_set_to_unit_junctions_tables",
+    "unit_set_unit_ability_junctions_tables",
+    "unit_set_unit_attribute_junctions_tables",
+    "unit_sets_tables",
+    "unit_shield_types_tables",
+    "unit_spacings_tables",
+    "unit_special_abilities_tables",
+    "unit_special_ability_to_special_ability_toggle_groups_junctions_tables",
+    "unit_to_unit_list_junctions_tables",
+    "unit_variants_colours_tables",
+    "unit_variants_tables",
+    "units_custom_battle_mounts_tables",
+    "units_custom_battle_permissions_tables",
+    "units_to_exclusive_faction_permissions_tables",
+    "units_to_groupings_military_permissions_tables",
+    "variants_tables",
+    "videos_tables",
+    "warscape_animated_lod_tables",
+    "warscape_animated_tables"
+  ],
+  "table_family_count": 338
+}

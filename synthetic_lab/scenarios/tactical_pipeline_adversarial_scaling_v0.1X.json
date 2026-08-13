@@ -1,0 +1,46 @@
+{
+  "case_count": 256,
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "Deterministic fuzz cases are not live WH3 simulations or optimal action labels.",
+    "Scale work-unit results are not measured live frame-time or turn-time performance.",
+    "The audit does not establish route, formation, acknowledgement, execution, casualty, or outcome improvement."
+  ],
+  "query_modes": [
+    "NONE",
+    "ALL_TRUE",
+    "ALL_FALSE",
+    "ALL_UNAVAILABLE",
+    "CYCLIC_MIXED"
+  ],
+  "result_digest": "81e676c5ebb526d0a654d16b8e34352bf8a11fe35e777bf31d7508e3308aacf1",
+  "scale_packet_counts": [
+    8,
+    16,
+    24,
+    40,
+    80,
+    160
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "source_baseline_suite_digest": "0055bd7cea848202ead9f8b87082f5ce1cb69d77d0e633a3ffc70346648224cd",
+  "source_feasibility_scenario_ids": [
+    "balanced_has_no_candidate_geometry",
+    "commander_candidate_points_are_query_ready",
+    "synthetic_true_supports_point_only",
+    "synthetic_false_vetoes_artillery_points",
+    "unavailable_query_preserves_uncertainty",
+    "mixed_cavalry_results_choose_supported_point",
+    "frontline_relief_uses_local_subject_geometry",
+    "selective_pursuit_requires_visible_routing_enemy",
+    "hidden_enemy_uncertainty_does_not_block_local_geometry",
+    "terminal_observation_has_no_active_candidate",
+    "role_threshold_geometry_remains_bounded",
+    "rout_cascade_preservation_generates_only_local_egress"
+  ],
+  "source_feasibility_suite_digest": "2b51d2c2ca71d9c303dc45112b4cb1c7292df1551bf0598607b2a330ccd2fbab",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_contract": "TACTICAL_PIPELINE_ADVERSARIAL_SCALING_SUITE_V1",
+  "suite_id": "v0.1X_full_tactical_pipeline_adversarial_scaling"
+}

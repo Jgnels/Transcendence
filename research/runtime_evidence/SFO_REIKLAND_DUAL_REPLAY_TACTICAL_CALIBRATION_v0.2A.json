@@ -1,0 +1,481 @@
+{
+  "authority": "NO_ORDERS",
+  "battles": [
+    {
+      "battle_id": "marienburg",
+      "identity_resolution": "VISUAL_TITLE_FOR_DISPLAY_RUNTIME_IDENTITY_RETAINED",
+      "interpretation_limits": [
+        "A visible movement following a command event is not acknowledgement of that command.",
+        "The recording is not causal proof that any specific observed command produced the later unit state.",
+        "The owner trace is not an optimal-policy label."
+      ],
+      "outcome": {
+        "evidence_label": "OBSERVED",
+        "telemetry_victorious_alliance": "1",
+        "visual_grade": "PYRRHIC_VICTORY",
+        "visual_winner": "Reikland"
+      },
+      "runtime_identity": "Battle of Eilhart \u2014 Reikland vs Empire Secessionists",
+      "telemetry": {
+        "aggregate_records": 1960,
+        "canonical_units": 35,
+        "command_events": 328,
+        "commands_per_minute": 18.746,
+        "detail_samples": 352,
+        "duration_ms": 1049800,
+        "first_engagement_observed_ms": 472100,
+        "first_local_route_observed_ms": 647100,
+        "first_local_unit_observed_ms": 100,
+        "first_visible_enemy_route_observed_ms": 617100,
+        "full_local_force_observed_ms": 154100,
+        "initial_local_units_observed": 1,
+        "local_casualties_observed_lower_bound": 782,
+        "local_kills_observed_max_sum": 1320,
+        "local_units": 20,
+        "role_summary": {
+          "artillery": {
+            "casualties_observed_lower_bound": 35,
+            "kills_observed_max_sum": 81,
+            "routing_units_observed": 0,
+            "units": 2
+          },
+          "cavalry": {
+            "casualties_observed_lower_bound": 58,
+            "kills_observed_max_sum": 276,
+            "routing_units_observed": 0,
+            "units": 2
+          },
+          "commander": {
+            "casualties_observed_lower_bound": 0,
+            "kills_observed_max_sum": 341,
+            "routing_units_observed": 1,
+            "units": 4
+          },
+          "frontline": {
+            "casualties_observed_lower_bound": 536,
+            "kills_observed_max_sum": 380,
+            "routing_units_observed": 4,
+            "units": 8
+          },
+          "ranged": {
+            "casualties_observed_lower_bound": 153,
+            "kills_observed_max_sum": 242,
+            "routing_units_observed": 1,
+            "units": 4
+          }
+        },
+        "visible_enemy_casualties_observed_lower_bound": 1314,
+        "visible_enemy_units": 15
+      },
+      "visual_facts": [
+        {
+          "claim_status": "OBSERVED",
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "fact_id": "marienburg_title",
+          "kind": "IDENTITY",
+          "statement": "The replay-selection and matchup screens visibly identify Battle of Marienburg as a land battle."
+        },
+        {
+          "claim_status": "SUPPORTED",
+          "confidence": "HIGH",
+          "evidence_label": "SUPPORTED",
+          "fact_id": "marienburg_reinforcement_structure",
+          "kind": "FORCE_ASSEMBLY",
+          "statement": "The recording begins with a lone local mounted character before the larger Reikland force arrives and assembles."
+        },
+        {
+          "claim_status": "OBSERVED",
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "fact_id": "marienburg_battlefield",
+          "kind": "TERRAIN_CONTEXT",
+          "statement": "The battle is fought across open green fields, slopes, tracks, wooded margins, and a central cultivated or terraced feature."
+        },
+        {
+          "claim_status": "SUPPORTED",
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "fact_id": "marienburg_engagement_shape",
+          "kind": "TACTICAL_GEOMETRY",
+          "statement": "The battle spreads across a broader frontage than Ubersreik and later fragments into multiple separated rout and pursuit clusters."
+        },
+        {
+          "claim_status": "OBSERVED",
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "fact_id": "marienburg_post_victory_tail",
+          "kind": "TERMINAL_CONTEXT",
+          "statement": "Substantial battlefield activity continues after the victory state before the replay result screen appears."
+        },
+        {
+          "claim_status": "OBSERVED",
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "fact_id": "marienburg_result",
+          "kind": "OUTCOME",
+          "statement": "The end popup and result screen visibly report Reikland Pyrrhic Victory."
+        },
+        {
+          "claim_status": "LIMITING_RESULT",
+          "confidence": "HIGH",
+          "evidence_label": "LIMITING_RESULT",
+          "fact_id": "marienburg_ui_limit",
+          "kind": "VISUAL_LIMIT",
+          "statement": "The high tactical camera supports broad geometry and routing review but does not continuously expose exact unit-card state or formation depth."
+        }
+      ],
+      "visual_phase_windows": [
+        {
+          "confidence": "HIGH",
+          "evidence_label": "SUPPORTED",
+          "note": "Only the initial mounted character is observed before the reinforcing army materializes.",
+          "phase_id": "force_incomplete",
+          "recording_windows": [
+            {
+              "artifact_id": "marienburg_segment_1",
+              "end_ms": 170000,
+              "start_ms": 30000
+            }
+          ],
+          "telemetry_end_ms": 136100,
+          "telemetry_start_ms": 0
+        },
+        {
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "note": "The full force assembles and crosses a long approach before artillery or melee contact.",
+          "phase_id": "assembly_and_approach",
+          "recording_windows": [
+            {
+              "artifact_id": "marienburg_segment_1",
+              "end_ms": 275000,
+              "start_ms": 170000
+            },
+            {
+              "artifact_id": "marienburg_segment_2",
+              "end_ms": 170000,
+              "start_ms": 0
+            }
+          ],
+          "telemetry_end_ms": 400100,
+          "telemetry_start_ms": 136100
+        },
+        {
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "note": "Artillery opens, the main line commits, and the engagement expands across the field.",
+          "phase_id": "main_commitment",
+          "recording_windows": [
+            {
+              "artifact_id": "marienburg_segment_2",
+              "end_ms": 390000,
+              "start_ms": 170000
+            }
+          ],
+          "telemetry_end_ms": 619100,
+          "telemetry_start_ms": 400100
+        },
+        {
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "note": "Enemy routs begin while multiple local units also deteriorate, so local crisis and enemy collapse overlap.",
+          "phase_id": "local_crisis_and_enemy_break",
+          "recording_windows": [
+            {
+              "artifact_id": "marienburg_segment_2",
+              "end_ms": 560000,
+              "start_ms": 390000
+            }
+          ],
+          "telemetry_end_ms": 780000,
+          "telemetry_start_ms": 619100
+        },
+        {
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "note": "The victory state is followed by a long cleanup and pursuit tail before the result screen.",
+          "phase_id": "post_victory_cleanup",
+          "recording_windows": [
+            {
+              "artifact_id": "marienburg_segment_2",
+              "end_ms": 814000,
+              "start_ms": 560000
+            }
+          ],
+          "telemetry_end_ms": 1049800,
+          "telemetry_start_ms": 780000
+        }
+      ],
+      "visual_title": "Battle of Marienburg"
+    },
+    {
+      "battle_id": "ubersreik",
+      "identity_resolution": "VISUAL_TITLE_FOR_DISPLAY_RUNTIME_IDENTITY_RETAINED",
+      "interpretation_limits": [
+        "A visible movement following a command event is not acknowledgement of that command.",
+        "The recording is not causal proof that any specific observed command produced the later unit state.",
+        "The owner trace is not an optimal-policy label."
+      ],
+      "outcome": {
+        "evidence_label": "OBSERVED",
+        "telemetry_victorious_alliance": "1",
+        "visual_grade": "DECISIVE_VICTORY",
+        "visual_winner": "Reikland"
+      },
+      "runtime_identity": "Battle of Eilhart \u2014 Reikland vs Empire Secessionists",
+      "telemetry": {
+        "aggregate_records": 998,
+        "canonical_units": 28,
+        "command_events": 183,
+        "commands_per_minute": 21.973,
+        "detail_samples": 169,
+        "duration_ms": 499700,
+        "first_engagement_observed_ms": 260100,
+        "first_local_route_observed_ms": 455100,
+        "first_local_unit_observed_ms": 100,
+        "first_visible_enemy_route_observed_ms": 343100,
+        "full_local_force_observed_ms": 229100,
+        "initial_local_units_observed": 3,
+        "local_casualties_observed_lower_bound": 334,
+        "local_kills_observed_max_sum": 763,
+        "local_units": 16,
+        "role_summary": {
+          "artillery": {
+            "casualties_observed_lower_bound": 0,
+            "kills_observed_max_sum": 16,
+            "routing_units_observed": 0,
+            "units": 1
+          },
+          "cavalry": {
+            "casualties_observed_lower_bound": 4,
+            "kills_observed_max_sum": 260,
+            "routing_units_observed": 0,
+            "units": 2
+          },
+          "commander": {
+            "casualties_observed_lower_bound": 0,
+            "kills_observed_max_sum": 100,
+            "routing_units_observed": 0,
+            "units": 3
+          },
+          "frontline": {
+            "casualties_observed_lower_bound": 330,
+            "kills_observed_max_sum": 247,
+            "routing_units_observed": 1,
+            "units": 6
+          },
+          "ranged": {
+            "casualties_observed_lower_bound": 0,
+            "kills_observed_max_sum": 140,
+            "routing_units_observed": 0,
+            "units": 4
+          }
+        },
+        "visible_enemy_casualties_observed_lower_bound": 981,
+        "visible_enemy_units": 12
+      },
+      "visual_facts": [
+        {
+          "claim_status": "OBSERVED",
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "fact_id": "ubersreik_title",
+          "kind": "IDENTITY",
+          "statement": "The replay-selection and matchup screens visibly identify Battle of Ubersreik as a land battle between Reikland and Empire Secessionists."
+        },
+        {
+          "claim_status": "SUPPORTED",
+          "confidence": "HIGH",
+          "evidence_label": "SUPPORTED",
+          "fact_id": "ubersreik_reinforcement_structure",
+          "kind": "FORCE_ASSEMBLY",
+          "statement": "The matchup screen and battlefield recording visibly distinguish a small initial local force from a larger reinforcing army."
+        },
+        {
+          "claim_status": "OBSERVED",
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "fact_id": "ubersreik_battlefield",
+          "kind": "TERRAIN_CONTEXT",
+          "statement": "The battle is fought in a snow-covered valley with constraining slopes and wooded edges."
+        },
+        {
+          "claim_status": "SUPPORTED",
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "fact_id": "ubersreik_engagement_shape",
+          "kind": "TACTICAL_GEOMETRY",
+          "statement": "The central melee becomes compact while several local units remain visibly separated behind or beside the main engagement."
+        },
+        {
+          "claim_status": "OBSERVED",
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "fact_id": "ubersreik_result",
+          "kind": "OUTCOME",
+          "statement": "The end-of-replay popup visibly reports Reikland Decisive Victory."
+        },
+        {
+          "claim_status": "LIMITING_RESULT",
+          "confidence": "HIGH",
+          "evidence_label": "LIMITING_RESULT",
+          "fact_id": "ubersreik_ui_limit",
+          "kind": "VISUAL_LIMIT",
+          "statement": "The high tactical camera preserves unit banners and battle geometry but does not continuously expose unit-card details or exact formation depth."
+        }
+      ],
+      "visual_phase_windows": [
+        {
+          "confidence": "HIGH",
+          "evidence_label": "SUPPORTED",
+          "note": "Initial local hierarchy is incomplete while the reinforcement army is absent or entering.",
+          "phase_id": "force_incomplete",
+          "recording_windows": [
+            {
+              "artifact_id": "ubersreik_full_recording",
+              "end_ms": 230000,
+              "start_ms": 44000
+            }
+          ],
+          "telemetry_end_ms": 208100,
+          "telemetry_start_ms": 0
+        },
+        {
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "note": "Reinforcement arrival and local force assembly precede first sustained engagement.",
+          "phase_id": "assembly_and_approach",
+          "recording_windows": [
+            {
+              "artifact_id": "ubersreik_full_recording",
+              "end_ms": 275000,
+              "start_ms": 230000
+            }
+          ],
+          "telemetry_end_ms": 247100,
+          "telemetry_start_ms": 208100
+        },
+        {
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "note": "Most visible units converge into the central battle while rear elements remain separated.",
+          "phase_id": "main_commitment",
+          "recording_windows": [
+            {
+              "artifact_id": "ubersreik_full_recording",
+              "end_ms": 335000,
+              "start_ms": 275000
+            }
+          ],
+          "telemetry_end_ms": 343100,
+          "telemetry_start_ms": 247100
+        },
+        {
+          "confidence": "MEDIUM",
+          "evidence_label": "SUPPORTED",
+          "note": "Enemy banners progressively fragment and withdraw rather than collapsing instantaneously.",
+          "phase_id": "enemy_break",
+          "recording_windows": [
+            {
+              "artifact_id": "ubersreik_full_recording",
+              "end_ms": 420000,
+              "start_ms": 335000
+            }
+          ],
+          "telemetry_end_ms": 463100,
+          "telemetry_start_ms": 343100
+        },
+        {
+          "confidence": "HIGH",
+          "evidence_label": "OBSERVED",
+          "note": "The engagement resolves into terminal pursuit and the decisive-victory popup.",
+          "phase_id": "terminal",
+          "recording_windows": [
+            {
+              "artifact_id": "ubersreik_full_recording",
+              "end_ms": 450000,
+              "start_ms": 420000
+            }
+          ],
+          "telemetry_end_ms": 499700,
+          "telemetry_start_ms": 463100
+        }
+      ],
+      "visual_title": "Battle of Ubersreik"
+    }
+  ],
+  "calibration_id": "sfo_reikland_dual_replay_tactical_calibration_v0.2A",
+  "calibration_updates": [
+    {
+      "authority": "ADVISORY_ONLY",
+      "rule": "Do not treat the initially observed local hierarchy as the complete force while reinforcement discovery is still changing.",
+      "status": "SUPPORTED",
+      "update_id": "force_completeness_guard"
+    },
+    {
+      "authority": "ADVISORY_ONLY",
+      "rule": "Evaluate preservation, role losses, and crisis exposure separately from victory status.",
+      "status": "SUPPORTED",
+      "update_id": "outcome_grade_cost_separation"
+    },
+    {
+      "authority": "ADVISORY_ONLY",
+      "rule": "Retain local crisis and recovery priorities even after a visible enemy rout cascade begins.",
+      "status": "SUPPORTED",
+      "update_id": "local_crisis_independent_of_enemy_collapse"
+    },
+    {
+      "authority": "ADVISORY_ONLY",
+      "rule": "After outcome-decided or victory-countdown evidence, prohibit new high-commitment objectives; allow only bounded pursuit, disengagement, and reformation hypotheses.",
+      "status": "SUPPORTED",
+      "update_id": "terminal_commitment_abstention"
+    },
+    {
+      "authority": "NO_ORDERS",
+      "rule": "Use the visually confirmed replay title for display while retaining the runtime battlefield identity as a separate source field.",
+      "status": "OBSERVED",
+      "update_id": "identity_provenance_separation"
+    }
+  ],
+  "contract": "SFO_DUAL_REPLAY_TACTICAL_CALIBRATION_V1",
+  "cross_battle_contrast": {
+    "command_count_ratio_marienburg_to_ubersreik": 1.79235,
+    "command_rate_difference_per_minute": -3.227,
+    "duration_ratio_marienburg_to_ubersreik": 2.100861,
+    "evidence_label": "SUPPORTED",
+    "initial_force_patterns": {
+      "marienburg": "1 initial of 20 final local units",
+      "ubersreik": "3 initial of 16 final local units"
+    },
+    "interpretation": "Victory grade and tactical cost diverge; win/loss alone is not a sufficient tactical-quality benchmark.",
+    "local_casualty_lower_bound_ratio_marienburg_to_ubersreik": 2.341317,
+    "outcome_grades": {
+      "marienburg": "PYRRHIC_VICTORY",
+      "ubersreik": "DECISIVE_VICTORY"
+    }
+  },
+  "evidence_status": "OBSERVED_WITH_BOUNDED_VISUAL_INTERPRETATION",
+  "next_evidence_gaps": [
+    "ordinary siege battle",
+    "ambush or interception battle",
+    "reinforcement battle with independently controlled allied army",
+    "flying-heavy engagement",
+    "large multi-army battle",
+    "separate command acknowledgement and execution-causality probe"
+  ],
+  "rejected_promotions": [
+    "Observed owner commands are not optimal-policy labels.",
+    "Observed command events are not acknowledgements.",
+    "Visual movement is not proof that a particular command caused execution.",
+    "Two land-battle replays do not establish broad SFO compatibility or tactical superiority.",
+    "The outer Transcendence pack container remains unverified even though the loaded battle script is byte-identical."
+  ],
+  "result_digest": "364431a064ef1f15bc6ab7da4417b688d882ac7f2035be753728d9d75870565e",
+  "schema_version": 1,
+  "source_dense_result_digests": {
+    "marienburg": "058f10ad125b554d3d63a0c1f768ed58ef8a9818473c2aebf515ac1458f957c0",
+    "ubersreik": "a93340421c1c7a0623f21381d6d83de209299276e93c418ed193adb65ca8a5ec"
+  },
+  "source_visual_alignment_digest": "ff763fa5ade5de8bae7f465a54017e07bd7263c09765a0da9c1dde0d3ac32783"
+}

@@ -1,0 +1,115 @@
+{
+  "authority": "NO_ORDERS",
+  "capture": {
+    "aggregate_sample_count": 637,
+    "battle_complete_marker_observed": false,
+    "canonical_unit_count": 23,
+    "command_event_count": 89,
+    "completed_battle_count": 0,
+    "coverage_ratio": 1.017699,
+    "detail_samples": 115,
+    "duration_ms": 338500,
+    "expected_detail_samples": 113,
+    "identity_alias_count": 0,
+    "inferred_command_count": 64,
+    "local_casualties_observed_lower_bound": 472,
+    "local_terminal_coverage_ratio": 0.0,
+    "maximum_sample_gap_ms": 3400,
+    "pack_marker_observed": true,
+    "sampler_heartbeat_count": 58,
+    "schema_version": 2,
+    "selection_attribution_ratio": 0.0,
+    "selection_callback_observed": false,
+    "visible_enemy_casualties_observed_lower_bound": 191,
+    "visible_enemy_terminal_coverage_ratio": 0.0
+  },
+  "contract": "SFO_CHAOS_REPLAY_STREAM_CAPTURE_V1",
+  "environment": {
+    "active_mod_count": 2,
+    "active_mod_list_modified": false,
+    "load_order": [
+      "SFO_TOTAL_OVERHAUL",
+      "READ_ONLY_BATTLE_REPLAY_PROBE"
+    ],
+    "observer_container_kind": "DEDICATED_REPLAY_PACK",
+    "observer_pack_sha256": "6e3f8e7bbc7d66754a7fa764c802e2b5599d13e83820e0785cb85d738040f66d",
+    "orders_emitted": false,
+    "parse_error": null,
+    "save_modified": false,
+    "sfo_pack_sha256": "ae20a0a08037aa3ebcbe7461d2589fc28dc15a5fe5d9ca4c0a9d0ff0a26da603",
+    "shared_battle_script_sha256": "86e18ec655c4a45a4a062d1dae7d10e6fd9a1cb77af5557757fbca9ed896562e",
+    "timed_out": false,
+    "verified": true,
+    "wh3_process_observed": true
+  },
+  "evidence_label": "LIMITING_RESULT",
+  "identity": {
+    "battle_type": "LAND_BATTLE",
+    "display_title": "An Ogre's Folly",
+    "enemy_display": "Warhost of the Apocalypse",
+    "local_faction": "Reikland",
+    "recording_committed": false,
+    "recording_sha256": "6e008c378a8e4273ca7d2c8101ca69279839a5c21dbaf749fb5e666adde56155",
+    "replay_binary_committed": false,
+    "replay_sha256": "28d780d02f2af07fe16fe4a24a27cd37f41bdb870d485f11949d5ed63f838cb5",
+    "replay_size_bytes": 86067,
+    "runtime_battlefield_identity": "Battle of Eilhart — Reikland vs Empire Secessionists"
+  },
+  "interpretation_limits": [
+    "Replay stream exhaustion is not natural battle completion.",
+    "The zero-loss replay-exit summary is not the original battle result.",
+    "Observed command events are not acknowledgements or proof of causal execution.",
+    "The owner command stream is not an optimal-policy label.",
+    "Casualty values are lower bounds because no terminal sample was observed.",
+    "This replay may have diverged from the original live battle and cannot independently reproduce the defeat outcome."
+  ],
+  "outcome_provenance": {
+    "original_live_battle": {
+      "evidence_label": "OWNER_ATTESTED",
+      "grade": "UNVERIFIED",
+      "status": "OWNER_ATTESTED_DEFEAT"
+    },
+    "replayed_simulation": {
+      "evidence_label": "LIMITING_RESULT",
+      "grade": "UNVERIFIED",
+      "status": "UNVERIFIED_NONTERMINAL",
+      "victorious_alliance": "UNVERIFIED"
+    }
+  },
+  "result_digest": "3febf48a92ce7309d912634b1540d29e1051a30835622b847b8da360aa6e74dc",
+  "schema_version": 1,
+  "source": {
+    "capture_verification_result_digest": "df81b6f8adc26b7a4e639b86fd4ff9c2e076759c662668accf7eb44b7574c2a6",
+    "dense_corpus_result_digest": "4d84f49ec1782d29e872eff6674e93af089c3290a765b5d20c95b815ee70cea4",
+    "dense_corpus_sha256": "bafc5884ea01c5d05e472423c41989ed5c23559d9365f07d2d608f5ed89797ef",
+    "export_manifest_verified": true,
+    "private_bundle_sha256": "18293f7f59fc9a2130a6c82ec48636097c946605d49980cfcb0f154a8c1a6126",
+    "private_bundle_size_bytes": 378246,
+    "raw_log_sha256": "2175b2643f80b7e7fde9edd66443df1b8b5f2205ec3aad51fab013d48a686c0c",
+    "raw_log_size_bytes": 3684741,
+    "source_contract_digest": "84eac2499b0fe34d460ff05b44bb615ca0976e220dcf589dc15a8039b58d133b"
+  },
+  "status": "OBSERVED_DENSE_NONTERMINAL_REPLAY_STREAM",
+  "visual_lifecycle_alignment": {
+    "overlay_controls_observed": [
+      "Load Replay",
+      "End Battle"
+    ],
+    "overlay_recording_window_ms": [
+      330000,
+      350000
+    ],
+    "post_stream_summary_loss_counts": {
+      "enemy_deployed": 491,
+      "enemy_losses": 0,
+      "enemy_remaining": 491,
+      "local_deployed": 1032,
+      "local_losses": 0,
+      "local_remaining": 1032
+    },
+    "post_stream_summary_observed": true,
+    "post_stream_summary_valid_as_original_battle_result": false,
+    "reason": "The replay command stream ended without a BATTLE_COMPLETE phase; the subsequent replay-exit summary reset both sides to zero losses.",
+    "replay_stream_end_overlay_observed": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "schema_commit": "d12f59cb6de106d205f51b81739951adbc840c49",
+  "status": "KEYS_UNRESOLVED_PENDING_EXACT_SCHEMA_BYTES",
+  "rule": "Do not infer primary keys from column names or mod rows. Populate only from the pinned schema/RPFM metadata.",
+  "tables": {}
+}

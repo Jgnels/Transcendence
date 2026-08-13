@@ -1,5 +1,9 @@
 # Player Experience Specification
 
+## v0.2H feasibility experience boundary
+
+Strategic intelligence must not become hidden cheating by pretending straight-line geometry, faction centroids, or undocumented routing are exact WH3 knowledge. Before Transcendence can act, it must be able to explain which current, game-exposed feasibility facts support a proposed move and which remain unknown. A later live query may veto or qualify a plan, but it may not turn uncertainty into invisible bonuses, omniscient targeting, or forced movement.
+
 ## Stable owner preferences
 
 - Approximately 2,000+ hours across Total War games going back to Medieval II.
@@ -10,7 +14,7 @@
 - Usually plays the hardest campaign and battle difficulties.
 - Often uses ironman mode.
 - Definitely uses the owner's described “battlefield limitation mode”; exact in-game setting name and configuration must be frozen from the installation.
-- SFO: Grimhammer III is the favorite and intended primary baseline.
+- SFO: Grimhammer III is the favorite optional gameplay environment, while the core remains vanilla-compatible.
 - Late-game challenge collapse is the largest current problem.
 - Three Kingdoms is the strongest official-series reference for late-game and empire-management feel.
 
@@ -22,7 +26,7 @@
 4. Battles remain winnable through exceptional command even when the strategic odds are poor.
 5. Losing a battle or settlement can produce a compelling recovery campaign rather than an inevitable spiral or meaningless inconvenience.
 6. Factions retain thematic doctrine without becoming predictable caricatures.
-7. SFO's slower, lore-oriented and higher-impact battle/campaign feel is preserved unless a measured change improves it.
+7. When the SFO profile is enabled, its slower, lore-oriented, higher-impact feel should be preserved unless a measured change improves it.
 
 ## Anti-goals
 
@@ -45,3 +49,7 @@ Treat these as design inspiration to test, not mechanics to copy blindly:
 - escalation tied to rank and power;
 - empire size creating new strategic obligations and enemies;
 - strong late-game factions remaining politically relevant.
+## v0.2C defeat-trace experience boundary
+
+A failed or divergent replay must not teach Transcendence that loss is inevitable, that the player's tactics are canonical, or that invisible compensating bonuses are justified. Nonterminal defeat evidence may improve warnings, reserve recognition, asset preservation, regroup timing, and explanation quality. It may not manufacture a win label or make Chaos universally counter-targeted.
+

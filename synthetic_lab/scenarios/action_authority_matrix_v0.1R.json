@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "seed": 20260730,
+  "scenarios": [
+    {
+      "scenario_id": "proposal_without_issue_attempt",
+      "observation": {
+        "command_event_observed": false,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "NO_COMMAND_EVENT",
+        "selected_unit_ids": [],
+        "actor_unit_id": null,
+        "command_name": null,
+        "target_unit_id": null,
+        "target_position": null,
+        "reachability": "NOT_APPLICABLE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": false,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      },
+      "expect": {
+        "project_issue_status": "NOT_ATTEMPTED",
+        "execution_status": "NO_ISSUE_ATTEMPT",
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED"
+      }
+    },
+    {
+      "scenario_id": "owner_move_state_match",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "OWNER_INPUT_DECLARED_BY_FIXTURE",
+        "selected_unit_ids": ["1:u1001"],
+        "actor_unit_id": "1:u1001",
+        "command_name": "Move",
+        "target_unit_id": null,
+        "target_position": {"x": 25, "y": 0, "z": 80},
+        "reachability": "QUERY_TRUE",
+        "ordered_position_match": true,
+        "target_match": false,
+        "moving_after": true,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      },
+      "expect": {
+        "feasibility_status": "POSITION_QUERY_REACHABLE",
+        "execution_status": "OBSERVED_STATE_MATCH_NOT_CAUSALLY_ATTRIBUTED",
+        "direct_acknowledgement_status": "UNAVAILABLE_NOT_OBSERVED"
+      }
+    },
+    {
+      "scenario_id": "attack_target_state_match",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": ["1:u1002"],
+        "actor_unit_id": "1:u1002",
+        "command_name": "Attack Unit",
+        "target_unit_id": "2:u2001",
+        "target_position": null,
+        "reachability": "NOT_APPLICABLE",
+        "ordered_position_match": false,
+        "target_match": true,
+        "moving_after": true,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      },
+      "expect": {
+        "binding_status": "BOUND_TO_OBSERVED_SELECTION",
+        "execution_status": "OBSERVED_STATE_MATCH_NOT_CAUSALLY_ATTRIBUTED",
+        "outcome_attribution": "UNVERIFIED_NOT_ATTRIBUTED"
+      }
+    },
+    {
+      "scenario_id": "unreachable_position",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": ["1:u1003"],
+        "actor_unit_id": "1:u1003",
+        "command_name": "Move",
+        "target_unit_id": null,
+        "target_position": {"x": 5000, "y": 0, "z": 5000},
+        "reachability": "QUERY_FALSE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": false,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "WINDOW_TIMEOUT"
+      },
+      "expect": {
+        "feasibility_status": "POSITION_QUERY_UNREACHABLE",
+        "execution_status": "INTERRUPTED_OR_CONTROL_LOST"
+      }
+    },
+    {
+      "scenario_id": "reachability_unavailable",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": ["1:u1004"],
+        "actor_unit_id": "1:u1004",
+        "command_name": "Attack Unit",
+        "target_unit_id": "2:u2002",
+        "target_position": null,
+        "reachability": "UNAVAILABLE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": false,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      },
+      "expect": {
+        "feasibility_status": "REACHABILITY_UNVERIFIED",
+        "execution_status": "NO_MATCHING_STATE_CHANGE_OBSERVED"
+      }
+    },
+    {
+      "scenario_id": "subsequent_command_interrupts",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": ["1:u1005"],
+        "actor_unit_id": "1:u1005",
+        "command_name": "Move",
+        "target_unit_id": null,
+        "target_position": {"x": 10, "y": 0, "z": 30},
+        "reachability": "QUERY_TRUE",
+        "ordered_position_match": true,
+        "target_match": false,
+        "moving_after": true,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "SUBSEQUENT_COMMAND"
+      },
+      "expect": {
+        "execution_status": "INTERRUPTED_OR_CONTROL_LOST",
+        "acknowledgement_claim": "NOT_ACKNOWLEDGED"
+      }
+    },
+    {
+      "scenario_id": "control_lost_after_command",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": ["1:u1006"],
+        "actor_unit_id": "1:u1006",
+        "command_name": "Move",
+        "target_unit_id": null,
+        "target_position": {"x": 10, "y": 0, "z": 30},
+        "reachability": "QUERY_TRUE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": false,
+        "leaving_after": false,
+        "control_lost": true,
+        "interruption": "CONTROL_LOST"
+      },
+      "expect": {
+        "execution_status": "INTERRUPTED_OR_CONTROL_LOST"
+      }
+    },
+    {
+      "scenario_id": "withdrawal_state_observed",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "OWNER_INPUT_DECLARED_BY_FIXTURE",
+        "selected_unit_ids": ["1:u1007"],
+        "actor_unit_id": "1:u1007",
+        "command_name": "Withdraw",
+        "target_unit_id": null,
+        "target_position": null,
+        "reachability": "NOT_APPLICABLE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": true,
+        "leaving_after": true,
+        "control_lost": false,
+        "interruption": "NONE"
+      },
+      "expect": {
+        "execution_status": "OBSERVED_STATE_MATCH_NOT_CAUSALLY_ATTRIBUTED"
+      }
+    },
+    {
+      "scenario_id": "command_without_selection_is_unbound",
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": [],
+        "actor_unit_id": null,
+        "command_name": "Move",
+        "target_unit_id": null,
+        "target_position": {"x": 2, "y": 0, "z": 3},
+        "reachability": "UNAVAILABLE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": false,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      },
+      "expect": {
+        "binding_status": "UNBOUND_COMMAND_EVENT",
+        "execution_status": "UNBOUND_COMMAND_NO_EXECUTION_CLAIM"
+      }
+    },
+    {
+      "scenario_id": "forbid_project_issue_attempt",
+      "expect_error": true,
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": true,
+        "direct_ack_observed": false,
+        "command_origin": "SCRIPT_INPUT_DECLARED_BY_FIXTURE",
+        "selected_unit_ids": ["1:u1008"],
+        "actor_unit_id": "1:u1008",
+        "command_name": "Move",
+        "target_unit_id": null,
+        "target_position": {"x": 1, "y": 0, "z": 1},
+        "reachability": "QUERY_TRUE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": false,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      }
+    },
+    {
+      "scenario_id": "forbid_fabricated_direct_ack",
+      "expect_error": true,
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": true,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": ["1:u1009"],
+        "actor_unit_id": "1:u1009",
+        "command_name": "Move",
+        "target_unit_id": null,
+        "target_position": {"x": 1, "y": 0, "z": 1},
+        "reachability": "QUERY_TRUE",
+        "ordered_position_match": true,
+        "target_match": false,
+        "moving_after": true,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      }
+    },
+    {
+      "scenario_id": "forbid_hidden_target_identity",
+      "expect_error": true,
+      "observation": {
+        "command_event_observed": true,
+        "project_issue_attempted": false,
+        "direct_ack_observed": false,
+        "command_origin": "GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED",
+        "selected_unit_ids": ["1:u1010"],
+        "actor_unit_id": "1:u1010",
+        "command_name": "Attack Unit",
+        "target_unit_id": "HIDDEN_ENEMY:u9999",
+        "target_position": null,
+        "reachability": "NOT_APPLICABLE",
+        "ordered_position_match": false,
+        "target_match": false,
+        "moving_after": false,
+        "leaving_after": false,
+        "control_lost": false,
+        "interruption": "NONE"
+      }
+    }
+  ]
+}

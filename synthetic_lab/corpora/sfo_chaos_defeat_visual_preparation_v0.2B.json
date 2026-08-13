@@ -1,0 +1,181 @@
+{
+  "authority": "NO_ORDERS",
+  "bounded_hypotheses": [
+    {
+      "claim_status": "BOUNDED_DIAGNOSIS",
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "hypothesis_id": "formation_support_failure",
+      "statement": "The initial local formation may have been too broad for timely mutual support against the enemy closing speed."
+    },
+    {
+      "claim_status": "BOUNDED_DIAGNOSIS",
+      "confidence": "MEDIUM",
+      "evidence_label": "HYPOTHESIS",
+      "hypothesis_id": "reserve_absence",
+      "statement": "A protected tactical reserve may have been unavailable when the first local crisis developed."
+    },
+    {
+      "claim_status": "BOUNDED_DIAGNOSIS",
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "hypothesis_id": "piecemeal_commitment",
+      "statement": "Local units appear to enter the decisive area at different times rather than as one coordinated engagement."
+    },
+    {
+      "claim_status": "BOUNDED_DIAGNOSIS",
+      "confidence": "LOW",
+      "evidence_label": "HYPOTHESIS",
+      "hypothesis_id": "firing_lane_degradation",
+      "statement": "Ranged and artillery effectiveness may have declined as friendly and enemy units became intermingled near rough terrain."
+    },
+    {
+      "claim_status": "BOUNDED_DIAGNOSIS",
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "hypothesis_id": "failed_reset",
+      "statement": "After the first unfavorable exchange, no clear regroup, fallback line, or asset-extraction state is visually apparent."
+    }
+  ],
+  "contract": "SFO_CHAOS_DEFEAT_VISUAL_PREPARATION_V1",
+  "evidence_status": "OBSERVED_VISUAL_DEFEAT_TELEMETRY_PENDING",
+  "interpretation_limits": [
+    "Observed command events would remain observation only and not acknowledgement.",
+    "Visible movement after a command is not causal execution proof.",
+    "The owner trace is not an optimal-policy label.",
+    "The visual diagnosis does not prove that any alternative would have produced victory.",
+    "Embedded replay strings are evidence of labels present in the binary, not a complete roster or deployment reconstruction."
+  ],
+  "outcome": {
+    "evidence_label": "OWNER_ATTESTED",
+    "grade": "UNVERIFIED",
+    "result_screen_observed": false,
+    "status": "OWNER_ATTESTED_DEFEAT_VISUALLY_CONSISTENT"
+  },
+  "replay": {
+    "battle_type": "LAND_BATTLE",
+    "committed": false,
+    "display_title": "An Ogre's Folly",
+    "embedded_labels_are_not_complete_roster_claims": true,
+    "embedded_unit_labels_observed": [
+      "Archaon the Everchosen",
+      "Chaos Chariots of Slaanesh",
+      "Chaos Giant",
+      "Chaos Knights of Slaanesh (Lances)",
+      "Chaos Warhounds",
+      "Chaos Warshrine of Khorne",
+      "Chosen",
+      "Deathjacks (Archers)",
+      "Elspeth von Draken",
+      "Empire Captain",
+      "Forsaken of Tzeentch",
+      "Free Company Militia",
+      "Greatswords",
+      "Halberdiers",
+      "Helstorm Rocket Battery",
+      "Marauder Horsemen of Tzeentch",
+      "Marauders of Khorne (Dual Weapons)",
+      "The Hergig Jaegerkorps (Hochland Long Rifles)",
+      "The Tattersouls (Flagellants)",
+      "Zintler's Reiksguard (Reiksguard)"
+    ],
+    "enemy_display": "Warhost of the Apocalypse",
+    "local_faction": "Reikland",
+    "race_labels": [
+      "The Empire",
+      "Warriors of Chaos"
+    ],
+    "sha256": "28d780d02f2af07fe16fe4a24a27cd37f41bdb870d485f11949d5ed63f838cb5",
+    "size_bytes": 86067
+  },
+  "result_digest": "33147a76c6499694b9ae1623dd8698deb5c83a8eb77b9435a8451a64a12d54ab",
+  "schema_version": 1,
+  "telemetry_required": [
+    "stable unit identity and full local/enemy hierarchy",
+    "health, model-count, fatigue, morale, and ammunition trajectories",
+    "first engagement, wavering, routing, rally, and shatter timestamps",
+    "exact command events, command targets, and inferred unit attribution",
+    "role-specific casualties, kills, travel, and threat exposure",
+    "battle completion marker, victorious alliance, and exact outcome evidence"
+  ],
+  "visual_artifact": {
+    "artifact_id": "chaos_defeat_full_recording",
+    "committed": false,
+    "duration_ms": 389533,
+    "fps_den": 1,
+    "fps_num": 30,
+    "height": 1080,
+    "sha256": "6e008c378a8e4273ca7d2c8101ca69279839a5c21dbaf749fb5e666adde56155",
+    "width": 1920
+  },
+  "visual_identity_facts": [
+    {
+      "confidence": "HIGH",
+      "evidence_label": "OBSERVED",
+      "fact_id": "display_title",
+      "statement": "The replay-selection screen visibly identifies An Ogre's Folly as a land battle."
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_label": "OBSERVED",
+      "fact_id": "factions",
+      "statement": "The recording visibly identifies Reikland against Warhost of the Apocalypse, with The Empire and Warriors of Chaos race labels."
+    },
+    {
+      "confidence": "HIGH",
+      "evidence_label": "LIMITING_RESULT",
+      "fact_id": "result_limit",
+      "statement": "The recording does not show a normal result card, so the exact defeat grade is not visually observed."
+    }
+  ],
+  "visual_phase_windows": [
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "OBSERVED",
+      "note": "The Empire begins in a broad, shallow formation with substantial lateral separation.",
+      "phase_id": "deployment",
+      "recording_end_ms": 48000,
+      "recording_start_ms": 36000
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "note": "Chaos pressure reaches the left and center quickly while much of the local line is not yet mutually supporting.",
+      "phase_id": "early_local_overload",
+      "recording_end_ms": 70000,
+      "recording_start_ms": 48000
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "note": "The pressured local group fights in congestion while other elements contribute unevenly or arrive piecemeal.",
+      "phase_id": "unsupported_engagement",
+      "recording_end_ms": 140000,
+      "recording_start_ms": 70000
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "note": "The battle separates into local fights rather than one mutually supporting formation.",
+      "phase_id": "fragmentation",
+      "recording_end_ms": 210000,
+      "recording_start_ms": 140000
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "note": "More local units appear depleted, wavering, routing, or isolated without a visible fresh reserve.",
+      "phase_id": "cascading_failure",
+      "recording_end_ms": 285000,
+      "recording_start_ms": 210000
+    },
+    {
+      "confidence": "MEDIUM",
+      "evidence_label": "SUPPORTED",
+      "note": "Remaining local pockets withdraw or are surrounded while Chaos retains multiple combat-effective units.",
+      "phase_id": "terminal_defeat",
+      "recording_end_ms": 325000,
+      "recording_start_ms": 285000
+    }
+  ]
+}

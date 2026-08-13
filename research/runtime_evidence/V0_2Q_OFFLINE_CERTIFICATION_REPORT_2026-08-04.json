@@ -1,0 +1,30 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "causal_review_digest": "41db109436049596ffdaac0283085acb11f6731bd6c47b7b1f01c8f4bbd00e45",
+  "contract": "TRANSCENDENCE_V0_2Q_OFFLINE_CERTIFICATION_REPORT_V1",
+  "date": "2026-08-04",
+  "game_side_lua_change_from_v0_2p": false,
+  "native_row_ablation_earned": false,
+  "next_owner_gate": "STAGE_A_FRESH_SFO_REPLICATION_ONLY",
+  "replication_policy_digest": "3171982731ca16a635723f5d5a788c6ce5fb397590f82a60cabb221e26ac0120",
+  "report_digest": "f2a1da56e8ddf4d26dd500e4c068f23a69dbbae64c593f812b2953db1712cef9",
+  "source_sfo_bundle_sha256": "e2e8bf8ceb1ef3e365586cb428a420210530dcedfe6e96901b3d794b3fb4ca04",
+  "source_sfo_result_digest": "af4056f3ce2d184dea29444edb5b049655c4d767b056ea448b97d45b5a65dbbb",
+  "study_version": "v0.2Q",
+  "tests": {
+    "combined": {
+      "failed": 0,
+      "passed": 391
+    },
+    "runtime_probe": {
+      "failed": 0,
+      "passed": 198
+    },
+    "synthetic_lab": {
+      "failed": 0,
+      "passed": 193
+    }
+  }
+}

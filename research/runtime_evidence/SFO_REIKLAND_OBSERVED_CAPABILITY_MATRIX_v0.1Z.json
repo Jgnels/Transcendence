@@ -1,0 +1,38 @@
+{
+  "capabilities": {
+    "broad_faction_coverage": "UNOBSERVED",
+    "campaign_battle_campaign_append_continuity": "OBSERVED",
+    "command_event_observation": "OBSERVED_NOT_ACKNOWLEDGED",
+    "exact_sfo_environment_identity": "OBSERVED",
+    "full_mod_stack_compatibility": "UNOBSERVED",
+    "order_acknowledgement": "UNOBSERVED",
+    "order_execution_causality": "UNOBSERVED",
+    "schema2_dense_battle_time_series": "OBSERVED",
+    "selection_event_observation": "OBSERVED",
+    "sfo_ambush_coverage": "UNOBSERVED",
+    "sfo_campaign_observation": "OBSERVED",
+    "sfo_ordinary_land_battle_observation": "OBSERVED",
+    "sfo_reinforcement_coverage": "UNOBSERVED",
+    "sfo_siege_coverage": "UNOBSERVED",
+    "tactical_superiority": "UNPROVEN"
+  },
+  "forbidden_inferences": [
+    "Observed command events are not acknowledgements or proof of execution.",
+    "The owner trace is not an optimal-policy label.",
+    "Hidden enemy identity or state is not known before visibility.",
+    "Three ordinary land battles do not establish siege, ambush, reinforcement, flying-unit, or broad-faction coverage.",
+    "This exact run does not generalize across later WH3 or SFO updates or additional mods."
+  ],
+  "result_digest": "22052f7c26df8e7d3ebf04de87af6fc7a7b83a30001d4c88fea6fc07940ca73b",
+  "schema_version": 1,
+  "scope": {
+    "battle_types": [
+      "land_normal"
+    ],
+    "campaign_turns": 6,
+    "completed_battles": 3,
+    "faction": "Karl Franz / Reikland"
+  },
+  "source_fixture_digest": "beffac065a5e8021c8c4ad1bee5c5d207724651f7c47f0a62bc7166859098a10",
+  "source_fixture_id": "sfo_reikland_combined_observed_v0.1Z"
+}

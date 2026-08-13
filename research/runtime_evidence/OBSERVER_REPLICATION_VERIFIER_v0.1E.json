@@ -1,0 +1,62 @@
+{
+  "checks": {
+    "exact_pack_verified": false,
+    "independent_raw_artifacts": true,
+    "loader_entrypoint_clean": false,
+    "no_capability_failures": true,
+    "observer_sessions_valid": true,
+    "same_environment": true,
+    "same_semantic_observation": true
+  },
+  "evidence_label": "SUPPORTED",
+  "expected_pack_sha256": null,
+  "result_digest": "1470cd524f3c24a44d7232b96d25646c26eda5bbb675a1af7490edeee428f0c5",
+  "run_count": 2,
+  "runs": [
+    {
+      "capability_failures": [],
+      "environment": {
+        "campaign": "wh3_main_combi",
+        "is_multiplayer": false,
+        "is_new_game": true,
+        "local_faction": "wh_main_emp_empire",
+        "turn": 1
+      },
+      "loader_entrypoint": "MISSING",
+      "log_name": "lua_mod_log.txt",
+      "log_sha256": "ddf462130e6551c034ddd5e79dfc916fba0a133cfa0cf6ef715e6df7afd1f9f7",
+      "log_size_bytes": 10169,
+      "observer_session_valid": true,
+      "pack_sha256": "33f3f9cf43441470348e28e4ea03e5091ac47dd8ae99e17ba2ab2662d9db7abd",
+      "result_digest": "b117de34a035b5711700ef5bdda876263af531b0ba87c14f8508a9274a4b12e0",
+      "run_index": 1,
+      "semantic_digest": "947d9aa1815485a7ba844d79b20e680ea8e36ed5eeb108a8fc5692e7e2bfb6f7"
+    },
+    {
+      "capability_failures": [],
+      "environment": {
+        "campaign": "wh3_main_combi",
+        "is_multiplayer": false,
+        "is_new_game": true,
+        "local_faction": "wh_main_emp_empire",
+        "turn": 1
+      },
+      "loader_entrypoint": "SUCCESS",
+      "log_name": "lua_mod_log(1).txt",
+      "log_sha256": "c12afd4fce48708990e251ba271cb877b07f3163749960d68cadb9eed51f925c",
+      "log_size_bytes": 10224,
+      "observer_session_valid": true,
+      "pack_sha256": "0c1dd8940a697a2d840876f08092ba02f988170e90c5f77b6f934ac15c79f173",
+      "result_digest": "1d0aabe04524fbc8a9dfb8cb410d853e8c138773edbe4b849315722929bc749a",
+      "run_index": 2,
+      "semantic_digest": "947d9aa1815485a7ba844d79b20e680ea8e36ed5eeb108a8fc5692e7e2bfb6f7"
+    }
+  ],
+  "schema_version": 1,
+  "shared_semantic_digest": "947d9aa1815485a7ba844d79b20e680ea8e36ed5eeb108a8fc5692e7e2bfb6f7",
+  "status": "SUPPORTED_CROSS_REVISION",
+  "warnings": [
+    "Semantic equivalence does not prove campaign control, order authority, acknowledgement, outcome control, or save persistence.",
+    "The observer behavior repeated, but the supplied evidence does not prove two clean sessions used the exact same pack hash with the corrected loader entrypoint."
+  ]
+}

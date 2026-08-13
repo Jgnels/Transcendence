@@ -1,0 +1,51 @@
+{
+  "authority_exclusions": [
+    "save persistence",
+    "campaign objective influence or control",
+    "order acknowledgement or outcome",
+    "battle control",
+    "AI performance improvement"
+  ],
+  "checks": {
+    "byte_identical_raw_logs": true,
+    "exact_pack_verified": true,
+    "independent_collections_verified": true,
+    "loader_entrypoint_clean": true,
+    "no_capability_failures": true,
+    "observer_sessions_valid": true,
+    "same_environment": true,
+    "same_semantic_observation": true
+  },
+  "environment": {
+    "campaign": "wh3_main_combi",
+    "is_multiplayer": false,
+    "is_new_game": true,
+    "local_faction": "wh_main_emp_empire",
+    "turn": 1
+  },
+  "evidence_label": "REPLICATED",
+  "observer_pack_sha256": "0c1dd8940a697a2d840876f08092ba02f988170e90c5f77b6f934ac15c79f173",
+  "result_digest": "300294f0760f1574ecffb45318003f82d630f2fdc80db71e40c47cc7ebb7e09b",
+  "runs": [
+    {
+      "collected_at_utc": "2026-07-29T20:44:32.2376078Z",
+      "collection_number": 1,
+      "evidence_manifest_sha256": "46f04d7789173395256fee3fe02f059a825f837786553db4fcfa0272fc9e6d07",
+      "pack_identity_source": "deterministic v0.1D build/install provenance",
+      "uploaded_summary_sha256": "f605b42a2207b6f4f73a6c4a03c608322fac96f8d965ac4381517b837d502e46"
+    },
+    {
+      "collected_at_utc": "2026-07-29T21:03:19.2701024Z",
+      "collection_number": 2,
+      "evidence_manifest_sha256": "7bd09032bf545ed9743398b1ef7d138dcddf613f9a72d506a44d856b2f3bc9dc",
+      "pack_identity_source": "evidence manifest v2 installed/staged hash agreement",
+      "uploaded_summary_sha256": "556ce4e8334d13fd3e8a6471b45e7d1d9129c87818dd22af1c9cbc2c332aeac4"
+    }
+  ],
+  "schema_version": 1,
+  "shared_log_sha256": "c12afd4fce48708990e251ba271cb877b07f3163749960d68cadb9eed51f925c",
+  "shared_log_size_bytes": 10224,
+  "shared_semantic_digest": "947d9aa1815485a7ba844d79b20e680ea8e36ed5eeb108a8fc5692e7e2bfb6f7",
+  "status": "REPLICATED",
+  "verifier_result_digest": "4bd1ad7bf39e086fa26d1dad3265da1a487db437b4d51b2d5715a4a2203326f"
+}

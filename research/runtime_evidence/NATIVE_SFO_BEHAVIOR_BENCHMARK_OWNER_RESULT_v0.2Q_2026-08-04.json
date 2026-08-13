@@ -1,0 +1,822 @@
+{
+  "application_authority": "PROHIBITED",
+  "application_eligible": false,
+  "authority": "NO_ORDERS",
+  "comparison_to_hash_frozen_vanilla_reference": {
+    "recovery_attacker_side_rate_sfo": 0.142857,
+    "recovery_attacker_side_rate_vanilla": 0.157895,
+    "territorial_eligible_windows_sfo": 39,
+    "territorial_eligible_windows_vanilla": 48,
+    "territorial_repeated_reversal_force_count_sfo": 0,
+    "territorial_repeated_reversal_force_count_vanilla": 0,
+    "territorial_reversal_candidate_rate_delta_sfo_minus_vanilla": 0.190705,
+    "territorial_reversal_candidate_rate_sfo": 0.461538,
+    "territorial_reversal_candidate_rate_vanilla": 0.270833,
+    "vanilla_reference_kind": "RETROSPECTIVELY_STRATIFIED_REFERENCE_NOT_RANDOMIZED_CAUSAL_BASELINE",
+    "warning": "Differences are benchmark signals only. SFO changes many systems; this design does not identify which row/mechanism caused a difference."
+  },
+  "contract": "NATIVE_CAI_SFO_OWNER_BENCHMARK_ADJUDICATION_V1",
+  "precommitted_post_sfo_decision": {
+    "decision_table_digest": "6493a5df13c4703bf9e16febf825c6ad0764c7127fae308e1b0856a3e355de74",
+    "recovery": {
+      "action": "NO_RECOVERY_INTERVENTION_EARNED",
+      "branch": "SFO_RECOVERY_NO_PREREGISTERED_SIGNAL",
+      "mechanistic_nomination": "NONE",
+      "rate": 0.142857
+    },
+    "temporal": {
+      "action": "DESCRIPTIVE_WORSENING_NOMINATION; REPLICATION_AND_CAUSAL_REVIEW_REQUIRED",
+      "branch": "HIGHER_THAN_VANILLA_CLUSTER_ENVELOPE",
+      "mechanistic_nomination": "DO_NOT_COPY_SFO_PRIORITY_INCREASES",
+      "rate": 0.461538
+    }
+  },
+  "primary_territorial_temporal_status": "NO_REPEATED_TERRITORIAL_REVERSAL_SIGNAL_IN_COHORT",
+  "profile_binding": {
+    "application_authority": "PROHIBITED",
+    "application_eligible": false,
+    "authority": "NO_ORDERS",
+    "binding_sha256": "dbd08f618c180e0666364518eebc48ecd503df26d0d5795ca83ae6cf56442e46",
+    "campaign_protocol": {
+      "battle_difficulty": "Very Hard",
+      "campaign_difficulty": "Legendary",
+      "campaign_key": "IMMORTAL_EMPIRES_KARL_FRANZ",
+      "observer_faction": "wh_main_emp_empire",
+      "player_action_protocol": "UNRESTRICTED_NORMAL_PLAY_MATCHED_SFO_BENCHMARK"
+    },
+    "contract": "NATIVE_CAI_DIAGNOSTIC_SFO_PROFILE_BINDING_V1",
+    "game": {
+      "exe_name": "Warhammer3.exe",
+      "sha256": "b7315fa718fd84e2e018e2c4df06600e9df0076156b474f148d9d558c939aa55",
+      "size_bytes": 241712592
+    },
+    "launcher": {
+      "active_pack_entries": [
+        "sfo_grimhammer_3_main.pack",
+        "transcendence_native_diagnostic_probe.pack"
+      ],
+      "used_mods_sha256": "8a4485b4befe127360c2b7c9552362c32333914e4a5af47083a4d70d755e0fc2",
+      "used_mods_source_kind": "GAME_ROOT"
+    },
+    "probe": {
+      "pack_name": "transcendence_native_diagnostic_probe.pack",
+      "sha256": "7c1c0e21d178973ba35d66217f39b717fa3a0d9dea41b9bfb3192cabfe2961b4",
+      "size_bytes": 16496
+    },
+    "profile": "SFO_DIAGNOSTIC_BEHAVIOR_BENCHMARK_v0.2P",
+    "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+    "sfo": {
+      "expected_sha256": "ae20a0a08037aa3ebcbe7461d2589fc28dc15a5fe5d9ca4c0a9d0ff0a26da603",
+      "pack_name": "sfo_grimhammer_3_main.pack",
+      "sha256": "ae20a0a08037aa3ebcbe7461d2589fc28dc15a5fe5d9ca4c0a9d0ff0a26da603",
+      "size_bytes": 1855740073,
+      "workshop_id": "2792731173"
+    }
+  },
+  "recovery_status": "NO_PREREGISTERED_RECOVERY_SIGNAL_IN_COHORT",
+  "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+  "result_digest": "af4056f3ce2d184dea29444edb5b049655c4d767b056ea448b97d45b5a65dbbb",
+  "source_bundle": {
+    "filename": "Transcendence_NativeBehaviorStudy_SFO_20260804T155621Z.zip",
+    "sha256": "e2e8bf8ceb1ef3e365586cb428a420210530dcedfe6e96901b3d794b3fb4ca04",
+    "zip_integrity": "PASS"
+  },
+  "study_version": "v0.2Q",
+  "territorial_cluster_diagnostics": {
+    "application_authority": "PROHIBITED",
+    "application_eligible": false,
+    "authority": "NO_ORDERS",
+    "candidate_concentration": {
+      "candidate_bearing_faction_count": 12,
+      "candidate_hhi_by_faction": 0.12963,
+      "max_faction_candidate_share": 0.277778
+    },
+    "candidate_windows": [
+      {
+        "faction": "wh2_dlc11_vmp_the_barrow_legion",
+        "force_cqi": "83",
+        "heading_cosine": -0.968938,
+        "movement_distances": [
+          32.388269,
+          30.463092
+        ],
+        "regions": [
+          "wh3_main_combi_region_gisoreux",
+          "wh3_main_combi_region_castle_artois",
+          "wh3_main_combi_region_gisoreux"
+        ],
+        "turns": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "faction": "wh2_main_def_bleak_holds",
+        "force_cqi": "191",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          24.698178,
+          24.698178
+        ],
+        "regions": [
+          "wh3_main_combi_region_the_moon_shard",
+          "wh3_main_combi_region_arnheim",
+          "wh3_main_combi_region_the_moon_shard"
+        ],
+        "turns": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "faction": "wh2_main_def_bleak_holds",
+        "force_cqi": "191",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          24.698178,
+          24.698178
+        ],
+        "regions": [
+          "wh3_main_combi_region_arnheim",
+          "wh3_main_combi_region_the_moon_shard",
+          "wh3_main_combi_region_arnheim"
+        ],
+        "turns": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "faction": "wh2_main_def_drackla_coven",
+        "force_cqi": "207",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          32.802439,
+          32.802439
+        ],
+        "regions": [
+          "wh3_main_combi_region_hag_hall",
+          "wh3_main_combi_region_vauls_anvil_naggaroth",
+          "wh3_main_combi_region_hag_hall"
+        ],
+        "turns": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "faction": "wh2_main_def_scourge_of_khaine",
+        "force_cqi": "202",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          42.720019,
+          42.720019
+        ],
+        "regions": [
+          "wh3_main_combi_region_tor_anlec",
+          "wh3_main_combi_region_tor_dranil",
+          "wh3_main_combi_region_tor_anlec"
+        ],
+        "turns": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "faction": "wh2_main_emp_new_world_colonies",
+        "force_cqi": "240",
+        "heading_cosine": -0.999418,
+        "movement_distances": [
+          31.064449,
+          33.015148
+        ],
+        "regions": [
+          "wh3_main_combi_region_monument_of_the_moon",
+          "wh3_main_combi_region_monument_of_the_moon",
+          "wh3_main_combi_region_monument_of_the_moon"
+        ],
+        "turns": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "faction": "wh2_main_hef_nagarythe",
+        "force_cqi": "1177",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          27.784888,
+          27.784888
+        ],
+        "regions": [
+          "wh3_main_combi_region_shrine_of_ladrielle",
+          "wh3_main_combi_region_slavers_point",
+          "wh3_main_combi_region_shrine_of_ladrielle"
+        ],
+        "turns": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "faction": "wh2_main_hef_nagarythe",
+        "force_cqi": "1177",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          27.784888,
+          27.784888
+        ],
+        "regions": [
+          "wh3_main_combi_region_slavers_point",
+          "wh3_main_combi_region_shrine_of_ladrielle",
+          "wh3_main_combi_region_slavers_point"
+        ],
+        "turns": [
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "faction": "wh2_main_hef_nagarythe",
+        "force_cqi": "31",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          27.784888,
+          27.784888
+        ],
+        "regions": [
+          "wh3_main_combi_region_shrine_of_ladrielle",
+          "wh3_main_combi_region_slavers_point",
+          "wh3_main_combi_region_shrine_of_ladrielle"
+        ],
+        "turns": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "faction": "wh2_main_hef_nagarythe",
+        "force_cqi": "31",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          27.784888,
+          27.784888
+        ],
+        "regions": [
+          "wh3_main_combi_region_slavers_point",
+          "wh3_main_combi_region_shrine_of_ladrielle",
+          "wh3_main_combi_region_slavers_point"
+        ],
+        "turns": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "faction": "wh2_main_hef_nagarythe",
+        "force_cqi": "31",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          27.784888,
+          27.784888
+        ],
+        "regions": [
+          "wh3_main_combi_region_shrine_of_ladrielle",
+          "wh3_main_combi_region_slavers_point",
+          "wh3_main_combi_region_shrine_of_ladrielle"
+        ],
+        "turns": [
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "faction": "wh2_main_skv_clan_spittel",
+        "force_cqi": "220",
+        "heading_cosine": -0.700087,
+        "movement_distances": [
+          26.019224,
+          24.758837
+        ],
+        "regions": [
+          "wh3_main_combi_region_the_blood_swamps",
+          "wh3_main_combi_region_axlotl",
+          "wh3_main_combi_region_altar_of_the_horned_rat"
+        ],
+        "turns": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "faction": "wh3_dlc25_nur_tamurkhan",
+        "force_cqi": "1373",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          10.77033,
+          10.77033
+        ],
+        "regions": [
+          "wh3_main_combi_region_floating_mountain",
+          "wh3_main_combi_region_floating_mountain",
+          "wh3_main_combi_region_floating_mountain"
+        ],
+        "turns": [
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "faction": "wh3_main_dwf_karak_azorn",
+        "force_cqi": "251",
+        "heading_cosine": -0.803492,
+        "movement_distances": [
+          35.057096,
+          31.240999
+        ],
+        "regions": [
+          "wh3_main_combi_region_valley_of_horns",
+          "wh3_main_combi_region_karak_azorn",
+          "wh3_main_combi_region_amblepeak"
+        ],
+        "turns": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "faction": "wh3_main_nur_bubonic_swarm",
+        "force_cqi": "1509",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          8.246211,
+          8.246211
+        ],
+        "regions": [
+          "wh3_main_combi_region_dawns_light",
+          "wh3_main_combi_region_dawns_light",
+          "wh3_main_combi_region_dawns_light"
+        ],
+        "turns": [
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "faction": "wh3_main_tze_oracles_of_tzeentch",
+        "force_cqi": "10",
+        "heading_cosine": -0.553724,
+        "movement_distances": [
+          13.892444,
+          34.058773
+        ],
+        "regions": [
+          "wh3_main_combi_region_the_skull_carvers_abode",
+          "wh3_main_combi_region_the_skull_carvers_abode",
+          "wh3_main_combi_region_volulltrax"
+        ],
+        "turns": [
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "faction": "wh_dlc08_nor_goromadny_tribe",
+        "force_cqi": "349",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          45.453273,
+          45.453273
+        ],
+        "regions": [
+          "wh3_main_combi_region_temple_of_heimkel",
+          "wh3_main_combi_region_karak_vlag",
+          "wh3_main_combi_region_temple_of_heimkel"
+        ],
+        "turns": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "faction": "wh_dlc08_nor_goromadny_tribe",
+        "force_cqi": "349",
+        "heading_cosine": -1.0,
+        "movement_distances": [
+          45.453273,
+          45.453273
+        ],
+        "regions": [
+          "wh3_main_combi_region_karak_vlag",
+          "wh3_main_combi_region_temple_of_heimkel",
+          "wh3_main_combi_region_karak_vlag"
+        ],
+        "turns": [
+          4,
+          5,
+          6
+        ]
+      }
+    ],
+    "contract": "NATIVE_CAI_TEMPORAL_CLUSTER_DIAGNOSTICS_V1",
+    "eligible_windows": 39,
+    "faction_cluster_count": 27,
+    "faction_rows": [
+      {
+        "eligible_windows": 1,
+        "faction": "wh2_dlc11_def_the_blessed_dread",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh2_dlc11_vmp_the_barrow_legion",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh2_dlc17_bst_malagor",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 2,
+        "faction": "wh2_main_def_bleak_holds",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 2
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh2_main_def_drackla_coven",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh2_main_def_scourge_of_khaine",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 3,
+        "faction": "wh2_main_emp_new_world_colonies",
+        "reversal_candidate_rate": 0.333333,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 5,
+        "faction": "wh2_main_hef_nagarythe",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 5
+      },
+      {
+        "eligible_windows": 2,
+        "faction": "wh2_main_nor_aghol",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 2,
+        "faction": "wh2_main_nor_mung",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh2_main_skv_clan_spittel",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_cp1_cth_tiger_warriors",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_dlc20_chs_kholek",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_dlc25_nur_epidemius",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_dlc25_nur_tamurkhan",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 2,
+        "faction": "wh3_main_cth_celestial_loyalists",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_main_cth_imperial_wardens",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_main_cth_the_northern_provinces",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_main_dwf_karak_azorn",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_main_ksl_ursun_revivalists",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_main_nur_bubonic_swarm",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_main_tmb_deserters_of_khatep",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh3_main_tze_oracles_of_tzeentch",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 1
+      },
+      {
+        "eligible_windows": 2,
+        "faction": "wh_dlc08_nor_goromadny_tribe",
+        "reversal_candidate_rate": 1.0,
+        "reversal_candidates": 2
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh_main_chs_chaos",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 1,
+        "faction": "wh_main_emp_averland",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      },
+      {
+        "eligible_windows": 2,
+        "faction": "wh_main_grn_crooked_moon",
+        "reversal_candidate_rate": 0.0,
+        "reversal_candidates": 0
+      }
+    ],
+    "interpretation": "DESCRIPTIVE_CLUSTER_SENSITIVITY_ONLY; OVERLAPPING_FORCE_WINDOWS_ARE_NOT_INDEPENDENT; NO_P_VALUE_AUTHORIZED",
+    "leave_one_faction_out": {
+      "rate_max": 0.486486,
+      "rate_min": 0.382353,
+      "rate_span": 0.104133,
+      "rows": [
+        {
+          "excluded_faction": "wh2_dlc11_def_the_blessed_dread",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh2_dlc11_vmp_the_barrow_legion",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh2_dlc17_bst_malagor",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh2_main_def_bleak_holds",
+          "remaining_eligible_windows": 37,
+          "remaining_reversal_candidates": 16,
+          "reversal_candidate_rate": 0.432432
+        },
+        {
+          "excluded_faction": "wh2_main_def_drackla_coven",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh2_main_def_scourge_of_khaine",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh2_main_emp_new_world_colonies",
+          "remaining_eligible_windows": 36,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.472222
+        },
+        {
+          "excluded_faction": "wh2_main_hef_nagarythe",
+          "remaining_eligible_windows": 34,
+          "remaining_reversal_candidates": 13,
+          "reversal_candidate_rate": 0.382353
+        },
+        {
+          "excluded_faction": "wh2_main_nor_aghol",
+          "remaining_eligible_windows": 37,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.486486
+        },
+        {
+          "excluded_faction": "wh2_main_nor_mung",
+          "remaining_eligible_windows": 37,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.486486
+        },
+        {
+          "excluded_faction": "wh2_main_skv_clan_spittel",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh3_cp1_cth_tiger_warriors",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh3_dlc20_chs_kholek",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh3_dlc25_nur_epidemius",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh3_dlc25_nur_tamurkhan",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh3_main_cth_celestial_loyalists",
+          "remaining_eligible_windows": 37,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.486486
+        },
+        {
+          "excluded_faction": "wh3_main_cth_imperial_wardens",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh3_main_cth_the_northern_provinces",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh3_main_dwf_karak_azorn",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh3_main_ksl_ursun_revivalists",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh3_main_nur_bubonic_swarm",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh3_main_tmb_deserters_of_khatep",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh3_main_tze_oracles_of_tzeentch",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 17,
+          "reversal_candidate_rate": 0.447368
+        },
+        {
+          "excluded_faction": "wh_dlc08_nor_goromadny_tribe",
+          "remaining_eligible_windows": 37,
+          "remaining_reversal_candidates": 16,
+          "reversal_candidate_rate": 0.432432
+        },
+        {
+          "excluded_faction": "wh_main_chs_chaos",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh_main_emp_averland",
+          "remaining_eligible_windows": 38,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.473684
+        },
+        {
+          "excluded_faction": "wh_main_grn_crooked_moon",
+          "remaining_eligible_windows": 37,
+          "remaining_reversal_candidates": 18,
+          "reversal_candidate_rate": 0.486486
+        }
+      ]
+    },
+    "population": "territorial",
+    "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+    "reversal_candidate_rate": 0.461538,
+    "reversal_candidates": 18
+  },
+  "verification": {
+    "application_authority": "PROHIBITED",
+    "application_eligible": false,
+    "authority": "NO_ORDERS",
+    "benchmark_spec_digest": "8efd88f7a07272d6eb45f4a298f2b8519e10435323bc3ca56e0b2374c70f0db7",
+    "campaign_checks": {
+      "consecutive": true,
+      "human_turn_starts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "minimum_required": 11,
+      "minimum_requirement_met": true,
+      "required_full_ai_cycles": 10
+    },
+    "confirmatory_eligible": true,
+    "contract": "NATIVE_CAI_DIAGNOSTIC_SFO_BEHAVIOR_BENCHMARK_VERIFICATION_V1",
+    "profile_checks": {
+      "game_probe_sfo_launcher_binding_unchanged": true
+    },
+    "research_visibility": "PRIVILEGED_OMNISCIENT_DIAGNOSTIC",
+    "study_version": "v0.2P",
+    "telemetry_checks": {
+      "battle_marker_surface_observed": true,
+      "capability_failure_count": 0,
+      "complete_battle_sequence_count": 636,
+      "incomplete_ai_faction_turn_count": 0,
+      "incomplete_battle_sequence_count": 0,
+      "paired_ai_faction_turns": 2698
+    },
+    "verification_status": "PROFILE_BOUND_FRESH_SFO_BENCHMARK_COMPLETE"
+  }
+}

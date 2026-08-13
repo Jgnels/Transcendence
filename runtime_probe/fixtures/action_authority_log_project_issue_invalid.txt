@@ -1,0 +1,4 @@
+TRANS_ACTION|1|PACK_LOADED|probe_kind=action_authority_shadow|read_only=true|gameplay_mutation=false|project_orders_enabled=false
+TRANS_ACTION|1|BATTLE_START|time_ms=0|local_alliance=1|multiplayer=false|replay=false
+TRANS_ACTION|1|UNIT_STATIC|time_ms=0|unit_id=1:u1001|local_alliance=true|visibility_source=LOCAL_ALLIANCE
+TRANS_ACTION|1|COMMAND_OBSERVED|time_ms=100|command_index=1|command=Move|selected_unit_ids=1:u1001|command_origin=GAME_COMMAND_EVENT_ORIGIN_UNRESOLVED|project_issue_attempted=true|direct_ack_available=false

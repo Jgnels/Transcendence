@@ -1,0 +1,16 @@
+﻿{
+    "schema_version":  1,
+    "capture_kind":  "action_feasibility_window_reexport",
+    "created_at_utc":  "2026-07-30T08:58:45.2278148Z",
+    "source_public_capture_sha256":  "a1c03ec12a4c2b70945311fc57b54f978fcca892a37b12d46a5daa6f22ebf579",
+    "source_raw_log_sha256":  "b4f8c4ca9c285018772d50a4eda92f34572f742dd97967bca8229b0a6b3ce951",
+    "source_raw_log_in_export":  false,
+    "installed_pack_sha256":  "3acf60520b60f87f8c18e13532512324cb7a539626996ce19897fad94cf2d25d",
+    "action_feasibility_windows_sha256":  "e56e2e32fc5037bf104ea7da05184c7e591bec2394920b482174f808de7fa18f",
+    "window_count":  89,
+    "sample_count":  1287,
+    "authority":  "NO_ORDERS",
+    "project_issue_attempt_count":  0,
+    "direct_acknowledgement_count":  0,
+    "personal_paths_in_export":  false
+}

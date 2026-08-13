@@ -1,0 +1,64 @@
+{
+  "application_authority": "PROHIBITED",
+  "authority": "NO_ORDERS",
+  "campaign_checks": {
+    "consecutive_turns": true,
+    "first_turn": 1,
+    "last_turn": 14,
+    "minimum_turns": 12,
+    "observer_faction": "wh_main_emp_empire",
+    "owner_action_protocol": "OWNER_PROTOCOL_NOT_ATTESTED_NONCONFIRMATORY",
+    "snapshot_count": 14
+  },
+  "contract": "NATIVE_CAI_V02L_OWNER_CAPTURE_REPROCESS_V1",
+  "decision": {
+    "hypothesis_result": "NOT_EVALUATED_INSUFFICIENT_EXPOSURE",
+    "player_visible_endpoint_status": "INSTRUMENT_NOT_QUALIFIED_FOR_CHURN_HYPOTHESIS",
+    "protocol_attestation_effect": "NONCONFIRMATORY_FOR_HYPOTHESIS_BUT_NOT_NEEDED_FOR_INSTRUMENT_EXPOSURE_FAILURE",
+    "reason": "All 187 four-frame actor windows were excluded before the primary endpoint: 149 by visibility censoring and 38 by non-directional/stationary movement.",
+    "sfo_followup": "DO_NOT_RUN_UNDER_D109_ZERO_ELIGIBLE_WINDOWS"
+  },
+  "evidence_label": "SUPPORTED_OWNER_RUNTIME_EVIDENCE_LIMITING_RESULT",
+  "exposure_counters": {
+    "aba_without_heading_reversal": 0,
+    "actor_four_frame_windows": 187,
+    "eligible_non_aba_pattern": 0,
+    "eligible_stable_context_region_windows": 0,
+    "excluded_non_directional_interval": 38,
+    "excluded_non_region_anchor": 0,
+    "excluded_nonconsecutive_turns": 0,
+    "excluded_observed_context_change": 0,
+    "excluded_visibility_censoring": 149
+  },
+  "foreign_faction_count": 7,
+  "primary_endpoint_metrics": {
+    "candidate_rate_per_eligible_window": null,
+    "eligible_stable_context_region_windows": 0,
+    "oscillation_candidate_count": 0,
+    "repeated_oscillation_cluster_count": 0
+  },
+  "profile": "VANILLA",
+  "profile_binding_sha256": "547dc85cdfd13f663c0bb692fe73f42c15135c34c4c74d4420e96dafd061bcd1",
+  "profile_checks": {
+    "captured_launcher_profile_matches_preregistration": true,
+    "exe_hash_unchanged": true,
+    "launcher_profile_detail": {
+      "deferred_probe_materialized_after_binding": false,
+      "expected_probe_launcher_status": "EXACT_ACTIVE_ENTRY",
+      "non_probe_entries_match": true,
+      "observed_probe_launcher_status": "EXACT_ACTIVE_ENTRY"
+    },
+    "probe_hash_unchanged": true,
+    "sfo_hash_unchanged_if_applicable": true,
+    "shadow_probe_runtime_observed": true,
+    "shadow_probe_staged_identical": true
+  },
+  "source_upload": {
+    "name": "Transcendence_NativeChurn_VANILLA_20260802T232030Z.zip",
+    "public_export_contract": "NATIVE_CAI_DIRECTIONAL_CHURN_PUBLIC_EXPORT_V1",
+    "sha256": "ee1067354c285cff909d5d587a1006fb90bf8cacfe7574bee184ebbc33a9f438",
+    "size_bytes": 10702,
+    "zip_integrity": "PASS"
+  },
+  "verification_status": "PROFILE_BOUND_CAPTURE_OBSERVED_PROTOCOL_DEVIATION_NONCONFIRMATORY"
+}

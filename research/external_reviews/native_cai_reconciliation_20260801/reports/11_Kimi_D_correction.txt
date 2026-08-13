@@ -1,0 +1,140 @@
+KIMI D — CORRECTED EVIDENCE/NECESSITY AUDIT
+Authority: NO_ORDERS / PROHIBITED. Research-only. No code changes.
+1. NATIVE ALLOCATION CLAIMS — CORRECTED AUDIT
+Table
+Native Capability	Previous Claim	Corrected Classification	Evidence
+Task generation	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA dev blog: generation step described. No change.
+Multiple generators per task	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA dev blog: "multiple task generators contributing to the same task." No change.
+Batching	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA dev blog: "additional round of batching." No change.
+Task-to-army pairing	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA dev blog: "tasks and armies are paired together." No change.
+Strength-ratio consideration	Implied as allocation input	INFERENCE	Influence map proves "strength of interaction" for threat detection; not proven as allocation scoring weight.
+Turn-distance	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA dev blog: "measured in turns...takes into account movement extends." No change.
+Stance-aware distance	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA dev blog: "usage of stances like tunneling/forced march." No change.
+Recruitment consideration	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA dev blog: dynamic priority scaling based on recruitment status. No change.
+Eligibility filtering	PROVEN	PROVEN_CURRENT_OR_SHIPPED_WH3	CA patch notes: query fixes for agent-vs-army filtering. No change.
+Recovery handling	LIKELY_DUPLICATION	UNVERIFIED	Agent-type fix proves entity-type filtering, not replenishment-state filtering.
+Reserve handling	POSSIBLE_DUPLICATION	UNVERIFIED	No source proves explicit land-army strategic reserve policy.
+Assignment exclusivity	Assumed present	UNKNOWN_ENGINE_INTERNAL	Batching proven; one-army-one-task exclusivity undocumented.
+Temporal commitment	Implied memoryless	UNKNOWN_ENGINE_INTERNAL	Defensive reevaluation proven per-turn; plan persistence / memory unproven.
+Reassignment hysteresis	Implied absent	UNKNOWN_ENGINE_INTERNAL	No documentation proves or disproves hysteresis thresholds.
+2. RECOVERY PROTECTION — CORRECTED
+Previous claim: Native CAI "already filters task eligibility by army state" and recovery protection is "LIKELY DUPLICATION."
+Correction: The proven native eligibility fix (CA patch notes) corrected queries that incorrectly reacted to agents (entity type), not to depleted armies (entity state). There is no evidence that native CAI recognizes replenishment < threshold as a protected state or prevents recovering armies from non-critical offensive work.
+v0.2G RECOVERY_PROTECTED re-evaluated:
+Table
+Question	Answer
+Useful evaluator metric?	YES. Flags when low-replenishment armies enter combat.
+Empirically calibrated?	NO. RECOVERY_REPLENISHMENT_THRESHOLD is project-owned, uncalibrated against native behavior.
+Evidence native needs correction?	NO. Unverified whether native lacks this.
+Evidence it should control application behavior?	NO.
+Reclassification: v0.2G recovery protection is a hypothesis needing observation, useful as an evaluator metric, unjustified as a controller.
+3. RESERVE CLAIM — CORRECTED
+Previous claim: Cited "native force-distribution managers/budget behavior" as a possible equivalent to the one-healthy-army reserve floor. The NAVY_LOCAL_DISTRIBUTION_IMPORTANCE_PCT_* reference was unsourced and is removed.
+Correction: No source proves native CAI deliberately preserves an uncommitted land-army strategic reserve. Native force distribution (how armies are spread across territory) is not equivalent to a policy of deliberately withholding one healthy army from task assignment.
+v0.2G reserve floor re-evaluated:
+Table
+Question	Answer
+Useful evaluator metric?	YES. Checks whether any healthy army remains uncommitted.
+Empirically calibrated?	NO. Floor count = 1 is arbitrary.
+Evidence native needs correction?	NO.
+Evidence it should control application behavior?	NO.
+4. TEMPORAL COMMITMENT — CORRECTED AUDIT
+Table
+Question	Evidence	Classification
+Does native reevaluate tasks each turn?	CA defensive AI blog: "The AI would re-evaluate defensive tasks every turn."	PROVEN_CURRENT_OR_SHIPPED_WH3 for defensive tasks. UNKNOWN_ENGINE_INTERNAL for offensive tasks.
+Do assignments persist across turns?	No documentation.	UNKNOWN_ENGINE_INTERNAL
+Do assignments NOT persist?	Per-turn reevaluation of some tasks does not prove all assignments are memoryless.	UNKNOWN_ENGINE_INTERNAL
+Hysteresis / reassignment thresholds?	No documentation.	UNKNOWN_ENGINE_INTERNAL
+Explicit plan memory?	No documentation.	UNKNOWN_ENGINE_INTERNAL
+Previous error: I implied native batching is "per-turn with no memory." That is unproven. I cannot conclude native is memoryless from lack of documentation.
+5. v0.2G POLICIES — REEVALUATED WITHOUT NECESSITY PRETENSE
+Table
+Policy	Evaluator Metric?	Calibrated?	Native Needs Correction?	Should Control?
+Recovery protection	YES	NO	UNKNOWN	NO
+One-army reserve floor	YES	NO	NO	NO
+Exclusive assignment	YES	N/A	UNKNOWN	NO
+2–4 turn commitment	YES	NO	NO	NO
+0.15 reassignment margin	YES	NO	NO	NO
+Critical overflow expansion	YES (data integrity)	N/A	N/A	NO
+Aggressive commitment veto	YES (policy probe)	NO	NO	NO
+None of these policies have evidence that native CAI needs correction. The existence of clean invariants does not justify overriding native allocation.
+6. ABLATION OBSERVABILITY — CORRECTED
+Previous experiment assumed comparison against hidden native "task IDs."
+Table
+Assumed Observable	Classification	Reason
+Native task assignments	ENGINE_INTERNAL	No API exposes native task IDs or internal allocation decisions.
+Native task severity	ENGINE_INTERNAL	Severity is project taxonomy, not exposed natively.
+Native assigns recovering army	INDIRECTLY_INFERABLE	From longitudinal replenishment + battle participation.
+Native plan persistence	INDIRECTLY_INFERABLE	From army position trajectories over turns.
+Agreement with v0.2G	UNVERIFIED	Cannot compare hidden native tasks to shadow tasks.
+Rewritten experiment (observable data only):
+Input: Army positions, stance (if available), movement over turns, battles/sieges, replenishment, region ownership, visible threats.
+Method: Track observed army trajectories. Compare against v0.2G geometric recommendations (which army should go where based on visible threats).
+Metrics:
+Directional divergence: Does the army move toward v0.2G's recommended anchor or elsewhere?
+Recovery violation: Does a low-replenishment army enter combat within N turns?
+Reserve absence: Are all healthy armies in motion/combat, or is one stationary?
+Persistence: Does an army maintain directional intent for ≥2 turns, or reverse immediately?
+No comparison of hidden task IDs. Only observable state vs. shadow evaluator recommendations.
+7. v0.2H IF v0.2G IS EVALUATOR-ONLY
+Core question: Does Transcendence still need to prove the feasibility of its own hypothetical army assignments if it no longer intends to execute them?
+Answer: NO. If v0.2G is evaluator-only, generating and proving feasibility queries from project-hypothetical assignments is self-referential with no application payoff. The infrastructure should instead certify observed native behavior or future bounded corrections.
+Table
+v0.2H Responsibility	Corrected Classification	Rationale
+Documented query catalog	KEEP_UNCHANGED	Reference value independent of planner.
+Actor binding	KEEP_AS_GENERIC_CERTIFICATION_INFRASTRUCTURE	Needed for any future bounded correction.
+Assignment-derived query-plan generation	THIN_OR_GENERALIZE	Remove tight coupling to v0.2G shadow assignments. Generalize to "given any actor + target, what queries certify feasibility?"
+Exact point reachability	KEEP_AS_GENERIC_CERTIFICATION_INFRASTRUCTURE	
+Settlement reachability	KEEP_AS_GENERIC_CERTIFICATION_INFRASTRUCTURE	
+Stance reachability	KEEP_AS_GENERIC_CERTIFICATION_INFRASTRUCTURE	
+Observation packet	KEEP_AS_GENERIC_CERTIFICATION_INFRASTRUCTURE	
+Adjudication	KEEP_AS_GENERIC_CERTIFICATION_INFRASTRUCTURE	
+Authority/prohibited-surface registry	KEEP_UNCHANGED	
+Digest/integrity chain	KEEP_UNCHANGED	
+8. v0.2I LIVE FEASIBILITY — CORRECTED
+Previous implication: v0.2I live feasibility transport justified because v0.2H has value.
+Correction: If v0.2G is evaluator-only and v0.2H's assignment-derived query generation is thinned, live transport of assignment-derived feasibility queries is unjustified.
+Table
+Option	Verdict
+A. Continue live assignment-derived feasibility	Unjustified. Self-referential loop without application controller.
+B. Pause live transport; keep generalized read-only certification layer	CHOSEN. Preserves infrastructure for future bounded corrections.
+C. Remove assignment-feasibility branch entirely	Too aggressive; B preserves optionality.
+Information gain of B: Maintains the query catalog, authority registry, observation protocol, and adjudication discipline as a generic capability layer without committing to validating hypothetical shadow assignments.
+9. "STRICTLY LESS INFORMED" — CORRECTED
+Previous error: I claimed native allocation is "strictly more informed" while citing unproven factors (ZOC, reserve, recovery, plan memory).
+Proven native inputs entering allocation:
+Turn-distance with movement extends (PROVEN)
+Stance-aware routing (PROVEN)
+Recruitment-status-aware priority scaling (PROVEN)
+Query-based threat detection for task generation (PROVEN)
+Influence-map threat detection for task generation (PROVEN)
+Entity-type eligibility filtering (PROVEN — agents vs. armies)
+Removed from "strictly more informed" claim:
+Zone of control (UNVERIFIED)
+Reserve state (UNVERIFIED)
+Recovery/depletion state (UNVERIFIED)
+Explicit plan memory / temporal commitment (UNKNOWN_ENGINE_INTERNAL)
+Reassignment hysteresis thresholds (UNKNOWN_ENGINE_INTERNAL)
+Strength-ratio as allocation scoring weight (INFERENCE — proven in threat detection, not in allocation)
+Corrected statement: v0.2G lacks native turn-distance, stance-aware routing, recruitment-scaled priority, and query/influence threat detection — all proven dimensions where native is more informed. v0.2G's Euclidean geometry is less informed for those proven dimensions. Native is not proven more informed for recovery, reserve, ZOC, or plan memory.
+10. CHANGED CONCLUSIONS
+Table
+Component	Previous Classification	Corrected Classification	Evidence
+Native recovery handling	LIKELY_DUPLICATION	UNVERIFIED	Eligibility fix proven only for agent-vs-army type, not replenishment state.
+Native reserve handling	POSSIBLE_DUPLICATION (unsourced force-distribution cited)	UNVERIFIED	No source proves explicit land-army strategic reserve policy. Unsourced NAVY_LOCAL_DISTRIBUTION implication removed.
+Native assignment exclusivity	Assumed present	UNKNOWN_ENGINE_INTERNAL	Batching proven; exclusivity undocumented.
+Native temporal commitment	Implied memoryless per-turn batching	UNKNOWN_ENGINE_INTERNAL	Defensive reevaluation proven per-turn; persistence/memory unproven.
+Native reassignment hysteresis	Implied absent	UNKNOWN_ENGINE_INTERNAL	No documentation either way.
+Native strength-ratio in allocation	Implied present	INFERENCE	Proven in threat detection; unproven in allocation scoring.
+v0.2G recovery protection	REFRAME_AS_EVALUATOR (with native duplication claim)	EVALUATOR_METRIC_YES, NATIVE_EQUIVALENT_UNVERIFIED, CONTROL_UNJUSTIFIED	No proof native filters depleted armies.
+v0.2G reserve floor	REFRAME_AS_EVALUATOR (with native duplication claim)	EVALUATOR_METRIC_YES, NATIVE_EQUIVALENT_UNVERIFIED, CONTROL_UNJUSTIFIED	No proof native preserves uncommitted reserve.
+v0.2G exclusive assignment	Assumed necessary	EVALUATOR_METRIC_YES, CONTROL_UNJUSTIFIED	No proof native needs correction.
+v0.2G 2-4 turn commitment	DEFER_PENDING_EVIDENCE	EVALUATOR_METRIC_YES, EMPIRICALLY_UNCALIBRATED, CONTROL_UNJUSTIFIED	No proof native needs correction.
+v0.2G 0.15 margin	DEFER_PENDING_EVIDENCE	EVALUATOR_METRIC_YES, EMPIRICALLY_UNCALIBRATED, CONTROL_UNJUSTIFIED	Arbitrary threshold.
+v0.2H assignment-derived query generation	KEEP_PROJECT_OWNED	THIN_OR_GENERALIZE	Self-referential if upstream planner is evaluator-only.
+v0.2I live feasibility transport	Implied justified	PAUSE_KEEP_GENERALIZED_LAYER (Option B)	Live assignment-derived queries unjustified without application controller.
+"Strictly less informed" claim	Included ZOC, reserve, recovery, plan memory	Corrected to proven dimensions only	Removed unproven factors from comparison.
+v0.2G assignment application verdict: REMOVE_FROM_APPLICATION_PATH. No proven native gap justifies overriding native allocation. All policies remain useful as shadow evaluators only.
+v0.2G temporal commitment application verdict: REMOVE_FROM_APPLICATION_PATH. Unverified whether native needs anti-thrash correction. 2/4-turn windows are uncalibrated evaluator metrics, not controllers.
+v0.2H current-form verdict: THIN_OR_GENERALIZE. Keep query catalog, authority registry, observation protocol, and adjudication as generic certification infrastructure. Remove tight coupling to v0.2G hypothetical assignments.
+v0.2I live-feasibility verdict: PAUSE. Do not continue live transport of assignment-derived feasibility queries. Maintain generalized read-only capability layer for future bounded corrections.

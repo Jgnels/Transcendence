@@ -1,0 +1,249 @@
+{
+  "authority": "NO_ORDERS",
+  "command_findings": {
+    "archaon_target_share": 0.324324,
+    "archaon_targeted_command_count": 12,
+    "command_counts": {
+      "Attack Unit": 37,
+      "Double Click": 24,
+      "Move": 16,
+      "Move Orientation Width": 6,
+      "Special Ability": 6
+    },
+    "interpretation": "Observed concentration is a target-fixation hypothesis, not evidence that those commands were accepted, executed, or tactically wrong.",
+    "median_command_interval_ms": 1750.0,
+    "selection_attribution": "UNOBSERVED",
+    "sub_500ms_interval_count": 38,
+    "targeted_command_count": 37
+  },
+  "contract": "SFO_CHAOS_REPLAY_DIVERGENCE_CALIBRATION_V1",
+  "dense_observation": {
+    "aggregate_samples": 637,
+    "canonical_units": 23,
+    "commands_inferred_to_units": 64,
+    "commands_observed": 89,
+    "detail_samples": 115,
+    "duration_ms": 338500,
+    "first_engagement_time_ms": 49400,
+    "identity_aliases": 0,
+    "local_casualties_observed_lower_bound": 472,
+    "maximum_sample_gap_ms": 3400,
+    "selection_attribution_ratio": 0.0,
+    "terminal_coverage_ratio": {
+      "local": 0.0,
+      "visible_enemy": 0.0
+    },
+    "visible_enemy_casualties_observed_lower_bound": 191
+  },
+  "enemy_pressure_findings": [
+    {
+      "evidence_label": "OBSERVED",
+      "finding_id": "archaon_pressure",
+      "kills_observed_max": 99,
+      "last_hitpoints_fraction": 0.667474
+    },
+    {
+      "casualties_observed_lower_bound": 1,
+      "evidence_label": "OBSERVED",
+      "finding_id": "chaos_knight_pressure",
+      "kills_observed_max": 117,
+      "last_hitpoints_fraction": 0.806933
+    }
+  ],
+  "environment": {
+    "environment_verified": true,
+    "exact_observer_pack_sha256": "6e3f8e7bbc7d66754a7fa764c802e2b5599d13e83820e0785cb85d738040f66d",
+    "exact_sfo_pack_sha256": "ae20a0a08037aa3ebcbe7461d2589fc28dc15a5fe5d9ca4c0a9d0ff0a26da603",
+    "exact_shared_script_sha256": "86e18ec655c4a45a4a062d1dae7d10e6fd9a1cb77af5557757fbca9ed896562e"
+  },
+  "evidence_label": "LIMITING_RESULT",
+  "hypothesis_adjudication": [
+    {
+      "hypothesis_id": "wide_formation_support_failure",
+      "reason": "Visual separation and a 162.7-second spread between first local engagements support uneven mutual support; formation geometry remains visual rather than path-simulated.",
+      "status": "SUPPORTED_BOUNDED"
+    },
+    {
+      "hypothesis_id": "no_protected_reserve",
+      "reason": "The second Halberdier unit remained nearly intact until a late 212.1-second first engagement. The stronger supported claim is delayed or uneven reserve commitment, not absence of a reserve.",
+      "status": "REFINED"
+    },
+    {
+      "hypothesis_id": "piecemeal_commitment",
+      "reason": "Local first-engagement times ranged from 49.4 to 212.1 seconds, with major unit losses concentrated among earlier committed elements.",
+      "status": "SUPPORTED"
+    },
+    {
+      "hypothesis_id": "ranged_and_artillery_firing_lane_degradation",
+      "reason": "Both artillery units routed early and ranged units retained ammunition while recording low kills; terrain and line-of-fire causality remain visually inferred.",
+      "status": "SUPPORTED_BOUNDED"
+    },
+    {
+      "hypothesis_id": "target_fixation_on_archaon",
+      "reason": "Archaon received 12 of 37 observed targeted command events; selection attribution and tactical correctness remain unverified.",
+      "status": "HYPOTHESIS"
+    },
+    {
+      "hypothesis_id": "terminal_defeat_reproduced_by_replay",
+      "reason": "The replay stream ended without BATTLE_COMPLETE, and the final observed state was nonterminal. The original defeat cannot be learned as a replayed terminal outcome.",
+      "status": "INVALIDATED"
+    }
+  ],
+  "identity": {
+    "battle_type": "LAND_BATTLE",
+    "display_title": "An Ogre's Folly",
+    "enemy_display": "Warhost of the Apocalypse",
+    "local_faction": "Reikland",
+    "recording_committed": false,
+    "recording_sha256": "6e008c378a8e4273ca7d2c8101ca69279839a5c21dbaf749fb5e666adde56155",
+    "replay_binary_committed": false,
+    "replay_sha256": "28d780d02f2af07fe16fe4a24a27cd37f41bdb870d485f11949d5ed63f838cb5",
+    "replay_size_bytes": 86067,
+    "runtime_battlefield_identity": "Battle of Eilhart — Reikland vs Empire Secessionists"
+  },
+  "last_observed_snapshot": {
+    "interpretation": "NONTERMINAL_SNAPSHOT_NOT_OUTCOME",
+    "local": {
+      "in_melee": 5,
+      "kills": 170,
+      "men_alive": 535,
+      "observed_units": 10,
+      "routing": 1,
+      "strategic_value_proxy": 3872.159668,
+      "wavering": 1
+    },
+    "time_ms": 338100,
+    "visible_enemy": {
+      "in_melee": 5,
+      "kills": 401,
+      "men_alive": 296,
+      "observed_units": 9,
+      "routing": 4,
+      "strategic_value_proxy": 7781.325195,
+      "wavering": 0
+    }
+  },
+  "lifecycle_adjudication": {
+    "classification": "REPLAY_COMMAND_STREAM_EXHAUSTED_WITHOUT_BATTLE_COMPLETE",
+    "natural_battle_complete_observed": false,
+    "original_live_battle_grade": "UNVERIFIED",
+    "original_live_battle_outcome": "OWNER_ATTESTED_DEFEAT",
+    "post_stream_summary_is_valid_outcome_evidence": false,
+    "post_stream_zero_loss_summary_observed": true,
+    "replay_stream_end_overlay_observed": true,
+    "replayed_simulation_outcome": "UNVERIFIED_NONTERMINAL",
+    "victorious_alliance": "UNVERIFIED"
+  },
+  "next_evidence_gaps": [
+    "A future live battle result artifact that explicitly records the victorious alliance and grade.",
+    "A naturally completed Chaos replay or live observer trace with BATTLE_COMPLETE.",
+    "Selection-bound command attribution.",
+    "Path, formation, collision, and line-of-fire feasibility.",
+    "Independent Chaos battles before calibrating faction-general thresholds."
+  ],
+  "policy_updates": [
+    {
+      "authority": "NO_ORDERS",
+      "rule": "Never learn outcome, victory grade, defeat irreversibility, or terminal casualty totals from replay-stream exhaustion. Require BATTLE_COMPLETE or a separately bound live result artifact.",
+      "status": "SUPPORTED",
+      "update_id": "replay_terminal_authority_guard"
+    },
+    {
+      "authority": "ADVISORY_ONLY",
+      "rule": "Distinguish reserve absent, reserve available, reserve committed late, and reserve unable to support; do not collapse them into one no-reserve diagnosis.",
+      "status": "SUPPORTED",
+      "update_id": "reserve_state_refinement"
+    },
+    {
+      "authority": "ADVISORY_ONLY",
+      "rule": "Raise a preservation crisis when elite cavalry incurs extreme losses with negligible observed effect; any proposed disengagement remains subject to legality and feasibility checks.",
+      "status": "SUPPORTED",
+      "update_id": "elite_cavalry_loss_guard"
+    },
+    {
+      "authority": "ADVISORY_ONLY",
+      "rule": "When one target absorbs a large share of targeted command traffic while multiple threats remain, trigger utility re-evaluation rather than automatically continuing focus.",
+      "status": "HYPOTHESIS",
+      "update_id": "target_concentration_review"
+    },
+    {
+      "authority": "NO_ORDERS",
+      "rule": "Use the trace for state recognition, crisis timing, and lower-bound loss diagnosis only; exclude it from terminal-outcome and tactical-superiority training labels.",
+      "status": "SUPPORTED",
+      "update_id": "nonterminal_trace_learning_boundary"
+    }
+  ],
+  "rejected_promotions": [
+    "The replay reproduced the original defeat.",
+    "The replay-exit zero-loss summary is a valid battle result.",
+    "Observed commands were acknowledged or causally executed.",
+    "The owner's tactics are optimal-policy labels.",
+    "One Chaos replay proves general anti-Chaos tactical superiority.",
+    "Lower-bound casualties are exact terminal totals."
+  ],
+  "result_digest": "a69f2ed4e09034dc79ac5462aefa7f9c949c09a33a3e4e843e4a8cdecddcaab4",
+  "schema_version": 1,
+  "source_capture_digest": "3febf48a92ce7309d912634b1540d29e1051a30835622b847b8da360aa6e74dc",
+  "source_dense_digest": "4d84f49ec1782d29e872eff6674e93af089c3290a765b5d20c95b815ee70cea4",
+  "source_unit_findings_digest": "12609e324eec28eed50ee2d79ca3e42d3f71787597d2ce28362257bbb40c7ae0",
+  "status": "CLOSED_LIMITING_RESULT_REPLAY_DIVERGENCE",
+  "unit_findings": [
+    {
+      "casualties_observed_lower_bound": 58,
+      "evidence_label": "SUPPORTED",
+      "finding_id": "cavalry_preservation_failure",
+      "first_engagement_time_ms": 98100,
+      "first_routing_time_ms": 215100,
+      "kills_observed_max": 1,
+      "note": "The elite cavalry lost at least 58 of 60 models while recording one kill; this supports a preservation failure but not a causal explanation.",
+      "unit_type": "wh_dlc04_emp_cav_zintlers_reiksguard_0"
+    },
+    {
+      "casualties_observed_lower_bound": 159,
+      "evidence_label": "SUPPORTED",
+      "finding_id": "tattersouls_local_collapse",
+      "first_engagement_time_ms": 143100,
+      "kills_observed_max": 4,
+      "last_observed_time_ms": 326100,
+      "note": "Tattersouls fell from 160 to one observed model with four kills before the replay stream ended.",
+      "unit_type": "wh_dlc04_emp_inf_tattersouls_0"
+    },
+    {
+      "casualties_observed_lower_bound": 28,
+      "evidence_label": "SUPPORTED",
+      "finding_id": "artillery_early_crisis",
+      "first_engagement_time_ms": 49400,
+      "first_routing_times_ms": [
+        182100,
+        185100
+      ],
+      "note": "Both Helstorm batteries engaged by 49.4 seconds and first routed near 182–185 seconds; one ceased observation at 293.1 seconds."
+    },
+    {
+      "evidence_label": "SUPPORTED",
+      "finding_id": "uneven_frontline_commitment",
+      "halberd_casualty_lower_bounds": [
+        69,
+        2
+      ],
+      "halberd_first_engagement_times_ms": [
+        140100,
+        212100
+      ],
+      "note": "One Halberdier unit engaged at 140.1 seconds and lost at least 69 models; the other first engaged at 212.1 seconds and lost two, refining the visual 'no reserve' hypothesis into delayed or uneven commitment."
+    },
+    {
+      "captain": {
+        "first_routing_time_ms": 155100,
+        "last_hitpoints_fraction": 0.234737
+      },
+      "elspeth": {
+        "first_routing_time_ms": 218100,
+        "last_hitpoints_fraction": 0.351579
+      },
+      "evidence_label": "SUPPORTED",
+      "finding_id": "commander_crisis",
+      "note": "Both local commanders routed at least once and ended the observed stream at low hitpoint fractions."
+    }
+  ]
+}

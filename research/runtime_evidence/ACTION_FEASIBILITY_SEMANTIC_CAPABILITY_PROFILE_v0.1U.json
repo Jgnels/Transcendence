@@ -1,0 +1,40 @@
+{
+  "applicability_limits": [
+    "Only explicit nonzero Move callback points qualify as observed point-query evidence in this capture.",
+    "The capture observed no QUERY_FALSE result for a qualified explicit point.",
+    "The calibration does not identify feasibility for any Transcendence-generated candidate point.",
+    "QUERY_TRUE is not route completion, path safety, formation feasibility, command legality, acknowledgement, execution, or outcome.",
+    "The observation is scoped to one ordinary vanilla single-player battle and does not certify SFO or other battle types."
+  ],
+  "authority": "NO_ORDERS",
+  "corrected_limiting_result": {
+    "defect_id": "NONPOINT_ZERO_VECTOR_REACHABILITY_MISCLASSIFICATION",
+    "discarded_nonpoint_query_false_count": 38,
+    "discarded_nonpoint_query_true_count": 1058,
+    "valid_false_point_result_status": "UNVERIFIED_NONE_OBSERVED"
+  },
+  "evidence_status": "OBSERVED_SEMANTICALLY_QUALIFIED_CAPABILITY_PROFILE",
+  "point_reachability": {
+    "claim_boundary": "EXACT_EXPLICIT_MOVE_POINT_AT_OBSERVED_INSTANT_ONLY",
+    "classification": "OBSERVED_EXPLICIT_POINT_TRUE_ONLY",
+    "explicit_point_actor_count": 16,
+    "explicit_point_window_count": 16,
+    "nonpoint_or_opaque_sample_count": 1096,
+    "qualified_sample_count": 191,
+    "query_false": 0,
+    "query_true": 191,
+    "unavailable": 0,
+    "valid_false_result_status": "UNVERIFIED_NONE_OBSERVED"
+  },
+  "profile_contract": "TACTICAL_FEASIBILITY_SEMANTIC_CAPABILITY_PROFILE_V2",
+  "result_digest": "c497fa8ddc494b9746830b2c8bb14f63444250d37a2b597f39eebe39ab2856b2",
+  "schema_version": 2,
+  "scope": "ONE_ORDINARY_VANILLA_SINGLE_PLAYER_BATTLE",
+  "source_calibration_digest": "c1eda3165c7898eaafa81a73529ca7a51c92b1b27c8eedf35def03bfc9935d0c",
+  "source_reexport_zip_sha256": "83b7c3d851605f290c6a50045be920cdddc7224c8f9e7e63deefba5323e2ff7d",
+  "state_evidence": {
+    "explicit_move_actors_with_any_movement": 12,
+    "explicit_move_actors_with_initial_ordered_position_match": 16,
+    "visible_attack_actors_with_initial_current_target_match": 48
+  }
+}

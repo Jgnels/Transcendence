@@ -1,0 +1,5063 @@
+{
+  "authority": "NO_ORDERS",
+  "claims": {
+    "established": [
+      "deterministic synthetic fixture construction",
+      "policy disagreement is measurable without issuing orders",
+      "role-aware contract alignment across the preserved fixture matrix"
+    ],
+    "not_established": [
+      "tactical superiority",
+      "causal casualty reduction",
+      "action feasibility or acknowledgement",
+      "ordinary-live, SFO, siege, ambush, or reinforcement generalization"
+    ]
+  },
+  "equivalence_checks": [
+    {
+      "equivalence_group": "ranged_flank_scale",
+      "passed": true,
+      "scenario_ids": [
+        "ranged_rear_flank",
+        "ranged_rear_flank_half_scale"
+      ],
+      "signature_digest": "33c1386a2297782d12528ce535da477cad426a001d8f0409bca349b9e3c7f670"
+    }
+  ],
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "gate_measurements": {
+    "all_outputs_no_orders": true,
+    "equivalence_check_count": 1,
+    "equivalence_check_pass_count": 1,
+    "role_aware_forbidden_intent_safety": 1.0,
+    "role_aware_required_intent_recall": 1.0,
+    "role_aware_scenario_pass_count": 16,
+    "state_contract_pass_count": 16
+  },
+  "output_contract": "TACTICAL_BASELINE_COMPARISON_V1",
+  "pairwise_policy_disagreement": [
+    {
+      "left_policy": "ROLE_AWARE_PORTFOLIO_V1",
+      "mean_jaccard_distance": 0.03125,
+      "right_policy": "LEGACY_ROLE_AWARE_V2",
+      "scenario_disagreement_count": 2
+    },
+    {
+      "left_policy": "ROLE_AWARE_PORTFOLIO_V1",
+      "mean_jaccard_distance": 0.765625,
+      "right_policy": "UNIFORM_DANGER_045",
+      "scenario_disagreement_count": 15
+    },
+    {
+      "left_policy": "ROLE_AWARE_PORTFOLIO_V1",
+      "mean_jaccard_distance": 0.619792,
+      "right_policy": "PRESERVATION_ONLY_035",
+      "scenario_disagreement_count": 15
+    },
+    {
+      "left_policy": "ROLE_AWARE_PORTFOLIO_V1",
+      "mean_jaccard_distance": 0.875,
+      "right_policy": "PRESSURE_ONLY",
+      "scenario_disagreement_count": 14
+    },
+    {
+      "left_policy": "ROLE_AWARE_PORTFOLIO_V1",
+      "mean_jaccard_distance": 0.875,
+      "right_policy": "PASSIVE_HOLD",
+      "scenario_disagreement_count": 14
+    },
+    {
+      "left_policy": "LEGACY_ROLE_AWARE_V2",
+      "mean_jaccard_distance": 0.736458,
+      "right_policy": "UNIFORM_DANGER_045",
+      "scenario_disagreement_count": 14
+    },
+    {
+      "left_policy": "LEGACY_ROLE_AWARE_V2",
+      "mean_jaccard_distance": 0.590625,
+      "right_policy": "PRESERVATION_ONLY_035",
+      "scenario_disagreement_count": 14
+    },
+    {
+      "left_policy": "LEGACY_ROLE_AWARE_V2",
+      "mean_jaccard_distance": 0.875,
+      "right_policy": "PRESSURE_ONLY",
+      "scenario_disagreement_count": 14
+    },
+    {
+      "left_policy": "LEGACY_ROLE_AWARE_V2",
+      "mean_jaccard_distance": 0.875,
+      "right_policy": "PASSIVE_HOLD",
+      "scenario_disagreement_count": 14
+    },
+    {
+      "left_policy": "UNIFORM_DANGER_045",
+      "mean_jaccard_distance": 0.28125,
+      "right_policy": "PRESERVATION_ONLY_035",
+      "scenario_disagreement_count": 6
+    },
+    {
+      "left_policy": "UNIFORM_DANGER_045",
+      "mean_jaccard_distance": 1.0,
+      "right_policy": "PRESSURE_ONLY",
+      "scenario_disagreement_count": 16
+    },
+    {
+      "left_policy": "UNIFORM_DANGER_045",
+      "mean_jaccard_distance": 0.4375,
+      "right_policy": "PASSIVE_HOLD",
+      "scenario_disagreement_count": 7
+    },
+    {
+      "left_policy": "PRESERVATION_ONLY_035",
+      "mean_jaccard_distance": 1.0,
+      "right_policy": "PRESSURE_ONLY",
+      "scenario_disagreement_count": 16
+    },
+    {
+      "left_policy": "PRESERVATION_ONLY_035",
+      "mean_jaccard_distance": 0.625,
+      "right_policy": "PASSIVE_HOLD",
+      "scenario_disagreement_count": 10
+    },
+    {
+      "left_policy": "PRESSURE_ONLY",
+      "mean_jaccard_distance": 0.9375,
+      "right_policy": "PASSIVE_HOLD",
+      "scenario_disagreement_count": 15
+    }
+  ],
+  "policies": [
+    "ROLE_AWARE_PORTFOLIO_V1",
+    "LEGACY_ROLE_AWARE_V2",
+    "UNIFORM_DANGER_045",
+    "PRESERVATION_ONLY_035",
+    "PRESSURE_ONLY",
+    "PASSIVE_HOLD"
+  ],
+  "policy_summary": [
+    {
+      "distinct_intents": [
+        "COMMIT_RESERVE",
+        "CONTAIN_LOCAL_ROUT",
+        "DISENGAGE_CAVALRY",
+        "EVACUATE_ARTILLERY",
+        "EXTRACT_COMMANDER",
+        "REFORM_AND_PRESERVE",
+        "RELIEVE_FRONTLINE",
+        "REPOSITION_RANGED",
+        "REVIEW_CRITICAL_OVERFLOW",
+        "SELECTIVE_PURSUIT",
+        "TERMINATE_PURSUIT"
+      ],
+      "forbidden_intent_safety": 1.0,
+      "interpretation": "Synthetic contract alignment only; not evidence of battle outcomes, causal casualty reduction, or tactical superiority.",
+      "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+      "required_intent_recall": 1.0,
+      "scenario_contract_pass_count": 16,
+      "scenario_count": 16,
+      "total_selected_intents": 39
+    },
+    {
+      "distinct_intents": [
+        "COMMIT_RESERVE",
+        "CONTAIN_LOCAL_ROUT",
+        "DISENGAGE_CAVALRY",
+        "EVACUATE_ARTILLERY",
+        "EXTRACT_COMMANDER",
+        "REFORM_AND_PRESERVE",
+        "RELIEVE_FRONTLINE",
+        "REPOSITION_RANGED",
+        "SELECTIVE_PURSUIT",
+        "TERMINATE_PURSUIT"
+      ],
+      "forbidden_intent_safety": 1.0,
+      "interpretation": "Synthetic contract alignment only; not evidence of battle outcomes, causal casualty reduction, or tactical superiority.",
+      "policy_id": "LEGACY_ROLE_AWARE_V2",
+      "required_intent_recall": 0.9,
+      "scenario_contract_pass_count": 14,
+      "scenario_count": 16,
+      "total_selected_intents": 40
+    },
+    {
+      "distinct_intents": [
+        "DISENGAGE_CAVALRY",
+        "EVACUATE_ARTILLERY",
+        "EXTRACT_COMMANDER",
+        "RELIEVE_FRONTLINE",
+        "REPOSITION_RANGED"
+      ],
+      "forbidden_intent_safety": 0.964286,
+      "interpretation": "Synthetic contract alignment only; not evidence of battle outcomes, causal casualty reduction, or tactical superiority.",
+      "policy_id": "UNIFORM_DANGER_045",
+      "required_intent_recall": 0.333333,
+      "scenario_contract_pass_count": 1,
+      "scenario_count": 16,
+      "total_selected_intents": 19
+    },
+    {
+      "distinct_intents": [
+        "DISENGAGE_CAVALRY",
+        "EVACUATE_ARTILLERY",
+        "EXTRACT_COMMANDER",
+        "REFORM_AND_PRESERVE",
+        "RELIEVE_FRONTLINE",
+        "REPOSITION_RANGED"
+      ],
+      "forbidden_intent_safety": 0.892857,
+      "interpretation": "Synthetic contract alignment only; not evidence of battle outcomes, causal casualty reduction, or tactical superiority.",
+      "policy_id": "PRESERVATION_ONLY_035",
+      "required_intent_recall": 0.466667,
+      "scenario_contract_pass_count": 2,
+      "scenario_count": 16,
+      "total_selected_intents": 29
+    },
+    {
+      "distinct_intents": [
+        "PRESS_VISIBLE_THREAT",
+        "SELECTIVE_PURSUIT"
+      ],
+      "forbidden_intent_safety": 0.892857,
+      "interpretation": "Synthetic contract alignment only; not evidence of battle outcomes, causal casualty reduction, or tactical superiority.",
+      "policy_id": "PRESSURE_ONLY",
+      "required_intent_recall": 0.033333,
+      "scenario_contract_pass_count": 2,
+      "scenario_count": 16,
+      "total_selected_intents": 15
+    },
+    {
+      "distinct_intents": [],
+      "forbidden_intent_safety": 1.0,
+      "interpretation": "Synthetic contract alignment only; not evidence of battle outcomes, causal casualty reduction, or tactical superiority.",
+      "policy_id": "PASSIVE_HOLD",
+      "required_intent_recall": 0.0,
+      "scenario_contract_pass_count": 2,
+      "scenario_count": 16,
+      "total_selected_intents": 0
+    }
+  ],
+  "result_digest": "65835d6bceb1cd7bb5e1944f8a923f3cfed720a322695960677c8d2b3fbd7435",
+  "scenario_count": 16,
+  "scenario_results": [
+    {
+      "base_slice_id": "first_contact",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Healthy supported units at first contact should not create preservation or pursuit advisories.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "EXTRACT_COMMANDER",
+          "EVACUATE_ARTILLERY",
+          "REPOSITION_RANGED",
+          "TERMINATE_PURSUIT",
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [],
+        "required_local_stability_state": "STABLE",
+        "required_subjects_by_intent": {},
+        "required_tactical_phase_state": "ACTIVE_CONTEST",
+        "required_visible_enemy_collapse_state": "CONTESTED"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [],
+          "source_evaluation_digest": "d781d971e237e5dce75386542ced46031262a2ac49c841c1f3e63ec76cea0cbd"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1018",
+                "2:u1021",
+                "2:u1024"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 0
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [],
+          "source_evaluation_digest": "54c0af153fc0b10f74a285c5dc96abb550e7c5dadd56aa4bfbaeb693aadf1830"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "63f435c5928b7e8faa5cdf5766da6876eb1661bea2cd0d788d602c519ce8d224",
+      "scenario_id": "balanced_contact_no_spurious_action",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "STABLE",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "CONTESTED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "07aa0d3e6170915dbeff7c2bfda178bc1b99a1ed610a97d17f4e66338560d75e",
+      "tactical_state_digest": "f49e46acd225780c7d1ce7db045c9030be23a89b0e1f3933b0a84b2f93fd4b83"
+    },
+    {
+      "base_slice_id": "first_contact",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "A damaged wavering commander under nearby visible pressure should open an extraction window.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT",
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER"
+        ],
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        }
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "EXTRACT_COMMANDER"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.654194,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.52,
+              "reason": "mapped from LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "d328b845aa4f68163fece2d9d8f13584bf94818d82252666375904f37e317bee"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "EXTRACT_COMMANDER"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.54961,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1018"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "EXTRACT_COMMANDER"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 2
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.654194,
+              "reason": "mapped from portfolio UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.52,
+              "reason": "mapped from portfolio BATTLE:LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "f8e2f613fd73ada20868c1dba22a4b6c65156427ac99be628d105a2b498a80a1"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "4f9d285dedf90f8b78c932cec4fce249e9b5f6bed327261f2479e04ccd184020",
+      "scenario_id": "commander_extraction_under_pressure",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "PRESSURED",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "CONTESTED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "9c0d9fb9862bbcc6994d2dd2504fa53f283e06a76cdb5103893095f65ba3b03d",
+      "tactical_state_digest": "0ae12ea29ad6cde8ea9dffce55ff5fe850e510c3125dac466610e0d786885d93"
+    },
+    {
+      "base_slice_id": "first_contact",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Identical moderate hitpoint loss should trigger the commander threshold without treating frontline infantry as the same asset class.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "RELIEVE_FRONTLINE"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER"
+        ],
+        "required_local_stability_state": "PRESSURED",
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        }
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "EXTRACT_COMMANDER"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.492286,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "4e680cd2d2b74bf99f5d0da486f97aa60e13c0e339ecb607ea71f6a5c9a593c8"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [
+              "RELIEVE_FRONTLINE"
+            ],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "EXTRACT_COMMANDER",
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.389532,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.271322,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1004"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1018"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "EXTRACT_COMMANDER"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 1
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.492286,
+              "reason": "mapped from portfolio UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "2cc5c7a2f4a8e5f171f3b77f5ea9407a73087658f76f531554e1408e2cf036ba"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "2472cf895236b325880062542828b1c81979d7f164e4a5bb294ed9d8e1a47155",
+      "scenario_id": "role_threshold_asymmetry",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "PRESSURED",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "CONTESTED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "f7bc1f10f1fac7c72dccd2402df36d403fed76d23d2fc3c6693c55ecef0fd693",
+      "tactical_state_digest": "42030ebf94bf09048fbe2c73ab083bbdfb42776d9b9144a131470cf75e249d5a"
+    },
+    {
+      "base_slice_id": "first_contact",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Artillery in melee with a visible nearby threat should create an evacuation advisory.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EVACUATE_ARTILLERY"
+        ],
+        "required_subjects_by_intent": {
+          "EVACUATE_ARTILLERY": [
+            "1:u1015"
+          ]
+        }
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "EVACUATE_ARTILLERY"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 0.452468,
+              "reason": "mapped from ARTILLERY_EVACUATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "d0a6d1ba1289b639ea4630a1d92c3311fa8f0a3a6bbaa3aec9ab44524e14b578"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EVACUATE_ARTILLERY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EVACUATE_ARTILLERY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EVACUATE_ARTILLERY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1021"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "EVACUATE_ARTILLERY"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 1
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 0.452468,
+              "reason": "mapped from portfolio UNIT_GROUP:ARTILLERY_EVACUATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "efb100e5cd62b9334a7b76310f7c8b5550ea538e5321fa7f4901715d476e04e7"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EVACUATE_ARTILLERY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "72de0c63cfb295b23b76a1adf5a22721a4f40e2d0326697344ff1ef66a733276",
+      "scenario_id": "artillery_breach",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "PRESSURED",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "CONTESTED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "73dc0efb5d2a11b6e1e439c684d3444a94549b3db5543b4c9934a4c60ed9c705",
+      "tactical_state_digest": "04dbad4acbee4daf7015cd14863c3bcc6b1f5def03ad49b4aba2882979fd09bf"
+    },
+    {
+      "base_slice_id": "local_melee_commitment",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "A ranged unit with a rear-flank threat and nearby visible opponent should reposition.",
+      "equivalence_group": "ranged_flank_scale",
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "REPOSITION_RANGED"
+        ],
+        "required_subjects_by_intent": {
+          "REPOSITION_RANGED": [
+            "1:u1009"
+          ]
+        }
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.329251,
+              "reason": "mapped from RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "ef861de382d5994f5f31b6b4fb60a228af050a38333d4dae32001aa8f469b842"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1029"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 1
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.329251,
+              "reason": "mapped from portfolio UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "09fccab1ed12a8e5b064c843a16a106c68e890555d57744111672f5560720415"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "de2060d5128661caa608dc5589a2967cee06d311ce7655fada159299682630c4",
+      "scenario_id": "ranged_rear_flank",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "STABLE",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "CONTESTED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "19d029f2376391543e413beb2e5420165949721cbac903b5300027574d04e619",
+      "tactical_state_digest": "bf0062a68fcba93a50aa8071c7e07ff721f637fd9a167d5d16e8e07f70b1eec8"
+    },
+    {
+      "base_slice_id": "local_melee_commitment",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "The same ranged-flank facts at half model scale should preserve the semantic advisory.",
+      "equivalence_group": "ranged_flank_scale",
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "REPOSITION_RANGED"
+        ],
+        "required_subjects_by_intent": {
+          "REPOSITION_RANGED": [
+            "1:u1009"
+          ]
+        }
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.329251,
+              "reason": "mapped from RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "4e8d2660b77fed3532a4e5b7a686d62ea2017c6dc7ff0980aabf020b2eb2dd2d"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1029"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 1
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.329251,
+              "reason": "mapped from portfolio UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "2e57ef898d837c1151ac98019fe35b1ed5a019341a12a4dfb379f2d0f27c31e3"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "19383e83a8c101b4bd5ca8cf0c66b4f8f590fac5a93a97eafa96d06930f1a38a",
+      "scenario_id": "ranged_rear_flank_half_scale",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "STABLE",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "CONTESTED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "5c53a8edcd1454d51b0921bbe76ca457b3af791d11346d014e9a15f39511325e",
+      "tactical_state_digest": "4a50549519308c7b8586f73653e4e3c90860f7e5e4e42c7be8da4803bcdebc0c"
+    },
+    {
+      "base_slice_id": "local_melee_commitment",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Exhausted cavalry isolated near a visible opponent should disengage and reform.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "DISENGAGE_CAVALRY"
+        ],
+        "required_subjects_by_intent": {
+          "DISENGAGE_CAVALRY": [
+            "1:u1014"
+          ]
+        }
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.519317,
+              "reason": "mapped from CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "45e4858ee3279c87b2a60cfe57de97f8901908266b77ed4a2baa8702b33bfd4a"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "DISENGAGE_CAVALRY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "DISENGAGE_CAVALRY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "DISENGAGE_CAVALRY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1029"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 1
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.519317,
+              "reason": "mapped from portfolio UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "dc44f1e263b5d41aa332ef9146fabab05f6c87c601536eb1496cacb69f2edd24"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "DISENGAGE_CAVALRY"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "a5b420b0000db59e45ce95978216396bca8fd6021c2412fab8c8d8e2dfdcbcb8",
+      "scenario_id": "cavalry_overextension",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "PRESSURED",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "CONTESTED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "ebc2156fa486b1b349a522ea85ac4b0c0d13d606cb1514a0daa0717076be73a3",
+      "tactical_state_digest": "bf2b3ce8e000c00cabadf0995112a649de7103906d22ff818aab0def70b9b65a"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "A routing frontline with a fresh coherent reserve should create containment, relief, and reserve-commitment advisories.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "RELIEVE_FRONTLINE",
+          "CONTAIN_LOCAL_ROUT",
+          "COMMIT_RESERVE"
+        ],
+        "required_local_stability_state": "LOCAL_CRISIS",
+        "required_subjects_by_intent": {
+          "COMMIT_RESERVE": [
+            "1:u1008"
+          ],
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1003"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003"
+          ]
+        },
+        "required_tactical_phase_state": "ACTIVE_CONTEST"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 3,
+            "selected_intents": [
+              "COMMIT_RESERVE",
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.805817,
+              "reason": "mapped from FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "COMMIT_RESERVE",
+              "priority_score": 0.790185,
+              "reason": "mapped from RESERVE_COMMITMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1008"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.695,
+              "reason": "mapped from LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "90b5513a927f088046036df100f5f099104ce579b21da9eac6c00dfaccf7887c"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              },
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "CONTAIN_LOCAL_ROUT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              },
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.730072,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              },
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1020",
+                "2:u1021"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 3,
+            "selected_intents": [
+              "COMMIT_RESERVE",
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 3
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.805817,
+              "reason": "mapped from portfolio UNIT_GROUP:FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "COMMIT_RESERVE",
+              "priority_score": 0.790185,
+              "reason": "mapped from portfolio BATTLE:RESERVE_COMMITMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1008"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.695,
+              "reason": "mapped from portfolio BATTLE:LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "ea164f8d94feb529739556af491f03ff194341a14320d1138abe1a7d3a0a0d10"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "CONTAIN_LOCAL_ROUT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              },
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.730072,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "bdc4a06fbfa1117792704806927527165f5bf0adcf040590d68ba2c877c46ade",
+      "scenario_id": "frontline_crisis_with_reserve",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "LOCAL_CRISIS",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "PRESSURED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "5f668c73344b0c4988121f048ca08a686c161d80cfa36fb1c0177c4b84f41789",
+      "tactical_state_digest": "4fa47f0986b717860abc2577ea3a1e99fec46a485e7b065ea933f440929a9fcd"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "The same local crisis without a fresh idle reserve must not manufacture reserve availability.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "COMMIT_RESERVE",
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "RELIEVE_FRONTLINE",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_subjects_by_intent": {
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1003"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003"
+          ]
+        }
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.805817,
+              "reason": "mapped from FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.695,
+              "reason": "mapped from LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "64f24158d2b2c3ecdff33289d0d55e621f664188892118d66b5c3698e7202be1"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.730072,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1020",
+                "2:u1021"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 2
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.805817,
+              "reason": "mapped from portfolio UNIT_GROUP:FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.695,
+              "reason": "mapped from portfolio BATTLE:LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "38244306dc115c760c6b218daa839c6dae968f6dc35a63053c3d5e74297a931a"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.730072,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "3f7b8459b8e7cefeda4e22ab209ac9295b31cbadff4ed8dd69e33a2d9856964b",
+      "scenario_id": "frontline_crisis_without_reserve",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "RECOVERABLE_COLLAPSE",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "LOCAL_COLLAPSE_RESPONSE",
+          "visible_enemy_collapse_state": "PRESSURED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "6ba5fab4585c8136cfae6f63e4850f50252b3599ce284b8da8855fceb4493e8c",
+      "tactical_state_digest": "16eda79300196f1618f108f8e8d94a129b60bbd0674c16081820dd131956c038"
+    },
+    {
+      "base_slice_id": "enemy_break",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "A breaking visible enemy with healthy low-risk exploiters should create selective pursuit rather than general pursuit.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "required_local_stability_state": "STABLE",
+        "required_subjects_by_intent": {
+          "SELECTIVE_PURSUIT": [
+            "1:u1013",
+            "1:u1014"
+          ]
+        },
+        "required_visible_enemy_collapse_state": "BREAKING"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "SELECTIVE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "SELECTIVE_PURSUIT",
+              "priority_score": 0.62,
+              "reason": "mapped from SELECTIVE_PURSUIT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1013",
+                "1:u1014"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "30023474566a2b71542ca5aa670a545b7cf4b607224948fac2207ed2bf9c8d2b"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "SELECTIVE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "SELECTIVE_PURSUIT",
+                "missing_subject_unit_ids": [
+                  "1:u1013",
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "SELECTIVE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "SELECTIVE_PURSUIT",
+                "missing_subject_unit_ids": [
+                  "1:u1013",
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "SELECTIVE_PURSUIT",
+                "missing_subject_unit_ids": [
+                  "1:u1013",
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "SELECTIVE_PURSUIT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "SELECTIVE_PURSUIT",
+              "priority_score": 0.75,
+              "reason": "pressure-only baseline continues exploitation",
+              "subject_unit_ids": [
+                "2:u1018",
+                "2:u1020",
+                "2:u1025",
+                "2:u1026"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "SELECTIVE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 1
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "SELECTIVE_PURSUIT",
+              "priority_score": 0.62,
+              "reason": "mapped from portfolio BATTLE:SELECTIVE_PURSUIT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1013",
+                "1:u1014"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "951f77ad837fa4e191d4b4dde34a378d6d327a420374f06ef2bd01bc208dfd38"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "SELECTIVE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "SELECTIVE_PURSUIT",
+                "missing_subject_unit_ids": [
+                  "1:u1013",
+                  "1:u1014"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "5380c405d7a0de3affd31b282fd63aae4016f2e74dab1408468d30efd8f5b54b",
+      "scenario_id": "clean_enemy_break",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "STABLE",
+          "outcome_state": "VISIBLE_ENEMY_BREAKING",
+          "tactical_phase_state": "ACTIVE_CONTEST",
+          "visible_enemy_collapse_state": "BREAKING"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "2cbd44a42a63decc8c1e62853e0d78224a332a26d47ed4b073c8c64e7dc752b1",
+      "tactical_state_digest": "d9d7a0dd023bd8afc6fac9bc193d9635ff52401fb8e041d0dc6f384405c7be56"
+    },
+    {
+      "base_slice_id": "enemy_rout_majority",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "When visible enemy resistance collapses while valuable local assets are endangered, general pursuit should terminate.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "TERMINATE_PURSUIT",
+          "REFORM_AND_PRESERVE",
+          "EXTRACT_COMMANDER"
+        ],
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        },
+        "required_tactical_phase_state": "RECOVERY_REQUIRED",
+        "required_visible_enemy_collapse_state": "ROUT_CASCADE"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "DISENGAGE_CAVALRY",
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "REPOSITION_RANGED",
+              "TERMINATE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "TERMINATE_PURSUIT",
+              "priority_score": 0.791013,
+              "reason": "mapped from PURSUIT_TERMINATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1010",
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.740769,
+              "reason": "mapped from RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.68,
+              "reason": "mapped from REFORM_AND_PRESERVE_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1010",
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.671034,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.663677,
+              "reason": "mapped from CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.636667,
+              "reason": "mapped from LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "c9ba669c3482216362459de6e925e9650786455a5cdb08b96981392887d274f1"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 4,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY",
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.7,
+              "reason": "preservation-only rout-cascade response",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1010",
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.690131,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.602132,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.566526,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [
+              "SELECTIVE_PURSUIT"
+            ],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "SELECTIVE_PURSUIT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "SELECTIVE_PURSUIT",
+              "priority_score": 0.75,
+              "reason": "pressure-only baseline continues exploitation",
+              "subject_unit_ids": [
+                "2:u1022",
+                "2:u1025",
+                "2:u1026"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "DISENGAGE_CAVALRY",
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "REPOSITION_RANGED",
+              "TERMINATE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 6
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "TERMINATE_PURSUIT",
+              "priority_score": 0.791013,
+              "reason": "mapped from portfolio BATTLE:PURSUIT_TERMINATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1010",
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.740769,
+              "reason": "mapped from portfolio UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.68,
+              "reason": "mapped from portfolio BATTLE:REFORM_AND_PRESERVE_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1010",
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.671034,
+              "reason": "mapped from portfolio UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.663677,
+              "reason": "mapped from portfolio UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.636667,
+              "reason": "mapped from portfolio BATTLE:LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "37a7204aa86a795c905ea2a3dd7a734a79819980f0783ed5166d72bd46825655"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.690131,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.602132,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "718c0fa4ce5fc7f66b5777fe59c1d7cab6aa281d95ac2da830455af11c42862d",
+      "scenario_id": "rout_cascade_preservation",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "LOCAL_CRISIS",
+          "outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+          "tactical_phase_state": "RECOVERY_REQUIRED",
+          "visible_enemy_collapse_state": "ROUT_CASCADE"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "e41bad0ec5a682bb28b7aa487adacce3b5319b42258345c5d8b5a275e79dd965",
+      "tactical_state_digest": "1d5217e4801985fab705fb7fa356de5e333978feaa615646e64678cea531016e"
+    },
+    {
+      "base_slice_id": "victory_countdown",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Hidden enemy scope must prevent terminal certainty even when every visible enemy is routing.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "TERMINATE_PURSUIT"
+        ],
+        "required_outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+        "required_subjects_by_intent": {
+          "EXTRACT_COMMANDER": [
+            "1:u1001"
+          ]
+        },
+        "required_visible_enemy_collapse_state": "ROUT_CASCADE"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 4,
+            "selected_intents": [
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "REPOSITION_RANGED",
+              "TERMINATE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "TERMINATE_PURSUIT",
+              "priority_score": 0.880946,
+              "reason": "mapped from PURSUIT_TERMINATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.68,
+              "reason": "mapped from REFORM_AND_PRESERVE_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.667061,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.499422,
+              "reason": "mapped from RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "0f627f0ddd1429da544bf02ccb912cdcee8ac545e418ab60419fd9fc4436e411"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 3,
+            "selected_intents": [
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.7,
+              "reason": "preservation-only rout-cascade response",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.562526,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.46348,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [
+              "SELECTIVE_PURSUIT"
+            ],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "SELECTIVE_PURSUIT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "SELECTIVE_PURSUIT",
+              "priority_score": 0.75,
+              "reason": "pressure-only baseline continues exploitation",
+              "subject_unit_ids": [
+                "2:u1021",
+                "2:u1026",
+                "2:u1028"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 4,
+            "selected_intents": [
+              "EXTRACT_COMMANDER",
+              "REFORM_AND_PRESERVE",
+              "REPOSITION_RANGED",
+              "TERMINATE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 4
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "TERMINATE_PURSUIT",
+              "priority_score": 0.880946,
+              "reason": "mapped from portfolio BATTLE:PURSUIT_TERMINATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.68,
+              "reason": "mapped from portfolio BATTLE:REFORM_AND_PRESERVE_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.667061,
+              "reason": "mapped from portfolio UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.499422,
+              "reason": "mapped from portfolio UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "f656b0b66d4060e647a633c34d5f8c9c54aeb314b368c0d55ad4cba19f6110ce"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "8e03ab90669206f33af6166ce2865f991627b5daf39c931ae7f51f7536febfc3",
+      "scenario_id": "hidden_enemy_blocks_terminal_certainty",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "LOCAL_CRISIS",
+          "outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+          "tactical_phase_state": "RECOVERY_REQUIRED",
+          "visible_enemy_collapse_state": "ROUT_CASCADE"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "61877190a451f4db0affe8afb20c6fe0de26a5ba053b0db22d9ec50f3201a2d4",
+      "tactical_state_digest": "4d63b61c137cf7236e90c5c592f64273baad99f67eb29c016ff700eaad38e81a"
+    },
+    {
+      "base_slice_id": "enemy_rout_majority",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Enemy rout must not conceal an irreversible local collapse.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "TERMINATE_PURSUIT",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_local_stability_state": "IRREVERSIBLE_COLLAPSE",
+        "required_subjects_by_intent": {
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1003",
+            "1:u1004"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003",
+            "1:u1004"
+          ]
+        },
+        "required_tactical_phase_state": "RECOVERY_REQUIRED",
+        "required_visible_enemy_collapse_state": "ROUT_CASCADE"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 5,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "REFORM_AND_PRESERVE",
+              "RELIEVE_FRONTLINE",
+              "TERMINATE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.93985,
+              "reason": "mapped from FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.93499,
+              "reason": "mapped from FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.87,
+              "reason": "mapped from LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "TERMINATE_PURSUIT",
+              "priority_score": 0.836422,
+              "reason": "mapped from PURSUIT_TERMINATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.68,
+              "reason": "mapped from REFORM_AND_PRESERVE_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "3846da9960cc272a58eae5c07d08ab51ab3b20985b950a488a1da0fd6386bf9f"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              }
+            ],
+            "selected_intent_count": 3,
+            "selected_intents": [
+              "REFORM_AND_PRESERVE",
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.8754,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.87036,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.7,
+              "reason": "preservation-only rout-cascade response",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [
+              "SELECTIVE_PURSUIT"
+            ],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "SELECTIVE_PURSUIT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "SELECTIVE_PURSUIT",
+              "priority_score": 0.75,
+              "reason": "pressure-only baseline continues exploitation",
+              "subject_unit_ids": [
+                "2:u1022",
+                "2:u1025",
+                "2:u1026"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 4,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "REFORM_AND_PRESERVE",
+              "RELIEVE_FRONTLINE",
+              "TERMINATE_PURSUIT"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 4
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.93985,
+              "reason": "mapped from portfolio UNIT_GROUP:FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.87,
+              "reason": "mapped from portfolio BATTLE:LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "TERMINATE_PURSUIT",
+              "priority_score": 0.836422,
+              "reason": "mapped from portfolio BATTLE:PURSUIT_TERMINATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REFORM_AND_PRESERVE",
+              "priority_score": 0.68,
+              "reason": "mapped from portfolio BATTLE:REFORM_AND_PRESERVE_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "0e49fb4783b4d9ac1b8684a434f900200874afdf51b1d95bfacf52ce22f37b89"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "TERMINATE_PURSUIT"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              }
+            ],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.8754,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.87036,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1004"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "8492585883f2f0822efb524c38dde565cccbfc740b2900600c8b3012e8288bca",
+      "scenario_id": "simultaneous_local_and_enemy_collapse",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "IRREVERSIBLE_COLLAPSE",
+          "outcome_state": "VISIBLE_ENEMY_ROUT_CASCADE",
+          "tactical_phase_state": "RECOVERY_REQUIRED",
+          "visible_enemy_collapse_state": "ROUT_CASCADE"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "7c17bab4d5aa883ed5ac9e047a88cd5035b7286c2a0938c6666c8fdb5dce47f1",
+      "tactical_state_digest": "9fec36906635d0e9ea5842fc19964ad1fb22b610943035d836f2b0662a08d1f9"
+    },
+    {
+      "base_slice_id": "battle_complete",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "A completed battle must emit no actionable advisory under any policy.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "EXTRACT_COMMANDER",
+          "RELIEVE_FRONTLINE",
+          "TERMINATE_PURSUIT",
+          "SELECTIVE_PURSUIT",
+          "PRESS_VISIBLE_THREAT"
+        ],
+        "maximum_selected_intents": 0,
+        "require_no_action": true,
+        "required_intents": [],
+        "required_local_stability_state": "TERMINAL",
+        "required_outcome_state": "OBSERVED_TERMINAL_RESULT",
+        "required_subjects_by_intent": {},
+        "required_tactical_phase_state": "TERMINAL",
+        "required_visible_enemy_collapse_state": "TERMINAL"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 0,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [],
+          "source_evaluation_digest": "103b732a3c7237bc4b8a08d845bc3994fd0a2ba462fc8711fff320d2e78f21e1"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 0,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [
+              "EXTRACT_COMMANDER",
+              "RELIEVE_FRONTLINE"
+            ],
+            "maximum_selected_intents": 0,
+            "missing_required_intents": [],
+            "no_action_violation": true,
+            "passed": false,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 2,
+            "selected_intents": [
+              "EXTRACT_COMMANDER",
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.732849,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.533826,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 0,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 0,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 0
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [],
+          "source_evaluation_digest": "0aeeaa5f369705334955819040a9bb3ba9c09b801176bd859eb3a86c3a064998"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [
+              "RELIEVE_FRONTLINE"
+            ],
+            "maximum_selected_intents": 0,
+            "missing_required_intents": [],
+            "no_action_violation": true,
+            "passed": false,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "RELIEVE_FRONTLINE"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.732849,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1003"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "7d7b3e9bea3e0371eea02c6d5d32905df2bc236ac105c0d3c55ebd5c167b065b",
+      "scenario_id": "terminal_no_action",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "TERMINAL",
+          "outcome_state": "OBSERVED_TERMINAL_RESULT",
+          "tactical_phase_state": "TERMINAL",
+          "visible_enemy_collapse_state": "TERMINAL"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "b3ab27b36a6599847ccf5cb257c8c5efffe932f6fb3858d02c3296355295ab44",
+      "tactical_state_digest": "780acaafd34118bf102de7d197ab3586d99094e6c67172bf604d427e28d4b9ea"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Eight simultaneous critical unit failures must be represented through bounded role batching rather than silently suppressing whole concern classes.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT",
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER",
+          "EVACUATE_ARTILLERY",
+          "REPOSITION_RANGED",
+          "DISENGAGE_CAVALRY",
+          "RELIEVE_FRONTLINE",
+          "CONTAIN_LOCAL_ROUT"
+        ],
+        "required_local_stability_state": "RECOVERABLE_COLLAPSE",
+        "required_subjects_by_intent": {
+          "CONTAIN_LOCAL_ROUT": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1009",
+            "1:u1010",
+            "1:u1014",
+            "1:u1015"
+          ],
+          "DISENGAGE_CAVALRY": [
+            "1:u1014"
+          ],
+          "EVACUATE_ARTILLERY": [
+            "1:u1015"
+          ],
+          "EXTRACT_COMMANDER": [
+            "1:u1001",
+            "1:u1002"
+          ],
+          "RELIEVE_FRONTLINE": [
+            "1:u1003",
+            "1:u1004"
+          ],
+          "REPOSITION_RANGED": [
+            "1:u1009",
+            "1:u1010"
+          ]
+        },
+        "required_tactical_phase_state": "LOCAL_COLLAPSE_RESPONSE",
+        "required_visible_enemy_collapse_state": "PRESSURED"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002",
+                  "1:u1003",
+                  "1:u1004",
+                  "1:u1009",
+                  "1:u1010",
+                  "1:u1014",
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              }
+            ],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 0.666667,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 1.0,
+              "reason": "mapped from CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 1.0,
+              "reason": "mapped from ARTILLERY_EVACUATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 1.0,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 1.0,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.963867,
+              "reason": "mapped from RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.929647,
+              "reason": "mapped from RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "e7d29321ba5d9b2d827a68f2ed292e254ea317507a286ada28da9a4cae19c189"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "RELIEVE_FRONTLINE",
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002",
+                  "1:u1003",
+                  "1:u1004",
+                  "1:u1009",
+                  "1:u1010",
+                  "1:u1014",
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              },
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              },
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009",
+                  "1:u1010"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002",
+                  "1:u1003",
+                  "1:u1004",
+                  "1:u1009",
+                  "1:u1010",
+                  "1:u1014",
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              }
+            ],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 0.987838,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.949628,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.90315,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.901626,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.87383,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.859531,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "RELIEVE_FRONTLINE",
+              "REPOSITION_RANGED"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002",
+                  "1:u1003",
+                  "1:u1004",
+                  "1:u1009",
+                  "1:u1010",
+                  "1:u1014",
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              },
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              },
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009",
+                  "1:u1010"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1020",
+                "2:u1021"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "RELIEVE_FRONTLINE",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 6
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 1.0,
+              "reason": "mapped from portfolio UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 1.0,
+              "reason": "mapped from portfolio UNIT_GROUP:ARTILLERY_EVACUATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 1.0,
+              "reason": "mapped from portfolio UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.963867,
+              "reason": "mapped from portfolio UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009",
+                "1:u1010"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "RELIEVE_FRONTLINE",
+              "priority_score": 0.92457,
+              "reason": "mapped from portfolio UNIT_GROUP:FRONTLINE_RELIEF_WINDOW",
+              "subject_unit_ids": [
+                "1:u1003",
+                "1:u1004"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "CONTAIN_LOCAL_ROUT",
+              "priority_score": 0.87,
+              "reason": "mapped from portfolio BATTLE:LOCAL_ROUT_CONTAINMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1002",
+                "1:u1003",
+                "1:u1004",
+                "1:u1009",
+                "1:u1010",
+                "1:u1014",
+                "1:u1015"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "e8c05f5fa4d64194cb30edb23ae25c127d4e5fb2e9be0e999e390bf662a47900"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "CONTAIN_LOCAL_ROUT",
+              "RELIEVE_FRONTLINE"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "CONTAIN_LOCAL_ROUT",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002",
+                  "1:u1003",
+                  "1:u1004",
+                  "1:u1009",
+                  "1:u1010",
+                  "1:u1014",
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "RELIEVE_FRONTLINE",
+                "missing_subject_unit_ids": [
+                  "1:u1003",
+                  "1:u1004"
+                ]
+              }
+            ],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 0.987838,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.949628,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.90315,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.901626,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.87383,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.859531,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "11327c626291ed13d6cc2165dc48ee0977ef86a9c71a977f87bafc0dffb5e51b",
+      "scenario_id": "critical_saturation_batching",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "RECOVERABLE_COLLAPSE",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "LOCAL_COLLAPSE_RESPONSE",
+          "visible_enemy_collapse_state": "PRESSURED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "2ac62a41264e25048604fa405fbf7bb71ce72b8e483263c90a4560b5a2947cc4",
+      "tactical_state_digest": "69fc27849d732a0dd5dec6612c470e718a094d50704ed68b9f46f01f543b5c85"
+    },
+    {
+      "base_slice_id": "local_crisis",
+      "counterfactual_status": "NOT_A_BATTLE_OUTCOME_SIMULATION",
+      "description": "Seven distinct critical concern groups must preserve complete source awareness through an explicit overflow record rather than silent suppression.",
+      "equivalence_group": null,
+      "evidence_status": "CONTROL_SYNTHETIC",
+      "expectations": {
+        "forbidden_intents": [
+          "SELECTIVE_PURSUIT",
+          "TERMINATE_PURSUIT"
+        ],
+        "maximum_selected_intents": 6,
+        "required_intents": [
+          "EXTRACT_COMMANDER",
+          "EVACUATE_ARTILLERY",
+          "REPOSITION_RANGED",
+          "DISENGAGE_CAVALRY",
+          "COMMIT_RESERVE",
+          "REVIEW_CRITICAL_OVERFLOW"
+        ],
+        "required_local_stability_state": "RECOVERABLE_COLLAPSE",
+        "required_subjects_by_intent": {
+          "COMMIT_RESERVE": [
+            "1:u1008"
+          ],
+          "DISENGAGE_CAVALRY": [
+            "1:u1014"
+          ],
+          "EVACUATE_ARTILLERY": [
+            "1:u1015"
+          ],
+          "EXTRACT_COMMANDER": [
+            "1:u1001",
+            "1:u1002"
+          ],
+          "REPOSITION_RANGED": [
+            "1:u1009",
+            "1:u1010"
+          ]
+        },
+        "required_tactical_phase_state": "LOCAL_COLLAPSE_RESPONSE",
+        "required_visible_enemy_collapse_state": "PRESSURED"
+      },
+      "policies": {
+        "LEGACY_ROLE_AWARE_V2": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "REVIEW_CRITICAL_OVERFLOW"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1010"
+                ]
+              }
+            ],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "COMMIT_RESERVE",
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": false,
+            "critical_source_coverage": 0.6,
+            "grouped_priority_count": null
+          },
+          "policy_id": "LEGACY_ROLE_AWARE_V2",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 1.0,
+              "reason": "mapped from CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 1.0,
+              "reason": "mapped from ARTILLERY_EVACUATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 1.0,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 1.0,
+              "reason": "mapped from COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.963867,
+              "reason": "mapped from RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "COMMIT_RESERVE",
+              "priority_score": 0.956924,
+              "reason": "mapped from RESERVE_COMMITMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1008"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "f95c85a80e1bca326c24dd318f13ccea901ba7dfc07ca2b0631681e5055ca270"
+        },
+        "PASSIVE_HOLD": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED",
+              "REVIEW_CRITICAL_OVERFLOW"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              },
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              },
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002"
+                ]
+              },
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009",
+                  "1:u1010"
+                ]
+              }
+            ],
+            "selected_intent_count": 0,
+            "selected_intents": []
+          },
+          "diagnostics": null,
+          "policy_id": "PASSIVE_HOLD",
+          "selected": [],
+          "source_evaluation_digest": null
+        },
+        "PRESERVATION_ONLY_035": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "REVIEW_CRITICAL_OVERFLOW"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              }
+            ],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESERVATION_ONLY_035",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 0.987838,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.949628,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.90315,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.901626,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.87383,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.859531,
+              "reason": "uniform preservation threshold 0.35",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "PRESSURE_ONLY": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED",
+              "REVIEW_CRITICAL_OVERFLOW"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              },
+              {
+                "intent": "DISENGAGE_CAVALRY",
+                "missing_subject_unit_ids": [
+                  "1:u1014"
+                ]
+              },
+              {
+                "intent": "EVACUATE_ARTILLERY",
+                "missing_subject_unit_ids": [
+                  "1:u1015"
+                ]
+              },
+              {
+                "intent": "EXTRACT_COMMANDER",
+                "missing_subject_unit_ids": [
+                  "1:u1001",
+                  "1:u1002"
+                ]
+              },
+              {
+                "intent": "REPOSITION_RANGED",
+                "missing_subject_unit_ids": [
+                  "1:u1009",
+                  "1:u1010"
+                ]
+              }
+            ],
+            "selected_intent_count": 1,
+            "selected_intents": [
+              "PRESS_VISIBLE_THREAT"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "PRESSURE_ONLY",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "PRESS_VISIBLE_THREAT",
+              "priority_score": 0.6,
+              "reason": "pressure-only baseline prioritizes visible combat pressure",
+              "subject_unit_ids": [
+                "2:u1020",
+                "2:u1021"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        },
+        "ROLE_AWARE_PORTFOLIO_V1": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [],
+            "no_action_violation": false,
+            "passed": true,
+            "required_subject_mismatches": [],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "COMMIT_RESERVE",
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED",
+              "REVIEW_CRITICAL_OVERFLOW"
+            ]
+          },
+          "diagnostics": {
+            "critical_overflow_used": true,
+            "critical_source_coverage": 1.0,
+            "grouped_priority_count": 7
+          },
+          "policy_id": "ROLE_AWARE_PORTFOLIO_V1",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 1.0,
+              "reason": "mapped from portfolio UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 1.0,
+              "reason": "mapped from portfolio UNIT_GROUP:ARTILLERY_EVACUATION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 1.0,
+              "reason": "mapped from portfolio UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.963867,
+              "reason": "mapped from portfolio UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+              "subject_unit_ids": [
+                "1:u1009",
+                "1:u1010"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "COMMIT_RESERVE",
+              "priority_score": 0.956924,
+              "reason": "mapped from portfolio BATTLE:RESERVE_COMMITMENT_WINDOW",
+              "subject_unit_ids": [
+                "1:u1008"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REVIEW_CRITICAL_OVERFLOW",
+              "priority_score": 0.92457,
+              "reason": "mapped from portfolio PORTFOLIO:CRITICAL_OVERFLOW",
+              "subject_unit_ids": [
+                "1:u1001",
+                "1:u1002",
+                "1:u1003",
+                "1:u1004",
+                "1:u1009",
+                "1:u1010",
+                "1:u1014",
+                "1:u1015"
+              ]
+            }
+          ],
+          "source_evaluation_digest": "86e757ee36a4f2272996c80510eac0058331a778c913ca00f809783ca786da0f"
+        },
+        "UNIFORM_DANGER_045": {
+          "authority": "OFFLINE_ADVISORY_BASELINE_ONLY",
+          "contract": {
+            "forbidden_intent_violations": [],
+            "maximum_selected_intents": 6,
+            "missing_required_intents": [
+              "COMMIT_RESERVE",
+              "REVIEW_CRITICAL_OVERFLOW"
+            ],
+            "no_action_violation": false,
+            "passed": false,
+            "required_subject_mismatches": [
+              {
+                "intent": "COMMIT_RESERVE",
+                "missing_subject_unit_ids": [
+                  "1:u1008"
+                ]
+              }
+            ],
+            "selected_intent_count": 6,
+            "selected_intents": [
+              "DISENGAGE_CAVALRY",
+              "EVACUATE_ARTILLERY",
+              "EXTRACT_COMMANDER",
+              "REPOSITION_RANGED"
+            ]
+          },
+          "diagnostics": null,
+          "policy_id": "UNIFORM_DANGER_045",
+          "selected": [
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EVACUATE_ARTILLERY",
+              "priority_score": 0.987838,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1015"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "DISENGAGE_CAVALRY",
+              "priority_score": 0.949628,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1014"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.90315,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1002"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.901626,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1009"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "EXTRACT_COMMANDER",
+              "priority_score": 0.87383,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1001"
+              ]
+            },
+            {
+              "authority": "ADVISORY_ONLY",
+              "intent": "REPOSITION_RANGED",
+              "priority_score": 0.859531,
+              "reason": "uniform preservation threshold 0.45",
+              "subject_unit_ids": [
+                "1:u1010"
+              ]
+            }
+          ],
+          "source_evaluation_digest": null
+        }
+      },
+      "result_digest": "1e4fff9c0b93af9c2a5f634858d93ca11a3feb19a946b2a7f36d850b246a37d4",
+      "scenario_id": "critical_group_overflow_disclosed",
+      "state_contract": {
+        "mismatches": [],
+        "observed": {
+          "local_stability_state": "RECOVERABLE_COLLAPSE",
+          "outcome_state": "CONTESTED",
+          "tactical_phase_state": "LOCAL_COLLAPSE_RESPONSE",
+          "visible_enemy_collapse_state": "PRESSURED"
+        },
+        "passed": true
+      },
+      "synthetic_slice_digest": "853aeae4c96fdc5cc9ec3e5c2639933b10ffe27f906303a5961494ba65a22f31",
+      "tactical_state_digest": "4c6f5057687199c819c9f94d8f7c6b8d766f744d5eba7076438b80a6f662bf98"
+    }
+  ],
+  "schema_version": 1,
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "suite_id": "v0.1O-heterogeneous-tactical-baseline-matrix",
+  "suite_seed": 20260730
+}

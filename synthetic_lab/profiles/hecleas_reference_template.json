@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "profile_id": "hecleas_reference_unverified_2905096541",
+  "environment": "REFERENCE_ONLY",
+  "compatibility_status": "UNVERIFIED",
+  "source_sha256": "5945102b4eac8ed73065bcc054d935f878d4ffd2b4af191ed4a15b0c31abedf8",
+  "notes": [
+    "Reference environment; not a runtime dependency.",
+    "Pack index proves table membership but row semantics remain schema-dependent."
+  ]
+}

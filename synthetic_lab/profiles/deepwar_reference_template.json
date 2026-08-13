@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "profile_id": "deepwar_reference_unverified_2978779730",
+  "environment": "REFERENCE_ONLY",
+  "compatibility_status": "UNVERIFIED",
+  "source_sha256": "f02bd8b5a70f899a8b4827af41da3231c71a7f595c06442177ec70f3fd407d50",
+  "notes": [
+    "Reference environment; not a runtime dependency.",
+    "Pack index proves table membership but row semantics remain schema-dependent."
+  ]
+}

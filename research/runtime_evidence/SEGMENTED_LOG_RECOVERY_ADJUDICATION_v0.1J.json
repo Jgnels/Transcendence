@@ -1,0 +1,513 @@
+{
+  "class_counts": {
+    "BUILD_METADATA": 1,
+    "LIVE_LOG_CANDIDATE": 5,
+    "LOADER_DIAGNOSTIC": 1,
+    "PROJECT_FIXTURE": 12,
+    "RECOVERY_REEXPORT": 6
+  },
+  "conclusion": "No live battle telemetry or early-turn snapshots from the current combined session were recovered; fixture battle records were excluded.",
+  "current_session_campaign_turns_recovered": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "current_session_completed_battle_count": 0,
+  "current_session_early_turns_recovered": [],
+  "current_session_live_log_count": 1,
+  "current_session_live_sources": [
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": true,
+      "segment": "segment_001_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "game_install",
+      "source_last_write_utc": "2026-07-30T00:59:40.172915Z",
+      "source_sha256": "b5a2dd1db21eaff3cd3d02d457ee34f69a89deab28a362461135d52bef323e51",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 182
+    }
+  ],
+  "current_session_trans_battle_record_count": 0,
+  "evidence_label": "LIMITING_RESULT",
+  "fixture_completed_battle_count_excluded": 2,
+  "fixture_trans_battle_record_count_excluded": 72,
+  "historical_campaign_turns_recovered": [
+    1
+  ],
+  "historical_live_log_count": 4,
+  "historical_live_sources": [
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_003_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T20:28:36.149459Z",
+      "source_sha256": "ddf462130e6551c034ddd5e79dfc916fba0a133cfa0cf6ef715e6df7afd1f9f7",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 55
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_004_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T20:43:26.432294Z",
+      "source_sha256": "c12afd4fce48708990e251ba271cb877b07f3163749960d68cadb9eed51f925c",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 55
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_005_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T21:14:50.435290Z",
+      "source_sha256": "9625cec56ff01c33422f340dbb66eda1c2de2067e793c107f677e173b779eb69",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 2
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_006_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T21:18:40.055702Z",
+      "source_sha256": "97e0be11a777dd43c2cfa65f69406422a0a7a3ba4a7ff71b3aced723c1782a46",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 2
+    }
+  ],
+  "historical_trans_battle_record_count": 0,
+  "live_unique_log_count": 5,
+  "result_digest": "53b63402cdb9380f40624eb14bc5c83f60d66d1bcfa9c65937dfb5259efc2119",
+  "schema_version": 2,
+  "segments": [
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": true,
+      "segment": "segment_001_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "game_install",
+      "source_last_write_utc": "2026-07-30T00:59:40.172915Z",
+      "source_sha256": "b5a2dd1db21eaff3cd3d02d457ee34f69a89deab28a362461135d52bef323e51",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 182
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "LOADER_DIAGNOSTIC",
+      "current_session_candidate": false,
+      "segment": "segment_002_modified.log.txt",
+      "source_filename": "modified.log",
+      "source_kind": "creative_assembly_roaming",
+      "source_last_write_utc": "2026-07-29T23:39:22.423891Z",
+      "source_sha256": "29f073137e9bb74884e503a52f17fec32675e474c659f9377085c303cd7fe4f9",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 0
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_003_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T20:28:36.149459Z",
+      "source_sha256": "ddf462130e6551c034ddd5e79dfc916fba0a133cfa0cf6ef715e6df7afd1f9f7",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 55
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_004_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T20:43:26.432294Z",
+      "source_sha256": "c12afd4fce48708990e251ba271cb877b07f3163749960d68cadb9eed51f925c",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 55
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_005_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T21:14:50.435290Z",
+      "source_sha256": "9625cec56ff01c33422f340dbb66eda1c2de2067e793c107f677e173b779eb69",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 2
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "LIVE_LOG_CANDIDATE",
+      "current_session_candidate": false,
+      "segment": "segment_006_lua_mod_log.txt.txt",
+      "source_filename": "lua_mod_log.txt",
+      "source_kind": "project_private_logs",
+      "source_last_write_utc": "2026-07-29T21:18:40.055702Z",
+      "source_sha256": "97e0be11a777dd43c2cfa65f69406422a0a7a3ba4a7ff71b3aced723c1782a46",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 2
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "classification": "RECOVERY_REEXPORT",
+      "current_session_candidate": false,
+      "segment": "segment_007_segment_001_lua_mod_log.txt.txt",
+      "source_filename": "segment_001_lua_mod_log.txt",
+      "source_kind": "project_runtime_probe",
+      "source_last_write_utc": "2026-07-30T01:25:43.486017Z",
+      "source_sha256": "a8f3f43c3f764cbd8297c101f5a54367d5a0ad99ddd05bb5d6cd3fadae029cb8",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 182
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "RECOVERY_REEXPORT",
+      "current_session_candidate": false,
+      "segment": "segment_008_segment_002_modified.log.txt",
+      "source_filename": "segment_002_modified.log",
+      "source_kind": "project_runtime_probe",
+      "source_last_write_utc": "2026-07-30T01:25:43.495019Z",
+      "source_sha256": "805f1a5950daad9b01c9662ed311e733416ae9796bc4ec0a157b711e61ada0d9",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 0
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "RECOVERY_REEXPORT",
+      "current_session_candidate": false,
+      "segment": "segment_009_segment_003_lua_mod_log.txt.txt",
+      "source_filename": "segment_003_lua_mod_log.txt",
+      "source_kind": "project_runtime_probe",
+      "source_last_write_utc": "2026-07-30T01:25:43.529367Z",
+      "source_sha256": "98c5e98dd99facb7b860d816da548ed25d0f5731115074f635be1f1b56817032",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 55
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "RECOVERY_REEXPORT",
+      "current_session_candidate": false,
+      "segment": "segment_010_segment_004_lua_mod_log.txt.txt",
+      "source_filename": "segment_004_lua_mod_log.txt",
+      "source_kind": "project_runtime_probe",
+      "source_last_write_utc": "2026-07-30T01:25:43.536366Z",
+      "source_sha256": "e116dd26233dc83222b2229458036a417c03f40c758d1d7fb20b92cefc9a862e",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 55
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "RECOVERY_REEXPORT",
+      "current_session_candidate": false,
+      "segment": "segment_011_segment_005_lua_mod_log.txt.txt",
+      "source_filename": "segment_005_lua_mod_log.txt",
+      "source_kind": "project_runtime_probe",
+      "source_last_write_utc": "2026-07-30T01:25:43.541367Z",
+      "source_sha256": "2a745a8392bef6931d688042663a0d6afe0c756f5af40e7667376e689499bcbd",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 2
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "RECOVERY_REEXPORT",
+      "current_session_candidate": false,
+      "segment": "segment_012_segment_006_lua_mod_log.txt.txt",
+      "source_filename": "segment_006_lua_mod_log.txt",
+      "source_kind": "project_runtime_probe",
+      "source_last_write_utc": "2026-07-30T01:25:43.545367Z",
+      "source_sha256": "d55ef907d22e54893c35c0d4d68a244439e46606b2803405964fcec68d49921b",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 2
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "BUILD_METADATA",
+      "current_session_candidate": false,
+      "segment": "segment_013_probe_build_manifest.json.txt",
+      "source_filename": "probe_build_manifest.json",
+      "source_kind": "project_runtime_probe",
+      "source_last_write_utc": "2026-07-29T23:37:24.615451Z",
+      "source_sha256": "64d736885bff93fccd9207c33663eb987f610301ad12556b6894a3b605b64b65",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 0
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_014_Transcendence_v0.1C_LiveProbe_Kit.zip__log_out_of_order_invalid.txt.txt",
+      "source_filename": "Transcendence_v0.1C_LiveProbe_Kit.zip::log_out_of_order_invalid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T20:22:01.431509Z",
+      "source_sha256": "1ee825bb438e775fdcbff12a6e021b6088b682734d19b2addf3332ebc8d23552",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 1
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_015_Transcendence_v0.1C_LiveProbe_Kit.zip__log_private_field_invalid.txt.txt",
+      "source_filename": "Transcendence_v0.1C_LiveProbe_Kit.zip::log_private_field_invalid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T20:22:01.431509Z",
+      "source_sha256": "0622427884752d692cc86a9521166314a2bf82422c4bc84ad276ef9a9c51c37a",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 1
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_016_Transcendence_v0.1C_LiveProbe_Kit.zip__observer_log_valid.txt.txt",
+      "source_filename": "Transcendence_v0.1C_LiveProbe_Kit.zip::observer_log_valid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T20:22:01.431509Z",
+      "source_sha256": "9ffb64231ed45337a537624f5e77c21d3c9f2e5fa34eebe5befcc13dcebbf9bf",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 8
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_017_Transcendence_v0.1C_LiveProbe_Kit.zip__persistence_log_roundtrip.txt.txt",
+      "source_filename": "Transcendence_v0.1C_LiveProbe_Kit.zip::persistence_log_roundtrip.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T20:22:01.431509Z",
+      "source_sha256": "b0ff86f1edcf3e8e110dfc24162315ec320713b990e9739767cd7392199e8a14",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 4
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1
+      ],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_018_Transcendence_v0.1D_ObserverEvidence_Kit.zip__observer_log_lifecycle_valid.txt.txt",
+      "source_filename": "Transcendence_v0.1D_ObserverEvidence_Kit.zip::observer_log_lifecycle_valid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T20:36:52.958041Z",
+      "source_sha256": "0b7eb89ebf1afb3a3797fed6607baa8904f3386bbceb0a4c36806b713ace583e",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 11
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_019_Transcendence_v0.1F_Persistence_Kit.zip__persistence_log_roundtrip.txt.txt",
+      "source_filename": "Transcendence_v0.1F_Persistence_Kit.zip::persistence_log_roundtrip.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T21:11:58.531202Z",
+      "source_sha256": "d8dfe107c0ef04603bb675648a2ff3f0ff97c108b0cc22d02277832ae1de832e",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 4
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        42
+      ],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_020_Transcendence_v0.1I-r2_RegionIdentityHotfix.zip__shadow_log_owned_visible_overlap_valid.txt.txt",
+      "source_filename": "Transcendence_v0.1I-r2_RegionIdentityHotfix.zip::shadow_log_owned_visible_overlap_valid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-30T01:13:54.531134Z",
+      "source_sha256": "a1d876798c28193f1a10d830ba6de4c11f00c57c2a4eb11da1ec3c96daf46e2e",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 12
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        42
+      ],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_021_Transcendence_v0.1I-r2_RegionIdentityHotfix.zip__shadow_log_owned_visible_owner_conflict_invalid.txt.txt",
+      "source_filename": "Transcendence_v0.1I-r2_RegionIdentityHotfix.zip::shadow_log_owned_visible_owner_conflict_invalid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-30T01:13:54.531134Z",
+      "source_sha256": "91039b2b90f117ca53c1a896354ad7a623a5c7bb46fade74cfdcbbc93fa7677b",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 12
+    },
+    {
+      "battle_complete_count": 1,
+      "battle_pack_loaded_count": 1,
+      "canonical_snapshot_turns": [],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_022_Transcendence_v0.1I_public_repository.zip__battle_log_valid.txt.txt",
+      "source_filename": "Transcendence_v0.1I_public_repository.zip::battle_log_valid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T23:34:29.033118Z",
+      "source_sha256": "84da2c757826706987e1eab449b8720513930dc9e1a59e56f7d4dc628dd31136",
+      "trans_battle_record_count": 36,
+      "trans_probe_record_count": 0
+    },
+    {
+      "battle_complete_count": 1,
+      "battle_pack_loaded_count": 1,
+      "canonical_snapshot_turns": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_023_Transcendence_v0.1I_public_repository.zip__campaign_battle_5_turns_valid.txt.txt",
+      "source_filename": "Transcendence_v0.1I_public_repository.zip::campaign_battle_5_turns_valid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T23:34:29.033118Z",
+      "source_sha256": "a12d7f1cfe1f3dfc3aafb27d3d8536c910e964615267a58e623132c12e61cbd6",
+      "trans_battle_record_count": 36,
+      "trans_probe_record_count": 47
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_024_Transcendence_v0.1I_public_repository.zip__shadow_campaign_5_turns_valid.txt.txt",
+      "source_filename": "Transcendence_v0.1I_public_repository.zip::shadow_campaign_5_turns_valid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T23:34:29.033118Z",
+      "source_sha256": "657d5c8b7106cf9356fbeb78353b46a1a06cd3d096f32b7f12686eec5f4cc131",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 47
+    },
+    {
+      "battle_complete_count": 0,
+      "battle_pack_loaded_count": 0,
+      "canonical_snapshot_turns": [
+        42
+      ],
+      "classification": "PROJECT_FIXTURE",
+      "current_session_candidate": false,
+      "segment": "segment_025_Transcendence_v0.1I_public_repository.zip__shadow_log_valid.txt.txt",
+      "source_filename": "Transcendence_v0.1I_public_repository.zip::shadow_log_valid.txt",
+      "source_kind": "recent_zip_member",
+      "source_last_write_utc": "2026-07-29T23:34:29.033118Z",
+      "source_sha256": "7d9d9587fecffd20ee444a624af43a1cccfbda2a6a412a68365852ec1ff5242b",
+      "trans_battle_record_count": 0,
+      "trans_probe_record_count": 11
+    }
+  ],
+  "session_start_utc": "2026-07-29T23:34:29Z",
+  "warnings": [
+    "A project fixture proves parser behavior, not owner gameplay.",
+    "A re-exported recovery segment is not an independent runtime source.",
+    "Historical observer or persistence logs are not part of the current combined session.",
+    "Missing current-session battle records do not prove no battle occurred; they prove the telemetry did not survive in recovered sources."
+  ]
+}

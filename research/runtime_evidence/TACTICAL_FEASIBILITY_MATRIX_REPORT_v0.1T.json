@@ -1,0 +1,303 @@
+{
+  "authority": "NO_ORDERS",
+  "evidence_status": "CONTROL_SYNTHETIC",
+  "interpretation_limits": [
+    "The matrix tests project-owned geometry and query semantics, not WH3 route or formation feasibility.",
+    "Synthetic QUERY_TRUE records are fixtures and do not establish live candidate reachability.",
+    "No scenario issues an order or claims acknowledgement, execution, arrival, or outcome."
+  ],
+  "metamorphic_check_count": 3,
+  "metamorphic_checks": [
+    {
+      "base_digest": "a57d78caa19d84ee72eb082477bf16ccdf6c9eaaf025033b851e9f6cae7bf35e",
+      "check_id": "reverse_unit_order",
+      "operation": "REVERSE_UNIT_ORDER",
+      "passed": true,
+      "transformed_digest": "a57d78caa19d84ee72eb082477bf16ccdf6c9eaaf025033b851e9f6cae7bf35e"
+    },
+    {
+      "base_digest": "8c3d6078d73a2ac3d9b82739da977f3b192a4955cdcbabebc39be446ec3a4aea",
+      "check_id": "translate_all_positions",
+      "operation": "TRANSLATE_ALL_POSITIONS",
+      "passed": true,
+      "transformed_digest": "6725e4d1e4af78a64c3a8835fada81dd6ae4c2896fdc05cab7ae621d856a0d30"
+    },
+    {
+      "base_digest": "7d6f1cc169d7d9cd906b2f59757f4e0a0299c76631173e72b1cbd8d9a7634a0e",
+      "check_id": "reverse_query_result_order",
+      "operation": "REVERSE_QUERY_RESULT_ORDER",
+      "passed": true,
+      "transformed_digest": "7d6f1cc169d7d9cd906b2f59757f4e0a0299c76631173e72b1cbd8d9a7634a0e"
+    }
+  ],
+  "metamorphic_pass_count": 3,
+  "report_contract": "TACTICAL_FEASIBILITY_MATRIX_REPORT_V1",
+  "result_digest": "441f2530d8afc9c8ce8ae4d3ab22144a42e4ea2eba1d9e02976238689f07e818",
+  "scenario_count": 15,
+  "scenario_pass_count": 15,
+  "scenarios": [
+    {
+      "candidate_point_count": 0,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [],
+      "passed": true,
+      "result_digest": "63e5e621ed75797f81514365c206b120233d56ffa032fe4b6f8b828422504142",
+      "scenario_id": "balanced_has_no_candidate_geometry"
+    },
+    {
+      "candidate_point_count": 6,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "QUERY_READY_NOT_OBSERVED"
+      ],
+      "passed": true,
+      "result_digest": "a57d78caa19d84ee72eb082477bf16ccdf6c9eaaf025033b851e9f6cae7bf35e",
+      "scenario_id": "commander_candidate_points_are_query_ready"
+    },
+    {
+      "candidate_point_count": 6,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "POINT_QUERY_SUPPORTED_ONLY"
+      ],
+      "passed": true,
+      "result_digest": "7d6f1cc169d7d9cd906b2f59757f4e0a0299c76631173e72b1cbd8d9a7634a0e",
+      "scenario_id": "synthetic_true_supports_point_only"
+    },
+    {
+      "candidate_point_count": 3,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "POINT_QUERY_REJECTED"
+      ],
+      "passed": true,
+      "result_digest": "c6ecdc030f66f1edf12b77fdc4bcf2652d216456906a8c7072d3599738f40939",
+      "scenario_id": "synthetic_false_vetoes_artillery_points"
+    },
+    {
+      "candidate_point_count": 3,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "POINT_QUERY_UNVERIFIED"
+      ],
+      "passed": true,
+      "result_digest": "086f289522bfb5cac5bf66a8afa4aaec7ee1adb72b3b546595be7214270906fe",
+      "scenario_id": "unavailable_query_preserves_uncertainty"
+    },
+    {
+      "candidate_point_count": 3,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "POINT_QUERY_SUPPORTED_ONLY"
+      ],
+      "passed": true,
+      "result_digest": "05069b82add4184ec52ff4bd9d8e6f98c9dfc04c2045464760db2c000aed577c",
+      "scenario_id": "mixed_cavalry_results_choose_supported_point"
+    },
+    {
+      "candidate_point_count": 3,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "POINT_QUERY_SUPPORTED_ONLY"
+      ],
+      "passed": true,
+      "result_digest": "8c3d6078d73a2ac3d9b82739da977f3b192a4955cdcbabebc39be446ec3a4aea",
+      "scenario_id": "frontline_relief_uses_local_subject_geometry"
+    },
+    {
+      "candidate_point_count": 3,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "POINT_QUERY_SUPPORTED_ONLY"
+      ],
+      "passed": true,
+      "result_digest": "f4f2ae707ee3927d0fae231cc5d6265f66b23779c88a39caacd19aefef398bfe",
+      "scenario_id": "selective_pursuit_requires_visible_routing_enemy"
+    },
+    {
+      "candidate_point_count": 6,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "QUERY_READY_NOT_OBSERVED"
+      ],
+      "passed": true,
+      "result_digest": "aeb290009f525b868996bcae4ebda879d3ce044e68f2282da99fdaf239c41142",
+      "scenario_id": "hidden_enemy_uncertainty_does_not_block_local_geometry"
+    },
+    {
+      "candidate_point_count": 0,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [],
+      "passed": true,
+      "result_digest": "4ec63e0fbb6118091ca717965ea6aa711ed30a8f1c6054e80dd88ea8fd7191a6",
+      "scenario_id": "terminal_observation_has_no_active_candidate"
+    },
+    {
+      "candidate_point_count": 0,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": "point-query result references an unknown candidate",
+      "feasibility_classes": [],
+      "passed": true,
+      "result_digest": null,
+      "scenario_id": "forged_candidate_evidence_fails_closed"
+    },
+    {
+      "candidate_point_count": 0,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": "point-query evidence tactical-state digest mismatch",
+      "feasibility_classes": [],
+      "passed": true,
+      "result_digest": null,
+      "scenario_id": "stale_state_evidence_fails_closed"
+    },
+    {
+      "candidate_point_count": 0,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": "point-query evidence must retain NO_ORDERS authority",
+      "feasibility_classes": [],
+      "passed": true,
+      "result_digest": null,
+      "scenario_id": "altered_authority_evidence_fails_closed"
+    },
+    {
+      "candidate_point_count": 3,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "QUERY_READY_NOT_OBSERVED"
+      ],
+      "passed": true,
+      "result_digest": "f789c599cfa421869b3210c7d60dcf9ce294294f8ddc2fcb6d3789e33b066043",
+      "scenario_id": "role_threshold_geometry_remains_bounded"
+    },
+    {
+      "candidate_point_count": 6,
+      "checks": {
+        "authority_no_orders": true,
+        "error_expectation": true,
+        "forbidden_classes": true,
+        "minimum_candidate_count": true,
+        "no_acknowledgement_or_execution_claim": true,
+        "required_classes": true
+      },
+      "error": null,
+      "feasibility_classes": [
+        "QUERY_READY_NOT_OBSERVED"
+      ],
+      "passed": true,
+      "result_digest": "bb759f908a370a39cd02197761f117527df4141b08cd2a4c82fe4f8118ad32b8",
+      "scenario_id": "rout_cascade_preservation_generates_only_local_egress"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 20260730,
+  "suite_id": "TACTICAL_FEASIBILITY_MATRIX_V0_1T"
+}

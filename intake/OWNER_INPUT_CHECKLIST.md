@@ -1,50 +1,45 @@
-# Owner Intake Checklist — Fastest Useful Inputs
+# Owner Intake Checklist — Remaining Gate 0 Inputs
 
-## Highest value
+## Already captured
 
-1. **SFO pack file**
-   - Typical Workshop folder:
-     `...\SteamLibrary\steamapps\workshop\content\1142710\2792731173\`
-   - Copy the `.pack` file into `local_inputs/sfo/`.
-   - Do not commit it.
+- pure-vanilla v8.1.1 build 48122.4194776 settings screenshots;
+- DeepWar AI pack;
+- Hecleas AI Overhaul pack;
+- extracted SFO DB/script/text audit bundle;
+- owner confirmation that the captured settings were vanilla;
+- successful laptop setup, including frozen local copies of SFO, DeepWar, and Hecleas;
+- private and sanitized laptop machine manifests;
+- RPFM fingerprint and WH3 executable metadata in private local storage;
+- deterministic observer/persistence probe package prepared offline.
 
-2. **Current active mod list and load order**
-   - Screenshots are acceptable initially.
-   - Better: export from the mod manager or copy a text/list file.
-   - For every mod, preserve Workshop ID and local `.pack` hash.
+## Immediate next input
 
-3. **Exact settings screenshots**
-   - Campaign difficulty.
-   - Battle difficulty.
-   - Ironman.
-   - The exact battlefield-limitation/battle-realism setting.
-   - Unit size.
-   - Endgame/crisis settings.
-   - SFO mod-menu settings.
-   - Campaign map.
+1. **Pure-vanilla observer run**
+   - apply v0.1C;
+   - run `runtime_probe/tools/prepare_live_probe.ps1 -InstallObserver`;
+   - enable only the observer pack in the launcher;
+   - start a fresh vanilla Karl Franz Immortal Empires campaign;
+   - reach the first interactive turn and exit;
+   - run `runtime_probe/tools/collect_probe_logs.ps1`;
+   - repeat once before any persistence or intervention test.
 
-4. **Two Karl Franz saves**
-   - An early or midgame save that still feels challenging.
-   - A late-game save where the challenge has collapsed.
-   - Add 3–10 sentences for each describing what changed and what opponents should be doing better.
+2. **Sanitized machine manifest**
+   - preserve the private manifest locally;
+   - share only `local_inputs/generated/gaming_laptop_sanitized.json` for canonical hash/version import.
 
-5. **Battle evidence**
-   - One replay or pre-battle save representing the kind of unfavorable battle you love.
-   - One battle where the AI behaved badly.
-   - One siege/settlement battle if possible.
+3. **Disposable persistence test**
+   - run only after the observer result is clean;
+   - use a throwaway campaign save;
+   - save, exit, reload once, and collect both logs.
 
-6. **Game and script logs**
-   - Capture only after exact instructions are generated from the frozen install.
-   - Remove account names and unrelated personal paths where practical.
+## Later Gate 0 inputs
 
-## Useful later
-
-- Additional saves from other factions.
-- Three Kingdoms late-game saves or screenshots that capture the desired feeling.
-- Short screen recordings with spoken commentary.
-- Links to specific gameplay videos plus timestamps and what behavior matters.
-- A list of favorite and disliked mechanics from other Total War titles.
+- Steam branch and DLC/content ownership;
+- exact active mod list and load order for vanilla, SFO-only, and personal-stack profiles;
+- new campaign checkpoints near turns 1, 10–15, 25–35, 50, 75–100, 125–150, and the first turn challenge noticeably collapses;
+- one difficult field battle, one bad-AI example, and one siege/settlement battle;
+- short owner notes explaining what was enjoyable or defective.
 
 ## Privacy and copyright
 
-Keep saves, replays, Workshop packs, CA assets and personal logs in `local_inputs/`, which is ignored by Git. Commit only hashes, metadata, extracted project-owned fixtures, scripts, observations and lawful diffs.
+Keep saves, replays, Workshop packs, CA assets, and personal logs under ignored `local_inputs/`. Commit only project-owned code, hashes, metadata, lawful derived fixtures, and observations.

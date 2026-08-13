@@ -1,0 +1,1514 @@
+{
+  "authority": "NO_ORDERS",
+  "evidence_status": "CONTROL_OFFLINE_OVER_OBSERVED_INPUT",
+  "interpretation": "Portfolio batching preserves advisory awareness and workload bounds; it does not establish assignment feasibility, command acceptance, or tactical quality.",
+  "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_TRAJECTORY_V1",
+  "portfolio_count": 8,
+  "portfolios": [
+    {
+      "all_source_coverage": 1.0,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 0,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 0,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 0,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "9fd80aae59c0d50d054dfff574783087c35900fcf79b2c5c3c22acac85997b4b",
+      "schema_version": 1,
+      "selected_priorities": [],
+      "selected_priority_count": 0,
+      "slice_id": "deployment_complete",
+      "source_tactical_state_digest": "c23bb98f19aac71ca54e60c30bd71fade7dfe36d908b76634575c471b31465da",
+      "suppressed_noncritical_group_count": 0,
+      "time_ms": 128800
+    },
+    {
+      "all_source_coverage": 1.0,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 0,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 0,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 0,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "17e8218613053c056a9da434c9e9a4e4ee69988df9d43dd6fcb4699fad0d02e0",
+      "schema_version": 1,
+      "selected_priorities": [],
+      "selected_priority_count": 0,
+      "slice_id": "first_contact",
+      "source_tactical_state_digest": "19ecc272221f06ecf4a24a9fbd1699ceb1393bc0ac0ec4507be125f2ee153762",
+      "suppressed_noncritical_group_count": 0,
+      "time_ms": 141100
+    },
+    {
+      "all_source_coverage": 1.0,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 1,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 0,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 1,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "2b08129a14e90b93ff5492325dbe0a22449e899b65b4aba763ee8dabd6dc6118",
+      "schema_version": 1,
+      "selected_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "LOW",
+            "limitations": [
+              "4 enemy units are intentionally hidden from detailed evaluation.",
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.541122,
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "portfolio_id": "UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "result_digest": "69047d2ae4d2ee00fd6f374f713e61b88399d56d8c325371f0ea844e397719a3",
+          "scope": "UNIT_GROUP",
+          "severity": "MEDIUM",
+          "source_opportunity_ids": [
+            "local_melee_commitment:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "source_opportunity_keys": [
+            "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.541122
+        }
+      ],
+      "selected_priority_count": 1,
+      "slice_id": "local_melee_commitment",
+      "source_tactical_state_digest": "38c0d969596068ab8c080fdac5c9454b87266150cd97e7ff0995ed0b018ba3ae",
+      "suppressed_noncritical_group_count": 0,
+      "time_ms": 291100
+    },
+    {
+      "all_source_coverage": 1.0,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 9,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 1,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 5,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "d121484a05c0863d2a4f88c431a7838e44ca0f34d9520148a5257828f390befc",
+      "schema_version": 1,
+      "selected_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 1,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.924962,
+          "opportunity_type": "ARTILLERY_EVACUATION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:ARTILLERY_EVACUATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EVACUATE_ARTILLERY",
+              "description": "Withdraw along the safest observed support direction.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce immediate fire support and is not pathfinding-certified."
+            },
+            {
+              "alternative_id": "ASSIGN_TEMPORARY_SCREEN",
+              "description": "Screen the artillery while it disengages or resumes fire.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Commits another unit and may transfer risk rather than remove it."
+            },
+            {
+              "alternative_id": "HOLD_FIRE_POSITION",
+              "description": "Remain only if visible pressure is low and marginal fire value exceeds preservation risk.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Risks irreversible model loss if pressure is underestimated."
+            }
+          ],
+          "result_digest": "d02d0c8b64dc6d47f69d4fdd8f105357fe0b468c12c249933eae97b26bbcdf84",
+          "scope": "UNIT_GROUP",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "local_crisis:ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+          ],
+          "source_opportunity_keys": [
+            "ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+          ],
+          "subject_unit_ids": [
+            "1:u1015"
+          ],
+          "tactical_diagnosis": "Artillery preservation value is high and continued exposure risks losing a low-mobility productive asset.",
+          "utility_score": 0.924962
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.71884,
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "result_digest": "cbd426ea56735cfe7419d606fffa0b8eb17861e17f3852e206c4debae2441eb0",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "local_crisis:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+          ],
+          "source_opportunity_keys": [
+            "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+          ],
+          "subject_unit_ids": [
+            "1:u1001"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.71884
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.647149,
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "portfolio_id": "UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "result_digest": "dcc0d0548e4a75881978bca0de6b14a878ba4299645f11b02141381fa711e452",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "local_crisis:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "source_opportunity_keys": [
+            "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.647149
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.540588,
+          "opportunity_type": "LOCAL_ROUT_CONTAINMENT_WINDOW",
+          "portfolio_id": "BATTLE:LOCAL_ROUT_CONTAINMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "STABILIZE_ADJACENT_COHERENT_UNITS",
+              "description": "Reduce pressure on adjacent coherent units and restore a supported line.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May slow offensive momentum."
+            },
+            {
+              "alternative_id": "ALLOW_ROUTING_UNIT_TO_CLEAR",
+              "description": "Avoid feeding fresh units into the same collapsing contact while the routing unit clears.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes local space and may expose a gap temporarily."
+            }
+          ],
+          "result_digest": "829d648799eee4d6f3569e7e3432df4a8ed79074e1c652530aa207397e992bac",
+          "scope": "BATTLE",
+          "severity": "MEDIUM",
+          "source_opportunity_ids": [
+            "local_crisis:LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+          ],
+          "source_opportunity_keys": [
+            "LOCAL_ROUT_CONTAINMENT_WINDOW:BATTLE"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1015"
+          ],
+          "tactical_diagnosis": "Local morale failure is present; continued unsupported exposure may propagate a rout cascade.",
+          "utility_score": 0.540588
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 5,
+          "mean_utility_score": 0.450648,
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "result_digest": "9d11fbe81f235adbe70c482fcf7d9a22730fc8ba7852fd77696cea10468d16f7",
+          "scope": "UNIT_GROUP",
+          "severity": "MEDIUM",
+          "source_opportunity_ids": [
+            "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1013",
+            "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+            "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1012",
+            "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1011",
+            "local_crisis:RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+          ],
+          "source_opportunity_keys": [
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1013",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1012",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1011",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+          ],
+          "subject_unit_ids": [
+            "1:u1009",
+            "1:u1010",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.482684
+        }
+      ],
+      "selected_priority_count": 5,
+      "slice_id": "local_crisis",
+      "source_tactical_state_digest": "67bd81a8721b76393f588ae67262e5a81bfcbcb5659dc58b402f917085a1404e",
+      "suppressed_noncritical_group_count": 0,
+      "time_ms": 402100
+    },
+    {
+      "all_source_coverage": 0.916667,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 12,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 2,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 7,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "4717e505434e59e1ab5c2d010762b8647c1d36c02f36cf994e507eb3d00e0191",
+      "schema_version": 1,
+      "selected_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 1,
+          "grouped_source_count": 1,
+          "mean_utility_score": 1.0,
+          "opportunity_type": "ARTILLERY_EVACUATION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:ARTILLERY_EVACUATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EVACUATE_ARTILLERY",
+              "description": "Withdraw along the safest observed support direction.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce immediate fire support and is not pathfinding-certified."
+            },
+            {
+              "alternative_id": "ASSIGN_TEMPORARY_SCREEN",
+              "description": "Screen the artillery while it disengages or resumes fire.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Commits another unit and may transfer risk rather than remove it."
+            },
+            {
+              "alternative_id": "HOLD_FIRE_POSITION",
+              "description": "Remain only if visible pressure is low and marginal fire value exceeds preservation risk.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Risks irreversible model loss if pressure is underestimated."
+            }
+          ],
+          "result_digest": "348c25779aca66fa50d8a3ddaaf42ca357dbb9b70022f1cd5567c5b574ad6f44",
+          "scope": "UNIT_GROUP",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "enemy_break:ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+          ],
+          "source_opportunity_keys": [
+            "ARTILLERY_EVACUATION_WINDOW:UNIT:1:u1015"
+          ],
+          "subject_unit_ids": [
+            "1:u1015"
+          ],
+          "tactical_diagnosis": "Artillery preservation value is high and continued exposure risks losing a low-mobility productive asset.",
+          "utility_score": 1.0
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 1,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.908883,
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "portfolio_id": "UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "result_digest": "55f5da655d35e56f642db4f3e400608abc789fee92c17340eb9f917c72c94b71",
+          "scope": "UNIT_GROUP",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "enemy_break:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "source_opportunity_keys": [
+            "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.908883
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 2,
+          "mean_utility_score": 0.558241,
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "result_digest": "f3dd2c8d3603b3212ac7bb14f71d392a427a755c9a1770434cc12df38c935245",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "enemy_break:RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+            "enemy_break:RANGED_REPOSITION_WINDOW:UNIT:1:u1011"
+          ],
+          "source_opportunity_keys": [
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1011"
+          ],
+          "subject_unit_ids": [
+            "1:u1010",
+            "1:u1011"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.703657
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 2,
+          "mean_utility_score": 0.658341,
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "result_digest": "0aadeb37b34f7d248d7b8bbb380c67bbde45da5d97954f76305097c482355079",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "enemy_break:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+            "enemy_break:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002"
+          ],
+          "source_opportunity_keys": [
+            "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+            "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1002"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.664291
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 4,
+          "mean_utility_score": 0.600933,
+          "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+          "portfolio_id": "UNIT_GROUP:FRONTLINE_RELIEF_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "RELIEVE_WITH_COHERENT_SUPPORT",
+              "description": "Rotate or reinforce with the nearest coherent support element.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May expose the supporting unit and requires formation space."
+            },
+            {
+              "alternative_id": "FALL_BACK_TO_SHORTER_LINE",
+              "description": "Withdraw toward a shorter supported line rather than preserve every current contact.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes ground and may disrupt adjacent units."
+            },
+            {
+              "alternative_id": "HOLD_FOR_BOUNDED_DELAY",
+              "description": "Continue holding only when the delay protects higher-value assets or enables decisive pressure elsewhere.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Accepts attrition and must not become an automatic sacrifice rule."
+            }
+          ],
+          "result_digest": "5eef7846522b931be3ae8a2bf8b7fbc542ea31ca42aa0afd5231c3be400ceca2",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "enemy_break:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+            "enemy_break:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005",
+            "enemy_break:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+            "enemy_break:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1008"
+          ],
+          "source_opportunity_keys": [
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1008"
+          ],
+          "subject_unit_ids": [
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1008"
+          ],
+          "tactical_diagnosis": "A frontline element is at risk of local morale or formation failure while active opposition remains.",
+          "utility_score": 0.633563
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.62,
+          "opportunity_type": "SELECTIVE_PURSUIT_WINDOW",
+          "portfolio_id": "BATTLE:SELECTIVE_PURSUIT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "PRESS_COHERENT_HIGH_VALUE_THREAT",
+              "description": "Use only suitable low-risk units against the highest coherent visible threat.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can prolong exposure and may be invalidated by hidden enemies."
+            },
+            {
+              "alternative_id": "REFORM_AND_FIRE",
+              "description": "Reform damaged units while safe ranged assets continue bounded pressure.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Allows some routed units to escape."
+            },
+            {
+              "alternative_id": "STOP_EXHAUSTED_HIGH_VALUE_ASSETS",
+              "description": "Remove exhausted commanders, cavalry, and artillery from cleanup activity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Reduces immediate pursuit damage but protects future value."
+            }
+          ],
+          "result_digest": "79655a52647db6bd619f206b608eeeee76cd3dc34f80d54982d391275cf861e3",
+          "scope": "BATTLE",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "enemy_break:SELECTIVE_PURSUIT_WINDOW:BATTLE"
+          ],
+          "source_opportunity_keys": [
+            "SELECTIVE_PURSUIT_WINDOW:BATTLE"
+          ],
+          "subject_unit_ids": [
+            "1:u1009",
+            "1:u1011",
+            "1:u1012",
+            "1:u1013"
+          ],
+          "tactical_diagnosis": "The visible enemy is breaking but retains coherent combat power; exploitation should be selective rather than universal.",
+          "utility_score": 0.62
+        }
+      ],
+      "selected_priority_count": 6,
+      "slice_id": "enemy_break",
+      "source_tactical_state_digest": "7670926ed7bff1d23677962975287f28e56cd421c60d466b9194a02f8818df7b",
+      "suppressed_noncritical_group_count": 1,
+      "time_ms": 531100
+    },
+    {
+      "all_source_coverage": 0.923077,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 13,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 3,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 7,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "12dd20e38dc266b9696a8dfd065f304b7eb870d4e47afcbb3672d45a0b0b27ce",
+      "schema_version": 1,
+      "selected_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 1,
+          "grouped_source_count": 4,
+          "mean_utility_score": 0.708586,
+          "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+          "portfolio_id": "UNIT_GROUP:FRONTLINE_RELIEF_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "RELIEVE_WITH_COHERENT_SUPPORT",
+              "description": "Rotate or reinforce with the nearest coherent support element.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May expose the supporting unit and requires formation space."
+            },
+            {
+              "alternative_id": "FALL_BACK_TO_SHORTER_LINE",
+              "description": "Withdraw toward a shorter supported line rather than preserve every current contact.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes ground and may disrupt adjacent units."
+            },
+            {
+              "alternative_id": "HOLD_FOR_BOUNDED_DELAY",
+              "description": "Continue holding only when the delay protects higher-value assets or enables decisive pressure elsewhere.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Accepts attrition and must not become an automatic sacrifice rule."
+            }
+          ],
+          "result_digest": "fdb7cb27ec40c349a220cf3b705d0b318317b3179496e87deb2892814614d8a7",
+          "scope": "UNIT_GROUP",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "enemy_rout_majority:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+            "enemy_rout_majority:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+            "enemy_rout_majority:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1008",
+            "enemy_rout_majority:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005"
+          ],
+          "source_opportunity_keys": [
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1008",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005"
+          ],
+          "subject_unit_ids": [
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1008"
+          ],
+          "tactical_diagnosis": "A frontline element is at risk of local morale or formation failure while active opposition remains.",
+          "utility_score": 0.911894
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 1,
+          "grouped_source_count": 2,
+          "mean_utility_score": 0.745402,
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "result_digest": "8fd9f55f0cca3c23eb80bd1bc7099a7d45d7d9b71bed851c52f75b72e3acca10",
+          "scope": "UNIT_GROUP",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "enemy_rout_majority:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002",
+            "enemy_rout_majority:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+          ],
+          "source_opportunity_keys": [
+            "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002",
+            "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1002"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.872777
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 1,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.780827,
+          "opportunity_type": "PURSUIT_TERMINATION_WINDOW",
+          "portfolio_id": "BATTLE:PURSUIT_TERMINATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "TERMINATE_GENERAL_PURSUIT",
+              "description": "Stop endangered or exhausted units and reform the force.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Allows some routed models to escape; no campaign-capture effect is modeled."
+            },
+            {
+              "alternative_id": "ALLOW_ONLY_SAFE_SPECIALIST_PURSUIT",
+              "description": "Permit only healthy suitable units to pursue with strict distance and fatigue limits.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Still risks hidden threats or pathing failures."
+            },
+            {
+              "alternative_id": "CEASE_LOW_VALUE_RANGED_FIRE",
+              "description": "Preserve ammunition when remaining visible targets are shattered or strategically irrelevant.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce final casualties inflicted."
+            }
+          ],
+          "result_digest": "aff3d0df48ee5a6a2e3477045b70dd39630cf2e0bfb2175ef1fb18357cfa6005",
+          "scope": "BATTLE",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "enemy_rout_majority:PURSUIT_TERMINATION_WINDOW:BATTLE"
+          ],
+          "source_opportunity_keys": [
+            "PURSUIT_TERMINATION_WINDOW:BATTLE"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1008",
+            "1:u1010",
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Visible enemy resistance has entered a rout cascade; marginal cleanup value is lower than preservation and reformation value for endangered units.",
+          "utility_score": 0.780827
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 3,
+          "mean_utility_score": 0.572444,
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "result_digest": "08242c2c4d8f454e7eb3324068ad0514d05b978b2f4545ea8194e8c45882b238",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "enemy_rout_majority:RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+            "enemy_rout_majority:RANGED_REPOSITION_WINDOW:UNIT:1:u1011",
+            "enemy_rout_majority:RANGED_REPOSITION_WINDOW:UNIT:1:u1009"
+          ],
+          "source_opportunity_keys": [
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1010",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1011",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1009"
+          ],
+          "subject_unit_ids": [
+            "1:u1009",
+            "1:u1010",
+            "1:u1011"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.696615
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.694681,
+          "opportunity_type": "CAVALRY_DISENGAGEMENT_WINDOW",
+          "portfolio_id": "UNIT_GROUP:CAVALRY_DISENGAGEMENT_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "DISENGAGE_AND_REFORM",
+              "description": "Break contact, reform near friendly support, and retain mobility for a later decisive task.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May allow the current target to escape or re-form."
+            },
+            {
+              "alternative_id": "SHORT_PURSUIT_WITH_STOP_CONDITION",
+              "description": "Pursue only a vulnerable visible target with a strict fatigue, distance, and danger stop condition.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Can still overextend if terrain or hidden threats invalidate the proxy."
+            },
+            {
+              "alternative_id": "SCREEN_WITHOUT_DEEP_COMMITMENT",
+              "description": "Use presence and positioning rather than prolonged melee.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May produce less immediate damage."
+            }
+          ],
+          "result_digest": "f4d0a33c8d5ebd7adba2663a55021b8c74902c97b03b04c6f75a0a92bc86728a",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "enemy_rout_majority:CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "source_opportunity_keys": [
+            "CAVALRY_DISENGAGEMENT_WINDOW:UNIT:1:u1014"
+          ],
+          "subject_unit_ids": [
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "Cavalry combat power is being consumed by fatigue, attrition, or unsupported exposure.",
+          "utility_score": 0.694681
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.68,
+          "opportunity_type": "REFORM_AND_PRESERVE_WINDOW",
+          "portfolio_id": "BATTLE:REFORM_AND_PRESERVE_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REFORM_AROUND_COHERENT_CORE",
+              "description": "Gather surviving coherent units around a defensible friendly core.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Reduces chase pressure and may leave distant units unsupported during reformation."
+            },
+            {
+              "alternative_id": "EXTRACT_ENDANGERED_ASSETS",
+              "description": "Prioritize characters and productive ranged or artillery assets for safe separation.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May sacrifice remaining pursuit opportunities."
+            }
+          ],
+          "result_digest": "7359e32265e5d413ff0ef15bcafdd9af943754a75652378cee24ab552309c6c2",
+          "scope": "BATTLE",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "enemy_rout_majority:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+          ],
+          "source_opportunity_keys": [
+            "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1002",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1008",
+            "1:u1010",
+            "1:u1014"
+          ],
+          "tactical_diagnosis": "The visible outcome is no longer improved primarily by broad engagement; formation recovery and survivor preservation now dominate.",
+          "utility_score": 0.68
+        }
+      ],
+      "selected_priority_count": 6,
+      "slice_id": "enemy_rout_majority",
+      "source_tactical_state_digest": "33835ad0a75c8f4288cc7b6f5218b298f17beb31a5285c189cf9562b1ee3bd8c",
+      "suppressed_noncritical_group_count": 1,
+      "time_ms": 555100
+    },
+    {
+      "all_source_coverage": 1.0,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 9,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 3,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 5,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "03811bfe3e1326eb273dff290813090cc3e24599e5258ff8f96d5b32b16e815e",
+      "schema_version": 1,
+      "selected_priorities": [
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 1,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.886725,
+          "opportunity_type": "PURSUIT_TERMINATION_WINDOW",
+          "portfolio_id": "BATTLE:PURSUIT_TERMINATION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "TERMINATE_GENERAL_PURSUIT",
+              "description": "Stop endangered or exhausted units and reform the force.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Allows some routed models to escape; no campaign-capture effect is modeled."
+            },
+            {
+              "alternative_id": "ALLOW_ONLY_SAFE_SPECIALIST_PURSUIT",
+              "description": "Permit only healthy suitable units to pursue with strict distance and fatigue limits.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Still risks hidden threats or pathing failures."
+            },
+            {
+              "alternative_id": "CEASE_LOW_VALUE_RANGED_FIRE",
+              "description": "Preserve ammunition when remaining visible targets are shattered or strategically irrelevant.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May reduce final casualties inflicted."
+            }
+          ],
+          "result_digest": "6598e228d1605b402955492aa463fc5a54be8d6964516a074e745148474dd903",
+          "scope": "BATTLE",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "victory_countdown:PURSUIT_TERMINATION_WINDOW:BATTLE"
+          ],
+          "source_opportunity_keys": [
+            "PURSUIT_TERMINATION_WINDOW:BATTLE"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1012",
+            "1:u1016",
+            "1:u1017"
+          ],
+          "tactical_diagnosis": "Visible enemy resistance has entered a rout cascade; marginal cleanup value is lower than preservation and reformation value for endangered units.",
+          "utility_score": 0.886725
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 2,
+          "grouped_source_count": 3,
+          "mean_utility_score": 0.75851,
+          "opportunity_type": "FRONTLINE_RELIEF_WINDOW",
+          "portfolio_id": "UNIT_GROUP:FRONTLINE_RELIEF_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "RELIEVE_WITH_COHERENT_SUPPORT",
+              "description": "Rotate or reinforce with the nearest coherent support element.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May expose the supporting unit and requires formation space."
+            },
+            {
+              "alternative_id": "FALL_BACK_TO_SHORTER_LINE",
+              "description": "Withdraw toward a shorter supported line rather than preserve every current contact.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Concedes ground and may disrupt adjacent units."
+            },
+            {
+              "alternative_id": "HOLD_FOR_BOUNDED_DELAY",
+              "description": "Continue holding only when the delay protects higher-value assets or enables decisive pressure elsewhere.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Accepts attrition and must not become an automatic sacrifice rule."
+            }
+          ],
+          "result_digest": "0fb72f02d6f273a246815e96775bdba543a20fadabc0bdaa8a2da163f661b418",
+          "scope": "UNIT_GROUP",
+          "severity": "CRITICAL",
+          "source_opportunity_ids": [
+            "victory_countdown:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005",
+            "victory_countdown:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+            "victory_countdown:FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004"
+          ],
+          "source_opportunity_keys": [
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1005",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1003",
+            "FRONTLINE_RELIEF_WINDOW:UNIT:1:u1004"
+          ],
+          "subject_unit_ids": [
+            "1:u1003",
+            "1:u1004",
+            "1:u1005"
+          ],
+          "tactical_diagnosis": "A frontline element is at risk of local morale or formation failure while active opposition remains.",
+          "utility_score": 0.839073
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 2,
+          "mean_utility_score": 0.673218,
+          "opportunity_type": "COMMANDER_EXTRACTION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:COMMANDER_EXTRACTION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "EXTRACT_TO_FRIENDLY_DEPTH",
+              "description": "Move the character toward supported friendly depth and stop low-value pursuit.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May surrender immediate damage or leadership influence to preserve campaign and battle value."
+            },
+            {
+              "alternative_id": "SCREEN_THEN_WITHDRAW",
+              "description": "Use a coherent nearby unit as a temporary screen before withdrawing the character.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Consumes another unit's attention and depends on path availability."
+            },
+            {
+              "alternative_id": "CONTINUE_ONLY_FOR_DECISIVE_VALUE",
+              "description": "Continue engagement only when the visible target has decisive marginal value and escape remains recoverable.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Highest survival risk; no counterfactual benefit is established."
+            }
+          ],
+          "result_digest": "ca70789372d59f01d70ac47c42a8d54138f47d1ee6487606748374969bc5fece",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "victory_countdown:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+            "victory_countdown:COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002"
+          ],
+          "source_opportunity_keys": [
+            "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1001",
+            "COMMANDER_EXTRACTION_WINDOW:UNIT:1:u1002"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1002"
+          ],
+          "tactical_diagnosis": "A high-value character is below its preservation threshold or exposed to escalating danger.",
+          "utility_score": 0.758278
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 2,
+          "mean_utility_score": 0.599544,
+          "opportunity_type": "RANGED_REPOSITION_WINDOW",
+          "portfolio_id": "UNIT_GROUP:RANGED_REPOSITION_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REPOSITION_BEHIND_COHERENT_LINE",
+              "description": "Move behind supported friendly units while preserving a visible firing lane.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May interrupt fire and assumes a usable line and path exist."
+            },
+            {
+              "alternative_id": "FOCUS_VISIBLE_IMMEDIATE_THREAT",
+              "description": "Concentrate fire on the highest coherent visible threat before displacement.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Spends ammunition and may delay disengagement."
+            },
+            {
+              "alternative_id": "CEASE_FIRE_AND_PRESERVE",
+              "description": "Cease low-value fire and preserve ammunition and formation integrity.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Foregoes damage when a safe target may still exist."
+            }
+          ],
+          "result_digest": "0bbb5e4a000a5e0d8c70c3ac3c5db73567462db31f2ad859a35a985ae56d6b34",
+          "scope": "UNIT_GROUP",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "victory_countdown:RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+            "victory_countdown:RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+          ],
+          "source_opportunity_keys": [
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1009",
+            "RANGED_REPOSITION_WINDOW:UNIT:1:u1010"
+          ],
+          "subject_unit_ids": [
+            "1:u1009",
+            "1:u1010"
+          ],
+          "tactical_diagnosis": "A productive ranged unit is exposed, degraded, or losing safe firing conditions.",
+          "utility_score": 0.690816
+        },
+        {
+          "authority": "ADVISORY_ONLY",
+          "confidence": {
+            "basis": "minimum confidence across grouped source opportunities",
+            "level": "MEDIUM",
+            "limitations": [
+              "No accepted or executed Transcendence command exists for comparison.",
+              "Terrain-aware withdrawal paths and WH3 pathfinding feasibility are unavailable.",
+              "The proposed alternatives are unobserved counterfactuals."
+            ]
+          },
+          "counterfactual_status": "UNVERIFIED",
+          "critical_source_count": 0,
+          "grouped_source_count": 1,
+          "mean_utility_score": 0.68,
+          "opportunity_type": "REFORM_AND_PRESERVE_WINDOW",
+          "portfolio_id": "BATTLE:REFORM_AND_PRESERVE_WINDOW",
+          "proposed_alternatives": [
+            {
+              "alternative_id": "REFORM_AROUND_COHERENT_CORE",
+              "description": "Gather surviving coherent units around a defensible friendly core.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "Reduces chase pressure and may leave distant units unsupported during reformation."
+            },
+            {
+              "alternative_id": "EXTRACT_ENDANGERED_ASSETS",
+              "description": "Prioritize characters and productive ranged or artillery assets for safe separation.",
+              "status": "PROPOSED_NOT_EXECUTED",
+              "tradeoff": "May sacrifice remaining pursuit opportunities."
+            }
+          ],
+          "result_digest": "1c7bf54c727fd74987e50284f834a66f18d9ebb18713a0626398fa29b6bf9b20",
+          "scope": "BATTLE",
+          "severity": "HIGH",
+          "source_opportunity_ids": [
+            "victory_countdown:REFORM_AND_PRESERVE_WINDOW:BATTLE"
+          ],
+          "source_opportunity_keys": [
+            "REFORM_AND_PRESERVE_WINDOW:BATTLE"
+          ],
+          "subject_unit_ids": [
+            "1:u1001",
+            "1:u1003",
+            "1:u1004",
+            "1:u1005",
+            "1:u1006",
+            "1:u1007",
+            "1:u1009",
+            "1:u1012",
+            "1:u1016",
+            "1:u1017"
+          ],
+          "tactical_diagnosis": "The visible outcome is no longer improved primarily by broad engagement; formation recovery and survivor preservation now dominate.",
+          "utility_score": 0.68
+        }
+      ],
+      "selected_priority_count": 5,
+      "slice_id": "victory_countdown",
+      "source_tactical_state_digest": "eeb9ee782ec94f067ab2d0f519564a9f428e45e7165aeb824b8bf262fd0f5752",
+      "suppressed_noncritical_group_count": 0,
+      "time_ms": 730700
+    },
+    {
+      "all_source_coverage": 1.0,
+      "authority": "NO_ORDERS",
+      "candidate_opportunity_count": 0,
+      "constraints": [
+        "No game command is emitted.",
+        "Equivalent unit-level concerns are batched by opportunity type.",
+        "Critical source opportunities are never silently discarded.",
+        "An overflow record preserves critical awareness when group capacity is exceeded.",
+        "Portfolio membership does not establish assignment, sequence, pathfinding, acknowledgement, or outcome."
+      ],
+      "critical_overflow_used": false,
+      "critical_source_coverage": 1.0,
+      "critical_source_opportunity_count": 0,
+      "evidence_status": "CONTROL_OFFLINE",
+      "grouped_priority_count": 0,
+      "maximum_selected_priorities": 6,
+      "portfolio_contract": "TACTICAL_PRIORITY_PORTFOLIO_V1",
+      "result_digest": "bded5e8b8a33e8fb4223e4f5c2cb8fedda1cb7f0bbf469e694cba75c4b5602b8",
+      "schema_version": 1,
+      "selected_priorities": [],
+      "selected_priority_count": 0,
+      "slice_id": "battle_complete",
+      "source_tactical_state_digest": "39902798be55a3efb1373937178b926a647c656ce2bddc9bf5de27f397839fba",
+      "suppressed_noncritical_group_count": 0,
+      "time_ms": 739600
+    }
+  ],
+  "result_digest": "2650af7860758b542308039412ff32032f69da58966b41a4c0d9afa7744b3eb0",
+  "schema_version": 1,
+  "source_tactical_state_trajectory_digest": "1170fb399d9d90e597bc7d83cbb67034e6597782d0c2911f9929a61d355fc3f0",
+  "source_trace_digest": "ccb23dc2e24102b53c5833ecae9047ebfd449476cd0508aacd4ec0fd6dc56360",
+  "summary": {
+    "candidate_opportunity_count": 44,
+    "critical_overflow_slice_count": 0,
+    "grouped_priority_count": 25,
+    "maximum_selected_in_one_slice": 6,
+    "minimum_critical_source_coverage": 1.0,
+    "selected_priority_count": 23
+  }
+}

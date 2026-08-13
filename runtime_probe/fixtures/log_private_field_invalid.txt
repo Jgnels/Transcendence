@@ -1,0 +1,1 @@
+TRANS_PROBE|1|PACK_LOADED|probe_kind=observer|script=transcendence_observer_probe|install_path=C:%5CUsers%5Cexample
